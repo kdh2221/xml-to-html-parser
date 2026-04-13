@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+   <head>
+       <w2:type>COMPONENT</w2:type>
+       <w2:buildDate/>
+       <w2:MSA/>
+       <xf:model>
+           <w2:dataCollection baseNode="map">
+           	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+           		<w2:columnInfo>
+           			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+           			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+           			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+           			<w2:column id="col4" name="name4" dataType="text"></w2:column>
+           			<w2:column id="col5" name="name5" dataType="text"></w2:column>
+           			<w2:column id="col6" name="name6" dataType="text"></w2:column>
+           			<w2:column id="col7" name="name7" dataType="text"></w2:column>
+           			<w2:column id="col8" name="name8" dataType="text"></w2:column>
+           			<w2:column id="col9" name="name9" dataType="text"></w2:column>
+           			<w2:column id="col10" name="name10" dataType="text"></w2:column>
+           		</w2:columnInfo>
+           		<w2:data use="true">
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           		</w2:data>
+           	</w2:dataList>
+           	<w2:dataList baseNode="list" repeatNode="map" id="dataList2" saveRemovedData="true">
+           		<w2:columnInfo>
+           			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+           			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+           			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+           			<w2:column id="col4" name="name4" dataType="text"></w2:column>
+           			<w2:column id="col5" name="name5" dataType="text"></w2:column>
+           			<w2:column id="col6" name="name6" dataType="text"></w2:column>
+           			<w2:column id="col7" name="name7" dataType="text"></w2:column>
+           			<w2:column id="col8" name="name8" dataType="text"></w2:column>
+           			<w2:column id="col9" name="name9" dataType="text"></w2:column>
+           			<w2:column id="col10" name="name10" dataType="text"></w2:column>
+           		</w2:columnInfo>
+           		<w2:data use="true">
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           			<w2:row></w2:row>
+           		</w2:data>
+           	</w2:dataList>
+           </w2:dataCollection>
+           <w2:workflowCollection>
+           </w2:workflowCollection>
+       </xf:model>
+       <w2:layoutInfo>
+       </w2:layoutInfo>
+       <w2:publicInfo method=""/>
+       <script lazy="false" type="text/javascript"><![CDATA[			scwin.onpageload = function() {
+
+			};
+		]]></script>
+   </head>
+   <body ev:onpageload="scwin.onpageload">
+   	<xf:group class="sub_contents" id="" style="">
+   		<xf:group class="lybox" id="" style="">
+   			<xf:group class="col_5" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox1" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input1"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox2" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input2"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input3"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox3" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar1" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox4" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar2" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   			<xf:group class="col_5" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox5" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input4"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox6" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input5"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input6"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox7" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar3" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox8" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar4" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   		</xf:group>
+   		<xf:group class="lybox" id="" style="">
+   			<xf:group class="col_3" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox9" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input7"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox10" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input8"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input9"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox11" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar5" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox12" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar6" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   			<xf:group class="col_7" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox13" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input10"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox14" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input11"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input12"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox15" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar7" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox16" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar8" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   		</xf:group>
+   		<xf:group class="lybox" id="" style="">
+   			<xf:group class="col_7" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox17" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input13"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox18" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input14"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input15"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox19" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar9" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox20" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar10" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   			<xf:group class="col_3" id="" style="">
+   				<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true"
+   					meta_snippetName="5_02 테이블(2단)" style="">
+   					<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+   						<w2:attributes>
+   							<w2:summary></w2:summary>
+   						</w2:attributes>
+   						<xf:group tagname="colgroup">
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   							<xf:group style="width:150px;" tagname="col"></xf:group>
+   							<xf:group style="" tagname="col"></xf:group>
+   						</xf:group>
+   						<xf:group style="" tagname="tr">
+   							<xf:group class="w2tb_th" style="" tagname="th">
+   								<w2:textbox ctype="Text" hierarchy="Text_dpostKnd1" id="textbox21" label="예금종류" linespace="2"
+   									orgid="Text_dpostKnd1" style="" tabIndex="1">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" style="" tagname="td">
+   								<xf:input ctype="Edit" disabled="true" displayFormat="H(20)" hierarchy="dpostKnd1" id="input16"
+   									indicator="예금종류" maxlength="20" orgid="dpostKnd1" ref="data:dma_.dpostKnd1" style="width:150px;" tabIndex="3">
+   								</xf:input>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_brncd1" id="textbox22" label="부 점 명" linespace="2"
+   									orgid="Text_brncd1" style="" tabIndex="4">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="input17"
+   									indicator="부점코드" maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="11">
+   								</xf:input>
+   								<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="input18"
+   									imeMode="반자" indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:150px;" tabIndex="5">
+   								</xf:input>
+   							</xf:group>
+   						</xf:group>
+   						<xf:group tagname="tr">
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes>
+   									<w2:scope>row</w2:scope>
+   								</w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="textbox23" label="승인요청년월일" linespace="2"
+   									orgid="Text_athorDmndYmd" style="" tabIndex="6">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes>
+   									<w2:colspan>1</w2:colspan>
+   									<w2:rowspan>1</w2:rowspan>
+   								</w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+   									id="inputCalendar11" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+   									tabIndex="7">
+   								</w2:inputCalendar>
+   							</xf:group>
+   							<xf:group class="w2tb_th " tagname="th">
+   								<w2:attributes></w2:attributes>
+   								<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="textbox24" label="조회년월일" linespace="2"
+   									orgid="Text_inquryYmd" style="" tabIndex="8">
+   								</w2:textbox>
+   							</xf:group>
+   							<xf:group class="w2tb_td" tagname="td">
+   								<w2:attributes></w2:attributes>
+   								<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd"
+   									id="inputCalendar12" indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;"
+   									tabIndex="9">
+   								</w2:inputCalendar>
+   							</xf:group>
+   						</xf:group>
+   					</xf:group>
+   				</xf:group>
+   			</xf:group>
+   		</xf:group>
+   	</xf:group>
+   </body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>AS-IS / 변환 화면 비교</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cdd6f4; height: 100vh; display: flex; flex-direction: column; }
+
+/* Header */
+.header { display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; }
+.header h1 { font-size: 16px; font-weight: 600; color: #cba6f7; white-space: nowrap; }
+.header select { padding: 6px 12px; border: 1px solid #45475a; border-radius: 6px; background: #313244; color: #cdd6f4; font-size: 13px; min-width: 280px; cursor: pointer; }
+.header select:focus { outline: none; border-color: #cba6f7; }
+
+/* Controls */
+.controls { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.btn { padding: 6px 14px; border: 1px solid #45475a; border-radius: 6px; background: #313244; color: #cdd6f4; font-size: 12px; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+.btn:hover { background: #45475a; }
+.btn.active { background: #cba6f7; color: #1e1e2e; border-color: #cba6f7; }
+.btn-refresh { background: #45475a; }
+.btn-refresh:hover { background: #585b70; }
+
+/* Layout Toggle */
+.layout-toggle { display: flex; border: 1px solid #45475a; border-radius: 6px; overflow: hidden; }
+.layout-toggle .btn { border: none; border-radius: 0; border-right: 1px solid #45475a; }
+.layout-toggle .btn:last-child { border-right: none; }
+
+/* File counter */
+.file-counter { font-size: 12px; color: #a6adc8; min-width: 50px; text-align: center; }
+
+/* Sync indicator */
+.sync-indicator { font-size: 11px; color: #a6adc8; display: flex; align-items: center; gap: 4px; }
+.sync-dot { width: 6px; height: 6px; border-radius: 50%; background: #a6e3a1; }
+.sync-dot.off { background: #f38ba8; }
+
+/* Compare Area */
+.compare-area { flex: 1; display: flex; overflow: hidden; }
+.compare-area.vertical { flex-direction: column; }
+
+/* Panel */
+.panel { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; position: relative; }
+.panel + .panel { border-left: 2px solid #313244; }
+.compare-area.vertical .panel + .panel { border-left: none; border-top: 2px solid #313244; }
+
+.panel-header { display: flex; align-items: center; justify-content: space-between; padding: 6px 14px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; }
+.panel-label { font-size: 13px; font-weight: 600; }
+.panel-label.original { color: #89b4fa; }
+.panel-label.converted { color: #a6e3a1; }
+.panel-url { font-size: 11px; color: #6c7086; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 400px; }
+
+.panel iframe { flex: 1; border: none; background: #fff; width: 100%; }
+
+/* Overlay mode */
+.compare-area.overlay .panel:nth-child(2) { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.compare-area.overlay .panel:nth-child(2) { border-left: none; }
+.compare-area.overlay .panel:nth-child(2) iframe { opacity: var(--overlay-opacity, 0.5); }
+.compare-area.overlay .panel:nth-child(2) .panel-header { background: rgba(24,24,37,0.9); }
+
+/* Overlay slider */
+.overlay-controls { display: none; align-items: center; gap: 8px; }
+.compare-area.overlay ~ .header .overlay-controls,
+.show-overlay .overlay-controls { display: flex; }
+.overlay-slider { width: 100px; accent-color: #cba6f7; }
+.overlay-value { font-size: 11px; color: #a6adc8; min-width: 30px; }
+
+/* Divider (resizable) */
+.divider { width: 4px; background: #313244; cursor: col-resize; flex-shrink: 0; transition: background 0.15s; }
+.divider:hover, .divider.dragging { background: #cba6f7; }
+.compare-area.vertical .divider { width: auto; height: 4px; cursor: row-resize; }
+
+/* Empty state */
+.empty-state { flex: 1; display: flex; align-items: center; justify-content: center; color: #6c7086; font-size: 14px; }
+
+/* Status bar */
+.status-bar { padding: 4px 20px; background: #181825; border-top: 1px solid #313244; font-size: 11px; color: #6c7086; display: flex; justify-content: space-between; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AS-IS / 변환 비교</h1>
+  <button class="btn" onclick="navigateFile(-1)" title="이전 화면 (←)">&#9664; 이전</button>
+  <select id="fileSelect" onchange="onFileSelect()">
+    <option value="">-- 화면 선택 --</option>
+  </select>
+  <button class="btn" onclick="navigateFile(1)" title="다음 화면 (→)">다음 &#9654;</button>
+  <span class="file-counter" id="fileCounter"></span>
+  <button class="btn btn-refresh" onclick="refreshFrames()" title="새로고침">Reload</button>
+
+  <div class="controls">
+    <div class="layout-toggle">
+      <button class="btn active" data-layout="horizontal" onclick="setLayout('horizontal')">좌우</button>
+      <button class="btn" data-layout="vertical" onclick="setLayout('vertical')">상하</button>
+      <button class="btn" data-layout="overlay" onclick="setLayout('overlay')">오버레이</button>
+    </div>
+
+    <div class="overlay-controls" id="overlayControls">
+      <span style="font-size:11px; color:#a6adc8;">투명도</span>
+      <input type="range" class="overlay-slider" id="overlaySlider" min="0" max="100" value="50" oninput="setOverlayOpacity(this.value)">
+      <span class="overlay-value" id="overlayValue">50%</span>
+    </div>
+
+    <div class="sync-indicator">
+      <span class="sync-dot" id="syncDot"></span>
+      <label style="cursor:pointer;">
+        <input type="checkbox" id="syncScroll" checked onchange="toggleSync()" style="display:none;">
+        <span id="syncLabel">스크롤 동기화</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="compare-area" id="compareArea">
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-label original">AS-IS (원본)</span>
+      <span class="panel-url" id="urlOriginal">-</span>
+    </div>
+    <iframe id="frameOriginal"></iframe>
+  </div>
+  <div class="divider" id="divider"></div>
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-label converted">변환 화면</span>
+      <span class="panel-url" id="urlConverted">-</span>
+    </div>
+    <iframe id="frameConverted"></iframe>
+  </div>
+</div>
+
+<div class="status-bar">
+  <span id="statusLeft">화면을 선택하세요</span>
+  <span id="statusRight"></span>
+</div>
+
+<script>
+const CONFIG = {
+  baseUrl: 'http://192.168.152.165:57888/websquare/websquare.html?w2xPath=',
+  w2xBasePath: '\\pub\\검증\\',
+  localFolder: 'D:\\AI_workspace\\KB_ABS_REL_test\\WebContent\\pub\\검증\\'
+};
+
+// File pairs: { id, original, converted, relVersion }
+const filePairs = [];
+
+// Parse file list from hardcoded data (populated on load)
+const ALL_FILES = [
+  // [original, converted] pairs - will be populated dynamically
+];
+
+function init() {
+  buildFilePairs();
+  populateSelect();
+  setupDivider();
+  setupKeyboard();
+
+  // Restore last selection
+  const last = localStorage.getItem('compare_lastFile');
+  if (last) {
+    document.getElementById('fileSelect').value = last;
+    onFileSelect();
+  }
+}
+
+function buildFilePairs() {
+  // Hardcoded file list from folder scan
+  const files = FILE_LIST;
+  const originals = files.filter(f => !f.includes('_rel_v'));
+
+  originals.forEach(orig => {
+    const baseName = orig.replace('.xml', '');
+    // Find all _rel_v versions and pick the highest
+    const candidates = files.filter(f => f.startsWith(baseName + '_rel_v') && f.endsWith('.xml'));
+    if (candidates.length > 0) {
+      let best = candidates[0];
+      let bestVer = 0;
+      candidates.forEach(c => {
+        const m = c.match(/_rel_v(\d+)/);
+        const v = m ? parseInt(m[1]) : 0;
+        if (v > bestVer) { bestVer = v; best = c; }
+      });
+      filePairs.push({
+        id: baseName,
+        original: orig,
+        converted: best,
+        relVersion: bestVer
+      });
+    }
+  });
+
+  filePairs.sort((a, b) => a.id.localeCompare(b.id));
+}
+
+function populateSelect() {
+  const select = document.getElementById('fileSelect');
+  filePairs.forEach(pair => {
+    const opt = document.createElement('option');
+    opt.value = pair.id;
+    opt.textContent = `${pair.id}  (v${pair.relVersion})`;
+    select.appendChild(opt);
+  });
+  document.getElementById('statusRight').textContent = `${filePairs.length}개 화면`;
+}
+
+function navigateFile(dir) {
+  const select = document.getElementById('fileSelect');
+  const newIndex = select.selectedIndex + dir;
+  if (newIndex >= 1 && newIndex < select.options.length) {
+    select.selectedIndex = newIndex;
+    onFileSelect();
+  }
+}
+
+function updateFileCounter() {
+  const select = document.getElementById('fileSelect');
+  const idx = select.selectedIndex;
+  const counter = document.getElementById('fileCounter');
+  if (idx < 1) {
+    counter.textContent = '';
+  } else {
+    counter.textContent = `${idx} / ${filePairs.length}`;
+  }
+}
+
+function onFileSelect() {
+  const select = document.getElementById('fileSelect');
+  const id = select.value;
+  updateFileCounter();
+  if (!id) return;
+
+  const pair = filePairs.find(p => p.id === id);
+  if (!pair) return;
+
+  const urlOrig = CONFIG.baseUrl + CONFIG.w2xBasePath + pair.original;
+  const urlConv = CONFIG.baseUrl + CONFIG.w2xBasePath + pair.converted;
+
+  document.getElementById('frameOriginal').src = urlOrig;
+  document.getElementById('frameConverted').src = urlConv;
+  document.getElementById('urlOriginal').textContent = pair.original;
+  document.getElementById('urlConverted').textContent = pair.converted;
+  document.getElementById('statusLeft').textContent = `${pair.id} 로딩 중...`;
+
+  localStorage.setItem('compare_lastFile', id);
+
+  // Track load completion
+  let loaded = 0;
+  const onLoad = () => {
+    loaded++;
+    if (loaded >= 2) {
+      document.getElementById('statusLeft').textContent = `${pair.id} 로딩 완료`;
+      setupScrollSync();
+    }
+  };
+  document.getElementById('frameOriginal').onload = onLoad;
+  document.getElementById('frameConverted').onload = onLoad;
+}
+
+function refreshFrames() {
+  const f1 = document.getElementById('frameOriginal');
+  const f2 = document.getElementById('frameConverted');
+  if (f1.src) f1.src = f1.src;
+  if (f2.src) f2.src = f2.src;
+}
+
+// Layout
+let currentLayout = 'horizontal';
+
+function setLayout(layout) {
+  currentLayout = layout;
+  const area = document.getElementById('compareArea');
+  area.className = 'compare-area' + (layout !== 'horizontal' ? ' ' + layout : '');
+
+  document.querySelectorAll('.layout-toggle .btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.layout === layout);
+  });
+
+  const overlayControls = document.getElementById('overlayControls');
+  overlayControls.style.display = layout === 'overlay' ? 'flex' : 'none';
+
+  const divider = document.getElementById('divider');
+  divider.style.display = layout === 'overlay' ? 'none' : '';
+}
+
+function setOverlayOpacity(val) {
+  document.getElementById('compareArea').style.setProperty('--overlay-opacity', val / 100);
+  document.getElementById('overlayValue').textContent = val + '%';
+}
+
+// Scroll Sync
+let syncEnabled = true;
+let syncing = false;
+
+function toggleSync() {
+  syncEnabled = document.getElementById('syncScroll').checked;
+  const dot = document.getElementById('syncDot');
+  dot.className = 'sync-dot' + (syncEnabled ? '' : ' off');
+  document.getElementById('syncLabel').textContent = syncEnabled ? '스크롤 동기화' : '동기화 꺼짐';
+}
+
+function setupScrollSync() {
+  if (!syncEnabled) return;
+
+  try {
+    const f1 = document.getElementById('frameOriginal');
+    const f2 = document.getElementById('frameConverted');
+    const doc1 = f1.contentDocument || f1.contentWindow.document;
+    const doc2 = f2.contentDocument || f2.contentWindow.document;
+
+    const scrollEl1 = doc1.scrollingElement || doc1.documentElement;
+    const scrollEl2 = doc2.scrollingElement || doc2.documentElement;
+
+    scrollEl1.addEventListener('scroll', () => {
+      if (syncing || !syncEnabled) return;
+      syncing = true;
+      scrollEl2.scrollTop = scrollEl1.scrollTop;
+      scrollEl2.scrollLeft = scrollEl1.scrollLeft;
+      requestAnimationFrame(() => syncing = false);
+    });
+
+    scrollEl2.addEventListener('scroll', () => {
+      if (syncing || !syncEnabled) return;
+      syncing = true;
+      scrollEl1.scrollTop = scrollEl2.scrollTop;
+      scrollEl1.scrollLeft = scrollEl2.scrollLeft;
+      requestAnimationFrame(() => syncing = false);
+    });
+  } catch (e) {
+    // Cross-origin: sync not available
+    document.getElementById('syncDot').className = 'sync-dot off';
+    document.getElementById('syncLabel').textContent = '동기화 불가 (cross-origin)';
+  }
+}
+
+// Divider (resize panels)
+function setupDivider() {
+  const divider = document.getElementById('divider');
+  const area = document.getElementById('compareArea');
+  let dragging = false;
+
+  divider.addEventListener('mousedown', (e) => {
+    dragging = true;
+    divider.classList.add('dragging');
+    document.body.style.cursor = currentLayout === 'vertical' ? 'row-resize' : 'col-resize';
+    document.body.style.userSelect = 'none';
+    // Prevent iframe from capturing mouse
+    document.querySelectorAll('iframe').forEach(f => f.style.pointerEvents = 'none');
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const panels = area.querySelectorAll('.panel');
+    const rect = area.getBoundingClientRect();
+
+    if (currentLayout === 'vertical') {
+      const ratio = (e.clientY - rect.top) / rect.height;
+      const clamped = Math.max(0.2, Math.min(0.8, ratio));
+      panels[0].style.flex = clamped;
+      panels[1].style.flex = 1 - clamped;
+    } else {
+      const ratio = (e.clientX - rect.left) / rect.width;
+      const clamped = Math.max(0.2, Math.min(0.8, ratio));
+      panels[0].style.flex = clamped;
+      panels[1].style.flex = 1 - clamped;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    divider.classList.remove('dragging');
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+    document.querySelectorAll('iframe').forEach(f => f.style.pointerEvents = '');
+  });
+}
+
+// Keyboard shortcuts
+function setupKeyboard() {
+  document.addEventListener('keydown', (e) => {
+    // Arrow keys to navigate files
+    if (e.target.tagName === 'SELECT') return;
+    const select = document.getElementById('fileSelect');
+
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      if (select.selectedIndex > 1) {
+        select.selectedIndex--;
+        onFileSelect();
+      }
+      e.preventDefault();
+    } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (select.selectedIndex < select.options.length - 1) {
+        select.selectedIndex++;
+        onFileSelect();
+      }
+      e.preventDefault();
+    } else if (e.key === 'r' || e.key === 'R') {
+      refreshFrames();
+    } else if (e.key === '1') {
+      setLayout('horizontal');
+    } else if (e.key === '2') {
+      setLayout('vertical');
+    } else if (e.key === '3') {
+      setLayout('overlay');
+    }
+  });
+}
+
+// File list - populated from folder scan
+const FILE_LIST = [
+  'KAA04900002.xml',
+  'KAA04900002_rel_v4.xml',
+  'KAA06410000.xml',
+  'KAA06410000_rel_v14.xml',
+  'KAA49000000.xml',
+  'KAA49000000_rel_v4.xml',
+  'KBC04991000.xml',
+  'KBC04991000_rel_v4.xml',
+  'KEA04007000.xml',
+  'KEA04007000_rel_v4.xml',
+  'KEA05600000.xml',
+  'KEA05600000_rel_v4.xml',
+  'KEC04713000.xml',
+  'KEC04713000_rel_v4.xml',
+  'KEC04M8A000.xml',
+  'KEC04M8A000_rel_v4.xml',
+  'KEC04M8AA01.xml',
+  'KEC04M8AA01_rel_v4.xml',
+  'KEC04M8AA02.xml',
+  'KEC04M8AA02_rel_v4.xml',
+  'KFA04151000.xml',
+  'KFA04151000_rel_v15.xml',
+  'KFC04001000.xml',
+  'KFC04001000_rel_v11.xml',
+  'KFG04202000.xml',
+  'KFG04202000_rel_v10.xml',
+  'KFL01011000.xml',
+  'KFL01011000_rel_v10.xml',
+  'KGA04003000.xml',
+  'KGA04003000_rel_v4.xml',
+  'KGA04003000_rel_v5.xml',
+  'KGA04004000.xml',
+  'KGA04004000_rel_v5.xml',
+  'KGA04801000.xml',
+  'KGA04801000_rel_v5.xml',
+  'KGA04P01000.xml',
+  'KGA04P01000_rel_v5.xml',
+  'KGB04001000.xml',
+  'KGB04001000_rel_v4.xml',
+  'KHE04302000.xml',
+  'KHE04302000_rel_v10.xml',
+  'KHE04309000.xml',
+  'KHE04309000_rel_v4.xml'
+];
+
+init();
+</script>
+</body>
+</html>

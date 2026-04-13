@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04011Z04.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="lngsIsblTrm_2" name="lngsIsblTrm_2" dataType="text"/>
+						<w2:key id="isblzAmt_3" name="isblzAmt_3" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="표지어음발행한도조회" screenno="KFA04011Z04" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType" style="width:1075px; height:126px;" creator="MY_COM" lasteditor="S012530(허준혁)" createdatetime="2009/08/18 16:14:01" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:108px;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<xf:input ctype="Edit" style="position:absolute; left:198px; top:42px; width:137px; height:24px; text-align:right;" id="lngsIsblTrm_2" indicator="발행가능금액" tabIndex="1" disabled="true" dataType="숫자/금액" displayFormat="ZZZ,ZZZ,ZZZ,ZZZ,ZZ9" maxlength="15" ninemode="0" insertcomma="1" rightalign="1" orgid="lngsIsblTrm_2" hierarchy="lngsIsblTrm_2" ref="data:dma_.lngsIsblTrm_2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:42px; height:24px; color:rgb(0,0,0);" id="Text3" tabIndex="2" label="조회시점 발행가능금액" orgid="Text3" hierarchy="Text3"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; height:24px; color:rgb(0,0,0);" id="Text4" tabIndex="3" label="조회시점 최장발행가능기간" orgid="Text4" hierarchy="Text4"/>
+				<xf:input ctype="Edit" style="position:absolute; left:198px; top:72px; width:44px; height:24px; text-align:right;" id="isblzAmt_3" indicator="최장발행가능기간" tabIndex="4" disabled="true" dataType="숫자/금액" displayFormat="ZZ9" maxlength="3" suffix="일" ninemode="0" insertcomma="1" rightalign="1" orgid="isblzAmt_3" hierarchy="isblzAmt_3" ref="data:dma_.isblzAmt_3"/>
+				<w2:textbox id="title_GroupBox1" class="title_h2" label="표지어음 발행한도 조회"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

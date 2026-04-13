@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04011Z05.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="acno" name="acno" dataType="text"/>
+						<w2:key id="custnm" name="custnm" dataType="text"/>
+						<w2:key id="grid5" name="grid5" dataType="text"/>
+						<w2:key id="regiNoitm" name="regiNoitm" dataType="text"/>
+						<w2:key id="grid6" name="grid6" dataType="text"/>
+						<w2:key id="handoAmtText" name="handoAmtText" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {}; //=================================================================================
+//							Screen EVENT
+//=================================================================================
+
+scwin.OnInitScreen = function() {
+    handoAmtText.ForeColor = GetRGBValue(255, 0, 0);
+};
+scwin.OnEndTran = function() {
+    if (Tran.ID == "KFA0401140" && Tran.bError == false) {
+
+    }
+};
+
+
+
+
+//=================================================================================
+//							OnItemChanged EVENT
+//=================================================================================
+
+// 자동화기기이용한도 등록/변경 링크
+scwin.LinkText1_OnClick = function() {
+    Link.acno = acno.Value;
+    Link.modfiDstcd = "06";
+    ScreenOpen("KHC06150200", "DATALINK|NEW");
+};
+scwin.Excel_Button_OnClick = function() {
+    //엑셀내보내기
+    //고객정보유출 방지 적용 의뢰						
+
+    MessageSlide("본인 정보제공 요청시,입금계좌 예금주에게 출금계좌번호등 출금계좌관련 금융정보(예금주명 제외)를 제공할 수 없음에 유의");
+
+
+    //	   grid5.ExcelExportS();	
+    grid5.ExcelExportS(-1, false, false, true, "", "", false, false, "", false, "", "", false, true, "", "용지방향=세로;자동맞춤=1x1;용지크기=4A;가운데맞춤=가로;", true);
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="sub_contents" id="GroupBox1" meta_componentContainer="true" meta_snippetCategory="00_화면시작"
+			meta_snippetKeyComponent="true" meta_snippetName="0_01 페이지시작" style="">
+			<xf:group id="" class="titbox">
+				<w2:textbox tagname="h3" style="" id="title_GroupBox1" label="자동화기기 이용한도 및 등록내용 조회" class=""></w2:textbox>
+			</xf:group>
+			<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true" meta_snippetName="5_03 테이블(3단)"
+				style="">
+				<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox adjusttheme="1" autosize="1" blinkinterval="0" container="0" ctype="Text" enable="1" enterstop="0"
+								hierarchy="Text_acno" id="Text_acno" image="없음" imagealign="MiddleLeft" imagespace="0" intemplate="0" label="계좌번호" linespace="-5"
+								orgid="Text_acno" overlapped="0" paper="0"
+								style=""
+								tabIndex="1" tabstop="0" tickeinterval="10" ticker="0" transparent="1" 확장모드="0">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input adjusttheme="1" afterinput="0" autodecimalpoint="0" autodup="1" autohscroll="0" autosize="1"
+								autoskip="1" autovscroll="0" border="Line" charcasing="1" checkcolcount="0" checkebcdic="0" checkrowcount="0" container="0"
+								ctype="Edit" currencysign="없음" dataType="숫자/금액" decimallength="0" disabled="true" displayFormat="ZZZZZZ-ZZ-ZZZZZZ" encrypt="0"
+								enterstop="1" fixspace="5" halfpitch="0" hierarchy="acno" horizontalscroll="0" hyungbae="0" id="acno" imeMode="전자" index="0"
+								indicator="계좌번호" insertcomma="0" intemplate="0" ksc5601="0" mandatory="0" maxlength="14" minlength="0" mpatternmaskinglen="0"
+								msread="0" multicol="12" multiline="0" multipattern="계좌번호" multirow="5" ninemode="0" noprint="0" orgid="acno" paper="0" pinpad="아니오"
+								postprocessing="배출안함" predisppattern="0" readOnly="false" recvseteventenable="0" ref="data:dma_.acno" relativeprint="0"
+								repeatprint="0" rightalign="0" selectall="1" semirequired="0" senddatatype="0" senddecimalpoint="1" showcalendarbutton="0"
+								showeraserbutton="0" showrowcounr="0"
+								style="width:116px;"
+								tabIndex="2" tabstop="1" unlimited="0" validationtype="계좌번호검증" verticalscroll="0" voicetype="비밀번호:1" wantreturn="0" woncurrency="0"
+								wordbreak="1" 확장모드="0">
+							</xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes></w2:attributes>
+							<w2:textbox adjusttheme="1" autosize="1" blinkinterval="0" container="0" ctype="Text" enable="1" enterstop="0"
+								hierarchy="Text_custnm" id="Text_custnm" image="없음" imagealign="MiddleLeft" imagespace="0" intemplate="0" label="고객명" linespace="2"
+								orgid="Text_custnm" overlapped="0" paper="0"
+								style=""
+								tabIndex="3" tabstop="0" tickeinterval="10" ticker="0" transparent="1" 확장모드="0">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<xf:input adjusttheme="1" afterinput="0" autodecimalpoint="0" autodup="1" autohscroll="0" autosize="1"
+								autoskip="1" autovscroll="0" border="Line" charcasing="1" checkcolcount="0" checkebcdic="0" checkrowcount="0" container="0"
+								ctype="Edit" dataType="문자" decimallength="0" disabled="true" displayFormat="H(30)" encrypt="0" enterstop="1" fixspace="5"
+								halfpitch="0" hierarchy="custnm" horizontalscroll="0" hyungbae="0" id="custnm" imeMode="전자" index="0" indicator="고객명"
+								insertcomma="0" intemplate="0" ksc5601="0" mandatory="0" maxlength="30" minlength="0" mpatternmaskinglen="0" msread="0"
+								multicol="12" multiline="0" multipattern="없음" multirow="5" ninemode="735286448" noprint="0" orgid="custnm" paper="0" pinpad="아니오"
+								postprocessing="배출안함" predisppattern="0" readOnly="false" recvseteventenable="0" ref="data:dma_.custnm" relativeprint="0"
+								repeatprint="0" rightalign="0" selectall="1" semirequired="0" senddatatype="0" senddecimalpoint="1" showcalendarbutton="0"
+								showeraserbutton="0" showrowcounr="0"
+								style="width:100%;"
+								tabIndex="5" tabstop="1" unlimited="0" validationtype="없음" verticalscroll="0" wantreturn="0" woncurrency="0" wordbreak="1"
+								확장모드="0">
+							</xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox adjusttheme="1" autosize="1" blinkinterval="0" container="0" ctype="Text" enable="1" enterstop="0"
+								hierarchy="Text_regiNoitm" id="Text_regiNoitm" image="없음" imagealign="MiddleLeft" imagespace="0" intemplate="0" label="등록건수"
+								linespace="2" orgid="Text_regiNoitm" overlapped="0" paper="0"
+								style=""
+								tabIndex="4" tabstop="0" tickeinterval="10" ticker="0" transparent="1" 확장모드="0">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<xf:input adjusttheme="1" afterinput="0" autodecimalpoint="0" autodup="1" autohscroll="0" autosize="1"
+								autoskip="1" autovscroll="0" border="Line" charcasing="1" checkcolcount="0" checkebcdic="0" checkrowcount="0" container="0"
+								ctype="Edit" dataType="숫자/금액" decimallength="0" disabled="true" displayFormat="Z(4)" encrypt="0" enterstop="1" fixspace="5"
+								halfpitch="0" hierarchy="regiNoitm" horizontalscroll="0" hyungbae="0" id="regiNoitm" imeMode="전자" index="0" indicator="현재건수5"
+								insertcomma="0" intemplate="0" ksc5601="0" mandatory="0" maxlength="4" minlength="0" mpatternmaskinglen="0" msread="0" multicol="12"
+								multiline="0" multipattern="없음" multirow="5" ninemode="0" noprint="0" orgid="regiNoitm" paper="0" pinpad="아니오" postprocessing="배출안함"
+								predisppattern="0" readOnly="false" recvseteventenable="0" ref="data:dma_.regiNoitm" relativeprint="0" repeatprint="0"
+								rightalign="0" selectall="1" semirequired="0" senddatatype="0" senddecimalpoint="1" showcalendarbutton="0" showeraserbutton="0"
+								showrowcounr="0"
+								style="width:32px;"
+								tabIndex="6" tabstop="1" unlimited="0" validationtype="없음" verticalscroll="0" wantreturn="0" woncurrency="0" wordbreak="1"
+								확장모드="0">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+								<w2:colspan>6</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input adjusttheme="1" afterinput="0" autodecimalpoint="0" autodup="1" autohscroll="0" autosize="0"
+								autoskip="1" autovscroll="0" border="Line" charcasing="1" checkcolcount="0" checkebcdic="0" checkrowcount="0" container="0"
+								ctype="Edit" currencysign="없음" dataType="문자" decimallength="0" disabled="false" displayFormat="h(100)" encrypt="0" enterstop="1"
+								fixspace="5" halfpitch="0" hierarchy="handoAmtText" horizontalscroll="0" hyungbae="0" id="handoAmtText" imeMode="반자" index="0"
+								indicator="한도금액내역" insertcomma="0" intemplate="0" ksc5601="0" mandatory="0" maxlength="100" minlength="0" mpatternmaskinglen="0"
+								msread="0" multicol="12" multiline="0" multipattern="없음" multirow="5" ninemode="0" noprint="0" orgid="handoAmtText" paper="0"
+								pinpad="아니오" postprocessing="배출안함" predisppattern="0" readOnly="false" recvseteventenable="0" ref="data:dma_.handoAmtText"
+								relativeprint="0" repeatprint="0" rightalign="0" selectall="1" semirequired="0" senddatatype="0" senddecimalpoint="1"
+								showcalendarbutton="0" showeraserbutton="0" showrowcounr="0"
+								style="width:100%;"
+								tabIndex="8" tabstop="1" unlimited="0" validationtype="없음" verticalscroll="0" voicetype="비밀번호:1" wantreturn="0" woncurrency="0"
+								wordbreak="1" 확장모드="0">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" class="gvwbox"><w2:gridView container="0" indicator="그리드5" tabstop="0" hierarchy="grid5" tabIndex="6" orgid="grid5" ref="data:dma_.grid5" adjusttheme="1" enterstop="0" ctype="IBSheet" paper="0" 확장모드="0" dataList="data:dlt_grid5" disabled="false" style="height:122px;" autoFit="0" id="grid5" intemplate="0">
+				<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+				<w2:header style="" id="header1">
+					<w2:row style="" id="">
+						<w2:column width="70" inputType="text" id="column1" value="일련번호"></w2:column>
+						<w2:column width="70" inputType="text" id="column2" value="등록일자"></w2:column>
+						<w2:column width="70" inputType="text" id="column3" value="등록부점"></w2:column>
+						<w2:column width="70" inputType="text" id="column4" value="단말번호"></w2:column>
+						<w2:column width="70" inputType="text" id="column5" value="1일출금한도금액"></w2:column>
+						<w2:column width="70" inputType="text" id="column6" value="1일송금한도금액"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody style="" id="gBody1">
+					<w2:row style="" id="">
+						<w2:column width="73" inputType="text" id="serno"></w2:column>
+						<w2:column width="100" inputType="text" id="regiDte"></w2:column>
+						<w2:column width="100" inputType="text" id="regiBrn"></w2:column>
+						<w2:column width="84" inputType="text" id="trmno"></w2:column>
+						<w2:column width="169" inputType="text" id="n1dayDrwotClam"></w2:column>
+						<w2:column width="169" inputType="text" id="n1dayTrsaccClam"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group>
+			<xf:group id="" class="gvwbox"><w2:gridView container="0" indicator="그리드6" tabstop="1" hierarchy="grid6" tabIndex="7" orgid="grid6" ref="data:dma_.grid6" adjusttheme="1" enterstop="1" ctype="IBSheet" paper="0" 확장모드="0" dataList="data:dlt_grid6" disabled="false" style="height:312px;" autoFit="0" id="grid6" intemplate="0">
+				<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+				<w2:header style="" id="header1">
+					<w2:row style="" id="">
+						<w2:column width="70" inputType="text" id="column1" value="한도관련내역"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody style="" id="gBody1">
+					<w2:row style="" id="">
+						<w2:column width="694" inputType="text" id="handoText"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group><xf:group id="" class="btnbox"><xf:group id="" class="lt"><xf:trigger container="0" tabIndex="1" align="MiddleCenter" type="button" gradientendcolor="11768958" adjusttheme="1" imagealign="MiddleLeft" paper="0" imagefit="0" 확장모드="0" disabled="false" theme="Normal" id="Excel_Button" text="엑셀내보내기" class="btn_cm" intemplate="0" tabstop="0" enableimage="없음" hierarchy="Excel_Button" showimage="1" toggle="0" showfocusrect="1" orgid="Excel_Button" enterstop="0" ctype="Button" disableimage="없음" mouseoverimage="없음" style="" autosize="0" gradientstyle="세로">
+				<xf:label><![CDATA[엑셀내보내기]]></xf:label>
+			</xf:trigger></xf:group><xf:group id="" class="rt"><w2:anchor container="0" linkvisited="1" outerDiv="false" linktype="Screen" textcolor="8212520" tabIndex="2" activelinkcolor="25855" transparent="0" adjusttheme="1" paper="0" normallinkcolor="8212520" visitedlinkcolor="8212520" 확장모드="0" disabled="false" id="LinkText1" class="btn_cm" disablelinkcolor="10066329" intemplate="0" tabstop="0" hierarchy="LinkText1" orgid="LinkText1" enterstop="0" ctype="LinkText" linkbehavior="NaverUnderline" style="" autosize="0">
+				<xf:label><![CDATA[자동화기기이용한도 등록/변경]]></xf:label>
+			</w2:anchor></xf:group></xf:group></xf:group>
+	</body>
+</html>

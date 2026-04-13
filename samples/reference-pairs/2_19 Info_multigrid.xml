@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate />
+		<w2:MSA />
+		<xf:model>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="col1" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col2" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col3" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col4" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col5" name="타이틀" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList baseNode="list" repeatNode="map" id="dataList2" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="col1" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col2" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col3" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col4" name="타이틀" dataType="text"></w2:column>
+						<w2:column id="col6" name="타이틀" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+						<w2:row></w2:row>
+					</w2:data>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo>
+		</w2:layoutInfo>
+		<w2:publicInfo method="" />
+		<script lazy="false" type="text/javascript"><![CDATA[
+			scwin.onpageload = function() {
+
+			};
+	   ]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+
+		<xf:group class="sub_contents" id="" style="">
+			<xf:group class="pgtbox" id="" style="">
+				<w2:textbox class="pgt_tit" id="" label="화면타이틀" style="" tagname=""></w2:textbox>
+				<xf:group class="breadcrumb" id="" style="">
+					<xf:group id="" style="" tagname="ul">
+						<xf:group class="home" id="" style="" tagname="li">
+							<w2:anchor id="" outerDiv="false" style="">
+								<xf:label><![CDATA[Home]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+						<xf:group id="" style="" tagname="li">
+							<w2:anchor id="" outerDiv="false" style="">
+								<xf:label><![CDATA[1Depth Menu]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+						<xf:group id="" style="" tagname="li">
+							<w2:anchor id="" outerDiv="false" style="">
+								<xf:label><![CDATA[2Depth Menu]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+						<xf:group id="" style="" tagname="li">
+							<w2:span id="" label="3Depth Menu" style=""></w2:span>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<xf:trigger class="btn_fav" id="" style="" type="button">
+					<xf:label></xf:label>
+				</xf:trigger>
+
+			</xf:group>
+			<xf:group class="titbox" id="" style="">
+				<w2:textbox class="txt_info" dataType="" id="" label="Info" style=""></w2:textbox>
+			</xf:group>
+			<xf:group class="lybox" id="" style="">
+				<xf:group class="" id="" style="">
+					<xf:group adaptiveThreshold="" class="gvwbox" id="" style="">
+						<w2:gridView autoFit="allColumn" checkReadOnlyOnPasteEnable="" class="gvw" dataList="data:dataList1" focusMode="row" id=""
+							keepDefaultColumnWidth="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="50" scrollByColumn="false"
+							scrollByColumnAdaptive="false" style="height:457px;">
+							<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+							<w2:header style="" id="header1">
+								<w2:row style="" id="row1">
+									<w2:column width="70" inputType="text" style="" id="column5" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column4" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column3" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column2" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column1" value="타이틀" displayMode="label"></w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody style="" id="gBody1">
+								<w2:row style="" id="row2">
+									<w2:column width="70" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col4" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col5" value="" displayMode="label"></w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+					</xf:group>
+				</xf:group>
+				<xf:group class="" id="" style="">
+					<xf:group adaptiveThreshold="" class="gvwbox" id="" style="">
+						<w2:gridView autoFit="allColumn" checkReadOnlyOnPasteEnable="" class="gvw" dataList="data:dataList2" focusMode="row" id=""
+							keepDefaultColumnWidth="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="50" scrollByColumn="false"
+							scrollByColumnAdaptive="false" style="height:229px;">
+							<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
+							<w2:header style="" id="header2">
+								<w2:row style="" id="row3">
+									<w2:column width="70" inputType="text" style="" id="column15" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column14" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column13" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column12" value="타이틀" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="column11" value="타이틀" displayMode="label"></w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody style="" id="gBody2">
+								<w2:row style="" id="row4">
+									<w2:column width="70" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col4" value="" displayMode="label"></w2:column>
+									<w2:column width="70" inputType="text" style="" id="col6" value="" displayMode="label"></w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+					</xf:group>
+					<xf:group adaptiveThreshold="" class="gvwbox" id="" style="">
+						<w2:gridView autoFit="allColumn" checkReadOnlyOnPasteEnable="" class="gvw" dataList="data:dataList2" focusMode="row" id=""
+							keepDefaultColumnWidth="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="50" scrollByColumn="false"
+							scrollByColumnAdaptive="false" style="height:229px;">
+							<w2:caption id="caption2" style="" value="this is a grid caption."></w2:caption>
+							<w2:header id="header2" style="">
+								<w2:row id="row3" style="">
+									<w2:column displayMode="label" id="column15" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column14" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column13" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column12" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column11" inputType="text" style="" value="타이틀" width="70"></w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody id="gBody2" style="">
+								<w2:row id="row4" style="">
+									<w2:column displayMode="label" id="col1" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col2" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col3" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col4" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col6" inputType="text" style="" value="" width="70"></w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+					</xf:group>
+				</xf:group>
+				<xf:group class="" id="" style="">
+					<xf:group adaptiveThreshold="" class="gvwbox" id="" style="">
+						<w2:gridView autoFit="allColumn" checkReadOnlyOnPasteEnable="" class="gvw" dataList="data:dataList2" focusMode="row" id=""
+							keepDefaultColumnWidth="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="50" scrollByColumn="false"
+							scrollByColumnAdaptive="false" style="height:229px;">
+							<w2:caption id="caption2" style="" value="this is a grid caption."></w2:caption>
+							<w2:header id="header2" style="">
+								<w2:row id="row3" style="">
+									<w2:column displayMode="label" id="column15" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column14" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column13" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column12" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column11" inputType="text" style="" value="타이틀" width="70"></w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody id="gBody2" style="">
+								<w2:row id="row4" style="">
+									<w2:column displayMode="label" id="col1" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col2" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col3" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col4" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col6" inputType="text" style="" value="" width="70"></w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+					</xf:group>
+					<xf:group adaptiveThreshold="" class="gvwbox" id="" style="">
+						<w2:gridView autoFit="allColumn" checkReadOnlyOnPasteEnable="" class="gvw" dataList="data:dataList2" focusMode="row" id=""
+							keepDefaultColumnWidth="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="50" scrollByColumn="false"
+							scrollByColumnAdaptive="false" style="height:229px;">
+							<w2:caption id="caption2" style="" value="this is a grid caption."></w2:caption>
+							<w2:header id="header2" style="">
+								<w2:row id="row3" style="">
+									<w2:column displayMode="label" id="column15" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column14" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column13" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column12" inputType="text" style="" value="타이틀" width="70"></w2:column>
+									<w2:column displayMode="label" id="column11" inputType="text" style="" value="타이틀" width="70"></w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody id="gBody2" style="">
+								<w2:row id="row4" style="">
+									<w2:column displayMode="label" id="col1" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col2" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col3" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col4" inputType="text" style="" value="" width="70"></w2:column>
+									<w2:column displayMode="label" id="col6" inputType="text" style="" value="" width="70"></w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group class="btnbox" id="" style="">
+				<xf:group class="rt" id="" style="">
+					<xf:trigger class="btn_cm" id="" style="" type="button">
+						<xf:label><![CDATA[업무버튼]]></xf:label>
+					</xf:trigger>
+					<xf:trigger class="btn_cm" id="" style="" type="button">
+						<xf:label><![CDATA[업무버튼]]></xf:label>
+					</xf:trigger>
+					<w2:textbox class="bar_btndiv" id="" label="" style=""></w2:textbox>
+					<xf:trigger class="btn_cm pt" id="" style="" type="button">
+						<xf:label><![CDATA[저장]]></xf:label>
+					</xf:trigger>
+					<xf:trigger class="btn_cm " id="" style="" type="button">
+						<xf:label><![CDATA[삭제]]></xf:label>
+					</xf:trigger>
+				</xf:group>
+			</xf:group>
+
+
+
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>담보유가증권 한도조회</title>
+<style>
+  body { font-family: '맑은 고딕', sans-serif; padding: 20px; background: #fff; }
+  .search-area { margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .search-area label { font-weight: 600; font-size: 13px; }
+  .search-area input[type="text"] { padding: 4px 8px; border: 1px solid #999; width: 160px; }
+  .search-area input[type="date"] { padding: 4px 8px; border: 1px solid #999; }
+  .search-area select { padding: 4px 8px; border: 1px solid #999; }
+  .search-area button { padding: 6px 16px; background: #4a7dff; color: #fff; border: none; cursor: pointer; border-radius: 3px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: center; font-size: 13px; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .btn-area { margin-top: 12px; text-align: right; }
+  .btn-area button { padding: 6px 16px; background: #5b6066; color: #fff; border: none; cursor: pointer; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h2>담보유가증권 한도조회</h2>
+
+<div class="search-area">
+  <label for="inquryDate">조회일시</label>
+  <input type="text" id="inquryDate" placeholder="YYYY/MM/DD" disabled>
+
+  <label for="searchType">조회구분</label>
+  <select id="searchType">
+    <option>전체</option>
+    <option>RP</option>
+    <option>매출</option>
+  </select>
+
+  <input type="checkbox" id="chkInclude">
+  <label for="chkInclude">만기포함</label>
+
+  <button type="button">조회</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>일련번호</th>
+      <th>담보채권번호</th>
+      <th>만기일자</th>
+      <th>시가평가액</th>
+      <th>기판매액(환수매가)</th>
+      <th>판매가능한도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>BND-2024-001</td><td>2025/06/30</td><td>150,000,000</td><td>50,000,000</td><td>100,000,000</td></tr>
+    <tr><td>2</td><td>BND-2024-002</td><td>2025/09/15</td><td>200,000,000</td><td>80,000,000</td><td>120,000,000</td></tr>
+    <tr><td>3</td><td>BND-2024-003</td><td>2025/12/31</td><td>100,000,000</td><td>30,000,000</td><td>70,000,000</td></tr>
+  </tbody>
+</table>
+
+<div class="btn-area">
+  <button type="button">엑셀내보내기</button>
+</div>
+
+</body>
+</html>

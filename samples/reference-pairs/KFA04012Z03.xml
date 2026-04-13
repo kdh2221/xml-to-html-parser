@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04012Z03.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="outptLineCnt" name="outptLineCnt" dataType="text"/>
+						<w2:key id="dataBook" name="dataBook" dataType="text"/>
+						<w2:key id="brncd1" name="brncd1" dataType="text"/>
+						<w2:key id="brnName1" name="brnName1" dataType="text"/>
+						<w2:key id="inquryYmd" name="inquryYmd" dataType="text"/>
+						<w2:key id="athorDmndYmd" name="athorDmndYmd" dataType="text"/>
+						<w2:key id="outptMsg" name="outptMsg" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};
+scwin.Button2_OnClick = function() {
+    //여기에 구현코드를 삽입하세요.
+    var str = new Array();
+    str[str.length] = "조회년월일 :;";
+    str[str.length] = inquryYmd.Value;
+    str[str.length] = ";;";
+    str[str.length] = "승인요청년월일 :;";
+    str[str.length] = athorDmndYmd.Value;
+    str[str.length] = ";;";
+    str[str.length] = "|9|";
+    str[str.length] = Text2.Value;
+
+    //	dataBook.ExcelExportS(-1, false, false, true, "", str.join(""), false, false, "", false);
+    dataBook.ExcelExportS(-1, false, false, true, "", str.join(""), false, false, "", false, "", "", false, true, "", "용지방향=가로;자동맞춤=1x1;용지크기=4A;가운데맞춤=가로;", true);
+};
+scwin.dataBook_OnDClick = function(Arg1, Arg2, Arg3) {
+    if (Arg1 > 0) {
+        Link.brncd = dataBook.GetCellDataSaveName(Arg1, "brncd");
+        Link.athorNo = dataBook.GetCellDataSaveName(Arg1, "athorNo");
+        Link.athorDmndYmd = athorDmndYmd.Value;
+        Link.incno = dataBook.GetCellDataSaveName(Arg1, "cno");
+        Link.dtlinyn = "1";
+        Link.inquryKnd = "4";
+        Link.inqurydstcd = "4";
+        //	Link.acnBal  = dataBook.GetCellDataSaveName(Arg1,"acnBal");
+
+        //여기에 구현코드를 삽입하세요.
+        Popup("KFA04012Z04", "DATALINK");
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="구속성예금본부승인내역 조회" screenno="KFA04012Z03" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType" style="width:1075px; height:738px;" creator="KANGKYUNGYUP" lasteditor="S012530(허준혁)" createdatetime="2011/06/28 15:12:07" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="2" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<w2:textbox ctype="Text" style="position:absolute; left:355px; top:18px; height:25px; color:rgb(0,0,0); font-size:-16; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Text2" tabIndex="1" label="&lt;&lt; 구속성예금본부승인 요청 및 승인결과 내역 조회 &gt;&gt;" orgid="Text2" hierarchy="Text2"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:744px; top:750px; height:24px; color:rgb(0,0,0); visibility:hidden;" id="Text_outptLineCnt" tabIndex="2" label="출력라인수" orgid="Text_outptLineCnt" hierarchy="Text_outptLineCnt"/>
+			<xf:input ctype="Edit" style="position:absolute; left:834px; top:750px; width:39px; height:24px; visibility:hidden;" id="outptLineCnt" indicator="출력라인수" tabIndex="3" dataType="숫자/금액" displayFormat="Z(5)" maxlength="5" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_.outptLineCnt"/>
+			<w2:gridView ctype="IBSheet" style="position:absolute; left:12px; top:138px; width:1056px; height:528px; background-color:rgb(255,255,255); color:rgb(0,0,0); visibility:visible; align:left; font-size:-13; letter-spacing:0; font-weight:400; font-family:굴림체;" id="dataBook" indicator="데이터부" tabIndex="4" tabstop="1" enterstop="1" autoFit="0" container="0" disabled="false" paper="0" adjusttheme="1" orgid="dataBook" hierarchy="dataBook" dataList="data:dlt_dataBook" ref="data:dma_.dataBook">
+				<w2:caption id="caption1" style="" value="this is a grid caption."/>
+				<w2:header id="header1" style="">
+					<w2:row id="" style="">
+						<w2:column id="column1" inputType="text" value="요청부점" width="70"/>
+						<w2:column id="column2" inputType="text" value="KB-PIN" width="70"/>
+						<w2:column id="column3" inputType="text" value="성명" width="70"/>
+						<w2:column id="column4" inputType="text" value="요청금액" width="70"/>
+						<w2:column id="column5" inputType="text" value="승인번호" width="70"/>
+						<w2:column id="column6" inputType="text" value="승인구분" width="70"/>
+						<w2:column id="column7" inputType="text" value="구속성예금예외구분" width="70"/>
+						<w2:column id="column8" inputType="text" value="업무구분" width="70"/>
+						<w2:column id="column9" inputType="text" value="사용여부" width="70"/>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="" style="">
+						<w2:column id="brncd" inputType="text" width="90"/>
+						<w2:column id="cno" inputType="text" width="131"/>
+						<w2:column id="custnm" inputType="text" width="117"/>
+						<w2:column id="dmdamt" inputType="text" width="159"/>
+						<w2:column id="athorNo" inputType="text" width="100"/>
+						<w2:column id="athorDstic" inputType="text" width="100"/>
+						<w2:column id="rstrctnidedstcd" inputType="text" width="149"/>
+						<w2:column id="idbDstcd" inputType="text" width="100"/>
+						<w2:column id="useyn" inputType="text" width="100"/>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView>
+			<xf:input ctype="Edit" style="position:absolute; left:102px; top:78px; width:32px; height:24px;" id="brncd1" indicator="부점코드" tabIndex="5" disabled="true" displayFormat="A(4)" maxlength="4" orgid="brncd1" hierarchy="brncd1" ref="data:dma_.brncd1"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:24px; top:78px; height:24px; color:rgb(0,0,0);" id="Text_brnName1" tabIndex="6" label="조회부점명" orgid="Text_brnName1" hierarchy="Text_brnName1"/>
+			<xf:input ctype="Edit" style="position:absolute; left:141px; top:78px; width:144px; height:24px;" id="brnName1" indicator="부점명" tabIndex="7" disabled="true" displayFormat="h(20)" maxlength="20" imeMode="반자" orgid="brnName1" hierarchy="brnName1" ref="data:dma_.brnName1"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:24px; top:108px; height:24px; color:rgb(0,0,0);" id="Text_inquryYmd" tabIndex="8" label="조회년월일" orgid="Text_inquryYmd" hierarchy="Text_inquryYmd"/>
+			<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:108px; width:74px; height:24px;" id="inquryYmd" indicator="조회년월일" tabIndex="9" disabled="true" displayFormat="yyyy/MM/dd" maxlength="8" orgid="inquryYmd" hierarchy="inquryYmd" ref="data:dma_.inquryYmd"/>
+			<xf:trigger ctype="Button" style="position:absolute; left:948px; top:672px; width:120px; height:24px;background-color:rgb(91,96,102);" id="Button2" tabIndex="10" text="엑셀내보내기" type="button" class="btn_def1" orgid="Button2" hierarchy="Button2">
+				<xf:label><![CDATA[엑셀내보내기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox ctype="Text" style="position:absolute; left:888px; top:108px; height:24px; color:rgb(0,0,0);" id="Text_athorDmndYmd" tabIndex="11" label="승인요청년월일" orgid="Text_athorDmndYmd" hierarchy="Text_athorDmndYmd"/>
+			<w2:inputCalendar ctype="Edit" style="position:absolute; left:990px; top:108px; width:74px; height:24px;" id="athorDmndYmd" indicator="승인요청년월일" tabIndex="12" disabled="true" displayFormat="yyyy/MM/dd" maxlength="8" orgid="athorDmndYmd" hierarchy="athorDmndYmd" ref="data:dma_.athorDmndYmd"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:18px; top:702px; height:24px; color:rgb(255,0,0);" id="Text3" tabIndex="13" label="* 상세조회시 해당 칼럼을 더블클릭 하세요" orgid="Text3" hierarchy="Text3"/>
+			<xf:input ctype="Edit" style="position:absolute; left:18px; top:672px; width:564px; height:24px;" id="outptMsg" indicator="출력메시지" tabIndex="14" displayFormat="h(80)" maxlength="80" imeMode="반자" orgid="outptMsg" hierarchy="outptMsg" ref="data:dma_.outptMsg"/>
+		</xf:group>
+	</body>
+</html>

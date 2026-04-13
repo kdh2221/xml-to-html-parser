@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebSquare Publishing Editor</title>
+<style>
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --radius: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Malgun Gothic', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 헤더 */
+.header {
+  background: #1e293b;
+  border-bottom: none;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header h1 { font-size: 20px; font-weight: 700; color: #fff; }
+.header .btn-outline {
+  color: #94a3b8;
+  border: 1px solid #334155;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 5px 14px;
+  transition: all 0.2s;
+}
+.header .btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-color: #64748b;
+}
+
+/* 탭 */
+.tabs {
+  display: flex;
+  gap: 0;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+  padding: 0 24px;
+}
+.tab-btn {
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* 메인 레이아웃 */
+.main { display: flex; height: calc(100vh - 105px); }
+.panel-left {
+  width: 400px;
+  min-width: 350px;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.panel-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 드롭존 */
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 40px 20px;
+  text-align: center;
+  margin: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f1f5f9;
+}
+.dropzone:hover, .dropzone.dragover { border-color: var(--primary); background: #eff6ff; }
+.dropzone-icon { font-size: 36px; margin-bottom: 8px; display: block; }
+.dropzone-text { font-size: 14px; color: var(--text-muted); }
+.dropzone-text strong { color: var(--primary); }
+.dropzone input[type="file"] { display: none; }
+
+/* (분석 결과, 컴포넌트 목록 CSS — 검증 화면으로 통합됨) */
+
+/* 우측 패널 탭 */
+.output-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0 16px;
+}
+.output-tab {
+  padding: 10px 18px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.output-tab:hover { color: var(--text); }
+.output-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.output-content { flex: 1; overflow: hidden; position: relative; }
+.output-pane { display: none; width: 100%; height: 100%; overflow: auto; }
+.output-pane.active { display: block; }
+#scriptValidatePane.active { display: flex; flex-direction: column; overflow: hidden; }
+
+/* 원본/변환 코드 비교 */
+.code-area {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  padding: 16px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e293b;
+  background: #fafbfc;
+  tab-size: 2;
+}
+.code-area:focus { outline: none; }
+
+/* (미리보기 CSS 제거됨 — 검증 화면으로 교체) */
+
+/* 버튼 */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+.btn-success { background: var(--success); color: #fff; }
+.btn-success:hover { background: #059669; }
+.btn-outline { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { background: #f8fafc; }
+.btn-sm { padding: 6px 12px; font-size: 13px; }
+
+/* 액션 바 */
+.action-bar {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 로딩 */
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 50;
+}
+.loading-overlay.show { display: flex; }
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 14px; color: var(--text-muted); }
+
+.status-msg { font-size: 12px; }
+.status-msg.error { color: var(--danger); }
+.status-msg.success { color: var(--success); }
+
+/* 저장 프로그레스 모달 */
+.save-progress-overlay {
+  display: none; position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.35); align-items: center; justify-content: center;
+}
+.save-progress-overlay.active { display: flex; }
+.save-progress-wrap {
+  background: #fff; border-radius: 10px; padding: 24px 28px; width: 360px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); border: 1px solid var(--border);
+}
+.save-progress-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.save-progress-bar { height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+.save-progress-fill { height: 100%; width: 0%; background: var(--primary); border-radius: 3px; transition: width 0.2s; }
+.save-progress-detail { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+
+/* 완료 토스트 */
+.save-toast {
+  display: none; position: fixed; bottom: 24px; right: 24px; z-index: 300;
+  background: #fff; border-radius: 10px; padding: 16px 20px; min-width: 280px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); border: 1px solid var(--success);
+  align-items: center; gap: 10px;
+}
+.save-toast.active { display: flex; }
+.save-toast-icon { font-size: 22px; }
+.save-toast-text { font-size: 13px; font-weight: 600; color: var(--text); }
+.save-toast-sub { font-size: 11px; color: var(--text-muted); font-weight: 400; }
+
+/* 빈 상태 */
+.empty-state {
+  display: flex; align-items: center; justify-content: center;
+  height: 100%; color: var(--text-muted); font-size: 14px;
+  flex-direction: column; gap: 8px;
+}
+.empty-state-icon { font-size: 48px; opacity: 0.3; }
+
+/* 파일 목록 */
+#fileListSection, #xtxFileListSection {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.file-list-header {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.file-list {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.1s;
+}
+.file-item:hover { background: #f8fafc; }
+.file-item.active {
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary);
+  font-weight: 600;
+}
+.file-item .file-idx {
+  color: var(--text-muted);
+  font-size: 12px;
+  min-width: 20px;
+}
+.file-item .file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-item .file-status {
+  font-size: 12px;
+  color: var(--success);
+}
+.file-item .file-del {
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.file-item:hover .file-del { opacity: 0.5; }
+.file-item .file-del:hover { opacity: 1; color: var(--danger); }
+.file-item .file-comp-count {
+  font-size: 11px; color: var(--text-muted); background: #f1f5f9;
+  padding: 1px 6px; border-radius: 8px; margin-left: auto; flex-shrink: 0;
+}
+
+/* ─── Wireframe MD 미리보기 ─── */
+#wireframePane { padding: 0; }
+#wireframeMd {
+  width: 100%; height: 100%;
+  border: none; resize: none;
+  padding: 20px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #1e293b;
+  background: #fafbfc;
+  tab-size: 2;
+  white-space: pre-wrap;
+}
+#wireframeMd:focus { outline: none; }
+
+/* ─── 검증 화면 ─── */
+.verify-content { padding: 16px; overflow: visible; height: auto; }
+.verify-section {
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.verify-section-header {
+  background: #f8fafc;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.verify-badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.verify-badge.pass { background: #dcfce7; color: #166534; }
+.verify-badge.warn { background: #fef3c7; color: #92400e; }
+.verify-badge.fail { background: #fef2f2; color: #dc2626; }
+.verify-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.verify-table th, .verify-table td {
+  padding: 7px 12px;
+  text-align: left;
+}
+.verify-table th {
+  background: #eef2ff;
+  color: #3730a3;
+  font-weight: 600;
+  border-bottom: 2px solid #c7d2fe;
+  position: sticky;
+  top: 0;
+}
+.verify-table td {
+  background: #fff;
+  border-bottom: 1px solid #f1f5f9;
+}
+.verify-table tr:hover td { background: #f8faff; }
+.verify-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.verify-tag.added { background: #dcfce7; color: #166534; }
+.verify-tag.removed { background: #fef2f2; color: #dc2626; }
+.verify-tag.changed { background: #fef3c7; color: #92400e; }
+.verify-tag.kept { background: #dbeafe; color: #1e40af; }
+.verify-arrow { color: var(--text-muted); margin: 0 4px; }
+.verify-mono { font-family: Consolas, monospace; font-size: 12px; }
+
+/* ─── 절대좌표 와이어프레임 ─── */
+.abs-wf-content { padding: 16px; overflow: visible; height: auto; }
+.abs-wf-header { margin-bottom: 12px; }
+.abs-wf-header h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.abs-wf-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; }
+.abs-wf-meta strong { color: var(--text); }
+
+.abs-wf-legend { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.abs-wf-legend-item {
+  font-size: 11px; padding: 2px 8px; border-radius: 4px; border: 1px solid;
+  font-weight: 600; white-space: nowrap;
+}
+
+.abs-wf-canvas-wrap {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: #fff; padding: 12px; overflow: auto; margin-bottom: 16px;
+}
+.abs-wf-canvas {
+  background: #fafbfc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.abs-wf-groupbox {
+  position: absolute;
+  border: 1px dashed #94a3b8;
+  border-radius: 3px;
+  background: rgba(148, 163, 184, 0.04);
+  pointer-events: none;
+  z-index: 1;
+}
+.abs-wf-groupbox-label {
+  position: absolute; top: -8px; left: 6px;
+  font-size: 9px; color: #64748b; background: #fafbfc;
+  padding: 0 3px; white-space: nowrap;
+}
+
+.abs-wf-comp {
+  position: absolute;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 11px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 5px;
+  cursor: default;
+  z-index: 2;
+  transition: box-shadow 0.15s;
+  white-space: nowrap;
+}
+.abs-wf-comp:hover { box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3); z-index: 10; }
+.abs-wf-comp-hidden { opacity: 0.35; }
+.abs-wf-comp-badge {
+  font-size: 8px; font-weight: 700; padding: 0 3px;
+  border-radius: 2px; flex-shrink: 0; line-height: 14px;
+}
+.abs-wf-comp-label { overflow: hidden; text-overflow: ellipsis; font-size: 10px; }
+
+/* 와이어프레임 토글 버튼 */
+.abs-wf-toggle, .rel-wf-toggle {
+  display: flex; gap: 4px; margin-bottom: 10px;
+}
+.abs-wf-toggle-btn, .rel-wf-toggle-btn {
+  padding: 4px 14px; border: 1px solid var(--border); border-radius: 4px;
+  background: var(--surface); font-size: 12px; font-weight: 600;
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+}
+.abs-wf-toggle-btn:hover, .rel-wf-toggle-btn:hover { background: #f1f5f9; }
+.abs-wf-toggle-btn.active, .rel-wf-toggle-btn.active {
+  background: var(--primary); color: #fff; border-color: var(--primary);
+}
+
+/* 컴포넌트 테이블 */
+.abs-wf-table-section { margin-top: 16px; }
+.abs-wf-table-section h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.abs-wf-table-wrap { overflow: visible; border: 1px solid var(--border); border-radius: var(--radius); }
+.abs-wf-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.abs-wf-table th {
+  background: #eef2ff; color: #3730a3; font-weight: 600;
+  padding: 6px 10px; text-align: left; border-bottom: 2px solid #c7d2fe;
+}
+.abs-wf-table td { padding: 5px 10px; border-bottom: 1px solid #f1f5f9; background: #fff; }
+.abs-wf-table tr:hover td { background: #f8faff; }
+.abs-wf-table tr.row-hidden td { opacity: 0.5; }
+.abs-wf-table .num { font-family: Consolas, monospace; font-size: 11px; text-align: right; }
+.abs-wf-table code { font-size: 11px; background: #f1f5f9; padding: 1px 4px; border-radius: 3px; }
+
+.abs-wf-type-badge { font-size: 11px; padding: 1px 6px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+
+.abs-wf-status { font-size: 11px; padding: 1px 6px; border-radius: 8px; font-weight: 600; }
+.abs-wf-status.visible { background: #dcfce7; color: #166534; }
+.abs-wf-status.hidden { background: #f1f5f9; color: #94a3b8; }
+
+/* 검증 결과 */
+.abs-wf-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.abs-wf-stat-item {
+  font-size: 12px; padding: 4px 10px; background: #f8fafc;
+  border: 1px solid var(--border); border-radius: 6px;
+}
+.abs-wf-stat-item strong { color: var(--primary); margin-right: 3px; }
+
+.abs-wf-issues { margin-bottom: 16px; }
+.abs-wf-issues h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.abs-wf-issue-group { margin-bottom: 10px; }
+.abs-wf-issue-title {
+  font-size: 13px; font-weight: 700; padding: 6px 12px;
+  border-radius: 6px 6px 0 0;
+}
+.abs-wf-issue-title.pass { background: #dcfce7; color: #166534; border-radius: 6px; }
+.abs-wf-issue-title.warn { background: #fef3c7; color: #92400e; }
+.abs-wf-issue-title.fail { background: #fef2f2; color: #dc2626; }
+.abs-wf-issue-item {
+  font-size: 12px; padding: 4px 12px; background: #fff;
+  border: 1px solid #f1f5f9; border-top: none;
+  font-family: Consolas, monospace;
+}
+.abs-wf-issue-item:last-child { border-radius: 0 0 6px 6px; }
+
+/* ─── XML to XML 변환 옵션 ─── */
+.xtx-options {
+  display: flex; gap: 16px; padding: 10px 16px;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.xtx-radio-label {
+  font-size: 13px; font-weight: 600; color: var(--text);
+  display: flex; align-items: center; gap: 5px; cursor: pointer;
+}
+.xtx-radio-label input[type="radio"] { accent-color: var(--primary); cursor: pointer; }
+
+/* ─── 상대좌표 와이어프레임 ─── */
+.rel-wf-content { padding: 16px; overflow: visible; height: auto; }
+.rel-wf-header { margin-bottom: 12px; }
+.rel-wf-header h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.rel-wf-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; }
+.rel-wf-meta strong { color: var(--text); }
+
+.rel-wf-container {
+  border: 2px solid #1e293b; border-radius: 8px; background: #fff;
+  padding: 0; overflow: hidden;
+}
+.rel-wf-root-label {
+  background: #1e293b; color: #94a3b8; font-size: 11px; font-weight: 600;
+  padding: 6px 14px; font-family: Consolas, monospace;
+}
+
+/* 섹션 블록 */
+.rel-wf-section {
+  border: 1px solid #e2e8f0; border-left: 4px solid;
+  margin: 10px 12px; border-radius: 6px; overflow: hidden;
+}
+.rel-wf-section-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-bottom: 1px solid;
+  font-size: 13px; font-weight: 600;
+}
+.rel-wf-section-badge {
+  color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px;
+  border-radius: 4px; font-family: Consolas, monospace; flex-shrink: 0;
+}
+.rel-wf-section-label { color: var(--text); }
+.rel-wf-section-body { padding: 10px 12px; }
+
+.rel-wf-inner-label {
+  font-size: 10px; color: #94a3b8; font-family: Consolas, monospace;
+  margin-bottom: 6px; display: block; font-weight: 600;
+}
+
+/* titbox */
+.rel-wf-titbox { display: flex; align-items: center; justify-content: space-between; }
+.rel-wf-titbox-text { font-size: 14px; font-weight: 700; color: var(--text); }
+.rel-wf-titbox-rt {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 10px; color: #94a3b8; font-family: Consolas, monospace;
+}
+
+/* th/td 테이블 */
+.rel-wf-table {
+  width: 100%; border-collapse: collapse; font-size: 12px;
+  border: 1px solid #e2e8f0; border-radius: 4px;
+}
+.rel-wf-table col { border-right: 1px solid #e2e8f0; }
+.rel-wf-table tr { border-bottom: 1px solid #e2e8f0; }
+.rel-wf-table tr:last-child { border-bottom: none; }
+.rel-wf-th {
+  background: #f8fafc; padding: 6px 8px; text-align: left;
+  font-weight: 600; color: #475569; vertical-align: middle;
+  border-right: 1px solid #e2e8f0;
+}
+.rel-wf-td {
+  padding: 6px 8px; vertical-align: middle;
+  border-right: 1px solid #e2e8f0;
+}
+.rel-wf-td:last-child, .rel-wf-th:last-child { border-right: none; }
+
+/* 컴포넌트 칩 */
+.rel-wf-chip {
+  display: inline-flex; align-items: center; gap: 3px;
+  border: 1px solid; border-radius: 4px; padding: 2px 6px;
+  font-size: 11px; margin: 2px; white-space: nowrap; cursor: default;
+  transition: box-shadow 0.15s;
+}
+.rel-wf-chip:hover { box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25); }
+.rel-wf-chip-badge {
+  font-size: 8px; font-weight: 700; padding: 0 3px;
+  border-radius: 2px; line-height: 14px;
+}
+.rel-wf-show-id { font-family: Consolas, monospace; font-size: 10px; }
+.rel-wf-td-ids {
+  font-size: 9px; color: #64748b; font-family: Consolas, monospace;
+  margin-top: 3px; text-align: left; line-height: 1.3;
+}
+.rel-wf-section-id {
+  font-size: 10px; margin-left: auto; font-family: Consolas, monospace;
+  color: #64748b; padding: 0 6px;
+}
+
+/* 버튼 영역 */
+.rel-wf-btn-area { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding-top: 8px; }
+.rel-wf-btn-right { justify-content: flex-end; }
+
+/* 그리드 */
+.rel-wf-grid-box {
+  border: 1px solid #c7d2fe; border-radius: 6px; overflow: hidden;
+}
+.rel-wf-grid-header {
+  background: #eef2ff; padding: 6px 10px; display: flex;
+  align-items: center; justify-content: space-between;
+  border-bottom: 1px solid #c7d2fe;
+}
+.rel-wf-grid-id { font-size: 13px; font-weight: 700; color: #4338ca; }
+.rel-wf-grid-info {
+  font-size: 10px; color: #6366f1; font-family: Consolas, monospace;
+}
+.rel-wf-grid-cols {
+  display: flex; overflow-x: auto; border-bottom: 1px solid #e0e7ff;
+  background: #f5f7ff;
+}
+.rel-wf-grid-col {
+  padding: 4px 8px; font-size: 11px; font-weight: 600; color: #4338ca;
+  border-right: 1px solid #e0e7ff; white-space: nowrap;
+  display: flex; flex-direction: column; align-items: center;
+}
+.rel-wf-grid-col small { font-size: 9px; color: #818cf8; font-weight: 400; }
+.rel-wf-grid-body {
+  height: 80px; display: flex; align-items: center; justify-content: center;
+  color: #a5b4fc; font-size: 12px; background: #fafaff;
+}
+
+/* hidden 섹션 */
+/* 좌우 분할 */
+.rel-wf-horizontal {
+  border: 2px dashed #6366f1; border-radius: 8px; margin: 10px 12px;
+  overflow: hidden;
+}
+.rel-wf-horizontal-label {
+  background: #6366f1; color: #fff; font-size: 10px; font-weight: 700;
+  padding: 4px 12px; font-family: Consolas, monospace;
+}
+.rel-wf-horizontal-inner { display: flex; gap: 0; }
+.rel-wf-horizontal-col {
+  flex: 1; border-right: 1px dashed #c7d2fe; padding: 4px;
+}
+.rel-wf-horizontal-col:last-child { border-right: none; }
+.rel-wf-horizontal-col .rel-wf-section { margin: 6px 4px; }
+.rel-wf-horizontal-col-label {
+  font-size: 9px; color: #6366f1; font-family: Consolas, monospace;
+  font-weight: 600; padding: 2px 6px; background: #eef2ff; border-radius: 3px;
+  display: inline-block; margin: 4px 4px 0;
+}
+
+.rel-wf-hidden-section { opacity: 0.6; }
+
+/* ─── 스크립트 검증 ─── */
+/* 검증 탭 레이아웃 */
+.verify-wrap { display: flex; flex-direction: column; flex: 1; min-height: 0; overflow: hidden; }
+#verifySummaryContent { padding: 12px 16px; flex-shrink: 0; border-bottom: 1px solid var(--border); }
+.verify-subtabs {
+  display: flex; gap: 0; border-bottom: 2px solid var(--border);
+  padding: 0 16px; flex-shrink: 0; background: var(--surface);
+}
+.verify-subtab {
+  padding: 8px 18px; border: none; background: none; font-size: 13px; font-weight: 600;
+  color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px;
+}
+.verify-subtab:hover { color: var(--text); }
+.verify-subtab.active { color: var(--primary); border-bottom-color: var(--primary); }
+.verify-subpane { display: none; flex: 1; min-height: 0; overflow: auto; padding: 12px 16px; }
+.verify-subpane.active { display: flex; flex-direction: column; }
+.sv-content { padding: 0; overflow: visible; height: auto; }
+.sv-header h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.sv-summary {
+  padding: 10px 16px; border-radius: 6px; font-size: 14px; margin-bottom: 14px;
+}
+.sv-summary-pass { background: #dcfce7; color: #166534; }
+.sv-summary-warn { background: #fef3c7; color: #92400e; }
+.sv-summary-fail { background: #fef2f2; color: #dc2626; }
+.sv-section { margin-bottom: 16px; }
+.sv-section-title {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  padding: 6px 0; border-bottom: 2px solid var(--border); margin-bottom: 6px;
+}
+.sv-table {
+  width: 100%; border-collapse: collapse; font-size: 12px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+}
+.sv-table th {
+  background: #eef2ff; color: #3730a3; font-weight: 600; padding: 6px 10px;
+  text-align: left; border-bottom: 2px solid #c7d2fe;
+}
+.sv-table td { padding: 5px 10px; border-bottom: 1px solid #f1f5f9; background: #fff; }
+.sv-table tr:hover td { background: #f8faff; }
+.sv-table tr.sv-fail td { background: #fef2f2; }
+.sv-table code { font-size: 11px; background: #f1f5f9; padding: 1px 4px; border-radius: 3px; }
+.sv-pass-badge {
+  font-size: 11px; font-weight: 700; color: #166534; background: #dcfce7;
+  padding: 1px 8px; border-radius: 8px;
+}
+.sv-fail-badge {
+  font-size: 11px; font-weight: 700; color: #dc2626; background: #fef2f2;
+  padding: 1px 8px; border-radius: 8px;
+}
+.sv-warn-badge {
+  font-size: 11px; font-weight: 700; color: #92400e; background: #fef3c7;
+  padding: 1px 8px; border-radius: 8px;
+}
+.sv-issue-group { margin-bottom: 8px; }
+.sv-issue-title {
+  font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 6px 6px 0 0;
+}
+.sv-fail-bg { background: #fef2f2; color: #dc2626; }
+.sv-warn-bg { background: #fef3c7; color: #92400e; }
+.sv-issue-item {
+  font-size: 12px; padding: 4px 12px; background: #fff;
+  border: 1px solid #f1f5f9; border-top: none;
+}
+.sv-issue-item:last-child { border-radius: 0 0 6px 6px; }
+.sv-desc {
+  font-size: 12px; color: var(--text-muted); margin-bottom: 8px;
+  padding: 6px 10px; background: #f8fafc; border-radius: 4px; border-left: 3px solid var(--border);
+}
+.sv-desc code { font-size: 11px; background: #eef2ff; padding: 1px 4px; border-radius: 3px; color: #4338ca; }
+.sv-desc-cell { font-size: 11px; color: #475569; max-width: 300px; }
+.sv-desc-cell strong { color: #dc2626; }
+.sv-desc-cell code { font-size: 10px; background: #f1f5f9; padding: 1px 3px; border-radius: 2px; }
+.sv-issue-desc { font-size: 11px; color: #64748b; }
+.rel-wf-hidden-body { display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* 설정 모달 */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+  z-index: 200; align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: #fff; border-radius: 12px; padding: 24px; width: 480px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.modal-box h2 { font-size: 18px; margin-bottom: 16px; }
+.modal-box .setting-row {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+.modal-box .setting-label {
+  font-size: 13px; font-weight: 600; min-width: 80px; flex-shrink: 0;
+}
+.modal-box .setting-value {
+  flex: 1; font-size: 13px; color: var(--text-muted); padding: 8px 12px;
+  background: #f1f5f9; border-radius: 6px; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; min-height: 36px;
+  display: flex; align-items: center;
+}
+.modal-box .setting-value.active-path { color: var(--primary); font-weight: 500; }
+.modal-footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<div class="header">
+  <div>
+    <h1>WebSquare Publishing Editor</h1>
+  </div>
+  <div style="display:flex;gap:8px;">
+    <button class="btn btn-outline btn-sm" onclick="openCompare()">&#9654; 화면 비교하기</button>
+    <button class="btn btn-outline btn-sm" onclick="openSettings()">&#9881; 설정</button>
+    <button class="btn btn-outline btn-sm" onclick="clearAll()">초기화</button>
+  </div>
+</div>
+
+<!-- 모드 탭 -->
+<div class="tabs">
+  <button class="tab-btn active" data-mode="xmltoxml" onclick="switchMode('xmltoxml')">XML to XML</button>
+  <button class="tab-btn" data-mode="xml" onclick="switchMode('xml')">XML 좌표변환</button>
+</div>
+
+<!-- 메인 -->
+<div class="main">
+  <!-- 좌측 패널 -->
+  <div class="panel-left">
+    <!-- XML 드롭존 (기본 숨김) -->
+    <div id="xmlDropzone" class="dropzone" style="display:none;" onclick="document.getElementById('xmlFileInput').click()">
+      <span class="dropzone-icon">&#128196;</span>
+      <div class="dropzone-text">
+        WebSquare XML 파일을 <strong>드래그 & 드롭</strong>하거나 클릭하여 선택<br>
+        <small>.xml 파일 지원 (다중 선택 가능)</small>
+      </div>
+      <input type="file" id="xmlFileInput" accept=".xml" multiple>
+    </div>
+
+    <!-- 파일 목록 -->
+    <div id="fileListSection" style="display:none;">
+      <div class="file-list-header">
+        <span>파일 목록 (<span id="fileCount">0</span>개)</span>
+        <button class="btn btn-outline btn-sm" style="padding:2px 8px;" onclick="clearFiles()">전체삭제</button>
+      </div>
+      <div id="fileList" class="file-list"></div>
+    </div>
+
+    <!-- XML to XML 변환 옵션 (기본 활성) -->
+    <div id="xtxConvertOptions" class="xtx-options">
+      <label class="xtx-radio-label"><input type="radio" name="xtxConvertMode" value="normal" checked> 일반 변환</label>
+      <label class="xtx-radio-label"><input type="radio" name="xtxConvertMode" value="responsive"> 반응형 변환</label>
+    </div>
+
+    <!-- XML to XML 드롭존 (기본 활성) -->
+    <div id="xmltoxmlDropzone" class="dropzone" onclick="document.getElementById('xmltoxmlFileInput').click()">
+      <span class="dropzone-icon">&#128196;</span>
+      <div class="dropzone-text">
+        변환할 XML 파일을 <strong>드래그 & 드롭</strong>하거나 클릭하여 선택<br>
+        <small>.xml 파일 지원 (다중 선택 가능)</small>
+      </div>
+      <input type="file" id="xmltoxmlFileInput" accept=".xml" multiple>
+    </div>
+
+    <!-- XML to XML 파일 목록 -->
+    <div id="xtxFileListSection" style="display:none;">
+      <div class="file-list-header">
+        <span>파일 목록 (<span id="xtxFileCount">0</span>개)</span>
+        <button class="btn btn-outline btn-sm" style="padding:2px 8px;" onclick="clearXtxFiles()">전체삭제</button>
+      </div>
+      <div id="xtxFileList" class="file-list"></div>
+    </div>
+  </div>
+
+  <!-- 우측 패널 (XML 좌표변환 모드) -->
+  <div class="panel-right" id="panelRightXml" style="display:none;">
+    <div class="output-tabs">
+      <button class="output-tab active" data-tab="wireframe" onclick="switchOutputTab('wireframe')">Wireframe MD</button>
+      <button class="output-tab" data-tab="verify" onclick="switchOutputTab('verify')">변환 검증</button>
+    </div>
+
+    <div class="output-content">
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText">변환 중...</div>
+      </div>
+
+      <!-- Wireframe MD 미리보기 -->
+      <div class="output-pane active" id="wireframePane">
+        <textarea id="wireframeMd" readonly placeholder="XML 파일을 업로드하면 Wireframe MD가 여기에 표시됩니다..."></textarea>
+      </div>
+
+      <!-- 변환 검증 -->
+      <div class="output-pane" id="verifyPane">
+        <div id="verifyContent" class="verify-content">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#9989;</div>
+            <div>XML 파일을 업로드하면 변환 검증 결과가 표시됩니다</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 액션 바 -->
+    <div class="action-bar">
+      <span id="statusMsg" class="status-msg"></span>
+      <button class="btn btn-outline btn-sm" onclick="copyConverted()">변환 XML 복사</button>
+      <button class="btn btn-outline btn-sm" onclick="copyWireframeMd()">Wireframe MD 복사</button>
+      <button class="btn btn-success btn-sm" onclick="downloadConverted()">변환 XML 저장하기</button>
+    </div>
+  </div>
+
+  <!-- 우측 패널 (XML to XML 모드) -->
+  <div class="panel-right" id="panelRightXmlToXml">
+    <div class="output-tabs">
+      <button class="output-tab active" data-tab="absWireframe" onclick="switchXtxOutputTab('absWireframe')">절대좌표 와이어프레임</button>
+      <button class="output-tab" data-tab="relWireframe" onclick="switchXtxOutputTab('relWireframe')">상대좌표 와이어프레임</button>
+      <button class="output-tab" data-tab="scriptValidate" onclick="switchXtxOutputTab('scriptValidate')">검증</button>
+    </div>
+
+    <div class="output-content">
+      <div class="loading-overlay" id="xtxLoadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text" id="xtxLoadingText">분석 중...</div>
+      </div>
+
+      <!-- 절대좌표 와이어프레임 -->
+      <div class="output-pane active" id="absWireframePane">
+        <div id="absWireframeContent" class="abs-wf-content">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#128202;</div>
+            <div>XML 파일을 업로드하면 절대좌표 와이어프레임이 표시됩니다</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 상대좌표 와이어프레임 -->
+      <div class="output-pane" id="relWireframePane">
+        <div id="relWireframeContent" class="rel-wf-content">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#128203;</div>
+            <div>XML 파일을 업로드하면 상대좌표 템플릿 와이어프레임이 표시됩니다</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 검증 -->
+      <div class="output-pane" id="scriptValidatePane">
+        <div class="verify-wrap">
+          <!-- 검증 요약 (상단 고정) -->
+          <div id="verifySummaryContent"></div>
+          <!-- 서브탭 -->
+          <div class="verify-subtabs">
+            <button class="verify-subtab active" onclick="switchVerifySubtab('compList')">전체 컴포넌트</button>
+            <button class="verify-subtab" onclick="switchVerifySubtab('scriptVal')">스크립트 검증</button>
+          </div>
+          <!-- 서브탭 콘텐츠 -->
+          <div class="verify-subpane active" id="compListSubpane">
+            <div id="compListContent"></div>
+          </div>
+          <div class="verify-subpane" id="scriptValSubpane">
+            <div id="scriptValidateContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 액션 바 -->
+    <div class="action-bar">
+      <span id="xtxStatusMsg" class="status-msg"></span>
+      <button class="btn btn-outline btn-sm" onclick="copyXtxConverted()">변환 XML 복사</button>
+      <button class="btn btn-success btn-sm" onclick="downloadXtxConverted()">변환 XML 저장하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS 모듈 -->
+<script src="js/xml-parser.js"></script>
+<script src="js/wireframe-gen.js"></script>
+<script src="js/abs-wireframe-gen.js"></script>
+<script src="js/rel-wireframe-gen.js"></script>
+<script src="js/abs-to-rel-converter.js"></script>
+<script src="js/sample-converter.js"></script>
+<script src="js/script-validator.js"></script>
+<script src="js/xml-generator.js"></script>
+<script src="js/html-converter.js"></script>
+
+<script>
+// ─── 상태 ───
+let currentMode = 'xmltoxml';
+let components = [];
+let meta = { screenId: '', screenName: '', width: 1056, height: 750 };
+let analysisResult = null;
+let convertedXml = '';
+let originalXml = '';
+let originalFileName = '';
+let selectedCompIndex = -1;
+
+// 다중 파일 관리
+let fileResults = []; // [{ name, originalXml, convertedXml, analysis, meta, components, wireframeMd }]
+let activeFileIndex = -1;
+let saveDirHandle = null; // 저장 폴더 핸들 (설정에서 지정)
+// 파일명별 다운로드 버전 카운터
+let downloadVersionMap = JSON.parse(localStorage.getItem('wsq_dl_version_map') || '{}');
+function getNextVersion(map, key, storageKey) {
+  const ver = (map[key] || 0) + 1;
+  map[key] = ver;
+  localStorage.setItem(storageKey, JSON.stringify(map));
+  return ver;
+}
+
+// ─── 저장 프로그레스 / 토스트 ───
+let saveToastTimer = null;
+function showSaveProgress(total) {
+  const el = document.getElementById('saveProgress');
+  document.getElementById('saveProgressTitle').textContent = '저장 중...';
+  document.getElementById('saveProgressFill').style.width = '0%';
+  document.getElementById('saveProgressDetail').textContent = `0 / ${total}`;
+  el.classList.add('active');
+  document.getElementById('saveToast').classList.remove('active');
+}
+function updateSaveProgress(current, total, fileName) {
+  const pct = Math.round((current / total) * 100);
+  document.getElementById('saveProgressFill').style.width = pct + '%';
+  document.getElementById('saveProgressDetail').textContent = `${current} / ${total}  -  ${fileName}`;
+}
+function hideSaveProgress() {
+  document.getElementById('saveProgress').classList.remove('active');
+}
+function showSaveToast(msg, sub) {
+  hideSaveProgress();
+  const el = document.getElementById('saveToast');
+  document.getElementById('saveToastText').textContent = msg;
+  document.getElementById('saveToastSub').textContent = sub || '';
+  el.classList.add('active');
+  if (saveToastTimer) clearTimeout(saveToastTimer);
+  saveToastTimer = setTimeout(() => el.classList.remove('active'), 3000);
+}
+
+// ─── 모드 전환 ───
+function switchMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  document.getElementById('xmlDropzone').style.display = mode === 'xml' ? '' : 'none';
+  document.getElementById('xtxConvertOptions').style.display = mode === 'xmltoxml' ? '' : 'none';
+  document.getElementById('xmltoxmlDropzone').style.display = mode === 'xmltoxml' ? '' : 'none';
+  document.getElementById('fileListSection').style.display = mode === 'xml' && fileResults.length ? '' : 'none';
+  document.getElementById('xtxFileListSection').style.display = mode === 'xmltoxml' && xtxFileResults.length ? '' : 'none';
+  document.getElementById('panelRightXml').style.display = mode === 'xml' ? '' : 'none';
+  document.getElementById('panelRightXmlToXml').style.display = mode === 'xmltoxml' ? '' : 'none';
+}
+
+// ─── 출력 탭 전환 ───
+function switchOutputTab(tab) {
+  document.querySelectorAll('.output-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.output-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById(tab + 'Pane').classList.add('active');
+}
+
+// ─── 드래그 & 드롭 ───
+function setupDropzone(zoneId, fileInputId, handler) {
+  const zone = document.getElementById(zoneId);
+  const input = document.getElementById(fileInputId);
+  zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('dragover'); });
+  zone.addEventListener('dragleave', () => { zone.classList.remove('dragover'); });
+  zone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    zone.classList.remove('dragover');
+    const files = Array.from(e.dataTransfer.files);
+    if (files.length) handler(files);
+  });
+  input.addEventListener('change', (e) => {
+    const files = Array.from(e.target.files);
+    if (files.length) handler(files);
+    input.value = ''; // 같은 파일 재선택 가능
+  });
+}
+
+// ─── XML 파일 처리 (다중 파일) ───
+async function handleXmlFiles(files) {
+  const xmlFiles = files.filter(f => f.name.match(/\.xml$/i));
+  if (!xmlFiles.length) { alert('XML 파일(.xml)만 지원합니다.'); return; }
+
+  showLoading(`${xmlFiles.length}개 파일 분석 중...`);
+
+  for (const file of xmlFiles) {
+    // 중복 파일 건너뛰기
+    if (fileResults.some(r => r.name === file.name)) continue;
+
+    try {
+      const text = await file.text();
+      const result = AbsToRelConverter.convert(text);
+      const parsed = XmlParser.parseDom(text);
+      const comps = parsed.sections.flatMap(s => s.comps).filter(c => !c.hidden);
+      const md = WireframeGen.generate(text, file.name);
+
+      fileResults.push({
+        name: file.name,
+        originalXml: text,
+        convertedXml: result.convertedXml,
+        analysis: result.analysis,
+        meta: parsed.meta,
+        components: comps,
+        wireframeMd: md,
+      });
+    } catch (e) {
+      setStatus(`${file.name} 분석 실패: ${e.message}`, 'error');
+    }
+  }
+
+  renderFileList();
+  // 마지막 추가된 파일 선택
+  if (fileResults.length > 0) {
+    selectFile(fileResults.length - 1);
+  }
+
+  hideLoading();
+  setStatus(`${fileResults.length}개 파일 로드됨`, 'success');
+}
+
+// 단일 파일 호환 (handleXmlFile 대신)
+async function handleXmlFile(files) {
+  if (!Array.isArray(files)) files = [files];
+  await handleXmlFiles(files);
+}
+
+// ─── 파일 목록 렌더링 ───
+function renderFileList() {
+  const section = document.getElementById('fileListSection');
+  const list = document.getElementById('fileList');
+  document.getElementById('fileCount').textContent = fileResults.length;
+
+  if (!fileResults.length) { section.style.display = 'none'; return; }
+  section.style.display = '';
+
+  list.innerHTML = fileResults.map((r, i) => `
+    <div class="file-item ${i === activeFileIndex ? 'active' : ''}" onclick="selectFile(${i})">
+      <span class="file-idx">${i + 1}</span>
+      <span class="file-name" title="${r.name}">${r.name}</span>
+      <span class="file-del" onclick="event.stopPropagation();removeFile(${i})" title="삭제">&#10005;</span>
+    </div>
+  `).join('');
+}
+
+function removeFile(index) {
+  fileResults.splice(index, 1);
+  if (activeFileIndex >= fileResults.length) activeFileIndex = fileResults.length - 1;
+  if (fileResults.length > 0) selectFile(activeFileIndex);
+  else clearFiles();
+}
+
+// ─── 파일 선택 ───
+function selectFile(index) {
+  if (index < 0 || index >= fileResults.length) return;
+  activeFileIndex = index;
+  const r = fileResults[index];
+
+  // 현재 상태에 로드
+  originalXml = r.originalXml;
+  originalFileName = r.name;
+  convertedXml = r.convertedXml;
+  analysisResult = r.analysis;
+  meta = r.meta;
+  components = r.components;
+  selectedCompIndex = -1;
+
+  document.getElementById('wireframeMd').value = r.wireframeMd;
+
+  renderFileList();
+  renderVerify();
+}
+
+// ─── 파일 전체 삭제 ───
+function clearFiles() {
+  fileResults = [];
+  activeFileIndex = -1;
+  clearAll();
+  renderFileList();
+}
+
+// ─── XML to XML 파일 처리 ───
+let xtxFileResults = []; // [{ name, xmlStr, wireframeHtml, data }]
+let xtxActiveFileIndex = -1;
+
+async function handleXmlToXmlFile(files) {
+  if (!Array.isArray(files)) files = [files];
+  const xmlFiles = files.filter(f => f.name.match(/\.xml$/i));
+  if (!xmlFiles.length) { alert('XML 파일(.xml)만 지원합니다.'); return; }
+
+  const overlay = document.getElementById('xtxLoadingOverlay');
+  const loadText = document.getElementById('xtxLoadingText');
+  overlay.style.display = 'flex';
+  loadText.textContent = `${xmlFiles.length}개 파일 분석 중...`;
+
+  for (const file of xmlFiles) {
+    if (xtxFileResults.some(r => r.name === file.name)) continue;
+    try {
+      const xmlStr = await file.text();
+      const wireframeHtml = AbsWireframeGen.generateHtml(xmlStr, file.name);
+      const isResponsive = document.querySelector('input[name="xtxConvertMode"]:checked')?.value === 'responsive';
+      const converted = SampleConverter.convert(xmlStr, { responsive: isResponsive });
+      const relWireframeHtml = RelWireframeGen.generateFromConverted(converted.convertedXml, file.name);
+      const data = AbsWireframeGen.generateData(xmlStr, file.name);
+      xtxFileResults.push({ name: file.name, xmlStr, wireframeHtml, relWireframeHtml, convertedXml: converted.convertedXml, meta: converted.meta, data });
+    } catch (e) {
+      const xtxStatus = document.getElementById('xtxStatusMsg');
+      xtxStatus.textContent = `${file.name} 분석 실패: ${e.message}`;
+      xtxStatus.className = 'status-msg error';
+    }
+  }
+
+  renderXtxFileList();
+  if (xtxFileResults.length > 0) {
+    selectXtxFile(xtxFileResults.length - 1);
+  }
+
+  overlay.style.display = 'none';
+  const xtxStatus = document.getElementById('xtxStatusMsg');
+  xtxStatus.textContent = `${xtxFileResults.length}개 파일 로드됨`;
+  xtxStatus.className = 'status-msg success';
+}
+
+// ─── XML to XML 파일 목록 렌더링 ───
+function renderXtxFileList() {
+  const section = document.getElementById('xtxFileListSection');
+  const list = document.getElementById('xtxFileList');
+  document.getElementById('xtxFileCount').textContent = xtxFileResults.length;
+
+  if (!xtxFileResults.length) { section.style.display = 'none'; return; }
+  section.style.display = '';
+
+  list.innerHTML = xtxFileResults.map((r, i) => `
+    <div class="file-item ${i === xtxActiveFileIndex ? 'active' : ''}" onclick="selectXtxFile(${i})">
+      <span class="file-idx">${i + 1}</span>
+      <span class="file-name" title="${r.name}">${r.name}</span>
+      <span class="file-del" onclick="event.stopPropagation();removeXtxFile(${i})" title="삭제">&#10005;</span>
+    </div>
+  `).join('');
+}
+
+// ─── XML to XML 파일 선택 ───
+function selectXtxFile(index) {
+  if (index < 0 || index >= xtxFileResults.length) return;
+  xtxActiveFileIndex = index;
+  const r = xtxFileResults[index];
+
+  document.getElementById('absWireframeContent').innerHTML = r.wireframeHtml;
+  document.getElementById('relWireframeContent').innerHTML = r.relWireframeHtml;
+  renderAbsCompVerify(r.data);
+  runScriptValidation();
+
+  // ID 검증: 원본 ID와 변환 XML ID 비교 → 불일치 빨간색
+  highlightIdMismatch(r.xmlStr, r.convertedXml);
+
+  renderXtxFileList();
+
+  const xtxStatus = document.getElementById('xtxStatusMsg');
+  xtxStatus.textContent = `${r.name} — ${r.data.allComps.length}개 컴포넌트`;
+  xtxStatus.className = 'status-msg success';
+}
+
+// ─── XML to XML 파일 삭제 ───
+function removeXtxFile(index) {
+  xtxFileResults.splice(index, 1);
+  if (xtxActiveFileIndex >= xtxFileResults.length) xtxActiveFileIndex = xtxFileResults.length - 1;
+  if (xtxFileResults.length > 0) selectXtxFile(xtxActiveFileIndex);
+  else clearXtxFiles();
+}
+
+function clearXtxFiles() {
+  xtxFileResults = [];
+  xtxActiveFileIndex = -1;
+  renderXtxFileList();
+  document.getElementById('absWireframeContent').innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128202;</div><div>XML 파일을 업로드하면 절대좌표 와이어프레임이 표시됩니다</div></div>';
+  document.getElementById('relWireframeContent').innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128203;</div><div>XML 파일을 업로드하면 상대좌표 템플릿 와이어프레임이 표시됩니다</div></div>';
+  document.getElementById('verifySummaryContent').innerHTML = '';
+  document.getElementById('compListContent').innerHTML = '';
+  document.getElementById('scriptValidateContent').innerHTML = '';
+  const xtxStatus = document.getElementById('xtxStatusMsg');
+  xtxStatus.textContent = '';
+  xtxStatus.className = 'status-msg';
+}
+
+// ─── XML to XML 변환 XML 저장/복사 ───
+let xtxDownloadVersionMap = JSON.parse(localStorage.getItem('wsq_xtx_dl_version_map') || '{}');
+
+async function downloadXtxConverted() {
+  if (!xtxFileResults.length) {
+    setXtxStatus('변환할 파일이 없습니다.', 'error');
+    return;
+  }
+  if (!saveDirHandle) {
+    alert('저장 폴더가 설정되지 않았습니다.\n설정에서 저장 위치를 지정해주세요.');
+    openSettings();
+    return;
+  }
+  const targets = xtxFileResults.filter(r => r.convertedXml);
+  const total = targets.length;
+  if (!total) { setXtxStatus('변환된 파일이 없습니다.', 'error'); return; }
+  showSaveProgress(total);
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  let count = 0;
+  for (const r of targets) {
+    const fileKey = r.meta.screenId || r.name.replace('.xml','');
+    const ver = getNextVersion(xtxDownloadVersionMap, fileKey, 'wsq_xtx_dl_version_map');
+    const fileName = fileKey + '_rel_v' + ver + '.xml';
+    await downloadFile(r.convertedXml, fileName);
+    count++;
+    updateSaveProgress(count, total, fileName);
+  }
+  const dirName = saveDirHandle ? saveDirHandle.name + ' 폴더' : '다운로드 폴더';
+  showSaveToast(`${count}개 파일 저장 완료`, dirName);
+  setXtxStatus(`${count}개 파일 저장 완료`, 'success');
+}
+
+function copyXtxConverted() {
+  if (xtxActiveFileIndex < 0 || !xtxFileResults[xtxActiveFileIndex]) {
+    setXtxStatus('복사할 파일이 없습니다.', 'error');
+    return;
+  }
+  const r = xtxFileResults[xtxActiveFileIndex];
+  navigator.clipboard.writeText(r.convertedXml).then(() => {
+    setXtxStatus(`${r.name} 변환 XML 복사 완료`, 'success');
+  });
+}
+
+function setXtxStatus(msg, type) {
+  const el = document.getElementById('xtxStatusMsg');
+  el.textContent = msg;
+  el.className = 'status-msg' + (type ? ' ' + type : '');
+}
+
+// ─── XML to XML 출력 탭 전환 ───
+// ─── 절대좌표 와이어프레임 라벨/ID 토글 ───
+// ─── ID 불일치 검증 → 빨간색 표시 ───
+function highlightIdMismatch(originalXml, convertedXml) {
+  // 원본에서 컴포넌트 ID 추출 (GroupBox, Group 제외)
+  const origIds = new Set();
+  (originalXml.match(/\bid="([^"]*)"/g) || []).forEach(m => {
+    const id = m.replace('id="', '').replace('"', '');
+    if (id && !/^GroupBox/i.test(id)) origIds.add(id);
+  });
+
+  // 변환 XML에서 컴포넌트 ID 추출
+  const convIds = new Set();
+  (convertedXml.match(/\bid="([^"]*)"/g) || []).forEach(m => {
+    const id = m.replace('id="', '').replace('"', '');
+    if (id) convIds.add(id);
+  });
+
+  // 상대좌표: 변환에는 있는데 원본에 없는 ID → 빨간색
+  const relContainer = document.getElementById('relWireframeContent');
+  relContainer.querySelectorAll('.rel-wf-show-id').forEach(el => {
+    const id = el.textContent.trim();
+    if (id && !origIds.has(id)) {
+      el.style.color = '#dc2626';
+      el.style.fontWeight = '700';
+      el.title = '원본에 없는 ID';
+    }
+  });
+
+  // 절대좌표: 원본에는 있는데 변환에 누락된 ID → 빨간색
+  const absContainer = document.getElementById('absWireframeContent');
+  absContainer.querySelectorAll('.abs-wf-show-id').forEach(el => {
+    const id = el.textContent.trim();
+    if (id && !convIds.has(id)) {
+      el.style.color = '#dc2626';
+      el.style.fontWeight = '700';
+      el.title = '변환에 누락된 ID';
+    }
+  });
+}
+
+// ─── 스크립트 검증 실행 ───
+function runScriptValidation() {
+  if (xtxActiveFileIndex < 0 || !xtxFileResults[xtxActiveFileIndex]) return;
+  const r = xtxFileResults[xtxActiveFileIndex];
+  const result = ScriptValidator.validate(r.xmlStr, r.convertedXml);
+  // 변환 시 보이는 컴포넌트 누락 경고 전달
+  const converted = SampleConverter.convert(r.xmlStr, {
+    responsive: document.querySelector('input[name="xtxConvertMode"]:checked')?.value === 'responsive'
+  });
+  result.missingVisible = (converted.missingVisible || []).map(c => ({ id: c.id, ctype: c.ctype, label: c.label || '' }));
+  result.missingHiddenRecovered = converted.analysis.missingHiddenRecovered || 0;
+  renderScriptValidation(result, r.name);
+}
+
+function renderScriptValidation(result, fileName) {
+  const el = document.getElementById('scriptValidateContent');
+
+  if (!result.hasScript) {
+    el.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128196;</div><div>이 파일에 스크립트가 없습니다</div></div>';
+    return;
+  }
+
+  let html = '';
+  const esc = s => s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : '';
+
+  // 헤더
+  html += `<div class="sv-header"><h3>스크립트 검증 — ${esc(fileName)}</h3></div>`;
+
+  // 요약
+  const handlerFail = result.scriptHandlers.filter(h => h.status === 'fail').length;
+  const refFail = result.scriptIdRefs.filter(r => r.status === 'fail').length;
+  const bindFail = result.bindingComparison.filter(b => b.status !== 'pass').length;
+  const visibleMissing = (result.missingVisible || []).length;
+  const hiddenRecovered = result.missingHiddenRecovered || 0;
+  const dupIdCount = (result.duplicateIds || []).length;
+  const totalFail = handlerFail + refFail + bindFail + visibleMissing + dupIdCount;
+
+  html += `<div class="sv-summary ${totalFail ? 'sv-summary-fail' : hiddenRecovered ? 'sv-summary-warn' : 'sv-summary-pass'}">`;
+  if (totalFail) {
+    html += `<strong>${totalFail}건</strong>의 문제 발견`;
+    if (dupIdCount) html += ` (중복 ID ${dupIdCount}건)`;
+    if (visibleMissing) html += ` (화면 표시 컴포넌트 ${visibleMissing}건 수동 확인 필요)`;
+  } else if (hiddenRecovered) {
+    html += `<strong>검증 통과</strong> — 숨김 컴포넌트 ${hiddenRecovered}건 자동 복구됨`;
+  } else {
+    html += '<strong>검증 통과</strong> — 스크립트 참조가 모두 보존되었습니다';
+  }
+  html += `</div>`;
+
+  // 1. 이벤트 핸들러
+  if (result.scriptHandlers.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">1. 이벤트 핸들러 (${result.scriptHandlers.length}개)</div>`;
+    html += `<div class="sv-desc">스크립트에 정의된 <code>scwin.{id}_{event}</code> 함수가 참조하는 컴포넌트 ID가 변환 후에도 존재하는지 검증합니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>핸들러</th><th>컴포넌트 ID</th><th>이벤트</th><th>원본</th><th>변환</th><th>결과</th><th>설명</th></tr></thead><tbody>`;
+    result.scriptHandlers.forEach(h => {
+      const cls = h.status === 'fail' ? ' class="sv-fail"' : '';
+      let desc = '';
+      if (h.status === 'pass') desc = '정상 — 변환 후에도 이벤트 대상 컴포넌트가 존재합니다.';
+      else if (h.status === 'skip') desc = '원본/변환 모두에 컴포넌트가 없습니다. 스크립트에만 핸들러가 정의된 상태입니다.';
+      else desc = `<strong>${esc(h.id)}</strong> 컴포넌트가 변환 XML에 없습니다. <code>${esc(h.fullName)}</code> 이벤트가 동작하지 않습니다.`;
+      html += `<tr${cls}>`;
+      html += `<td><code>${esc(h.fullName)}</code></td>`;
+      html += `<td><code>${esc(h.id)}</code></td>`;
+      html += `<td>${esc(h.event)}</td>`;
+      html += `<td>${h.existsInOriginal ? '<span class="sv-pass-badge">O</span>' : '<span class="sv-fail-badge">X</span>'}</td>`;
+      html += `<td>${h.existsInConverted ? '<span class="sv-pass-badge">O</span>' : '<span class="sv-fail-badge">X</span>'}</td>`;
+      html += `<td>${h.status === 'pass' ? '<span class="sv-pass-badge">PASS</span>' : h.status === 'skip' ? '<span class="sv-warn-badge">SKIP</span>' : '<span class="sv-fail-badge">FAIL</span>'}</td>`;
+      html += `<td class="sv-desc-cell">${desc}</td>`;
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  // 2. 스크립트 ID 참조
+  const activeRefs = result.scriptIdRefs.filter(r => r.status !== 'skip');
+  if (activeRefs.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">2. 스크립트 ID 참조 (${activeRefs.length}개)</div>`;
+    html += `<div class="sv-desc">스크립트에서 <code>{id}.Value</code>, <code>{id}.Data</code>, <code>{id}.ExcelExportS()</code> 등으로 직접 참조하는 컴포넌트가 변환 후에도 존재하는지 검증합니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>ID</th><th>원본</th><th>변환</th><th>결과</th><th>설명</th></tr></thead><tbody>`;
+    activeRefs.forEach(r => {
+      const cls = r.status === 'fail' ? ' class="sv-fail"' : '';
+      let desc = '';
+      if (r.status === 'pass') desc = '정상 — 스크립트 참조 대상이 변환 후에도 존재합니다.';
+      else desc = `<strong>${esc(r.id)}</strong> 컴포넌트가 변환 XML에 없습니다. 스크립트에서 이 ID를 참조하는 코드(<code>${esc(r.id)}.Value</code> 등)가 런타임 오류를 발생시킵니다.`;
+      html += `<tr${cls}>`;
+      html += `<td><code>${esc(r.id)}</code></td>`;
+      html += `<td>${r.existsInOriginal ? '<span class="sv-pass-badge">O</span>' : '<span class="sv-warn-badge">-</span>'}</td>`;
+      html += `<td>${r.existsInConverted ? '<span class="sv-pass-badge">O</span>' : '<span class="sv-fail-badge">X</span>'}</td>`;
+      html += `<td>${r.status === 'pass' ? '<span class="sv-pass-badge">PASS</span>' : '<span class="sv-fail-badge">FAIL</span>'}</td>`;
+      html += `<td class="sv-desc-cell">${desc}</td>`;
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  // 3. ID 누락/추가
+  if (result.idComparison.missing.length || result.idComparison.extra.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">3. ID 비교</div>`;
+    html += `<div class="sv-desc">원본 XML의 컴포넌트 ID가 변환 후에도 모두 존재하는지, 의도하지 않은 ID가 추가되지 않았는지 비교합니다.</div>`;
+    if (result.idComparison.missing.length) {
+      html += `<div class="sv-issue-group"><div class="sv-issue-title sv-fail-bg">변환에서 누락 (${result.idComparison.missing.length}건)</div>`;
+      result.idComparison.missing.forEach(id => {
+        html += `<div class="sv-issue-item"><code>${esc(id)}</code> <span class="sv-issue-desc">— 원본에 있는 컴포넌트가 변환 과정에서 누락되었습니다. 이 ID를 참조하는 스크립트가 있으면 오류가 발생합니다.</span></div>`;
+      });
+      html += `</div>`;
+    }
+    if (result.idComparison.extra.length) {
+      html += `<div class="sv-issue-group"><div class="sv-issue-title sv-warn-bg">변환에만 존재 (${result.idComparison.extra.length}건)</div>`;
+      result.idComparison.extra.forEach(id => {
+        html += `<div class="sv-issue-item"><code>${esc(id)}</code> <span class="sv-issue-desc">— 변환 과정에서 새로 생성된 ID입니다. 기능에 영향은 없으나, 원본에 없던 요소가 추가된 것이므로 확인이 필요합니다.</span></div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+  }
+
+  // 4. ref 바인딩
+  if (result.bindingComparison.length) {
+    const issues = result.bindingComparison.filter(b => b.status !== 'pass');
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">4. 데이터 바인딩 (${result.bindingComparison.length}개${issues.length ? ', <span style="color:#dc2626">' + issues.length + '건 문제</span>' : ''})</div>`;
+    html += `<div class="sv-desc"><code>ref="data:dma_.{field}"</code> 바인딩이 변환 후에도 동일하게 유지되는지 검증합니다. 누락 시 데이터 조회/저장이 동작하지 않습니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>ID</th><th>원본 ref</th><th>변환 ref</th><th>결과</th><th>설명</th></tr></thead><tbody>`;
+    result.bindingComparison.forEach(b => {
+      const cls = b.status !== 'pass' ? ' class="sv-fail"' : '';
+      let desc = '';
+      if (b.status === 'pass') desc = '정상';
+      else if (b.status === 'missing') desc = `바인딩이 누락되었습니다. <code>${esc(b.id)}</code> 컴포넌트의 데이터 연결이 끊어져 조회/저장 시 값이 비어있게 됩니다.`;
+      else desc = `바인딩이 <code>${esc(b.origRef)}</code>에서 <code>${esc(b.convRef)}</code>로 변경되었습니다. 의도된 변경인지 확인이 필요합니다.`;
+      html += `<tr${cls}>`;
+      html += `<td><code>${esc(b.id)}</code></td>`;
+      html += `<td><code>${esc(b.origRef)}</code></td>`;
+      html += `<td><code>${esc(b.convRef)}</code></td>`;
+      html += `<td>${b.status === 'pass' ? '<span class="sv-pass-badge">PASS</span>' : b.status === 'missing' ? '<span class="sv-fail-badge">누락</span>' : '<span class="sv-warn-badge">변경</span>'}</td>`;
+      html += `<td class="sv-desc-cell">${desc}</td>`;
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  // 5. dataList 바인딩
+  if (result.dataListComparison.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">5. dataList 바인딩 (${result.dataListComparison.length}개)</div>`;
+    html += `<div class="sv-desc"><code>dataList="data:dlt_{id}"</code> 바인딩이 변환 후에도 유지되는지 검증합니다. 누락 시 GridView에 데이터가 표시되지 않습니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>ID</th><th>원본</th><th>변환</th><th>결과</th><th>설명</th></tr></thead><tbody>`;
+    result.dataListComparison.forEach(d => {
+      const cls = d.status !== 'pass' ? ' class="sv-fail"' : '';
+      let desc = '';
+      if (d.status === 'pass') desc = '정상';
+      else desc = `GridView <code>${esc(d.id)}</code>의 dataList 바인딩이 누락되었습니다. 그리드에 데이터가 바인딩되지 않습니다.`;
+      html += `<tr${cls}>`;
+      html += `<td><code>${esc(d.id)}</code></td>`;
+      html += `<td><code>${esc(d.origDataList)}</code></td>`;
+      html += `<td><code>${esc(d.convDataList)}</code></td>`;
+      html += `<td>${d.status === 'pass' ? '<span class="sv-pass-badge">PASS</span>' : '<span class="sv-fail-badge">누락</span>'}</td>`;
+      html += `<td class="sv-desc-cell">${desc}</td>`;
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  // 6. 속성 보존
+  if (result.attrComparison.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">6. 속성 보존 검증 (${result.attrComparison.length}건 차이)</div>`;
+    html += `<div class="sv-desc">disabled, displayFormat, maxlength 등 주요 속성이 변환 후에도 동일하게 유지되는지 검증합니다. 변경 시 입력 제한이나 표시 형식이 달라질 수 있습니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>ID</th><th>속성</th><th>원본</th><th>변환</th><th>설명</th></tr></thead><tbody>`;
+    result.attrComparison.forEach(a => {
+      a.diffs.forEach((d, di) => {
+        const descMap = {
+          disabled: `<code>${esc(a.id)}</code>의 비활성 상태가 변경되었습니다. 사용자 입력 가능 여부가 달라집니다.`,
+          displayFormat: `<code>${esc(a.id)}</code>의 표시 형식이 변경되었습니다. 화면에 보이는 데이터 포맷이 달라집니다.`,
+          maxlength: `<code>${esc(a.id)}</code>의 최대 입력 길이가 변경되었습니다. 입력 가능한 문자 수가 달라집니다.`,
+        };
+        html += `<tr class="sv-fail">`;
+        html += di === 0 ? `<td rowspan="${a.diffs.length}"><code>${esc(a.id)}</code></td>` : '';
+        html += `<td>${esc(d.attr)}</td><td><code>${esc(d.origVal)}</code></td><td><code>${esc(d.convVal)}</code></td>`;
+        html += `<td class="sv-desc-cell">${descMap[d.attr] || '속성 값이 변경되었습니다.'}</td>`;
+        html += `</tr>`;
+      });
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  if (!result.scriptHandlers.length && !activeRefs.length && !result.bindingComparison.length) {
+    html += '<div class="sv-section"><div class="sv-section-title">스크립트에서 컴포넌트 참조를 찾지 못했습니다</div></div>';
+  }
+
+  // 6-1. 중복 ID 검증
+  if (result.duplicateIds && result.duplicateIds.length) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">중복 ID 검증 <span class="sv-fail-badge">${result.duplicateIds.length}건 중복</span></div>`;
+    html += `<div class="sv-desc">화면 내에서 동일한 ID가 2개 이상 사용되고 있습니다. WebSquare는 <code>id</code>로 컴포넌트를 식별하므로, 중복 ID가 있으면 스크립트가 의도하지 않은 컴포넌트를 참조하여 오동작할 수 있습니다.</div>`;
+    html += `<table class="sv-table"><thead><tr><th>ID</th><th>사용 횟수</th><th>결과</th><th>설명</th></tr></thead><tbody>`;
+    result.duplicateIds.forEach(d => {
+      html += `<tr class="sv-fail">`;
+      html += `<td><code>${esc(d.id)}</code></td>`;
+      html += `<td style="text-align:center;"><strong>${d.count}회</strong></td>`;
+      html += `<td><span class="sv-fail-badge">FAIL</span></td>`;
+      html += `<td class="sv-desc-cell"><code>${esc(d.id)}</code>가 body 내에서 ${d.count}번 선언되었습니다. 1개만 남기고 나머지는 제거하거나 고유한 ID로 변경해야 합니다.</td>`;
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  // 7. 누락 복구/경고
+  if (result.missingHiddenRecovered > 0 || (result.missingVisible && result.missingVisible.length)) {
+    html += `<div class="sv-section">`;
+    html += `<div class="sv-section-title">7. 변환 누락 컴포넌트 처리</div>`;
+    html += `<div class="sv-desc">변환 과정에서 누락된 컴포넌트를 분류합니다. 숨김 컴포넌트는 자동 복구되고, 화면에 보이는 컴포넌트는 수동 확인이 필요합니다.</div>`;
+
+    if (result.missingHiddenRecovered > 0) {
+      html += `<div class="sv-issue-group"><div class="sv-issue-title" style="background:#dcfce7;color:#166534;">자동 복구 — 숨김 컴포넌트 (${result.missingHiddenRecovered}건)</div>`;
+      html += `<div class="sv-issue-item"><span class="sv-issue-desc">원본에서 <code>visibility:hidden</code> 또는 <code>display:none</code>이었던 컴포넌트가 변환 중 누락되어, <code>.btnbox .lt</code>에 <code>display:none</code>으로 자동 복구했습니다. 스크립트 참조가 유지됩니다.</span></div>`;
+      html += `</div>`;
+    }
+
+    if (result.missingVisible && result.missingVisible.length) {
+      html += `<div class="sv-issue-group"><div class="sv-issue-title sv-fail-bg">수동 확인 필요 — 화면 표시 컴포넌트 (${result.missingVisible.length}건)</div>`;
+      html += `<div class="sv-issue-item sv-issue-warn-desc"><span class="sv-issue-desc">원본에서 화면에 보이는 컴포넌트가 변환 과정에서 누락되었습니다. 자동 추가 시 레이아웃이 깨질 수 있어 수동 배치가 필요합니다.</span></div>`;
+      result.missingVisible.forEach(c => {
+        html += `<div class="sv-issue-item"><code>${esc(c.id)}</code> <span class="sv-issue-desc">— 타입: ${esc(c.ctype)}${c.label ? ', 라벨: ' + esc(c.label) : ''}</span></div>`;
+      });
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+  }
+
+  el.innerHTML = html;
+}
+
+function toggleAbsWfMode(btn, mode) {
+  btn.parentElement.querySelectorAll('.abs-wf-toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const canvas = document.getElementById('absWireframeContent');
+  canvas.querySelectorAll('.abs-wf-show-label').forEach(el => el.style.display = mode === 'label' ? '' : 'none');
+  canvas.querySelectorAll('.abs-wf-show-id').forEach(el => el.style.display = mode === 'id' ? '' : 'none');
+}
+
+// ─── 상대좌표 와이어프레임 라벨/ID 토글 ───
+function toggleRelWfMode(btn, mode) {
+  btn.parentElement.querySelectorAll('.rel-wf-toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const container = document.getElementById('relWireframeContent');
+  container.querySelectorAll('.rel-wf-show-label').forEach(el => el.style.display = mode === 'label' ? '' : 'none');
+  container.querySelectorAll('.rel-wf-show-id').forEach(el => el.style.display = mode === 'id' ? '' : 'none');
+}
+
+function switchVerifySubtab(tab) {
+  document.querySelectorAll('.verify-subtab').forEach(b => b.classList.toggle('active', b.textContent.includes(tab === 'compList' ? '전체' : '스크립트')));
+  document.querySelectorAll('.verify-subpane').forEach(p => p.classList.remove('active'));
+  document.getElementById(tab + 'Subpane').classList.add('active');
+}
+
+function switchXtxOutputTab(tab) {
+  document.querySelectorAll('#panelRightXmlToXml .output-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('#panelRightXmlToXml .output-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById(tab + 'Pane').classList.add('active');
+  // 검증 탭 진입 시 컴포넌트 검증 + 스크립트 검증 자동 실행
+  if (tab === 'scriptValidate') {
+    if (xtxActiveFileIndex >= 0 && xtxFileResults[xtxActiveFileIndex]) {
+      renderAbsCompVerify(xtxFileResults[xtxActiveFileIndex].data);
+    }
+    runScriptValidation();
+  }
+}
+
+// ─── 컴포넌트 검증 렌더 ───
+function renderAbsCompVerify(data) {
+  const comps = data.allComps;
+  const groups = data.groupBoxes;
+  function esc(s) { return s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
+
+  // ─── 검증 요약 (상단) ───
+  let summaryHtml = '';
+  summaryHtml += `<div class="abs-wf-header"><h3>검증 — ${esc(data.meta.screenId)}</h3>`;
+  summaryHtml += `<div class="abs-wf-meta">`;
+  summaryHtml += `<span>전체: <strong>${comps.length}개</strong></span>`;
+  summaryHtml += `<span>표시: <strong>${comps.filter(c=>!c.hidden).length}개</strong></span>`;
+  summaryHtml += `<span>숨김: <strong>${comps.filter(c=>c.hidden).length}개</strong></span>`;
+  summaryHtml += `<span>GroupBox: <strong>${groups.length}개</strong></span>`;
+  summaryHtml += `</div></div>`;
+
+  // 타입별 통계
+  const typeCounts = {};
+  comps.forEach(c => { typeCounts[c.ctype] = (typeCounts[c.ctype] || 0) + 1; });
+  summaryHtml += `<div class="abs-wf-stats">`;
+  Object.entries(typeCounts).sort((a, b) => b[1] - a[1]).forEach(([type, count]) => {
+    summaryHtml += `<span class="abs-wf-stat-item"><strong>${count}</strong> ${type}</span>`;
+  });
+  summaryHtml += `</div>`;
+
+  // 겹침/좌표 이상 검사
+  const visible = comps.filter(c => !c.hidden);
+  const overlaps = [];
+  for (let i = 0; i < visible.length; i++) {
+    for (let j = i + 1; j < visible.length; j++) {
+      const a = visible[i], b = visible[j];
+      if (a.left < b.left + b.width && a.left + a.width > b.left &&
+          a.top < b.top + b.height && a.top + a.height > b.top) {
+        overlaps.push([a, b]);
+      }
+    }
+  }
+  const issues = [];
+  comps.forEach(c => {
+    if (!c.hidden && c.width === 0 && c.height === 0) issues.push({ comp: c, issue: '크기 0x0' });
+    if (!c.hidden && (c.left < 0 || c.top < 0)) issues.push({ comp: c, issue: '음수 좌표' });
+    if (!c.hidden && (c.left > data.meta.width || c.top > data.meta.height)) issues.push({ comp: c, issue: '화면 영역 초과' });
+  });
+
+  if (overlaps.length > 0 || issues.length > 0) {
+    summaryHtml += `<div class="abs-wf-issues">`;
+    if (overlaps.length > 0) {
+      summaryHtml += `<div class="abs-wf-issue-group"><div class="abs-wf-issue-title warn">겹침 ${overlaps.length}건</div>`;
+      overlaps.slice(0, 20).forEach(([a, b]) => {
+        summaryHtml += `<div class="abs-wf-issue-item">${esc(a.id)} (${a.left},${a.top}) ↔ ${esc(b.id)} (${b.left},${b.top})</div>`;
+      });
+      if (overlaps.length > 20) summaryHtml += `<div class="abs-wf-issue-item">... 외 ${overlaps.length - 20}건</div>`;
+      summaryHtml += `</div>`;
+    }
+    if (issues.length > 0) {
+      summaryHtml += `<div class="abs-wf-issue-group"><div class="abs-wf-issue-title fail">좌표 이상 ${issues.length}건</div>`;
+      issues.forEach(({ comp, issue }) => {
+        summaryHtml += `<div class="abs-wf-issue-item">${esc(comp.id)} — ${issue} (${comp.left},${comp.top} / ${comp.width}x${comp.height})</div>`;
+      });
+      summaryHtml += `</div>`;
+    }
+    summaryHtml += `</div>`;
+  } else {
+    summaryHtml += `<div class="abs-wf-issues"><div class="abs-wf-issue-group"><div class="abs-wf-issue-title pass">이상 없음</div></div></div>`;
+  }
+
+  document.getElementById('verifySummaryContent').innerHTML = summaryHtml;
+
+  // ─── 전체 컴포넌트 테이블 (서브탭 1) ───
+  let listHtml = '';
+  listHtml += `<div class="abs-wf-table-wrap"><table class="abs-wf-table">`;
+  listHtml += `<thead><tr><th>#</th><th>ID</th><th>타입</th><th>라벨</th><th>위치</th><th>크기</th><th>상태</th></tr></thead><tbody>`;
+  comps.forEach((c, i) => {
+    const st = c.hidden ? '<span class="abs-wf-status hidden">숨김</span>' : '<span class="abs-wf-status visible">표시</span>';
+    listHtml += `<tr class="${c.hidden ? 'row-hidden' : ''}"><td>${i+1}</td><td><code>${esc(c.id)}</code></td><td>${esc(c.ctype)}</td><td>${esc(c.label)}</td><td class="num">${c.left}, ${c.top}</td><td class="num">${c.width}×${c.height}</td><td>${st}</td></tr>`;
+  });
+  listHtml += `</tbody></table></div>`;
+
+  document.getElementById('compListContent').innerHTML = listHtml;
+}
+
+function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+// ─── 변환 검증 ───
+function renderVerify() {
+  const el = document.getElementById('verifyContent');
+  if (!originalXml || !convertedXml) {
+    el.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#9989;</div><div>XML 파일을 업로드하면 변환 검증 결과가 표시됩니다</div></div>';
+    return;
+  }
+
+  const parsed = XmlParser.parseDom(originalXml);
+  const allComps = parsed.sections.flatMap(s => s.comps);
+  const origIds = allComps.filter(c => c.id).map(c => ({ id: c.id, ctype: c.ctype, ref: c.attributes?.ref || '', label: c.label || '' }));
+
+  // 변환 XML에서 ID 추출
+  const convIds = new Set();
+  const convClasses = {};
+  const convRefs = {};
+  const convEvents = {};
+  (convertedXml.match(/\sid="([^"]*)"/g) || []).forEach(m => { const id = m.replace(/\sid="/, '').replace('"',''); convIds.add(id); });
+  (convertedXml.match(/id="([^"]*)"[^>]*class="([^"]*)"/g) || []).forEach(m => {
+    const id = (m.match(/id="([^"]*)"/) || [])[1];
+    const cls = (m.match(/class="([^"]*)"/) || [])[1];
+    if (id) convClasses[id] = cls;
+  });
+  (convertedXml.match(/id="([^"]*)"[^>]*ref="([^"]*)"/g) || []).forEach(m => {
+    const id = (m.match(/id="([^"]*)"/) || [])[1];
+    const ref = (m.match(/ref="([^"]*)"/) || [])[1];
+    if (id) convRefs[id] = ref;
+  });
+  (convertedXml.match(/id="([^"]*)"[^>]*ev:\w+="([^"]*)"/g) || []).forEach(m => {
+    const id = (m.match(/id="([^"]*)"/) || [])[1];
+    const ev = (m.match(/ev:(\w+="[^"]*")/) || [])[1];
+    if (id) convEvents[id] = ev;
+  });
+
+  // 스크립트에서 참조하는 ID
+  const scriptMatch = originalXml.match(/<script[^>]*><!\[CDATA\[([\s\S]*?)\]\]><\/script>/i);
+  const scriptText = scriptMatch ? scriptMatch[1] : '';
+  const scriptIds = new Set();
+  (scriptText.match(/\b([a-zA-Z_]\w+)\s*\.\s*(?:\w+)/g) || []).forEach(ref => {
+    const id = ref.split('.')[0].trim();
+    if (id.length > 2 && !['scwin','tran','var','let','const','function','this','window','document','console','Math','String','Array','Object','Date','JSON'].includes(id)) {
+      scriptIds.add(id);
+    }
+  });
+
+  let html = '';
+
+  // ─── 1. 컴포넌트 1:1 매칭 ───
+  // 누락 사유 판별
+  function getMissingReason(comp) {
+    if (/^GroupBox/i.test(comp.id)) return { reason: 'GroupBox 컨테이너 제거', type: 'info' };
+    if (comp.id.startsWith('title_')) return { reason: '.titbox로 변환 (label만 사용)', type: 'info' };
+    const orig = allComps.find(c => c.id === comp.id);
+    if (orig?.hidden) return { reason: 'hidden 필드로 이동 (display:none)', type: 'info' };
+    return { reason: '원인 불명 — 확인 필요', type: 'warn' };
+  }
+
+  const allOrigIds = origIds; // GroupBox, title_ 포함 전체
+  const workIds = origIds.filter(c => !/^GroupBox/i.test(c.id) && !c.id.startsWith('title_'));
+  const missing = workIds.filter(c => !convIds.has(c.id));
+  const refMissing = origIds.filter(c => c.ref && !convRefs[c.id] && convIds.has(c.id));
+  const total = workIds.length;
+  const matched = total - missing.length;
+
+  // GroupBox/title_ 제거된 항목
+  const removedItems = allOrigIds.filter(c => !convIds.has(c.id));
+  const badge1 = missing.length === 0 ? '<span class="verify-badge pass">PASS</span>' : `<span class="verify-badge fail">${missing.length}개 누락</span>`;
+
+  html += `<div class="verify-section">
+    <div class="verify-section-header">1. 컴포넌트 매칭 (${matched}/${total}) ${badge1}</div>
+    <table class="verify-table">
+      <tr><th>ID</th><th>타입</th><th>원본</th><th>변환</th><th>비고</th></tr>`;
+
+  // 매칭된 컴포넌트
+  workIds.forEach(c => {
+    const exists = convIds.has(c.id);
+    const origTag = '<span class="verify-tag kept">있음</span>';
+    if (exists) {
+      const convTag = '<span class="verify-tag kept">있음</span>';
+      html += `<tr><td class="verify-mono">${c.id}</td><td>${c.ctype}</td><td>${origTag}</td><td>${convTag}</td><td></td></tr>`;
+    } else {
+      const convTag = '<span class="verify-tag removed">없음</span>';
+      const { reason, type } = getMissingReason(c);
+      const reasonTag = type === 'warn' ? `<span class="verify-tag changed">${reason}</span>` : `<span style="color:var(--text-muted);font-size:12px;">${reason}</span>`;
+      html += `<tr><td class="verify-mono">${c.id}</td><td>${c.ctype}</td><td>${origTag}</td><td>${convTag}</td><td>${reasonTag}</td></tr>`;
+    }
+  });
+
+  // 제거된 항목 (GroupBox, title_) — 별도 표시
+  const removedSpecial = allOrigIds.filter(c => (/^GroupBox/i.test(c.id) || c.id.startsWith('title_')) && !convIds.has(c.id));
+  if (removedSpecial.length) {
+    html += `<tr><td colspan="5" style="background:#f8fafc;font-weight:600;padding-top:8px;">제거/변환된 항목</td></tr>`;
+    removedSpecial.forEach(c => {
+      const { reason } = getMissingReason(c);
+      html += `<tr style="color:var(--text-muted);"><td class="verify-mono">${c.id}</td><td>${c.ctype}</td><td><span class="verify-tag kept">있음</span></td><td><span class="verify-tag removed">제거</span></td><td style="font-size:12px;">${reason}</td></tr>`;
+    });
+  }
+
+  html += `</table></div>`;
+
+  // ─── 2. 구조 변환 결과 ───
+  const sections = parsed.sections;
+  const visibleSections = sections.filter(s => !s.hidden);
+  const hiddenSections = sections.filter(s => s.hidden);
+  const removedGroupBoxes = [];
+  sections.forEach(s => { if (s.groupId && /^GroupBox/i.test(s.groupId)) removedGroupBoxes.push(s.groupId); });
+
+  html += `<div class="verify-section">
+    <div class="verify-section-header">2. 구조 변환 <span class="verify-badge pass">${visibleSections.length}개 섹션</span></div>
+    <table class="verify-table">
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>원본 섹션</td><td>${sections.length}개 (표시: ${visibleSections.length}, 숨김: ${hiddenSections.length})</td></tr>
+      <tr><td>제거된 GroupBox</td><td>${removedGroupBoxes.length ? removedGroupBoxes.join(', ') : '없음'}</td></tr>
+      <tr><td>Hidden 처리</td><td>${allComps.filter(c => c.hidden).length}개 컴포넌트</td></tr>
+      <tr><td>title_ 변환</td><td>${allComps.filter(c => c.isTitle).map(c => c.id + ' → .titbox "' + c.label + '"').join('<br>') || '없음'}</td></tr>
+    </table></div>`;
+
+  // ─── 3. class/style 변환 ───
+  const classChanges = [];
+  origIds.forEach(c => {
+    const origClass = c.id && allComps.find(x => x.id === c.id)?.attributes?.class || '';
+    const newClass = convClasses[c.id] || '';
+    if (origClass && origClass !== newClass) {
+      classChanges.push({ id: c.id, from: origClass, to: newClass || '(삭제)' });
+    }
+  });
+
+  html += `<div class="verify-section">
+    <div class="verify-section-header">3. class/style 변환 <span class="verify-badge ${classChanges.length ? 'changed' : 'pass'}">${classChanges.length}개 변경</span></div>
+    <table class="verify-table">
+      <tr><th>ID</th><th>원본 class</th><th></th><th>변환 class</th></tr>`;
+  classChanges.slice(0, 30).forEach(c => {
+    html += `<tr><td class="verify-mono">${c.id}</td><td><span class="verify-tag removed">${escHtml(c.from)}</span></td><td class="verify-arrow">→</td><td><span class="verify-tag ${c.to === '(삭제)' ? 'removed' : 'added'}">${escHtml(c.to)}</span></td></tr>`;
+  });
+  if (classChanges.length > 30) html += `<tr><td colspan="4">... 외 ${classChanges.length - 30}개</td></tr>`;
+  if (!classChanges.length) html += `<tr><td colspan="4">변경 없음</td></tr>`;
+  html += `</table></div>`;
+
+  // ─── 4. 이벤트/스크립트 검증 ───
+  const scriptRefCheck = [];
+  scriptIds.forEach(id => {
+    const inConv = convIds.has(id);
+    const inOrig = origIds.some(c => c.id === id);
+    if (inOrig) scriptRefCheck.push({ id, inConv });
+  });
+  const missingScript = scriptRefCheck.filter(c => !c.inConv);
+  const badge4 = missingScript.length === 0 ? '<span class="verify-badge pass">PASS</span>' : `<span class="verify-badge fail">${missingScript.length}개 누락</span>`;
+
+  // 이벤트 바인딩 확인
+  const origEvents = [];
+  (originalXml.match(/id="([^"]*)"[^>]*ev:(\w+)="([^"]*)"/g) || []).forEach(m => {
+    const id = (m.match(/id="([^"]*)"/) || [])[1];
+    const ev = (m.match(/ev:(\w+="[^"]*")/) || [])[1];
+    if (id) origEvents.push({ id, event: ev });
+  });
+  const eventCheck = origEvents.map(e => ({
+    ...e,
+    kept: convEvents[e.id] ? true : false
+  }));
+  const missingEvents = eventCheck.filter(e => !e.kept);
+
+  html += `<div class="verify-section">
+    <div class="verify-section-header">4. 이벤트/스크립트 검증 ${badge4}</div>
+    <table class="verify-table">
+      <tr><th colspan="3">스크립트 참조 ID 검증</th></tr>
+      <tr><th>ID</th><th>스크립트 참조</th><th>변환 XML</th></tr>`;
+  scriptRefCheck.forEach(c => {
+    const tag = c.inConv ? '<span class="verify-tag kept">존재</span>' : '<span class="verify-tag removed">누락</span>';
+    html += `<tr><td class="verify-mono">${c.id}</td><td>참조됨</td><td>${tag}</td></tr>`;
+  });
+  if (!scriptRefCheck.length) html += `<tr><td colspan="3">스크립트 참조 ID 없음</td></tr>`;
+
+  if (origEvents.length) {
+    html += `<tr><th colspan="3" style="padding-top:10px;">이벤트 바인딩 검증</th></tr>
+      <tr><th>ID</th><th>이벤트</th><th>상태</th></tr>`;
+    eventCheck.forEach(e => {
+      const tag = e.kept ? '<span class="verify-tag kept">유지</span>' : '<span class="verify-tag removed">누락</span>';
+      html += `<tr><td class="verify-mono">${e.id}</td><td class="verify-mono">${escHtml(e.event)}</td><td>${tag}</td></tr>`;
+    });
+  }
+  html += `</table></div>`;
+
+  // ─── 5. 경고/주의 사항 ───
+  const warnings = [];
+  const bodyPart = convertedXml.split('</head>')[1] || '';
+
+  // position:absolute 잔존
+  if (bodyPart.includes('position:absolute')) {
+    const count = (bodyPart.match(/position:absolute/g) || []).length;
+    warnings.push({ level: 'fail', msg: `position:absolute가 body에 ${count}건 남아있음`, detail: '절대좌표가 제거되지 않은 컴포넌트 존재' });
+  }
+
+  // btn_def1 잔존
+  if (bodyPart.includes('btn_def1')) {
+    warnings.push({ level: 'fail', msg: 'btn_def1(구 버튼 class)이 남아있음', detail: '템플릿 class(btn_cm)로 교체되지 않은 버튼 존재' });
+  }
+
+  // 빈 tblbox
+  const emptyTblbox = (bodyPart.match(/<xf:group class="tblbox">[\s\S]*?<\/xf:group>/g) || [])
+    .filter(m => !m.includes('tagname="tr"'));
+  if (emptyTblbox.length) {
+    warnings.push({ level: 'warn', msg: `빈 tblbox ${emptyTblbox.length}건`, detail: '컴포넌트 없는 빈 테이블 섹션이 생성됨' });
+  }
+
+  // GroupBox ID 잔존
+  const groupBoxIds = (bodyPart.match(/id="GroupBox\d+"/g) || []);
+  if (groupBoxIds.length) {
+    warnings.push({ level: 'warn', msg: `GroupBox ID ${groupBoxIds.length}건 잔존`, detail: groupBoxIds.join(', ') });
+  }
+
+  // colgroup 컬럼 수 vs tr 셀 수 불일치 검증
+  const tables = bodyPart.match(/<xf:group class="w2tb tbl"[\s\S]*?<\/xf:group>\s*<\/xf:group>/g) || [];
+  tables.forEach((tbl, ti) => {
+    const colCount = (tbl.match(/tagname="col"/g) || []).length;
+    const trs = tbl.match(/<xf:group tagname="tr">[\s\S]*?<\/xf:group>/g) || [];
+    trs.forEach((tr, ri) => {
+      const thTd = (tr.match(/tagname="t[hd]"/g) || []).length;
+      const colspans = (tr.match(/<w2:colspan>(\d+)<\/w2:colspan>/g) || [])
+        .map(m => parseInt(m.match(/\d+/)[0]) - 1).reduce((a, b) => a + b, 0);
+      const effective = thTd + colspans;
+      if (colCount > 0 && effective !== colCount) {
+        warnings.push({ level: 'warn', msg: `테이블${ti + 1} Row${ri + 1}: 셀 수 불일치 (colgroup=${colCount}, 실제=${effective})`, detail: 'Row Padding Law 위반 가능' });
+      }
+    });
+  });
+
+  // 바인딩 누락
+  if (refMissing.length) {
+    warnings.push({ level: 'warn', msg: `ref 바인딩 ${refMissing.length}건 누락 가능`, detail: refMissing.map(c => c.id).join(', ') });
+  }
+
+  // 스크립트 참조 ID 누락
+  if (missingScript.length) {
+    warnings.push({ level: 'fail', msg: `스크립트 참조 ID ${missingScript.length}건 누락`, detail: missingScript.map(c => c.id).join(', ') });
+  }
+
+  // 이벤트 누락
+  if (missingEvents.length) {
+    warnings.push({ level: 'fail', msg: `이벤트 바인딩 ${missingEvents.length}건 누락`, detail: missingEvents.map(e => `${e.id}(${e.event})`).join(', ') });
+  }
+
+  // ─── 중복 ID 검증 ───
+  const convDupIds = ScriptValidator.findDuplicateIds(convertedXml);
+  if (convDupIds.length) {
+    warnings.push({ level: 'fail', msg: `중복 ID ${convDupIds.length}건 — 화면 내 동일 ID가 2개 이상 사용됨`, detail: convDupIds.slice(0, 10).map(d => `${d.id}(${d.count}회)`).join(', ') + (convDupIds.length > 10 ? ` 외 ${convDupIds.length - 10}건` : '') });
+  }
+
+  // 경고 없으면 PASS
+  const badge5 = warnings.length === 0
+    ? '<span class="verify-badge pass">이상 없음</span>'
+    : `<span class="verify-badge ${warnings.some(w => w.level === 'fail') ? 'fail' : 'warn'}">${warnings.length}건</span>`;
+
+  html += `<div class="verify-section">
+    <div class="verify-section-header">5. 경고/주의 사항 ${badge5}</div>
+    <table class="verify-table">
+      <tr><th>상태</th><th>내용</th><th>설명</th></tr>`;
+  if (warnings.length) {
+    warnings.forEach(w => {
+      const icon = w.level === 'fail' ? '<span class="verify-tag removed">FAIL</span>' : '<span class="verify-tag changed">WARN</span>';
+      html += `<tr><td>${icon}</td><td>${escHtml(w.msg)}</td><td style="color:var(--text-muted);font-size:12px;">${escHtml(w.detail)}</td></tr>`;
+    });
+  } else {
+    html += `<tr><td colspan="3" style="text-align:center;color:var(--success);">모든 검증 항목 통과</td></tr>`;
+  }
+  html += `</table></div>`;
+
+  // ─── 6. 중복 ID 상세 ───
+  if (convDupIds.length) {
+    html += `<div class="verify-section">
+      <div class="verify-section-header">6. 중복 ID 상세 <span class="verify-badge fail">${convDupIds.length}건</span></div>
+      <table class="verify-table">
+        <tr><th>ID</th><th>사용 횟수</th><th>상태</th><th>설명</th></tr>`;
+    convDupIds.forEach(d => {
+      html += `<tr><td class="verify-mono">${escHtml(d.id)}</td><td style="text-align:center;"><strong>${d.count}회</strong></td><td><span class="verify-tag removed">중복</span></td><td style="font-size:12px;color:var(--text-muted);">화면 내 1개만 사용 가능. ${d.count - 1}개 제거 또는 고유 ID로 변경 필요</td></tr>`;
+    });
+    html += `</table></div>`;
+  }
+
+  el.innerHTML = html;
+}
+
+// ─── 초기화 ───
+function openCompare() {
+  window.open('compare.html', '_blank', 'width=1400,height=900');
+}
+
+function clearAll() {
+  components = [];
+  meta = { screenId: '', screenName: '', width: 1056, height: 750 };
+  analysisResult = null;
+  convertedXml = '';
+  originalXml = '';
+  originalFileName = '';
+  selectedCompIndex = -1;
+  activeFileIndex = -1;
+  document.getElementById('wireframeMd').value = '';
+  renderVerify();
+  setStatus('초기화 완료', '');
+}
+
+// ─── 복사 / 다운로드 ───
+function copyConverted() {
+  if (!convertedXml) { setStatus('변환할 내용이 없습니다.', 'error'); return; }
+  navigator.clipboard.writeText(convertedXml).then(() => setStatus('변환된 XML이 클립보드에 복사되었습니다.', 'success'));
+}
+
+function copyWireframeMd() {
+  const md = document.getElementById('wireframeMd').value;
+  if (!md) { setStatus('Wireframe MD가 없습니다.', 'error'); return; }
+  navigator.clipboard.writeText(md).then(() => setStatus('Wireframe MD가 클립보드에 복사되었습니다.', 'success'));
+}
+
+async function downloadConverted() {
+  if (!fileResults.length) {
+    setStatus('변환할 파일이 없습니다.', 'error');
+    return;
+  }
+  if (!saveDirHandle) {
+    alert('저장 폴더가 설정되지 않았습니다.\n설정에서 저장 위치를 지정해주세요.');
+    openSettings();
+    return;
+  }
+  const targets = fileResults.filter(r => r.convertedXml);
+  const total = targets.length;
+  if (!total) { setStatus('변환된 파일이 없습니다.', 'error'); return; }
+  showSaveProgress(total);
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  let count = 0;
+  for (const r of targets) {
+    const fileKey = r.meta.screenId || r.name.replace('.xml','');
+    const ver = getNextVersion(downloadVersionMap, fileKey, 'wsq_dl_version_map');
+    const fileName = fileKey + '_rel_v' + ver + '.xml';
+    await downloadFile(r.convertedXml, fileName);
+    count++;
+    updateSaveProgress(count, total, fileName);
+  }
+  const dirName = saveDirHandle ? saveDirHandle.name + ' 폴더' : '다운로드 폴더';
+  showSaveToast(`${count}개 파일 저장 완료`, dirName);
+  setStatus(`${count}개 파일 저장 완료`, 'success');
+}
+
+async function downloadFile(content, fileName) {
+  if (saveDirHandle) {
+    try {
+      // 권한 확인/재요청
+      const perm = await saveDirHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        const req = await saveDirHandle.requestPermission({ mode: 'readwrite' });
+        if (req !== 'granted') throw new Error('권한 거부');
+      }
+      const fileHandle = await saveDirHandle.getFileHandle(fileName, { create: true });
+      const writable = await fileHandle.createWritable();
+      await writable.write(content);
+      await writable.close();
+      return;
+    } catch (e) {
+      console.warn('폴더 저장 실패, 기본 다운로드 사용:', e);
+    }
+  }
+  // 기본 다운로드 — 딜레이를 줘서 브라우저 차단 방지
+  return new Promise(resolve => {
+    const blob = new Blob([content], { type: 'application/xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(url); resolve(); }, 500);
+  });
+}
+
+// ─── Wireframe MD 렌더링 ───
+function renderWireframe() {
+  const el = document.getElementById('wireframeMd');
+  if (!originalXml) { el.value = ''; return; }
+  // 캐시된 MD가 있으면 사용
+  if (activeFileIndex >= 0 && fileResults[activeFileIndex]?.wireframeMd) {
+    el.value = fileResults[activeFileIndex].wireframeMd;
+  } else {
+    el.value = WireframeGen.generate(originalXml, originalFileName);
+  }
+}
+
+// ─── 유틸 ───
+function showLoading(text) {
+  document.getElementById('loadingText').textContent = text;
+  document.getElementById('loadingOverlay').classList.add('show');
+}
+function hideLoading() { document.getElementById('loadingOverlay').classList.remove('show'); }
+function setStatus(msg, type) {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  el.className = 'status-msg' + (type ? ' ' + type : '');
+}
+
+// ─── 초기화 ───
+setupDropzone('xmlDropzone', 'xmlFileInput', handleXmlFile);
+setupDropzone('xmltoxmlDropzone', 'xmltoxmlFileInput', handleXmlToXmlFile);
+
+// 변환 모드 변경 시 현재 파일 자동 재변환
+document.querySelectorAll('input[name="xtxConvertMode"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    if (xtxActiveFileIndex < 0 || !xtxFileResults[xtxActiveFileIndex]) return;
+    const r = xtxFileResults[xtxActiveFileIndex];
+    const isResponsive = document.querySelector('input[name="xtxConvertMode"]:checked')?.value === 'responsive';
+    try {
+      const converted = SampleConverter.convert(r.xmlStr, { responsive: isResponsive });
+      r.convertedXml = converted.convertedXml;
+      r.meta = converted.meta;
+      r.relWireframeHtml = RelWireframeGen.generateFromConverted(converted.convertedXml, r.name);
+      selectXtxFile(xtxActiveFileIndex);
+      const st = document.getElementById('xtxStatusMsg');
+      st.textContent = `${isResponsive ? '반응형' : '일반'} 변환 완료`;
+      st.className = 'status-msg success';
+    } catch (e) {
+      const st = document.getElementById('xtxStatusMsg');
+      st.textContent = `재변환 실패: ${e.message}`;
+      st.className = 'status-msg error';
+    }
+  });
+});
+</script>
+
+<!-- 저장 프로그레스 모달 -->
+<div class="save-progress-overlay" id="saveProgress">
+  <div class="save-progress-wrap">
+    <div class="save-progress-title" id="saveProgressTitle">저장 중...</div>
+    <div class="save-progress-bar"><div class="save-progress-fill" id="saveProgressFill"></div></div>
+    <div class="save-progress-detail" id="saveProgressDetail"></div>
+  </div>
+</div>
+
+<!-- 완료 토스트 -->
+<div class="save-toast" id="saveToast">
+  <span class="save-toast-icon">&#9989;</span>
+  <div>
+    <div class="save-toast-text" id="saveToastText">저장 완료</div>
+    <div class="save-toast-sub" id="saveToastSub"></div>
+  </div>
+</div>
+
+<!-- 설정 모달 -->
+<div class="modal-overlay" id="settingsModal" onclick="if(event.target===this)closeSettings()">
+  <div class="modal-box">
+    <h2>&#9881; 설정</h2>
+    <div class="setting-row">
+      <span class="setting-label">저장 위치</span>
+      <div class="setting-value" id="saveDirDisplay">기본 다운로드 폴더</div>
+      <button class="btn btn-primary btn-sm" onclick="pickSaveDir()">폴더 선택</button>
+      <button class="btn btn-outline btn-sm" onclick="resetSaveDir()">초기화</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary btn-sm" onclick="closeSettings()">닫기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── IndexedDB로 DirectoryHandle 저장/복원 ───
+const IDB_NAME = 'wsq_settings';
+const IDB_STORE = 'handles';
+
+function openIDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(IDB_NAME, 1);
+    req.onupgradeneeded = () => req.result.createObjectStore(IDB_STORE);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function saveHandleToIDB(handle) {
+  const db = await openIDB();
+  const tx = db.transaction(IDB_STORE, 'readwrite');
+  tx.objectStore(IDB_STORE).put(handle, 'saveDirHandle');
+  db.close();
+}
+
+async function loadHandleFromIDB() {
+  try {
+    const db = await openIDB();
+    return new Promise((resolve) => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get('saveDirHandle');
+      req.onsuccess = () => { db.close(); resolve(req.result || null); };
+      req.onerror = () => { db.close(); resolve(null); };
+    });
+  } catch { return null; }
+}
+
+async function removeHandleFromIDB() {
+  const db = await openIDB();
+  const tx = db.transaction(IDB_STORE, 'readwrite');
+  tx.objectStore(IDB_STORE).delete('saveDirHandle');
+  db.close();
+}
+
+// ─── 설정: 저장 위치 ───
+async function openSettings() {
+  document.getElementById('settingsModal').classList.add('active');
+  // 핸들이 없으면 IDB에서 복원 시도
+  if (!saveDirHandle) {
+    const stored = await loadHandleFromIDB();
+    if (stored) {
+      try {
+        const perm = await stored.queryPermission({ mode: 'readwrite' });
+        if (perm === 'granted') {
+          saveDirHandle = stored;
+        } else {
+          const ok = confirm(`이전 저장 경로 "${stored.name}" 폴더를 계속 사용하시겠습니까?`);
+          if (ok) {
+            const req = await stored.requestPermission({ mode: 'readwrite' });
+            if (req === 'granted') saveDirHandle = stored;
+            else await removeHandleFromIDB();
+          } else {
+            await removeHandleFromIDB();
+          }
+        }
+      } catch {
+        await removeHandleFromIDB();
+      }
+    }
+  }
+  updateSaveDirDisplay();
+}
+
+function closeSettings() {
+  document.getElementById('settingsModal').classList.remove('active');
+}
+
+async function pickSaveDir() {
+  try {
+    saveDirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    await saveHandleToIDB(saveDirHandle);
+    updateSaveDirDisplay();
+  } catch (e) {
+    // 사용자가 취소한 경우 무시
+  }
+}
+
+async function resetSaveDir() {
+  saveDirHandle = null;
+  await removeHandleFromIDB();
+  updateSaveDirDisplay();
+}
+
+function updateSaveDirDisplay() {
+  const el = document.getElementById('saveDirDisplay');
+  if (saveDirHandle) {
+    el.textContent = saveDirHandle.name;
+    el.classList.add('active-path');
+  } else {
+    el.textContent = '기본 다운로드 폴더';
+    el.classList.remove('active-path');
+  }
+}
+</script>
+</body>
+</html>

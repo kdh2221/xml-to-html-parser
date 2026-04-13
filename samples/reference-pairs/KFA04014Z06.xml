@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04014Z06.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="prdctName" name="prdctName" dataType="text"/>
+						<w2:key id="numericvalue1" name="numericvalue1" dataType="text"/>
+						<w2:key id="dscntrt" name="dscntrt" dataType="text"/>
+						<w2:key id="txbfPaymtAmt" name="txbfPaymtAmt" dataType="text"/>
+						<w2:key id="datevalue1" name="datevalue1" dataType="text"/>
+						<w2:key id="oJoinAmt" name="oJoinAmt" dataType="text"/>
+						<w2:key id="prsntNoitm8" name="prsntNoitm8" dataType="text"/>
+						<w2:key id="grid8" name="grid8" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};
+scwin.Button1_OnClick = function() {
+    //여기에 구현코드를 삽입하세요.
+    grid8.ExcelExport(-1, false, false, true, "", "", false, false, "", false);
+};
+scwin.Button5_OnClick = function() {
+    //여기에 구현코드를 삽입하세요.
+
+    //오즈인쇄
+
+    var oarParams = "상품명칭=" + prdctName.Data + "//MDel//" + "연금지급종료년월일=" + datevalue1.Caption + "//MDel//" + "원리금수령기간=" + numericvalue1.Data + " 년" + "//MDel//" + "원리금수령기간금리=" + dscntrt.Data + " %" + "//MDel//" + "만기원리금=" + txbfPaymtAmt.Data + "//MDel//" + "이자합계=" + oJoinAmt.Data + "//MDel//" + "발급부점명=" + "KB국민은행 " + User.userBzwkBrnName + " 지점" + "//MDel//" + "발급일자=" + user.nowBzoprYmd.substr(0, 4) + "년 " + user.nowBzoprYmd.substr(4, 2) + "월 " + user.nowBzoprYmd.substr(6, 2) + "일" + "//MDel//";
+    SetOzGridData("ALL", "grid8-num1|grid8-amt1|grid8-amt2|grid8-amt3|grid8-amt4|", "grid8");
+
+    //OZViewer 실행 		
+
+    CallOZViewer50("KFA", "KFA/KFA04014560", "KFA04014560", oarParams, "", false);
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="상담조회(원리금수령액)" screenno="KFA04014Z06" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType" style="width:1075px; height:720px;" creator="1500421(강경엽)" lasteditor="S012530(허준혁)" createdatetime="2012/09/13 13:28:39" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<w2:textbox ctype="Text" style="position:absolute; left:448px; top:6px; height:27px; color:rgb(0,0,255); font-size:-19; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Text1" tabIndex="1" label="&lt; 원리금수령액 조회 &gt;" orgid="Text1" hierarchy="Text1"/>
+			<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:654px; height:24px; color:rgb(255,0,0); align:middleleft; text-align:middleleft; font-size:-15; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc1" tabIndex="2" imagealign="MiddleLeft" linespace="2" label="* 금리변동시 실제 지급액이 변동될 수 있습니다" orgid="Desc1" hierarchy="Desc1"/>
+			<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:684px; height:24px; color:rgb(255,0,0); align:middleleft; text-align:middleleft; font-size:-15; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc4" tabIndex="3" imagealign="MiddleLeft" linespace="2" label="* 본 조회표는 외부유출을 금하시고 상담자료로만 활용하시기 바랍니다" orgid="Desc4" hierarchy="Desc4"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:42px; width:1056px; height:48px;" tab="4" id="GroupBox1" tabIndex="4" disabled="true" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:12px; width:564px; height:24px;" id="prdctName" indicator="상품명" tabIndex="1" disabled="true" displayFormat="h(80)" maxlength="80" imeMode="반자" orgid="prdctName" hierarchy="prdctName" ref="data:dma_.prdctName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:106px; top:12px; height:24px; color:rgb(0,0,255);" id="Text_prdctName" tabIndex="2" label="상품명" orgid="Text_prdctName" hierarchy="Text_prdctName"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:96px; width:1056px; height:108px;" tab="5" id="GroupBox4" tabIndex="5" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox4" hierarchy="GroupBox4">
+				<w2:textbox ctype="Text" style="position:absolute; left:528px; top:12px; height:24px; color:rgb(0,0,255);" id="Text_ctrcTrm_20" tabIndex="1" label="원리금수령기간" orgid="Text_ctrcTrm_20" hierarchy="Text_ctrcTrm_20"/>
+				<xf:input ctype="Edit" style="position:absolute; left:630px; top:12px; width:44px; height:24px; text-align:right;" id="numericvalue1" indicator="원리금수령기간" tabIndex="2" disabled="true" dataType="숫자/금액" displayFormat="Z(3)" maxlength="3" suffix="년" rightalign="1" orgid="numericvalue1" hierarchy="numericvalue1" ref="data:dma_.numericvalue1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; height:24px; color:rgb(0,0,255);" id="Text_noyPrftRt_21" tabIndex="3" label="원리금수령기간 금리" orgid="Text_noyPrftRt_21" hierarchy="Text_noyPrftRt_21"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:42px; width:58px; height:24px; text-align:right;" id="dscntrt" indicator="원리금수령기간금리" tabIndex="4" disabled="true" dataType="숫자/금액" displayFormat="Z9.999" maxlength="5" suffix="%" decimallength="3" insertcomma="1" rightalign="1" orgid="dscntrt" hierarchy="dscntrt" ref="data:dma_.dscntrt"/>
+				<xf:input ctype="Edit" style="position:absolute; left:630px; top:42px; width:137px; height:24px; text-align:right;" id="txbfPaymtAmt" indicator="만기원리금" tabIndex="5" disabled="true" dataType="숫자/금액" displayFormat="ZZZ,ZZZ,ZZZ,ZZZ,ZZ9" maxlength="15" insertcomma="1" rightalign="1" orgid="txbfPaymtAmt" hierarchy="txbfPaymtAmt" ref="data:dma_.txbfPaymtAmt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:28px; top:12px; height:24px; color:rgb(0,0,255);" id="Text_expirYmd_23" tabIndex="6" label="연금지급종료년월일" orgid="Text_expirYmd_23" hierarchy="Text_expirYmd_23"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:156px; top:12px; width:74px; height:24px;" id="datevalue1" indicator="연금지급종료년월일" tabIndex="7" disabled="true" displayFormat="yyyy/MM/dd" maxlength="8" orgid="datevalue1" hierarchy="datevalue1" ref="data:dma_.datevalue1"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:72px; width:137px; height:24px; text-align:right;" id="oJoinAmt" indicator="가입금액" tabIndex="8" disabled="true" dataType="숫자/금액" displayFormat="ZZZ,ZZZ,ZZZ,ZZZ,ZZ9" maxlength="15" insertcomma="1" rightalign="1" orgid="oJoinAmt" hierarchy="oJoinAmt" ref="data:dma_.oJoinAmt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:554px; top:42px; height:24px; color:rgb(0,0,255);" id="Text_oJoinAmt_22" tabIndex="9" label="만기원리금" orgid="Text_oJoinAmt_22" hierarchy="Text_oJoinAmt_22"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:93px; top:72px; height:24px; color:rgb(0,0,255);" id="Text_oJoinAmt_22_4" tabIndex="10" label="이자합계" orgid="Text_oJoinAmt_22_4" hierarchy="Text_oJoinAmt_22_4"/>
+			</xf:group>
+			<xf:input ctype="Edit" style="position:absolute; left:852px; top:6px; width:39px; height:24px; visibility:hidden;" id="prsntNoitm8" indicator="현재건수8" tabIndex="6" disabled="true" dataType="숫자/금액" displayFormat="Z(5)" maxlength="5" orgid="prsntNoitm8" hierarchy="prsntNoitm8" ref="data:dma_.prsntNoitm8"/>
+			<w2:gridView ctype="IBSheet" style="position:absolute; left:12px; top:210px; width:1056px; height:438px; background-color:rgb(255,255,255); color:rgb(0,0,0); visibility:visible; align:left; font-size:-13; letter-spacing:0; font-weight:400; font-family:굴림체;" id="grid8" indicator="그리드8" tabIndex="7" tabstop="1" enterstop="1" autoFit="0" container="0" disabled="false" paper="0" adjusttheme="1" orgid="grid8" hierarchy="grid8" dataList="data:dlt_grid8" ref="data:dma_.grid8">
+				<w2:caption id="caption1" style="" value="this is a grid caption."/>
+				<w2:header id="header1" style="">
+					<w2:row id="" style="">
+						<w2:column id="column1" inputType="text" value="월수" width="70"/>
+						<w2:column id="column2" inputType="text" value="원금" width="70"/>
+						<w2:column id="column3" inputType="text" value="이자" width="70"/>
+						<w2:column id="column4" inputType="text" value="원리금" width="70"/>
+						<w2:column id="column5" inputType="text" value="원금잔액" width="70"/>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="" style="">
+						<w2:column id="grid8-num1" inputType="text" width="98"/>
+						<w2:column id="grid8-amt1" inputType="text" width="198"/>
+						<w2:column id="grid8-amt2" inputType="text" width="197"/>
+						<w2:column id="grid8-amt3" inputType="text" width="235"/>
+						<w2:column id="grid8-amt4" inputType="text" width="290"/>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView>
+			<xf:trigger ctype="Button" style="position:absolute; left:954px; top:654px; width:111px; height:24px; visibility:hidden;background-color:rgb(91,96,102);" id="Button5" tabIndex="8" showimage="0" text="고객제안서출력" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" orgid="Button5" hierarchy="Button5">
+				<xf:label><![CDATA[고객제안서출력]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+	</body>
+</html>

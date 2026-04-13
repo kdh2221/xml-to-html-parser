@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04014A02.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="ctrcNomn" name="ctrcNomn" dataType="text"/>
+						<w2:key id="amt" name="amt" dataType="text"/>
+						<w2:key id="irtz" name="irtz" dataType="text"/>
+						<w2:key id="txDstic" name="txDstic" dataType="text"/>
+						<w2:key id="totalLineCnt" name="totalLineCnt" dataType="text"/>
+						<w2:key id="outptLineCnt" name="outptLineCnt" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};
+scwin.prdctMedmClsfiCd_OnItemChanged = function() {
+    //상품중분류코드
+    //상품중분류코드 값이 변경되면
+    //   1) 상품템플릿코드 값을 clear
+    //   2) 상품템플릿코드(prdctSmalClsfiCd)의 화면인스턴스식별자를 
+    //      '901'+중분류코드키값(2자리)+'0000' 으로 셋팅
+
+    prdctTmpltCd.Clear();
+    prdctTmpltCd.ChangeComboDataFromFile("901" + prdctMedmClsfiCd.Data + "0000");
+};
+scwin.prdctTmpltCd_OnItemChanged = function() {
+    //상품템플릿코드
+    //상품템플릿코드 값이 변경되면,
+    //1) (상품번호조회:PDM0400740) 거래처리한다.
+    //2) 거래처리 결과를 '세부상품종류' 콤보에 출력한다.(코드-코드명 형태)
+    //    상품번호(prdctNo)-상품한글명(prdctHanglName)
+    //※ 단, 상품템플릿코드 값이 clear될 때는 거래를 수행하지 않는다.
+
+    if (Trim(prdctTmpltCd.Data) != "") {
+        SetTranID("PDM0400740");
+        Tran.ASend();
+    }
+};
+scwin.LinkText1_OnClick = function() {
+    //여기에 구현코드를 삽입하세요.
+    ScreenOpen("KHC00003000", "DATALINK");
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="상담조회" screenno="KFA04014A02" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType" style="width:1056px; height:204px;" creator="ITBANK-BAE6F77F" lasteditor="S012530(허준혁)" createdatetime="2009/01/09 10:48:14" savezorder="1" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:0px; width:1056px; height:140px;" tab="1" id="GroupBox3" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:12px; height:24px; color:rgb(0,0,0);" id="Text_ctrcNomn" tabIndex="1" linespace="2" label="계약월수" orgid="Text_ctrcNomn" hierarchy="Text_ctrcNomn"/>
+				<xf:input ctype="Edit" style="position:absolute; left:90px; top:12px; width:25px; height:24px;" id="ctrcNomn" indicator="계약월수" tabIndex="2" dataType="숫자/금액" displayFormat="Z(3)" maxlength="3" mandatory="1" class="req" ninemode="0" orgid="ctrcNomn" hierarchy="ctrcNomn" ref="data:dma_.ctrcNomn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:35px; top:42px; height:24px; color:rgb(0,0,0);" id="Text_amt" tabIndex="3" linespace="2" label="목표액" orgid="Text_amt" hierarchy="Text_amt"/>
+				<xf:input ctype="Edit" style="position:absolute; left:90px; top:42px; width:137px; height:24px; text-align:right;" id="amt" indicator="금액" tabIndex="4" dataType="숫자/금액" displayFormat="ZZZ,ZZZ,ZZZ,ZZZ,ZZ9" maxlength="15" mandatory="1" class="req" ninemode="0" insertcomma="1" rightalign="1" orgid="amt" hierarchy="amt" ref="data:dma_.amt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:48px; top:72px; height:24px; color:rgb(0,0,0);" id="Text_irtz" tabIndex="5" linespace="2" label="이율" orgid="Text_irtz" hierarchy="Text_irtz"/>
+				<xf:input ctype="Edit" style="position:absolute; left:90px; top:72px; width:58px; height:24px; text-align:right;" id="irtz" indicator="이율" tabIndex="6" dataType="숫자/금액" displayFormat="Z9.999" maxlength="5" autodecimalpoint="1" suffix="%" decimallength="3" ninemode="0" rightalign="1" orgid="irtz" hierarchy="irtz" ref="data:dma_.irtz"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:156px; top:72px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2" tabIndex="7" imagealign="MiddleLeft" linespace="2" label="*미입력시 현재이율적용" orgid="Desc2" hierarchy="Desc2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:102px; height:24px; color:rgb(0,0,0);" id="Text_txDstic" tabIndex="8" label="과세구분" orgid="Text_txDstic" hierarchy="Text_txDstic"/>
+				<xf:input ctype="Edit" style="position:absolute; left:90px; top:102px; width:11px; height:24px;" id="txDstic" indicator="과세구분" tabIndex="9" displayFormat="A(1)" maxlength="1" mandatory="1" class="req" allowChar="1-3" ninemode="0" orgid="txDstic" hierarchy="txDstic" ref="data:dma_.txDstic"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:108px; top:102px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_4" tabIndex="10" imagealign="MiddleLeft" linespace="2" label="1:개인과세 2:법인과세 3: 비과세" orgid="Desc2_4" hierarchy="Desc2_4"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:144px; width:1056px; height:48px;" tab="2" id="GroupBox2" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:anchor ctype="LinkText" style="position:absolute; left:12px; top:12px; width:148px; height:24px; borderraised2;" id="LinkText1" tooltip="적립식신규(00-10-003)" tabIndex="1" class="btn_def_link" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+					<xf:label><![CDATA[적립식신규]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:18px; top:204px; height:24px; color:rgb(0,0,0); visibility:hidden;" id="Text_totalLineCnt" tabIndex="3" linespace="2" label="총라인수" orgid="Text_totalLineCnt" hierarchy="Text_totalLineCnt"/>
+			<xf:input ctype="Edit" style="position:absolute; left:144px; top:204px; width:39px; height:24px; visibility:hidden;" id="totalLineCnt" indicator="총라인수" tabIndex="4" dataType="숫자/금액" displayFormat="Z(5)" maxlength="5" ninemode="0" orgid="totalLineCnt" hierarchy="totalLineCnt" ref="data:dma_.totalLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:258px; top:204px; height:24px; color:rgb(0,0,0); visibility:hidden;" id="Text_outptLineCnt" tabIndex="5" linespace="2" label="출력라인수" orgid="Text_outptLineCnt" hierarchy="Text_outptLineCnt"/>
+			<xf:input ctype="Edit" style="position:absolute; left:414px; top:204px; width:39px; height:24px; visibility:hidden;" id="outptLineCnt" indicator="출력라인수" tabIndex="6" dataType="숫자/금액" displayFormat="Z(5)" maxlength="5" ninemode="0" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_.outptLineCnt"/>
+		</xf:group>
+	</body>
+</html>

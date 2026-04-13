@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04011Z02.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="prsntNoitm4" name="prsntNoitm4" dataType="text"/>
+						<w2:key id="inquryYMS" name="inquryYMS" dataType="text"/>
+						<w2:key id="grid4" name="grid4" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};
+scwin.Excel_Button_OnClick = function() {
+    //엑셀내보내기
+    //고객정보유출 방지 적용 의뢰						
+
+    MessageSlide("본인 정보제공 요청시,입금계좌 예금주에게 출금계좌번호등 출금계좌관련 금융정보(예금주명 제외)를 제공할 수 없음에 유의");
+
+
+    //	   grid4.ExcelExportS();	
+    grid4.ExcelExportS(-1, false, false, true, "", "", false, false, "", false, "", "", false, true, "", "용지방향=세로;배율=80%;용지크기=4A;가운데맞춤=가로;", true);
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="sub_contents" id="GroupBox1" meta_componentContainer="true" meta_snippetCategory="00_화면시작"
+			meta_snippetKeyComponent="true" meta_snippetName="0_01 페이지시작" style="">
+			<xf:group id="" class="titbox">
+				<w2:textbox tagname="h3" style="" id="title_GroupBox1" label="RP 담보채권 한도조회" class=""></w2:textbox>
+			</xf:group>
+			<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true" meta_snippetName="5_01 테이블(1단)"
+				style="">
+				<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox ctype="Text" hierarchy="Text_inquryYMS" id="Text_inquryYMS" label="조회일시" linespace="2"
+								orgid="Text_inquryYMS" style="" tabIndex="1">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input ctype="Edit" dataType="사용자정의" disabled="true" displayFormat="YYYY/MM/DD hh:mm:ss"
+								hierarchy="inquryYMS" id="inquryYMS" indicator="조회일시" maxlength="14" ninemode="0" orgid="inquryYMS" ref="data:dma_.inquryYMS"
+								style="width:137px;" tabIndex="2">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" class="gvwbox">
+				<w2:gridView container="0" indicator="그리드4" tabstop="0" hierarchy="grid4" tabIndex="4" orgid="grid4" ref="data:dma_.grid4"
+					adjusttheme="1" enterstop="0" ctype="IBSheet" paper="0" dataList="data:dlt_grid4" disabled="false" style="height:624px;" autoFit="0"
+					id="grid4" class="gvw">
+					<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+					<w2:header style="" id="header1">
+						<w2:row style="" id="">
+							<w2:column width="70" inputType="text" id="column1" value="일련번호"></w2:column>
+							<w2:column width="70" inputType="text" id="column2" value="담보채권번호"></w2:column>
+							<w2:column width="70" inputType="text" id="column3" value="만기일자"></w2:column>
+							<w2:column width="70" inputType="text" id="column4" value="시가평가액"></w2:column>
+							<w2:column width="70" inputType="text" id="column5" value="기판매액(환수매가)"></w2:column>
+							<w2:column width="70" inputType="text" id="column6" value="판매가능한도"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody style="" id="gBody1">
+						<w2:row style="" id="">
+							<w2:column width="98" inputType="text" id="serno"></w2:column>
+							<w2:column width="190" inputType="text" id="scurtyBndNo"></w2:column>
+							<w2:column width="161" inputType="text" id="expirDdPsn"></w2:column>
+							<w2:column width="177" inputType="text" id="crntprValpr"></w2:column>
+							<w2:column width="195" inputType="text" id="prviusSaleAmt"></w2:column>
+							<w2:column width="192" inputType="text" id="saleAvlm"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<xf:group id="" class="btnbox"><xf:group id="" class="lt"><w2:textbox ctype="Text" hierarchy="Text_prsntNoitm4" linespace="2" style="display:none;" tabIndex="1" id="Text_prsntNoitm4" label="현재건수4" orgid="Text_prsntNoitm4">
+				</w2:textbox><xf:input indicator="현재건수4" ninemode="0" ref="data:dma_.prsntNoitm4" ctype="Edit" maxlength="5" dataType="숫자/금액" hierarchy="prsntNoitm4" displayFormat="Z(5)" style="width:40px;display:none;" tabIndex="2" id="prsntNoitm4" orgid="prsntNoitm4">
+				</xf:input></xf:group><xf:group id="" class="rt">
+					<xf:trigger ctype="Button" hierarchy="Excel_Button" style="" tabIndex="3" id="Excel_Button" text="엑셀내보내기" type="button"
+						class="btn_cm" orgid="Excel_Button">
+						<xf:label><![CDATA[엑셀내보내기]]></xf:label>
+					</xf:trigger>
+				</xf:group>
+				
+				
+			</xf:group></xf:group>
+	</body>
+</html>

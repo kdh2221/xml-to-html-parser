@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04014A06.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="ssno" name="ssno" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="상담조회" screenno="KFA04014A06" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType" style="width:1056px; height:90px;" creator="JEONG" lasteditor="S012530(허준혁)" createdatetime="2008/10/20 11:16:12" savezorder="1" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:0px; width:1056px; height:78px;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:12px; height:24px; color:rgb(0,0,0);" id="Text_ssno" tabIndex="1" linespace="2" label="주민등록번호" orgid="Text_ssno" hierarchy="Text_ssno"/>
+				<xf:input ctype="Edit" style="position:absolute; left:114px; top:12px; width:102px; height:24px;" id="ssno" indicator="주민등록번호" tabIndex="2" displayFormat="AAAAAA-AAAAAAA" maxlength="13" charcasing="0" validationtype="주민등록번호검증" orgid="ssno" hierarchy="ssno" ref="data:dma_.ssno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:60px; top:42px; height:24px; color:rgb(0,0,0);" id="Text2" tabIndex="3" linespace="2" label="고객명" orgid="Text2" hierarchy="Text2"/>
+				<xf:input ctype="Edit" style="position:absolute; left:114px; top:42px; width:214px; height:24px;" id="custnm" tabIndex="4" disabled="true" displayFormat="H(30)" maxlength="30" charcasing="0" orgid="custnm" hierarchy="custnm"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

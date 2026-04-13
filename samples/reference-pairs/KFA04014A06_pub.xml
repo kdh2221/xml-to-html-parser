@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04014A06.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="ssno" name="ssno" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group screentitle="상담조회" screenno="KFA04014A06" groupcocd="KB0" customclass="Kes" backcolor="16777215" screentype="AType"
+			style="" creator="JEONG" lasteditor="S012530(허준혁)" createdatetime="2008/10/20 11:16:12" savezorder="1" snaptogrid="1" gridstepx="6"
+			gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="sub_contents">
+			<!-- Tag is Not matched with wCraft2 Rule :<COMMON/>-->
+			<xf:group class="tblbox" id="GroupBox1" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true" meta_snippetName="5_01 테이블(1단)"
+				style="">
+				<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox ctype="Text" hierarchy="Text_ssno" id="Text_ssno" label="주민등록번호" linespace="2" orgid="Text_ssno"
+								style="" tabIndex="1">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input charcasing="0" ctype="Edit" displayFormat="AAAAAA-AAAAAAA" hierarchy="ssno" id="ssno"
+								indicator="주민등록번호" maxlength="13" orgid="ssno" ref="data:dma_.ssno" style="width:120px;" tabIndex="2"
+								validationtype="주민등록번호검증">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox ctype="Text" hierarchy="Text2" id="Text2" label="고객명" linespace="2" orgid="Text2"
+								style="" tabIndex="3">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input charcasing="0" ctype="Edit" disabled="true" displayFormat="H(30)" hierarchy="custnm" id="custnm"
+								maxlength="30" orgid="custnm" style="width:240px;" tabIndex="4">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04011Z04.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="lngsIsblTrm_2" name="lngsIsblTrm_2" dataType="text"/>
+						<w2:key id="isblzAmt_3" name="isblzAmt_3" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="sub_contents" id="GroupBox1" meta_componentContainer="true" meta_snippetCategory="00_화면시작"
+			meta_snippetKeyComponent="true" meta_snippetName="0_01 페이지시작" style="">
+			<xf:group id="" class="titbox">
+				<w2:textbox tagname="h3" style="" id="title_GroupBox1" label="표지어음 발행한도 조회" class=""></w2:textbox>
+			</xf:group>
+			<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true" meta_snippetName="5_01 테이블(1단)"
+				style="">
+				<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:200px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th"><w2:textbox ctype="Text" hierarchy="Text3" id="Text3" label="조회시점 발행가능금액" orgid="Text3"
+								style="" tabIndex="2">
+							</w2:textbox></xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input ctype="Edit" dataType="숫자/금액" disabled="true" displayFormat="ZZZ,ZZZ,ZZZ,ZZZ,ZZ9"
+								hierarchy="lngsIsblTrm_2" id="lngsIsblTrm_2" indicator="발행가능금액" insertcomma="1" maxlength="15" ninemode="0" orgid="lngsIsblTrm_2"
+								ref="data:dma_.lngsIsblTrm_2" rightalign="1" style="width:137px;" tabIndex="1">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox ctype="Text" hierarchy="Text4" id="Text4" label="조회시점 최장발행가능기간" orgid="Text4"
+								style="" tabIndex="3">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input ctype="Edit" dataType="숫자/금액" disabled="true" displayFormat="ZZ9" hierarchy="isblzAmt_3"
+								id="isblzAmt_3" indicator="최장발행가능기간" insertcomma="1" maxlength="3" ninemode="0" orgid="isblzAmt_3" ref="data:dma_.isblzAmt_3"
+								rightalign="1" style="width:44px;" suffix="일" tabIndex="4">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

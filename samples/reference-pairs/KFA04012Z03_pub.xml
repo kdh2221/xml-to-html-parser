@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04012Z03.scn"  meta_screenId="" meta_screenName="" meta_desc="" meta_author="">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<w2:workflowCollection/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" id="dma_">
+					<w2:keyInfo>
+						<w2:key id="outptLineCnt" name="outptLineCnt" dataType="text"/>
+						<w2:key id="dataBook" name="dataBook" dataType="text"/>
+						<w2:key id="brncd1" name="brncd1" dataType="text"/>
+						<w2:key id="brnName1" name="brnName1" dataType="text"/>
+						<w2:key id="inquryYmd" name="inquryYmd" dataType="text"/>
+						<w2:key id="athorDmndYmd" name="athorDmndYmd" dataType="text"/>
+						<w2:key id="outptMsg" name="outptMsg" dataType="text"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★Wcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.onpageload = function() {
+};
+scwin.onpageunload = function() {};
+scwin.Button2_OnClick = function() {
+    //여기에 구현코드를 삽입하세요.
+    var str = new Array();
+    str[str.length] = "조회년월일 :;";
+    str[str.length] = inquryYmd.Value;
+    str[str.length] = ";;";
+    str[str.length] = "승인요청년월일 :;";
+    str[str.length] = athorDmndYmd.Value;
+    str[str.length] = ";;";
+    str[str.length] = "|9|";
+    str[str.length] = Text2.Value;
+
+    //	dataBook.ExcelExportS(-1, false, false, true, "", str.join(""), false, false, "", false);
+    dataBook.ExcelExportS(-1, false, false, true, "", str.join(""), false, false, "", false, "", "", false, true, "", "용지방향=가로;자동맞춤=1x1;용지크기=4A;가운데맞춤=가로;", true);
+};
+scwin.dataBook_OnDClick = function(Arg1, Arg2, Arg3) {
+    if (Arg1 > 0) {
+        Link.brncd = dataBook.GetCellDataSaveName(Arg1, "brncd");
+        Link.athorNo = dataBook.GetCellDataSaveName(Arg1, "athorNo");
+        Link.athorDmndYmd = athorDmndYmd.Value;
+        Link.incno = dataBook.GetCellDataSaveName(Arg1, "cno");
+        Link.dtlinyn = "1";
+        Link.inquryKnd = "4";
+        Link.inqurydstcd = "4";
+        //	Link.acnBal  = dataBook.GetCellDataSaveName(Arg1,"acnBal");
+
+        //여기에 구현코드를 삽입하세요.
+        Popup("KFA04012Z04", "DATALINK");
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="sub_contents" id="" meta_componentContainer="true" meta_snippetCategory="00_화면시작" meta_snippetKeyComponent="true"
+			meta_snippetName="0_01 페이지시작" style="">
+			<xf:group id="" class="titbox">
+				<w2:textbox tagname="h3" ctype="Text" hierarchy="Text2" style="" tabIndex="1" id="Text2"
+					label="&lt;&lt; 구속성예금본부승인 요청 및 승인결과 내역 조회 &gt;&gt;" orgid="Text2">
+				</w2:textbox>
+			</xf:group>
+			<xf:group class="tblbox" id="" meta_snippetCategory="05_입출력테이블" meta_snippetKeyComponent="true" meta_snippetName="5_02 테이블(2단)"
+				style="">
+				<xf:group adaptive="layout" adaptiveThreshold="768" class="w2tb tbl" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox ctype="Text" hierarchy="Text_brnName1" id="Text_brnName1" label="조회부점명" orgid="Text_brnName1"
+								style="" tabIndex="6">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input ctype="Edit" disabled="true" displayFormat="A(4)" hierarchy="brncd1" id="brncd1" indicator="부점코드"
+								maxlength="4" orgid="brncd1" ref="data:dma_.brncd1" style="width:40px;" tabIndex="5">
+							</xf:input>
+							<xf:input ctype="Edit" disabled="true" displayFormat="h(20)" hierarchy="brnName1" id="brnName1" imeMode="반자"
+								indicator="부점명" maxlength="20" orgid="brnName1" ref="data:dma_.brnName1" style="width:144px;" tabIndex="7">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox ctype="Text" hierarchy="Text_inquryYmd" id="Text_inquryYmd" label="조회년월일" orgid="Text_inquryYmd"
+								style="" tabIndex="8">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="inquryYmd" id="inquryYmd"
+								indicator="조회년월일" maxlength="8" orgid="inquryYmd" ref="data:dma_.inquryYmd" style="width:120px;" tabIndex="9">
+							</w2:inputCalendar>
+						</xf:group>
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes></w2:attributes>
+							<w2:textbox ctype="Text" hierarchy="Text_athorDmndYmd" id="Text_athorDmndYmd" label="승인요청년월일"
+								orgid="Text_athorDmndYmd" style="" tabIndex="11">
+							</w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<w2:inputCalendar ctype="Edit" disabled="true" displayFormat="yyyy/MM/dd" hierarchy="athorDmndYmd"
+								id="athorDmndYmd" indicator="승인요청년월일" maxlength="8" orgid="athorDmndYmd" ref="data:dma_.athorDmndYmd" style="width:120px;"
+								tabIndex="12">
+							</w2:inputCalendar>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" class="gvwbox">
+				<w2:gridView container="0" indicator="데이터부" tabstop="1" hierarchy="dataBook" tabIndex="4" orgid="dataBook"
+					ref="data:dma_.dataBook" adjusttheme="1" enterstop="1" ctype="IBSheet" paper="0" dataList="data:dlt_dataBook" disabled="false"
+					style="height:528px;" autoFit="0" id="dataBook" class="gvw">
+					<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+					<w2:header style="" id="header1">
+						<w2:row style="" id="">
+							<w2:column width="70" inputType="text" id="column1" value="요청부점"></w2:column>
+							<w2:column width="70" inputType="text" id="column2" value="KB-PIN"></w2:column>
+							<w2:column width="70" inputType="text" id="column3" value="성명"></w2:column>
+							<w2:column width="70" inputType="text" id="column4" value="요청금액"></w2:column>
+							<w2:column width="70" inputType="text" id="column5" value="승인번호"></w2:column>
+							<w2:column width="70" inputType="text" id="column6" value="승인구분"></w2:column>
+							<w2:column width="70" inputType="text" id="column7" value="구속성예금예외구분"></w2:column>
+							<w2:column width="70" inputType="text" id="column8" value="업무구분"></w2:column>
+							<w2:column width="70" inputType="text" id="column9" value="사용여부"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody style="" id="gBody1">
+						<w2:row style="" id="">
+							<w2:column width="90" inputType="text" id="brncd"></w2:column>
+							<w2:column width="131" inputType="text" id="cno"></w2:column>
+							<w2:column width="117" inputType="text" id="custnm"></w2:column>
+							<w2:column width="159" inputType="text" id="dmdamt"></w2:column>
+							<w2:column width="100" inputType="text" id="athorNo"></w2:column>
+							<w2:column width="100" inputType="text" id="athorDstic"></w2:column>
+							<w2:column width="149" inputType="text" id="rstrctnidedstcd"></w2:column>
+							<w2:column width="100" inputType="text" id="idbDstcd"></w2:column>
+							<w2:column width="100" inputType="text" id="useyn"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<xf:group id="" class="btnbox">
+				<xf:group id="" class="lt">
+					<xf:input indicator="출력메시지" ref="data:dma_.outptMsg" ctype="Edit" maxlength="80" imeMode="반자" hierarchy="outptMsg"
+						displayFormat="h(80)" style="width:564px;" tabIndex="14" id="outptMsg" orgid="outptMsg">
+					</xf:input>
+				</xf:group>
+				<xf:group id="" class="rt">
+					<xf:trigger ctype="Button" hierarchy="Button2" style="" tabIndex="10" id="Button2" text="엑셀내보내기" type="button"
+						class="btn_cm" orgid="Button2">
+						<xf:label><![CDATA[엑셀내보내기]]></xf:label>
+					</xf:trigger>
+				</xf:group>
+			</xf:group>
+		<xf:group id="" class="btnbox"><xf:group id="" class="lt"><w2:textbox ctype="Text" hierarchy="Text3" style="" tabIndex="13" id="Text3" label="상세조회시 해당 칼럼을 더블클릭 하세요" class="txt_info" orgid="Text3">
+			</w2:textbox><w2:textbox ctype="Text" hierarchy="Text_outptLineCnt" style="display:none;" tabIndex="2" id="Text_outptLineCnt" label="출력라인수" orgid="Text_outptLineCnt">
+			</w2:textbox><xf:input indicator="출력라인수" ref="data:dma_.outptLineCnt" ctype="Edit" maxlength="5" dataType="숫자/금액" hierarchy="outptLineCnt" displayFormat="Z(5)" style="width:40px;display:none;" tabIndex="3" id="outptLineCnt" orgid="outptLineCnt">
+			</xf:input></xf:group></xf:group></xf:group>
+	</body>
+</html>
