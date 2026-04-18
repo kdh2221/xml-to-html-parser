@@ -238,7 +238,7 @@ const XmlParser = (() => {
         // GroupBox → 자식 수집하여 groupbox 섹션
         const children = walkChildren(el, selfHidden);
         if (children.length > 0) {
-          sections.push({ type: 'groupbox', groupId: id, top: style.top || 0, hidden: selfHidden, comps: children });
+          sections.push({ type: 'groupbox', groupId: id, top: style.top || 0, height: style.height || 0, hidden: selfHidden, comps: children });
         }
       } else if (ctype === 'GridView' || ctype === 'IBSheet') {
         const comp = extractComp(el, false);
@@ -251,6 +251,12 @@ const XmlParser = (() => {
         const comp = extractComp(el, selfHidden);
         if (comp) {
           sections.push({ type: 'tab', top: style.top || 0, hidden: selfHidden, comps: [comp] });
+        }
+      } else if (ctype === 'Panel') {
+        // Panel(w2:pageFrame) → 독립 블록 섹션
+        const comp = extractComp(el, selfHidden);
+        if (comp) {
+          sections.push({ type: 'standalone', top: style.top || 0, hidden: selfHidden, comps: [comp] });
         }
       } else if (tag === 'group' && el.children.length > 0) {
         // 일반 Group (grd_wrap 등) — TAB 포함 시 분리
@@ -286,6 +292,33 @@ const XmlParser = (() => {
         }
       }
     }
+
+    // --- 겹침 감지: GroupBox 영역에 오버레이되는 고아 컴포넌트 → 해당 GroupBox의 overlayComps로 이관 ---
+    const gbSections = sections.filter(s => s.type === 'groupbox' && s.groupId);
+    const removeIdxs = new Set();
+    sections.forEach((s, si) => {
+      // groupId 없는 groupbox 또는 standalone 섹션만 대상
+      if (s.groupId || (s.type !== 'groupbox' && s.type !== 'standalone')) return;
+      s.comps.forEach(comp => {
+        if (comp.hidden) return;
+        // Panel(w2:pageFrame)은 외부 화면 참조 블록이므로 overlayComp 흡수 제외
+        if (comp.ctype === 'Panel') return;
+        const ct = comp.top || 0;
+        // 컴포넌트의 top이 GroupBox 범위(top ~ top+height) 안에 겹치는지 확인
+        const target = gbSections.find(gb =>
+          gb.height > 0 && ct >= gb.top && ct < gb.top + gb.height
+        );
+        if (target) {
+          if (!target.overlayComps) target.overlayComps = [];
+          target.overlayComps.push(comp);
+        }
+      });
+      // 모든 컴포넌트가 이관되었으면 섹션 제거 대상
+      const allMoved = s.comps.every(c => c.hidden || gbSections.some(gb => gb.overlayComps && gb.overlayComps.includes(c)));
+      if (allMoved) removeIdxs.add(si);
+    });
+    // 빈 섹션 제거 (역순)
+    [...removeIdxs].sort((a, b) => b - a).forEach(i => sections.splice(i, 1));
 
     // top 순서로 정렬 (원본 좌표 순서 보장)
     sections.sort((a, b) => a.top - b.top);

@@ -1,22 +1,23 @@
 /**
  * 샘플 기반 WebSquare 절대좌표 → 상대좌표 변환 엔진 (sample-converter.js)
  *
- * 실제 변환 샘플(samples/reference-pairs/)에서 추출한 패턴을 기반으로 변환한다.
- * 기존 abs-to-rel-converter.js와 달리 skill MD 규칙이 아닌 실제 샘플의 패턴을 따른다.
+ * 변환 흐름:
+ *   1. XML 파싱 → 섹션 분류 (xml-parser.js)
+ *   2. 겹침 감지 / 좌우 분할 감지 / standalone 병합
+ *   3. 섹션 간 look-ahead: standalone 버튼 → 다음 섹션 titbox .rt에 합류
+ *   4. processSection: 각 섹션을 outputItems로 변환
+ *      - groupbox/standalone → Row 클러스터링 → th-td tblbox / titbox / msgbox / btngroup
+ *      - grid → gvwbox (hidden이면 display:none)
+ *      - tab → tbcbox (내부 재귀 변환)
+ *      - Panel → self-closing pnlbox
+ *   5. hidden 섹션 → 원래 구조 유지한 채 processSection 적용 → hidden_field에 배치
+ *   6. 누락 ID 안전 복구
+ *   7. XML 조립 + btnbox 출력
  *
- * 샘플에서 파악된 주요 패턴:
- *   1. 속성 알파벳순 정렬
- *   2. hierarchy, orgid 보존
- *   3. meta_snippet* 메타 속성 추가
- *   4. .btnbox 내 .lt(숨김) + .rt(버튼) 구조
- *   5. table에 adaptive="layout" adaptiveThreshold="768"
- *   6. w2:attributes > w2:summary, w2:scope, w2:colspan, w2:rowspan
- *   7. 메인 그룹 class="sub_contents" + meta_componentContainer
- *   8. title → tagname="h3"
- *   9. visibility:hidden → display:none
- *  10. self-closing → open/close 태그
- *  11. GridView: height 유지, width 제거, class="gvw"
- *  12. btn_def1 → btn_cm
+ * class 매핑: samples/[KB국민은행] 전환 매핑 요소.xlsx 참조
+ * 검색영역 판별: 첫 GroupBox + "조회"/"검색"/"초기화" 버튼 (정확 매칭)
+ * 리스트형 테이블: Text Row + Form Row 2개 이상 연속 → thead/tbody
+ * 단위 텍스트: 폼 요소 바로 옆(30px) %,~,-,/ 등 → 같은 td에 포함
  */
 const SampleConverter = (() => {
 
@@ -251,20 +252,44 @@ const SampleConverter = (() => {
 
     // style 결정: 폼 요소는 width 유지, 나머지는 비움
     const styleParts = [];
-    if (isFormInput && comp.width) styleParts.push(`width:${comp.width}px`);
+    if (isFormInput && comp.width) {
+      const w = ['SelectBox', 'Combo'].includes(comp.ctype) ? comp.width + 20 : comp.width;
+      styleParts.push(`width:${w}px`);
+    }
     if (opts.hidden) styleParts.push('display:none');
     clone.setAttribute('style', styleParts.length ? styleParts.join(';') + ';' : '');
 
-    // class 변환: 버튼은 btn_cm, 나머지는 레이아웃 class 제거
+    // class 변환: 매핑 테이블 적용 후 레이아웃 class 제거
+    const CLASS_MAP = {
+      'btn_ico_search': 'btn_cm search icon',
+      'btn_def1': 'btn_cm', 'btn_def2': 'btn_cm', 'btn_def3': 'btn_cm',
+      'btn_def_link': 'btn_cm',
+      'kb_btn_white': 'btn_cm pt',
+      'kb_txt_red': 'txt_red',
+      'kb_title_h2': 'tit_main',
+      'kb_title_h3': 'tit_sub',
+    };
+    const REMOVE_CLASSES = new Set([
+      'content_body', 'conversion',
+      'kb_MiddleRight', 'kb_MiddleLeft', 'kb_MiddleCenter',
+      'kb_td_body', 'kb_td_head', 'title_h2'
+    ]);
     if (isButton) {
-      clone.setAttribute('class', 'btn_cm');
+      const origClass = clone.getAttribute('class') || '';
+      const mapped = origClass.split(/\s+/).map(c => CLASS_MAP[c] || null).filter(Boolean);
+      clone.setAttribute('class', mapped.length ? mapped.join(' ') : 'btn_cm');
+      // 버튼 라벨 줄바꿈 제거
+      const btnText = clone.getAttribute('text') || '';
+      if (btnText) clone.setAttribute('text', btnText.replace(/\\n|\n/g, ' ').trim());
+      const labelEl = clone.querySelector('label');
+      if (labelEl && labelEl.textContent) labelEl.textContent = labelEl.textContent.replace(/\n/g, ' ').trim();
     } else {
       const origClass = clone.getAttribute('class') || '';
-      const cleaned = origClass.split(/\s+/).filter(c =>
-        c && !['btn_def1', 'btn_def2', 'btn_def3', 'content_body', 'conversion',
-               'kb_MiddleRight', 'kb_MiddleLeft', 'kb_MiddleCenter',
-               'kb_td_body', 'kb_td_head', 'title_h2'].includes(c)
-      ).join(' ');
+      const cleaned = origClass.split(/\s+/).map(c => {
+        if (CLASS_MAP[c]) return CLASS_MAP[c];
+        if (REMOVE_CLASSES.has(c)) return null;
+        return c;
+      }).filter(Boolean).join(' ');
       clone.setAttribute('class', cleaned);
     }
 
@@ -276,10 +301,10 @@ const SampleConverter = (() => {
     const raw = new XMLSerializer().serializeToString(clone);
     // xmlns 정리 (중복 네임스페이스 선언 제거)
     const cleaned = raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
-    // 들여쓰기 적용
+    // 들여쓰기 적용 (버튼은 한 줄로)
     const lines = cleaned.split('\n').map(l => l.trim()).filter(l => l);
-    if (lines.length === 1) {
-      return pad + lines[0];
+    if (lines.length === 1 || isButton) {
+      return pad + lines.join('');
     }
     return lines.map((l, i) => i === 0 ? pad + l : pad + '\t' + l).join('\n');
   }
@@ -295,6 +320,8 @@ const SampleConverter = (() => {
     const attrs = {};
     for (const attr of el.attributes) {
       if (attr.name === 'style' || attr.name === 'class') continue;
+      // autoFit="none"은 제거
+      if (attr.name === 'autoFit' && attr.value === 'none') continue;
       attrs[attr.name] = attr.value;
     }
 
@@ -388,6 +415,21 @@ const SampleConverter = (() => {
     return /^[~\-\/]$/.test(label) || label === '';
   }
 
+  // 폼 요소 바로 옆에 붙어 있는 단위/기호 텍스트인지 판별 (좌표 기반)
+  // 폼 요소의 right(left+width) 근처에 있고, 짧은 기호성 텍스트인 경우
+  const UNIT_SUFFIX_PATTERN = /^[%~\-\/()（）￦\\원건명개월일년회차호]$/;
+  function isUnitSuffix(comp, prevComp) {
+    if (!prevComp) return false;
+    if (comp.ctype !== 'Text' && comp.ctype !== 'Desc') return false;
+    const label = (comp.label || '').trim();
+    if (!UNIT_SUFFIX_PATTERN.test(label)) return false;
+    // 좌표: 이전 폼 요소의 right 근처(30px 이내)에 위치
+    if (!INPUT_TYPES.has(prevComp.ctype)) return false;
+    const prevRight = (prevComp.left || 0) + (prevComp.width || 0);
+    const gap = (comp.left || 0) - prevRight;
+    return gap >= -5 && gap <= 30;
+  }
+
   function rowToCells(row) {
     const cells = [];
     let i = 0;
@@ -397,12 +439,22 @@ const SampleConverter = (() => {
       // Text가 th 라벨인지 판별: 구분자(~, -, /) 텍스트는 th가 아님
       const isLabelTh = ctype === 'Text' && !isSeparatorText(comp) && hasFormAfter(row, i + 1);
 
+      // 폼 요소 바로 옆 단위 텍스트는 th가 아님
+      if (isLabelTh && isUnitSuffix(comp, row[i - 1])) {
+        // 단위 텍스트 → 직전 td에 추가
+        if (cells.length > 0 && cells[cells.length - 1].type === 'td') {
+          cells[cells.length - 1].comps.push(comp);
+          i++;
+          continue;
+        }
+      }
+
       if (isLabelTh) {
         const thComps = [comp];
         i++;
         while (i < row.length) {
           const next = row[i];
-          if (next.ctype === 'Text' || next.ctype === 'Desc') { thComps.push(next); i++; }
+          if ((next.ctype === 'Text' || next.ctype === 'Desc') && !isUnitSuffix(next, row[i - 1])) { thComps.push(next); i++; }
           else break;
         }
         cells.push({ type: 'th', comps: thComps });
@@ -413,6 +465,7 @@ const SampleConverter = (() => {
         i++;
         while (i < row.length) {
           const next = row[i];
+          if (isUnitSuffix(next, row[i - 1])) { tdComps.push(next); i++; continue; }
           if (next.ctype === 'Text' && !isSeparatorText(next) && hasFormAfter(row, i + 1)) break;
           tdComps.push(next); i++;
         }
@@ -422,11 +475,22 @@ const SampleConverter = (() => {
         i++;
         while (i < row.length) {
           const next = row[i];
+          if (isUnitSuffix(next, row[i - 1])) { tdComps.push(next); i++; continue; }
           if (next.ctype === 'Text' && !isSeparatorText(next) && hasFormAfter(row, i + 1)) break;
           tdComps.push(next); i++;
         }
         cells.push({ type: 'td', comps: tdComps });
       }
+    }
+    // td가 th보다 먼저 오는 패턴 → 앞쪽 td들은 colspan td로 유지, 뒤쪽 th-td는 그대로
+    // 예: td(안내문구) → th(라벨) → td(폼) = [td colspan, th, td]
+    if (cells.length >= 2 && cells[0].type === 'td' && cells.some(c => c.type === 'th')) {
+      const firstThIdx = cells.findIndex(c => c.type === 'th');
+      // 앞쪽 td들을 하나의 colspan td로 병합
+      const leadingTds = cells.slice(0, firstThIdx);
+      const leadingComps = leadingTds.flatMap(c => c.comps);
+      const rest = cells.slice(firstThIdx); // th-td 정상 구조
+      return [{ type: 'td', comps: leadingComps, _colspan: true }, ...rest];
     }
     return cells;
   }
@@ -452,11 +516,36 @@ const SampleConverter = (() => {
   // ─── 섹션 빌더 (샘플 패턴) ───
 
   /** .titbox */
-  function buildTitbox(titleLabel, indent, titleId) {
+  function buildTitbox(titleLabel, indent, titleId, overlayComps, rtBtns) {
     const pad = '\t'.repeat(indent);
+    const p1 = pad + '\t';
     const lines = [];
     lines.push(`${pad}<xf:group id="" class="titbox">`);
-    lines.push(`${pad}\t<w2:textbox tagname="h3" style="" id="${esc(titleId || '')}" label="${esc(titleLabel)}" class=""></w2:textbox>`);
+    if (titleLabel) {
+      lines.push(`${p1}<w2:textbox tagname="h3" style="" id="${esc(titleId || '')}" label="${esc(titleLabel)}" class="tit_main"></w2:textbox>`);
+    }
+    // 우측 버튼 통합: rtBtns + overlayComps 중 버튼 → 하나의 rt 그룹
+    const allRtBtns = [...(rtBtns || [])];
+    const overlayOther = [];
+    if (overlayComps && overlayComps.length > 0) {
+      overlayComps.forEach(c => {
+        if (['Button', 'Trigger', 'LinkText'].includes(c.ctype)) {
+          allRtBtns.push(c);
+        } else {
+          overlayOther.push(c);
+        }
+      });
+    }
+    if (allRtBtns.length > 0) {
+      lines.push(`${p1}<xf:group class="rt" id="" style="">`);
+      allRtBtns.forEach(comp => {
+        lines.push(buildCompXml(comp, indent + 2));
+      });
+      lines.push(`${p1}</xf:group>`);
+    }
+    overlayOther.forEach(comp => {
+      lines.push(buildCompXml(comp, indent + 1));
+    });
     lines.push(`${pad}</xf:group>`);
     return lines.join('\n');
   }
@@ -678,6 +767,33 @@ const SampleConverter = (() => {
       // rows — 각 Row의 th-td 쌍 수를 기준으로 colspan 계산
       rowCells.forEach((cells, ri) => {
         const isFirstRow = ri === 0;
+
+        // Text-only Row 감지: 모든 셀이 td이고 폼 요소가 없으면 colspan 머지
+        const isTextOnlyRow = cells.every(cell =>
+          cell.type === 'td' && cell.comps.every(c => c.ctype === 'Text' || c.ctype === 'Desc')
+        ) && cells.length > 0 && cells.some(cell => cell.comps.length > 0);
+
+        if (isTextOnlyRow && pairs > 1) {
+          // Text-only Row: 각 텍스트를 th+td 쌍 단위(colspan=2)로 머지
+          const allComps = cells.flatMap(cell => cell.comps);
+          const colsPerText = Math.max(1, Math.floor((pairs * 2) / (allComps.length || 1)));
+          lines.push(`${p2}<xf:group tagname="tr">`);
+          allComps.forEach((comp, ci) => {
+            const isLastComp = ci === allComps.length - 1;
+            const span = isLastComp ? (pairs * 2) - (colsPerText * ci) : colsPerText;
+            lines.push(`${p3}<xf:group class="w2tb_td" tagname="td">`);
+            if (span > 1) {
+              lines.push(`${p4}<w2:attributes>`);
+              lines.push(`${p4}\t<w2:colspan>${span}</w2:colspan>`);
+              lines.push(`${p4}</w2:attributes>`);
+            }
+            lines.push(buildCompXml(comp, indent + 4));
+            lines.push(`${p3}</xf:group>`);
+          });
+          lines.push(`${p2}</xf:group>`);
+          return;
+        }
+
         // 이 Row의 th-td 쌍 수
         const rowPairs = cells.filter(c => c.type === 'th').length || 1;
         // 남는 쌍 수 (th+td 2열 단위)
@@ -687,8 +803,16 @@ const SampleConverter = (() => {
 
         cells.forEach((cell, ci) => {
           const isLast = ci === cells.length - 1;
-          // 마지막 td에 남는 열을 colspan으로 합산 (남는 쌍 × 2 + 1)
-          const colspanVal = (isLast && cell.type === 'td' && remainPairs > 0) ? remainPairs * 2 + 1 : 1;
+          // _colspan td: 선행 td가 차지할 열 수 = 전체 열(pairs*2) - 뒤쪽 셀 수
+          // 마지막 td: 남는 열을 colspan으로 합산 (남는 쌍 × 2 + 1)
+          const hasLeadingColspan = cells.some(c => c._colspan);
+          let colspanVal = 1;
+          if (cell._colspan && cell.type === 'td') {
+            const restCells = cells.length - 1; // 이 td 제외한 뒤쪽 셀 수
+            colspanVal = Math.max(1, pairs * 2 - restCells);
+          } else if (isLast && cell.type === 'td' && remainPairs > 0 && !hasLeadingColspan) {
+            colspanVal = remainPairs * 2 + 1;
+          }
 
           if (cell.type === 'th') {
             lines.push(`${p3}<xf:group class="w2tb_th${isFirstRow ? '' : ' '}" ${isFirstRow ? 'style="" ' : ''}tagname="th">`);
@@ -736,7 +860,8 @@ const SampleConverter = (() => {
   function buildGvwbox(comp, indent) {
     const pad = '\t'.repeat(indent);
     const lines = [];
-    lines.push(`${pad}<xf:group id="" class="gvwbox">`);
+    const hiddenStyle = comp.hidden ? ' style="display:none;"' : '';
+    lines.push(`${pad}<xf:group id="" class="gvwbox"${hiddenStyle}>`);
     lines.push(buildGridViewXml(comp, indent + 1));
     lines.push(`${pad}</xf:group>`);
     return lines.join('\n');
@@ -784,6 +909,90 @@ const SampleConverter = (() => {
     }
     sections.sort((a, b) => a.top - b.top);
     return sections;
+  }
+
+  /**
+   * buildListTblbox: thead + tbody 리스트형 테이블
+   * headerComps: Text Row (thead의 th들)
+   * bodyRows: Form Row 배열 (tbody의 tr들, 각 Row는 컴포넌트 배열)
+   */
+  function buildListTblbox(headerComps, bodyRows, indent, groupId) {
+    const pad = '\t'.repeat(indent);
+    const p1 = pad + '\t', p2 = p1 + '\t', p3 = p2 + '\t', p4 = p3 + '\t';
+    const colCount = headerComps.length;
+    const lines = [];
+
+    lines.push(`${pad}<xf:group class="tblbox" id="${esc(groupId || '')}" style="">`);
+    lines.push(`${p1}<xf:group class="w2tb tbl" id="" style="" tagname="table">`);
+    lines.push(`${p2}<w2:attributes><w2:summary></w2:summary></w2:attributes>`);
+
+    // colgroup
+    lines.push(`${p2}<xf:group tagname="colgroup">`);
+    for (let i = 0; i < colCount; i++) {
+      lines.push(`${p3}<xf:group style="" tagname="col"></xf:group>`);
+    }
+    lines.push(`${p2}</xf:group>`);
+
+    // thead
+    lines.push(`${p2}<xf:group tagname="thead">`);
+    lines.push(`${p3}<xf:group tagname="tr">`);
+    headerComps.forEach(comp => {
+      lines.push(`${p4}<xf:group class="w2tb_th" tagname="th">`);
+      lines.push(buildCompXml(comp, indent + 5));
+      lines.push(`${p4}</xf:group>`);
+    });
+    lines.push(`${p3}</xf:group>`);
+    lines.push(`${p2}</xf:group>`);
+
+    // tbody
+    lines.push(`${p2}<xf:group tagname="tbody">`);
+    bodyRows.forEach(row => {
+      lines.push(`${p3}<xf:group tagname="tr">`);
+      // 각 폼 컴포넌트를 header 컬럼 수에 맞춰 td로 배치
+      // header의 left 위치 기준으로 폼 컴포넌트를 컬럼에 매칭
+      const sorted = [...row].sort((a, b) => a.left - b.left);
+      const headerLefts = headerComps.map(h => h.left);
+
+      // 컬럼별로 폼 컴포넌트 그룹핑
+      const colBuckets = headerLefts.map(() => []);
+      sorted.forEach(comp => {
+        let bestCol = 0, bestDist = Infinity;
+        headerLefts.forEach((hl, ci) => {
+          const dist = Math.abs(comp.left - hl);
+          if (dist < bestDist) { bestDist = dist; bestCol = ci; }
+        });
+        colBuckets[bestCol].push(comp);
+      });
+
+      colBuckets.forEach(bucket => {
+        lines.push(`${p4}<xf:group class="w2tb_td" tagname="td">`);
+        bucket.forEach(comp => {
+          lines.push(buildCompXml(comp, indent + 5));
+        });
+        lines.push(`${p4}</xf:group>`);
+      });
+      lines.push(`${p3}</xf:group>`);
+    });
+    lines.push(`${p2}</xf:group>`);
+
+    lines.push(`${p1}</xf:group>`);
+    lines.push(`${pad}</xf:group>`);
+    return lines.join('\n');
+  }
+
+  /** buildPnlbox: w2:pageFrame(Panel) — style 비우고 self-closing 출력 */
+  function buildPnlbox(comp, indent) {
+    const pad = '\t'.repeat(indent);
+    const el = comp.el;
+    if (!el) return '';
+    const attrs = [];
+    for (const attr of el.attributes) {
+      if (attr.name === 'style') { attrs.push('style=""'); continue; }
+      if (attr.name === 'orgid' || attr.name === 'hierarchy') continue;
+      attrs.push(`${attr.name}="${esc(attr.value)}"`);
+    }
+    if (!el.getAttribute('class')) attrs.push('class=""');
+    return `${pad}<${el.tagName} ${attrs.join(' ')}/>`;
   }
 
   /** buildTbcbox: 뼈대 생성 + content 내부 변환 (convertCtx는 convert에서 전달) */
@@ -926,6 +1135,7 @@ const SampleConverter = (() => {
   const BLOCK_TYPES = new Set([
     'TAB', 'Chart', 'Tree', 'FavoriteTree', 'WorkFlowTree',
     'Browser', 'ActiveX', 'WebViewControl', 'Navigation', 'Schedule',
+    'Panel',
   ]);
 
   /** 래퍼 없이 style만 비워서 단독 출력 (Browser, ActiveX, WebViewControl, Navigation, Schedule) */
@@ -1088,17 +1298,26 @@ const SampleConverter = (() => {
     const p1 = pad + '\t', p2 = p1 + '\t';
     const lines = [];
 
-    // 샘플: ctype="GroupBox" 유지, class="msgbox"
     const gidAttr = groupId ? ` id="${esc(groupId)}"` : ' id=""';
+
+    // 한줄 → msgbox info + txt_info + txt_con 구조
+    if (comps.length === 1) {
+      lines.push(`${pad}<xf:group${gidAttr} class="msgbox info" style="">`);
+      lines.push(`${p1}<w2:textbox class="txt_info" dataType="" id="" label="Info" style=""></w2:textbox>`);
+      const label = comps[0].label || '';
+      lines.push(`${p1}<w2:textbox class="txt_con" for="" id="${esc(comps[0].id || '')}" label="${esc(label)}" style="" tagname=""></w2:textbox>`);
+      lines.push(`${pad}</xf:group>`);
+      return lines.join('\n');
+    }
+
+    // 여러줄 → list_msg dash 구조 (ul > li)
     lines.push(`${pad}<xf:group${gidAttr} class="msgbox" style="">`);
     lines.push(`${p1}<xf:group class="list_msg dash" id="" style="" tagname="ul">`);
     comps.forEach(comp => {
       lines.push(`${p2}<xf:group id="" style="" tagname="li">`);
-      // 원본 DOM 복제, label/style만 수정
       if (!comp.el) { lines.push(buildCompXml(comp, indent + 3)); lines.push(`${p2}</xf:group>`); return; }
       const clone = comp.el.cloneNode(true);
-      const label = (comp.label || '').replace(/^※\s*/, '');
-      clone.setAttribute('label', label);
+      clone.setAttribute('label', comp.label || '');
       clone.setAttribute('style', '');
       if (!clone.getAttribute('hierarchy') && comp.id) clone.setAttribute('hierarchy', comp.id);
       if (!clone.getAttribute('orgid') && comp.id) clone.setAttribute('orgid', comp.id);
@@ -1226,18 +1445,45 @@ const SampleConverter = (() => {
         const comp = extractComp(el, false, 0, 0);
         comp.ctype = 'GridView';
         sections.push({ type: 'grid', top: comp.top, left: comp.left, width: px(style.width), height: px(style.height), hidden: false, comps: [comp] });
+      } else if (ctype === 'TAB') {
+        // TAB 컴포넌트 → tab 섹션 (tbcbox로 변환)
+        const comp = extractComp(el, selfHidden, 0, 0);
+        if (comp) sections.push({ type: 'tab', top: comp.top, left: comp.left, width: px(style.width), height: px(style.height), hidden: selfHidden, comps: [comp] });
+      } else if (ctype === 'Panel') {
+        // Panel(w2:pageFrame) → 독립 블록 섹션
+        const comp = extractComp(el, selfHidden, 0, 0);
+        if (comp) sections.push({ type: 'standalone', top: comp.top, left: comp.left, width: 0, height: 0, hidden: selfHidden, comps: [comp] });
       } else if (tag === 'group' && el.children.length > 0) {
         const wrapLeft = px(style.left);
         const wrapTop = px(style.top);
-        const children = walkChildren(el, selfHidden, wrapLeft, wrapTop);
-        const hasGrid = children.some(c => c.ctype === 'GridView');
-        // wrapper의 절대좌표: 자체 좌표가 있으면 사용, 없으면 자식 중 최소 top
-        const groupTop = wrapTop || (children.length ? Math.min(...children.map(c => c.top)) : 0);
-        const groupLeft = wrapLeft || (children.length ? Math.min(...children.map(c => c.left)) : 0);
-        if (hasGrid) {
-          sections.push({ type: 'grid', top: groupTop, left: groupLeft, width: px(style.width), height: px(style.height), hidden: selfHidden, comps: children });
-        } else if (children.length > 0) {
-          sections.push({ type: 'groupbox', groupId: id, top: groupTop, left: groupLeft, width: px(style.width), height: px(style.height), hidden: selfHidden, comps: children });
+        // TAB 포함 여부 확인 — TAB은 별도 섹션으로 분리
+        const hasTab = Array.from(el.children).some(ch => getCtype(ch) === 'TAB');
+        if (hasTab) {
+          for (const ch of el.children) {
+            if (shouldSkip(ch.tagName)) continue;
+            const chCtype = getCtype(ch);
+            const chStyle = parseStyle(ch.getAttribute('style') || '');
+            const chLeft = wrapLeft + px(chStyle.left);
+            const chTop = wrapTop + px(chStyle.top);
+            if (chCtype === 'TAB') {
+              const comp = extractComp(ch, selfHidden, wrapLeft, wrapTop);
+              if (comp) sections.push({ type: 'tab', top: chTop, left: chLeft, width: px(chStyle.width), height: px(chStyle.height), hidden: selfHidden, comps: [comp] });
+            } else {
+              const comp = extractComp(ch, selfHidden, wrapLeft, wrapTop);
+              if (comp) sections.push({ type: 'standalone', top: chTop, left: chLeft, width: 0, height: 0, hidden: comp.hidden, comps: [comp] });
+            }
+          }
+        } else {
+          const children = walkChildren(el, selfHidden, wrapLeft, wrapTop);
+          const hasGrid = children.some(c => c.ctype === 'GridView');
+          // wrapper의 절대좌표: 자체 좌표가 있으면 사용, 없으면 자식 중 최소 top
+          const groupTop = wrapTop || (children.length ? Math.min(...children.map(c => c.top)) : 0);
+          const groupLeft = wrapLeft || (children.length ? Math.min(...children.map(c => c.left)) : 0);
+          if (hasGrid) {
+            sections.push({ type: 'grid', top: groupTop, left: groupLeft, width: px(style.width), height: px(style.height), hidden: selfHidden, comps: children });
+          } else if (children.length > 0) {
+            sections.push({ type: 'groupbox', groupId: id, top: groupTop, left: groupLeft, width: px(style.width), height: px(style.height), hidden: selfHidden, comps: children });
+          }
         }
       } else {
         if (!style.left && !style.top) continue;
@@ -1245,6 +1491,32 @@ const SampleConverter = (() => {
         sections.push({ type: 'standalone', top: comp.top, left: comp.left, width: 0, height: 0, hidden: comp.hidden, comps: [comp] });
       }
     }
+
+    // --- 겹침 감지: GroupBox 영역에 오버레이되는 고아 컴포넌트 → 해당 GroupBox의 overlayComps로 이관 ---
+    const gbSections = sections.filter(s => s.type === 'groupbox' && s.groupId);
+    const removeIdxs = new Set();
+    sections.forEach((s, si) => {
+      // tab, grid 등 독립 블록 섹션은 overlay 대상에서 제외
+      if (s.groupId || (s.type !== 'groupbox' && s.type !== 'standalone')) return;
+      s.comps.forEach(comp => {
+        if (comp.hidden) return;
+        // Panel(w2:pageFrame)은 외부 화면 참조 블록이므로 overlayComp 흡수 제외
+        if (comp.ctype === 'Panel') return;
+        // TAB 등 블록 타입 컴포넌트는 독립 블록이므로 흡수 제외
+        if (BLOCK_TYPES.has(comp.ctype)) return;
+        const ct = comp.top || 0;
+        const target = gbSections.find(gb =>
+          gb.height > 0 && ct >= gb.top && ct < gb.top + gb.height
+        );
+        if (target) {
+          if (!target.overlayComps) target.overlayComps = [];
+          target.overlayComps.push(comp);
+        }
+      });
+      const allMoved = s.comps.every(c => c.hidden || gbSections.some(gb => gb.overlayComps && gb.overlayComps.includes(c)));
+      if (allMoved) removeIdxs.add(si);
+    });
+    [...removeIdxs].sort((a, b) => b - a).forEach(i => sections.splice(i, 1));
 
     sections.sort((a, b) => a.top - b.top);
 
@@ -1270,8 +1542,19 @@ const SampleConverter = (() => {
       }
 
       if (group.length > 1) {
-        group.sort((a, b) => a.left - b.left);
-        mergedSections.push({ type: 'horizontal', sections: group, top: s.top });
+        // 좌우 분할 판정: left가 분리되어 있어야 진짜 좌우 배치
+        // left 차이가 작으면(같은 위치에서 시작) 상하 배치
+        group.sort((a, b) => (a.left || 0) - (b.left || 0));
+        const minLeft = group[0].left || 0;
+        const maxLeft = group[group.length - 1].left || 0;
+        const isReallyHorizontal = (maxLeft - minLeft) > 50;
+        if (isReallyHorizontal) {
+          group.sort((a, b) => a.left - b.left);
+          mergedSections.push({ type: 'horizontal', sections: group, top: s.top });
+        } else {
+          // 상하 배치 → 개별 섹션으로 유지
+          group.forEach(g => mergedSections.push(g));
+        }
       } else {
         mergedSections.push(s);
       }
@@ -1306,6 +1589,25 @@ const SampleConverter = (() => {
     }
 
 
+    /** _preGridBtns/Texts → titbox rt 합류 또는 새 titbox 생성 */
+    function flushPreGridBtns(section, items) {
+      if (!section._preGridBtns || section._preGridBtns.length === 0) return;
+      const lastItem = items[items.length - 1];
+      if (lastItem && lastItem.type === 'titbox') {
+        lastItem.rtBtns = (lastItem.rtBtns || []).concat(section._preGridBtns);
+      } else {
+        // _preGridTexts가 있으면 첫 번째 Text/Desc를 titbox label로 사용
+        const texts = section._preGridTexts || [];
+        const firstText = texts[0];
+        items.push({
+          type: 'titbox',
+          label: firstText ? (firstText.label || '') : '',
+          titleId: firstText ? (firstText.id || '') : '',
+          rtBtns: section._preGridBtns,
+        });
+      }
+    }
+
     /** 단일 섹션 → outputItems 변환 */
     function processSection(section, items) {
       if (section.hidden) return;
@@ -1321,7 +1623,15 @@ const SampleConverter = (() => {
         return;
       }
 
+      if (section.type === 'tab') {
+        flushPreGridBtns(section, items);
+        const tc = section.comps.find(c => c.ctype === 'TAB');
+        if (tc) items.push({ type: 'tbcbox', comp: tc });
+        return;
+      }
+
       if (section.type === 'grid') {
+        flushPreGridBtns(section, items);
         const g = section.comps.find(c => c.ctype === 'GridView');
         if (g) items.push({ type: 'gvwbox', grid: g });
 
@@ -1340,16 +1650,22 @@ const SampleConverter = (() => {
         const hasNoGrid = !vis.some(c => c.ctype === 'GridView');
 
         if (isFirstGroupBox && hasFormComp && hasNoGrid) {
-          // 섹션 너비의 60% 이상 위치한 버튼 = 우측 단독 배치 조회 버튼
+          // 조회/검색 버튼 판별:
+          // 1) 우측 배치(섹션 60% 이상) OR
+          // 2) 버튼 텍스트가 정확히 "조회"/"검색"/"초기화"인 경우 (다른 글자 포함 시 제외)
+          const SEARCH_BTN_LABELS = /^(조회|검색|초기화)$/;
           const sectionWidth = section.width || 744;
           const rightThreshold = sectionWidth * 0.6;
           const allBtns = vis.filter(c => ['Button', 'Trigger', 'LinkText'].includes(c.ctype));
-          const searchBtns = allBtns.filter(b => b.left >= rightThreshold);
+          const searchBtns = allBtns.filter(b => {
+            const label = (b.label || b.attributes?.text || '').trim();
+            return b.left >= rightThreshold || SEARCH_BTN_LABELS.test(label);
+          });
 
           if (searchBtns.length > 0) {
             // title_h2 → titbox로 먼저 분리
             const schTitleH2 = vis.filter(c => (c.attributes?.class || '').includes('title_h2'));
-            schTitleH2.forEach(c => items.push({ type: 'titbox', label: c.label || '', titleId: c.id || '' }));
+            schTitleH2.forEach(c => items.push({ type: 'titbox', label: c.label || '', titleId: c.id || '', overlayComps: section.overlayComps || null }));
             // title_h2와 조회 버튼 제외한 나머지 = 테이블 영역
             const schComps = vis.filter(c => !searchBtns.includes(c) && !(c.attributes?.class || '').includes('title_h2'));
             items.push({ type: 'schbox', comps: schComps, btns: searchBtns, groupId: gid });
@@ -1361,8 +1677,11 @@ const SampleConverter = (() => {
         const titleH2 = vis.filter(c => (c.attributes?.class || '').includes('title_h2'));
         const workComps = vis.filter(c => !(c.attributes?.class || '').includes('title_h2'));
 
-        // title_h2 먼저 출력
-        titleH2.forEach(c => items.push({ type: 'titbox', label: c.label || '', titleId: c.id || '' }));
+        // title_h2 먼저 출력 (overlayComps가 있으면 titbox에 함께 전달)
+        titleH2.forEach(c => items.push({ type: 'titbox', label: c.label || '', titleId: c.id || '', overlayComps: section.overlayComps || null }));
+
+        // 이 섹션 앞에 배치된 버튼 → 직전 titbox(title_h2)의 우측 버튼으로 합류
+        flushPreGridBtns(section, items);
 
         // Row 클러스터링 → top 순서대로 출력 블록 생성
         const rawRows = clusterRows(workComps, 5);
@@ -1378,10 +1697,40 @@ const SampleConverter = (() => {
           // ※/＊ 설명 텍스트는 세로 병합 대상에서 제외
           const isMsgText = isTextOnly && row.every(c => /^[※*]/.test((c.label || '').trim()));
 
+          // ─── 리스트형 테이블 감지: Text Row + Form-only Row 2개 이상 연속 → thead/tbody ───
+          if (isTextOnly && !isMsgText && row.length >= 2 && nextHasForm && nextRow) {
+            // 다음 Row부터 Form-only Row가 몇 개 연속인지 확인
+            const formOnlyRows = [];
+            for (let fi = ri + 1; fi < rawRows.length; fi++) {
+              const fRow = rawRows[fi];
+              const fFormOnly = fRow.every(c => INPUT_TYPES.has(c.ctype));
+              // 컬럼 수가 header와 비슷한지 (±2 허용)
+              if (fFormOnly && Math.abs(fRow.length - row.length) <= 2) {
+                formOnlyRows.push(fRow);
+              } else {
+                break;
+              }
+            }
+            if (formOnlyRows.length >= 2) {
+              // 리스트형 테이블로 처리
+              row.sort((a, b) => a.left - b.left);
+              row.forEach(tc => mergedTextIds.add(tc.id || tc));
+              formOnlyRows.forEach(fr => fr.sort((a, b) => a.left - b.left));
+              rowGroups.push({ _listTbl: true, header: row, bodyRows: formOnlyRows });
+              ri += formOnlyRows.length; // Form Row들 skip
+              continue;
+            }
+          }
+
           if (isTextOnly && !isMsgText && nextHasForm && row.length > 0 && nextRow) {
             const textTop = Math.min(...row.map(c => c.top));
             const formTop = Math.min(...nextRow.map(c => c.top));
-            if (formTop - textTop > 0 && formTop - textTop <= 40) {
+            // Text-only Row의 텍스트가 다음 Row의 Text 위치에만 대응하면 병합 안 함 (colspan Row로 유지)
+            const nextTexts = nextRow.filter(c => c.ctype === 'Text' || c.ctype === 'Desc');
+            const allMatchTexts = row.length > 0 && row.every(tc => {
+              return nextTexts.some(nt => Math.abs(tc.left - nt.left) <= 30);
+            });
+            if (formTop - textTop > 0 && formTop - textTop <= 40 && !allMatchTexts) {
               const merged = [];
               const usedTexts = new Set();
               nextRow.sort((a, b) => a.left - b.left);
@@ -1430,7 +1779,21 @@ const SampleConverter = (() => {
           msgBuffer = [];
         }
 
-        rowGroups.forEach(row => {
+        // 그리드 위 버튼 Row 임시 저장소 (다음 Row가 그리드이면 titbox에 합류)
+        let pendingGridBtns = null;
+
+        for (let ri = 0; ri < rowGroups.length; ri++) {
+          const row = rowGroups[ri];
+
+          // 리스트형 테이블 항목 처리
+          if (row._listTbl) {
+            flushTbl();
+            flushMsg();
+            items.push({ type: 'listtbl', header: row.header, bodyRows: row.bodyRows, groupId: gid });
+            continue;
+          }
+
+          const nextRow = rowGroups[ri + 1];
           const allBtns = row.every(c => ['Button', 'Trigger', 'LinkText'].includes(c.ctype));
           const hasGrid = row.some(c => c.ctype === 'GridView');
           const isSingleText = row.length === 1 && (row[0].ctype === 'Text' || row[0].ctype === 'Desc');
@@ -1442,6 +1805,7 @@ const SampleConverter = (() => {
             flushMsg();
             row.filter(c => BLOCK_TYPES.has(c.ctype)).forEach(bc => {
               if (bc.ctype === 'TAB') items.push({ type: 'tbcbox', comp: bc });
+              else if (bc.ctype === 'Panel') items.push({ type: 'pnlbox', comp: bc });
               else if (bc.ctype === 'Chart') items.push({ type: 'chartbox', comp: bc });
               else if (['Tree', 'FavoriteTree', 'WorkFlowTree'].includes(bc.ctype)) items.push({ type: 'tvwbox', comp: bc });
               else items.push({ type: 'blockcomp', comp: bc });
@@ -1451,18 +1815,48 @@ const SampleConverter = (() => {
           } else if (hasGrid) {
             flushTbl();
             flushMsg();
+            // pendingGridBtns가 있으면 직전 titbox에 합류 또는 새 titbox 생성
+            if (pendingGridBtns) {
+              const lastItem = items[items.length - 1];
+              if (lastItem && lastItem.type === 'titbox') {
+                // 직전 titbox에 우측 버튼 추가
+                lastItem.rtBtns = (lastItem.rtBtns || []).concat(pendingGridBtns);
+              } else {
+                items.push({ type: 'titbox', label: '', titleId: '', rtBtns: pendingGridBtns });
+              }
+              pendingGridBtns = null;
+            }
             row.filter(c => c.ctype === 'GridView').forEach(g => {
               items.push({ type: 'gvwbox', grid: g, groupId: gid });
             });
           } else if (allBtns) {
             flushTbl();
             flushMsg();
-            items.push({ type: 'btngroup', comps: [...row], groupId: gid });
+            // 다음 Row가 그리드이면 titbox 우측 버튼으로 예약, 아니면 기존 btngroup
+            const nextHasGrid = nextRow && nextRow.some(c => c.ctype === 'GridView');
+            if (nextHasGrid) {
+              pendingGridBtns = [...row];
+            } else {
+              items.push({ type: 'btngroup', comps: [...row], groupId: gid });
+            }
           } else if (isSingleText && !hasForm) {
             if (/^[※*]/.test(row[0].label || '')) {
               // ※ 텍스트 → msgBuffer에 모으기
               flushTbl();
               msgBuffer.push(row[0]);
+            } else if (msgBuffer.length > 0) {
+              // msgBuffer에 연속된 Desc/Text → 같은 class이고 수직 근접하면 이전 항목에 텍스트 병합
+              const last = msgBuffer[msgBuffer.length - 1];
+              const lastClass = (last.attributes?.class || '').replace(/\bkb_MiddleLeft\b/g, '').trim();
+              const curClass = (row[0].attributes?.class || '').replace(/\bkb_MiddleLeft\b/g, '').trim();
+              const vertDist = Math.abs((row[0].top || 0) - (last.top || 0));
+              if (lastClass === curClass && vertDist <= 30) {
+                last.label = (last.label || '') + (row[0].label || '');
+              } else {
+                flushTbl();
+                flushMsg();
+                items.push({ type: 'titbox', label: row[0].label || '', titleId: row[0].id || '' });
+              }
             } else {
               flushTbl();
               flushMsg();
@@ -1490,12 +1884,25 @@ const SampleConverter = (() => {
               tblBuffer.push(...row);
             }
           }
-        });
+        }
+        // pendingGridBtns가 소진되지 않은 경우 (마지막 Row가 버튼이고 그리드가 없었을 때)
+        if (pendingGridBtns) {
+          items.push({ type: 'btngroup', comps: pendingGridBtns, groupId: gid });
+          pendingGridBtns = null;
+        }
         flushTbl();
         flushMsg();
 
         // clusterRows에서 빠진 컴포넌트 보존 (세로 병합된 원본 제외)
-        const clustered = new Set(rowGroups.flat());
+        const clusteredArr = [];
+        rowGroups.forEach(rg => {
+          if (rg._listTbl) {
+            clusteredArr.push(...rg.header, ...rg.bodyRows.flat());
+          } else {
+            clusteredArr.push(...rg);
+          }
+        });
+        const clustered = new Set(clusteredArr);
         workComps.filter(c => !clustered.has(c) && !c.hidden && c.ctype !== 'GridView' && !mergedTextIds.has(c.id || c)).forEach(c => {
           if (['Button', 'Trigger', 'LinkText'].includes(c.ctype)) items.push({ type: 'btngroup', comps: [c], groupId: gid });
           else pushTblboxWithTextSplit(items, [c], gid);
@@ -1519,16 +1926,64 @@ const SampleConverter = (() => {
       }
     }
 
-    finalSections.forEach(section => processSection(section, outputItems));
+    // 섹션 간 look-ahead: 콘텐츠 섹션 직전의 standalone 섹션에서 버튼을 추출하여 titbox rt에 배치
+    // 버튼-only가 아닌 섹션(Text+Button 혼합)에서도 버튼만 분리하여 합류
+    for (let si = finalSections.length - 1; si >= 0; si--) {
+      const sec = finalSections[si];
+      if (sec.hidden) continue;
+      // standalone 섹션 중 버튼만 포함(폼요소 없음)이면 소스 후보이므로 대상에서 제외
+      if (sec.type === 'standalone') {
+        const secVis = sec.comps.filter(c => !c.hidden);
+        const hasOnlyBtnsOrText = !secVis.some(c => INPUT_TYPES.has(c.ctype) && !['Button', 'Trigger', 'LinkText'].includes(c.ctype));
+        if (hasOnlyBtnsOrText && secVis.some(c => ['Button', 'Trigger', 'LinkText'].includes(c.ctype))) continue;
+      }
+      // 이 섹션 바로 위의 연속된 standalone 섹션에서 버튼 추출
+      // groupbox(폼요소 포함)는 대상 제외 — 테이블 안의 버튼은 테이블에 유지
+      let bi = si - 1;
+      while (bi >= 0) {
+        const prev = finalSections[bi];
+        if (prev.hidden) { bi--; continue; }
+        if (prev._skipForGrid) { bi--; continue; }
+        if (prev.type !== 'standalone') break;
+        const vis = prev.comps.filter(c => !c.hidden);
+        const btns = vis.filter(c => ['Button', 'Trigger', 'LinkText'].includes(c.ctype));
+        if (btns.length === 0) break;
+        // 버튼을 다음 콘텐츠에 합류
+        if (!sec._preGridBtns) sec._preGridBtns = [];
+        sec._preGridBtns.unshift(...btns);
+        // 비버튼(Text/Desc) → titbox tit_main으로 함께 전달
+        const nonBtns = vis.filter(c => !['Button', 'Trigger', 'LinkText'].includes(c.ctype));
+        if (nonBtns.length > 0) {
+          if (!sec._preGridTexts) sec._preGridTexts = [];
+          sec._preGridTexts.unshift(...nonBtns);
+        }
+        prev._skipForGrid = true;
+        bi--;
+      }
+    }
+
+    // 2단계: 마킹된 섹션은 건너뛰고 processSection 실행
+    // hidden 섹션은 원래 섹션 구조를 유지한 채 별도로 변환
+    const hiddenSectionItems = [];
+    for (let si = 0; si < finalSections.length; si++) {
+      if (finalSections[si]._skipForGrid) continue;
+      const sec = finalSections[si];
+      if (sec.hidden) {
+        const tempSection = { ...sec, hidden: false, comps: sec.comps.map(c => ({ ...c, hidden: false })) };
+        processSection(tempSection, hiddenSectionItems);
+      } else {
+        processSection(sec, outputItems);
+      }
+    }
 
     // ─── XML 조립 ───
     const lines = [];
     lines.push('<?xml version="1.0" encoding="UTF-8"?>');
     lines.push('<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">');
 
-    // head 그대로 보존
+    // head 그대로 보존 (원본 들여쓰기 유지)
     if (headStr) {
-      lines.push('\t' + headStr.split('\n').map(l => l.trim()).filter(l => l).join('\n\t'));
+      lines.push('\t' + headStr);
     }
 
     // body
@@ -1558,7 +2013,7 @@ const SampleConverter = (() => {
     function renderItem(item, indent) {
       const pad = '\t'.repeat(indent);
       if (item.type === 'titbox') {
-        lines.push(buildTitbox(item.label, indent, item.titleId));
+        lines.push(buildTitbox(item.label, indent, item.titleId, item.overlayComps, item.rtBtns));
       } else if (item.type === 'tblbox') {
         lines.push(buildTblbox(item.comps, indent, { groupId: item.groupId }));
       } else if (item.type === 'schbox') {
@@ -1587,6 +2042,10 @@ const SampleConverter = (() => {
             return lines.splice(before);
           }
         }));
+      } else if (item.type === 'listtbl') {
+        lines.push(buildListTblbox(item.header, item.bodyRows, indent, item.groupId));
+      } else if (item.type === 'pnlbox') {
+        lines.push(buildPnlbox(item.comp, indent));
       } else if (item.type === 'chartbox') {
         lines.push(buildChartbox(item.comp, indent));
       } else if (item.type === 'tvwbox') {
@@ -1623,30 +2082,70 @@ const SampleConverter = (() => {
     });
 
     // 숨김 필드 → 별도 hidden_field div
+    // hiddenSectionItems: 2단계에서 hidden 섹션을 원래 구조 그대로 변환한 결과
+    // hiddenSectionItems에 사용된 GroupBox ID, 컴포넌트 ID 수집
+    const hiddenSectionGroupIds = new Set();
+    const collectGroupIds = (it) => {
+      if (it.groupId) hiddenSectionGroupIds.add(it.groupId);
+      if (it.subItems) it.subItems.forEach(collectGroupIds);
+    };
+    hiddenSectionItems.forEach(collectGroupIds);
+    // groupBoxIds에서 hiddenSectionItems에서 이미 사용된 ID 제거
+    for (let gi = groupBoxIds.length - 1; gi >= 0; gi--) {
+      if (hiddenSectionGroupIds.has(groupBoxIds[gi])) groupBoxIds.splice(gi, 1);
+    }
+
+    const hiddenSectionCompIds = new Set();
+    const extractItemIds = (it) => {
+      if (it.titleId) hiddenSectionCompIds.add(it.titleId);
+      if (it.comps) it.comps.forEach(c => { if (c.id) hiddenSectionCompIds.add(c.id); });
+      if (it.grid && it.grid.id) hiddenSectionCompIds.add(it.grid.id);
+      if (it.comp && it.comp.id) hiddenSectionCompIds.add(it.comp.id);
+      if (it.header) it.header.forEach(c => { if (c.id) hiddenSectionCompIds.add(c.id); });
+      if (it.bodyRows) it.bodyRows.forEach(r => r.forEach(c => { if (c.id) hiddenSectionCompIds.add(c.id); }));
+      if (it.subItems) it.subItems.forEach(extractItemIds);
+      if (it.subItemGroups) it.subItemGroups.forEach(g => g.forEach(extractItemIds));
+      if (it.rtBtns) it.rtBtns.forEach(c => { if (c.id) hiddenSectionCompIds.add(c.id); });
+      if (it.btns) it.btns.forEach(c => { if (c.id) hiddenSectionCompIds.add(c.id); });
+    };
+    hiddenSectionItems.forEach(extractItemIds);
+
+    // 이미 변환 출력에 포함된 ID 제외 (hidden gvwbox 등으로 이미 출력된 경우)
+    const outputSoFar = lines.join('\n');
+    const alreadyRenderedIds = new Set();
+    (outputSoFar.match(/\bid="([^"]*)"/g) || []).forEach(m => {
+      const id = m.replace('id="', '').replace('"', '');
+      if (id) alreadyRenderedIds.add(id);
+    });
+
+    // 잔여 hidden 컴포넌트 (섹션 구조 변환에서 빠진 개별 컴포넌트)
     const uniqueHidden = [];
     const seenIds = new Set();
     hiddenComps.forEach(c => {
       if (!c.id || seenIds.has(c.id) || /^GroupBox/i.test(c.id)) return;
+      if (alreadyRenderedIds.has(c.id)) return;
+      if (hiddenSectionCompIds.has(c.id)) return;
       seenIds.add(c.id);
       uniqueHidden.push(c);
     });
 
-    // hidden 컴포넌트를 visible과 동일한 변환 프로세스로 처리
     const hiddenOutputItems = [];
     if (uniqueHidden.length) {
-      // hidden 컴포넌트를 가상 섹션으로 만들어 동일한 processSection 로직 적용
       const hiddenSection = { type: 'standalone', hidden: false, comps: uniqueHidden.map(c => ({ ...c, hidden: false })) };
       processSection(hiddenSection, hiddenOutputItems);
     }
 
+    // 전체 hidden 아이템 = 섹션 구조 변환 + 잔여
+    const allHiddenItems = [...hiddenSectionItems, ...hiddenOutputItems];
+
     // GroupBox ID + 변환된 숨김 필드를 hidden_field에 포함
-    if (groupBoxIds.length || hiddenOutputItems.length) {
+    if (groupBoxIds.length || allHiddenItems.length) {
       const pad3 = '\t\t\t', pad4 = pad3 + '\t';
       lines.push(`${pad3}<xf:group id="" class="hidden_field" style="display:none;">`);
       groupBoxIds.forEach(gid => {
         lines.push(`${pad4}<xf:group id="${esc(gid)}" style="display:none;"></xf:group>`);
       });
-      hiddenOutputItems.forEach(item => renderItem(item, 4));
+      allHiddenItems.forEach(item => renderItem(item, 4));
       lines.push(`${pad3}</xf:group>`);
     }
 
@@ -1690,7 +2189,7 @@ const SampleConverter = (() => {
       const missingSection = { type: 'standalone', hidden: false, comps: missingComps.map(c => ({ ...c, hidden: false })) };
       processSection(missingSection, missingItems);
 
-      if (!groupBoxIds.length && !hiddenOutputItems.length) {
+      if (!groupBoxIds.length && !allHiddenItems.length) {
         // hidden_field가 없으면 새로 생성
         const pad3 = '\t\t\t';
         lines.push(`${pad3}<xf:group id="" class="hidden_field" style="display:none;">`);

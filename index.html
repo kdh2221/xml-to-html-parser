@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WebSquare Publishing Editor</title>
+<!-- Pretendard 웹폰트 -->
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root {
   --primary: #2563eb;
@@ -20,7 +23,8 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Malgun Gothic', 'Noto Sans KR', -apple-system, sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+               system-ui, 'Malgun Gothic', 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   height: 100vh;
@@ -1980,7 +1984,8 @@ function renderVerify() {
 
 // ─── 초기화 ───
 function openCompare() {
-  window.open('compare.html', '_blank', 'width=1400,height=900');
+  const base = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+  window.open(base + '/compare.html', '_blank');
 }
 
 function clearAll() {

@@ -8,7 +8,7 @@
 body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cdd6f4; height: 100vh; display: flex; flex-direction: column; }
 
 /* Header */
-.header { display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; }
+.header { display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; flex-wrap: wrap; }
 .header h1 { font-size: 16px; font-weight: 600; color: #cba6f7; white-space: nowrap; }
 .header select { padding: 6px 12px; border: 1px solid #45475a; border-radius: 6px; background: #313244; color: #cdd6f4; font-size: 13px; min-width: 280px; cursor: pointer; }
 .header select:focus { outline: none; border-color: #cba6f7; }
@@ -43,11 +43,12 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
 .panel + .panel { border-left: 2px solid #313244; }
 .compare-area.vertical .panel + .panel { border-left: none; border-top: 2px solid #313244; }
 
-.panel-header { display: flex; align-items: center; justify-content: space-between; padding: 6px 14px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; }
-.panel-label { font-size: 13px; font-weight: 600; }
+.panel-header { display: flex; align-items: center; gap: 10px; padding: 6px 14px; background: #181825; border-bottom: 1px solid #313244; flex-shrink: 0; }
+.panel-label { font-size: 13px; font-weight: 600; flex-shrink: 0; }
 .panel-label.original { color: #89b4fa; }
 .panel-label.converted { color: #a6e3a1; }
-.panel-url { font-size: 11px; color: #6c7086; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 400px; }
+.panel-filename { font-size: 13px; color: #cdd6f4; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.panel-url { font-size: 11px; color: #6c7086; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-left: auto; flex-shrink: 0; }
 
 .panel iframe { flex: 1; border: none; background: #fff; width: 100%; }
 
@@ -59,8 +60,6 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
 
 /* Overlay slider */
 .overlay-controls { display: none; align-items: center; gap: 8px; }
-.compare-area.overlay ~ .header .overlay-controls,
-.show-overlay .overlay-controls { display: flex; }
 .overlay-slider { width: 100px; accent-color: #cba6f7; }
 .overlay-value { font-size: 11px; color: #a6adc8; min-width: 30px; }
 
@@ -69,16 +68,45 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
 .divider:hover, .divider.dragging { background: #cba6f7; }
 .compare-area.vertical .divider { width: auto; height: 4px; cursor: row-resize; }
 
-/* Empty state */
-.empty-state { flex: 1; display: flex; align-items: center; justify-content: center; color: #6c7086; font-size: 14px; }
-
 /* Status bar */
 .status-bar { padding: 4px 20px; background: #181825; border-top: 1px solid #313244; font-size: 11px; color: #6c7086; display: flex; justify-content: space-between; flex-shrink: 0; }
+
+/* Setup panel */
+.setup-panel { display: none; flex-direction: column; align-items: center; justify-content: center; flex: 1; gap: 20px; padding: 40px; }
+.setup-panel.active { display: flex; }
+.setup-card { background: #181825; border: 1px solid #313244; border-radius: 12px; padding: 28px 36px; max-width: 560px; width: 100%; }
+.setup-card h2 { font-size: 18px; color: #cba6f7; margin-bottom: 20px; }
+.setup-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.setup-row:last-child { margin-bottom: 0; }
+.setup-row label { font-size: 13px; min-width: 80px; color: #a6adc8; flex-shrink: 0; }
+.setup-row input { flex: 1; padding: 8px 12px; border: 1px solid #45475a; border-radius: 6px; background: #313244; color: #cdd6f4; font-size: 13px; }
+.setup-row input:focus { outline: none; border-color: #cba6f7; }
+.setup-row .btn { padding: 8px 16px; }
+.setup-hint { font-size: 11px; color: #585b70; margin: -8px 0 10px 90px; }
+.setup-section { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #313244; }
+.setup-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.setup-section-title { font-size: 12px; color: #585b70; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.setup-status { font-size: 12px; color: #a6adc8; text-align: center; min-height: 18px; margin-bottom: 10px; }
+.setup-status.ok { color: #a6e3a1; }
+.setup-status.error { color: #f38ba8; }
+.btn-primary { background: #cba6f7; color: #1e1e2e; border-color: #cba6f7; font-weight: 600; }
+.btn-primary:hover { background: #b48be8; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.folder-display { font-size: 12px; color: #a6e3a1; padding: 6px 12px; background: #1e1e2e; border-radius: 6px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.folder-display.empty { color: #6c7086; }
+.path-preview { font-size: 12px; color: #89b4fa; background: #1e1e2e; border-radius: 6px; padding: 10px 14px; margin: 4px 0 14px 0; font-family: 'Consolas', monospace; word-break: break-all; display: none; }
+.path-preview.active { display: block; }
+.path-preview.error { color: #f38ba8; }
+.path-preview .path-label { font-size: 10px; color: #585b70; font-family: 'Malgun Gothic', sans-serif; display: block; margin-bottom: 4px; }
+
+/* Quick re-setup link */
+.setup-link { font-size: 11px; color: #6c7086; cursor: pointer; text-decoration: underline; }
+.setup-link:hover { color: #cba6f7; }
 </style>
 </head>
 <body>
 
-<div class="header">
+<div class="header" id="mainHeader" style="display:none;">
   <h1>AS-IS / 변환 비교</h1>
   <button class="btn" onclick="navigateFile(-1)" title="이전 화면 (←)">&#9664; 이전</button>
   <select id="fileSelect" onchange="onFileSelect()">
@@ -89,6 +117,8 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
   <button class="btn btn-refresh" onclick="refreshFrames()" title="새로고침">Reload</button>
 
   <div class="controls">
+    <span class="setup-link" onclick="showSetup()">설정 변경</span>
+
     <div class="layout-toggle">
       <button class="btn active" data-layout="horizontal" onclick="setLayout('horizontal')">좌우</button>
       <button class="btn" data-layout="vertical" onclick="setLayout('vertical')">상하</button>
@@ -111,10 +141,53 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
   </div>
 </div>
 
-<div class="compare-area" id="compareArea">
+<!-- Setup Panel -->
+<div class="setup-panel active" id="setupPanel">
+  <div class="setup-card">
+    <h2>화면 비교 설정</h2>
+
+    <!-- 서버 설정 -->
+    <div class="setup-section">
+      <div class="setup-row">
+        <label>서버 주소</label>
+        <input type="text" id="setupServer" placeholder="192.168.152.102:62962">
+      </div>
+      <div class="setup-hint">IP:포트 (예: 192.168.152.102:62962)</div>
+    </div>
+
+    <!-- 폴더 설정 -->
+    <div class="setup-section">
+      <div class="setup-row">
+        <label>서버 루트</label>
+        <span class="folder-display empty" id="setupServerRootDisplay">선택 안 됨</span>
+        <button class="btn" onclick="pickServerRoot()">폴더 선택</button>
+      </div>
+      <div class="setup-hint" id="serverRootHint">WebSquare 서버의 WebContent 폴더 (최초 1회)</div>
+
+      <div class="setup-row">
+        <label>비교 폴더</label>
+        <span class="folder-display empty" id="setupFolderDisplay">선택 안 됨</span>
+        <button class="btn" onclick="pickSetupFolder()">폴더 선택</button>
+      </div>
+      <div class="setup-hint">원본/변환 XML이 있는 폴더 (서버 루트 하위)</div>
+    </div>
+
+    <!-- 경로 미리보기 -->
+    <div class="path-preview" id="pathPreview"></div>
+
+    <div class="setup-status" id="setupStatus"></div>
+
+    <div class="setup-row" style="justify-content: center; margin-top: 4px;">
+      <button class="btn btn-primary" id="setupStartBtn" onclick="startCompare()" disabled>비교 시작</button>
+    </div>
+  </div>
+</div>
+
+<div class="compare-area" id="compareArea" style="display:none;">
   <div class="panel">
     <div class="panel-header">
       <span class="panel-label original">AS-IS (원본)</span>
+      <span class="panel-filename" id="nameOriginal"></span>
       <span class="panel-url" id="urlOriginal">-</span>
     </div>
     <iframe id="frameOriginal"></iframe>
@@ -123,6 +196,7 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
   <div class="panel">
     <div class="panel-header">
       <span class="panel-label converted">변환 화면</span>
+      <span class="panel-filename" id="nameConverted"></span>
       <span class="panel-url" id="urlConverted">-</span>
     </div>
     <iframe id="frameConverted"></iframe>
@@ -130,47 +204,302 @@ body { font-family: 'Malgun Gothic', sans-serif; background: #1e1e2e; color: #cd
 </div>
 
 <div class="status-bar">
-  <span id="statusLeft">화면을 선택하세요</span>
+  <span id="statusLeft">설정을 완료하면 바로 비교를 시작합니다</span>
   <span id="statusRight"></span>
 </div>
 
 <script>
-const CONFIG = {
-  baseUrl: 'http://192.168.152.165:57888/websquare/websquare.html?w2xPath=',
-  w2xBasePath: '\\pub\\검증\\',
-  localFolder: 'D:\\AI_workspace\\KB_ABS_REL_test\\WebContent\\pub\\검증\\'
-};
+// ─── IndexedDB (index.html과 동일한 DB 공유) ───
+const IDB_NAME = 'wsq_settings';
+const IDB_STORE = 'handles';
 
-// File pairs: { id, original, converted, relVersion }
-const filePairs = [];
+function openIDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(IDB_NAME, 1);
+    req.onupgradeneeded = () => req.result.createObjectStore(IDB_STORE);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
 
-// Parse file list from hardcoded data (populated on load)
-const ALL_FILES = [
-  // [original, converted] pairs - will be populated dynamically
-];
+async function saveHandleToIDB(key, handle) {
+  const db = await openIDB();
+  const tx = db.transaction(IDB_STORE, 'readwrite');
+  tx.objectStore(IDB_STORE).put(handle, key);
+  db.close();
+}
 
-function init() {
-  buildFilePairs();
-  populateSelect();
+async function loadHandleFromIDB(key) {
+  try {
+    const db = await openIDB();
+    return new Promise((resolve) => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get(key);
+      req.onsuccess = () => { db.close(); resolve(req.result || null); };
+      req.onerror = () => { db.close(); resolve(null); };
+    });
+  } catch { return null; }
+}
+
+// ─── 설정값 ───
+const urlParams = new URLSearchParams(window.location.search);
+const CONFIG = { baseUrl: '', w2xBasePath: '' };
+
+let filePairs = [];
+let folderHandle = null;
+let setupFolderHandle = null;
+let serverRootHandle = null;
+let resolvedW2xPath = null;
+
+// ─── 초기화 ───
+async function init() {
   setupDivider();
   setupKeyboard();
 
-  // Restore last selection
-  const last = localStorage.getItem('compare_lastFile');
-  if (last) {
-    document.getElementById('fileSelect').value = last;
-    onFileSelect();
+  // 서버 주소 복원: URL param > localStorage
+  const savedServer = urlParams.get('server') || localStorage.getItem('compare_server') || '';
+  // 기존 port 방식도 호환
+  if (!savedServer) {
+    const oldPort = urlParams.get('port') || localStorage.getItem('compare_port') || '';
+    if (oldPort) {
+      document.getElementById('setupServer').value = '192.168.152.102:' + oldPort;
+    }
+  } else {
+    document.getElementById('setupServer').value = savedServer;
+  }
+
+  // IDB에서 핸들 복원
+  const [restoredRoot, restoredCompare, restoredFallback] = await Promise.all([
+    loadHandleFromIDB('serverRootHandle'),
+    loadHandleFromIDB('compareDirHandle'),
+    loadHandleFromIDB('saveDirHandle'),
+  ]);
+
+  // 서버 루트 복원
+  if (restoredRoot) {
+    try {
+      const perm = await restoredRoot.queryPermission({ mode: 'read' });
+      if (perm === 'granted') {
+        serverRootHandle = restoredRoot;
+        updateServerRootDisplay();
+      }
+    } catch { /* 핸들 만료 */ }
+  }
+
+  // 비교 폴더 복원
+  const compareHandle = restoredCompare || restoredFallback;
+  if (compareHandle) {
+    try {
+      const perm = await compareHandle.queryPermission({ mode: 'read' });
+      if (perm === 'granted') {
+        setupFolderHandle = compareHandle;
+        updateSetupFolderDisplay();
+      }
+    } catch { /* 핸들 만료 */ }
+  }
+
+  await resolvePathAndValidate();
+}
+
+// ─── Setup Panel ───
+function updateSetupFolderDisplay() {
+  const el = document.getElementById('setupFolderDisplay');
+  if (setupFolderHandle) {
+    el.textContent = setupFolderHandle.name;
+    el.classList.remove('empty');
+  } else {
+    el.textContent = '선택 안 됨';
+    el.classList.add('empty');
   }
 }
 
-function buildFilePairs() {
-  // Hardcoded file list from folder scan
-  const files = FILE_LIST;
+function updateServerRootDisplay() {
+  const el = document.getElementById('setupServerRootDisplay');
+  if (serverRootHandle) {
+    el.textContent = serverRootHandle.name;
+    el.classList.remove('empty');
+    document.getElementById('serverRootHint').textContent = '설정 완료 — 변경 시에만 다시 선택';
+  } else {
+    el.textContent = '선택 안 됨';
+    el.classList.add('empty');
+  }
+}
+
+async function pickServerRoot() {
+  try {
+    serverRootHandle = await window.showDirectoryPicker({ mode: 'read' });
+    await saveHandleToIDB('serverRootHandle', serverRootHandle);
+    updateServerRootDisplay();
+    await resolvePathAndValidate();
+  } catch (e) {
+    if (e.name !== 'AbortError') {
+      setSetupStatus('폴더 선택 실패: ' + e.message, 'error');
+    }
+  }
+}
+
+async function pickSetupFolder() {
+  try {
+    setupFolderHandle = await window.showDirectoryPicker({ mode: 'read' });
+    await saveHandleToIDB('compareDirHandle', setupFolderHandle);
+    updateSetupFolderDisplay();
+    await resolvePathAndValidate();
+  } catch (e) {
+    if (e.name !== 'AbortError') {
+      setSetupStatus('폴더 선택 실패: ' + e.message, 'error');
+    }
+  }
+}
+
+// 서버 루트 기준으로 비교 폴더의 상대 경로를 자동 계산
+async function resolvePath() {
+  resolvedW2xPath = null;
+  const preview = document.getElementById('pathPreview');
+
+  if (!serverRootHandle || !setupFolderHandle) {
+    preview.classList.remove('active');
+    return false;
+  }
+
+  try {
+    const parts = await serverRootHandle.resolve(setupFolderHandle);
+    if (parts && parts.length > 0) {
+      resolvedW2xPath = '/' + parts.join('/') + '/';
+      const server = document.getElementById('setupServer').value.trim() || '...';
+      preview.innerHTML =
+        '<span class="path-label">미리보기 URL</span>' +
+        escHtml(`http://${server}/websquare/websquare.html?w2xPath=${resolvedW2xPath}파일명.xml`);
+      preview.classList.add('active');
+      preview.classList.remove('error');
+      return true;
+    } else {
+      preview.innerHTML = '<span class="path-label">경로 오류</span>비교 폴더가 서버 루트 하위에 없습니다';
+      preview.classList.add('active', 'error');
+      return false;
+    }
+  } catch {
+    preview.innerHTML = '<span class="path-label">경로 오류</span>경로 확인 실패 — 폴더를 다시 선택하세요';
+    preview.classList.add('active', 'error');
+    return false;
+  }
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+async function resolvePathAndValidate() {
+  await resolvePath();
+  await validateSetup();
+}
+
+async function validateSetup() {
+  const server = document.getElementById('setupServer').value.trim();
+  const btn = document.getElementById('setupStartBtn');
+
+  if (!server) { setSetupStatus('서버 주소를 입력하세요', 'error'); btn.disabled = true; return; }
+  if (!serverRootHandle) { setSetupStatus('서버 루트 폴더를 선택하세요 (최초 1회)', 'error'); btn.disabled = true; return; }
+  if (!setupFolderHandle) { setSetupStatus('비교 폴더를 선택하세요', 'error'); btn.disabled = true; return; }
+  if (!resolvedW2xPath) { setSetupStatus('비교 폴더가 서버 루트 하위에 있어야 합니다', 'error'); btn.disabled = true; return; }
+
+  // 폴더 내 XML 파일 스캔
+  const files = [];
+  try {
+    for await (const entry of setupFolderHandle.values()) {
+      if (entry.kind === 'file' && entry.name.endsWith('.xml')) {
+        files.push(entry.name);
+      }
+    }
+  } catch (e) {
+    setSetupStatus('폴더 읽기 실패 — 다시 선택해주세요', 'error');
+    btn.disabled = true;
+    return;
+  }
+
+  if (files.length === 0) {
+    setSetupStatus('XML 파일이 없습니다', 'error');
+    btn.disabled = true;
+    return;
+  }
+
+  // 원본/변환 쌍 확인
+  files.sort();
+  const originals = files.filter(f => !f.includes('_rel_v'));
+  let pairCount = 0;
+  originals.forEach(orig => {
+    const baseName = orig.replace('.xml', '');
+    if (files.some(f => f.startsWith(baseName + '_rel_v'))) pairCount++;
+  });
+
+  if (pairCount === 0) {
+    setSetupStatus(`XML ${files.length}개 발견, 원본/변환 쌍 없음 (_rel_v 파일 필요)`, 'error');
+    btn.disabled = true;
+    return;
+  }
+
+  setSetupStatus(`${pairCount}개 비교 가능`, 'ok');
+  btn.disabled = false;
+}
+
+function setSetupStatus(msg, cls) {
+  const el = document.getElementById('setupStatus');
+  el.textContent = msg;
+  el.className = 'setup-status' + (cls ? ' ' + cls : '');
+}
+
+// 서버 주소 입력 변경 시 미리보기 갱신
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('setupServer').addEventListener('input', () => {
+    resolvePath(); // 미리보기 URL 갱신
+    validateSetup();
+  });
+});
+
+async function startCompare() {
+  const server = document.getElementById('setupServer').value.trim();
+
+  // 설정 저장
+  localStorage.setItem('compare_server', server);
+
+  CONFIG.baseUrl = `http://${server}/websquare/websquare.html?w2xPath=`;
+  CONFIG.w2xBasePath = resolvedW2xPath;
+  folderHandle = setupFolderHandle;
+
+  // 파일 스캔 및 목록 생성
+  const files = [];
+  for await (const entry of folderHandle.values()) {
+    if (entry.kind === 'file' && entry.name.endsWith('.xml')) {
+      files.push(entry.name);
+    }
+  }
+  files.sort();
+  buildFilePairs(files);
+  populateSelect();
+
+  // UI 전환
+  document.getElementById('setupPanel').classList.remove('active');
+  document.getElementById('mainHeader').style.display = '';
+  document.getElementById('compareArea').style.display = '';
+  document.getElementById('statusLeft').textContent = '화면을 선택하세요';
+
+  // 백그라운드로 화면명 로드 (XML 파싱)
+  loadScreenNames();
+}
+
+function showSetup() {
+  document.getElementById('setupPanel').classList.add('active');
+  document.getElementById('mainHeader').style.display = 'none';
+  document.getElementById('compareArea').style.display = 'none';
+  resolvePathAndValidate();
+}
+
+// ─── 파일 쌍 빌드 ───
+function buildFilePairs(files) {
+  filePairs = [];
   const originals = files.filter(f => !f.includes('_rel_v'));
 
   originals.forEach(orig => {
     const baseName = orig.replace('.xml', '');
-    // Find all _rel_v versions and pick the highest
     const candidates = files.filter(f => f.startsWith(baseName + '_rel_v') && f.endsWith('.xml'));
     if (candidates.length > 0) {
       let best = candidates[0];
@@ -180,27 +509,77 @@ function buildFilePairs() {
         const v = m ? parseInt(m[1]) : 0;
         if (v > bestVer) { bestVer = v; best = c; }
       });
-      filePairs.push({
-        id: baseName,
-        original: orig,
-        converted: best,
-        relVersion: bestVer
-      });
+      filePairs.push({ id: baseName, original: orig, converted: best, relVersion: bestVer, screenName: '' });
+    }
+  });
+  filePairs.sort((a, b) => a.id.localeCompare(b.id));
+}
+
+// XML에서 화면명 추출 (비동기, 백그라운드)
+async function loadScreenNames() {
+  if (!folderHandle) return;
+  for (const pair of filePairs) {
+    try {
+      const fileHandle = await folderHandle.getFileHandle(pair.original);
+      const file = await fileHandle.getFile();
+      // screentitle은 xf:group 태그에 있어 파일 앞부분보다 뒤에 위치 — 충분히 읽기
+      const slice = file.slice(0, 20000);
+      const text = await slice.text();
+      const name = extractScreenName(text);
+      if (name) pair.screenName = name;
+    } catch { /* 파일 읽기 실패 무시 */ }
+  }
+  // 드롭다운 텍스트 갱신
+  const select = document.getElementById('fileSelect');
+  filePairs.forEach((pair, i) => {
+    const opt = select.options[i + 1]; // +1: 첫 번째는 placeholder
+    if (opt && pair.screenName) {
+      opt.textContent = `${pair.screenName} (${pair.id})  v${pair.relVersion}`;
     }
   });
 
-  filePairs.sort((a, b) => a.id.localeCompare(b.id));
+  // 현재 선택된 파일의 패널 헤더도 갱신
+  const currentId = select.value;
+  if (currentId) {
+    const pair = filePairs.find(p => p.id === currentId);
+    if (pair && pair.screenName) {
+      const displayName = `${pair.screenName} (${pair.id})`;
+      document.getElementById('nameOriginal').textContent = displayName;
+      document.getElementById('nameConverted').textContent = displayName;
+      document.title = `${displayName} — AS-IS / 변환 비교`;
+    }
+  }
+}
+
+function extractScreenName(xmlText) {
+  // screentitle 속성에서 추출 (xf:group 태그 — 실제 화면명)
+  let m = xmlText.match(/screentitle\s*=\s*"([^"]+)"/);
+  if (m) return m[1];
+  // meta_screenName 속성에서 추출 (비어있지 않은 경우)
+  m = xmlText.match(/meta_screenName\s*=\s*"([^"]+)"/);
+  if (m) return m[1];
+  return '';
 }
 
 function populateSelect() {
   const select = document.getElementById('fileSelect');
+  select.innerHTML = '<option value="">-- 화면 선택 --</option>';
   filePairs.forEach(pair => {
     const opt = document.createElement('option');
     opt.value = pair.id;
-    opt.textContent = `${pair.id}  (v${pair.relVersion})`;
+    opt.textContent = pair.screenName
+      ? `${pair.screenName} (${pair.id})  v${pair.relVersion}`
+      : `${pair.id}  v${pair.relVersion}`;
     select.appendChild(opt);
   });
   document.getElementById('statusRight').textContent = `${filePairs.length}개 화면`;
+
+  // 마지막 선택 복원
+  const last = localStorage.getItem('compare_lastFile');
+  if (last && filePairs.find(p => p.id === last)) {
+    select.value = last;
+    onFileSelect();
+  }
 }
 
 function navigateFile(dir) {
@@ -216,11 +595,7 @@ function updateFileCounter() {
   const select = document.getElementById('fileSelect');
   const idx = select.selectedIndex;
   const counter = document.getElementById('fileCounter');
-  if (idx < 1) {
-    counter.textContent = '';
-  } else {
-    counter.textContent = `${idx} / ${filePairs.length}`;
-  }
+  counter.textContent = idx < 1 ? '' : `${idx} / ${filePairs.length}`;
 }
 
 function onFileSelect() {
@@ -232,18 +607,26 @@ function onFileSelect() {
   const pair = filePairs.find(p => p.id === id);
   if (!pair) return;
 
-  const urlOrig = CONFIG.baseUrl + CONFIG.w2xBasePath + pair.original;
-  const urlConv = CONFIG.baseUrl + CONFIG.w2xBasePath + pair.converted;
+  const origPath = CONFIG.w2xBasePath + pair.original;
+  const convPath = CONFIG.w2xBasePath + pair.converted;
+  const urlOrig = CONFIG.baseUrl + origPath;
+  const urlConv = CONFIG.baseUrl + convPath;
+
+  const displayName = pair.screenName
+    ? `${pair.screenName} (${pair.id})`
+    : pair.id;
 
   document.getElementById('frameOriginal').src = urlOrig;
   document.getElementById('frameConverted').src = urlConv;
+  document.getElementById('nameOriginal').textContent = displayName;
+  document.getElementById('nameConverted').textContent = displayName;
   document.getElementById('urlOriginal').textContent = pair.original;
   document.getElementById('urlConverted').textContent = pair.converted;
-  document.getElementById('statusLeft').textContent = `${pair.id} 로딩 중...`;
+  document.getElementById('statusLeft').textContent = `${displayName} 로딩 중...`;
+  document.title = `${displayName} — AS-IS / 변환 비교`;
 
   localStorage.setItem('compare_lastFile', id);
 
-  // Track load completion
   let loaded = 0;
   const onLoad = () => {
     loaded++;
@@ -263,7 +646,7 @@ function refreshFrames() {
   if (f2.src) f2.src = f2.src;
 }
 
-// Layout
+// ─── Layout ───
 let currentLayout = 'horizontal';
 
 function setLayout(layout) {
@@ -275,11 +658,8 @@ function setLayout(layout) {
     btn.classList.toggle('active', btn.dataset.layout === layout);
   });
 
-  const overlayControls = document.getElementById('overlayControls');
-  overlayControls.style.display = layout === 'overlay' ? 'flex' : 'none';
-
-  const divider = document.getElementById('divider');
-  divider.style.display = layout === 'overlay' ? 'none' : '';
+  document.getElementById('overlayControls').style.display = layout === 'overlay' ? 'flex' : 'none';
+  document.getElementById('divider').style.display = layout === 'overlay' ? 'none' : '';
 }
 
 function setOverlayOpacity(val) {
@@ -287,7 +667,7 @@ function setOverlayOpacity(val) {
   document.getElementById('overlayValue').textContent = val + '%';
 }
 
-// Scroll Sync
+// ─── Scroll Sync ───
 let syncEnabled = true;
 let syncing = false;
 
@@ -326,13 +706,12 @@ function setupScrollSync() {
       requestAnimationFrame(() => syncing = false);
     });
   } catch (e) {
-    // Cross-origin: sync not available
     document.getElementById('syncDot').className = 'sync-dot off';
     document.getElementById('syncLabel').textContent = '동기화 불가 (cross-origin)';
   }
 }
 
-// Divider (resize panels)
+// ─── Divider (resize) ───
 function setupDivider() {
   const divider = document.getElementById('divider');
   const area = document.getElementById('compareArea');
@@ -343,7 +722,6 @@ function setupDivider() {
     divider.classList.add('dragging');
     document.body.style.cursor = currentLayout === 'vertical' ? 'row-resize' : 'col-resize';
     document.body.style.userSelect = 'none';
-    // Prevent iframe from capturing mouse
     document.querySelectorAll('iframe').forEach(f => f.style.pointerEvents = 'none');
     e.preventDefault();
   });
@@ -376,24 +754,17 @@ function setupDivider() {
   });
 }
 
-// Keyboard shortcuts
+// ─── Keyboard shortcuts ───
 function setupKeyboard() {
   document.addEventListener('keydown', (e) => {
-    // Arrow keys to navigate files
-    if (e.target.tagName === 'SELECT') return;
+    if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
     const select = document.getElementById('fileSelect');
 
     if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      if (select.selectedIndex > 1) {
-        select.selectedIndex--;
-        onFileSelect();
-      }
+      if (select.selectedIndex > 1) { select.selectedIndex--; onFileSelect(); }
       e.preventDefault();
     } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      if (select.selectedIndex < select.options.length - 1) {
-        select.selectedIndex++;
-        onFileSelect();
-      }
+      if (select.selectedIndex < select.options.length - 1) { select.selectedIndex++; onFileSelect(); }
       e.preventDefault();
     } else if (e.key === 'r' || e.key === 'R') {
       refreshFrames();
@@ -406,53 +777,6 @@ function setupKeyboard() {
     }
   });
 }
-
-// File list - populated from folder scan
-const FILE_LIST = [
-  'KAA04900002.xml',
-  'KAA04900002_rel_v4.xml',
-  'KAA06410000.xml',
-  'KAA06410000_rel_v14.xml',
-  'KAA49000000.xml',
-  'KAA49000000_rel_v4.xml',
-  'KBC04991000.xml',
-  'KBC04991000_rel_v4.xml',
-  'KEA04007000.xml',
-  'KEA04007000_rel_v4.xml',
-  'KEA05600000.xml',
-  'KEA05600000_rel_v4.xml',
-  'KEC04713000.xml',
-  'KEC04713000_rel_v4.xml',
-  'KEC04M8A000.xml',
-  'KEC04M8A000_rel_v4.xml',
-  'KEC04M8AA01.xml',
-  'KEC04M8AA01_rel_v4.xml',
-  'KEC04M8AA02.xml',
-  'KEC04M8AA02_rel_v4.xml',
-  'KFA04151000.xml',
-  'KFA04151000_rel_v15.xml',
-  'KFC04001000.xml',
-  'KFC04001000_rel_v11.xml',
-  'KFG04202000.xml',
-  'KFG04202000_rel_v10.xml',
-  'KFL01011000.xml',
-  'KFL01011000_rel_v10.xml',
-  'KGA04003000.xml',
-  'KGA04003000_rel_v4.xml',
-  'KGA04003000_rel_v5.xml',
-  'KGA04004000.xml',
-  'KGA04004000_rel_v5.xml',
-  'KGA04801000.xml',
-  'KGA04801000_rel_v5.xml',
-  'KGA04P01000.xml',
-  'KGA04P01000_rel_v5.xml',
-  'KGB04001000.xml',
-  'KGB04001000_rel_v4.xml',
-  'KHE04302000.xml',
-  'KHE04302000_rel_v10.xml',
-  'KHE04309000.xml',
-  'KHE04309000_rel_v4.xml'
-];
 
 init();
 </script>

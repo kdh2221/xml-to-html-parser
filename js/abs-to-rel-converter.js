@@ -31,24 +31,38 @@ const AbsToRelConverter = (() => {
    * 삭제 대상 레이아웃 class (템플릿 class로 교체됨)
    * 업무 class (req, mandatory 등)는 유지
    */
-  const LAYOUT_CLASSES = new Set([
-    'btn_def1', 'btn_def2', 'btn_def3',
+  /** class 매핑 테이블: 기존 to-be → 적용 필요 클래스 */
+  const CLASS_MAP = {
+    'btn_ico_search': 'btn_cm search icon',
+    'btn_def1': 'btn_cm', 'btn_def2': 'btn_cm', 'btn_def3': 'btn_cm',
+    'btn_def_link': 'btn_cm',
+    'kb_btn_white': 'btn_cm pt',
+    'kb_txt_red': 'txt_red',
+    'kb_txt_brown': '', 'kb_txt_black': '', 'kb_txt_blue': '', 'kb_txt_purple': '',
+    'kb_title_h2': 'tit_main',
+    'kb_title_h3': 'tit_sub',
+  };
+  const REMOVE_CLASSES = new Set([
     'kb_MiddleRight', 'kb_MiddleLeft', 'kb_MiddleCenter',
-    'kb_txt_brown', 'kb_txt_black', 'kb_txt_red', 'kb_txt_blue', 'kb_txt_purple',
     'kb_td_body', 'kb_td_head',
     'content_body', 'conversion',
   ]);
 
-  /** 업무 class 추출 — 레이아웃 class 제거, 업무 class만 남김 */
+  /** 업무 class 추출 — 매핑 적용 후 레이아웃 class 제거, 업무 class만 남김 */
   function extractBusinessClass(classStr) {
     if (!classStr) return '';
-    return classStr.split(/\s+/).filter(c => c && !LAYOUT_CLASSES.has(c)).join(' ');
+    return classStr.split(/\s+/).map(c => {
+      if (CLASS_MAP[c] !== undefined) return CLASS_MAP[c];
+      if (REMOVE_CLASSES.has(c)) return '';
+      return c;
+    }).filter(Boolean).join(' ');
   }
 
   /** 버튼 템플릿 class 결정 */
   function getButtonTemplateClass(comp) {
     const oldClass = comp.attributes.class || '';
-    if (oldClass.includes('btn_ico_search')) return 'btn_ico_search';
+    const mapped = oldClass.split(/\s+/).map(c => CLASS_MAP[c] || null).filter(Boolean);
+    if (mapped.length) return mapped.join(' ');
     const label = (comp.label || '').toLowerCase();
     const id = (comp.id || '').toLowerCase();
     if (label.includes('조회') || id.includes('search') || id.includes('inqry')) return 'btn_cm sch';
@@ -82,7 +96,10 @@ const AbsToRelConverter = (() => {
 
     // --- style 처리: 전부 삭제, 폼 요소 width만 유지 ---
     const styleParts = [];
-    if (isFormInput && comp.width) styleParts.push(`width:${comp.width}px`);
+    if (isFormInput && comp.width) {
+      const w = ['SelectBox', 'Combo'].includes(comp.ctype) ? comp.width + 20 : comp.width;
+      styleParts.push(`width:${w}px`);
+    }
     const style = cleanStyle(styleParts);
 
     // --- 속성 조합 ---
@@ -99,8 +116,17 @@ const AbsToRelConverter = (() => {
       attrs += ` ${key}="${escapeXml(val)}"`;
     }
 
-    // 자식이 있는 컴포넌트
+    // 버튼 라벨 줄바꿈 제거
+    if (isButton) {
+      if (comp.attributes.text) comp.attributes.text = comp.attributes.text.replace(/\\n|\n/g, ' ').trim();
+      if (comp.innerXml) comp.innerXml = comp.innerXml.replace(/&#xA;|\n/g, ' ');
+    }
+
+    // 자식이 있는 컴포넌트 (버튼은 한 줄로)
     if (comp.innerXml && comp.innerXml.trim()) {
+      if (isButton) {
+        return `<${tag}${attrs}>${comp.innerXml.trim()}</${tag}>`;
+      }
       return `<${tag}${attrs}>\n\t\t\t\t\t\t${comp.innerXml.trim()}\n\t\t\t\t\t</${tag}>`;
     }
     return `<${tag}${attrs}/>`;
@@ -203,6 +229,8 @@ const AbsToRelConverter = (() => {
       if (comp.ctype === 'GridView' && comp.gridXml) {
         let xml = comp.gridXml;
         xml = xml.replace(/style="[^"]*"/, `class="gvw" style="width:100%; height:150px;"`);
+        // autoFit="none"은 제거
+        xml = xml.replace(/ autoFit="none"/g, '');
         xml.split('\n').forEach(line => { lines.push(`${pad}\t${line.trim()}`); });
       } else if (comp.ctype === 'GridView') {
         lines.push(`${pad}\t<w2:gridView id="${escapeXml(comp.id)}" ctype="IBSheet" class="gvw" style="width:100%; height:150px;"/>`);
@@ -215,18 +243,31 @@ const AbsToRelConverter = (() => {
   }
 
   /** .titbox (타이틀 + 버튼 병합) */
-  function buildTitbox(titleLabel, btnComps, indent) {
+  function buildTitbox(titleLabel, btnComps, indent, overlayComps) {
     const pad = '\t'.repeat(indent);
     const lines = [];
     lines.push(`${pad}<xf:group class="titbox">`);
     if (titleLabel) {
-      lines.push(`${pad}\t<w2:textbox class="title_h2" label="${escapeXml(titleLabel)}" tagname="h3"/>`);
+      lines.push(`${pad}\t<w2:textbox class="tit_main" label="${escapeXml(titleLabel)}" tagname="h3"/>`);
     }
-    if (btnComps && btnComps.length) {
+    // 우측 버튼 통합: btnComps + overlayComps 중 버튼 → 하나의 rt 그룹
+    const allRtBtns = [...(btnComps || [])];
+    const overlayOther = [];
+    if (overlayComps && overlayComps.length) {
+      overlayComps.forEach(c => {
+        if (['Button', 'Trigger', 'LinkText'].includes(c.ctype)) {
+          allRtBtns.push(c);
+        } else {
+          overlayOther.push(c);
+        }
+      });
+    }
+    if (allRtBtns.length) {
       lines.push(`${pad}\t<xf:group class="rt">`);
-      btnComps.forEach(comp => { lines.push(`${pad}\t\t${buildCompXml(comp)}`); });
+      allRtBtns.forEach(comp => { lines.push(`${pad}\t\t${buildCompXml(comp)}`); });
       lines.push(`${pad}\t</xf:group>`);
     }
+    overlayOther.forEach(comp => { lines.push(`${pad}\t${buildCompXml(comp)}`); });
     lines.push(`${pad}</xf:group>`);
     return lines.join('\n');
   }
@@ -343,7 +384,7 @@ const AbsToRelConverter = (() => {
 
             // 타이틀 출력
             if (titleComp) {
-              outputItems.push({ type: 'title', label: titleComp.label || '' });
+              outputItems.push({ type: 'title', label: titleComp.label || '', overlayComps: section.overlayComps || null });
             }
 
             // 폼 컴포넌트 → tblbox (그리드 앞)
@@ -374,7 +415,7 @@ const AbsToRelConverter = (() => {
           } else {
             const sectionForTbl = { ...section, comps: nonTabComps };
             const xml = buildTblbox(sectionForTbl, 3);
-            if (sectionForTbl._titleLabel) outputItems.push({ type: 'title', label: sectionForTbl._titleLabel });
+            if (sectionForTbl._titleLabel) outputItems.push({ type: 'title', label: sectionForTbl._titleLabel, overlayComps: section.overlayComps || null });
             if (xml) outputItems.push({ type: 'xml', content: xml });
           }
         }
@@ -451,8 +492,9 @@ const AbsToRelConverter = (() => {
     lines.push('<?xml version="1.0" encoding="UTF-8"?>');
     lines.push(`<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">`);
 
+    // head 그대로 보존 (원본 들여쓰기 유지)
     const headMatch = xmlString.match(/<head[\s\S]*?<\/head>/i);
-    if (headMatch) lines.push('\t' + headMatch[0].split('\n').map(l => l.trim()).filter(l => l).join('\n\t'));
+    if (headMatch) lines.push('\t' + headMatch[0]);
 
     lines.push(`\t<body ev:onpageload="scwin.onpageload">`);
     lines.push(`\t\t<xf:group class="sub_contents flex_cont">`);
@@ -470,7 +512,7 @@ const AbsToRelConverter = (() => {
         lines.push(item.content);
         oi++;
       } else if (item.type === 'title') {
-        lines.push(buildTitbox(item.label, null, 3));
+        lines.push(buildTitbox(item.label, null, 3, item.overlayComps));
         oi++;
       } else if (item.type === 'btngroup') {
         const hasContentAfter = outputItems.slice(oi + 1).some(x => x.type === 'xml' || x.type === 'title');
@@ -480,7 +522,7 @@ const AbsToRelConverter = (() => {
         } else {
           const next = outputItems[oi + 1];
           if (next && next.type === 'title') {
-            lines.push(buildTitbox(next.label, item.comps, 3));
+            lines.push(buildTitbox(next.label, item.comps, 3, next.overlayComps));
             oi += 2;
           } else {
             lines.push(buildTitbox(null, item.comps, 3));
