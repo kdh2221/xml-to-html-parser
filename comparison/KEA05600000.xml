@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KEA05600000.scn"  meta_screenId="KEA05600000" meta_screenName="KB구매론 등록변경" meta_desc="" meta_author="S012021(박찬일)">
+		<w2:type craft="true" craftSrc="/xml/KEA05600000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KEA0560051" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KEA0560051_INPUT":{"@id":"dma_KEA0560051_INPUT","modfiItemDstic":"modfiItemDstic","bzno":"bzno","brSelrDstic":"brSelrDstic","b2BMgtNo":"b2BMgtNo","acno":"acno","brnCd":"brnCd","corpName":"corpName","itemName":"itemName"}},"target":{"dma_KEA0560051_OUTPUT_screen___KEA05600000":{"@id":"dma_KEA0560051_OUTPUT_screen___KEA05600000","bznoName":"bznoName","brnName":"brnName"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEA0560051_INPUT" TranClass="MCI" SvcCode="KEA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="modfiItemDstic" length="0" CtrlId="modfiItemDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="bzno" length="10" CtrlId="bzno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brSelrDstic" length="0" CtrlId="brSelrDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="b2BMgtNo" length="12" CtrlId="b2BMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brnCd" length="4" CtrlId="brnCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="corpName" length="52" CtrlId="corpName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="itemName" length="52" CtrlId="itemName" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEA0560051_OUTPUT_screen___KEA05600000" TranClass="MCI" SvcCode="KEA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="bznoName" length="52" CtrlId="bznoName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brnName" length="52" CtrlId="brnName" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KEA05600000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[초기화]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEA05600000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="modfiItemDstic" length="0" CtrlId="modfiItemDstic"/>
+						<w2:key dataType="text" name="" id="bzno" length="10" CtrlId="bzno"/>
+						<w2:key dataType="text" name="" id="brSelrDstic" length="0" CtrlId="brSelrDstic"/>
+						<w2:key dataType="text" name="" id="b2BMgtNo" length="12" CtrlId="b2BMgtNo"/>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno"/>
+						<w2:key dataType="text" name="" id="brnCd" length="4" CtrlId="brnCd"/>
+						<w2:key dataType="text" name="" id="corpName" length="52" CtrlId="corpName"/>
+						<w2:key dataType="text" name="" id="itemName" length="52" CtrlId="itemName"/>
+						<w2:key dataType="text" name="" id="bznoName" length="52" CtrlId="bznoName"/>
+						<w2:key dataType="text" name="" id="brnName" length="52" CtrlId="brnName"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {};
+
+scwin.onpageunload = function() {};
+scwin.OnSendKey = async function() {
+    // 실행
+
+    $c.iz.tran.setTranID("KEA0560051");
+    await $c.iz.tran.ASend();
+};
+
+
+
+
+scwin.brnCd_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    $c.com.getCommonBrnName(brnCd, brnName);
+};
+
+scwin.Button1_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.popup("KJI04811000", "DATALINK");
+    var temp_brnHanglName = Link.brnHanglName;
+    var tempValue1 = Link.brncd;
+    var tempValue2 = Link.brnName;
+    if (tempValue1 != "" && typeof(tempValue1) != "undefined") {
+        brnCd.setValue(tempValue1);
+        brnName.setValue(tempValue2);
+    }
+};
+
+scwin.Button2_OnClick = function(e) {
+    // B2B관리번호조회
+    // Get data: B2B관리번호 -> B2B관리번호(B2BMgtNo)(활성화되어 있을 경우만), 
+
+    if (b2BMgtNo.getDisabled() == true) {
+        Link.b2BPrdctDstic = "5";
+        $c.iz.screen.popup("KEA04002000", "DATALINK");
+        b2BMgtNo.setValue(Link.b2BMgtNo);
+    }
+};
+
+scwin.modfiItemDstic_OnItemChanged = function(e) {
+    //여기에 구현코드를 삽입하세요.
+
+
+    GroupBox2.setValue("");
+    GroupBox3.setValue("");
+    if (modfiItemDstic.getValue() == "001") {
+        bzno.setDisabled(true);
+        brSelrDstic.setDisabled(true);
+        b2BMgtNo.setDisabled(false);
+        acno.setDisabled(false);
+        brnCd.setDisabled(true);
+        corpName.setDisabled(true);
+        itemName.setDisabled(true);
+        bzno.setMandatory(false);
+        brSelrDstic.setMandatory(false);
+        b2BMgtNo.setMandatory(true);
+        acno.setMandatory(true);
+        brnCd.setMandatory(false);
+        corpName.setMandatory(false);
+        itemName.setMandatory(false);
+    } else if (modfiItemDstic.getValue() == "002" || modfiItemDstic.getValue() == "003") {
+        bzno.setDisabled(true);
+        brSelrDstic.setDisabled(true);
+        b2BMgtNo.setDisabled(false);
+        acno.setDisabled(true);
+        brnCd.setDisabled(true);
+        corpName.setDisabled(false);
+        itemName.setDisabled(true);
+        bzno.setMandatory(false);
+        brSelrDstic.setMandatory(false);
+        b2BMgtNo.setMandatory(true);
+        acno.setMandatory(false);
+        brnCd.setMandatory(false);
+        corpName.setMandatory(true);
+        itemName.setMandatory(false);
+    } else if (modfiItemDstic.getValue() == "004") {
+        bzno.setDisabled(true);
+        brSelrDstic.setDisabled(true);
+        b2BMgtNo.setDisabled(false);
+        acno.setDisabled(true);
+        brnCd.setDisabled(true);
+        corpName.setDisabled(true);
+        itemName.setDisabled(false);
+        bzno.setMandatory(false);
+        brSelrDstic.setMandatory(false);
+        b2BMgtNo.setMandatory(true);
+        acno.setMandatory(false);
+        brnCd.setMandatory(false);
+        corpName.setMandatory(false);
+        itemName.setMandatory(true);
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="KB구매론 등록변경" meta_screenId="KEA05600000" groupcocd="KB0" scncall="0522008" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:654px;" screentype="AType" meta_author="ITBANK-8737DB4A" meta_user="S012021(박찬일)" meata_date="2009/02/27 13:48:40" savezorder="1" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:42px; top:12px; width:92px; height:24px; color:rgb(0,0,0);" id="Text_modfiItemDstic" tabIndex="1" linespace="2" label="*변경항목구분" orgid="Text_modfiItemDstic" hierarchy="Text_modfiItemDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:12px; width:207px; height:24px; color:rgb(0,0,0);" id="modfiItemDstic" indicator="변경항목구분" tabIndex="2" mandatory="true" class="req" keyLength="3" index="0" items="002=[승인원장] 판매기업명 ;003=[승인원장] 구매기업명;004=[승인원장] 구매물품명;" appearance="minimal" ev:onchange="scwin.modfiItemDstic_OnItemChanged" orgid="modfiItemDstic" hierarchy="modfiItemDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KEA05600000.modfiItemDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[[승인원장] 판매기업명 ]]></xf:label>
+							<xf:value><![CDATA[002]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[[승인원장] 구매기업명]]></xf:label>
+							<xf:value><![CDATA[003]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[[승인원장] 구매물품명]]></xf:label>
+							<xf:value><![CDATA[004]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:60px; width:1056px; height:108px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox2" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:12px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_bzno" tabIndex="1" linespace="2" label="사업자번호" orgid="Text_bzno" hierarchy="Text_bzno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:12px; width:88px; height:24px;" id="bzno" indicator="사업자번호" tabIndex="2" dataType="number" editFormat="###-##-#####" maxlength="12" minlength="10" ninemode="1" orgid="bzno" hierarchy="bzno" ref="data:dma_KEA05600000.bzno"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:228px; top:12px; width:328px; height:24px;" id="bznoName" indicator="사업자명" tabIndex="3" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="52" imeMode="반자" ninemode="0" orgid="bznoName" hierarchy="bznoName" ref="data:dma_KEA05600000.bznoName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_brSelrDstic" tabIndex="4" linespace="2" label="구매자판매자구분" orgid="Text_brSelrDstic" hierarchy="Text_brSelrDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:42px; width:81px; height:24px; color:rgb(0,0,0);" id="brSelrDstic" indicator="구매자판매자구분" tabIndex="5" index="0" items="1=구매자;2=판매자;" appearance="minimal" orgid="brSelrDstic" hierarchy="brSelrDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KEA05600000.brSelrDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[구매자]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[판매자]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:52px; top:72px; width:82px; height:24px; color:rgb(0,0,0);" id="Text_b2BMgtNo" tabIndex="6" linespace="2" label="B2B관리번호" orgid="Text_b2BMgtNo" hierarchy="Text_b2BMgtNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:72px; width:88px; height:24px;" id="b2BMgtNo" indicator="B2B관리번호" tabIndex="7" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999999999" maxlength="12" minlength="10" ninemode="1" orgid="b2BMgtNo" hierarchy="b2BMgtNo" ref="data:dma_KEA05600000.b2BMgtNo"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:228px; top:72px; width:24px; height:24px;" id="Button2" tabIndex="8" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:174px; width:1056px; height:170px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox3" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text2" tabIndex="1" label="계좌번호" orgid="Text2" hierarchy="Text2" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:42px; width:116px; height:24px;" id="acno" indicator="계좌번호" tabIndex="2" disabled="true" dataType="number" editFormat="######-##-######" maxlength="16" minlength="10" multipattern="계좌번호" ninemode="1" orgid="acno" hierarchy="acno" ref="data:dma_KEA05600000.acno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_brnCd" tabIndex="3" linespace="2" label="관리부점" orgid="Text_brnCd" hierarchy="Text_brnCd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:72px; width:32px; height:24px;" id="brnCd" indicator="관리부점" tabIndex="4" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="4" ninemode="0" ev:onviewchange="scwin.brnCd_OnValidate" orgid="brnCd" hierarchy="brnCd" ref="data:dma_KEA05600000.brnCd"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:174px; top:72px; width:24px; height:24px;" id="Button1" tabIndex="5" imagealign="MiddleCenter" gradientstyle="없음" gradientendcolor="11954037" enableimage="icon_search.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="Button1">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:204px; top:72px; width:360px; height:24px;" id="brnName" indicator="부점명" tabIndex="6" autosize="0" disabled="true" editFormat="H(52)" maxlength="52" ninemode="0" orgid="brnName" hierarchy="brnName" ref="data:dma_KEA05600000.brnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:89px; top:102px; width:45px; height:24px; color:rgb(0,0,0);" id="Text_modfiAfData2" tabIndex="7" linespace="2" label="기업명" orgid="Text_modfiAfData2" hierarchy="Text_modfiAfData2" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:102px; width:420px; height:24px;" id="corpName" indicator="기업명" tabIndex="8" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="52" minlength="1" imeMode="반자" checkebcdic="1" ninemode="0" orgid="corpName" hierarchy="corpName" ref="data:dma_KEA05600000.corpName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:89px; top:132px; width:45px; height:24px; color:rgb(0,0,0);" id="Text_modfiAfData3" tabIndex="9" linespace="2" label="물품명" orgid="Text_modfiAfData3" hierarchy="Text_modfiAfData3" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:132px; width:420px; height:24px;" id="itemName" indicator="물품명" tabIndex="10" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="52" minlength="1" imeMode="반자" checkebcdic="1" ninemode="0" orgid="itemName" hierarchy="itemName" ref="data:dma_KEA05600000.itemName"/>
+				<w2:textbox id="title_GroupBox3" class="title_h2" label="변경내용"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

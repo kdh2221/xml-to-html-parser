@@ -555,15 +555,20 @@ body {
   margin: 10px 12px; border-radius: 6px; overflow: hidden;
 }
 .rel-wf-section-header {
-  display: flex; align-items: center; gap: 8px;
-  padding: 6px 12px; border-bottom: 1px solid;
-  font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; gap: 4px;
+  padding: 2px 10px; border-bottom: 1px solid;
+  font-size: 12px; font-weight: 600; line-height: 1.5;
 }
 .rel-wf-section-badge {
-  color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px;
-  border-radius: 4px; font-family: Consolas, monospace; flex-shrink: 0;
+  order: 2;
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 10px; font-weight: 500; padding: 0 !important;
+  border-radius: 0; font-family: Consolas, monospace; flex-shrink: 0;
 }
-.rel-wf-section-label { color: var(--text); }
+.rel-wf-section-badge::before { content: "("; }
+.rel-wf-section-badge::after { content: ")"; }
+.rel-wf-section-label { order: 1; color: var(--text); font-weight: 700; }
 .rel-wf-section-body { padding: 10px 12px; }
 
 .rel-wf-inner-label {
@@ -614,7 +619,17 @@ body {
 .rel-wf-td-ids {
   font-size: 9px; color: #64748b; font-family: Consolas, monospace;
   margin-top: 3px; text-align: left; line-height: 1.3;
+  display: none;
 }
+.rel-wf-td-ids.show { display: block; }
+.rel-wf-tdids-btn {
+  padding: 4px 14px; border: 1px solid var(--border); border-radius: 4px;
+  background: var(--surface); font-size: 12px; font-weight: 600;
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+  margin-left: 12px;
+}
+.rel-wf-tdids-btn:hover { background: #f1f5f9; }
+.rel-wf-tdids-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 .rel-wf-section-id {
   font-size: 10px; margin-left: auto; font-family: Consolas, monospace;
   color: #64748b; padding: 0 6px;
@@ -750,6 +765,8 @@ body {
 .sv-desc-cell code { font-size: 10px; background: #f1f5f9; padding: 1px 3px; border-radius: 2px; }
 .sv-issue-desc { font-size: 11px; color: #64748b; }
 .rel-wf-hidden-body { display: flex; flex-wrap: wrap; gap: 4px; }
+.rel-wf-generic-chips { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px 0; }
+.rel-wf-loose-chip { margin: 6px 12px; display: flex; flex-wrap: wrap; gap: 4px; }
 
 /* 설정 모달 */
 .modal-overlay {
@@ -776,6 +793,80 @@ body {
 }
 .modal-box .setting-value.active-path { color: var(--primary); font-weight: 500; }
 .modal-footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+
+/* ─── 배치 비교 ─── */
+.batch-panel {
+  display: flex; flex-direction: column; flex: 1; min-height: 0;
+  padding: 20px; overflow: auto; background: var(--surface);
+}
+.batch-section {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 20px; margin-bottom: 14px;
+}
+.batch-section-title {
+  font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.batch-section-title::before {
+  content: ''; width: 3px; height: 14px; background: var(--primary); border-radius: 2px;
+}
+.batch-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;
+}
+.batch-row label { font-size: 12px; font-weight: 600; color: var(--text-muted); min-width: 110px; }
+.batch-row input[type="text"], .batch-row input[type="number"] {
+  padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px;
+  font-size: 13px; font-family: Consolas, monospace; min-width: 240px;
+}
+.batch-row input[type="number"] { min-width: 80px; }
+.batch-row .path-display {
+  flex: 1; padding: 6px 10px; background: #f1f5f9; border-radius: 6px;
+  font-size: 12px; font-family: Consolas, monospace; color: var(--text-muted);
+  min-height: 32px; display: flex; align-items: center;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.batch-row .path-display.active { color: var(--primary); font-weight: 500; }
+.batch-status-pill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px;
+  border-radius: 999px; font-size: 11px; font-weight: 600;
+}
+.batch-status-pill.ok { background: #dcfce7; color: #166534; }
+.batch-status-pill.err { background: #fee2e2; color: #dc2626; }
+.batch-status-pill.neutral { background: #f1f5f9; color: #64748b; }
+.batch-status-pill::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+}
+
+.batch-table {
+  width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px;
+}
+.batch-table th {
+  background: #eef2ff; color: #3730a3; font-weight: 600;
+  padding: 6px 10px; text-align: left; border-bottom: 2px solid #c7d2fe;
+  position: sticky; top: 0;
+}
+.batch-table td { padding: 5px 10px; border-bottom: 1px solid #f1f5f9; }
+.batch-table tr:hover td { background: #f8faff; }
+.batch-table .num { text-align: right; font-family: Consolas, monospace; color: var(--text-muted); width: 40px; }
+.batch-table .fname { font-family: Consolas, monospace; font-size: 11px; }
+.batch-table .miss { color: #dc2626; font-style: italic; }
+.batch-table-wrap { max-height: 300px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; }
+
+.batch-progress {
+  margin-top: 10px; background: #f1f5f9; height: 14px; border-radius: 7px; overflow: hidden;
+}
+.batch-progress-bar {
+  height: 100%; background: var(--primary); transition: width 0.3s;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: #fff; font-weight: 700;
+}
+.batch-current {
+  margin-top: 6px; font-size: 12px; color: var(--text-muted);
+  font-family: Consolas, monospace;
+}
+.batch-actions {
+  display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -796,6 +887,7 @@ body {
 <div class="tabs">
   <button class="tab-btn active" data-mode="xmltoxml" onclick="switchMode('xmltoxml')">XML to XML</button>
   <button class="tab-btn" data-mode="xml" onclick="switchMode('xml')">XML 좌표변환</button>
+  <button class="tab-btn" data-mode="batch" onclick="switchMode('batch')">배치 비교</button>
 </div>
 
 <!-- 메인 -->
@@ -825,6 +917,15 @@ body {
     <div id="xtxConvertOptions" class="xtx-options">
       <label class="xtx-radio-label"><input type="radio" name="xtxConvertMode" value="normal" checked> 일반 변환</label>
       <label class="xtx-radio-label"><input type="radio" name="xtxConvertMode" value="responsive"> 반응형 변환</label>
+    </div>
+
+    <!-- 폴더 일괄 변환 (XtX) -->
+    <div id="xtxFolderConvert" style="margin:8px 0 12px;padding:10px 12px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <button class="btn btn-primary btn-sm" onclick="xtxConvertFolder()">폴더 선택 &amp; 일괄 변환</button>
+      <span style="font-size:11px;color:#475569;line-height:1.4;">
+        선택한 폴더(<b>하위 재귀</b>) 내 <code>*.xml</code> 중 쌍(<code>_rel_v*.xml</code>)이 없는 원본만 변환 →
+        <code>원본옆/foo_rel_v1.xml</code>로 저장 (위 일반/반응형 옵션 적용)
+      </span>
     </div>
 
     <!-- XML to XML 드롭존 (기본 활성) -->
@@ -947,6 +1048,116 @@ body {
       <button class="btn btn-success btn-sm" onclick="downloadXtxConverted()">변환 XML 저장하기</button>
     </div>
   </div>
+
+  <!-- 배치 비교 패널 -->
+  <div class="batch-panel" id="panelBatch" style="display:none;">
+
+    <!-- ① 캡처 서비스 상태 -->
+    <div class="batch-section">
+      <div class="batch-section-title">캡처 서비스
+        <span id="batchServiceStatus" class="batch-status-pill neutral" style="margin-left:auto;">확인 중…</span>
+        <button class="btn btn-outline btn-sm" onclick="batchCheckService()">재확인</button>
+      </div>
+      <div style="font-size:12px;color:var(--text-muted);">
+        로컬 Puppeteer 서비스(localhost:5678) 필요. 실행되지 않았다면 <code>start-editor.bat</code> 더블클릭.
+      </div>
+    </div>
+
+    <!-- ② 설정 -->
+    <div class="batch-section">
+      <div class="batch-section-title">설정</div>
+
+      <div class="batch-row">
+        <label>WebSquare 서버</label>
+        <input type="text" id="batchServer" placeholder="예: 172.16.0.10:8080" oninput="batchSaveSettings()">
+      </div>
+      <div class="batch-row">
+        <label>서버 루트 폴더</label>
+        <div id="batchServerRootDisplay" class="path-display">선택되지 않음</div>
+        <button class="btn btn-outline btn-sm" onclick="batchPickServerRoot()">선택</button>
+      </div>
+      <div class="batch-row">
+        <label>비교 대상 폴더</label>
+        <div id="batchSourceDisplay" class="path-display">선택되지 않음</div>
+        <button class="btn btn-outline btn-sm" onclick="batchPickSource()">선택</button>
+      </div>
+      <div class="batch-row">
+        <label>URL 미리보기</label>
+        <div id="batchUrlPreview" class="path-display">서버/폴더를 설정하세요</div>
+      </div>
+      <div class="batch-row">
+        <label>리포트 폴더</label>
+        <div id="batchReportDirDisplay" class="path-display">선택되지 않음</div>
+        <button class="btn btn-outline btn-sm" onclick="batchPickReportDir()">선택</button>
+      </div>
+      <div class="batch-row">
+        <label>엔트리 파일명</label>
+        <input type="text" id="batchReportName" value="batch_compare_report.html" oninput="batchSaveSettings()">
+        <span style="font-size:11px;color:var(--text-muted);margin-left:8px;">
+          (리포트 폴더에 생성되는 요약 HTML · chunk/이미지는 자동으로 하위 폴더에 저장됨)
+        </span>
+      </div>
+      <div class="batch-row">
+        <label>캡처 대기(ms)</label>
+        <input type="number" id="batchWaitMs" value="3000" min="500" step="500" oninput="batchSaveSettings()">
+        <label style="margin-left:20px;">뷰포트</label>
+        <input type="number" id="batchViewportW" value="1280" min="400" step="10" oninput="batchSaveSettings()"> ×
+        <input type="number" id="batchViewportH" value="900" min="300" step="10" oninput="batchSaveSettings()">
+      </div>
+    </div>
+
+    <!-- ③ 파일 쌍 스캔 -->
+    <div class="batch-section">
+      <div class="batch-section-title">비교 대상 파일
+        <span id="batchPairStatus" style="font-size:12px;color:var(--text-muted);margin-left:8px;"></span>
+        <span style="margin-left:auto;display:inline-flex;gap:8px;align-items:center;">
+          <label style="font-size:12px;"><input type="radio" name="batchConvertMode" value="normal" checked> 일반</label>
+          <label style="font-size:12px;"><input type="radio" name="batchConvertMode" value="responsive"> 반응형</label>
+          <button class="btn btn-outline btn-sm" id="batchConvertBtn" onclick="batchConvertMissing()" disabled>미변환 자동 변환</button>
+          <button class="btn btn-outline btn-sm" onclick="batchScanPairs()">스캔</button>
+        </span>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">
+        하위 폴더를 재귀 스캔합니다. 쌍은 같은 폴더 안에서만 매칭됩니다 (<code>foo.xml</code> ↔ <code>foo_rel_v*.xml</code>).
+      </div>
+      <div class="batch-table-wrap">
+        <table class="batch-table">
+          <thead>
+            <tr>
+              <th style="width:28px;"><input type="checkbox" id="batchPairAll" onchange="batchToggleAll(this.checked)"></th>
+              <th class="num">#</th>
+              <th>폴더</th>
+              <th>원본</th>
+              <th>변환</th>
+            </tr>
+          </thead>
+          <tbody id="batchPairTableBody">
+            <tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:20px;">설정 후 "스캔" 클릭</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ④ 실행 -->
+    <div class="batch-section">
+      <div class="batch-section-title">실행</div>
+      <div class="batch-actions">
+        <button class="btn btn-success" id="batchRunBtn" onclick="batchRun()" disabled>캡처 + 리포트 생성</button>
+        <button class="btn btn-outline" id="batchStopBtn" onclick="batchStop()" disabled>중단</button>
+        <span id="batchRunStatus" style="font-size:12px;color:var(--text-muted);margin-left:8px;"></span>
+      </div>
+      <div class="batch-progress"><div class="batch-progress-bar" id="batchProgressBar" style="width:0%;">0%</div></div>
+      <div class="batch-current" id="batchCurrent"></div>
+      <div class="batch-actions">
+        <button class="btn btn-outline btn-sm" onclick="batchOpenReport()">엔트리 열기 (요약)</button>
+        <button class="btn btn-outline btn-sm" onclick="batchResetRunArea()">초기화</button>
+        <span style="font-size:11px;color:var(--text-muted);margin-left:8px;">
+          chunk 페이지를 보려면 리포트 폴더에서 엔트리 HTML을 <b>탐색기에서 직접</b> 더블클릭해 여세요 (외부 이미지/링크 사용).
+        </span>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- JS 모듈 -->
@@ -1016,13 +1227,21 @@ function showSaveToast(msg, sub) {
 function switchMode(mode) {
   currentMode = mode;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-  document.getElementById('xmlDropzone').style.display = mode === 'xml' ? '' : 'none';
-  document.getElementById('xtxConvertOptions').style.display = mode === 'xmltoxml' ? '' : 'none';
-  document.getElementById('xmltoxmlDropzone').style.display = mode === 'xmltoxml' ? '' : 'none';
-  document.getElementById('fileListSection').style.display = mode === 'xml' && fileResults.length ? '' : 'none';
-  document.getElementById('xtxFileListSection').style.display = mode === 'xmltoxml' && xtxFileResults.length ? '' : 'none';
-  document.getElementById('panelRightXml').style.display = mode === 'xml' ? '' : 'none';
-  document.getElementById('panelRightXmlToXml').style.display = mode === 'xmltoxml' ? '' : 'none';
+  const isXml = mode === 'xml', isXtx = mode === 'xmltoxml', isBatch = mode === 'batch';
+
+  // 좌측 패널은 배치 모드에서는 숨김
+  document.querySelector('.panel-left').style.display = isBatch ? 'none' : '';
+  document.getElementById('xmlDropzone').style.display = isXml ? '' : 'none';
+  document.getElementById('xtxConvertOptions').style.display = isXtx ? '' : 'none';
+  document.getElementById('xtxFolderConvert').style.display = isXtx ? '' : 'none';
+  document.getElementById('xmltoxmlDropzone').style.display = isXtx ? '' : 'none';
+  document.getElementById('fileListSection').style.display = isXml && fileResults.length ? '' : 'none';
+  document.getElementById('xtxFileListSection').style.display = isXtx && xtxFileResults.length ? '' : 'none';
+  document.getElementById('panelRightXml').style.display = isXml ? '' : 'none';
+  document.getElementById('panelRightXmlToXml').style.display = isXtx ? '' : 'none';
+  document.getElementById('panelBatch').style.display = isBatch ? 'flex' : 'none';
+
+  if (isBatch) batchOnEnter();
 }
 
 // ─── 출력 탭 전환 ───
@@ -1193,6 +1412,86 @@ async function handleXmlToXmlFile(files) {
   const xtxStatus = document.getElementById('xtxStatusMsg');
   xtxStatus.textContent = `${xtxFileResults.length}개 파일 로드됨`;
   xtxStatus.className = 'status-msg success';
+}
+
+// ─── XtX 폴더 일괄 변환 (하위 재귀 스캔 → 미변환 자동 변환) ───
+async function xtxConvertFolder() {
+  let rootHandle;
+  try {
+    rootHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+  } catch (e) {
+    if (e.name === 'AbortError') return;
+    alert('폴더 선택 실패: ' + e.message); return;
+  }
+
+  // 재귀 스캔 (배치 비교 모듈의 헬퍼 재사용)
+  let byDir;
+  try {
+    byDir = await batchWalkDirRecursive(rootHandle);
+  } catch (e) { alert('폴더 읽기 실패: ' + e.message); return; }
+
+  // 미변환 원본만 수집 (같은 폴더 안에 _rel_v*.xml 쌍이 없는 경우)
+  const targets = [];
+  const dirPaths = [...byDir.keys()].sort();
+  let totalXml = 0, alreadyPaired = 0;
+  for (const dirPath of dirPaths) {
+    const { dirHandle, files } = byDir.get(dirPath);
+    const originals = files.filter(f => !/_rel_v\d*\.xml$/i.test(f));
+    totalXml += originals.length;
+    for (const orig of originals) {
+      const base = orig.replace(/\.xml$/i, '');
+      const conv = files.find(f => f.startsWith(base + '_rel_v'));
+      if (conv) { alreadyPaired++; continue; }
+      targets.push({
+        dirHandle, dirPath, orig,
+        origPath: dirPath ? `${dirPath}/${orig}` : orig,
+      });
+    }
+  }
+
+  if (!targets.length) {
+    alert(`변환할 미변환 파일이 없습니다.\n(원본 ${totalXml}개 · 이미 쌍 있음 ${alreadyPaired}개)`);
+    return;
+  }
+  if (!confirm(
+    `폴더: ${rootHandle.name}\n` +
+    `변환 대상: ${targets.length}개 (원본 ${totalXml} 중 쌍 ${alreadyPaired}개 제외)\n` +
+    `폴더 ${dirPaths.length}개 범위.\n\n` +
+    `원본 옆에 <name>_rel_v1.xml 로 저장합니다. 계속하시겠습니까?`
+  )) return;
+
+  const isResponsive = document.querySelector('input[name="xtxConvertMode"]:checked')?.value === 'responsive';
+
+  // 진행률은 기존 저장 오버레이 재사용
+  showSaveProgress(targets.length);
+  let ok = 0, fail = 0;
+  const failures = [];
+  for (let i = 0; i < targets.length; i++) {
+    const t = targets[i];
+    updateSaveProgress(i, targets.length, t.origPath);
+    try {
+      const fh = await t.dirHandle.getFileHandle(t.orig);
+      const xmlStr = await (await fh.getFile()).text();
+      const res = SampleConverter.convert(xmlStr, { responsive: isResponsive });
+      if (!res || !res.convertedXml) throw new Error('변환 결과 없음');
+      const convName = t.orig.replace(/\.xml$/i, '_rel_v1.xml');
+      const outFh = await t.dirHandle.getFileHandle(convName, { create: true });
+      const w = await outFh.createWritable();
+      await w.write(res.convertedXml);
+      await w.close();
+      ok++;
+    } catch (e) {
+      fail++;
+      failures.push({ path: t.origPath, error: e.message });
+      console.error('[xtx-folder] 실패:', t.origPath, e);
+    }
+  }
+  updateSaveProgress(targets.length, targets.length, '완료');
+  hideSaveProgress();
+
+  const msg = `폴더 변환 완료 — 성공 ${ok}개${fail ? ' · 실패 ' + fail + '개' : ''}`;
+  showSaveToast(msg, fail ? '실패 상세는 콘솔(F12) 참조' : `${rootHandle.name} 내 하위 폴더 포함 저장 완료`);
+  if (fail) console.warn('[xtx-folder] 실패 목록:', failures);
 }
 
 // ─── XML to XML 파일 목록 렌더링 ───
@@ -1597,6 +1896,14 @@ function toggleRelWfMode(btn, mode) {
   const container = document.getElementById('relWireframeContent');
   container.querySelectorAll('.rel-wf-show-label').forEach(el => el.style.display = mode === 'label' ? '' : 'none');
   container.querySelectorAll('.rel-wf-show-id').forEach(el => el.style.display = mode === 'id' ? '' : 'none');
+}
+
+// ─── 상대좌표 와이어프레임 td 셀 ID 표시 토글 (기본 숨김) ───
+function toggleRelWfTdIds(btn) {
+  btn.classList.toggle('active');
+  const show = btn.classList.contains('active');
+  const container = document.getElementById('relWireframeContent');
+  container.querySelectorAll('.rel-wf-td-ids').forEach(el => el.classList.toggle('show', show));
 }
 
 function switchVerifySubtab(tab) {
@@ -2258,6 +2565,871 @@ function updateSaveDirDisplay() {
     el.classList.remove('active-path');
   }
 }
+
+/* ================================================================
+ * 배치 비교 (Puppeteer 캡처 + 리포트 자동 생성)
+ *
+ *  리포트 폴더 구조:
+ *    {reportDir}/
+ *      {entryFile}              엔트리 HTML (run 목록/요약/chunk 링크)
+ *      manifest.json            전체 메타데이터
+ *      runs/{runId}/
+ *        chunk_NNN.html         화면 N개씩 묶인 비교 페이지 (상대경로 참조)
+ *        images/
+ *          NNNN_orig.jpg        원본 스크린샷 (JPEG quality 80)
+ *          NNNN_conv.jpg        변환 스크린샷
+ *
+ *  이미지·chunk 분리로:
+ *   - 단일 HTML 크기 폭발 방지 (chunk 1개 ≤ 100 항목)
+ *   - append O(N²) 문제 제거 (각 chunk는 한 번만 씀)
+ *   - 새 run은 기존 chunk 건드리지 않고 새 폴더에 추가
+ * ============================================================== */
+
+const BATCH_LS_KEY = 'wsq_batch_settings';
+const BATCH_SERVICE_URL = 'http://localhost:5678';
+const BATCH_CHUNK_SIZE = 100;
+const BATCH_IMG_EXT = 'jpg';
+const BATCH_IMG_FORMAT = 'jpeg';
+const BATCH_IMG_QUALITY = 80;
+
+// IDB 범용 핸들 저장/로드 (key 별로 분리)
+async function idbSaveHandle(key, handle) {
+  const db = await openIDB();
+  const tx = db.transaction(IDB_STORE, 'readwrite');
+  tx.objectStore(IDB_STORE).put(handle, key);
+  db.close();
+}
+async function idbLoadHandle(key) {
+  try {
+    const db = await openIDB();
+    return new Promise((resolve) => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get(key);
+      req.onsuccess = () => { db.close(); resolve(req.result || null); };
+      req.onerror = () => { db.close(); resolve(null); };
+    });
+  } catch { return null; }
+}
+
+// 배치 상태
+let batchServerRootHandle = null;
+let batchSourceHandle = null;
+let batchReportDirHandle = null;
+let batchResolvedPath = null;
+let batchPairs = [];     // [{ orig, conv, selected }]
+let batchRunning = false;
+let batchAbort = false;
+
+// ─── 엔트리 ───
+async function batchOnEnter() {
+  batchLoadSettings();
+  await batchRestoreHandles();
+  await batchCheckService();
+  await batchResolvePath();
+  batchUpdateRunBtn();
+}
+
+// ─── 설정 저장/복원 ───
+function batchSaveSettings() {
+  const s = {
+    server: document.getElementById('batchServer').value || '',
+    reportName: document.getElementById('batchReportName').value || 'batch_compare_report.html',
+    waitMs: parseInt(document.getElementById('batchWaitMs').value) || 3000,
+    viewportW: parseInt(document.getElementById('batchViewportW').value) || 1280,
+    viewportH: parseInt(document.getElementById('batchViewportH').value) || 900,
+  };
+  localStorage.setItem(BATCH_LS_KEY, JSON.stringify(s));
+  batchUpdateUrlPreview();
+}
+function batchLoadSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem(BATCH_LS_KEY) || '{}');
+    document.getElementById('batchServer').value = s.server || '';
+    document.getElementById('batchReportName').value = s.reportName || 'batch_compare_report.html';
+    document.getElementById('batchWaitMs').value = s.waitMs || 3000;
+    document.getElementById('batchViewportW').value = s.viewportW || 1280;
+    document.getElementById('batchViewportH').value = s.viewportH || 900;
+  } catch {}
+}
+
+async function batchRestoreHandles() {
+  const keys = [
+    ['batchServerRoot', 'batchServerRootHandle', 'batchServerRootDisplay'],
+    ['batchSource', 'batchSourceHandle', 'batchSourceDisplay'],
+    ['batchReportDir', 'batchReportDirHandle', 'batchReportDirDisplay'],
+  ];
+  for (const [idbKey, varName, displayId] of keys) {
+    const h = await idbLoadHandle(idbKey);
+    if (h) {
+      try {
+        const perm = await h.queryPermission({ mode: varName === 'batchServerRootHandle' ? 'read' : 'readwrite' });
+        if (perm === 'granted') {
+          if (varName === 'batchServerRootHandle') batchServerRootHandle = h;
+          else if (varName === 'batchSourceHandle') batchSourceHandle = h;
+          else if (varName === 'batchReportDirHandle') batchReportDirHandle = h;
+          document.getElementById(displayId).textContent = h.name;
+          document.getElementById(displayId).classList.add('active');
+        }
+      } catch {}
+    }
+  }
+}
+
+// ─── 폴더 선택 ───
+async function batchPickServerRoot() {
+  try {
+    const h = await window.showDirectoryPicker({ mode: 'read' });
+    batchServerRootHandle = h;
+    await idbSaveHandle('batchServerRoot', h);
+    const el = document.getElementById('batchServerRootDisplay');
+    el.textContent = h.name; el.classList.add('active');
+    await batchResolvePath();
+  } catch (e) { if (e.name !== 'AbortError') alert('폴더 선택 실패: ' + e.message); }
+}
+async function batchPickSource() {
+  try {
+    const h = await window.showDirectoryPicker({ mode: 'read' });
+    batchSourceHandle = h;
+    await idbSaveHandle('batchSource', h);
+    const el = document.getElementById('batchSourceDisplay');
+    el.textContent = h.name; el.classList.add('active');
+    await batchResolvePath();
+  } catch (e) { if (e.name !== 'AbortError') alert('폴더 선택 실패: ' + e.message); }
+}
+async function batchPickReportDir() {
+  try {
+    const h = await window.showDirectoryPicker({ mode: 'readwrite' });
+    batchReportDirHandle = h;
+    await idbSaveHandle('batchReportDir', h);
+    const el = document.getElementById('batchReportDirDisplay');
+    el.textContent = h.name; el.classList.add('active');
+    batchUpdateRunBtn();
+  } catch (e) { if (e.name !== 'AbortError') alert('폴더 선택 실패: ' + e.message); }
+}
+
+// ─── 서비스 상태 ───
+async function batchCheckService() {
+  const el = document.getElementById('batchServiceStatus');
+  el.className = 'batch-status-pill neutral'; el.textContent = '확인 중…';
+  try {
+    const r = await fetch(BATCH_SERVICE_URL + '/health', { method: 'GET' });
+    const j = await r.json();
+    if (j && j.ok) {
+      el.className = 'batch-status-pill ok';
+      el.textContent = '연결됨 (' + (j.version || 'v?') + ')';
+    } else { throw new Error('응답 오류'); }
+  } catch {
+    el.className = 'batch-status-pill err';
+    el.textContent = '미연결 — start-editor.bat 실행 필요';
+  }
+  batchUpdateRunBtn();
+}
+
+// ─── URL 경로 계산 ───
+async function batchResolvePath() {
+  const preview = document.getElementById('batchUrlPreview');
+  batchResolvedPath = null;
+  if (!batchServerRootHandle || !batchSourceHandle) {
+    preview.textContent = '서버/폴더를 설정하세요'; preview.classList.remove('active');
+    batchUpdateRunBtn(); return;
+  }
+  try {
+    const parts = await batchServerRootHandle.resolve(batchSourceHandle);
+    if (parts && parts.length > 0) {
+      batchResolvedPath = '/' + parts.join('/') + '/';
+      batchUpdateUrlPreview();
+      preview.classList.add('active');
+    } else {
+      preview.textContent = '오류 — 비교 폴더가 서버 루트 하위에 없습니다';
+      preview.classList.remove('active');
+    }
+  } catch {
+    preview.textContent = '오류 — 경로 확인 실패';
+    preview.classList.remove('active');
+  }
+  batchUpdateRunBtn();
+}
+function batchServerScheme(raw) {
+  return /^https:\/\//i.test(String(raw || '').trim()) ? 'https' : 'http';
+}
+function batchNormalizeServer(raw) {
+  return String(raw || '').trim()
+    .replace(/^https?:\/\//i, '')
+    .replace(/\/+$/, '');
+}
+function batchUpdateUrlPreview() {
+  const preview = document.getElementById('batchUrlPreview');
+  if (!batchResolvedPath) return;
+  const raw = document.getElementById('batchServer').value;
+  const server = batchNormalizeServer(raw) || '...';
+  const scheme = batchServerScheme(raw);
+  preview.textContent = scheme + '://' + server + '/websquare/websquare.html?w2xPath=' + batchResolvedPath + '파일명.xml';
+}
+
+// ─── 파일 쌍 스캔 ───
+// 재귀 폴더 순회: 하위 모든 xml 파일을 수집 (서브폴더 단위로 그룹화)
+// 반환: Map<dirPath, { dirHandle, files:[name, ...] }>
+async function batchWalkDirRecursive(rootHandle) {
+  const result = new Map();
+  async function walk(dir, relPath) {
+    const files = [];
+    for await (const entry of dir.values()) {
+      if (entry.kind === 'file' && entry.name.toLowerCase().endsWith('.xml')) {
+        files.push(entry.name);
+      } else if (entry.kind === 'directory') {
+        const childRel = relPath ? `${relPath}/${entry.name}` : entry.name;
+        await walk(entry, childRel);
+      }
+    }
+    if (files.length) {
+      files.sort();
+      result.set(relPath, { dirHandle: dir, files });
+    }
+  }
+  await walk(rootHandle, '');
+  return result;
+}
+
+async function batchScanPairs() {
+  if (!batchSourceHandle) { alert('비교 대상 폴더를 먼저 선택하세요'); return; }
+  batchPairs = [];
+  let byDir;
+  try {
+    byDir = await batchWalkDirRecursive(batchSourceHandle);
+  } catch (e) { alert('폴더 읽기 실패: ' + e.message); return; }
+
+  // 서브폴더별로 정렬된 순회 (경로 기준)
+  const dirPaths = [...byDir.keys()].sort();
+  for (const dirPath of dirPaths) {
+    const { dirHandle, files } = byDir.get(dirPath);
+    const originals = files.filter(f => !/_rel_v\d*\.xml$/i.test(f));
+    for (const orig of originals) {
+      const base = orig.replace(/\.xml$/i, '');
+      const conv = files.find(f => f.startsWith(base + '_rel_v'));
+      const origPath = dirPath ? `${dirPath}/${orig}` : orig;
+      const convPath = conv ? (dirPath ? `${dirPath}/${conv}` : conv) : null;
+      batchPairs.push({
+        dirPath, dirHandle,
+        orig, conv: conv || null,
+        origPath, convPath,
+        selected: !!conv,
+      });
+    }
+  }
+  batchRenderPairs();
+  batchUpdateRunBtn();
+}
+
+function batchRenderPairs() {
+  const tbody = document.getElementById('batchPairTableBody');
+  const status = document.getElementById('batchPairStatus');
+  const cntPaired = batchPairs.filter(p => p.conv).length;
+  const cntUnpaired = batchPairs.length - cntPaired;
+  const dirs = new Set(batchPairs.map(p => p.dirPath));
+  status.textContent = `${batchPairs.length}개 스캔됨 (폴더 ${dirs.size}개) · 쌍 ${cntPaired}개${cntUnpaired ? ' · 미변환 ' + cntUnpaired + '개' : ''}`;
+  // 미변환 자동 변환 버튼 상태
+  const convertBtn = document.getElementById('batchConvertBtn');
+  if (convertBtn) convertBtn.disabled = !cntUnpaired || batchRunning;
+
+  if (!batchPairs.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:20px;">쌍을 찾지 못했습니다</td></tr>';
+    return;
+  }
+  tbody.innerHTML = batchPairs.map((p, i) => `
+    <tr>
+      <td><input type="checkbox" ${p.selected ? 'checked' : ''} ${!p.conv ? 'disabled' : ''}
+                 onchange="batchPairs[${i}].selected=this.checked; batchUpdateRunBtn();"></td>
+      <td class="num">${i + 1}</td>
+      <td class="fname" style="color:#64748b;">${batchHtmlEsc(p.dirPath || '.')}</td>
+      <td class="fname">${batchHtmlEsc(p.orig)}</td>
+      <td class="fname ${!p.conv ? 'miss' : ''}">${batchHtmlEsc(p.conv || '(변환 파일 없음)')}</td>
+    </tr>
+  `).join('');
+  document.getElementById('batchPairAll').checked = batchPairs.every(p => p.selected || !p.conv);
+}
+function batchToggleAll(checked) {
+  batchPairs.forEach(p => { if (p.conv) p.selected = checked; });
+  batchRenderPairs();
+  batchUpdateRunBtn();
+}
+
+// ─── 미변환 파일 자동 변환 ───
+async function batchConvertMissing() {
+  if (batchRunning) return;
+  if (!batchSourceHandle) { alert('비교 대상 폴더가 필요합니다'); return; }
+  const targets = batchPairs.filter(p => !p.conv);
+  if (!targets.length) { alert('변환할 미변환 파일이 없습니다'); return; }
+
+  // 소스 폴더 readwrite 권한 확인/요청
+  let perm = await batchSourceHandle.queryPermission({ mode: 'readwrite' });
+  if (perm !== 'granted') {
+    perm = await batchSourceHandle.requestPermission({ mode: 'readwrite' });
+    if (perm !== 'granted') {
+      alert('미변환 자동 변환은 비교 대상 폴더에 쓰기 권한이 필요합니다');
+      return;
+    }
+  }
+
+  const isResponsive = document.querySelector('input[name="batchConvertMode"]:checked')?.value === 'responsive';
+
+  batchRunning = true; batchAbort = false;
+  document.getElementById('batchRunBtn').disabled = true;
+  document.getElementById('batchConvertBtn').disabled = true;
+  document.getElementById('batchStopBtn').disabled = false;
+  batchSetProgress(0);
+
+  let ok = 0, fail = 0;
+  const failures = [];
+  for (let i = 0; i < targets.length; i++) {
+    if (batchAbort) { batchSetCurrent(`변환 중단됨 (${i}/${targets.length})`); break; }
+    const p = targets[i];
+    batchSetCurrent(`[${i + 1}/${targets.length}] 변환: ${p.origPath}`);
+    try {
+      const fh = await p.dirHandle.getFileHandle(p.orig);
+      const xmlStr = await (await fh.getFile()).text();
+      const res = SampleConverter.convert(xmlStr, { responsive: isResponsive });
+      if (!res || !res.convertedXml) throw new Error('변환 결과 없음');
+      const convName = p.orig.replace(/\.xml$/i, '_rel_v1.xml');
+      const outFh = await p.dirHandle.getFileHandle(convName, { create: true });
+      const w = await outFh.createWritable();
+      await w.write(res.convertedXml);
+      await w.close();
+      ok++;
+    } catch (e) {
+      fail++;
+      failures.push({ path: p.origPath, error: e.message });
+      console.error('[batch-convert] 실패:', p.origPath, e);
+    }
+    batchSetProgress((i + 1) / targets.length);
+  }
+
+  batchRunning = false;
+  document.getElementById('batchStopBtn').disabled = true;
+
+  const summary = `변환 완료 — 성공 ${ok}개${fail ? ' · 실패 ' + fail + '개' : ''}`;
+  batchSetCurrent(summary);
+  if (fail) {
+    console.warn('[batch-convert] 실패 목록:', failures);
+    alert(summary + '\n\n실패 상세는 브라우저 콘솔을 확인하세요.');
+  }
+
+  // 새 파일이 생겼으니 재스캔
+  await batchScanPairs();
+  batchUpdateRunBtn();
+}
+
+// ─── 실행 준비 상태 ───
+function batchUpdateRunBtn() {
+  const btn = document.getElementById('batchRunBtn');
+  const server = batchNormalizeServer(document.getElementById('batchServer').value);
+  const hasSelected = batchPairs.some(p => p.selected);
+  const serviceOk = document.getElementById('batchServiceStatus').classList.contains('ok');
+  btn.disabled = !(server && batchResolvedPath && batchReportDirHandle && hasSelected && serviceOk && !batchRunning);
+}
+
+// ─── 실행: 캡처 → 이미지 파일 저장 → chunk/엔트리 생성 ───
+async function batchRun() {
+  if (batchRunning) return;
+  const rawServer = document.getElementById('batchServer').value;
+  const server = batchNormalizeServer(rawServer);
+  const scheme = batchServerScheme(rawServer);
+  if (!server || !batchResolvedPath) { alert('서버/폴더 설정이 필요합니다'); return; }
+  if (!batchReportDirHandle) { alert('리포트 폴더가 필요합니다'); return; }
+
+  const waitMs = parseInt(document.getElementById('batchWaitMs').value) || 3000;
+  const viewport = {
+    width: parseInt(document.getElementById('batchViewportW').value) || 1280,
+    height: parseInt(document.getElementById('batchViewportH').value) || 900,
+  };
+  const entryName = batchGetEntryName();
+
+  // 리포트 폴더 쓰기 권한 확인
+  const wperm = await batchReportDirHandle.queryPermission({ mode: 'readwrite' });
+  if (wperm !== 'granted') {
+    const r = await batchReportDirHandle.requestPermission({ mode: 'readwrite' });
+    if (r !== 'granted') { alert('리포트 폴더 쓰기 권한이 필요합니다'); return; }
+  }
+
+  const targets = batchPairs.filter(p => p.selected && p.conv);
+  if (!targets.length) { alert('선택된 파일 쌍이 없습니다'); return; }
+
+  batchRunning = true; batchAbort = false;
+  document.getElementById('batchRunBtn').disabled = true;
+  document.getElementById('batchStopBtn').disabled = false;
+
+  const baseUrl = `${scheme}://${server}/websquare/websquare.html?w2xPath=`;
+  const runStartIso = new Date().toISOString();
+  const runStartLocal = new Date().toLocaleString('sv').replace('T', ' ').slice(0, 16);
+  const runId = 'run_' + Date.now().toString(36);
+  const totalCount = targets.length;
+  const pad = Math.max(3, String(totalCount).length);
+  const items = [];   // 메타데이터만 (이미지는 파일로 저장)
+
+  batchSetCurrent('실행 시작 — ' + totalCount + '개 쌍');
+
+  // 폴더 준비: {reportDir}/runs/{runId}/images/
+  let runsDir, runDir, imagesDir;
+  try {
+    runsDir = await batchReportDirHandle.getDirectoryHandle('runs', { create: true });
+    runDir = await runsDir.getDirectoryHandle(runId, { create: true });
+    imagesDir = await runDir.getDirectoryHandle('images', { create: true });
+  } catch (e) {
+    batchRunning = false;
+    document.getElementById('batchStopBtn').disabled = true;
+    batchUpdateRunBtn();
+    alert('리포트 폴더 생성 실패: ' + e.message);
+    return;
+  }
+
+  for (let i = 0; i < targets.length; i++) {
+    if (batchAbort) { batchSetCurrent('중단됨 (' + i + '/' + totalCount + ')'); break; }
+    const pair = targets[i];
+    const no = i + 1;
+    const numStr = String(no).padStart(pad, '0');
+    // 중첩 폴더: batchResolvedPath (서버루트→소스폴더) + pair.origPath (소스폴더→파일)
+    const origUrl = baseUrl + batchResolvedPath + pair.origPath;
+    const convUrl = baseUrl + batchResolvedPath + pair.convPath;
+    batchSetCurrent(`[${no}/${totalCount}] ${pair.origPath}`);
+
+    const [origRes, convRes] = await Promise.all([
+      batchCaptureOne(origUrl, waitMs, viewport),
+      batchCaptureOne(convUrl, waitMs, viewport),
+    ]);
+
+    let origImgRel = null, convImgRel = null;
+    try {
+      if (origRes.ok && origRes.imageBase64) {
+        const fn = `${numStr}_orig.${BATCH_IMG_EXT}`;
+        await batchWriteImageFile(imagesDir, fn, origRes.imageBase64);
+        origImgRel = `images/${fn}`;
+      }
+      if (convRes.ok && convRes.imageBase64) {
+        const fn = `${numStr}_conv.${BATCH_IMG_EXT}`;
+        await batchWriteImageFile(imagesDir, fn, convRes.imageBase64);
+        convImgRel = `images/${fn}`;
+      }
+    } catch (e) {
+      console.error('[batch] 이미지 저장 실패:', e);
+    }
+
+    items.push({
+      no,
+      orig: pair.orig, conv: pair.conv,
+      dirPath: pair.dirPath || '',
+      origPath: pair.origPath,
+      convPath: pair.convPath,
+      origImg: origImgRel,
+      convImg: convImgRel,
+      origErr: origRes.ok ? null : origRes.error,
+      convErr: convRes.ok ? null : convRes.error,
+      origMetrics: origRes.ok ? origRes.metrics : null,
+      convMetrics: convRes.ok ? convRes.metrics : null,
+    });
+    batchSetProgress(no / totalCount);
+  }
+
+  // chunk + manifest + entry 작성
+  if (items.length) {
+    try {
+      batchSetCurrent('리포트 작성 중…');
+      const run = {
+        runId, isoDate: runStartIso, localDate: runStartLocal,
+        server, sourcePath: batchResolvedPath,
+        folderName: batchSourceHandle?.name || '',
+        items,
+      };
+      await batchFinalizeRun(run, runDir, entryName);
+      batchSetCurrent(`완료 — ${items.length}개 항목, ${Math.ceil(items.length / BATCH_CHUNK_SIZE)}개 chunk 저장됨`);
+    } catch (e) {
+      console.error(e);
+      batchSetCurrent('리포트 저장 실패: ' + e.message);
+      alert('리포트 저장 실패: ' + e.message);
+    }
+  }
+
+  batchRunning = false;
+  document.getElementById('batchStopBtn').disabled = true;
+  batchUpdateRunBtn();
+}
+
+function batchStop() { batchAbort = true; batchSetCurrent('중단 요청됨…'); }
+
+function batchResetRunArea() {
+  batchSetCurrent('');
+  batchSetProgress(0);
+}
+
+function batchSetProgress(frac) {
+  const bar = document.getElementById('batchProgressBar');
+  const pct = Math.round(frac * 100);
+  bar.style.width = pct + '%';
+  bar.textContent = pct + '%';
+}
+function batchSetCurrent(msg) {
+  document.getElementById('batchCurrent').textContent = msg;
+}
+function batchGetEntryName() {
+  return document.getElementById('batchReportName').value.trim() || 'batch_compare_report.html';
+}
+
+// ─── 단일 URL 캡처 (/capture 호출) ───
+async function batchCaptureOne(url, waitMs, viewport) {
+  try {
+    const r = await fetch(BATCH_SERVICE_URL + '/capture', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        url, waitMs, viewport,
+        format: BATCH_IMG_FORMAT,
+        quality: BATCH_IMG_QUALITY,
+      }),
+    });
+    const j = await r.json();
+    if (!j || !j.ok) return { ok: false, error: (j && j.error) || 'unknown' };
+    // capture-server 는 imageBase64 / pngBase64 양쪽 키로 이미지를 반환 (후자는 legacy)
+    return {
+      ok: true,
+      imageBase64: j.imageBase64 || j.pngBase64 || null,
+      metrics: j.metrics,
+      width: j.width,
+      height: j.height,
+    };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+// ─── 파일 I/O 헬퍼 ───
+async function batchWriteImageFile(dir, name, b64) {
+  const fh = await dir.getFileHandle(name, { create: true });
+  const w = await fh.createWritable();
+  // base64 → Uint8Array 바이너리 쓰기
+  const bin = atob(b64);
+  const arr = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  await w.write(arr);
+  await w.close();
+}
+async function batchWriteTextFile(dir, name, text) {
+  const fh = await dir.getFileHandle(name, { create: true });
+  const w = await fh.createWritable();
+  await w.write(text);
+  await w.close();
+}
+async function batchReadManifest() {
+  try {
+    const fh = await batchReportDirHandle.getFileHandle('manifest.json');
+    const f = await fh.getFile();
+    const j = JSON.parse(await f.text());
+    if (j && typeof j === 'object' && Array.isArray(j.runs)) return j;
+  } catch {}
+  return { version: 1, runs: [] };
+}
+async function batchWriteManifest(m) {
+  await batchWriteTextFile(batchReportDirHandle, 'manifest.json',
+    JSON.stringify(m, null, 2));
+}
+
+// ─── 리포트 HTML 조립 ───
+function batchHtmlEsc(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// 카테고리 표시명 (없으면 키 그대로 노출)
+const BATCH_CATEGORY_LABEL = {
+  input: '폼 필드', button: '버튼', link: '링크', image: '이미지',
+  table: '테이블', tableRow: '테이블 행', tableCell: '테이블 셀',
+  wsqGrid: '그리드', wsqTab: '탭', wsqPanel: '패널',
+  text: '텍스트(토큰)',
+};
+function batchLabel(key) { return BATCH_CATEGORY_LABEL[key] || key; }
+
+// 원본·변환 메트릭 → 카테고리별 보존율 + 종합(동일 가중)
+function batchComputeSimilarity(origM, convM) {
+  if (!origM || !convM) return null;
+  const rows = [];
+  const allKeys = new Set([
+    ...Object.keys(origM.counts || {}),
+    ...Object.keys(convM.counts || {}),
+  ]);
+  for (const key of allKeys) {
+    const o = (origM.counts || {})[key] || 0;
+    const c = (convM.counts || {})[key] || 0;
+    if (o === 0 && c === 0) continue; // 양쪽 모두 0이면 표시 제외
+    const max = Math.max(o, c);
+    const preservation = max > 0 ? Math.min(o, c) / max * 100 : 100;
+    rows.push({ key, orig: o, conv: c, preservation });
+  }
+  // 텍스트 내용 유사도 (Jaccard on tokens)
+  const tok = s => {
+    const m = String(s || '').toLowerCase().match(/[\p{L}\p{N}]+/gu);
+    return m ? new Set(m) : new Set();
+  };
+  const oSet = tok(origM.text), cSet = tok(convM.text);
+  if (oSet.size || cSet.size) {
+    const inter = [...oSet].filter(t => cSet.has(t)).length;
+    const uni = new Set([...oSet, ...cSet]).size;
+    const sim = uni ? inter / uni * 100 : 100;
+    rows.push({ key: 'text', orig: oSet.size, conv: cSet.size, preservation: sim });
+  }
+  const overall = rows.length
+    ? rows.reduce((s, r) => s + r.preservation, 0) / rows.length
+    : 0;
+  return { rows, overall };
+}
+
+function batchMetricsTableHtml(sim) {
+  if (!sim || !sim.rows.length) {
+    return '<div class="metrics-none">메트릭 데이터 없음 (프레임 접근 실패 가능)</div>';
+  }
+  const rowsHtml = sim.rows.map(r => `
+    <tr>
+      <td>${batchHtmlEsc(batchLabel(r.key))}</td>
+      <td class="num">${r.orig}</td>
+      <td class="num">${r.conv}</td>
+      <td class="num pct">${r.preservation.toFixed(1)}%</td>
+    </tr>`).join('');
+  return `
+    <table class="metrics-table">
+      <thead><tr><th>카테고리</th><th>원본</th><th>변환</th><th>보존율</th></tr></thead>
+      <tbody>${rowsHtml}</tbody>
+      <tfoot><tr><th colspan="3">종합 보존율 (동일 가중 평균)</th><th class="num pct strong">${sim.overall.toFixed(1)}%</th></tr></tfoot>
+    </table>`;
+}
+
+// ─── 공통 스타일/스크립트 ───
+const BATCH_REPORT_CSS = `
+  body { margin:0; padding:24px; background:#f8fafc; color:#0f172a; font-family:'Pretendard','Malgun Gothic',sans-serif; }
+  h1 { font-size:22px; margin:0 0 20px; }
+  h2 { font-size:16px; margin:0 0 10px; color:#4f46e5; }
+  a { color:#4f46e5; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:Consolas,monospace; background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:12px; }
+  .muted { color:#64748b; font-size:12px; }
+  .run-meta { display:flex; gap:16px; font-size:12px; color:#64748b; flex-wrap:wrap; margin-bottom:8px; }
+  .chunk-nav { display:flex; gap:12px; align-items:center; padding:12px 16px; background:#eef2ff; border:1px solid #c7d2fe; border-radius:8px; margin:16px 0; font-size:13px; flex-wrap:wrap; }
+  .chunk-nav .spacer { flex:1; }
+  .compare-item { border-top:1px dashed #e2e8f0; padding-top:16px; margin-top:16px; background:#fff; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:16px; }
+  .compare-item h3 { font-size:14px; margin:0 0 10px; font-family:Consolas,monospace; }
+  .images { display:flex; gap:12px; flex-wrap:wrap; }
+  .images figure { margin:0; flex:1; min-width:360px; border:1px solid #e2e8f0; border-radius:6px; overflow:hidden; background:#fff; }
+  .images figcaption { font-size:11px; font-weight:600; padding:4px 10px; background:#f1f5f9; color:#475569; }
+  .images img { width:100%; display:block; }
+  .capture-fail { padding:24px; text-align:center; color:#dc2626; background:#fef2f2; font-size:12px; }
+  .metrics { margin-top:12px; }
+  .metrics-none { font-size:12px; color:#94a3b8; padding:8px 10px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; }
+  .metrics-table { width:100%; border-collapse:collapse; font-size:12px; background:#fff; border:1px solid #e2e8f0; border-radius:6px; overflow:hidden; }
+  .metrics-table th, .metrics-table td { padding:6px 10px; text-align:left; border-bottom:1px solid #f1f5f9; }
+  .metrics-table thead th { background:#f8fafc; color:#475569; font-weight:600; }
+  .metrics-table tfoot th { background:#f1f5f9; color:#0f172a; font-weight:700; }
+  .metrics-table .num { text-align:right; font-family:Consolas,monospace; }
+  .metrics-table .pct { color:#4f46e5; font-weight:600; }
+  .metrics-table .pct.strong { color:#4338ca; font-weight:700; }
+  .checkrow { margin-top:10px; font-size:13px; }
+  .checkrow label { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-weight:600; }
+  textarea { width:100%; min-height:50px; margin-top:8px; border:1px solid #e2e8f0; border-radius:6px; padding:6px 10px; font-size:12px; font-family:inherit; resize:vertical; }
+  .run-card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px; margin-bottom:16px; }
+  .chunk-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chunk-list a { display:inline-block; padding:4px 10px; background:#eef2ff; border:1px solid #c7d2fe; border-radius:6px; font-size:12px; font-family:Consolas,monospace; }
+  .summary { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px; margin-bottom:20px; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; }
+  .summary-item { background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; }
+  .summary-item .label { font-size:11px; color:#64748b; }
+  .summary-item .value { font-size:18px; font-weight:700; color:#4338ca; font-family:Consolas,monospace; }
+`;
+
+const BATCH_REPORT_SCRIPT = `
+// 체크박스 / 메모 상태 복원 (localStorage)
+document.querySelectorAll('input[type="checkbox"][id]').forEach(cb => {
+  try { if (localStorage.getItem(cb.id) === '1') cb.checked = true; } catch(_) {}
+});
+document.querySelectorAll('textarea[id]').forEach(t => {
+  try { const v = localStorage.getItem(t.id); if (v) t.value = v; } catch(_) {}
+});
+`;
+
+function batchBuildItemHtml(run, it) {
+  const ckId = `${run.runId}_${it.no}_chk`;
+  const memoId = `${run.runId}_${it.no}_memo`;
+  const origImg = it.origImg
+    ? `<img loading="lazy" src="${batchHtmlEsc(it.origImg)}" alt="원본">`
+    : `<div class="capture-fail">캡처 실패: ${batchHtmlEsc(it.origErr || '알 수 없음')}</div>`;
+  const convImg = it.convImg
+    ? `<img loading="lazy" src="${batchHtmlEsc(it.convImg)}" alt="변환">`
+    : `<div class="capture-fail">캡처 실패: ${batchHtmlEsc(it.convErr || '알 수 없음')}</div>`;
+  const sim = batchComputeSimilarity(it.origMetrics, it.convMetrics);
+  const metricsHtml = (it.origImg && it.convImg)
+    ? `<div class="metrics">${batchMetricsTableHtml(sim)}</div>`
+    : '';
+  const dirLabel = it.dirPath ? `<code style="margin-right:6px;">${batchHtmlEsc(it.dirPath)}/</code>` : '';
+  return `
+    <article class="compare-item" id="item_${it.no}">
+      <h3>[화면${it.no}] ${dirLabel}${batchHtmlEsc(it.orig)} → ${batchHtmlEsc(it.conv)}</h3>
+      <div class="images">
+        <figure><figcaption>원본 (AS-IS)</figcaption>${origImg}</figure>
+        <figure><figcaption>변환 (상대좌표)</figcaption>${convImg}</figure>
+      </div>
+      ${metricsHtml}
+      <div class="checkrow">
+        <label><input type="checkbox" id="${ckId}" onchange="(function(e){try{localStorage.setItem('${ckId}', e.checked?'1':'0');}catch(_){}})(this)"> text / 폼 형태 / 그리드 / 버튼이 모두 있는가?</label>
+      </div>
+      <textarea id="${memoId}" placeholder="메모" oninput="(function(e){try{localStorage.setItem('${memoId}', e.value);}catch(_){}})(this)"></textarea>
+    </article>`;
+}
+
+// ─── chunk HTML: 화면 N개 묶음 ───
+function batchBuildChunkHtml(run, sliceItems, chunkIdx, allChunks, entryName) {
+  const ci = allChunks[chunkIdx];
+  const prev = chunkIdx > 0 ? allChunks[chunkIdx - 1] : null;
+  const next = chunkIdx < allChunks.length - 1 ? allChunks[chunkIdx + 1] : null;
+  const itemsHtml = sliceItems.map(it => batchBuildItemHtml(run, it)).join('\n');
+  const nav = `
+    <nav class="chunk-nav">
+      <a href="../../${batchHtmlEsc(entryName)}">← 목록으로</a>
+      <span class="spacer"></span>
+      ${prev ? `<a href="${batchHtmlEsc(prev.file)}">◀ 이전 (${prev.from}~${prev.to})</a>` : '<span class="muted">처음</span>'}
+      <strong>화면 ${ci.from} ~ ${ci.to} / ${run.items.length}</strong>
+      ${next ? `<a href="${batchHtmlEsc(next.file)}">다음 (${next.from}~${next.to}) ▶</a>` : '<span class="muted">끝</span>'}
+    </nav>`;
+  return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배치 비교 ${ci.from}~${ci.to} — ${batchHtmlEsc(run.localDate)}</title>
+<style>${BATCH_REPORT_CSS}</style>
+</head>
+<body>
+<h1>WebSquare 배치 비교 — ${batchHtmlEsc(run.localDate)}</h1>
+<div class="run-meta">
+  <span>폴더: <code>${batchHtmlEsc(run.folderName || run.sourcePath)}</code></span>
+  <span>서버: <code>${batchHtmlEsc(run.server)}</code></span>
+  <span>총 ${run.items.length}개 항목</span>
+</div>
+${nav}
+${itemsHtml}
+${nav}
+<script>${BATCH_REPORT_SCRIPT}</` + `script>
+</body>
+</html>`;
+}
+
+// ─── 엔트리 HTML: run 목록 + 요약 + chunk 링크 ───
+function batchBuildEntryHtml(manifest) {
+  const runs = manifest.runs || [];
+  const totalItems = runs.reduce((s, r) => s + (r.itemCount || 0), 0);
+  const pctSum = runs.reduce((s, r) => s + (typeof r.overallPct === 'number' ? r.overallPct : 0), 0);
+  const pctN = runs.filter(r => typeof r.overallPct === 'number').length;
+  const avgPct = pctN ? (pctSum / pctN) : null;
+
+  const summaryHtml = `
+    <div class="summary">
+      <h2>요약</h2>
+      <div class="summary-grid">
+        <div class="summary-item"><div class="label">실행(run) 수</div><div class="value">${runs.length}</div></div>
+        <div class="summary-item"><div class="label">총 비교 화면</div><div class="value">${totalItems}</div></div>
+        <div class="summary-item"><div class="label">평균 보존율</div><div class="value">${avgPct !== null ? avgPct.toFixed(1) + '%' : '—'}</div></div>
+      </div>
+    </div>`;
+
+  const runsHtml = runs.slice().reverse().map(r => {
+    const chunkLinks = (r.chunks || []).map(c =>
+      `<a href="runs/${batchHtmlEsc(r.runId)}/${batchHtmlEsc(c.file)}">${c.from}~${c.to}</a>`
+    ).join('');
+    const pct = typeof r.overallPct === 'number' ? r.overallPct.toFixed(1) + '%' : '—';
+    return `
+      <div class="run-card">
+        <h2>${batchHtmlEsc(r.localDate)}</h2>
+        <div class="run-meta">
+          <span>폴더: <code>${batchHtmlEsc(r.folderName || r.sourcePath || '')}</code></span>
+          <span>서버: <code>${batchHtmlEsc(r.server || '')}</code></span>
+          <span>${r.itemCount || 0}개 항목</span>
+          <span>평균 보존율 <strong>${pct}</strong></span>
+        </div>
+        <div class="chunk-list">${chunkLinks || '<span class="muted">chunk 없음</span>'}</div>
+      </div>`;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>WebSquare 배치 비교 리포트</title>
+<style>${BATCH_REPORT_CSS}</style>
+</head>
+<body>
+<h1>WebSquare 배치 비교 리포트</h1>
+${summaryHtml}
+${runs.length ? runsHtml : '<p class="muted">아직 실행된 비교가 없습니다.</p>'}
+</body>
+</html>`;
+}
+
+// ─── run 마무리: 이미지 저장된 items → chunk 파일 + manifest + entry 재생성 ───
+async function batchFinalizeRun(run, runDir, entryName) {
+  const total = run.items.length;
+  const chunkCount = Math.ceil(total / BATCH_CHUNK_SIZE);
+  const chunks = [];
+  const pad = Math.max(3, String(chunkCount).length);
+  for (let c = 0; c < chunkCount; c++) {
+    const from = c * BATCH_CHUNK_SIZE + 1;
+    const to = Math.min((c + 1) * BATCH_CHUNK_SIZE, total);
+    chunks.push({ file: `chunk_${String(c + 1).padStart(pad, '0')}.html`, from, to, count: to - from + 1 });
+  }
+  // chunk HTML 쓰기
+  for (let c = 0; c < chunkCount; c++) {
+    const ci = chunks[c];
+    const slice = run.items.slice(ci.from - 1, ci.to);
+    const html = batchBuildChunkHtml(run, slice, c, chunks, entryName);
+    await batchWriteTextFile(runDir, ci.file, html);
+  }
+  // run 메타 요약 계산 (이미지/원본 데이터는 manifest에 넣지 않음)
+  const overallPct = batchRunOverallPct(run.items);
+
+  // manifest 갱신
+  const manifest = await batchReadManifest();
+  manifest.runs.push({
+    runId: run.runId,
+    isoDate: run.isoDate,
+    localDate: run.localDate,
+    server: run.server,
+    sourcePath: run.sourcePath,
+    folderName: run.folderName,
+    itemCount: total,
+    chunks,
+    overallPct,
+  });
+  await batchWriteManifest(manifest);
+
+  // 엔트리 재생성 (항상 manifest 기준)
+  await batchWriteTextFile(batchReportDirHandle, entryName, batchBuildEntryHtml(manifest));
+}
+
+function batchRunOverallPct(items) {
+  let sum = 0, n = 0;
+  for (const it of items) {
+    const s = batchComputeSimilarity(it.origMetrics, it.convMetrics);
+    if (s) { sum += s.overall; n++; }
+  }
+  return n ? sum / n : null;
+}
+
+// ─── 엔트리 열기 (요약 페이지) ───
+async function batchOpenReport() {
+  if (!batchReportDirHandle) { alert('리포트 폴더가 설정되지 않았습니다'); return; }
+  const name = batchGetEntryName();
+  try {
+    const fh = await batchReportDirHandle.getFileHandle(name);
+    const f = await fh.getFile();
+    const url = URL.createObjectURL(f);
+    window.open(url, '_blank');
+    // blob URL 에서는 chunk 상대링크가 깨집니다.
+    // chunk 페이지로 이동하려면 탐색기에서 직접 엔트리 파일을 열어주세요.
+  } catch (e) {
+    alert('리포트 파일이 아직 없습니다: ' + name);
+  }
+}
+
+// 서버 입력 변경 시 URL 미리보기 갱신 (batchSaveSettings에서 이미 호출됨)
 </script>
 </body>
 </html>

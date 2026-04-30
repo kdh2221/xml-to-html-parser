@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KJI04811000.scn"  meta_screenId="KJI04811000" meta_screenName="부점정보 간편팝업조회" meta_desc="" meta_author="S012018(이동선)">
+		<w2:type craft="true" craftSrc="/xml/KJI04811000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KJI0481140_INPUT":{"@id":"dma_KJI0481140_INPUT","brnHanglName":"brnHanglName","brncd":"brncd"}},"target":{"dlt_KJI0481140_OUTPUT_screen___KJI04811000_grid__dataBook":{"@id":"dlt_KJI0481140_OUTPUT_screen___KJI04811000_grid__dataBook","brncd":"brncd","brnHanglName":"brnHanglName","sthlCoDstcd":"sthlCoDstcd","brnDstic":"brnDstic"},"dma_KJI0481140_OUTPUT_screen___KJI04811000":{"@id":"dma_KJI0481140_OUTPUT_screen___KJI04811000","brnHanglName1":"brnHanglName1","brncd1":"brncd1","outptLineCnt":"outptLineCnt"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_INPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="brnHanglName" length="20" CtrlId="brnHanglName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brncd" length="4" CtrlId="brncd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KJI0481140_OUTPUT_screen___KJI04811000_grid__dataBook" saveRemovedData="true" CtrlId="dataBook" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="brncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="brnHanglName" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="sthlCoDstcd" length="6" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="brnDstic" length="2" CtrlId="dataBook" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT_screen___KJI04811000" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="brnHanglName1" length="20" CtrlId="brnHanglName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brncd1" length="4" CtrlId="brncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="outptLineCnt" length="5" CtrlId="outptLineCnt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KJI04811000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI04811000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="brnHanglName" length="20" CtrlId="brnHanglName"/>
+						<w2:key dataType="text" name="" id="brncd" length="4" CtrlId="brncd"/>
+						<w2:key dataType="text" name="" id="outptLineCnt" length="5" CtrlId="outptLineCnt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataBook" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="brncd_01"/>
+						<w2:column dataType="text" name="" id="sthlCoDstcd"/>
+						<w2:column dataType="text" name="" id="brnHanglName_01"/>
+						<w2:column dataType="text" name="" id="brnDstic"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+scwin.OnInitScreen = function() {
+    dataBook.setAppendMode(false);
+};
+
+scwin.OnSendKey = async function() {
+    dataBook.removeAll();
+    if ($c.iz.data.trim(brnHanglName.getValue()) == "") {
+        $c.iz.data.message("부점한글명을 입력해주세요.");
+    } else {
+        $c.iz.tran.setTranID("KJI0481140");
+        await $c.iz.tran.ASend();
+    }
+};
+
+scwin.dataBook_OnDClick = function(Arg1, Arg2, Arg3) {
+    //여기에 구현코드를 삽입하세요.
+    /*
+    	var strbrncd = Link.brncd;
+    	var strbrnName = Link.brnName;
+    	var strbrnHanglName = Link.brnHanglName;
+    */
+    if (Arg1 > 0) {
+        Link.brncd = dataBook.getCellData(Arg1, "brncd");
+        Link.sthlCoDstcd = dataBook.getCellData(Arg1, "sthlCoDstcd");
+        Link.brnName = dataBook.getCellData(Arg1, "brnHanglName");
+        Link.brnHanglName = dataBook.getCellData(Arg1, "brnHanglName");
+        Link.brnDstic = dataBook.getCellData(Arg1, "brnDstic");
+        $c.iz.screen.screenClose();
+    }
+};
+
+
+
+scwin.brnHanglName_OnValidate = async function(info) {
+    //여기에 구현코드를 삽입하세요.
+    //brnHanglName.Data = brnHanglName.Data.toUpperCase(); // 20150410 : textbox의 속성을 대문자로 입력되도록 설정(Charcasing = 1) 후 삭제
+    //            Validate문 안에서 값을 바꾸게 되면 Validate가 다시 실행되어 중복 실행 됨
+    dataBook.removeAll();
+    $c.iz.tran.setTranID("KJI0481140");
+    await $c.iz.tran.ASend();
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="부점정보 간편팝업조회" meta_screenId="KJI04811000" groupcocd="KB0" customclass="Kes" style="background-color:rgb(255,255,255); width:852px; height:564px;" screentype="AType" meta_author="JEONG" meta_user="S012018(이동선)" meata_date="2008/10/07 16:35:35" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:834px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:12px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_brnHanglName" tabIndex="1" linespace="2" label="부점한글명" orgid="Text_brnHanglName" hierarchy="Text_brnHanglName" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:102px; top:12px; width:112px; height:24px;" id="brnHanglName" indicator="부점한글명" tabIndex="2" autosize="0" editFormat="H(20)" maxlength="20" minlength="2" checkebcdic="1" ninemode="0" ev:onviewchange="scwin.brnHanglName_OnValidate" orgid="brnHanglName" hierarchy="brnHanglName" ref="data:dma_KJI04811000.brnHanglName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:552px; top:12px; width:58px; height:24px; color:rgb(0,0,0); display:none;" id="Text_brncd" tabIndex="3" linespace="2" label="부점코드" orgid="Text_brncd" hierarchy="Text_brncd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:612px; top:12px; width:32px; height:24px; display:none;" id="brncd" indicator="부점코드" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" charcasing="0" ninemode="0" orgid="brncd" hierarchy="brncd" ref="data:dma_KJI04811000.brncd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:222px; top:12px; width:224px; height:24px; color:rgb(113,100,154);" id="Text2" tabIndex="5" label="**&amp;nbsp;폐쇄된&amp;nbsp;부점은&amp;nbsp;조회되지&amp;nbsp;않습니다." orgid="Text2" hierarchy="Text2" escape="false" class="kb_MiddleRight"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:624px; width:1056px; height:122px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox2" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:30px; top:66px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_outptLineCnt" tabIndex="3" linespace="2" label="출력라인수" orgid="Text_outptLineCnt" hierarchy="Text_outptLineCnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:222px; top:66px; width:39px; height:24px;" id="outptLineCnt" indicator="출력라인수" tabIndex="4" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" charcasing="0" ninemode="0" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_KJI04811000.outptLineCnt"/>
+				<w2:textbox id="title_GroupBox2" class="title_h2" label="숨김"/>
+			</xf:group>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:12px; top:60px; width:836px; height:456px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dataBook" indicator="데이터부" tabIndex="3" tabstop="0" enterstop="0" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" controlmode="Sheet" sheetwidth="834" sheetheight="456" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msNone" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#cccccc" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="24" headrowheight="24" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="0" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="1" sendrow="0" scrolltrack="1" orgid="dataBook" hierarchy="dataBook" ev:oncelldblclick="scwin.dataBook_OnDClick" dataList="data:dlt_dataBook">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="부점코드" width="120"/>
+							<w2:column id="column2" inputType="text" value="지주회사구분" width="109"/>
+							<w2:column id="column3" inputType="text" value="부점한글명" width="402"/>
+							<w2:column id="column4" inputType="text" value="부점구분" width="180"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="brncd_01" inputType="text" width="120" hidden="false"/>
+							<w2:column id="sthlCoDstcd" inputType="text" width="109" hidden="false"/>
+							<w2:column id="brnHanglName_01" inputType="text" width="402" hidden="false"/>
+							<w2:column id="brnDstic" inputType="select" width="180" hidden="false"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:528px; width:389px; height:24px; color:rgb(113,100,154);" id="Text2_4" tabIndex="4" label="*&amp;nbsp;부점한글명은&amp;nbsp;2자이상(2자포함)&amp;nbsp;입력해야만&amp;nbsp;조회가&amp;nbsp;가능합니다." orgid="Text2_4" hierarchy="Text2_4" escape="false" class="kb_MiddleRight"/>
+		</xf:group>
+	</body>
+</html>

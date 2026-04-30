@@ -1,0 +1,2181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFA04151000.scn"  meta_screenId="KFA04151000" meta_screenName="구속성예금 관련 사전조회" meta_desc="" meta_author="2543144(신유빈)">
+		<w2:type craft="true" craftSrc="/xml/KFA04151000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KFA0415140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFA0415140_INPUT":{"@id":"dma_KFA0415140_INPUT","inquryDstcd":"inquryDstcd","Cno":"Cno","Idtrek":"Idtrek","custIdnfr":"custIdnfr"}},"target":{"dma_KFA0415140_OUTPUT_screen___KFA04151000":{"@id":"dma_KFA0415140_OUTPUT_screen___KFA04151000","bndbredposablamt":"bndbredposablamt","bndbmnauc":"bndbmnauc","tstmnauc":"tstmnauc","invsttstmnauc":"invsttstmnauc","ivststdposablamt":"ivststdposablamt","tstredposablamt":"tstredposablamt","b2bBzno":"b2bBzno","slrBzno":"slrBzno","b2bBznoNm":"b2bBznoNm","b2bnewYmd":"b2bnewYmd","b2bYmd":"b2bYmd","slrBznoNm":"slrBznoNm","slrNewYmd":"slrNewYmd","slrYmd":"slrYmd","rstrctnitzdstcd":"rstrctnitzdstcd","lnbzCustIdnfr":"lnbzCustIdnfr","lnbzdstcd":"lnbzdstcd","lnbzacno":"lnbzacno","lnbzexeymd":"lnbzexeymd","lnbzInfoDstic":"lnbzInfoDstic","lnbzamt":"lnbzamt","instypamt":"instypamt","dfstl":"dfstl","Ddctnamt":"Ddctnamt","mrcpamt":"mrcpamt","apcamt":"apcamt","rstrctnAcno7":"rstrctnAcno7","rstrctnAcno4":"rstrctnAcno4","rstrctnAcno8":"rstrctnAcno8","rstrctnAcno5":"rstrctnAcno5","rstrctnAcno1":"rstrctnAcno1","rstrctnAcno2":"rstrctnAcno2","rstrctnbuho2":"rstrctnbuho2","rstrctnbuho3":"rstrctnbuho3","rstrctnAcno3":"rstrctnAcno3","rstrctnAcno6":"rstrctnAcno6","rstrctnAcno11":"rstrctnAcno11","rstrctnAcno9":"rstrctnAcno9","rstrctnAcno10":"rstrctnAcno10","rstrctnAcno12":"rstrctnAcno12","snrgMgtNo":"snrgMgtNo","rstrctnAcno7a":"rstrctnAcno7a","rstrctnAcno4a":"rstrctnAcno4a","rstrctnAcno8a":"rstrctnAcno8a","rstrctnAcno5a":"rstrctnAcno5a","rstrctnAcno1a":"rstrctnAcno1a","rstrctnAcno2a":"rstrctnAcno2a","rstrctnbuho2a":"rstrctnbuho2a","rstrctnbuho3a":"rstrctnbuho3a","rstrctnAcno3a":"rstrctnAcno3a","rstrctnAcno7b":"rstrctnAcno7b","rstrctnAcno4b":"rstrctnAcno4b","rstrctnAcno8b":"rstrctnAcno8b","rstrctnAcno5b":"rstrctnAcno5b","rstrctnAcno1b":"rstrctnAcno1b","rstrctnTPrdctYna":"rstrctnTPrdctYna","guattridpostyn":"guattridpostyn","lnbzexeyn":"lnbzexeyn","lnbzTagetDstic":"lnbzTagetDstic","debtnewdstcd":"debtnewdstcd","debtconddstcd":"debtconddstcd","mangicheridstcd":"mangicheridstcd","lnbzRelshpDstcd":"lnbzRelshpDstcd","woncredposamt":"woncredposamt","woncrdusemnauc":"woncrdusemnauc","woncrdabilmnauc":"woncrdabilmnauc","woncredposamus":"woncredposamus","woncredposablamt":"woncredposablamt","instyprdablamt":"instyprdablamt","dfstlrdposablamt":"dfstlrdposablamt","fcredposablamt":"fcredposablamt","instypmnauc":"instypmnauc","dfstlmnauc":"dfstlmnauc","fcmnauc":"fcmnauc","usdreabilamt":"usdreabilamt","gbpreabilamt":"gbpreabilamt","cadreabilamt":"cadreabilamt","eurreabilamt":"eurreabilamt","hkdreabilamt":"hkdreabilamt","jpyreabilamt":"jpyreabilamt","audreabilamt":"audreabilamt","nzdreabilamt":"nzdreabilamt","chfreabilamt":"chfreabilamt","sgdreabilamt":"sgdreabilamt","woncrdabilamt":"woncrdabilamt"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0490041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFA0415140_INPUT" TranClass="MCI" SvcCode="KFA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="inquryDstcd" length="0" CtrlId="jo_gbn" Type="Combo"/>
+						<w2:key dataType="text" name="" id="Cno" length="13" CtrlId="cno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="Idtrek" length="8" CtrlId="date" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFA0415140_OUTPUT_screen___KFA04151000" TranClass="MCI" SvcCode="KFA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="bndbredposablamt" length="15" CtrlId="bndbredposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bndbmnauc" length="15" CtrlId="bndbmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tstmnauc" length="15" CtrlId="tstmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="invsttstmnauc" length="15" CtrlId="invsttstmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="ivststdposablamt" length="15" CtrlId="ivststdposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tstredposablamt" length="15" CtrlId="tstredposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="b2bBzno" length="10" CtrlId="b2bBzno_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="slrBzno" length="10" CtrlId="slrBzno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="b2bBznoNm" length="52" CtrlId="b2bBznoNm_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="b2bnewYmd" length="8" CtrlId="b2bnewYmd_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="b2bYmd" length="8" CtrlId="b2bYmd_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="slrBznoNm" length="52" CtrlId="Edit9_11" Type="Edit"/>
+						<w2:key dataType="text" name="" id="slrNewYmd" length="8" CtrlId="slrNewYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="slrYmd" length="8" CtrlId="slrYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnitzdstcd" length="20" CtrlId="cno_dstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzCustIdnfr" length="10" CtrlId="lnbzCustIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzdstcd" length="22" CtrlId="Edit8" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzacno" length="14" CtrlId="Edit5_8" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzexeymd" length="8" CtrlId="Edit7_8" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzInfoDstic" length="30" CtrlId="lnbzInfoDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzamt" length="15" CtrlId="lnbzamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="instypamt" length="14" CtrlId="b2bBzno_47" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dfstl" length="14" CtrlId="b2bBzno_47_48" Type="Edit"/>
+						<w2:key dataType="text" name="" id="Ddctnamt" length="14" CtrlId="b2bBzno_47_48_50" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mrcpamt" length="14" CtrlId="b2bBzno_47_49_51" Type="Edit"/>
+						<w2:key dataType="text" name="" id="apcamt" length="14" CtrlId="b2bBzno_47_48_50_52" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno7" length="14" CtrlId="rstrctnAcno1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno4" length="14" CtrlId="rstrctnAcno2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno8" length="14" CtrlId="rstrctnAcno3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5" length="14" CtrlId="rstrctnAcno6" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1" length="14" CtrlId="rstrctnAcno5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno2" length="14" CtrlId="rstrctnAcno7" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnbuho2" length="3" CtrlId="rstrctnBuho7" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnbuho3" length="3" CtrlId="rstrctnBuho8" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno3" length="14" CtrlId="rstrctnAcno8" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno6" length="14" CtrlId="rstrctnAcno4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno11" length="14" CtrlId="rstrctnAcno9" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno9" length="14" CtrlId="rstrctnAcno10" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno10" length="20" CtrlId="rstrctnAcno11" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno12" length="10" CtrlId="rstrctnTPrdctYna" Type="Edit"/>
+						<w2:key dataType="text" name="" id="snrgMgtNo" length="12" CtrlId="snrgMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno7a" length="14" CtrlId="rstrctnAcno1_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno4a" length="14" CtrlId="rstrctnAcno2_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno8a" length="14" CtrlId="rstrctnAcno3_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5a" length="14" CtrlId="rstrctnAcno6_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1a" length="14" CtrlId="rstrctnAcno5_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno2a" length="14" CtrlId="rstrctnAcno7_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnbuho2a" length="3" CtrlId="rstrctnBuho7_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnbuho3a" length="3" CtrlId="rstrctnBuho8_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno3a" length="14" CtrlId="rstrctnAcno8_1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno7b" length="14" CtrlId="rstrctnAcno1_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno4b" length="14" CtrlId="rstrctnAcno2_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno8b" length="14" CtrlId="rstrctnAcno3_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5b" length="14" CtrlId="rstrctnAcno6_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1b" length="14" CtrlId="rstrctnAcno5_2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rstrctnTPrdctYna" length="1" CtrlId="rstrctnTPrdctYna_h" Type="Edit"/>
+						<w2:key dataType="text" name="" id="guattridpostyn" length="1" CtrlId="guattridpostyn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzexeyn" length="1" CtrlId="lnbzexeyn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzTagetDstic" length="1" CtrlId="inbzTagetDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="debtnewdstcd" length="1" CtrlId="debtprdctdstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="debtconddstcd" length="1" CtrlId="debtconddstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mangicheridstcd" length="1" CtrlId="mangicheridstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnbzRelshpDstcd" length="2" CtrlId="lnbzRelshpDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncredposamt" length="15" CtrlId="woncredposamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncrdusemnauc" length="15" CtrlId="woncrdusemnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncrdabilmnauc" length="15" CtrlId="woncrdabilmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncredposamus" length="15" CtrlId="woncredposamus" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncredposablamt" length="15" CtrlId="woncredposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="instyprdablamt" length="15" CtrlId="instyprdablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dfstlrdposablamt" length="15" CtrlId="dfstlrdposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fcredposablamt" length="15" CtrlId="fcredposablamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="instypmnauc" length="15" CtrlId="instypmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dfstlmnauc" length="15" CtrlId="dfstlmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fcmnauc" length="15" CtrlId="fcmnauc" Type="Edit"/>
+						<w2:key dataType="text" name="" id="usdreabilamt" length="18" CtrlId="usdreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="gbpreabilamt" length="18" CtrlId="gbpreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cadreabilamt" length="18" CtrlId="cadreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="eurreabilamt" length="18" CtrlId="eurreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hkdreabilamt" length="18" CtrlId="hkdreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="jpyreabilamt" length="18" CtrlId="jpyreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="audreabilamt" length="18" CtrlId="audreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nzdreabilamt" length="18" CtrlId="nzdreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chfreabilamt" length="18" CtrlId="chfreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sgdreabilamt" length="18" CtrlId="sgdreabilamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="woncrdabilamt" length="15" CtrlId="woncrdabilamt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490041_OUTPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KFA04151000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFA04151000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="jo_gbn" length="0" CtrlId="jo_gbn"/>
+						<w2:key dataType="text" name="" id="cno" length="13" CtrlId="cno"/>
+						<w2:key dataType="text" name="" id="date" length="8" CtrlId="date"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr"/>
+						<w2:key dataType="text" name="" id="bndbredposablamt" length="15" CtrlId="bndbredposablamt"/>
+						<w2:key dataType="text" name="" id="bndbmnauc" length="15" CtrlId="bndbmnauc"/>
+						<w2:key dataType="text" name="" id="tstmnauc" length="15" CtrlId="tstmnauc"/>
+						<w2:key dataType="text" name="" id="invsttstmnauc" length="15" CtrlId="invsttstmnauc"/>
+						<w2:key dataType="text" name="" id="ivststdposablamt" length="15" CtrlId="ivststdposablamt"/>
+						<w2:key dataType="text" name="" id="tstredposablamt" length="15" CtrlId="tstredposablamt"/>
+						<w2:key dataType="text" name="" id="b2bBzno_2" length="10" CtrlId="b2bBzno_2"/>
+						<w2:key dataType="text" name="" id="slrBzno" length="10" CtrlId="slrBzno"/>
+						<w2:key dataType="text" name="" id="b2bBznoNm_2" length="52" CtrlId="b2bBznoNm_2"/>
+						<w2:key dataType="text" name="" id="b2bnewYmd_2" length="8" CtrlId="b2bnewYmd_2"/>
+						<w2:key dataType="text" name="" id="b2bYmd_2" length="8" CtrlId="b2bYmd_2"/>
+						<w2:key dataType="text" name="" id="Edit9_11" length="52" CtrlId="Edit9_11"/>
+						<w2:key dataType="text" name="" id="slrNewYmd" length="8" CtrlId="slrNewYmd"/>
+						<w2:key dataType="text" name="" id="slrYmd" length="8" CtrlId="slrYmd"/>
+						<w2:key dataType="text" name="" id="cno_dstcd" length="20" CtrlId="cno_dstcd"/>
+						<w2:key dataType="text" name="" id="lnbzCustIdnfr" length="10" CtrlId="lnbzCustIdnfr"/>
+						<w2:key dataType="text" name="" id="Edit8" length="22" CtrlId="Edit8"/>
+						<w2:key dataType="text" name="" id="Edit5_8" length="14" CtrlId="Edit5_8"/>
+						<w2:key dataType="text" name="" id="Edit7_8" length="8" CtrlId="Edit7_8"/>
+						<w2:key dataType="text" name="" id="lnbzInfoDstic" length="30" CtrlId="lnbzInfoDstic"/>
+						<w2:key dataType="text" name="" id="lnbzamt" length="15" CtrlId="lnbzamt"/>
+						<w2:key dataType="text" name="" id="b2bBzno_47" length="14" CtrlId="b2bBzno_47"/>
+						<w2:key dataType="text" name="" id="b2bBzno_47_48" length="14" CtrlId="b2bBzno_47_48"/>
+						<w2:key dataType="text" name="" id="b2bBzno_47_48_50" length="14" CtrlId="b2bBzno_47_48_50"/>
+						<w2:key dataType="text" name="" id="b2bBzno_47_49_51" length="14" CtrlId="b2bBzno_47_49_51"/>
+						<w2:key dataType="text" name="" id="b2bBzno_47_48_50_52" length="14" CtrlId="b2bBzno_47_48_50_52"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1" length="14" CtrlId="rstrctnAcno1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno2" length="14" CtrlId="rstrctnAcno2"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno3" length="14" CtrlId="rstrctnAcno3"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno6" length="14" CtrlId="rstrctnAcno6"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5" length="14" CtrlId="rstrctnAcno5"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno7" length="14" CtrlId="rstrctnAcno7"/>
+						<w2:key dataType="text" name="" id="rstrctnBuho7" length="3" CtrlId="rstrctnBuho7"/>
+						<w2:key dataType="text" name="" id="rstrctnBuho8" length="3" CtrlId="rstrctnBuho8"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno8" length="14" CtrlId="rstrctnAcno8"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno4" length="14" CtrlId="rstrctnAcno4"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno9" length="14" CtrlId="rstrctnAcno9"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno10" length="14" CtrlId="rstrctnAcno10"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno11" length="20" CtrlId="rstrctnAcno11"/>
+						<w2:key dataType="text" name="" id="rstrctnTPrdctYna" length="10" CtrlId="rstrctnTPrdctYna"/>
+						<w2:key dataType="text" name="" id="snrgMgtNo" length="12" CtrlId="snrgMgtNo"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1_1" length="14" CtrlId="rstrctnAcno1_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno2_1" length="14" CtrlId="rstrctnAcno2_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno3_1" length="14" CtrlId="rstrctnAcno3_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno6_1" length="14" CtrlId="rstrctnAcno6_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5_1" length="14" CtrlId="rstrctnAcno5_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno7_1" length="14" CtrlId="rstrctnAcno7_1"/>
+						<w2:key dataType="text" name="" id="rstrctnBuho7_1" length="3" CtrlId="rstrctnBuho7_1"/>
+						<w2:key dataType="text" name="" id="rstrctnBuho8_1" length="3" CtrlId="rstrctnBuho8_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno8_1" length="14" CtrlId="rstrctnAcno8_1"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno1_2" length="14" CtrlId="rstrctnAcno1_2"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno2_2" length="14" CtrlId="rstrctnAcno2_2"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno3_2" length="14" CtrlId="rstrctnAcno3_2"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno6_2" length="14" CtrlId="rstrctnAcno6_2"/>
+						<w2:key dataType="text" name="" id="rstrctnAcno5_2" length="14" CtrlId="rstrctnAcno5_2"/>
+						<w2:key dataType="text" name="" id="rstrctnTPrdctYna_h" length="1" CtrlId="rstrctnTPrdctYna_h"/>
+						<w2:key dataType="text" name="" id="guattridpostyn" length="1" CtrlId="guattridpostyn"/>
+						<w2:key dataType="text" name="" id="lnbzexeyn" length="1" CtrlId="lnbzexeyn"/>
+						<w2:key dataType="text" name="" id="inbzTagetDstic" length="1" CtrlId="inbzTagetDstic"/>
+						<w2:key dataType="text" name="" id="debtprdctdstic" length="1" CtrlId="debtprdctdstic"/>
+						<w2:key dataType="text" name="" id="debtconddstcd" length="1" CtrlId="debtconddstcd"/>
+						<w2:key dataType="text" name="" id="mangicheridstcd" length="1" CtrlId="mangicheridstcd"/>
+						<w2:key dataType="text" name="" id="lnbzRelshpDstcd" length="2" CtrlId="lnbzRelshpDstcd"/>
+						<w2:key dataType="text" name="" id="woncredposamt" length="15" CtrlId="woncredposamt"/>
+						<w2:key dataType="text" name="" id="woncrdusemnauc" length="15" CtrlId="woncrdusemnauc"/>
+						<w2:key dataType="text" name="" id="woncrdabilmnauc" length="15" CtrlId="woncrdabilmnauc"/>
+						<w2:key dataType="text" name="" id="woncredposamus" length="15" CtrlId="woncredposamus"/>
+						<w2:key dataType="text" name="" id="woncredposablamt" length="15" CtrlId="woncredposablamt"/>
+						<w2:key dataType="text" name="" id="instyprdablamt" length="15" CtrlId="instyprdablamt"/>
+						<w2:key dataType="text" name="" id="dfstlrdposablamt" length="15" CtrlId="dfstlrdposablamt"/>
+						<w2:key dataType="text" name="" id="fcredposablamt" length="15" CtrlId="fcredposablamt"/>
+						<w2:key dataType="text" name="" id="instypmnauc" length="15" CtrlId="instypmnauc"/>
+						<w2:key dataType="text" name="" id="dfstlmnauc" length="15" CtrlId="dfstlmnauc"/>
+						<w2:key dataType="text" name="" id="fcmnauc" length="15" CtrlId="fcmnauc"/>
+						<w2:key dataType="text" name="" id="usdreabilamt" length="18" CtrlId="usdreabilamt"/>
+						<w2:key dataType="text" name="" id="gbpreabilamt" length="18" CtrlId="gbpreabilamt"/>
+						<w2:key dataType="text" name="" id="cadreabilamt" length="18" CtrlId="cadreabilamt"/>
+						<w2:key dataType="text" name="" id="eurreabilamt" length="18" CtrlId="eurreabilamt"/>
+						<w2:key dataType="text" name="" id="hkdreabilamt" length="18" CtrlId="hkdreabilamt"/>
+						<w2:key dataType="text" name="" id="jpyreabilamt" length="18" CtrlId="jpyreabilamt"/>
+						<w2:key dataType="text" name="" id="audreabilamt" length="18" CtrlId="audreabilamt"/>
+						<w2:key dataType="text" name="" id="nzdreabilamt" length="18" CtrlId="nzdreabilamt"/>
+						<w2:key dataType="text" name="" id="chfreabilamt" length="18" CtrlId="chfreabilamt"/>
+						<w2:key dataType="text" name="" id="sgdreabilamt" length="18" CtrlId="sgdreabilamt"/>
+						<w2:key dataType="text" name="" id="woncrdabilamt" length="15" CtrlId="woncrdabilamt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap id="dtm_component" baseNode="map">
+					<w2:keyInfo>
+						<w2:key id="Picture1" name="Picture1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="Picture4" name="Picture4" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="Picture6" name="Picture6" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="Picture7" name="Picture7" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="Picture3" name="Picture3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+//*----------------------------------------------------------------------------*
+//*@ 업무명   : KFA         (수신    　　　　　　　　　　　　　               )*
+//*@ 화면명   : KFA04151000 (구속성예금 조회                                  )*
+//*@ 호출번호 : [04-10-151]                                                    *
+//*@ 처리개요 : 구속성예금조회                                                 *
+//*----------------------------------------------------------------------------*
+//*@ 성명  :  일자  :  변　경　내　용　　　　　　　　　　　　　　              *
+//*----------------------------------------------------------------------------*
+//* 하상구 :20150401: KB-PIN 활용 확대개발 　　　　　　　　　　　              *
+//*   〃   :20150411: 1개월만기도래/B2B정보 추가 및 안내메시지 변경            *
+//*   〃   :20150430: 고객식별자 직접입력 (KHC_queryKbpinCustName)             *
+//*   〃   :20150608: KAA0490041 호출결과의 고객고유번호 사용                  *
+//*        :        : - KB-PIN 직접입력에 의한 거래 후 선불카드조회 클릭 시    *
+//*        :        :   고객번호 링크 처리 위함                                *
+//*   〃   :20160219: 법인관련인에 임원 제외 따른 업무처리                     *
+//*        :        : - 명칭변경 : 법인관련인 → 관련법인                      *
+//* 김현종 :20200101: 구속행위점검대상 신용평점 변경 적용                      *
+//* 김현종 :20200325: 구속성 검증대상 구분(표) 추가(기존 안내메세지 숨김)      *
+//* 남병천 :20250219: 직원용 단말화면 Re-Design 구축 프로젝트                  *
+//*                 : 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 링크 조회버튼으로 변경
+//*                 : KB-PIN 검색버튼 삭제 및 에디트박스 내 검색기능 사용      *
+//*                 : 하단 검색버튼 링크텍스트로 변경                          *
+//*                 : 구속행위 검증대상 구분 팝업 제거 및 화면내 출력          *
+//*----------------------------------------------------------------------------*
+
+/* 에디트박스 색상 적용불가(UI/UX표준) - 직원용 단말화면 Re-Design 구축 프로젝트
+rstrctnAcno1.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno1_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno1_2.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno2.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno2_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno2_2.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno3.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno3_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno3_2.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno4.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno5.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno5_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno5_2.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno6.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno6_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno7.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnBuho7.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno7_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnBuho7_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno8.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnBuho8.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno8_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnBuho8_1.ForeColor  =  GetRGBValue (0,0,255);
+rstrctnAcno9.ForeColor    =  GetRGBValue (0,0,255);
+rstrctnAcno10.ForeColor   =  GetRGBValue (0,0,255);
+rstrctnAcno11.ForeColor   =  GetRGBValue (0,0,255);
+rstrctnTPrdctYna.ForeColor  =  GetRGBValue (0,0,255); 
+snrgMgtNo.ForeColor  =  GetRGBValue (0,0,255); // 2404XX //수신성기여등록 추가
+*/
+
+//2021.03.25 구속성 검증대상 구분(표) 추가(기존 안내메세지 숨김) 
+//GroupBox_Msg.BackColor  =  GetRGBValue (255,255,0);
+
+//2021.03.25 구속성 검증대상 구분표 버튼색상 변경
+Button3.BackColor = $c.iz.data.getRGBValue(255, 0, 0);
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+
+scwin.OnSendKey = async function() {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.tran.setTranID("KFA0415140");
+    $c.iz.tran.lockScreen();
+    await $c.iz.tran.ASend();
+};
+
+/**----------------------------------------------
+* @수정내역: 20250218 남병천  구속성 검증대상 팝업 화면내 출력으로 변경
+*                             조회결과 상단 안내문구, 정액적립식, 정액적립식 외 재예치가능잔액 그룹박스 색상 적용
+*                             직원용 단말화면 Re-Design 구축 프로젝트
+----------------------------------------------**/
+scwin.OnEndTran = function() {
+    //조회거래 정상 수행완료 여부 확인
+
+    if ($c.iz._tran.tranId == "KFA0415140" && $c.iz._tran.bError == false) {
+        // 2014.03.01 : 법인 검증기준 추가
+
+        GroupBox3.show('');
+        //2021.03.25 구속성 검증대상 구분(표) 추가(기존 안내메세지 숨김) 
+        text_Msg.setValue("");
+        if (lnbzCustIdnfr.getValue() == "") {
+            lnbzRelshp.setValue("");
+        } else {
+            if (lnbzRelshpDstcd.getValue() == "01") {
+                lnbzRelshp.setValue("본인");
+            }
+            if (lnbzRelshpDstcd.getValue() == "99") {
+                lnbzRelshp.setValue("관련법인");
+            }
+        }
+        if (rstrctnTPrdctYna_h.getValue() == "1") {
+            rstrctnTPrdctYna.setValue("구매/충전");
+        } else {
+            rstrctnTPrdctYna.setValue("");
+        }
+
+        // CHG START (20150411) 하상구 : 1개월만기도래/B2B정보 추가 및 안내메시지 변경 ------------------
+
+        // 2016.12.02 안내메세지 일괄 변경  이경오 
+        //-- 1) 1개월내 여신 존재
+        if (inbzTagetDstic.getValue() == "1") {
+            // 조건 1 : 1:여신업무(가계) 인 경우
+            if (debtconddstcd.getValue() == "1") {
+                //text_Msg.Value = "☞ 1개월 이내 신용등급 7등급이하 가계대출이 취급(기한연장 포함) 되어 수신 신규 불가합니다."; 
+
+                //text_Msg.Value = "☞ 1개월 이내 당행 신용평가등급 7등급 이하 또는 신용평가회사 신용평점 하위 10% 이하 개인의 가계대출이 취급(기한연장 포함) 되어 \n"
+
+                //             + "    수신 신규 불가합니다.";  
+
+            }
+
+            // 조매 1 : 6:여신업무(기업) 인 경우
+            if (debtconddstcd.getValue() == "6") {
+                //text_Msg.Value = "☞ 1개월 이내 중소기업 여신이 취급되어 수신 신규/판매 불가합니다.";
+
+            }
+
+            // 조매 7 : 7:KB셀러론 약정인 경우 2018.07.30
+            if (debtconddstcd.getValue() == "7") {
+                //text_Msg.Value = "☞ 1개월 이내 KB셀러론(한도 약정)이 취급되어 수신 신규/판매 불가합니다.";
+
+            }
+
+            // 조매 8 : 8:KB상생플러스론 약정인 경우 
+            if (debtconddstcd.getValue() == "8") {
+                //text_Msg.Value = "☞ 1개월 이내 KB상생플러스론(한도 약정)이 취급되어 수신 신규/판매 불가합니다.";
+
+            }
+
+            // 조매 1 : 2:B2B 인 경우
+            if (debtconddstcd.getValue() == "2") {
+                //text_Msg.Value = "☞ 1개월 이내 B2B여신(외매채 판매기업 한도 약정)이 취급되어 수신 신규/판매 불가합니다.";
+
+            }
+
+            // 조매 1 : 3:개인여신심사건 인 경우
+            if (debtconddstcd.getValue() == "3") {
+                if (debtprdctdstic.getValue() == "1") {
+                    //text_Msg.Value = "☞ 1개월 이내 신용등급 7등급이하 가계대출 창구기한연장 예정으로 수신 신규/판매 불가합니다.";
+
+                    //text_Msg.Value = "☞ 1개월 이내 당행 신용평가등급 7등급 이하 또는 신용평가회사 신용평점 하위 10% 이하 개인의 가계대출 창구기한연장 예정으로 \n"
+
+                    //               + "    수신 신규/판매 불가합니다.";
+
+                } else {
+                    //text_Msg.Value = "☞ 1개월 이내 신용등급 7등급이하 가계대출 신규(증액)취급 예정으로 수신 가입시 대출실행이 제한될 수 있습니다.";
+
+                    //text_Msg.Value = "☞ 1개월 이내 당행 신용평가등급 7등급 이하 또는 신용평가회사 신용평점 하위 10% 이하 개인의 가계대출 신규(증액)취급 예정으로 \n"
+
+                    //              + "    수신 가입시 대출실행이 제한될 수 있습니다.";    
+
+                }
+            }
+
+            // 조매 1 : 4:소호심사진행건 인 경우
+            // 조매 1 : 5:기업심사진행건 인 경우
+            if (debtconddstcd.getValue() == "4" || debtconddstcd.getValue() == "5") {
+                // 해당 진행건이 기한연장인 경우
+                if (debtprdctdstic.getValue() == "1") {
+                    //text_Msg.Value = "☞ 1개월 이내 중소기업(SOHO포함) 여신 기한연장 심사승인 완료 하였으므로  수신 신규/판매 불가합니다.";  
+
+                } else {
+                    //text_Msg.Value = "☞ 1개월 이내 중소기업(SOHO포함) 여신 심사진행건이 존재하므로 수신 신규/판매시 대출실행이 제한될 수 있습니다.";  
+
+                }
+            }
+            //text_Msg.Value = "☞ 1개월 내 여신 실행하였으므로 예금 신규 불가합니다.";
+
+        }
+
+        //-- 2) 1개월이내 여신은 없으나 1개월이내 만기도래하는 여신 존재
+        if (inbzTagetDstic.getValue() == "2") {
+            // 금일 만기도래 여신 중 1: 가계대출인 경우
+            if (mangicheridstcd.getValue() == "1") {
+                //text_Msg.Value = "☞ 금일 만기도래(경과)된 창구기한연장 가계대출이 존재합니다. 수신가입시 대출실행이 제한될 수 있습니다.";
+
+            }
+
+            // 금일 만기도래 여신 중 2: 기업대출 , 6: B2B인 경우
+            if (mangicheridstcd.getValue() == "2" || mangicheridstcd.getValue() == "6") {
+                //text_Msg.Value = "☞ 조회기준일에 만기도래(경과)된 기업여신이 존재합니다. 수신 신규/판매 당일에는 여신실행(기한연장 포함)이 제한될 수 있습니다.";
+
+            }
+            // text_Msg.Value = "☞ 1개월 내 여신취급이 예상되므로 관련여신 확인하여 안내 바랍니다.";
+
+            //-- 항목명 변경 : 여신실행(예정)금액 --> 만기도래(예정)금액
+            Text_LnAmt.hide();
+            Text_ExAmt.show('');
+            Text_ExAmt.setPosition(Text_LnAmt.X, Text_LnAmt.Y);
+
+            //-- 항목명 변경 : 여신실행(예정)일자 --> 만기도래일자
+            Text_LnYmd.hide();
+            Text_ExYmd.show('');
+            Text_ExYmd.setPosition(Text_LnYmd.X, Text_LnYmd.Y);
+        }
+
+        //-- 3) 1개월이내 여신과 1개월이내 만기도래하는 여신 모두 없음
+        if (inbzTagetDstic.getValue() != "1" && inbzTagetDstic.getValue() != "2") {
+            //-- ① 법인관련고객 => 2016.02.19  법인대표자로 변경
+            //if (cno_dstcd.Data == "법인관련고객") {
+            if (cno_dstcd.getValue() == "법인대표자") {
+                //text_Msg.Value = "☞ 예금신규 시 1개월 이내 관련 중소기업(SOHO포함) 여신 및 본인의 신용등급 7등급 이하 가계여신 취급이 일체 불가하므로 필수 안내 바랍니다."; 
+
+                //text_Msg.Value = "☞ 예금신규 시 1개월 이내 관련 중소기업(SOHO포함) 여신 및 본인의 당행 신용평가등급 7등급 이하 또는 신용평가회사 신용평점 하위 10% 이하 \n"
+
+                //               + "    개인의 가계여신 취급이 일체 불가하므로 필수 안내 바랍니다."; 
+
+                // text_Msg.Value = "☞ 예금신규 시 1개월내 본인 및 관련법인의 여신취급이 불가함을 안내바랍니다.";
+
+            }
+
+            //-- ② 순수개인고객 또는 중소기업고객
+            //if (cno_dstcd.Data != "법인관련고객"  &&  cno_dstcd.Data != "") {
+            if (cno_dstcd.getValue() != "법인대표자" && cno_dstcd.getValue() != "") {
+                //text_Msg.Value = "☞ 예금신규 시 1개월 이내 본인의 중소기업(SOHO포함) 여신 및 신용등급 7등급 이하 가계여신 취급이 일체 불가하므로 필수 안내 바랍니다.";
+
+                //text_Msg.Value = "☞ 예금신규 시 1개월 이내 본인의 중소기업(SOHO포함) 여신 및 당행 신용평가등급 7등급 이하 또는 신용평가회사 신용평점 하위 10% 이하 \n"
+
+                //               + "    개인의 가계여신 취급이 일체 불가하므로 필수 안내 바랍니다.";
+
+                // text_Msg.Value = "☞ 예금신규 시 1개월내의 여신(가계여신의 경우 신용등급 7등급 이하)취급이 불가함을 안내 바랍니다.";
+
+            }
+
+            //-- ③ 구속성 검증대상 고객 아님
+            if (cno_dstcd.getValue() == "") {
+                //text_Msg.Value = "☞ 구속행위 검증 대상이 아니므로 예금신규 가능합니다."; 
+
+            }
+        }
+
+        //-- B2B이면 항목명 변경 : 여신계좌번호 → 사업자번호
+        if (lnbzInfoDstic.getValue() == "2 - Ｂ２Ｂ업무") {
+            Text_Acno.hide();
+            Text_Bzno.show('');
+            Text_Bzno.setPosition(Text_Acno.X, Text_Acno.Y);
+        }
+
+        //-- B2B이면 항목명 변경 : 여신계좌번호 → 사업자번호(2018.0816)
+        if (lnbzInfoDstic.getValue() == "7 - 셀러론업무") {
+            Text_Acno.hide();
+            Text_Bzno.show('');
+            Text_Bzno.setPosition(Text_Acno.X, Text_Acno.Y);
+        }
+
+
+        //-- 조회구분 1-구속성예금사전조회, 2-구속성예금 재예치 가능금액 조회
+        if (jo_gbn.getValue() == "1") {
+            GroupBox3.show('');
+            //GroupBox_Msg.Visible = true;	     
+            GroupBox_Msg.Fold = false;
+            GroupBox11.hide();
+
+            //2021.03.25 구속성 검증대상 구분표 팝업
+            // 팝업제거 및 화면내 출력 - 직원용 단말화면 Re-Design 구축 프로젝트
+            //Popup("KFA04999B99","DATALINK");
+        } else {
+            GroupBox3.hide();
+            //GroupBox_Msg.Visible = false;        
+            GroupBox_Msg.Fold = true;
+            GroupBox11.show('');
+
+            // 조회결과 상단 메시지
+            GroupBox131.setDisabled(false); // 색상 출력하기 위해 Enabled처리
+            // 정액적립식, 정액적립식 외 재예치가능잔액 그룹박스
+            GroupBox109.setDisabled(false); // 색상 출력하기 위해 Enabled처리
+            GroupBox110.setDisabled(false); // 색상 출력하기 위해 Enabled처리
+        }
+
+        // CHG END   (20150411) 하상구 : 1개월만기도래/B2B정보 추가 및 안내메시지 변경 ------------------
+
+    }
+};
+
+/**----------------------------------------------
+* @수정내역: 20250218 남병천  안내메시지 기본 출력(GroupBox_Msg)
+*                             직원용 단말화면 Re-Design 구축 프로젝트
+----------------------------------------------**/
+scwin.OnInitScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    GroupBox3.hide();
+    //GroupBox_Msg.Visible = false;
+    text_Msg.setValue("");
+    GroupBox11.hide();
+    Text_Acno.show('');
+    Text_Bzno.hide();
+    Text_LnAmt.show('');
+    Text_ExAmt.hide();
+    Text_LnYmd.show('');
+    Text_ExYmd.hide();
+    date.setValue($c.user.getUserProfile('nowBzoprYmd'));
+
+    //-- 구속성예금 팝업창 (KHC04999A99) 호출 시 자동 실행
+    if (rstrPopCallYn.getValue() == "1" &&
+        jo_gbn.getValue() == "1" &&
+        custIdnfr.getValue() != "") {
+        scwin.OnSendKey();
+    }
+};
+
+scwin.UnLockScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    GroupBox3.hide();
+    //GroupBox_Msg.Visible = false;        
+    GroupBox_Msg.Fold = true;
+    GroupBox11.hide();
+    Text_Acno.show('');
+    Text_Bzno.hide();
+    Text_LnAmt.show('');
+    Text_ExAmt.hide();
+    Text_LnYmd.show('');
+    Text_ExYmd.hide();
+};
+
+/* 검색버튼 삭제 및 에디트박스 내 검색기능 사용 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button1_OnClick(){
+	//여기에 구현코드를 삽입하세요.
+	
+	if (custIdnfr.Data != "") {               // CHG (20150401) 하상구
+        Link.custIdnfr = custIdnfr.Data; 
+	}
+
+	Popup("KAA04900004","DATALINK");
+	
+	cno.Data        = Link.cuniqno;
+	custIdnfr.Value = Link.custIdnfr;        // ADD (20150401) 하상구
+    custnm.Data     = Link.custnm;           // ADD (20150401) 하상구
+
+	//고객성명조회(팝업) Link 변수 초기화 (차세대단말팀 2009.07.11)
+	var CAA_cuniqno 				= Link.cuniqno;
+	var CAA_dtalsCustPtrnClsfiDstcd = Link.dtalsCustPtrnClsfiDstcd;
+	var CAA_custIdnfr 				= Link.custIdnfr;
+	var CAA_custMgtNo 			    = Link.custMgtNo;
+	var CAA_custnm 					= Link.custnm;
+	var CAA_fnameErrDstcd 			= Link.fnameErrDstcd;
+	var CAA_fnameErrDsticName 		= Link.fnameErrDsticName;
+	//고객성명조회(팝업) Link 변수 초기화 종료(차세대단말팀 2009.07.11)
+}
+*/
+
+
+// ADD START (20150401) 하상구 : 고객정보번호활용확대 전산개발 ------------------
+scwin.custIdnfr_OnValidate = function(info) {
+    // KB-PIN번호 입력시 hidden 주민번호 clear                
+    cno.setValue();
+    custnm.setValue();
+
+    // 고객명 추출 (ADD - 20150430 하상구)
+    //KHC_queryKbpinCustName(custIdnfr,custnm);
+
+    if (custIdnfr.getValue().length > 0) {
+        $c.iz.tran.setTranID("KAA0490041");
+        $c.iz.tran.setInFDData("KAA0490041", "custIdnfr", custIdnfr.getValue());
+        $c.iz.tran.setInFDData("KAA0490041", "custMgtNo", "00000");
+        $c.iz.tran.WaitSend();
+        if ($c.iz._tran.bError == false) {
+            $c.iz.data.message("");
+            custnm.setValue($c.iz.tran.getOutMultiDataByIndex("screen", "dtalsCustGrid/dataBook", "custnm", 0));
+            // 20150608 : 고객번호 링크
+            cno.setValue($c.iz.tran.getOutMultiDataByIndex("screen", "dtalsCustGrid/dataBook", "cuniqno", 0));
+        } else {
+            custnm.setValue();
+            cno.setValue();
+        }
+    } else {
+        custnm.setValue();
+        $c.iz.data.message("고객번호를 확인해주세요");
+    }
+
+    //if (custIdnfr.Data != "") {     (DEL) 20150430 하상구
+
+    //    Button1_OnClick();          (DEL) 20150430 하상구 
+
+    //}                               (DEL) 20150430 하상구 
+
+};
+// ADD END (20150401) 하상구 : 고객정보번호활용확대 전산개발 ----------------------
+
+
+//-- 적립식
+//-- 계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno5_OnClick() {
+    if  (rstrctnAcno5.Data != "") {
+         Link.acno  =  rstrctnAcno5.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 계좌번호2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno5_1_OnClick() {
+    if  (rstrctnAcno5_1.Data != "") {
+         Link.acno  =  rstrctnAcno5_1.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 계좌번호3
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno5_2_OnClick() {
+    if  (rstrctnAcno5_2.Data != "") {
+         Link.acno  =  rstrctnAcno5_2.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 거치식
+//-- 계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno7_OnClick() {
+    if  (rstrctnAcno7.Data != "") {
+         Link.acno     =  rstrctnAcno7.Data;
+         Link.hndlnNo  =  rstrctnBuho7.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 계좌번호2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno7_1_OnClick() {
+    if  (rstrctnAcno7_1.Data != "") {
+         Link.acno     =  rstrctnAcno7_1.Data;
+         Link.hndlnNo  =  rstrctnBuho7_1.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 외화
+//--계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno8_OnClick() {
+    if  (rstrctnAcno8.Data != "") {
+         Link.acno     =  rstrctnAcno8.Data;
+         Link.hndlnNo  =  rstrctnBuho8.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//--계좌번호2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno8_1_OnClick() {
+    if  (rstrctnAcno8_1.Data != "") {
+         Link.acno  =  rstrctnAcno8_1.Data;
+         Link.hndlnNo  =  rstrctnBuho8_1.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- 신탁
+//--계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno2_OnClick() {
+    if  (rstrctnAcno2.Data != "") {
+         Link.acno  =  rstrctnAcno2.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}    
+*/
+
+//--계좌번호2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno2_1_OnClick() {
+    if  (rstrctnAcno2_1.Data != "") {
+         Link.acno  =  rstrctnAcno2_1.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//--계좌번호3
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno2_2_OnClick() {
+    if  (rstrctnAcno2_2.Data != "") {
+         Link.acno  =  rstrctnAcno2_2.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}
+*/
+
+//-- ISA
+//--계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno9_OnClick() {
+    if  (rstrctnAcno9.Data != "") {
+         Link.acno  =  rstrctnAcno9.Data;
+	     ScreenOpen("KFA04501000","DATALINK");
+    } 
+}    
+*/
+
+//-- 퇴직연금
+//-- 계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno6_OnClick() {
+    if  (rstrctnAcno6.Data != "") {
+         Link.asstAcno  =  rstrctnAcno6.Data;
+	     ScreenOpen("KEC04890000","DATALINK");
+    } 
+}
+*/
+
+//-- 계좌번호2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno6_1_OnClick() {
+    if  (rstrctnAcno6_1.Data != "") {
+         Link.asstAcno  =  rstrctnAcno6_1.Data;
+	     ScreenOpen("KEC04890000","DATALINK");
+    } 
+}
+*/
+
+//-- 계좌번호3
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno6_2_OnClick() {
+    if  (rstrctnAcno6_2.Data != "") {
+         Link.asstAcno  =  rstrctnAcno6_2.Data;
+	     ScreenOpen("KEC04890000","DATALINK");
+    } 
+}
+*/
+
+//-- CMBS
+//-- 계좌번호1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno4_OnClick() {
+    if  (rstrctnAcno4.Data != "") {
+         Link.acNo                        =  rstrctnAcno4.Data;
+         Link.regiBndLedgrInquryKndDstcd  =  "01";
+	     ScreenOpen("KEE04N00000","DATALINK");
+    } 
+}
+*/
+
+//-- 투신
+//--계좌번호 1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno1_OnClick() {
+    if  (rstrctnAcno1.Data != "") {
+         Link.acno  =  rstrctnAcno1.Data;
+	     ScreenOpen("KFG04201000","DATALINK");
+    } 
+}
+*/
+
+//--계좌번호 2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno1_1_OnClick() {
+    if  (rstrctnAcno1_1.Data != "") {
+         Link.acno  =  rstrctnAcno1_1.Data;
+	     ScreenOpen("KFG04201000","DATALINK");
+    } 
+}
+*/
+
+//--계좌번호 2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno1_2_OnClick() {
+    if  (rstrctnAcno1_2.Data != "") {
+         Link.acno  =  rstrctnAcno1_2.Data;
+	     ScreenOpen("KFG04201000","DATALINK");
+    } 
+}
+*/
+
+//-- 보험
+//--계좌번호 1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno3_OnClick() {
+    if  (rstrctnAcno3.Data != "") {
+         Link.strAcno  =  rstrctnAcno3.Data;
+ 	     ScreenOpen("KFJ04410000","DATALINK");    
+    } 
+}
+*/
+
+//--계좌번호 2
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno3_1_OnClick() {
+    if  (rstrctnAcno3_1.Data != "") {
+         Link.strAcno  =  rstrctnAcno3_1.Data;
+ 	     ScreenOpen("KFJ04410000","DATALINK");    
+    } 
+}
+*/
+
+//--계좌번호 3
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno3_2_OnClick() {
+    if  (rstrctnAcno3_2.Data != "") {
+         Link.strAcno  =  rstrctnAcno3_2.Data;
+ 	     ScreenOpen("KFJ04410000","DATALINK");    
+    } 
+}
+*/
+
+//-- 공제
+//--계좌번호 1
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno10_OnClick() {
+    if  (rstrctnAcno10.Data != "") {
+         // [04-56-005] 노란우산공제계약상세조회는 계좌번호를 linkAcno로 받은 후 strAcno로 옮긴다
+         Link.linkAcno  =  rstrctnAcno10.Data;
+ 	     ScreenOpen("KFJ04R40000","DATALINK");   
+    } 
+}
+*/
+
+//-- 상품권
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnAcno11_OnClick() {
+    if  (rstrctnAcno11.value != "") {
+         Link.custIdnfr  = custIdnfr.Data
+         ScreenOpen("KGD04025001","DATALINK");
+    } 
+}
+*/
+
+//-- 선불카드
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function rstrctnTPrdctYna_OnClick() {
+    if  (rstrctnTPrdctYna.Data != "") {         
+         
+         if (this.IsNextCard() == true) {
+             //alert ("card link" +  cno.Data,"카드사");
+             this.CardLinkSetData("custCd",'05');
+             this.CardLinkSetData("ssno",cno.Data);
+             ScreenOpenCard("GEB01008M01");
+         } else {    
+             Link.custCd  = "05";
+             Link.ssno    =  cno.Data;
+	         ScreenOpen("KBA04109000","DATALINK");
+	     }
+    } 
+}
+*/
+
+//-- 시너지관리번호 2404xx
+/* 버튼으로 대체 - 직원용 단말화면 Re-Design 구축 프로젝트
+function snrgMgtNo_OnClick() {
+// 성과관리시스템 연계
+    if  (snrgMgtNo.Data != "") {
+         
+         WinPExecEx ("iexplore.exe", "http://kbsynergy.kbfng.com:1185/hdf/","" );   
+    } 
+
+
+
+}
+*/
+
+// ADD START (20150411) 하상구 : 1개월만기도래/B2B정보 추가 및 안내메시지 변경 ------------------
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button_A_OnClick(){
+    //-- [04-00-300] 고객정보조회
+	
+	Link.serchCustIdnfr  =  custIdnfr.Data;
+	ScreenOpen("KAA04300000","DATALINK");
+}
+*/
+
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button_B_OnClick(){
+
+    //-- [06-00-140] 고객기타관계설정등록
+	Link.schCustIdnfr  =  custIdnfr.Data;
+	ScreenOpen("KAA06140000","DATALINK");
+}
+*/
+
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button_C_OnClick(){
+
+    //-- [06-00-142] 법인사업자 관계 설정등록
+    Link.serchNoDstcd  =  "3";
+	Link.schCustIdnfr  =  custIdnfr.Data;
+	ScreenOpen("KAA06142000","DATALINK");
+}
+*/
+
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button_D_OnClick(){
+
+    //-- [04-22-004] 외상매출채권 정보조회 (212:판매기업 한도거래내역 조회)
+	
+	Link.inquryDstic  = "212";
+	Link.bzno         =  b2bBzno_2.Data;//b2bBzno->b2bBzno_2
+	ScreenOpen("KEA04201000","DATALINK");
+}
+*/
+// ADD END   (20150411) 하상구 : 1개월만기도래/B2B정보 추가 및 안내메시지 변경 ------------------
+
+
+// ADD (20160219) 구속성예금 해지원리금등록 링크 추가
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button_E_OnClick() {
+
+    //-- [06-10-103] 구속성예금 해지원리금 등록
+	
+	Link.custIdnfr  =  custIdnfr.Data;
+	ScreenOpen("KHC06050000","DATALINK");
+}
+*/
+
+/* 버튼을 링크텍스트로 변경 - 직원용 단말화면 Re-Design 구축 프로젝트
+function Button2_OnClick(){
+	//여기에 구현코드를 삽입하세요.
+	Link.slrBzno  =  slrBzno.Data; //셀러론사업자번호
+	ScreenOpen("KHC043C0000","DATALINK");
+}
+*/
+
+/**----------------------------------------------
+* @작성자  : 김현종
+* @작성일자: 2021.03.18
+* @내용설명:
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.Button3_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.popup("KFA04999B99", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 투신상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno1_OnClick = function(e) {
+    if (rstrctnAcno1.getValue() != "") {
+        Link.acno = rstrctnAcno1.getValue();
+        $c.iz.screen.screenOpen("KFG04201000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 투신상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno1_1_OnClick = function(e) {
+    if (rstrctnAcno1_1.getValue() != "") {
+        Link.acno = rstrctnAcno1_1.getValue();
+        $c.iz.screen.screenOpen("KFG04201000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 투신상품 계좌번호3 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno1_2_OnClick = function(e) {
+    if (rstrctnAcno1_2.getValue() != "") {
+        Link.acno = rstrctnAcno1_2.getValue();
+        $c.iz.screen.screenOpen("KFG04201000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 신탁상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno2_OnClick = function(e) {
+    if (rstrctnAcno2.getValue() != "") {
+        Link.acno = rstrctnAcno2.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 신탁상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno2_1_OnClick = function(e) {
+    if (rstrctnAcno2_1.getValue() != "") {
+        Link.acno = rstrctnAcno2_1.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 신탁상품 계좌번호3 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno2_2_OnClick = function(e) {
+    if (rstrctnAcno2_2.getValue() != "") {
+        Link.acno = rstrctnAcno2_2.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 보험상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno3_OnClick = function(e) {
+    if (rstrctnAcno3.getValue() != "") {
+        Link.strAcno = rstrctnAcno3.getValue();
+        $c.iz.screen.screenOpen("KEK04050000", "DATALINK"); //250827 업무코드(KFJ-> KEK)변경
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 보험상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno3_1_OnClick = function(e) {
+    if (rstrctnAcno3_1.getValue() != "") {
+        Link.strAcno = rstrctnAcno3_1.getValue();
+        $c.iz.screen.screenOpen("KEK04050000", "DATALINK"); //250827 업무코드(KFJ-> KEK)변경
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 보험상품 계좌번호3 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno3_2_OnClick = function(e) {
+    if (rstrctnAcno3_2.getValue() != "") {
+        Link.strAcno = rstrctnAcno3_2.getValue();
+        $c.iz.screen.screenOpen("KEK04050000", "DATALINK"); //250827 업무코드(KFJ-> KEK)변경
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 퇴직연금상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno6_OnClick = function(e) {
+    if (rstrctnAcno6.getValue() != "") {
+        Link.asstAcno = rstrctnAcno6.getValue();
+        $c.iz.screen.screenOpen("KEC04890000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 퇴직연금상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno6_1_OnClick = function(e) {
+    if (rstrctnAcno6_1.getValue() != "") {
+        Link.asstAcno = rstrctnAcno6_1.getValue();
+        $c.iz.screen.screenOpen("KEC04890000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 퇴직연금상품 계좌번호3 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno6_2_OnClick = function(e) {
+    if (rstrctnAcno6_2.getValue() != "") {
+        Link.asstAcno = rstrctnAcno6_2.getValue();
+        $c.iz.screen.screenOpen("KEC04890000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 적립식상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno5_OnClick = function(e) {
+    if (rstrctnAcno5.getValue() != "") {
+        Link.acno = rstrctnAcno5.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 적립식상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno5_1_OnClick = function(e) {
+    if (rstrctnAcno5_1.getValue() != "") {
+        Link.acno = rstrctnAcno5_1.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 적립식상품 계좌번호3 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno5_2_OnClick = function(e) {
+    if (rstrctnAcno5_2.getValue() != "") {
+        Link.acno = rstrctnAcno5_2.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 거치식상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno7_OnClick = function(e) {
+    if (rstrctnAcno7.getValue() != "") {
+        Link.acno = rstrctnAcno7.getValue();
+        Link.hndlnNo = rstrctnBuho7.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 거치식상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno7_1_OnClick = function(e) {
+    if (rstrctnAcno7_1.getValue() != "") {
+        Link.acno = rstrctnAcno7_1.getValue();
+        Link.hndlnNo = rstrctnBuho7_1.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 외화예금상품 계좌번호1 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno8_OnClick = function(e) {
+    if (rstrctnAcno8.getValue() != "") {
+        Link.acno = rstrctnAcno8.getValue();
+        Link.hndlnNo = rstrctnBuho8.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 외화예금상품 계좌번호2 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno8_1_OnClick = function(e) {
+    if (rstrctnAcno8_1.getValue() != "") {
+        Link.acno = rstrctnAcno8_1.getValue();
+        Link.hndlnNo = rstrctnBuho8_1.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 채권상품 계좌번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno4_OnClick = function(e) {
+    if (rstrctnAcno4.getValue() != "") {
+        Link.acNo = rstrctnAcno4.getValue();
+        Link.regiBndLedgrInquryKndDstcd = "01";
+        $c.iz.screen.screenOpen("KEE04N00000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > ISA상품 계좌번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno9_OnClick = function(e) {
+    if (rstrctnAcno9.getValue() != "") {
+        Link.acno = rstrctnAcno9.getValue();
+        $c.iz.screen.screenOpen("KFA04501000", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 공제상품 계좌번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno10_OnClick = function(e) {
+    if (rstrctnAcno10.getValue() != "") {
+        // [04-56-005] 노란우산공제계약상세조회는 계좌번호를 linkAcno로 받은 후 strAcno로 옮긴다
+        Link.linkAcno = rstrctnAcno10.getValue();
+        $c.iz.screen.screenOpen("KEK04R40000", "DATALINK"); //250827 업무코드(KFJ-> KEK)변경
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 상품권 계좌번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnAcno11_OnClick = function(e) {
+    if (rstrctnAcno11.getValue() != "") {
+        Link.custIdnfr = custIdnfr.getValue();
+        $c.iz.screen.screenOpen("KGD04025001", "DATALINK");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 선불카드 계좌번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_rstrctnTPrdctYna_OnClick = function(e) {
+    if (rstrctnTPrdctYna.getValue() != "") {
+        if (this.IsNextCard() == true) {
+            //alert ("card link" +  cno.Data,"카드사");
+            this.CardLinkSetData("custCd", '05');
+            this.CardLinkSetData("ssno", cno.getValue());
+            ScreenOpenCard("GEB01008M01");
+        } else {
+            Link.custCd = "05";
+            Link.ssno = cno.getValue();
+            $c.iz.screen.screenOpen("KBA04109000", "DATALINK");
+        }
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: 구속성예금 사전조회 조회결과 > 수신계좌 및 판매현황 > 수신성기여등록 시너지관리번호 조회 클릭 시 처리
+*            기존 에디트박스 클릭 이벤트 대체
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_snrgMgtNo_OnClick = function(e) {
+    // 성과관리시스템 연계
+    if (snrgMgtNo.getValue() != "") {
+        SysProc.Execute("iexplore.exe", "http://kbsynergy.kbfng.com:1185/hdf/", "");
+    }
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.18
+* @내용설명: KB-PIN 검색버튼 클릭 시 고객정보번호 조회 팝업 출력 및 입력
+*            기존 검색버튼 삭제 및 에디트박스 내 검색기능 사용
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.custIdnfr_OnSearchClick = function() {
+    if (custIdnfr.getValue() != "") {
+        // CHG (20150401) 하상구
+        Link.custIdnfr = custIdnfr.getValue();
+    }
+    $c.iz.screen.popup("KAA04900004", "DATALINK");
+    cno.setValue(Link.cuniqno);
+    custIdnfr.setValue(Link.custIdnfr); // ADD (20150401) 하상구
+    custnm.setValue(Link.custnm); // ADD (20150401) 하상구
+
+    //고객성명조회(팝업) Link 변수 초기화 (차세대단말팀 2009.07.11)
+    var CAA_cuniqno = Link.cuniqno;
+    var CAA_dtalsCustPtrnClsfiDstcd = Link.dtalsCustPtrnClsfiDstcd;
+    var CAA_custIdnfr = Link.custIdnfr;
+    var CAA_custMgtNo = Link.custMgtNo;
+    var CAA_custnm = Link.custnm;
+    var CAA_fnameErrDstcd = Link.fnameErrDstcd;
+    var CAA_fnameErrDsticName = Link.fnameErrDsticName;
+    //고객성명조회(팝업) Link 변수 초기화 종료(차세대단말팀 2009.07.11)
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: 고객정보조회 링크 클릭 시 고객종합정보조회 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_A_OnClick = function(e) {
+    //-- [04-00-300] 고객정보조회
+
+    Link.serchCustIdnfr = custIdnfr.getValue();
+    $c.iz.screen.screenOpen("KAA04300000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: 고객기타관계설정등록 링크 클릭 시 고객기타관계설정등록 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_B_OnClick = function(e) {
+    //-- [06-00-140] 고객기타관계설정등록
+    Link.schCustIdnfr = custIdnfr.getValue();
+    $c.iz.screen.screenOpen("KAA06140000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: 법인사업자관계설정등록 링크 클릭 시 법인사업자관계설정등록 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_C_OnClick = function(e) {
+    //-- [06-00-142] 법인사업자 관계 설정등록
+    Link.serchNoDstcd = "3";
+    Link.schCustIdnfr = custIdnfr.getValue();
+    $c.iz.screen.screenOpen("KAA06142000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: 외상매출채권 정보조회 링크 클릭 시 외상매출채권 정보조회 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_D_OnClick = function(e) {
+    //-- [04-22-004] 외상매출채권 정보조회 (212:판매기업 한도거래내역 조회)
+
+    Link.inquryDstic = "212";
+    Link.bzno = b2bBzno_2.getValue(); //b2bBzno->b2bBzno_2
+    $c.iz.screen.screenOpen("KEA04201000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: 해지원리금 등록(재예치 관련) 링크 클릭 시 구속성예금 해지원리금 등록 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText_E_OnClick = function(e) {
+    //-- [06-10-103] 구속성예금 해지원리금 등록
+
+    Link.custIdnfr = custIdnfr.getValue();
+    $c.iz.screen.screenOpen("KHC06050000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.02.19
+* @내용설명: KB셀러론 정보조회 링크 클릭 시 KB셀러론 관련 정보 조회 화면 출력 및 조회
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.LinkText2_OnClick = function(e) {
+    Link.slrBzno = slrBzno.getValue(); //셀러론사업자번호
+    $c.iz.screen.screenOpen("KHC043C0000", "DATALINK");
+};
+
+/**----------------------------------------------
+* @작성자  : 남병천
+* @작성일자: 2025.03.06
+* @내용설명: 폴더여는 작업 시 연계서식 화면 열리기
+*            직원용 단말화면 Re-Design 구축 프로젝트
+* @인자내용:
+* @리턴내용:
+----------------------------------------------**/
+scwin.GroupBoxLinkForm_OnTabFolded = function(bFold) {
+    if (bFold == 0) {
+        $c.iz.data.setChildControlData("bzwkScrenNo.Data", "KFA04151000", "PanelLinkForm", "1");
+        $c.iz.data.setChildData("setFxdfList(1)", "PanelLinkForm");
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="구속성예금 관련 사전조회" meta_screenId="KFA04151000" groupcocd="KB0" scncall="0410151" keyword="구속성예금조회; 구속성예금사전조회" customclass="Kes" style="background-color:rgb(248,248,248); width:1075px; height:2610px;" screentype="AType" meta_author="KANGKYUNGYUP" meta_user="2543144(신유빈)" meata_date="2010/12/03 09:10:28" savezorder="0" internaltop="1" minisingleview="0" snaptogrid="1" gridstepx="4" gridstepy="4" gridshape="Line" screendivide="6" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" UIStyle="KB_2024" uistylerev="2" class="content_body conversion_2024">
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:8px; width:1036px; height:84px;" tab="1" id="GroupBox1" tabIndex="1" uistyle="KB_2024" uistyleid="MasterSearch" orgid="GroupBox1" hierarchy="GroupBox1" class="kb_MasterSearch">
+				<w2:kb_input ctype="Edit" style="position:absolute; left:333px; top:40px; width:130px; height:28px;" id="custIdnfr" indicator="고객식별자" tabIndex="1" uistyle="KB_2024" editFormat="99999-99999" maxlength="11" mandatory="true" class="req" showsearchbutton="1" onsearchclick="custIdnfr_OnSearchClick" orgid="custIdnfr" hierarchy="custIdnfr" ev:onviewchange="scwin.custIdnfr_OnValidate" ref="data:dma_KFA04151000.custIdnfr"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:655px; top:40px; width:119px; height:28px;" id="date" indicator="기산년월일" tabIndex="2" uistyle="KB_2024" maxlength="10" validationtype="유효날짜검증" showcalendarbutton="1" orgid="date" hierarchy="date" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.date"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:655px; top:12px; width:78px; height:28px; align:middleleft; text-align:middleleft;" id="Text2" tabIndex="3" uistyle="KB_2024" label="조회기준일자" orgid="Text2" hierarchy="Text2" class="kb_MiddleLeft"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:333px; top:12px; width:66px; height:28px; align:middleleft; text-align:middleleft;" id="Text1" tabIndex="4" uistyle="KB_2024" label="KB-PIN" mandatory="true" class="req kb_MiddleLeft" orgid="Text1" hierarchy="Text1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:16px; top:12px; width:65px; height:28px; align:middleleft; text-align:middleleft;" id="Text33" tabIndex="5" uistyle="KB_2024" label="조회구분" mandatory="true" class="req kb_MiddleLeft" orgid="Text33" hierarchy="Text33"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:471px; top:11px; width:126px; height:28px; display:none;" id="cno" indicator="고객번호" tabIndex="6" uistyle="KB_2024" editFormat="999999-9999999" maxlength="14" multipattern="사업자/주민번호" allowChar="a-z,A-Z,0-9" orgid="cno" hierarchy="cno" ref="data:dma_KFA04151000.cno"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:467px; top:40px; width:160px; height:28px;" id="custnm" indicator="고객명" tabIndex="7" autosize="0" uistyle="KB_2024" editDisplayChar="*" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" readOnly="true" MPatternMaskingLen="36" orgid="custnm" hierarchy="custnm"/>
+				<xf:image ctype="Picture" style="position:absolute; left:392px; top:11px; width:24px; height:28px; color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="Picture1" tooltip="법인인 경우 법인사업자의 KB-PIN 입력" tabIndex="8" tabstop="0" enterstop="0" backcolor="16777215" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" uistyle="KB_2024" uistyleid="Default" sizemode="CenterImage" infotype="Help" infochatbotbiz="수신/청약" path="ico_help.png" orgid="Picture1" hierarchy="Picture1"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:16px; top:40px; width:289px; height:28px;" id="jo_gbn" indicator="조회구분" tabIndex="9" autosize="0" uistyle="KB_2024" mandatory="true" class="req" delimiter=" - " displayMode="value delim label" initvalue="0" index="0" items="1=구속성예금 사전조회;2=해지원리금(재예치 가능금액)조회;" appearance="minimal" orgid="jo_gbn" hierarchy="jo_gbn" selectedIndex="0" ref="data:dma_KFA04151000.jo_gbn">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[구속성예금 사전조회]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[해지원리금(재예치 가능금액)조회]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:80px; top:2628px; width:114px; height:28px; display:none;" id="Text_tstredposablamt" tabIndex="2" uistyle="KB_2024" label="신탁상품해지원리금" orgid="Text_tstredposablamt" hierarchy="Text_tstredposablamt" class="kb_MiddleRight"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:82px; top:2666px; width:114px; height:28px; display:none;" id="Text_bndbredposablamt" tabIndex="3" uistyle="KB_2024" label="금융채권해지원리금" orgid="Text_bndbredposablamt" hierarchy="Text_bndbredposablamt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:212px; top:2666px; width:153px; height:28px; display:none; text-align:right;" id="bndbredposablamt" indicator="금융채권재예치가능금액" tabIndex="4" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="bndbredposablamt" hierarchy="bndbredposablamt" ref="data:dma_KFA04151000.bndbredposablamt"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:744px; top:2666px; width:153px; height:28px; display:none; text-align:right;" id="bndbmnauc" indicator="금융채권재예치가능월환산금액" tabIndex="5" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="bndbmnauc" hierarchy="bndbmnauc" ref="data:dma_KFA04151000.bndbmnauc"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:550px; top:2666px; width:174px; height:28px; display:none;" id="Text_bndbmnauc" tabIndex="6" uistyle="KB_2024" label="금융채권해지원리금월환산금액" orgid="Text_bndbmnauc" hierarchy="Text_bndbmnauc" class="kb_MiddleRight"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:550px; top:2628px; width:174px; height:28px; display:none;" id="Text_tstmnauc" tabIndex="7" uistyle="KB_2024" label="신탁상품해지원리금월환산금액" orgid="Text_tstmnauc" hierarchy="Text_tstmnauc" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:744px; top:2628px; width:153px; height:28px; display:none; text-align:right;" id="tstmnauc" indicator="신탁상품재예치가능월환산금액" tabIndex="8" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="tstmnauc" hierarchy="tstmnauc" ref="data:dma_KFA04151000.tstmnauc"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:744px; top:2704px; width:153px; height:28px; display:none; text-align:right;" id="invsttstmnauc" indicator="투자신탁재예치가능월환산금액" tabIndex="9" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="invsttstmnauc" hierarchy="invsttstmnauc" ref="data:dma_KFA04151000.invsttstmnauc"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:550px; top:2704px; width:174px; height:28px; display:none;" id="Text_invsttstmnauc" tabIndex="10" uistyle="KB_2024" label="투자신탁해지원리금월환산금액" orgid="Text_invsttstmnauc" hierarchy="Text_invsttstmnauc" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:212px; top:2704px; width:153px; height:28px; display:none; text-align:right;" id="ivststdposablamt" indicator="투자신탁재예치가능금액" tabIndex="11" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="ivststdposablamt" hierarchy="ivststdposablamt" ref="data:dma_KFA04151000.ivststdposablamt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:82px; top:2704px; width:114px; height:28px; display:none;" id="Text_ivststdposablamt" tabIndex="12" uistyle="KB_2024" label="투자신탁해지원리금" orgid="Text_ivststdposablamt" hierarchy="Text_ivststdposablamt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:212px; top:2628px; width:153px; height:28px; display:none; text-align:right;" id="tstredposablamt" indicator="신탁상품재예치가능금액" tabIndex="13" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="tstredposablamt" hierarchy="tstredposablamt" ref="data:dma_KFA04151000.tstredposablamt"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:444px; width:1048px; height:1066px; display:none;" tab="14" id="GroupBox3" tabIndex="14" uistyle="KB_2024" uistyleid="Default_Grouping" dynamicmove="1" orgid="GroupBox3" hierarchy="GroupBox3">
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:257px; width:1036px; height:235px;" tab="1" id="GroupBox5_9_16" tabIndex="1" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox5_9_16" hierarchy="GroupBox5_9_16">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:184px; width:468px; height:28px;" id="Text75_81_82" tabIndex="1" uistyle="KB_2024" label="※&amp;nbsp;외상매출채권&amp;nbsp;판매기업&amp;nbsp;한도약정&amp;nbsp;및&amp;nbsp;KB셀러론&amp;nbsp;한도약정도&amp;nbsp;여신취급에&amp;nbsp;해당합니다." orgid="Text75_81_82" hierarchy="Text75_81_82" escape="false" class="kb_MiddleRight"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:206px; width:648px; height:28px;" id="Text75_81_82_83" tabIndex="2" uistyle="KB_2024" label="※&amp;nbsp;기존&amp;nbsp;외상매출채권&amp;nbsp;및&amp;nbsp;KB셀러론&amp;nbsp;한도가&amp;nbsp;약정된&amp;nbsp;경우&amp;nbsp;1개월&amp;nbsp;이내&amp;nbsp;한도증액&amp;nbsp;또는&amp;nbsp;재약정&amp;nbsp;여부를&amp;nbsp;확인하시기&amp;nbsp;바랍니다." orgid="Text75_81_82_83" hierarchy="Text75_81_82_83" escape="false" class="kb_MiddleRight"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:643px; top:206px; width:362px; height:28px;" id="Text75_81_82_83_84" tabIndex="3" uistyle="KB_2024" label="(아래&amp;nbsp;외상매출채권&amp;nbsp;정보조회&amp;nbsp;또는&amp;nbsp;KB셀러론&amp;nbsp;정보조회&amp;nbsp;링크&amp;nbsp;이용)" orgid="Text75_81_82_83_84" hierarchy="Text75_81_82_83_84" escape="false" class="kb_MiddleRight"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:350px; height:28px; align:middleleft; text-align:middleleft;" id="Text138" tabIndex="4" uistyle="KB_2024" uistyleid="H3" label="외매채(B2B)&amp;nbsp;판매기업&amp;nbsp;및&amp;nbsp;KB셀러론&amp;nbsp;한도약정&amp;nbsp;현황" orgid="Text138" hierarchy="Text138" escape="false" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:59px; width:176px; height:32px;" id="Text_bzno_2" tabIndex="11" uistyle="KB_2024" uistyleid="TH-Body" label="한도약정사업자" orgid="Text_bzno_2" hierarchy="Text_bzno_2" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:90px; width:176px; height:32px;" id="Text_bznoNm_2" tabIndex="12" uistyle="KB_2024" uistyleid="TH-Body" label="한도약정고객명" orgid="Text_bznoNm_2" hierarchy="Text_bznoNm_2" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:121px; width:176px; height:32px;" id="Text_newYmd_2" tabIndex="13" uistyle="KB_2024" uistyleid="TH-Body" label="한도약정신규일" orgid="Text_newYmd_2" hierarchy="Text_newYmd_2" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:152px; width:176px; height:32px;" id="Text_ymd_2" tabIndex="14" uistyle="KB_2024" uistyleid="TH-Body" label="한도약정만기일" orgid="Text_ymd_2" hierarchy="Text_ymd_2" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:606px; top:28px; width:430px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text139" tabIndex="17" uistyle="KB_2024" uistyleid="TH-Head" label="KB셀러론" orgid="Text139" hierarchy="Text139" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:176px; top:28px; width:430px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text140" tabIndex="18" uistyle="KB_2024" uistyleid="TH-Head" label="외매채(B2B)" orgid="Text140" hierarchy="Text140" class="kb_MiddleCenter kb_th_head"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:28px; width:176px; height:32px;" tab="19" id="GroupBox53" tabIndex="19" uistyle="KB_2024" uistyleid="TH-Head" orgid="GroupBox53" hierarchy="GroupBox53" class="kb_th_head"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:59px; width:430px; height:32px;" tab="20" id="GroupBox54" tabIndex="20" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox54" hierarchy="GroupBox54" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="b2bBzno_2" indicator="B2B사업자번호" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" editFormat="999-99-99999" maxlength="12" orgid="b2bBzno_2" hierarchy="b2bBzno_2" ref="data:dma_KFA04151000.b2bBzno_2"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:606px; top:59px; width:430px; height:32px;" tab="21" id="GroupBox55" tabIndex="21" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox55" hierarchy="GroupBox55" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="slrBzno" indicator="셀러론사업자번호" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" editFormat="999-99-99999" maxlength="12" orgid="slrBzno" hierarchy="slrBzno" ref="data:dma_KFA04151000.slrBzno"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:90px; width:430px; height:32px;" tab="22" id="GroupBox56" tabIndex="22" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox56" hierarchy="GroupBox56" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="b2bBznoNm_2" indicator="B2B사업자명" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="52" imeMode="반자" orgid="b2bBznoNm_2" hierarchy="b2bBznoNm_2" ref="data:dma_KFA04151000.b2bBznoNm_2"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:121px; width:430px; height:32px;" tab="23" id="GroupBox57" tabIndex="23" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox57" hierarchy="GroupBox57" class="kb_td_body_right">
+						<w2:inputCalendar ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="b2bnewYmd_2" indicator="B2B한도약정신규일" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" maxlength="10" orgid="b2bnewYmd_2" hierarchy="b2bnewYmd_2" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.b2bnewYmd_2"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:152px; width:430px; height:32px;" tab="24" id="GroupBox58" tabIndex="24" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox58" hierarchy="GroupBox58" class="kb_td_body_right">
+						<w2:inputCalendar ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="b2bYmd_2" indicator="B2B한도약정만기일" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" maxlength="10" orgid="b2bYmd_2" hierarchy="b2bYmd_2" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.b2bYmd_2"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:606px; top:90px; width:430px; height:32px;" tab="25" id="GroupBox59" tabIndex="25" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox59" hierarchy="GroupBox59" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="Edit9_11" indicator="셀러론한도약정고객명" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="52" imeMode="반자" orgid="Edit9_11" hierarchy="Edit9_11" ref="data:dma_KFA04151000.Edit9_11"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:606px; top:121px; width:430px; height:32px;" tab="26" id="GroupBox60" tabIndex="26" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox60" hierarchy="GroupBox60" class="kb_td_body">
+						<w2:inputCalendar ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="slrNewYmd" indicator="셀러론한도약정신규일" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" maxlength="10" orgid="slrNewYmd" hierarchy="slrNewYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.slrNewYmd"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:606px; top:152px; width:430px; height:32px;" tab="27" id="GroupBox61" tabIndex="27" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox61" hierarchy="GroupBox61" class="kb_td_body">
+						<w2:inputCalendar ctype="Edit" style="position:absolute; left:121px; top:2px; width:180px; height:28px;" id="slrYmd" indicator="셀러론한도약정만기일" tabIndex="1" autosize="0" disabled="true" uistyle="KB_2024" maxlength="10" orgid="slrYmd" hierarchy="slrYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.slrYmd"/>
+					</xf:group>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:0px; top:60px; width:90px; height:29px; align:middleleft; text-align:middleleft;" id="Text131" tabIndex="2" uistyle="KB_2024" uistyleid="H2" label="조회결과" orgid="Text131" hierarchy="Text131" class="kb_MiddleLeft kb_title_h2"/>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:89px; width:1036px; height:38px;" tab="3" id="GroupBox6_10" tabIndex="3" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox6_10" hierarchy="GroupBox6_10">
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:0px; width:858px; height:32px;" tab="1" id="GroupBox46" tabIndex="1" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox46" hierarchy="GroupBox46" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:177px; height:28px;" id="cno_dstcd" indicator="구속성대상구분코드" tabIndex="1" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="20" imeMode="반자" readOnly="true" orgid="cno_dstcd" hierarchy="cno_dstcd" ref="data:dma_KFA04151000.cno_dstcd"/>
+					</xf:group>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:176px; height:32px;" id="Text6_23" tabIndex="2" uistyle="KB_2024" uistyleid="TH-Head" label="고객구분" orgid="Text6_23" hierarchy="Text6_23" class="kb_MiddleRight kb_th_head"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:128px; width:1036px; height:127px;" tab="4" id="GroupBox5_9" tabIndex="4" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox5_9" hierarchy="GroupBox5_9">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:90px; width:176px; height:32px;" id="Text22_81" tabIndex="4" uistyle="KB_2024" uistyleid="TH-Body" label="여신구분" orgid="Text22_81" hierarchy="Text22_81" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:59px; width:176px; height:32px;" id="Text_Acno" tabIndex="6" uistyle="KB_2024" uistyleid="TH-Body" label="여신계좌번호" orgid="Text_Acno" hierarchy="Text_Acno" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:28px; width:176px; height:32px;" id="Text_Gubun" tabIndex="8" uistyle="KB_2024" uistyleid="TH-Head" label="여신신청(예정)대상구분" orgid="Text_Gubun" hierarchy="Text_Gubun" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:28px; width:176px; height:32px;" id="Text4_23_81" tabIndex="11" uistyle="KB_2024" uistyleid="TH-Head" label="여신고객" orgid="Text4_23_81" hierarchy="Text4_23_81" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:90px; width:176px; height:32px;" id="Text_LnAmt" tabIndex="12" uistyle="KB_2024" uistyleid="TH-Body" label="여신실행(예정)금액" orgid="Text_LnAmt" hierarchy="Text_LnAmt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:59px; width:176px; height:32px;" id="Text_LnYmd" tabIndex="13" uistyle="KB_2024" uistyleid="TH-Body" label="여신실행(예정)일자" orgid="Text_LnYmd" hierarchy="Text_LnYmd" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:59px; width:176px; height:32px; display:none;" id="Text_Bzno" tabIndex="14" uistyle="KB_2024" uistyleid="TH-Body" label="사업자번호" orgid="Text_Bzno" hierarchy="Text_Bzno" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:59px; width:176px; height:32px; display:none;" id="Text_ExYmd" tabIndex="15" uistyle="KB_2024" uistyleid="TH-Body" label="여신만기일자" orgid="Text_ExYmd" hierarchy="Text_ExYmd" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:90px; width:176px; height:32px; display:none;" id="Text_ExAmt" tabIndex="16" uistyle="KB_2024" uistyleid="TH-Body" label="만기도래(예정)금액" orgid="Text_ExAmt" hierarchy="Text_ExAmt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:82px; height:28px; align:middleleft; text-align:middleleft;" id="Text136" tabIndex="17" uistyle="KB_2024" uistyleid="H3" label="여신현황" orgid="Text136" hierarchy="Text136" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:86px; top:0px; width:264px; height:28px; align:middleleft; text-align:middleleft;" id="Text137" tabIndex="18" uistyle="KB_2024" label="※&amp;nbsp;조회기준일&amp;nbsp;전후&amp;nbsp;1개월&amp;nbsp;이내&amp;nbsp;실행(예정)&amp;nbsp;여신" orgid="Text137" hierarchy="Text137" escape="false" class="kb_MiddleLeft"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:28px; width:341px; height:32px;" tab="19" id="GroupBox47" tabIndex="19" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox47" hierarchy="GroupBox47" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="lnbzCustIdnfr" indicator="여신고객식별자" tabIndex="1" autosize="0" uistyle="KB_2024" editFormat="99999-99999" maxlength="11" imeMode="반자" readOnly="true" orgid="lnbzCustIdnfr" hierarchy="lnbzCustIdnfr" ref="data:dma_KFA04151000.lnbzCustIdnfr"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:147px; top:2px; width:114px; height:28px;" id="lnbzRelshp" indicator="여신관계구분" tabIndex="2" autosize="0" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ksc5601="1" orgid="lnbzRelshp" hierarchy="lnbzRelshp"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:28px; width:341px; height:32px;" tab="20" id="GroupBox48" tabIndex="20" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox48" hierarchy="GroupBox48" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:193px; height:28px;" id="Edit8" indicator="여신신청(예정)대상구분" tabIndex="1" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" orgid="Edit8" hierarchy="Edit8" ref="data:dma_KFA04151000.Edit8"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:59px; width:341px; height:32px;" tab="21" id="GroupBox49" tabIndex="21" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox49" hierarchy="GroupBox49" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="Edit5_8" indicator="여신계좌번호" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" multipattern="계좌번호" orgid="Edit5_8" hierarchy="Edit5_8" ref="data:dma_KFA04151000.Edit5_8"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:59px; width:341px; height:32px;" tab="22" id="GroupBox50" tabIndex="22" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox50" hierarchy="GroupBox50" class="kb_td_body">
+						<w2:inputCalendar ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px;" id="Edit7_8" indicator="여신실행(예정)일자" tabIndex="1" autosize="0" uistyle="KB_2024" maxlength="10" readOnly="true" orgid="Edit7_8" hierarchy="Edit7_8" displayFormat="yyyy/MM/dd" ref="data:dma_KFA04151000.Edit7_8"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:90px; width:341px; height:32px;" tab="23" id="GroupBox51" tabIndex="23" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox51" hierarchy="GroupBox51" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:257px; height:28px;" id="lnbzInfoDstic" indicator="여신정보구분" tabIndex="1" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="30" imeMode="반자" readOnly="true" orgid="lnbzInfoDstic" hierarchy="lnbzInfoDstic" ref="data:dma_KFA04151000.lnbzInfoDstic"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:90px; width:341px; height:32px;" tab="24" id="GroupBox52" tabIndex="24" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox52" hierarchy="GroupBox52" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="lnbzamt" indicator="여신실행(예정)금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" readOnly="true" insertcomma="1" rightalign="1" orgid="lnbzamt" hierarchy="lnbzamt" ref="data:dma_KFA04151000.lnbzamt"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text150" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text150" hierarchy="Text150" class="kb_MiddleCenter"/>
+					</xf:group>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:972px; width:1036px; height:92px;" tab="5" id="GroupBox5_9_16_16" tabIndex="5" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox5_9_16_16" hierarchy="GroupBox5_9_16_16">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:28px; width:207px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text_b2bBzno_97" tabIndex="1" uistyle="KB_2024" uistyleid="TH-Head" label="적립식" orgid="Text_b2bBzno_97" hierarchy="Text_b2bBzno_97" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:207px; top:28px; width:207px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text_b2bBznoNm_97" tabIndex="2" uistyle="KB_2024" uistyleid="TH-Head" label="거치식" orgid="Text_b2bBznoNm_97" hierarchy="Text_b2bBznoNm_97" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:414px; top:28px; width:207px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text7_21_80_81_97" tabIndex="3" uistyle="KB_2024" uistyleid="TH-Head" label="공제상품" orgid="Text7_21_80_81_97" hierarchy="Text7_21_80_81_97" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:621px; top:28px; width:207px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text7_21_80_81_97_98" tabIndex="4" uistyle="KB_2024" uistyleid="TH-Head" label="상품권" orgid="Text7_21_80_81_97_98" hierarchy="Text7_21_80_81_97_98" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:828px; top:28px; width:207px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text7_21_80_81_97_98_99" tabIndex="5" uistyle="KB_2024" uistyleid="TH-Head" label="선불카드" orgid="Text7_21_80_81_97_98_99" hierarchy="Text7_21_80_81_97_98_99" class="kb_MiddleCenter kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:143px; height:28px; align:middleleft; text-align:middleleft;" id="Text141" tabIndex="6" uistyle="KB_2024" uistyleid="H3" label="상품별&amp;nbsp;월환산금액" orgid="Text141" hierarchy="Text141" escape="false" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:147px; top:0px; width:242px; height:28px;" id="Text142" tabIndex="7" uistyle="KB_2024" label="※&amp;nbsp;조회기준일&amp;nbsp;전후&amp;nbsp;1개월&amp;nbsp;이내&amp;nbsp;신규분&amp;nbsp;합산" orgid="Text142" hierarchy="Text142" escape="false" class="kb_MiddleRight"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:59px; width:207px; height:32px;" tab="8" id="GroupBox62" tabIndex="8" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox62" hierarchy="GroupBox62" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:24px; top:2px; width:145px; height:28px; text-align:right;" id="b2bBzno_47" indicator="적립식월환산금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" imeMode="반자" readOnly="true" insertcomma="1" rightalign="1" orgid="b2bBzno_47" hierarchy="b2bBzno_47" ref="data:dma_KFA04151000.b2bBzno_47"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:169px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text145" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text145" hierarchy="Text145" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:207px; top:59px; width:207px; height:32px;" tab="9" id="GroupBox63" tabIndex="9" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox63" hierarchy="GroupBox63" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:24px; top:2px; width:145px; height:28px; text-align:right;" id="b2bBzno_47_48" indicator="거치식월환산금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" imeMode="반자" readOnly="true" insertcomma="1" rightalign="1" orgid="b2bBzno_47_48" hierarchy="b2bBzno_47_48" ref="data:dma_KFA04151000.b2bBzno_47_48"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:169px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text146" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text146" hierarchy="Text146" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:414px; top:59px; width:207px; height:32px;" tab="10" id="GroupBox64" tabIndex="10" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox64" hierarchy="GroupBox64" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:24px; top:2px; width:145px; height:28px; text-align:right;" id="b2bBzno_47_48_50" indicator="공제상품월환산금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" imeMode="반자" readOnly="true" insertcomma="1" rightalign="1" orgid="b2bBzno_47_48_50" hierarchy="b2bBzno_47_48_50" ref="data:dma_KFA04151000.b2bBzno_47_48_50"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:169px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text147" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text147" hierarchy="Text147" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:621px; top:59px; width:207px; height:32px;" tab="11" id="GroupBox65" tabIndex="11" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox65" hierarchy="GroupBox65" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:24px; top:2px; width:145px; height:28px; text-align:right;" id="b2bBzno_47_49_51" indicator="상품권월환산금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" imeMode="반자" readOnly="true" insertcomma="1" rightalign="1" orgid="b2bBzno_47_49_51" hierarchy="b2bBzno_47_49_51" ref="data:dma_KFA04151000.b2bBzno_47_49_51"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:169px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text148" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text148" hierarchy="Text148" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:828px; top:59px; width:207px; height:32px;" tab="12" id="GroupBox66" tabIndex="12" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox66" hierarchy="GroupBox66" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:24px; top:2px; width:145px; height:28px; text-align:right;" id="b2bBzno_47_48_50_52" indicator="선불카드월환산금액" tabIndex="1" uistyle="KB_2024" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" imeMode="반자" readOnly="true" insertcomma="1" rightalign="1" orgid="b2bBzno_47_48_50_52" hierarchy="b2bBzno_47_48_50_52" ref="data:dma_KFA04151000.b2bBzno_47_48_50_52"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:169px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text149" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text149" hierarchy="Text149" class="kb_MiddleCenter"/>
+					</xf:group>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:490px; width:1036px; height:484px;" tab="6" id="GroupBox4_16_16" tabIndex="6" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox4_16_16" hierarchy="GroupBox4_16_16">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:214px; width:176px; height:32px;" id="Text12_87_88_88_91_92" tabIndex="1" uistyle="KB_2024" uistyleid="TH-Body" label="외화예금상품" orgid="Text12_87_88_88_91_92" hierarchy="Text12_87_88_88_91_92" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:307px; width:176px; height:32px;" id="Text12_87_88_88_89_90_91_91" tabIndex="2" uistyle="KB_2024" uistyleid="TH-Body" label="공제상품" orgid="Text12_87_88_88_89_90_91_91" hierarchy="Text12_87_88_88_89_90_91_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:276px; width:176px; height:32px;" id="Text12_87_88_88_89_90_91" tabIndex="3" uistyle="KB_2024" uistyleid="TH-Body" label="ISA&amp;nbsp;상품" orgid="Text12_87_88_88_89_90_91" hierarchy="Text12_87_88_88_89_90_91" escape="false" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:183px; width:176px; height:32px;" id="Text12_87_88_88_91" tabIndex="4" uistyle="KB_2024" uistyleid="TH-Body" label="거치식상품" orgid="Text12_87_88_88_91" hierarchy="Text12_87_88_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:121px; width:176px; height:32px;" id="Text12_87_88_91" tabIndex="5" uistyle="KB_2024" uistyleid="TH-Body" label="퇴직연금상품" orgid="Text12_87_88_91" hierarchy="Text12_87_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:338px; width:176px; height:32px;" id="Text_mrcpamt_88_91" tabIndex="6" uistyle="KB_2024" uistyleid="TH-Body" label="상품권&amp;nbsp;" orgid="Text_mrcpamt_88_91" hierarchy="Text_mrcpamt_88_91" escape="false" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:90px; width:176px; height:32px;" id="Text14_88_91" tabIndex="7" uistyle="KB_2024" uistyleid="TH-Body" label="보험상품" orgid="Text14_88_91" hierarchy="Text14_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:28px; width:176px; height:32px;" id="Text8_88_91" tabIndex="8" uistyle="KB_2024" uistyleid="TH-Body" label="투신상품" orgid="Text8_88_91" hierarchy="Text8_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:59px; width:176px; height:32px;" id="Text9_88_91" tabIndex="9" uistyle="KB_2024" uistyleid="TH-Body" label="신탁상품" orgid="Text9_88_91" hierarchy="Text9_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:245px; width:176px; height:32px;" id="Text11_a_88_91" tabIndex="10" uistyle="KB_2024" uistyleid="TH-Body" label="채권상품" orgid="Text11_a_88_91" hierarchy="Text11_a_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:152px; width:176px; height:32px;" id="Text12_88_91" tabIndex="11" uistyle="KB_2024" uistyleid="TH-Body" label="적립식상품" orgid="Text12_88_91" hierarchy="Text12_88_91" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:369px; width:176px; height:32px;" id="Text_cardamt_88_91" tabIndex="12" uistyle="KB_2024" uistyleid="TH-Body" label="선불카드&amp;nbsp;" orgid="Text_cardamt_88_91" hierarchy="Text_cardamt_88_91" escape="false" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:432px; width:840px; height:28px; align:middleleft; text-align:middleleft;" id="Text75_81_88_91" tabIndex="13" uistyle="KB_2024" label="※&amp;nbsp;수신성&amp;nbsp;기여등록&amp;nbsp;내역&amp;nbsp;확인경로:&amp;nbsp;시너지성과관리시스템&amp;nbsp;&gt;&amp;nbsp;기여&amp;nbsp;&gt;&amp;nbsp;기여내역조회.&amp;nbsp;조회결과&amp;nbsp;없을시,&amp;nbsp;SME시너지&amp;nbsp;담당자(4669,3149)에게&amp;nbsp;연락&amp;nbsp;바랍니다." orgid="Text75_81_88_91" hierarchy="Text75_81_88_91" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:454px; width:944px; height:28px; align:middleleft; text-align:middleleft;" id="Text75_81_85_88_91" tabIndex="14" uistyle="KB_2024" label="※&amp;nbsp;구속성예금&amp;nbsp;예외사유(재예치&amp;nbsp;등)를&amp;nbsp;입력하여&amp;nbsp;예외취급한&amp;nbsp;경우&amp;nbsp;및&amp;nbsp;상품별&amp;nbsp;최대&amp;nbsp;계좌수&amp;nbsp;초과시에는&amp;nbsp;동&amp;nbsp;화면에서&amp;nbsp;조회되지&amp;nbsp;않으므로,&amp;nbsp;아래&amp;nbsp;고객정보조회를&amp;nbsp;통해&amp;nbsp;확인&amp;nbsp;바랍니다." orgid="Text75_81_85_88_91" hierarchy="Text75_81_85_88_91" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:162px; height:28px; align:middleleft; text-align:middleleft;" id="Text143" tabIndex="15" uistyle="KB_2024" uistyleid="H3" label="수신계좌&amp;nbsp;및&amp;nbsp;판매현황" orgid="Text143" hierarchy="Text143" escape="false" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:166px; top:0px; width:258px; height:28px; align:middleleft; text-align:middleleft;" id="Text144" tabIndex="16" uistyle="KB_2024" label="※&amp;nbsp;조회기준일&amp;nbsp;전후&amp;nbsp;1개월&amp;nbsp;이내&amp;nbsp;신규된&amp;nbsp;예금&amp;nbsp;등" orgid="Text144" hierarchy="Text144" escape="false" class="kb_MiddleLeft"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:28px; width:286px; height:32px;" tab="18" id="GroupBox68" tabIndex="18" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox68" hierarchy="GroupBox68" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno1" indicator="투신구속성대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno1_OnClick" orgid="rstrctnAcno1" hierarchy="rstrctnAcno1" ref="data:dma_KFA04151000.rstrctnAcno1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno1_OnClick" orgid="LinkText_rstrctnAcno1" hierarchy="LinkText_rstrctnAcno1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:59px; width:286px; height:32px;" tab="19" id="GroupBox69" tabIndex="19" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox69" hierarchy="GroupBox69" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno2" indicator="외화구속성대상상품회차3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno2_OnClick" orgid="rstrctnAcno2" hierarchy="rstrctnAcno2" ref="data:dma_KFA04151000.rstrctnAcno2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno2_OnClick" orgid="LinkText_rstrctnAcno2" hierarchy="LinkText_rstrctnAcno2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:90px; width:286px; height:32px;" tab="20" id="GroupBox70" tabIndex="20" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox70" hierarchy="GroupBox70" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno3" indicator="방카구속성대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno3_OnClick" orgid="rstrctnAcno3" hierarchy="rstrctnAcno3" ref="data:dma_KFA04151000.rstrctnAcno3"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno3" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno3_OnClick" orgid="LinkText_rstrctnAcno3" hierarchy="LinkText_rstrctnAcno3" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:121px; width:286px; height:32px;" tab="21" id="GroupBox71" tabIndex="21" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox71" hierarchy="GroupBox71" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno6" indicator="거치식구속대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno6_OnClick" orgid="rstrctnAcno6" hierarchy="rstrctnAcno6" ref="data:dma_KFA04151000.rstrctnAcno6"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno6" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno6_OnClick" orgid="LinkText_rstrctnAcno6" hierarchy="LinkText_rstrctnAcno6" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:152px; width:286px; height:32px;" tab="22" id="GroupBox72" tabIndex="22" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox72" hierarchy="GroupBox72" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno5" indicator="적립식구속대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno5_OnClick" orgid="rstrctnAcno5" hierarchy="rstrctnAcno5" ref="data:dma_KFA04151000.rstrctnAcno5"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno5" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno5_OnClick" orgid="LinkText_rstrctnAcno5" hierarchy="LinkText_rstrctnAcno5" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:183px; width:286px; height:32px;" tab="23" id="GroupBox73" tabIndex="23" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox73" hierarchy="GroupBox73" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno7" indicator="거치식구속대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno7_OnClick" orgid="rstrctnAcno7" hierarchy="rstrctnAcno7" ref="data:dma_KFA04151000.rstrctnAcno7"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:143px; top:2px; width:14px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text93" tabIndex="2" uistyle="KB_2024" label="-" orgid="Text93" hierarchy="Text93" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:157px; top:2px; width:44px; height:28px;" id="rstrctnBuho7" indicator="거치식구속대상상품회차1" tabIndex="3" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" orgid="rstrctnBuho7" hierarchy="rstrctnBuho7" ref="data:dma_KFA04151000.rstrctnBuho7"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:205px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno7" tabIndex="4" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno7_OnClick" orgid="LinkText_rstrctnAcno7" hierarchy="LinkText_rstrctnAcno7" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:214px; width:286px; height:32px;" tab="24" id="GroupBox74" tabIndex="24" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox74" hierarchy="GroupBox74" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:157px; top:2px; width:44px; height:28px;" id="rstrctnBuho8" indicator="외화구속성대상상품회차1" tabIndex="1" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" orgid="rstrctnBuho8" hierarchy="rstrctnBuho8" ref="data:dma_KFA04151000.rstrctnBuho8"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:143px; top:2px; width:14px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text93_95" tabIndex="2" uistyle="KB_2024" label="-" orgid="Text93_95" hierarchy="Text93_95" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno8" indicator="외화구속성대상계좌번호1" tabIndex="3" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno8_OnClick" orgid="rstrctnAcno8" hierarchy="rstrctnAcno8" ref="data:dma_KFA04151000.rstrctnAcno8"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:205px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno8" tabIndex="4" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno8_OnClick" orgid="LinkText_rstrctnAcno8" hierarchy="LinkText_rstrctnAcno8" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:245px; width:286px; height:32px;" tab="25" id="GroupBox75" tabIndex="25" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox75" hierarchy="GroupBox75" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno4" indicator="채권구속성대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno4_OnClick" orgid="rstrctnAcno4" hierarchy="rstrctnAcno4" ref="data:dma_KFA04151000.rstrctnAcno4"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno4" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno4_OnClick" orgid="LinkText_rstrctnAcno4" hierarchy="LinkText_rstrctnAcno4" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:276px; width:286px; height:32px;" tab="26" id="GroupBox76" tabIndex="26" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox76" hierarchy="GroupBox76" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno9" indicator="ISA구속성대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno9_OnClick" orgid="rstrctnAcno9" hierarchy="rstrctnAcno9" ref="data:dma_KFA04151000.rstrctnAcno9"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno9" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno9_OnClick" orgid="LinkText_rstrctnAcno9" hierarchy="LinkText_rstrctnAcno9" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:307px; width:286px; height:32px;" tab="27" id="GroupBox77" tabIndex="27" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox77" hierarchy="GroupBox77" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno10" indicator="공제구속성대상계좌번호1" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno10_OnClick" orgid="rstrctnAcno10" hierarchy="rstrctnAcno10" ref="data:dma_KFA04151000.rstrctnAcno10"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno10" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno10_OnClick" orgid="LinkText_rstrctnAcno10" hierarchy="LinkText_rstrctnAcno10" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:338px; width:286px; height:32px;" tab="28" id="GroupBox78" tabIndex="28" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox78" hierarchy="GroupBox78" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:177px; height:28px;" id="rstrctnAcno11" indicator="상품권구속대상계좌번호1" tabIndex="1" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="20" imeMode="반자" readOnly="true" ev:onclick="scwin.rstrctnAcno11_OnClick" orgid="rstrctnAcno11" hierarchy="rstrctnAcno11" ref="data:dma_KFA04151000.rstrctnAcno11"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:185px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno11" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno11_OnClick" orgid="LinkText_rstrctnAcno11" hierarchy="LinkText_rstrctnAcno11" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:369px; width:286px; height:32px;" tab="29" id="GroupBox79" tabIndex="29" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox79" hierarchy="GroupBox79" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnTPrdctYna" indicator="카드구속성계좌번호1" tabIndex="1" autosize="0" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ev:onclick="scwin.rstrctnTPrdctYna_OnClick" orgid="rstrctnTPrdctYna" hierarchy="rstrctnTPrdctYna" ref="data:dma_KFA04151000.rstrctnTPrdctYna"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnTPrdctYna" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnTPrdctYna_OnClick" orgid="LinkText_rstrctnTPrdctYna" hierarchy="LinkText_rstrctnTPrdctYna" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:400px; width:286px; height:32px;" tab="30" id="GroupBox80" tabIndex="30" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox80" hierarchy="GroupBox80" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="snrgMgtNo" indicator="시너지관리번호" tabIndex="1" autosize="0" uistyle="KB_2024" allowChar="가-힣" validateOnInput="true" maxlength="12" imeMode="반자" readOnly="true" ev:onclick="scwin.snrgMgtNo_OnClick" orgid="snrgMgtNo" hierarchy="snrgMgtNo" ref="data:dma_KFA04151000.snrgMgtNo"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_snrgMgtNo" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_snrgMgtNo_OnClick" orgid="LinkText_snrgMgtNo" hierarchy="LinkText_snrgMgtNo" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:28px; width:286px; height:32px;" tab="31" id="GroupBox81" tabIndex="31" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox81" hierarchy="GroupBox81" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno1_1" indicator="투신구속성대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno1_1_OnClick" orgid="rstrctnAcno1_1" hierarchy="rstrctnAcno1_1" ref="data:dma_KFA04151000.rstrctnAcno1_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno1_1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno1_1_OnClick" orgid="LinkText_rstrctnAcno1_1" hierarchy="LinkText_rstrctnAcno1_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:59px; width:286px; height:32px;" tab="32" id="GroupBox82" tabIndex="32" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox82" hierarchy="GroupBox82" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno2_1" indicator="신탁구속성대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno2_1_OnClick" orgid="rstrctnAcno2_1" hierarchy="rstrctnAcno2_1" ref="data:dma_KFA04151000.rstrctnAcno2_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno2_1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno2_1_OnClick" orgid="LinkText_rstrctnAcno2_1" hierarchy="LinkText_rstrctnAcno2_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:90px; width:286px; height:32px;" tab="33" id="GroupBox83" tabIndex="33" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox83" hierarchy="GroupBox83" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno3_1" indicator="방카구속성대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno3_1_OnClick" orgid="rstrctnAcno3_1" hierarchy="rstrctnAcno3_1" ref="data:dma_KFA04151000.rstrctnAcno3_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno3_1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno3_1_OnClick" orgid="LinkText_rstrctnAcno3_1" hierarchy="LinkText_rstrctnAcno3_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:121px; width:286px; height:32px;" tab="34" id="GroupBox84" tabIndex="34" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox84" hierarchy="GroupBox84" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno6_1" indicator="퇴직구속성대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno6_1_OnClick" orgid="rstrctnAcno6_1" hierarchy="rstrctnAcno6_1" ref="data:dma_KFA04151000.rstrctnAcno6_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno6_1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno6_1_OnClick" orgid="LinkText_rstrctnAcno6_1" hierarchy="LinkText_rstrctnAcno6_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:152px; width:286px; height:32px;" tab="35" id="GroupBox85" tabIndex="35" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox85" hierarchy="GroupBox85" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno5_1" indicator="적립식구속대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno5_1_OnClick" orgid="rstrctnAcno5_1" hierarchy="rstrctnAcno5_1" ref="data:dma_KFA04151000.rstrctnAcno5_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno5_1" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno5_1_OnClick" orgid="LinkText_rstrctnAcno5_1" hierarchy="LinkText_rstrctnAcno5_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:183px; width:286px; height:32px;" tab="36" id="GroupBox86" tabIndex="36" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox86" hierarchy="GroupBox86" class="kb_td_body_right">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno7_1" indicator="거치식구속대상계좌번호2" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno7_1_OnClick" orgid="rstrctnAcno7_1" hierarchy="rstrctnAcno7_1" ref="data:dma_KFA04151000.rstrctnAcno7_1"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:143px; top:2px; width:14px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text93_96" tabIndex="2" uistyle="KB_2024" label="-" orgid="Text93_96" hierarchy="Text93_96" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:157px; top:2px; width:44px; height:28px;" id="rstrctnBuho7_1" indicator="거치식구속대상상품회차2" tabIndex="3" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" orgid="rstrctnBuho7_1" hierarchy="rstrctnBuho7_1" ref="data:dma_KFA04151000.rstrctnBuho7_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:205px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno7_1" tabIndex="4" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno7_1_OnClick" orgid="LinkText_rstrctnAcno7_1" hierarchy="LinkText_rstrctnAcno7_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:214px; width:286px; height:32px;" tab="37" id="GroupBox87" tabIndex="37" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox87" hierarchy="GroupBox87" class="kb_td_body_right">
+						<w2:textbox ctype="Text" style="position:absolute; left:143px; top:2px; width:14px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text93_95_97" tabIndex="1" uistyle="KB_2024" label="-" orgid="Text93_95_97" hierarchy="Text93_95_97" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:157px; top:2px; width:44px; height:28px;" id="rstrctnBuho8_1" indicator="외화구속성대상상품회차2" tabIndex="2" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" orgid="rstrctnBuho8_1" hierarchy="rstrctnBuho8_1" ref="data:dma_KFA04151000.rstrctnBuho8_1"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno8_1" indicator="외화구속성대상계좌번호2" tabIndex="3" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno8_1_OnClick" orgid="rstrctnAcno8_1" hierarchy="rstrctnAcno8_1" ref="data:dma_KFA04151000.rstrctnAcno8_1"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:205px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno8_1" tabIndex="4" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno8_1_OnClick" orgid="LinkText_rstrctnAcno8_1" hierarchy="LinkText_rstrctnAcno8_1" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:28px; width:286px; height:32px;" tab="38" id="GroupBox88" tabIndex="38" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox88" hierarchy="GroupBox88" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno1_2" indicator="투신구속성대상계좌번호3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno1_2_OnClick" orgid="rstrctnAcno1_2" hierarchy="rstrctnAcno1_2" ref="data:dma_KFA04151000.rstrctnAcno1_2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno1_2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno1_2_OnClick" orgid="LinkText_rstrctnAcno1_2" hierarchy="LinkText_rstrctnAcno1_2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:59px; width:286px; height:32px;" tab="39" id="GroupBox89" tabIndex="39" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox89" hierarchy="GroupBox89" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno2_2" indicator="신탁구속성대상계좌번호3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno2_2_OnClick" orgid="rstrctnAcno2_2" hierarchy="rstrctnAcno2_2" ref="data:dma_KFA04151000.rstrctnAcno2_2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:148px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno2_2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno2_2_OnClick" orgid="LinkText_rstrctnAcno2_2" hierarchy="LinkText_rstrctnAcno2_2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:90px; width:286px; height:32px;" tab="40" id="GroupBox90" tabIndex="40" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox90" hierarchy="GroupBox90" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno3_2" indicator="방카구속성대상계좌번호3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno3_2_OnClick" orgid="rstrctnAcno3_2" hierarchy="rstrctnAcno3_2" ref="data:dma_KFA04151000.rstrctnAcno3_2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno3_2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno3_2_OnClick" orgid="LinkText_rstrctnAcno3_2" hierarchy="LinkText_rstrctnAcno3_2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:121px; width:286px; height:32px;" tab="41" id="GroupBox91" tabIndex="41" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox91" hierarchy="GroupBox91" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno6_2" indicator="퇴직구속성대상계좌번호3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno6_2_OnClick" orgid="rstrctnAcno6_2" hierarchy="rstrctnAcno6_2" ref="data:dma_KFA04151000.rstrctnAcno6_2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno6_2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno6_2_OnClick" orgid="LinkText_rstrctnAcno6_2" hierarchy="LinkText_rstrctnAcno6_2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:152px; width:286px; height:32px;" tab="42" id="GroupBox92" tabIndex="42" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox92" hierarchy="GroupBox92" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:139px; height:28px;" id="rstrctnAcno5_2" indicator="적립식구속대상계좌번호3" tabIndex="1" uistyle="KB_2024" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" insertcomma="1" ev:onclick="scwin.rstrctnAcno5_2_OnClick" orgid="rstrctnAcno5_2" hierarchy="rstrctnAcno5_2" ref="data:dma_KFA04151000.rstrctnAcno5_2"/>
+						<w2:anchor ctype="LinkText" style="position:absolute; left:147px; top:2px; width:64px; height:28px;" id="LinkText_rstrctnAcno5_2" tabIndex="2" uistyle="KB_2024" uistyleid="ButtonDefault" class="btn_def_link" ev:onclick="scwin.LinkText_rstrctnAcno5_2_OnClick" orgid="LinkText_rstrctnAcno5_2" hierarchy="LinkText_rstrctnAcno5_2" outerDiv="false">
+							<xf:label><![CDATA[조회]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:183px; width:286px; height:32px;" tab="43" id="GroupBox93" tabIndex="43" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox93" hierarchy="GroupBox93" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:214px; width:286px; height:32px;" tab="44" id="GroupBox94" tabIndex="44" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox94" hierarchy="GroupBox94" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:245px; width:286px; height:32px;" tab="45" id="GroupBox95" tabIndex="45" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox95" hierarchy="GroupBox95" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:276px; width:286px; height:32px;" tab="46" id="GroupBox96" tabIndex="46" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox96" hierarchy="GroupBox96" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:307px; width:286px; height:32px;" tab="47" id="GroupBox97" tabIndex="47" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox97" hierarchy="GroupBox97" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:338px; width:286px; height:32px;" tab="48" id="GroupBox98" tabIndex="48" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox98" hierarchy="GroupBox98" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:369px; width:286px; height:32px;" tab="49" id="GroupBox99" tabIndex="49" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox99" hierarchy="GroupBox99" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:462px; top:400px; width:286px; height:32px;" tab="50" id="GroupBox100" tabIndex="50" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox100" hierarchy="GroupBox100" class="kb_td_body_right"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:245px; width:286px; height:32px;" tab="51" id="GroupBox101" tabIndex="51" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox101" hierarchy="GroupBox101" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:276px; width:286px; height:32px;" tab="52" id="GroupBox102" tabIndex="52" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox102" hierarchy="GroupBox102" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:307px; width:286px; height:32px;" tab="53" id="GroupBox103" tabIndex="53" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox103" hierarchy="GroupBox103" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:338px; width:286px; height:32px;" tab="54" id="GroupBox104" tabIndex="54" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox104" hierarchy="GroupBox104" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:369px; width:286px; height:32px;" tab="55" id="GroupBox105" tabIndex="55" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox105" hierarchy="GroupBox105" class="kb_td_body"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:748px; top:400px; width:286px; height:32px;" tab="56" id="GroupBox106" tabIndex="56" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox106" hierarchy="GroupBox106" class="kb_td_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:400px; width:176px; height:32px;" id="Text_snrgMgtNo" tabIndex="57" uistyle="KB_2024" uistyleid="TH-Body" label="수신성기여등록" orgid="Text_snrgMgtNo" hierarchy="Text_snrgMgtNo" class="kb_MiddleRight kb_th_body"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:3px; width:1036px; height:51px;" tab="7" id="GroupBox45" tabIndex="7" uistyle="KB_2024" uistyleid="StatusBlue" orgid="GroupBox45" hierarchy="GroupBox45">
+					<w2:textbox ctype="Text" style="position:absolute; left:56px; top:12px; width:508px; height:28px; align:middleleft; text-align:middleleft;" id="Text135" tabIndex="1" standardtextcolor="파랑" uistyle="KB_2024" label="아래&amp;nbsp;결과는&amp;nbsp;현재&amp;nbsp;시점의&amp;nbsp;예상&amp;nbsp;조회이므로&amp;nbsp;실제&amp;nbsp;거래(실행)시와는&amp;nbsp;내용이&amp;nbsp;달라질&amp;nbsp;수&amp;nbsp;있습니다." orgid="Text135" hierarchy="Text135" escape="false" class="kb_MiddleLeft kb_txt_blue"/>
+					<xf:image ctype="Picture" style="position:absolute; left:12px; top:1px; width:40px; height:48px; color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="Picture4" tabIndex="2" tabstop="0" enterstop="0" backcolor="16777215" autosize="0" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" uistyle="KB_2024" uistyleid="Default" sizemode="CenterImage" path="ico_large_status_information.png" orgid="Picture4" hierarchy="Picture4"/>
+				</xf:group>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:165px; width:1036px; height:274px;" tab="15" id="GroupBox_Msg" tabIndex="15" uistyle="KB_2024" uistyleid="Accordion_1Depth" orgid="GroupBox_Msg" hierarchy="GroupBox_Msg">
+				<w2:textbox ctype="Text" style="position:absolute; left:101px; top:9px; width:146px; height:28px;" id="text_Msg" tabIndex="1" uistyle="KB_2024" linespace="0" label="내용은&amp;nbsp;스크립트에서&amp;nbsp;만듬" orgid="text_Msg" hierarchy="text_Msg" escape="false" class="kb_MiddleRight"/>
+				<xf:group ctype="GroupBox" style="position:absolute; left:864px; top:212px; width:169px; height:32px;" tab="2" id="GroupBox43" tabIndex="2" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox43" hierarchy="GroupBox43" class="kb_td_body">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:161px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text129" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text129" hierarchy="Text129" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:864px; top:181px; width:170px; height:32px;" tab="3" id="GroupBox42" tabIndex="3" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox42" hierarchy="GroupBox42" class="kb_td_body">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text128" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text128" hierarchy="Text128" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:864px; top:150px; width:170px; height:32px;" tab="4" id="GroupBox41" tabIndex="4" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox41" hierarchy="GroupBox41" class="kb_td_body">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text127" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text127" hierarchy="Text127" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:864px; top:119px; width:170px; height:32px;" tab="5" id="GroupBox40" tabIndex="5" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox40" hierarchy="GroupBox40" class="kb_td_body">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text126" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text126" hierarchy="Text126" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:694px; top:212px; width:170px; height:32px;" tab="6" id="GroupBox39" tabIndex="6" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox39" hierarchy="GroupBox39" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text125" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text125" hierarchy="Text125" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:694px; top:181px; width:170px; height:32px;" tab="7" id="GroupBox38" tabIndex="7" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox38" hierarchy="GroupBox38" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text124" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text124" hierarchy="Text124" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:524px; top:181px; width:170px; height:32px;" tab="8" id="GroupBox37" tabIndex="8" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox37" hierarchy="GroupBox37" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text123" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text123" hierarchy="Text123" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:524px; top:212px; width:170px; height:32px;" tab="9" id="GroupBox36" tabIndex="9" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox36" hierarchy="GroupBox36" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text122" tabIndex="1" autosize="0" uistyle="KB_2024" label="가입가능" orgid="Text122" hierarchy="Text122" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:694px; top:150px; width:170px; height:32px;" tab="10" id="GroupBox35" tabIndex="10" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox35" hierarchy="GroupBox35" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text121" tabIndex="1" autosize="0" uistyle="KB_2024" label="가입가능" orgid="Text121" hierarchy="Text121" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:694px; top:119px; width:170px; height:32px;" tab="11" id="GroupBox34" tabIndex="11" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox34" hierarchy="GroupBox34" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text120" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text120" hierarchy="Text120" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:2px; top:212px; width:522px; height:32px;" tab="12" id="GroupBox33" tabIndex="12" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox33" hierarchy="GroupBox33" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:152px; height:28px;" id="Text106" tabIndex="1" uistyle="KB_2024" label="CB사&amp;nbsp;점수&amp;nbsp;하위&amp;nbsp;10%&amp;nbsp;초과" orgid="Text106" hierarchy="Text106" escape="false" class="kb_MiddleRight"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:2px; top:181px; width:522px; height:32px;" tab="13" id="GroupBox32" tabIndex="13" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox32" hierarchy="GroupBox32" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:303px; height:28px;" id="Text105" tabIndex="1" uistyle="KB_2024" label="CB사&amp;nbsp;점수&amp;nbsp;하위&amp;nbsp;10%&amp;nbsp;이하&amp;nbsp;또는&amp;nbsp;피성년·피한정&amp;nbsp;후견인" orgid="Text105" hierarchy="Text105" escape="false" class="kb_MiddleRight"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:2px; top:150px; width:522px; height:32px;" tab="14" id="GroupBox31" tabIndex="14" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox31" hierarchy="GroupBox31" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:391px; height:28px;" id="Text104" tabIndex="1" uistyle="KB_2024" label="중소기업&amp;nbsp;외&amp;nbsp;법인&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;대기업,&amp;nbsp;비영리법인·단체·조합(임의단체&amp;nbsp;포함)&amp;nbsp;등" orgid="Text104" hierarchy="Text104" escape="false" class="kb_MiddleRight"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:100px; top:0px; width:21px; height:28px; align:topleft; text-align:topleft;" id="Text119" tabIndex="2" uistyle="KB_2024" uistyleid="Small" label="주)" orgid="Text119" hierarchy="Text119" class="kb_TopLeft"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:2px; top:119px; width:522px; height:32px;" tab="15" id="GroupBox30" tabIndex="15" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox30" hierarchy="GroupBox30" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:110px; height:28px;" id="Text103" tabIndex="1" uistyle="KB_2024" label="중소기업&amp;nbsp;및&amp;nbsp;대표자" orgid="Text103" hierarchy="Text103" escape="false" class="kb_MiddleRight"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:524px; top:150px; width:170px; height:32px;" tab="16" id="GroupBox19" tabIndex="16" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox19" hierarchy="GroupBox19" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text108" tabIndex="1" autosize="0" uistyle="KB_2024" label="가입가능" orgid="Text108" hierarchy="Text108" class="kb_MiddleCenter"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:524px; top:119px; width:170px; height:32px;" tab="17" id="GroupBox18" tabIndex="17" uistyle="KB_2024" uistyleid="TD-Body-RightClosed" orgid="GroupBox18" hierarchy="GroupBox18" class="kb_td_body_right">
+					<w2:textbox ctype="Text" style="position:absolute; left:4px; top:2px; width:162px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text107" tabIndex="1" standardtextcolor="빨강" autosize="0" uistyle="KB_2024" label="가입불가" orgid="Text107" hierarchy="Text107" class="kb_MiddleCenter"/>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:864px; top:88px; width:170px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text102" tabIndex="18" uistyle="KB_2024" uistyleid="TH-Head" label="(3)&amp;nbsp;보장성상품" orgid="Text102" hierarchy="Text102" escape="false" class="kb_MiddleCenter kb_th_head"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:694px; top:88px; width:170px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text101" tabIndex="19" uistyle="KB_2024" uistyleid="TH-Head" label="(2)&amp;nbsp;투자성상품" orgid="Text101" hierarchy="Text101" escape="false" class="kb_MiddleCenter kb_th_head"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:524px; top:88px; width:170px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text100" tabIndex="20" uistyle="KB_2024" uistyleid="TH-Head" label="(1)&amp;nbsp;예금성상품" orgid="Text100" hierarchy="Text100" escape="false" class="kb_MiddleCenter kb_th_head"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:2px; top:88px; width:522px; height:32px; align:middlecenter; text-align:middlecenter;" id="Text99" tabIndex="21" uistyle="KB_2024" uistyleid="TH-Head" label="고객구분" orgid="Text99" hierarchy="Text99" class="kb_MiddleCenter kb_th_head"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:2px; top:60px; width:176px; height:28px; align:middleleft; text-align:middleleft;" id="Text98" tabIndex="22" uistyle="KB_2024" uistyleid="H3" label="구속행위&amp;nbsp;검증대상&amp;nbsp;구분" orgid="Text98" hierarchy="Text98" escape="false" class="kb_MiddleLeft kb_title_h3"/>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:864px; top:56px; width:170px; height:28px;" id="LinkText1" tabIndex="23" uistyle="KB_2024" linktype="URL" href="http://kbwisenet.kbstar.com/portalwse/index.jsp?returnURL=http://portlet-new.kbstar.com/kportal/pages/board/returnboard.jsp?bbsId=5002434" class="btn_def_link" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+					<xf:label><![CDATA[구속행위 관련 업무기준 확인]]></xf:label>
+				</w2:anchor>
+				<w2:textbox ctype="Text" style="position:absolute; left:2px; top:245px; width:543px; height:28px;" id="Text26" tabIndex="24" uistyle="KB_2024" label="주)&amp;nbsp;「금융소비자&amp;nbsp;보호에&amp;nbsp;관한&amp;nbsp;법률」(2021.3.25&amp;nbsp;시행)에&amp;nbsp;따라&amp;nbsp;기존&amp;nbsp;구속성&amp;nbsp;판매&amp;nbsp;간주행위&amp;nbsp;대상&amp;nbsp;확대" orgid="Text26" hierarchy="Text26" escape="false" class="kb_MiddleRight"/>
+				<w2:textbox id="title_GroupBox_Msg" class="title_h2" label="안내사항"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:1096px; top:404px; width:198px; height:954px; display:none;" tab="16" id="Hidden_Box" tabIndex="16" uistyle="KB_2024" uistyleid="Default_Hidden" orgid="Hidden_Box" hierarchy="Hidden_Box">
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:36px; width:30px; height:28px; display:none;" id="rstrctnTPrdctYna_h" indicator="카드구속성대상상품여부" tabIndex="1" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="rstrctnTPrdctYna_h" hierarchy="rstrctnTPrdctYna_h" ref="data:dma_KFA04151000.rstrctnTPrdctYna_h"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:36px; width:138px; height:28px;" id="Text_h_1" tabIndex="2" uistyle="KB_2024" label="카드구속성대상상품여부" orgid="Text_h_1" hierarchy="Text_h_1" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:32px; top:74px; width:114px; height:28px;" id="Text_h_2" tabIndex="3" uistyle="KB_2024" label="구속성예금대상여부" orgid="Text_h_2" hierarchy="Text_h_2" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:74px; width:30px; height:28px; display:none;" id="guattridpostyn" indicator="구속성예금대상여부" tabIndex="4" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="guattridpostyn" hierarchy="guattridpostyn" ref="data:dma_KFA04151000.guattridpostyn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:18px; top:112px; width:126px; height:28px;" id="Text_h_3" tabIndex="5" uistyle="KB_2024" label="여신실행예정대상여부" orgid="Text_h_3" hierarchy="Text_h_3" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:112px; width:30px; height:28px; display:none;" id="lnbzexeyn" indicator="여신실행예정대상여부" tabIndex="6" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="lnbzexeyn" hierarchy="lnbzexeyn" ref="data:dma_KFA04151000.lnbzexeyn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:42px; top:150px; width:102px; height:28px;" id="Text_h_4" tabIndex="7" uistyle="KB_2024" label="여신관계구분코드" orgid="Text_h_4" hierarchy="Text_h_4" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:188px; width:30px; height:28px; display:none;" id="inbzTagetDstic" indicator="여신대상구분" tabIndex="8" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="inbzTagetDstic" hierarchy="inbzTagetDstic" ref="data:dma_KFA04151000.inbzTagetDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:71px; top:188px; width:78px; height:28px;" id="Text_h_5" tabIndex="9" uistyle="KB_2024" label="여신대상구분" orgid="Text_h_5" hierarchy="Text_h_5" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:19px; top:226px; width:126px; height:28px;" id="Text_h_6" tabIndex="10" uistyle="KB_2024" label="구속성팝업창호출여부" orgid="Text_h_6" hierarchy="Text_h_6" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:226px; width:30px; height:28px; display:none;" id="rstrPopCallYn" indicator="구속성팝업창호출여부" tabIndex="11" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="rstrPopCallYn" hierarchy="rstrPopCallYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:72px; top:264px; width:78px; height:28px;" id="Text_h_6_95" tabIndex="12" uistyle="KB_2024" label="여신생성구분" orgid="Text_h_6_95" hierarchy="Text_h_6_95" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:264px; width:30px; height:28px; display:none;" id="debtprdctdstic" indicator="여신신규구분" tabIndex="13" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="debtprdctdstic" hierarchy="debtprdctdstic" ref="data:dma_KFA04151000.debtprdctdstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:72px; top:302px; width:78px; height:28px;" id="Text_h_6_95_95" tabIndex="14" uistyle="KB_2024" label="여신조건구분" orgid="Text_h_6_95_95" hierarchy="Text_h_6_95_95" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:302px; width:30px; height:28px; display:none;" id="debtconddstcd" indicator="여신조건구분" tabIndex="15" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="debtconddstcd" hierarchy="debtconddstcd" ref="data:dma_KFA04151000.debtconddstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:72px; top:340px; width:78px; height:28px;" id="Text_h_6_95_95_95" tabIndex="16" uistyle="KB_2024" label="만기처리구분" orgid="Text_h_6_95_95_95" hierarchy="Text_h_6_95_95_95" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:340px; width:30px; height:28px; display:none;" id="mangicheridstcd" indicator="여신처리구분" tabIndex="17" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="mangicheridstcd" hierarchy="mangicheridstcd" ref="data:dma_KFA04151000.mangicheridstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:162px; top:150px; width:39px; height:28px; display:none;" id="lnbzRelshpDstcd" indicator="여신관계구분코드" tabIndex="18" disabled="true" uistyle="KB_2024" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" orgid="lnbzRelshpDstcd" hierarchy="lnbzRelshpDstcd" ref="data:dma_KFA04151000.lnbzRelshpDstcd"/>
+				<w2:textbox id="title_Hidden_Box" class="title_h2" label="Hidden_Box"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:2557px; width:1036px; height:36px;" tab="17" id="GroupBox_Query" tabIndex="17" uistyle="KB_2024" uistyleid="Default_Grouping" dynamicmove="1" orgid="GroupBox_Query" hierarchy="GroupBox_Query">
+				<w2:anchor ctype="LinkText" style="position:absolute; left:0px; top:0px; width:92px; height:28px;" id="LinkText_A" tabIndex="1" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText_A_OnClick" orgid="LinkText_A" hierarchy="LinkText_A" outerDiv="false">
+					<xf:label><![CDATA[고객정보조회]]></xf:label>
+				</w2:anchor>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:96px; top:0px; width:136px; height:28px;" id="LinkText_B" tabIndex="2" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText_B_OnClick" orgid="LinkText_B" hierarchy="LinkText_B" outerDiv="false">
+					<xf:label><![CDATA[고객기타관계설정등록]]></xf:label>
+				</w2:anchor>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:236px; top:0px; width:147px; height:28px;" id="LinkText_C" tabIndex="3" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText_C_OnClick" orgid="LinkText_C" hierarchy="LinkText_C" outerDiv="false">
+					<xf:label><![CDATA[법인사업자관계설정등록]]></xf:label>
+				</w2:anchor>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:531px; top:0px; width:180px; height:28px;" id="LinkText_E" tabIndex="4" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText_E_OnClick" orgid="LinkText_E" hierarchy="LinkText_E" outerDiv="false">
+					<xf:label><![CDATA[해지원리금 등록 (재예치 관련)]]></xf:label>
+				</w2:anchor>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:387px; top:0px; width:140px; height:28px;" id="LinkText_D" tabIndex="5" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText_D_OnClick" orgid="LinkText_D" hierarchy="LinkText_D" outerDiv="false">
+					<xf:label><![CDATA[외상매출채권 정보조회]]></xf:label>
+				</w2:anchor>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:715px; top:0px; width:123px; height:28px;" id="LinkText2" tabIndex="6" uistyle="KB_2024" class="btn_def_link" ev:onclick="scwin.LinkText2_OnClick" orgid="LinkText2" hierarchy="LinkText2" outerDiv="false">
+					<xf:label><![CDATA[KB셀러론 정보조회]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:1509px; width:1048px; height:814px; display:none;" tab="18" id="GroupBox11" tabIndex="18" disabled="true" uistyle="KB_2024" uistyleid="Default_Grouping" dynamicmove="1" orgid="GroupBox11" hierarchy="GroupBox11">
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:62px; width:1036px; height:268px;" tab="1" id="GroupBox12" tabIndex="1" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox12" hierarchy="GroupBox12">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:57px; width:176px; height:32px;" id="Text_woncrdabilmnauc" tabIndex="1" uistyle="KB_2024" uistyleid="TH-Head" label="재예치가능금액(A)" orgid="Text_woncrdabilmnauc" hierarchy="Text_woncrdabilmnauc" class="kb_MiddleRight kb_th_head"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:216px; width:1036px; height:48px;" tab="2" id="GroupBox109" tabIndex="2" uistyle="KB_2024" uistyleid="StatusBlue" orgid="GroupBox109" hierarchy="GroupBox109">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:180px; top:10px; width:153px; height:28px; text-align:right;" id="woncredposamt" indicator="재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncredposamt" hierarchy="woncredposamt" ref="data:dma_KFA04151000.woncredposamt"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:21px; top:10px; width:144px; height:28px;" id="Text_woncredposamt" tabIndex="2" standardtextcolor="파랑" uistyle="KB_2024" label="재예치가능잔액(C-B-D)" orgid="Text_woncredposamt" hierarchy="Text_woncredposamt" class="kb_MiddleRight kb_txt_blue"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:333px; top:10px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text178" tabIndex="3" uistyle="KB_2024" label="원" orgid="Text178" hierarchy="Text178" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:57px; width:341px; height:32px;" tab="3" id="GroupBox108" tabIndex="3" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox108" hierarchy="GroupBox108" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="woncrdusemnauc" indicator="정액적립식재예치사용금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncrdusemnauc" hierarchy="woncrdusemnauc" ref="data:dma_KFA04151000.woncrdusemnauc"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text153" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text153" hierarchy="Text153" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:57px; width:341px; height:32px;" tab="4" id="GroupBox107" tabIndex="4" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox107" hierarchy="GroupBox107" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="woncrdabilmnauc" indicator="정액적립식재예치가능총금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncrdabilmnauc" hierarchy="woncrdabilmnauc" ref="data:dma_KFA04151000.woncrdabilmnauc"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text152" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text152" hierarchy="Text152" class="kb_MiddleCenter"/>
+					</xf:group>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:212px; height:29px; align:middleleft; text-align:middleleft;" id="Text151" tabIndex="5" uistyle="KB_2024" uistyleid="H2" label="원화예금&amp;nbsp;재예치&amp;nbsp;가능금액" orgid="Text151" hierarchy="Text151" escape="false" class="kb_MiddleLeft kb_title_h2"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:148px; width:116px; height:28px; align:middleleft; text-align:middleleft;" id="Text68" tabIndex="6" uistyle="KB_2024" uistyleid="H3" label="정액적립식&amp;nbsp;外" orgid="Text68" hierarchy="Text68" escape="false" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:29px; width:96px; height:28px; align:middleleft; text-align:middleleft;" id="Text67" tabIndex="7" uistyle="KB_2024" uistyleid="H3" label="정액적립식" orgid="Text67" hierarchy="Text67" class="kb_MiddleLeft kb_title_h3"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:176px; width:176px; height:32px;" id="Text_woncredposamus" tabIndex="8" uistyle="KB_2024" uistyleid="TH-Head" label="재예치사용금액(D)" orgid="Text_woncredposamus" hierarchy="Text_woncredposamus" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:176px; width:176px; height:32px;" id="Text_woncredposablamt" tabIndex="9" uistyle="KB_2024" uistyleid="TH-Head" label="재예치가능금액(C)" orgid="Text_woncredposablamt" hierarchy="Text_woncredposablamt" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:57px; width:176px; height:32px;" id="Text_woncrdusemnauc" tabIndex="10" uistyle="KB_2024" uistyleid="TH-Head" label="재예치사용금액(B)" orgid="Text_woncrdusemnauc" hierarchy="Text_woncrdusemnauc" class="kb_MiddleRight kb_th_head"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:176px; width:341px; height:32px;" tab="11" id="GroupBox111" tabIndex="11" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox111" hierarchy="GroupBox111" class="kb_td_head">
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text156" tabIndex="1" uistyle="KB_2024" label="원" orgid="Text156" hierarchy="Text156" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="woncredposamus" indicator="재예치사용금액" tabIndex="2" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncredposamus" hierarchy="woncredposamus" ref="data:dma_KFA04151000.woncredposamus"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:176px; width:341px; height:32px;" tab="12" id="GroupBox112" tabIndex="12" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox112" hierarchy="GroupBox112" class="kb_td_head">
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text155" tabIndex="1" uistyle="KB_2024" label="원" orgid="Text155" hierarchy="Text155" class="kb_MiddleCenter"/>
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="woncredposablamt" indicator="재예치가능총금액" tabIndex="2" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncredposablamt" hierarchy="woncredposablamt" ref="data:dma_KFA04151000.woncredposablamt"/>
+					</xf:group>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:536px; width:1036px; height:130px;" tab="2" id="GroupBox14" tabIndex="2" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox14" hierarchy="GroupBox14">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:29px; width:176px; height:32px;" id="Text_instyprdablamt" tabIndex="1" uistyle="KB_2024" uistyleid="TH-Head" label="적립식해지원리금" orgid="Text_instyprdablamt" hierarchy="Text_instyprdablamt" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:29px; width:200px; height:32px;" id="Text_instypmnauc" tabIndex="3" uistyle="KB_2024" uistyleid="TH-Head" label="적립식해지원리금월환산금액" orgid="Text_instypmnauc" hierarchy="Text_instypmnauc" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:60px; width:176px; height:32px;" id="Text_dfstlrdposablamt" tabIndex="5" uistyle="KB_2024" uistyleid="TH-Body" label="거치식해지원리금" orgid="Text_dfstlrdposablamt" hierarchy="Text_dfstlrdposablamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:60px; width:200px; height:32px;" id="Text_dfstlmnauc" tabIndex="7" uistyle="KB_2024" uistyleid="TH-Body" label="거치식해지원리금월환산금액" orgid="Text_dfstlmnauc" hierarchy="Text_dfstlmnauc" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:91px; width:176px; height:32px;" id="Text_fcredposablamt" tabIndex="9" uistyle="KB_2024" uistyleid="TH-Body" label="외화예금해지원리금" orgid="Text_fcredposablamt" hierarchy="Text_fcredposablamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:91px; width:200px; height:32px;" id="Text_fcmnauc" tabIndex="11" uistyle="KB_2024" uistyleid="TH-Body" label="외화예금해지원리금월환산금액" orgid="Text_fcmnauc" hierarchy="Text_fcmnauc" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:309px; height:29px; align:middleleft; text-align:middleleft;" id="Text174" tabIndex="19" uistyle="KB_2024" uistyleid="H2" label="상품별&amp;nbsp;원화&amp;nbsp;해지원리금(세후)&amp;nbsp;상세내역" orgid="Text174" hierarchy="Text174" escape="false" class="kb_MiddleLeft kb_title_h2"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:29px; width:341px; height:32px;" tab="20" id="GroupBox124" tabIndex="20" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox124" hierarchy="GroupBox124" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="instyprdablamt" indicator="적립식재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="instyprdablamt" hierarchy="instyprdablamt" ref="data:dma_KFA04151000.instyprdablamt"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text167" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text167" hierarchy="Text167" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:60px; width:341px; height:32px;" tab="21" id="GroupBox125" tabIndex="21" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox125" hierarchy="GroupBox125" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="dfstlrdposablamt" indicator="거치식재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="dfstlrdposablamt" hierarchy="dfstlrdposablamt" ref="data:dma_KFA04151000.dfstlrdposablamt"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text168" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text168" hierarchy="Text168" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:91px; width:341px; height:32px;" tab="22" id="GroupBox126" tabIndex="22" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox126" hierarchy="GroupBox126" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="fcredposablamt" indicator="외화예금재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="fcredposablamt" hierarchy="fcredposablamt" ref="data:dma_KFA04151000.fcredposablamt"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text169" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text169" hierarchy="Text169" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:717px; top:29px; width:317px; height:32px;" tab="23" id="GroupBox127" tabIndex="23" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox127" hierarchy="GroupBox127" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="instypmnauc" indicator="적립식재예치가능월환산금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="instypmnauc" hierarchy="instypmnauc" ref="data:dma_KFA04151000.instypmnauc"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text170" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text170" hierarchy="Text170" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:717px; top:60px; width:317px; height:32px;" tab="24" id="GroupBox128" tabIndex="24" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox128" hierarchy="GroupBox128" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="dfstlmnauc" indicator="거치식재예치가능월환산금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="dfstlmnauc" hierarchy="dfstlmnauc" ref="data:dma_KFA04151000.dfstlmnauc"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text171" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text171" hierarchy="Text171" class="kb_MiddleCenter"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:717px; top:91px; width:317px; height:32px;" tab="25" id="GroupBox129" tabIndex="25" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox129" hierarchy="GroupBox129" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:153px; height:28px; text-align:right;" id="fcmnauc" indicator="외화예금재예치가능월환산금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="fcmnauc" hierarchy="fcmnauc" ref="data:dma_KFA04151000.fcmnauc"/>
+						<w2:textbox ctype="Text" style="position:absolute; left:157px; top:2px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text172" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text172" hierarchy="Text172" class="kb_MiddleCenter"/>
+					</xf:group>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:338px; width:1036px; height:190px;" tab="3" id="GroupBox13" tabIndex="3" uistyle="KB_2024" uistyleid="Default_Grouping" orgid="GroupBox13" hierarchy="GroupBox13">
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:29px; width:176px; height:32px;" id="Text_usdreabilamt" tabIndex="1" uistyle="KB_2024" uistyleid="TH-Head" label="재예치가능금액(USD)" orgid="Text_usdreabilamt" hierarchy="Text_usdreabilamt" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:29px; width:176px; height:32px;" id="Text_jpyreabilamt" tabIndex="3" uistyle="KB_2024" uistyleid="TH-Head" label="재예치가능금액(JPY)" orgid="Text_jpyreabilamt" hierarchy="Text_jpyreabilamt" class="kb_MiddleRight kb_th_head"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:60px; width:176px; height:32px;" id="Text_gbpreabilamt" tabIndex="4" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(GBP)" orgid="Text_gbpreabilamt" hierarchy="Text_gbpreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:60px; width:176px; height:32px;" id="Text_audreabilamt" tabIndex="6" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(AUD)" orgid="Text_audreabilamt" hierarchy="Text_audreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:91px; width:176px; height:32px;" id="Text_cadreabilamt" tabIndex="7" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(CAD)" orgid="Text_cadreabilamt" hierarchy="Text_cadreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:91px; width:176px; height:32px;" id="Text_nzdreabilamt" tabIndex="9" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(NZD)" orgid="Text_nzdreabilamt" hierarchy="Text_nzdreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:122px; width:176px; height:32px;" id="Text_eurreabilamt" tabIndex="10" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(EUR)" orgid="Text_eurreabilamt" hierarchy="Text_eurreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:122px; width:176px; height:32px;" id="Text_chfreabilamt" tabIndex="12" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(CHF)" orgid="Text_chfreabilamt" hierarchy="Text_chfreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:153px; width:176px; height:32px;" id="Text_hkdreabilamt" tabIndex="13" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(HKD)" orgid="Text_hkdreabilamt" hierarchy="Text_hkdreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:517px; top:153px; width:176px; height:32px;" id="Text_sgdreabilamt" tabIndex="15" uistyle="KB_2024" uistyleid="TH-Body" label="재예치가능금액(SGD)" orgid="Text_sgdreabilamt" hierarchy="Text_sgdreabilamt" class="kb_MiddleRight kb_th_body"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:0px; top:0px; width:212px; height:29px; align:middleleft; text-align:middleleft;" id="Text173" tabIndex="31" uistyle="KB_2024" uistyleid="H2" label="외화예금&amp;nbsp;재예치&amp;nbsp;가능금액" orgid="Text173" hierarchy="Text173" escape="false" class="kb_MiddleLeft kb_title_h2"/>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:29px; width:341px; height:32px;" tab="32" id="GroupBox114" tabIndex="32" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox114" hierarchy="GroupBox114" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="usdreabilamt" indicator="USD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="usdreabilamt" hierarchy="usdreabilamt" ref="data:dma_KFA04151000.usdreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:60px; width:341px; height:32px;" tab="33" id="GroupBox115" tabIndex="33" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox115" hierarchy="GroupBox115" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="gbpreabilamt" indicator="GBP재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="gbpreabilamt" hierarchy="gbpreabilamt" ref="data:dma_KFA04151000.gbpreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:91px; width:341px; height:32px;" tab="34" id="GroupBox116" tabIndex="34" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox116" hierarchy="GroupBox116" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="cadreabilamt" indicator="CAD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="cadreabilamt" hierarchy="cadreabilamt" ref="data:dma_KFA04151000.cadreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:122px; width:341px; height:32px;" tab="35" id="GroupBox117" tabIndex="35" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox117" hierarchy="GroupBox117" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="eurreabilamt" indicator="EUR재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="eurreabilamt" hierarchy="eurreabilamt" ref="data:dma_KFA04151000.eurreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:176px; top:153px; width:341px; height:32px;" tab="36" id="GroupBox118" tabIndex="36" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox118" hierarchy="GroupBox118" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="hkdreabilamt" indicator="HKD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="hkdreabilamt" hierarchy="hkdreabilamt" ref="data:dma_KFA04151000.hkdreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:29px; width:341px; height:32px;" tab="37" id="GroupBox119" tabIndex="37" uistyle="KB_2024" uistyleid="TD-Head" orgid="GroupBox119" hierarchy="GroupBox119" class="kb_td_head">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="jpyreabilamt" indicator="JPY재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="jpyreabilamt" hierarchy="jpyreabilamt" ref="data:dma_KFA04151000.jpyreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:60px; width:341px; height:32px;" tab="38" id="GroupBox120" tabIndex="38" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox120" hierarchy="GroupBox120" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="audreabilamt" indicator="AUD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="audreabilamt" hierarchy="audreabilamt" ref="data:dma_KFA04151000.audreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:91px; width:341px; height:32px;" tab="39" id="GroupBox121" tabIndex="39" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox121" hierarchy="GroupBox121" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="nzdreabilamt" indicator="NZD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="nzdreabilamt" hierarchy="nzdreabilamt" ref="data:dma_KFA04151000.nzdreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:122px; width:341px; height:32px;" tab="40" id="GroupBox122" tabIndex="40" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox122" hierarchy="GroupBox122" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="chfreabilamt" indicator="CHF재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="chfreabilamt" hierarchy="chfreabilamt" ref="data:dma_KFA04151000.chfreabilamt"/>
+					</xf:group>
+					<xf:group ctype="GroupBox" style="position:absolute; left:693px; top:153px; width:341px; height:32px;" tab="41" id="GroupBox123" tabIndex="41" uistyle="KB_2024" uistyleid="TD-Body" orgid="GroupBox123" hierarchy="GroupBox123" class="kb_td_body">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:4px; top:2px; width:181px; height:28px; text-align:right;" id="sgdreabilamt" indicator="SGD재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" insertcomma="1" rightalign="1" orgid="sgdreabilamt" hierarchy="sgdreabilamt" ref="data:dma_KFA04151000.sgdreabilamt"/>
+					</xf:group>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:670px; width:1036px; height:142px;" tab="4" id="GroupBox113" tabIndex="4" uistyle="KB_2024" uistyleid="Notice" orgid="GroupBox113" hierarchy="GroupBox113" class="kb_Notice">
+					<w2:textbox ctype="Text" style="position:absolute; left:56px; top:32px; width:396px; height:28px; align:middleleft; text-align:middleleft;" id="Text69" tabIndex="1" uistyle="KB_2024" label="※&amp;nbsp;해지원리금이&amp;nbsp;원화인&amp;nbsp;경우만&amp;nbsp;표시됩니다.&amp;nbsp;(외화대체&amp;nbsp;해지분은&amp;nbsp;미표시)" orgid="Text69" hierarchy="Text69" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:56px; top:8px; width:616px; height:28px; align:middleleft; text-align:middleleft;" id="Text66" tabIndex="2" uistyle="KB_2024" label="※&amp;nbsp;투자성,&amp;nbsp;보장성(방카슈랑스)&amp;nbsp;상품은&amp;nbsp;해지원리금&amp;nbsp;등록이&amp;nbsp;불가합니다.&amp;nbsp;(대출&amp;nbsp;신규&amp;nbsp;전/후&amp;nbsp;1개월&amp;nbsp;동안&amp;nbsp;재예치&amp;nbsp;불가)" orgid="Text66" hierarchy="Text66" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:56px; top:56px; width:666px; height:28px; align:middleleft; text-align:middleleft;" id="Text70" tabIndex="4" uistyle="KB_2024" label="※&amp;nbsp;해지원리금&amp;nbsp;월환산금액은&amp;nbsp;정액적립식의&amp;nbsp;재예치&amp;nbsp;가능&amp;nbsp;여부&amp;nbsp;판정을&amp;nbsp;위해&amp;nbsp;산출되는&amp;nbsp;금액으로&amp;nbsp;산출&amp;nbsp;방식은&amp;nbsp;아래와&amp;nbsp;같습니다." orgid="Text70" hierarchy="Text70" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:73px; top:80px; width:171px; height:28px; align:middleleft; text-align:middleleft;" id="Text72" tabIndex="5" uistyle="KB_2024" label="-&amp;nbsp;정액적립식:약정&amp;nbsp;월불입금액" orgid="Text72" hierarchy="Text72" escape="false" class="kb_MiddleLeft"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:73px; top:104px; width:763px; height:28px; align:middleleft; text-align:middleleft;" id="Text73" tabIndex="6" uistyle="KB_2024" label="-&amp;nbsp;정액적립식&amp;nbsp;외:&amp;nbsp;계약기간이&amp;nbsp;있는&amp;nbsp;경우&amp;nbsp;[해지원리금(세후)/계약기간(월환산)],&amp;nbsp;계약기간이&amp;nbsp;없는&amp;nbsp;경우&amp;nbsp;[해지원리금(세후)/예치기간(월환산)]" orgid="Text73" hierarchy="Text73" escape="false" class="kb_MiddleLeft"/>
+					<xf:image ctype="Picture" style="position:absolute; left:12px; top:48px; width:40px; height:48px; color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="Picture6" tabIndex="7" tabstop="0" enterstop="0" backcolor="16777215" autosize="0" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" uistyle="KB_2024" uistyleid="Default" sizemode="CenterImage" path="ico_large_status_neutral.png" orgid="Picture6" hierarchy="Picture6"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:159px; width:1037px; height:48px;" tab="5" id="GroupBox110" tabIndex="5" uistyle="KB_2024" uistyleid="StatusBlue" orgid="GroupBox110" hierarchy="GroupBox110">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:180px; top:10px; width:153px; height:28px; text-align:right;" id="woncrdabilamt" indicator="정액적립식재예치가능금액" tabIndex="1" disabled="true" uistyle="KB_2024" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" insertcomma="1" rightalign="1" orgid="woncrdabilamt" hierarchy="woncrdabilamt" ref="data:dma_KFA04151000.woncrdabilamt"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:333px; top:10px; width:18px; height:28px; align:middlecenter; text-align:middlecenter;" id="Text154" tabIndex="2" uistyle="KB_2024" label="원" orgid="Text154" hierarchy="Text154" class="kb_MiddleCenter"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:38px; top:10px; width:127px; height:28px;" id="Text_woncrdabilamt" tabIndex="3" standardbackcolor="갈색100" standardtextcolor="파랑" uistyle="KB_2024" label="재예치가능잔액(A-B)" orgid="Text_woncrdabilamt" hierarchy="Text_woncrdabilamt" class="kb_MiddleRight kb_txt_blue"/>
+				</xf:group>
+				<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:3px; width:1036px; height:51px;" tab="6" id="GroupBox131" tabIndex="6" uistyle="KB_2024" uistyleid="StatusBlue" orgid="GroupBox131" hierarchy="GroupBox131">
+					<w2:textbox ctype="Text" style="position:absolute; left:56px; top:12px; width:508px; height:28px; align:middleleft; text-align:middleleft;" id="Text179" tabIndex="1" standardtextcolor="파랑" uistyle="KB_2024" label="아래&amp;nbsp;결과는&amp;nbsp;현재&amp;nbsp;시점의&amp;nbsp;예상&amp;nbsp;조회이므로&amp;nbsp;실제&amp;nbsp;거래(실행)시와는&amp;nbsp;내용이&amp;nbsp;달라질&amp;nbsp;수&amp;nbsp;있습니다." orgid="Text179" hierarchy="Text179" escape="false" class="kb_MiddleLeft kb_txt_blue"/>
+					<xf:image ctype="Picture" style="position:absolute; left:12px; top:1px; width:40px; height:48px; color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="Picture7" tabIndex="2" tabstop="0" enterstop="0" backcolor="16777215" autosize="0" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" uistyle="KB_2024" uistyleid="Default" sizemode="CenterImage" path="ico_large_status_information.png" orgid="Picture7" hierarchy="Picture7"/>
+				</xf:group>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:100px; width:1036px; height:64px;" tab="19" id="GroupBox44" tabIndex="19" uistyle="KB_2024" uistyleid="Notice" orgid="GroupBox44" hierarchy="GroupBox44" class="kb_Notice">
+				<w2:textbox ctype="Text" style="position:absolute; left:56px; top:9px; width:625px; height:28px; align:middleleft; text-align:middleleft;" id="Text133" tabIndex="1" uistyle="KB_2024" label="조회기준일자&amp;nbsp;입력방법&amp;nbsp;:&amp;nbsp;수신신규/여신취급을&amp;nbsp;위한&amp;nbsp;사전조회(조회구분-1)&amp;nbsp;→&amp;nbsp;수신신규(예정)/여신취급(예정)일자" orgid="Text133" hierarchy="Text133" escape="false" class="kb_MiddleLeft"/>
+				<xf:image ctype="Picture" style="position:absolute; left:12px; top:8px; width:40px; height:48px; color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="Picture3" tabIndex="2" tabstop="0" enterstop="0" backcolor="16777215" autosize="0" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" uistyle="KB_2024" uistyleid="Default" sizemode="CenterImage" path="ico_large_status_neutral.png" orgid="Picture3" hierarchy="Picture3"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:193px; top:27px; width:320px; height:28px; align:middleleft; text-align:middleleft;" id="Text134" tabIndex="3" uistyle="KB_2024" label="재예치&amp;nbsp;해지원리금&amp;nbsp;조회(조회구분-2)&amp;nbsp;→&amp;nbsp;예금&amp;nbsp;등&amp;nbsp;해지일자" orgid="Text134" hierarchy="Text134" escape="false" class="kb_MiddleLeft"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:2740px; width:1068px; height:420px; display:none;" tab="20" id="GroupBox130" tabIndex="20" uistyle="KB_2024" orgid="GroupBox130" hierarchy="GroupBox130">
+				<xf:trigger ctype="Button" style="position:absolute; left:136px; top:56px; width:28px; height:28px; display:none;" id="Button1_bak" tabIndex="1" uistyle="KB_2024" uistyleid="ActionIconOnly" enableimage="icon16_search.png" actionbuttontype="검색" type="button" class="btn_def1 btn_ico_search" orgid="Button1_bak" hierarchy="Button1_bak">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:16px; top:16px; width:238px; height:29px; align:middleleft; text-align:middleleft;" id="Text175" tabIndex="2" uistyle="KB_2024" uistyleid="H2" label="컴포넌트&amp;nbsp;백업,&amp;nbsp;삭제해도&amp;nbsp;무관" orgid="Text175" hierarchy="Text175" escape="false" class="kb_MiddleLeft kb_title_h2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:16px; top:56px; width:107px; height:28px;" id="Text176" tabIndex="3" uistyle="KB_2024" label="기존&amp;nbsp;KB-PIN버튼" orgid="Text176" hierarchy="Text176" escape="false" class="kb_MiddleRight"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:364px; top:60px; width:153px; height:28px; display:none;" id="Button3" tabIndex="4" uistyle="KB_2024" text="구속행위 검증대상 구분표" type="button" class="btn_def1" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="Button3">
+					<xf:label><![CDATA[구속행위 검증대상 구분표]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:284px; top:60px; width:54px; height:28px;" id="Text177" tabIndex="5" uistyle="KB_2024" label="팝업버튼" orgid="Text177" hierarchy="Text177" class="kb_MiddleRight"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:684px; top:108px; width:113px; height:32px;" id="Button2_bak" tabIndex="6" uistyle="KB_2024" uistyleid="ActionTertiary" text="KB셀러론 정보조회" type="button" class="btn_def1 kb_btn_white" orgid="Button2_bak" hierarchy="Button2_bak">
+					<xf:label><![CDATA[KB셀러론 정보조회]]></xf:label>
+				</xf:trigger>
+				<xf:trigger ctype="Button" style="position:absolute; left:510px; top:108px; width:170px; height:32px;" id="Button_E_bak" tabIndex="7" uistyle="KB_2024" uistyleid="ActionTertiary" text="해지원리금 등록 (재예치 관련)" type="button" class="btn_def1 kb_btn_white" orgid="Button_E_bak" hierarchy="Button_E_bak">
+					<xf:label><![CDATA[해지원리금 등록 (재예치 관련)]]></xf:label>
+				</xf:trigger>
+				<xf:trigger ctype="Button" style="position:absolute; left:376px; top:108px; width:130px; height:32px;" id="Button_D_bak" tabIndex="8" uistyle="KB_2024" uistyleid="ActionTertiary" text="외상매출채권 정보조회" type="button" class="btn_def1 kb_btn_white" orgid="Button_D_bak" hierarchy="Button_D_bak">
+					<xf:label><![CDATA[외상매출채권 정보조회]]></xf:label>
+				</xf:trigger>
+				<xf:trigger ctype="Button" style="position:absolute; left:235px; top:108px; width:137px; height:32px;" id="Button_C_bak" tabIndex="9" uistyle="KB_2024" uistyleid="ActionTertiary" text="법인사업자관계설정등록" type="button" class="btn_def1 kb_btn_white" orgid="Button_C_bak" hierarchy="Button_C_bak">
+					<xf:label><![CDATA[법인사업자관계설정등록]]></xf:label>
+				</xf:trigger>
+				<xf:trigger ctype="Button" style="position:absolute; left:105px; top:108px; width:126px; height:32px;" id="Button_B_bak" tabIndex="10" uistyle="KB_2024" uistyleid="ActionTertiary" text="고객기타관계설정등록" type="button" class="btn_def1 kb_btn_white" orgid="Button_B_bak" hierarchy="Button_B_bak">
+					<xf:label><![CDATA[고객기타관계설정등록]]></xf:label>
+				</xf:trigger>
+				<xf:trigger ctype="Button" style="position:absolute; left:19px; top:108px; width:82px; height:32px;" id="Button_A_bak" tabIndex="11" uistyle="KB_2024" uistyleid="ActionTertiary" text="고객정보조회" type="button" class="btn_def1 kb_btn_white" orgid="Button_A_bak" hierarchy="Button_A_bak">
+					<xf:label><![CDATA[고객정보조회]]></xf:label>
+				</xf:trigger>
+				<w2:pageFrame ctype="Panel" style="position:absolute; left:16px; top:196px; width:1036px; height:180px;" id="PanelLinkForm_bak" tabIndex="12" uistyle="KB_2024" joinscreenno="KMB04704A01" panelautosize="1" dynamicmove="1" orgid="PanelLinkForm_bak" hierarchy="PanelLinkForm_bak"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:16px; top:168px; width:110px; height:28px;" id="Text181" tabIndex="13" uistyle="KB_2024" label="기존&amp;nbsp;연계서식&amp;nbsp;패널" orgid="Text181" hierarchy="Text181" escape="false" class="kb_MiddleRight"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:28px; top:2321px; width:1036px; height:222px;" tab="21" id="GroupBoxLinkForm" tabIndex="21" uistyle="KB_2024" uistyleid="Accordion_LinkForm" initfold="1" orgid="GroupBoxLinkForm" hierarchy="GroupBoxLinkForm">
+				<w2:pageFrame ctype="Panel" style="position:absolute; left:0px; top:64px; width:1036px; height:158px;" id="PanelLinkForm" tabIndex="1" uistyle="KB_2024" joinscreenno="KMB04704B01" panelautosize="1" orgid="PanelLinkForm" hierarchy="PanelLinkForm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:0px; top:14px; width:90px; height:29px; align:middleleft; text-align:middleleft;" id="Text180" tabIndex="2" uistyle="KB_2024" uistyleid="H2" label="연계서식" orgid="Text180" hierarchy="Text180" class="kb_MiddleLeft kb_title_h2"/>
+				<w2:textbox id="title_GroupBoxLinkForm" class="title_h2" label="&amp;nbsp;" escape="false"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

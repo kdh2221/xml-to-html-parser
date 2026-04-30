@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KEA04007000.scn"  meta_screenId="KEA04007000" meta_screenName="B2B상품자기업이관신청번호조회" meta_desc="" meta_author="S012021(박찬일)">
+		<w2:type craft="true" craftSrc="/xml/KEA04007000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KEA0400741" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KEA0400741_INPUT":{"@id":"dma_KEA0400741_INPUT","b2BPrdctDstic":"b2BPrdctDstic","inquryDstic":"inquryDstic","bzno":"bzno","inquryBrncd":"inquryBrncd","inquryStartYmd":"inquryStartYmd","inquryEndYmd":"inquryEndYmd"}},"target":{"dlt_KEA0400741_OUTPUT_screen___KEA04007000_bzmanNoHist__dataBook":{"@id":"dlt_KEA0400741_OUTPUT_screen___KEA04007000_bzmanNoHist__dataBook","lumpAgreAplcnNo":"lumpAgreAplcnNo","b2bPrdctDstcd":"b2bPrdctDstcd","olMamaCorpBzno":"olMamaCorpBzno","olMamaCorpNm":"olMamaCorpNm","newMamaCorpBzno":"newMamaCorpBzno","newMamaCorpNm":"newMamaCorpNm","lumpAazStusDstcd":"lumpAazStusDstcd","lumpAaStusDstcd":"lumpAaStusDstcd","lumpApRsultDstcd":"lumpApRsultDstcd","lumpAgreDstcd":"lumpAgreDstcd","asaleBlAgreYn":"asaleBlAgreYn","aplcnBrncd":"aplcnBrncd","aplcnYmd":"aplcnYmd","lumpAgreDmndYmd":"lumpAgreDmndYmd","athorYmd":"athorYmd"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEA0400741_INPUT" TranClass="MCI" SvcCode="KEA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="b2BPrdctDstic" length="0" CtrlId="b2BPrdctDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="inquryDstic" length="0" CtrlId="inquryDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="bzno" length="10" CtrlId="bzno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="inquryBrncd" length="4" CtrlId="inquryBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="inquryStartYmd" length="8" CtrlId="inquryStartYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="inquryEndYmd" length="8" CtrlId="inquryEndYmd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KEA0400741_OUTPUT_screen___KEA04007000_bzmanNoHist__dataBook" saveRemovedData="true" CtrlId="dataBook" TranClass="MCI" SvcCode="KEA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="lumpAgreAplcnNo" length="12" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="b2bPrdctDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="olMamaCorpBzno" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="olMamaCorpNm" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="newMamaCorpBzno" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="newMamaCorpNm" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="lumpAazStusDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="lumpAaStusDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="lumpApRsultDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="lumpAgreDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="asaleBlAgreYn" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="aplcnBrncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="aplcnYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="lumpAgreDmndYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="athorYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="dlt_KEA04007000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEA04007000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="b2BPrdctDstic" length="0" CtrlId="b2BPrdctDstic"/>
+						<w2:key dataType="text" name="" id="inquryDstic" length="0" CtrlId="inquryDstic"/>
+						<w2:key dataType="text" name="" id="bzno" length="10" CtrlId="bzno"/>
+						<w2:key dataType="text" name="" id="inquryBrncd" length="4" CtrlId="inquryBrncd"/>
+						<w2:key dataType="text" name="" id="inquryStartYmd" length="8" CtrlId="inquryStartYmd"/>
+						<w2:key dataType="text" name="" id="inquryEndYmd" length="8" CtrlId="inquryEndYmd"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataBook" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="AutoSeq"/>
+						<w2:column dataType="text" name="" id="lumpAgreAplcnNo"/>
+						<w2:column dataType="text" name="" id="b2bPrdctDstcd"/>
+						<w2:column dataType="text" name="" id="olMamaCorpBzno"/>
+						<w2:column dataType="text" name="" id="olMamaCorpNm"/>
+						<w2:column dataType="text" name="" id="newMamaCorpBzno"/>
+						<w2:column dataType="text" name="" id="newMamaCorpNm"/>
+						<w2:column dataType="text" name="" id="lumpAazStusDstcd"/>
+						<w2:column dataType="text" name="" id="lumpAaStusDstcd"/>
+						<w2:column dataType="text" name="" id="lumpApRsultDstcd"/>
+						<w2:column dataType="text" name="" id="lumpAgreDstcd"/>
+						<w2:column dataType="text" name="" id="asaleBlAgreYn"/>
+						<w2:column dataType="text" name="" id="aplcnBrncd"/>
+						<w2:column dataType="text" name="" id="aplcnYmd"/>
+						<w2:column dataType="text" name="" id="lumpAgreDmndYmd"/>
+						<w2:column dataType="text" name="" id="athorYmd"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+scwin.OnInitScreen = function() {
+    //처리시작일자 setting
+    inquryStartYmd.setValue(getDate().substr(0, 4) + "0101");
+    inquryEndYmd.setValue(getDate());
+    dataBook.removeAll();
+
+    //나중에 건수가 많아지거나 조회 조건이 사업자번호로도 조회할 경우가 많아질경우 
+    //아래 내용을 코멘트로 막을 것(START 부터 아래의 E N D까지)
+    inquryDstic.DeleteItemByKey("1");
+    inquryDstic.DeleteItemByKey("2");
+
+    //위의 내용을 코멘트로 막을 것(E N D)
+};
+
+scwin.OnSendKey = async function() {
+    $c.iz.tran.setSendKey(0);
+    dataBook.setValue("");
+    dataBook.removeAll();
+    $c.iz.tran.setTranID("KEA0400741");
+    await $c.iz.tran.ASend();
+    if (dataBook.getTotalRow() == 0) {
+        $c.iz.data.commonButtonEnable(1, false);
+    } else {
+        $c.iz.data.commonButtonEnable(1, true);
+    }
+};
+
+
+//조회부점버튼 클릭시 조회부점명 검색
+scwin.inquryBrncdButton_OnClick = function(e) {
+    Link.brncd = inquryBrncd.getValue();
+    $c.iz.screen.popup("KJI04811000", "DATALINK");
+    var tempValue1 = Link.brncd;
+    var tempValue2 = Link.brnName;
+    var tempValue3 = Link.brnHanglName;
+    if (tempValue1 != "" && typeof(tempValue1) != "undefined") {
+        inquryBrncd.setValue(tempValue1);
+        inquryBrncdName.setValue(tempValue3);
+    }
+};
+
+//조회부점 입력 후 Focus out시
+scwin.inquryBrncd_OnValidate = function(info) {
+    //부점코드 검증
+
+    if ((inquryBrncd.getValue() == "9999") || (inquryBrncd.getValue() == "0000")) {
+        inquryBrncdName.setValue("전체");
+    } else {
+        $c.com.getCommonBrnName(inquryBrncd, inquryBrncdName);
+    }
+};
+
+//부점코드 입력이 될때마다 발생
+scwin.inquryBrncd_OnKeyTyped = function(Key) {
+    //관리부점 삭제시 관리부점명 삭제
+    if (inquryBrncd.getValue() == "") {
+        inquryBrncdName.setValue("");
+    }
+};
+
+scwin.bznoButton_OnClick = function(e) {
+    //사업자번호 조회
+    $c.iz.screen.popup("KEA04001000", "DATALINK");
+    bzno.setValue(Link.bzno);
+    custNm.setValue(Link.conmName);
+};
+
+scwin.inquryDstic_OnItemChanged = function(e) {
+    bzno.setDisabled(true); //사업자번호
+    inquryBrncd.setDisabled(true); //조회부점
+    inquryStartYmd.setDisabled(true); //조회시작일
+    inquryEndYmd.setDisabled(true); //조회종료일
+
+    bzno.setMandatory(false); //사업자번호
+    inquryBrncd.setMandatory(false); //조회부점
+    inquryStartYmd.setMandatory(false); //조회시작일
+    inquryEndYmd.setMandatory(false); //조회종료일
+
+    if (inquryDstic.getValue() == "1" || inquryDstic.getValue() == "2") {
+        bzno.setDisabled(false); //사업자번호
+        bzno.setMandatory(true);
+    } else if (inquryDstic.getValue() == "3") {
+        inquryBrncd.setDisabled(false); //조회부점
+        inquryBrncd.setMandatory(true);
+    } else if (inquryDstic.getValue() == "4") {
+        inquryStartYmd.setDisabled(false); //조회시작일
+        inquryEndYmd.setDisabled(false); //조회종료일
+
+        inquryStartYmd.setMandatory(true); //조회시작일
+        inquryEndYmd.setMandatory(true);
+    }
+};
+
+scwin.dataBook_OnDClick = function(Arg1, Arg2, Arg3) {
+    //여기에 구현코드를 삽입하세요.
+    if (Arg1 >= 1) {
+        Link.lumpAgreAplcnNo = dataBook.GetGridData(Arg1 - 1, 0);
+        $c.iz.screen.screenClose();
+    }
+};
+
+scwin.Button2_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.screenClose();
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="B2B상품자기업이관신청번호조회" meta_screenId="KEA04007000" groupcocd="KB0" customclass="Kes" style="background-color:rgb(255,255,255); width:755px; height:583px;" screentype="AType" meta_author="T000519(고성남)" meta_user="S012021(박찬일)" meata_date="2014/07/30 19:17:26" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:736px; height:138px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:126px; top:12px; width:209px; height:24px; color:rgb(0,0,0);" id="inquryDstic" indicator="조회구분" tabIndex="1" mandatory="true" class="req" maxdropdownitems="45" charcasing="0" index="0" items="1=변경전 모기업사업자번호;2=변경후 모기업사업자번호;3=신청부점;4=신청일자;" appearance="minimal" ev:onchange="scwin.inquryDstic_OnItemChanged" orgid="inquryDstic" hierarchy="inquryDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KEA04007000.inquryDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[변경전 모기업사업자번호]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[변경후 모기업사업자번호]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[신청부점]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[신청일자]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<xf:trigger ctype="Button" style="position:absolute; left:162px; top:72px; width:24px; height:24px; background-color:rgb(255,255,255);" id="inquryBrncdButton" tabIndex="1" imagealign="MiddleCenter" imagefit="1" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.inquryBrncdButton_OnClick" orgid="inquryBrncdButton" hierarchy="inquryBrncdButton">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:54px; top:12px; width:66px; height:24px; color:rgb(0,0,0);" id="Text_inquryDstcd" tabIndex="2" linespace="2" label="*조회구분" orgid="Text_inquryDstcd" hierarchy="Text_inquryDstcd" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:126px; top:42px; width:130px; height:24px; color:rgb(0,0,0);" id="b2BPrdctDstic" indicator="B2B상품구분" tabIndex="2" mandatory="true" class="req" index="0" items="1=환어음순구매;2=외상매출채권 ;5=윈윈기업대출;6=KB구매론;C=KB상생결제론;Z=전체;" appearance="minimal" orgid="b2BPrdctDstic" hierarchy="b2BPrdctDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KEA04007000.b2BPrdctDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[환어음순구매]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[외상매출채권 ]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[윈윈기업대출]]></xf:label>
+							<xf:value><![CDATA[5]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB구매론]]></xf:label>
+							<xf:value><![CDATA[6]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB상생결제론]]></xf:label>
+							<xf:value><![CDATA[C]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[전체]]></xf:label>
+							<xf:value><![CDATA[Z]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:456px; top:72px; width:88px; height:24px; display:none;" id="bzno" indicator="사업자번호" tabIndex="3" editFormat="999-99-99999" maxlength="12" minlength="10" charcasing="0" allowChar="0-9" ninemode="0" orgid="bzno" hierarchy="bzno" ref="data:dma_KEA04007000.bzno"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:72px; width:32px; height:24px;" id="inquryBrncd" indicator="조회부점" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="4" charcasing="0" ninemode="0" ev:onviewchange="scwin.inquryBrncd_OnValidate" orgid="inquryBrncd" hierarchy="inquryBrncd" ev:onkeyup="scwin.inquryBrncd_OnKeyTyped" ref="data:dma_KEA04007000.inquryBrncd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:354px; top:72px; width:97px; height:24px; color:rgb(0,0,0); display:none;" id="Text_bzno" tabIndex="4" linespace="2" label="사업자등록번호" orgid="Text_bzno" hierarchy="Text_bzno" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:126px; top:102px; width:102px; height:24px;" id="inquryStartYmd" indicator="조회시작년월일" tabIndex="5" maxlength="10" charcasing="0" validationtype="유효날짜검증" ninemode="0" showcalendarbutton="1" orgid="inquryStartYmd" hierarchy="inquryStartYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEA04007000.inquryStartYmd"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:546px; top:72px; width:24px; height:24px; background-color:rgb(255,255,255); display:none;" id="bznoButton" tabIndex="6" imagealign="MiddleCenter" imagefit="1" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.bznoButton_OnClick" orgid="bznoButton" hierarchy="bznoButton">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:246px; top:102px; width:102px; height:24px;" id="inquryEndYmd" indicator="조회종료년월일" tabIndex="6" maxlength="10" charcasing="0" validationtype="유효날짜검증" ninemode="0" showcalendarbutton="1" orgid="inquryEndYmd" hierarchy="inquryEndYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEA04007000.inquryEndYmd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:354px; top:102px; width:368px; height:24px; display:none;" id="custNm" indicator="고객명" tabIndex="7" disabled="true" editFormat="H(52)" maxlength="52" ninemode="0" orgid="custNm" hierarchy="custNm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_inquryBrncd" tabIndex="8" linespace="2" label="조회부점" orgid="Text_inquryBrncd" hierarchy="Text_inquryBrncd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:192px; top:72px; width:144px; height:24px;" id="inquryBrncdName" indicator="출력구분" tabIndex="9" disabled="true" editFormat="H(20)" maxlength="20" autoskip="0" ninemode="0" orgid="inquryBrncdName" hierarchy="inquryBrncdName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:102px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_inquryStartYmd" tabIndex="10" linespace="2" label="조회시작년월일" orgid="Text_inquryStartYmd" hierarchy="Text_inquryStartYmd" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:228px; top:102px; width:15px; height:24px; color:rgb(0,0,0);" id="Text6" tabIndex="13" label="~" orgid="Text6" hierarchy="Text6" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:31px; top:42px; width:90px; height:24px; color:rgb(0,0,0);" id="Text_b2BPrdctDstic" tabIndex="15" linespace="2" label="*B2B상품구분" orgid="Text_b2BPrdctDstic" hierarchy="Text_b2BPrdctDstic" class="kb_MiddleRight"/>
+			</xf:group>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:12px; top:150px; width:738px; height:355px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dataBook" indicator="데이터부" tabIndex="2" tabstop="0" enterstop="0" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="0" controlmode="Sheet" sheetwidth="736" sheetheight="355" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msAll" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#cccccc" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="24" headrowheight="24" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="1" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataBook" hierarchy="dataBook" ev:oncelldblclick="scwin.dataBook_OnDClick" dataList="data:dlt_dataBook">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="No" width="30"/>
+							<w2:column id="column2" inputType="text" value="일괄약정신청번호" width="118"/>
+							<w2:column id="column3" inputType="text" value="B2B상품구분" width="110"/>
+							<w2:column id="column4" inputType="text" value="변경전모기업" width="103"/>
+							<w2:column id="column5" inputType="text" value="변경전모기업명" width="154"/>
+							<w2:column id="column6" inputType="text" value="변경후모기업" width="117"/>
+							<w2:column id="column7" inputType="text" value="변경후모기업명" width="135"/>
+							<w2:column id="column8" inputType="text" value="신청상태" width="96"/>
+							<w2:column id="column9" inputType="text" value="승인상태" width="100"/>
+							<w2:column id="column10" inputType="text" value="처리결과" width="91"/>
+							<w2:column id="column11" inputType="text" value="이관구분" width="129"/>
+							<w2:column id="column12" inputType="text" value="매출채권이관여부" width="124"/>
+							<w2:column id="column13" inputType="text" value="신청부점" width="64"/>
+							<w2:column id="column14" inputType="text" value="신청일" width="80"/>
+							<w2:column id="column15" inputType="text" value="처리요청일" width="80"/>
+							<w2:column id="column16" inputType="text" value="승인일" width="80"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="AutoSeq" inputType="dtDataSeq" width="30" hidden="false"/>
+							<w2:column id="lumpAgreAplcnNo" inputType="text" width="118" hidden="false"/>
+							<w2:column id="b2bPrdctDstcd" inputType="select" width="110" hidden="false"/>
+							<w2:column id="olMamaCorpBzno" inputType="text" width="103" hidden="false"/>
+							<w2:column id="olMamaCorpNm" inputType="text" width="154" hidden="false"/>
+							<w2:column id="newMamaCorpBzno" inputType="text" width="117" hidden="false"/>
+							<w2:column id="newMamaCorpNm" inputType="text" width="135" hidden="false"/>
+							<w2:column id="lumpAazStusDstcd" inputType="select" width="96" hidden="false"/>
+							<w2:column id="lumpAaStusDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="lumpApRsultDstcd" inputType="select" width="91" hidden="false"/>
+							<w2:column id="lumpAgreDstcd" inputType="select" width="129" hidden="false"/>
+							<w2:column id="asaleBlAgreYn" inputType="select" width="124" hidden="false"/>
+							<w2:column id="aplcnBrncd" inputType="text" width="64" hidden="false"/>
+							<w2:column id="aplcnYmd" inputType="text" width="80" hidden="false"/>
+							<w2:column id="lumpAgreDmndYmd" inputType="text" width="80" hidden="false"/>
+							<w2:column id="athorYmd" inputType="text" width="80" hidden="false"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:660px; width:70px; height:24px; color:rgb(0,0,0); display:none;" id="Text_totalLineCnt" tabIndex="3" linespace="2" label="총라인수" orgid="Text_totalLineCnt" hierarchy="Text_totalLineCnt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:150px; top:660px; width:39px; height:24px; display:none;" id="totalLineCnt" indicator="총라인수" tabIndex="4" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" ninemode="0" orgid="totalLineCnt" hierarchy="totalLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:690px; width:84px; height:24px; color:rgb(0,0,0); display:none;" id="Text_prsntLineCnt" tabIndex="5" linespace="2" label="출력라인수" orgid="Text_prsntLineCnt" hierarchy="Text_prsntLineCnt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:150px; top:690px; width:39px; height:24px; display:none;" id="prsntLineCnt" indicator="출력라인수" tabIndex="6" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" ninemode="0" orgid="prsntLineCnt" hierarchy="prsntLineCnt"/>
+			<xf:trigger ctype="Button" style="position:absolute; left:672px; top:510px; width:60px; height:24px;" id="Button2" tabIndex="7" text="닫기" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+				<xf:label><![CDATA[닫기]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+	</body>
+</html>

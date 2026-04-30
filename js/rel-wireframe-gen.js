@@ -443,45 +443,104 @@ const RelWireframeGen = (() => {
     html += `<div class="rel-wf-toggle">`;
     html += `<button class="rel-wf-toggle-btn active" onclick="toggleRelWfMode(this, 'label')">라벨</button>`;
     html += `<button class="rel-wf-toggle-btn" onclick="toggleRelWfMode(this, 'id')">ID</button>`;
+    html += `<button class="rel-wf-tdids-btn" onclick="toggleRelWfTdIds(this)">셀 ID</button>`;
     html += `</div>`;
 
     html += `<div class="rel-wf-container">`;
     html += `<div class="rel-wf-root-label">.${mainClass.replace(/\s+/g, '.')}</div>`;
 
-    // 자식 섹션 순회
+    // 자식 섹션 순회 — 디스패처를 통해 미지 class/직계 컴포넌트까지 모두 렌더
     for (const child of mainGroup.children) {
-      const cls = child.getAttribute('class') || '';
-      const tag = child.tagName.split(':').pop().toLowerCase();
-
-      if (tag !== 'group') continue; // 코멘트 등 스킵
-
-      if (cls.includes('lybox')) {
-        html += renderHorizontalFromDom(child);
-      } else if (cls.includes('titbox')) {
-        html += renderTitboxFromDom(child);
-      } else if (cls.includes('tblbox')) {
-        html += renderTblboxFromDom(child);
-      } else if (cls.includes('gvwbox')) {
-        html += renderGvwboxFromDom(child);
-      } else if (cls.includes('btnbox')) {
-        html += renderBtnboxFromDom(child);
-      } else if (cls.includes('schbox')) {
-        html += renderSchboxFromDom(child);
-      } else if (cls.includes('msgbox')) {
-        html += renderMsgboxFromDom(child);
-      } else if (cls.includes('tbcbox')) {
-        html += renderTbcboxFromDom(child);
-      } else if (cls.includes('chartbox')) {
-        html += renderBlockSectionFromDom(child, 'chartbox');
-      } else if (cls.includes('tvwbox')) {
-        html += renderBlockSectionFromDom(child, 'tvwbox');
-      } else if (cls.includes('hidden_field')) {
-        html += renderHiddenFieldFromDom(child);
-      }
+      html += dispatchChildSection(child);
     }
 
     html += `</div>`;
     return html;
+  }
+
+  /** 자식 요소를 class/ctype 기반으로 적절한 섹션 렌더러에 위임.
+   *  알려지지 않은 class나 직계 컴포넌트도 누락 없이 표현한다. */
+  function dispatchChildSection(child) {
+    const tag = child.tagName.split(':').pop().toLowerCase();
+    if (!tag || tag === 'parsererror') return '';
+
+    // 직계 non-group 컴포넌트 → 칩으로 표시
+    if (tag !== 'group') {
+      const chip = compChipFromDom(child, false);
+      return chip ? `<div class="rel-wf-loose-chip">${chip}</div>` : '';
+    }
+
+    const cls = child.getAttribute('class') || '';
+    if (cls.includes('lybox')) return renderHorizontalFromDom(child);
+    if (cls.includes('titbox')) return renderTitboxFromDom(child);
+    if (cls.includes('tblbox')) return renderTblboxFromDom(child);
+    if (cls.includes('gvwbox')) return renderGvwboxFromDom(child);
+    if (cls.includes('btnbox')) return renderBtnboxFromDom(child);
+    if (cls.includes('schbox')) return renderSchboxFromDom(child);
+    if (cls.includes('msgbox')) return renderMsgboxFromDom(child);
+    if (cls.includes('tbcbox')) return renderTbcboxFromDom(child);
+    if (cls.includes('chartbox')) return renderBlockSectionFromDom(child, 'chartbox');
+    if (cls.includes('tvwbox')) return renderBlockSectionFromDom(child, 'tvwbox');
+    if (cls.includes('hidden_field')) return renderHiddenFieldFromDom(child);
+    if (cls.includes('grpbox_wrap')) return renderGrpboxWrapFromDom(child);
+
+    // ctype 있는 group은 단일 컴포넌트(Chart/Tree/TAB 등) — 칩으로
+    if (child.getAttribute('ctype')) {
+      const chip = compChipFromDom(child, false);
+      return chip ? `<div class="rel-wf-loose-chip">${chip}</div>` : '';
+    }
+
+    // 알려지지 않은 래퍼 group → 제네릭 섹션으로 표현
+    return renderGenericGroupFromDom(child);
+  }
+
+  /** grpbox_wrap: 분할된 tblbox/msgbox 등을 감싸는 컨테이너 */
+  function renderGrpboxWrapFromDom(el) {
+    const id = el.getAttribute('id') || '';
+    let html = `<div class="rel-wf-section" style="border-color:#64748b">`;
+    html += `<div class="rel-wf-section-header" style="background:#f8fafc;border-color:#64748b">`;
+    html += `<span class="rel-wf-section-badge" style="background:#64748b">.grpbox_wrap</span>`;
+    html += `<span class="rel-wf-section-label">${esc(id) || '그룹 래퍼'}</span>`;
+    html += sectionIdBadge(el);
+    html += `</div><div class="rel-wf-section-body">`;
+    for (const child of el.children) {
+      html += dispatchChildSection(child);
+    }
+    html += `</div></div>`;
+    return html;
+  }
+
+  /** 미지 class 또는 class 없는 래퍼 group — 누락 방지용 제네릭 섹션 */
+  function renderGenericGroupFromDom(el) {
+    const cls = (el.getAttribute('class') || '').trim();
+    const id = el.getAttribute('id') || '';
+    const badgeText = cls ? '.' + cls.split(/\s+/).join('.') : 'group';
+    let html = `<div class="rel-wf-section" style="border-color:#94a3b8">`;
+    html += `<div class="rel-wf-section-header" style="background:#f1f5f9;border-color:#94a3b8">`;
+    html += `<span class="rel-wf-section-badge" style="background:#94a3b8">${esc(badgeText)}</span>`;
+    html += `<span class="rel-wf-section-label">${esc(id) || '(미분류 그룹)'}</span>`;
+    html += sectionIdBadge(el);
+    html += `</div><div class="rel-wf-section-body">`;
+
+    let chipsHtml = '';
+    for (const child of el.children) {
+      const childTag = child.tagName.split(':').pop().toLowerCase();
+      if (childTag === 'attributes') continue;
+      if (childTag === 'group' && !child.getAttribute('ctype')) {
+        // 중첩 래퍼/섹션 → 디스패처로 재귀
+        html += flushChips(chipsHtml); chipsHtml = '';
+        html += dispatchChildSection(child);
+      } else {
+        chipsHtml += compChipFromDom(child, false);
+      }
+    }
+    html += flushChips(chipsHtml);
+    html += `</div></div>`;
+    return html;
+  }
+
+  function flushChips(chipsHtml) {
+    return chipsHtml ? `<div class="rel-wf-generic-chips">${chipsHtml}</div>` : '';
   }
 
   // ─── DOM 기반 섹션 렌더러 ───
@@ -719,18 +778,11 @@ const RelWireframeGen = (() => {
       const sideTag = side.tagName.split(':').pop().toLowerCase();
       if (sideTag !== 'group') continue;
       const colClass = side.getAttribute('class') || '';
-      const colLabel = colClass ? ` (${colClass})` : '';
       html += `<div class="rel-wf-horizontal-col">`;
-      if (colLabel) html += `<div class="rel-wf-horizontal-col-label">${esc(colClass)}</div>`;
-      // 내부 섹션 순회
+      if (colClass) html += `<div class="rel-wf-horizontal-col-label">${esc(colClass)}</div>`;
+      // 내부 섹션 순회 — 디스패처로 모든 섹션 타입 지원
       for (const child of side.children) {
-        const cls = child.getAttribute('class') || '';
-        const tag = child.tagName.split(':').pop().toLowerCase();
-        if (tag !== 'group') continue;
-        if (cls.includes('tblbox')) html += renderTblboxFromDom(child);
-        else if (cls.includes('titbox')) html += renderTitboxFromDom(child);
-        else if (cls.includes('gvwbox')) html += renderGvwboxFromDom(child);
-        else if (cls.includes('btnbox')) html += renderBtnboxFromDom(child);
+        html += dispatchChildSection(child);
       }
       html += `</div>`;
     }
@@ -801,11 +853,10 @@ const RelWireframeGen = (() => {
         html += `<div style="border:1px dashed ${sc.border};border-radius:6px;padding:8px;margin-bottom:6px;">`;
         html += `<div style="font-size:11px;font-weight:600;color:${sc.border};margin-bottom:4px;">${esc(contentLabel)}</div>`;
 
-        // content 자식 순회
+        // content 자식 순회 — 디스패처로 모든 섹션 타입 지원
         let hasContent = false;
         for (const inner of child.children) {
           const innerTag = inner.tagName.split(':').pop().toLowerCase();
-          const innerCls = inner.getAttribute('class') || '';
           const innerCtype = inner.getAttribute('ctype') || '';
 
           // pageFrame 직접 자식
@@ -816,15 +867,8 @@ const RelWireframeGen = (() => {
             continue;
           }
 
-          if (innerTag !== 'group') continue;
-
-          if (innerCls.includes('tblbox')) { html += renderTblboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('gvwbox')) { html += renderGvwboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('btnbox')) { html += renderBtnboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('schbox')) { html += renderSchboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('msgbox')) { html += renderMsgboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('titbox')) { html += renderTitboxFromDom(inner); hasContent = true; }
-          else if (innerCls.includes('hidden_field')) { html += renderHiddenFieldFromDom(inner); hasContent = true; }
+          const sectionHtml = dispatchChildSection(inner);
+          if (sectionHtml) { html += sectionHtml; hasContent = true; }
         }
 
         // pageFrame이 group 아닌 직접 자식일 수 있음
@@ -862,17 +906,11 @@ const RelWireframeGen = (() => {
     html += sectionIdBadge(el);
     html += `</div><div class="rel-wf-section-body">`;
 
-    // 내부 컴포넌트 칩 출력
+    // 내부 컴포넌트 칩 출력 — compChipFromDom이 ctype/래퍼 재귀 모두 처리
     for (const child of el.children) {
       const tag = child.tagName.split(':').pop().toLowerCase();
-      if (tag === 'group') {
-        // 내부 group은 재귀
-        for (const inner of child.children) {
-          html += compChipFromDom(inner, false);
-        }
-      } else {
-        html += compChipFromDom(child, false);
-      }
+      if (tag === 'attributes') continue;
+      html += compChipFromDom(child, false);
     }
 
     html += `</div></div>`;
@@ -947,14 +985,16 @@ const RelWireframeGen = (() => {
 
   function compChipFromDom(el, isHidden) {
     const tag = el.tagName.split(':').pop().toLowerCase();
-    if (tag === 'group') {
-      // 재귀
+    const ctypeAttr = el.getAttribute('ctype') || '';
+
+    // ctype 없는 일반 group은 래퍼로 간주하여 내부 재귀
+    if (!ctypeAttr && tag === 'group') {
       let inner = '';
       for (const child of el.children) { inner += compChipFromDom(child, isHidden); }
       return inner;
     }
 
-    const ctype = el.getAttribute('ctype') || {
+    const ctype = ctypeAttr || {
       input: 'Edit', textbox: 'Text', trigger: 'Button',
       select1: 'SelectBox', checkbox: 'CheckBox', textarea: 'TextArea',
       gridview: 'GridView', anchor: 'LinkText', inputcalendar: 'Calendar',

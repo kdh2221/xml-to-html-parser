@@ -1,13 +1,23 @@
-# XML to XML (샘플 기반 변환)
+# WebSquare Publishing Editor — XML to XML
 
 ## 목적
 
 기존 XML 좌표변환은 skill MD에 정의된 규칙을 코드에 하드코딩하는 방식이라, 규칙 변경 시 JS를 직접 수정해야 하는 한계가 있었다.
 XML to XML은 실제 잘 만들어진 변환 샘플(원본과 변환 결과 쌍)에서 패턴을 추출하여 변환하는 방식으로, MD 규칙에 의존하지 않는다.
 
+## 탭 구성
+
+본 에디터는 세 개의 탭으로 구성된다.
+
+| 탭 | 용도 |
+|----|------|
+| **XML to XML** (기본) | 절대좌표 XML → 상대좌표 XML 샘플 기반 변환, 와이어프레임/검증, 폴더 일괄 변환 |
+| **XML 좌표변환** | 규칙 기반(레거시) 변환기 — abs-to-rel-converter.js 사용 |
+| **배치 비교** | 변환 전/후를 실 서버에서 렌더하여 스크린샷·메트릭으로 일괄 비교 (신규) |
+
 ## 기존 방식과의 차이
 
-| 항목 | XML 좌표변환 (탭 1) | XML to XML (탭 2) |
+| 항목 | XML 좌표변환 (탭 2) | XML to XML (탭 1) |
 |------|---------------------|-------------------|
 | 변환 근거 | skill MD 규칙 하드코딩 | 실제 샘플 쌍에서 추출한 패턴 |
 | 변환 엔진 | abs-to-rel-converter.js | sample-converter.js |
@@ -25,18 +35,57 @@ XML to XML은 실제 잘 만들어진 변환 샘플(원본과 변환 결과 쌍)
 - 일반 변환 / 반응형 변환 선택 (반응형 시 adaptive, adaptiveThreshold 추가)
 - 다중 파일 동시 처리
 - 변환 XML 복사 / 다운로드
+- **태그 리네이밍 매핑 (TAG_RENAME_MAP)**: 출력 XML의 컴포넌트 태그명을 일괄 치환할 수 있다. sample-converter.js 상단의 `TAG_RENAME_MAP`에 `'xf:input': 'w2:kb_input'` 같은 규칙을 추가하면 모든 출력 경로(섹션/그리드/숨김/버튼)에 동일하게 적용된다. 속성은 변경하지 않고 원본 그대로 유지한다. 매핑이 비어 있으면 기존 동작과 동일.
+- **w2:IBSheet 정규화**: 그리드 출력 시 원본 태그가 `w2:IBSheet`인 경우 `w2:gridView`로 자동 변환된다 (그 외 그리드 태그는 원본 보존).
 
-### 2. 와이어프레임
+### 2. 폴더 일괄 변환 (신규)
+- XML to XML 탭 상단의 "폴더 선택 & 일괄 변환" 버튼
+- 선택한 폴더를 **하위 재귀 스캔**하여 `*.xml` 중 같은 폴더 안에 `_rel_v*.xml` 쌍이 없는 원본만 일괄 변환
+- 결과는 원본 옆에 `<name>_rel_v1.xml`로 저장 (현재 선택된 일반/반응형 옵션 적용)
+- 진행률은 저장 오버레이로 표시, 실패 목록은 콘솔(F12)에 출력
+- File System Access API 사용 (Chromium 계열 브라우저 필요)
+
+### 3. 와이어프레임
 - 절대좌표 와이어프레임: 원본 좌표 기반 레이아웃 시각화 (GroupBox 타이틀 표시)
 - 상대좌표 와이어프레임: 변환 결과의 템플릿 구조 시각화
 - 라벨/ID 토글: 컴포넌트의 라벨 또는 ID를 전환하여 표시
+- **셀 ID 토글 (신규)**: tblbox 등의 td/th 단위 ID 표시를 별도 버튼으로 on/off (기본 숨김, 클릭 시 노출)
 - ID 불일치 빨간색 표시: 원본과 변환 간 누락된 ID 시각 확인
+- **섹션 디스패처 일원화**: 미지 class·`grpbox_wrap`·class 없는 래퍼 group·직계 컴포넌트도 누락 없이 렌더 (`renderGenericGroupFromDom` / `renderGrpboxWrapFromDom` 추가)
+- **섹션 헤더 표기 개선**: class 배지가 라벨 우측의 회색 괄호 표기로 정리되어 라벨 가독성 향상
 
-### 3. 검증 (통합 탭)
+### 4. 검증 (통합 탭)
 - 컴포넌트 검증: 타입별 통계, 겹침/좌표 이상 검사, 전체 컴포넌트 목록
 - 스크립트 검증: 이벤트 핸들러, ID 참조, ref 바인딩, dataList, 속성 보존 검증
 - FAIL 항목별 구체적 오류 설명 및 영향 안내
 - 누락 복구: 숨김 컴포넌트는 자동 복구, 화면 표시 컴포넌트는 수동 확인 경고
+
+### 5. 배치 비교 (신규 탭)
+실제 WebSquare 서버에 변환 전/후 XML을 띄워 스크린샷을 찍고, 보존율을 자동 계산해 비교 리포트를 만든다.
+
+- **로컬 캡처 서비스 필요**: `tools/capture-server.js` (Puppeteer + Express, 포트 5678). `start-editor.bat` 더블클릭 시 캡처 서비스와 에디터가 함께 기동된다.
+- **설정 항목**:
+  - WebSquare 서버 (`172.16.0.10:8080` 형식, http/https 자동 인식)
+  - 서버 루트 폴더 (URL의 `/...` 경로 시작점)
+  - 비교 대상 폴더 (서버 루트 하위) → URL `w2xPath`가 자동 계산되어 미리보기에 표시
+  - 리포트 폴더, 엔트리 파일명, 캡처 대기(ms), 뷰포트(W×H)
+- **파일 쌍 스캔**: 비교 대상 폴더를 하위 재귀로 훑어 `foo.xml` ↔ `foo_rel_v*.xml` 쌍을 자동 매칭. 미변환 파일이 보이면 "미변환 자동 변환" 버튼으로 일반/반응형 옵션을 선택해 같은 자리에서 일괄 변환 가능.
+- **실행**: 선택한 쌍을 한 번에 캡처(원본/변환 병렬). 진행률·중단 지원.
+- **리포트 산출물 구조**:
+  ```
+  {reportDir}/
+    {entryFile}              엔트리 HTML (run 목록/요약/chunk 링크)
+    manifest.json            전체 메타데이터 (run·chunk·평균 보존율)
+    runs/{runId}/
+      chunk_NNN.html         화면 100개 단위 비교 페이지
+      images/
+        NNNN_orig.jpg        원본 스크린샷 (JPEG quality 80)
+        NNNN_conv.jpg        변환 스크린샷
+  ```
+- **chunk 분리 이유**: 단일 HTML 비대화 방지(1 chunk ≤ 100), append O(N²) 제거, 새 run은 기존 chunk 미변경.
+- **보존율 산출**: capture-server가 모든 frame에서 카테고리별 가시 컴포넌트(폼/버튼/링크/이미지/테이블/그리드/탭/패널) 카운트와 보이는 텍스트 토큰을 추출 → 카테고리별 `min/max` 보존율 + 텍스트 Jaccard 유사도 → 동일 가중 평균이 종합 보존율.
+- **체크/메모 영속화**: 각 화면 단위로 체크박스·메모를 localStorage에 보존.
+- **엔트리 열기 안내**: chunk 상대링크가 작동하려면 탐색기에서 엔트리 HTML을 직접 더블클릭. 에디터의 "엔트리 열기" 버튼은 blob URL이라 chunk 링크가 깨진다(요약 확인용).
 
 ## 변환 패턴
 
@@ -101,6 +150,20 @@ XML to XML은 실제 잘 만들어진 변환 샘플(원본과 변환 결과 쌍)
 
 참조: samples/[KB국민은행] 전환 매핑 요소.xlsx
 
+### 태그 리네이밍 (선택)
+- `js/sample-converter.js` 상단 `TAG_RENAME_MAP` 객체에 `'원본태그': '치환태그'` 형태로 추가
+- 적용 범위: 모든 직렬화 경로 (섹션 컴포넌트, 그리드 컬럼/헤더, 숨김 필드, 버튼)
+- 속성·자식 노드는 변경하지 않음
+- 비어 있으면(`{}`) 원본 태그 그대로 유지 (현재 기본값)
+- 예시:
+  ```js
+  const TAG_RENAME_MAP = {
+    'xf:input': 'w2:kb_input',
+    'xf:select1': 'w2:kb_selectbox',
+    'w2:gridView': 'w2:kb_gridView',
+  };
+  ```
+
 ### colgroup / colspan 계산
 - th-td 쌍 수 자동 계산하여 colgroup 열 수 결정 (1단/2단 자동 구분)
 - Row별 사용 열 수와 colgroup 전체 열 수 비교하여 colspan 자동 적용
@@ -151,15 +214,15 @@ XML to XML은 실제 잘 만들어진 변환 샘플(원본과 변환 결과 쌍)
 ## 기술 구조
 
 ```
-index.html                    <- UI (단일 HTML, 외부 의존성 없음)
+index.html                    <- UI (단일 HTML, XtX/XML/배치 비교 3탭)
 js/
-  sample-converter.js         <- 샘플 기반 변환 엔진 (핵심)
+  sample-converter.js         <- 샘플 기반 변환 엔진 (핵심) — TAG_RENAME_MAP 지원
   script-validator.js         <- 스크립트/바인딩/속성 검증
   abs-wireframe-gen.js        <- 절대좌표 와이어프레임 HTML
-  rel-wireframe-gen.js        <- 상대좌표 와이어프레임 HTML (변환 XML 파싱)
+  rel-wireframe-gen.js        <- 상대좌표 와이어프레임 HTML (디스패처 + 셀ID 토글)
   xml-parser.js               <- 공통 XML 파싱
-  abs-to-rel-converter.js     <- 탭1: 규칙 기반 변환 (기존)
-  wireframe-gen.js            <- 탭1: Wireframe MD
+  abs-to-rel-converter.js     <- 탭2: 규칙 기반 변환 (레거시)
+  wireframe-gen.js            <- 탭2: Wireframe MD
   xml-generator.js            <- HTML -> WebSquare XML
   html-converter.js           <- HTML 파싱
 samples/
@@ -167,7 +230,23 @@ samples/
   horizontal division.xml     <- 좌우 분할 구조 샘플
   2_01~2_21 *.xml             <- 구조화된 템플릿 샘플
   [KB국민은행] 전환 매핑 요소.xlsx <- class 매핑 규칙 (AS-IS → TO-BE)
+tools/
+  capture-server.js           <- 배치 비교용 Puppeteer 캡처 서비스 (Express, :5678)
+  package.json / node_modules <- puppeteer + express
+  README.md                   <- 캡처 서비스 사용법
+start-editor.bat              <- 캡처 서비스 + 에디터 동시 기동
+comparison/                   <- 외부 비교용 샘플 XML 모음 (배치 비교 입력 예시)
 ```
+
+## 실행
+
+### 기본 (XML to XML / 와이어프레임 / 검증만 사용)
+- `index.html`을 브라우저로 직접 열기 (외부 의존성 없음)
+
+### 배치 비교 사용 시
+1. 최초 1회: `cd tools && npm install` (Puppeteer + Chrome 바이너리 ~170MB)
+2. 프로젝트 루트의 `start-editor.bat` 더블클릭 → 캡처 서비스(:5678)와 에디터가 함께 뜸
+3. 에디터 상단 "배치 비교" 탭에서 서버/폴더/리포트 폴더 설정 후 실행
 
 ## 참조 파일
 
@@ -177,6 +256,7 @@ samples/
 | samples/reference-pairs/*_pub.xml | 변환 결과 샘플 (상대좌표) |
 | samples/reference-pairs/2_*.xml | 구조화 템플릿 (.schbox, .lybox 등) |
 | samples/[KB국민은행] 전환 매핑 요소.xlsx | class 매핑 규칙 |
+| comparison/*.xml | 배치 비교용 외부 샘플 (KAA*, KEC*, KFA* 등) |
 | D:/AI_workspace/AI_WRM/WebContent/pub/wcraft/ | 실제 테스트 파일 경로 |
 
 ## 검증 항목 (스크립트 검증)
@@ -191,7 +271,25 @@ samples/
 | 6 | 속성 보존 | disabled, displayFormat, maxlength 변경 여부 |
 | 7 | 누락 복구 | 숨김은 자동복구, 화면표시는 수동확인 경고 |
 
+## 배치 비교 보존율 카테고리
+
+| 키 | 표시명 | 선택자 |
+|----|--------|--------|
+| input | 폼 필드 | input(hidden/button 제외), select, textarea |
+| button | 버튼 | button, input[type=button/submit/reset], [role=button] |
+| link | 링크 | a[href] |
+| image | 이미지 | img |
+| table / tableRow / tableCell | 테이블 / 행 / 셀 | table / tr / td,th |
+| wsqGrid | 그리드 | [class*=gvw], [class*=gridview], [class*=GridView] |
+| wsqTab | 탭 | [class*=tbc], [class*=tabControl] |
+| wsqPanel | 패널 | [class*=pageFrame], [class*=panel] |
+| text | 텍스트(토큰) | 보이는 텍스트의 단어 토큰 Jaccard |
+
+각 카테고리는 가시(visible) 요소만 카운트. 양쪽 모두 0인 카테고리는 표에서 제외. 카테고리별 보존율 = `min(orig, conv) / max(orig, conv)`. 종합 보존율은 표시된 카테고리들의 동일 가중 평균.
+
 ## 향후 과제
 
 - 카드형 메뉴 구조 지원 (GroupBox Caption + 버튼 그룹): 샘플 추가 후 반영
 - .scn 파일 직접 지원 (현재 미지원)
+- 배치 비교 — 보존율 카테고리 가중치 사용자 조정
+- 배치 비교 — 항목별 픽셀 단위 diff(SSIM 등) 추가

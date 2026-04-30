@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KEC04M8AA01.scn"  meta_screenId="KEC04M8AA01" meta_screenName="수수료예상조회" meta_desc="" meta_author="S012530(허준혁)">
+		<w2:type craft="true" craftSrc="/xml/KEC04M8AA01.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KEC04M8A42" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{"dlt_KEC04M8A42_OUTPUT_screen___KEC04M8A000_OutData__grdQuery":{"@id":"dlt_KEC04M8A42_OUTPUT_screen___KEC04M8A000_OutData__grdQuery","fldRetirementPensionFeeDistinction":"fldRetirementPensionFeeDistinction","fldComputePeriod":"fldComputePeriod","fldFeeCalculationBaseAmount":"fldFeeCalculationBaseAmount","fldFeeRate":"fldFeeRate","fldComputeIlsu":"fldComputeIlsu","fldFeeAnticiAmount":"fldFeeAnticiAmount","fldFeeLevyWayDistinction":"fldFeeLevyWayDistinction","fldRetirementPensionFeeDistinctionCode":"fldRetirementPensionFeeDistinctionCode","fldExcessprogressiveFee":"fldExcessprogressiveFee","fldBramDstcd":"fldBramDstcd"},"dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000":{"@id":"dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000","OutData__fldManagementForInvestmentManagementFeeRate":"OutData__fldManagementForInvestmentManagementFeeRate","OutData__fldOutputLineCnt":"OutData__fldOutputLineCnt","OutData__fldTotalLineCnt":"OutData__fldTotalLineCnt"}}}'/>
+			<w2:dataCollection>
+				<w2:dataList baseNode="list" id="dlt_KEC04M8A42_OUTPUT_screen___KEC04M8A000_OutData__grdQuery" saveRemovedData="true" CtrlId="grdQuery" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="fldRetirementPensionFeeDistinction" length="20" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldComputePeriod" length="10" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldFeeCalculationBaseAmount" length="15" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldFeeRate" length="9" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldComputeIlsu" length="5" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldFeeAnticiAmount" length="15" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldFeeLevyWayDistinction" length="20" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldRetirementPensionFeeDistinctionCode" length="3" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldExcessprogressiveFee" length="1" CtrlId="grdQuery" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fldBramDstcd" length="20" CtrlId="grdQuery" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="OutData__fldManagementForInvestmentManagementFeeRate" length="5" CtrlId="fldManagementForInvestmentManagementFeeRate" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldOutputLineCnt" length="10" CtrlId="fldOutputLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldTotalLineCnt" length="10" CtrlId="fldTotalLineCnt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KEC04M8AA01_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8AA01">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="fldManagementForInvestmentManagementFeeRate" length="5" CtrlId="fldManagementForInvestmentManagementFeeRate"/>
+						<w2:key dataType="text" name="" id="fldOutputLineCnt" length="10" CtrlId="fldOutputLineCnt"/>
+						<w2:key dataType="text" name="" id="fldTotalLineCnt" length="10" CtrlId="fldTotalLineCnt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_grdQuery" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="fldRetirementPensionFeeDistinction"/>
+						<w2:column dataType="text" name="" id="fldBramDstcd"/>
+						<w2:column dataType="text" name="" id="fldComputePeriod"/>
+						<w2:column dataType="text" name="" id="fldFeeCalculationBaseAmount"/>
+						<w2:column dataType="text" name="" id="fldFeeRate"/>
+						<w2:column dataType="text" name="" id="fldComputeIlsu"/>
+						<w2:column dataType="text" name="" id="fldFeeAnticiAmount"/>
+						<w2:column dataType="text" name="" id="fldFeeLevyWayDistinction"/>
+						<w2:column dataType="text" name="" id="fldRetirementPensionFeeDistinctionCode"/>
+						<w2:column dataType="text" name="" id="fldExcessprogressiveFee"/>
+						<w2:column dataType="text" name="" id="btnCalcMethod"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {};
+
+scwin.onpageunload = function() {};
+scwin.grdQuery_OnClick = function(Arg1, Arg2, Arg3) {
+    //여기에 구현코드를 삽입하세요.
+    // grdQuery.GetSaveNameCol("btnCalcMethod") -> btnCalcMethod 의 컬럼_인덱스 를 가져옴.
+    if (Arg2 == grdQuery.getColumnIndex("btnCalcMethod")) {
+        if (grdQuery.getCellData(Arg1, "fldExcessprogressiveFee") == "1") {
+            Link.lnkMgivstAcno = $c.iz.data.getParentData("AccountID.Data");
+            Link.lnkFeeTranSerno = $c.iz.data.getParentData("cboInquiryGubn.Data");
+            Link.lnkInquiryBaseYmd = $c.iz.data.getParentData("fldStartingYymmdd.Data");
+            Link.lnkInquiryGubn = "2";
+            $c.iz.screen.popup("KEC04N84001", "DATALINK");
+            $c.iz.data.clearLinkData();
+        } else {
+            $c.iz.data.message("계산식은 누진율방식일때만 해당됩니다.");
+        }
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="수수료예상조회" meta_screenId="KEC04M8AA01" groupcocd="KB0" customclass="Kes" style="background-color:rgb(255,255,255); width:1056px; height:336px;" screentype="AType" meta_author="2B8B6DB949994EF" meta_user="S012530(허준혁)" meata_date="2009/08/28 14:07:38" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:0px; top:0px; width:1058px; height:324px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="grdQuery" tabIndex="1" tabstop="1" enterstop="1" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" controlmode="Sheet" sheetwidth="1056" sheetheight="324" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="1" mergesheet="msNone" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#b9f0ff" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="24" headrowheight="24" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="grdQuery" hierarchy="grdQuery" ev:onclick="scwin.grdQuery_OnClick" dataList="data:dlt_grdQuery">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="수수료구분" width="80"/>
+							<w2:column id="column2" inputType="text" value="부담금구분" width="100"/>
+							<w2:column id="column3" inputType="text" value="수수료계산기간" width="136"/>
+							<w2:column id="column4" inputType="text" value="계산기준금액" width="96"/>
+							<w2:column id="column5" inputType="text" value="수수료율" width="84"/>
+							<w2:column id="column6" inputType="text" value="계산일수" width="83"/>
+							<w2:column id="column7" inputType="text" value="수수료예상금액" width="136"/>
+							<w2:column id="column8" inputType="text" value="수수료징수방법" width="173"/>
+							<w2:column id="column9" inputType="text" value="수수료구분코드" width="100"/>
+							<w2:column id="column10" inputType="text" value="누진수수료팝업가능여부" width="152"/>
+							<w2:column id="column11" inputType="text" value="산출내역" width="164"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="fldRetirementPensionFeeDistinction" inputType="text" width="80" hidden="false"/>
+							<w2:column id="fldBramDstcd" inputType="text" width="100" hidden="false"/>
+							<w2:column id="fldComputePeriod" inputType="text" width="136" hidden="false"/>
+							<w2:column id="fldFeeCalculationBaseAmount" inputType="text" width="96" hidden="false"/>
+							<w2:column id="fldFeeRate" inputType="text" width="84" hidden="false"/>
+							<w2:column id="fldComputeIlsu" inputType="text" width="83" hidden="false"/>
+							<w2:column id="fldFeeAnticiAmount" inputType="text" width="136" hidden="false"/>
+							<w2:column id="fldFeeLevyWayDistinction" inputType="text" width="173" hidden="false"/>
+							<w2:column id="fldRetirementPensionFeeDistinctionCode" inputType="text" width="100" hidden="true"/>
+							<w2:column id="fldExcessprogressiveFee" inputType="text" width="152" hidden="true"/>
+							<w2:column id="btnCalcMethod" inputType="dtButton" width="164" hidden="false"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:24px; top:378px; width:300px; height:108px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox1" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:30px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_fldManagementForInvestmentManagementFeeRate" tabIndex="1" label="자산관리수수료율" orgid="Text_fldManagementForInvestmentManagementFeeRate" hierarchy="Text_fldManagementForInvestmentManagementFeeRate" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:174px; top:30px; width:39px; height:24px;" id="fldManagementForInvestmentManagementFeeRate" indicator="자산관리수수료율" tabIndex="2" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" ninemode="0" orgid="fldManagementForInvestmentManagementFeeRate" hierarchy="fldManagementForInvestmentManagementFeeRate" ref="data:dma_KEC04M8AA01.fldManagementForInvestmentManagementFeeRate"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:54px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_fldOutputLineCnt" tabIndex="3" label="출력라인수" orgid="Text_fldOutputLineCnt" hierarchy="Text_fldOutputLineCnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:174px; top:54px; width:74px; height:24px;" id="fldOutputLineCnt" indicator="출력라인수" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="fldOutputLineCnt" hierarchy="fldOutputLineCnt" ref="data:dma_KEC04M8AA01.fldOutputLineCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:78px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_fldTotalLineCnt" tabIndex="5" label="총라인수" orgid="Text_fldTotalLineCnt" hierarchy="Text_fldTotalLineCnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:174px; top:78px; width:74px; height:24px;" id="fldTotalLineCnt" indicator="총라인수" tabIndex="6" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="fldTotalLineCnt" hierarchy="fldTotalLineCnt" ref="data:dma_KEC04M8AA01.fldTotalLineCnt"/>
+				<w2:textbox id="title_GroupBox1" class="title_h2" label="숨김"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KEC04M8AA02.scn"  meta_screenId="KEC04M8AA02" meta_screenName="수수료예상조회" meta_desc="" meta_author="S012530(허준혁)">
+		<w2:type craft="true" craftSrc="/xml/KEC04M8AA02.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KEC04M8A42" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KEC04M8A42_INPUT":{"@id":"dma_KEC04M8A42_INPUT","InData__fldPaymentScheduledBurdenAmount":"InData__fldPaymentScheduledBurdenAmount","InData__fldPaymentScheduledYymmdd":"InData__fldPaymentScheduledYymmdd"}},"target":{"dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000":{"@id":"dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000","OutData__fldExcessprogressiveFeeYN":"OutData__fldExcessprogressiveFeeYN","OutData__fldManagementForInvestmentManagementFee":"OutData__fldManagementForInvestmentManagementFee","OutData__fldManagementForInvestmentManagementFeeRate":"OutData__fldManagementForInvestmentManagementFeeRate","OutData__fldAssetManagementFee":"OutData__fldAssetManagementFee"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A42_INPUT" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="InData__fldPaymentScheduledBurdenAmount" length="15" CtrlId="fldPaymentScheduledBurdenAmount" Type="Edit"/>
+						<w2:key dataType="text" name="" id="InData__fldPaymentScheduledYymmdd" length="8" CtrlId="fldPaymentScheduledYymmdd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A42_OUTPUT_screen___KEC04M8A000" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="OutData__fldExcessprogressiveFeeYN" length="1" CtrlId="fldExcessprogressiveFeeYN" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldManagementForInvestmentManagementFee" length="15" CtrlId="fldManagementForInvestmentManagementFee" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldManagementForInvestmentManagementFeeRate" length="5" CtrlId="fldManagementForInvestmentManagementFeeRate" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldAssetManagementFee" length="15" CtrlId="fldAssetManagementFee" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KEC04M8AA02_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8AA02">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="fldPaymentScheduledBurdenAmount" length="15" CtrlId="fldPaymentScheduledBurdenAmount"/>
+						<w2:key dataType="text" name="" id="fldPaymentScheduledYymmdd" length="8" CtrlId="fldPaymentScheduledYymmdd"/>
+						<w2:key dataType="text" name="" id="fldExcessprogressiveFeeYN" length="1" CtrlId="fldExcessprogressiveFeeYN"/>
+						<w2:key dataType="text" name="" id="fldManagementForInvestmentManagementFee" length="15" CtrlId="fldManagementForInvestmentManagementFee"/>
+						<w2:key dataType="text" name="" id="fldManagementForInvestmentManagementFeeRate" length="5" CtrlId="fldManagementForInvestmentManagementFeeRate"/>
+						<w2:key dataType="text" name="" id="fldAssetManagementFee" length="15" CtrlId="fldAssetManagementFee"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {};
+
+scwin.onpageunload = function() {};
+scwin.Button1_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    //계산식
+    if (fldExcessprogressiveFeeYN.getValue() == "!") {
+        Link.lnkMgivstAcno = $c.iz.data.getParentData("AccountID.Data");
+        Link.lnkFeeTranSerno = $c.iz.data.getParentData("cboInquiryGubn.Data");
+        Link.lnkInquiryBaseYmd = $c.iz.data.getParentData("fldStartingYymmdd.Data");
+        Link.lnkInquiryGubn = "2";
+        $c.iz.screen.popup("KEC04N84001", "DATALINK");
+    } else {
+        $c.iz.data.message("계산식은 누진율방식일때만 해당됩니다.");
+    }
+};
+
+scwin.Button2_OnClick = async function(e) {
+    //여기에 구현코드를 삽입하세요.
+
+    var cboInquiryGubn = $c.iz.data.getParentData("cboInquiryGubn.Data");
+    var fldStartingYymmdd = $c.iz.data.getParentData("fldStartingYymmdd.Data");
+    if (cboInquiryGubn == "1") {
+        if (fldStartingYymmdd > $c.user.getUserProfile('tranBaseYmd')) {
+            $c.iz.data.message("조회기준일자를  확인해 주십시요. 미래일자로는 조회가 불가합니다.");
+            return;
+        }
+    } else if (cboInquiryGubn == "2") {
+        if (fldPaymentScheduledYymmdd.getValue() == "") {
+            $c.iz.data.message("납입예정일자 항목에 값이 입력되지 않았습니다.");
+            return;
+        } else if (fldPaymentScheduledBurdenAmount.getValue() == "") {
+            $c.iz.data.message("납입예정부담금 항목에 값이 입력되지 않았습니다.");
+            return;
+        } else if (fldPaymentScheduledYymmdd.getValue() == "" && fldPaymentScheduledBurdenAmount.getValue() == "") {
+            $c.iz.data.message("납입예정부담금 항목과 납입예정일자 항목에 값이 입력되지 않았습니다.");
+            return;
+        }
+    }
+    if (fldPaymentScheduledYymmdd.getValue() < $c.user.getUserProfile('tranBaseYmd')) {
+        $c.iz.data.message("납입예정일자를 확인해 주십시요. 과거년월일로는 조회가 불가합니다.");
+        return;
+    }
+    /**
+    if(fldPaymentScheduledYymmdd.Data >= GetParentData("fldMgivstNewYmd.Data")){
+    
+    	Message("납입예정일자를 확인해 주십시요. 운용관리계약 응당일이전 날짜만 조회가 가능합니다.");	
+    	return;
+    
+    }
+    
+    if(fldPaymentScheduledYymmdd.Data >= GetParentData("fldAssetNewYmd.Data")){
+    
+    	Message("납입예정일자를 확인해 주십시요. 자산관리계약 응당일이전 날짜만 조회가 가능합니다.");	
+    	return;
+    
+    }
+    **/
+    if (fldPaymentScheduledBurdenAmount.getValue() == "0") {
+        $c.iz.data.message("0원 보다 큰 금액을 입력해 주십시요.");
+        return;
+    }
+    $c.iz.tran.setTranID("KEC04M8A42");
+    await $c.iz.tran.ASend();
+};
+
+scwin.OnEndTran = function() {
+    //여기에 구현코드를 삽입하세요.
+    if ($c.iz._tran.tranId == "KEC04M8A42" && $c.iz._tran.bError == false) {
+        var cboInquiryGubn = $c.iz.data.getParentData("cboInquiryGubn.Data");
+        if (cboInquiryGubn == '2') {
+            scwin.feeSumOfAmount();
+            scwin.totalAmountOfPayment();
+        }
+    }
+};
+
+
+scwin.totalAmountOfPayment = function() {
+    var feeSumOfAmount = 0;
+    var scheduledBurdenAmount = 0;
+    if (fldFeeSumOfAmount.getValue() != "") {
+        feeSumOfAmount = fldFeeSumOfAmount.getValue();
+    }
+    if (fldPaymentScheduledBurdenAmount.getValue() != "") {
+        scheduledBurdenAmount = fldPaymentScheduledBurdenAmount.getValue();
+    }
+    fldTotalAmountOfPayment.setValue(parseFloat(feeSumOfAmount) + parseFloat(scheduledBurdenAmount));
+};
+
+scwin.feeSumOfAmount = function() {
+    var assetManagementFeeNum = 0;
+    var managementForInvestmentManagementFeeNum = 0;
+    if (fldAssetManagementFee.getValue() != "") {
+        assetManagementFeeNum = fldAssetManagementFee.getValue();
+    }
+    if (fldManagementForInvestmentManagementFee.getValue() != "") {
+        managementForInvestmentManagementFeeNum = fldManagementForInvestmentManagementFee.getValue();
+    }
+    fldFeeSumOfAmount.setValue(parseFloat(assetManagementFeeNum) + parseFloat(managementForInvestmentManagementFeeNum));
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="수수료예상조회" meta_screenId="KEC04M8AA02" groupcocd="KB0" customclass="Kes" style="background-color:rgb(255,255,255); width:1056px; height:192px;" screentype="AType" meta_author="전성원" meta_user="S012530(허준혁)" meata_date="2009/09/02 13:28:55" savezorder="0" snaptogrid="0" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<w2:textbox ctype="Text" style="position:absolute; left:18px; top:204px; width:123px; height:24px; color:rgb(0,0,0); display:none;" id="Text_fldExcessprogressiveFeeYN" tabIndex="1" label="초과누진수수료여부" orgid="Text_fldExcessprogressiveFeeYN" hierarchy="Text_fldExcessprogressiveFeeYN" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:210px; top:204px; width:11px; height:24px; display:none;" id="fldExcessprogressiveFeeYN" indicator="초과누진수수료여부" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="fldExcessprogressiveFeeYN" hierarchy="fldExcessprogressiveFeeYN" ref="data:dma_KEC04M8AA02.fldExcessprogressiveFeeYN"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:0px; top:0px; width:1056px; height:180px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox2" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:39px; top:12px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_fldPaymentScheduledBurdenAmount" tabIndex="1" label="납입예정부담금" orgid="Text_fldPaymentScheduledBurdenAmount" hierarchy="Text_fldPaymentScheduledBurdenAmount" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:144px; top:12px; width:137px; height:24px; text-align:right;" id="fldPaymentScheduledBurdenAmount" indicator="납입예정부담금" tabIndex="2" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" ninemode="0" insertcomma="1" rightalign="1" orgid="fldPaymentScheduledBurdenAmount" hierarchy="fldPaymentScheduledBurdenAmount" ref="data:dma_KEC04M8AA02.fldPaymentScheduledBurdenAmount"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:640px; top:12px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_fldPaymentScheduledYymmdd" tabIndex="3" label="납입예정년월일" orgid="Text_fldPaymentScheduledYymmdd" hierarchy="Text_fldPaymentScheduledYymmdd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:744px; top:12px; width:102px; height:24px;" id="fldPaymentScheduledYymmdd" indicator="납입예정년월일" tabIndex="4" maxlength="10" ninemode="0" showcalendarbutton="1" orgid="fldPaymentScheduledYymmdd" hierarchy="fldPaymentScheduledYymmdd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8AA02.fldPaymentScheduledYymmdd"/>
+				<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:42px; width:505px; height:126px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="5" id="GroupBox1" tabIndex="5" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+					<w2:textbox ctype="Text" style="position:absolute; left:27px; top:36px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_fldManagementForInvestmentManagementFee" tabIndex="1" label="운용관리수수료" orgid="Text_fldManagementForInvestmentManagementFee" hierarchy="Text_fldManagementForInvestmentManagementFee" class="kb_MiddleRight"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:53px; top:96px; width:71px; height:24px; color:rgb(0,0,0);" id="Text7" tabIndex="2" label="수수료합계" orgid="Text7" hierarchy="Text7" class="kb_MiddleRight"/>
+					<w2:kb_input ctype="Edit" style="position:absolute; left:282px; top:96px; width:137px; height:24px; text-align:right;" id="fldFeeSumOfAmount" tabIndex="3" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" ninemode="0" insertcomma="1" rightalign="1" orgid="fldFeeSumOfAmount" hierarchy="fldFeeSumOfAmount"/>
+					<w2:kb_input ctype="Edit" style="position:absolute; left:282px; top:36px; width:137px; height:24px; text-align:right;" id="fldManagementForInvestmentManagementFee" indicator="운용관리수수료" tabIndex="4" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" ninemode="0" insertcomma="1" rightalign="1" orgid="fldManagementForInvestmentManagementFee" hierarchy="fldManagementForInvestmentManagementFee" ref="data:dma_KEC04M8AA02.fldManagementForInvestmentManagementFee"/>
+					<w2:textbox ctype="Text" style="position:absolute; left:14px; top:66px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_fldManagementForInvestmentManagementFeeRate" tabIndex="5" label="자산관리수수료율" orgid="Text_fldManagementForInvestmentManagementFeeRate" hierarchy="Text_fldManagementForInvestmentManagementFeeRate" class="kb_MiddleRight"/>
+					<xf:group id="" style="">
+						<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:66px; width:77px; height:24px; text-align:right;" id="fldManagementForInvestmentManagementFeeRate" indicator="자산관리수수료율" tabIndex="6" disabled="true" dataType="number" displayFormat="##.###" maxlength="6" prefix="연" suffix="%" decimallength="3" ninemode="0" insertcomma="1" rightalign="1" orgid="fldManagementForInvestmentManagementFeeRate" hierarchy="fldManagementForInvestmentManagementFeeRate" ref="data:dma_KEC04M8AA02.fldManagementForInvestmentManagementFeeRate"/>
+						<w2:textbox id="" label="%" style="position:absolute; left:214px; top:66px"/>
+					</xf:group>
+					<w2:kb_input ctype="Edit" style="position:absolute; left:282px; top:66px; width:137px; height:24px; text-align:right;" id="fldAssetManagementFee" indicator="자산관리수수료" tabIndex="7" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" ninemode="0" insertcomma="1" rightalign="1" orgid="fldAssetManagementFee" hierarchy="fldAssetManagementFee" ref="data:dma_KEC04M8AA02.fldAssetManagementFee"/>
+					<xf:trigger ctype="Button" style="position:absolute; left:132px; top:36px; width:60px; height:24px; font-size:8.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Button1" tabIndex="8" text="계산식" type="button" class="btn_def1" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="Button1">
+						<xf:label><![CDATA[계산식]]></xf:label>
+					</xf:trigger>
+					<xf:trigger ctype="Button" style="position:absolute; left:426px; top:36px; width:72px; height:84px; font-size:8.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Button2" tabIndex="9" text="수수료\\n 산출" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+						<xf:label><![CDATA[수수료&#xA; 산출]]></xf:label>
+					</xf:trigger>
+					<w2:textbox id="title_GroupBox1" class="title_h2" label="예상수수료"/>
+				</xf:group>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:744px; top:138px; width:137px; height:24px; text-align:right;" id="fldTotalAmountOfPayment" tabIndex="8" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" ninemode="0" insertcomma="1" rightalign="1" orgid="fldTotalAmountOfPayment" hierarchy="fldTotalAmountOfPayment"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:653px; top:138px; width:84px; height:24px; color:rgb(0,0,0);" id="Text8" tabIndex="9" label="총납입예상액" orgid="Text8" hierarchy="Text8" class="kb_MiddleRight"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

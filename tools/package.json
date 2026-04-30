@@ -1,0 +1,14 @@
+{
+  "name": "wsq-editor-capture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Puppeteer capture service for WebSquare Publishing Editor 배치 비교",
+  "main": "capture-server.js",
+  "scripts": {
+    "start": "node capture-server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer": "^22.6.0"
+  }
+}

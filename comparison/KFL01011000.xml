@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFL01011000.scn"  meta_screenId="KFL01011000" meta_screenName="자기앞수표발행" meta_desc="" meta_author="S012020(허훈만)">
+		<w2:type craft="true" craftSrc="/xml/KFL01011000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KFL0101110" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFL0101110_INPUT":{"@id":"dma_KFL0101110_INPUT","cshTrferDstcd":"cshTrferDstcd","cshTrfamt":"cshTrfamt","RqstrAcno":"RqstrAcno","RqstrCnoDstcd":"RqstrCnoDstcd","RqstrCno":"RqstrCno","rqstrCustnm":"rqstrCustnm","cbill1":"cbill1","chekStartNo1":"chekStartNo1","nost1":"nost1","chekEndNo1":"chekEndNo1","unitAmt1":"unitAmt1","cbill2":"cbill2","chekStartNo2":"chekStartNo2","nost2":"nost2","chekEndNo2":"chekEndNo2","unitAmt2":"unitAmt2","cbill3":"cbill3","chekStartNo3":"chekStartNo3","nost3":"nost3","chekEndNo3":"chekEndNo3","unitAmt3":"unitAmt3","cbill4":"cbill4","chekStartNo4":"chekStartNo4","nost4":"nost4","chekEndNo4":"chekEndNo4","unitAmt4":"unitAmt4","cbill5":"cbill5","chekStartNo5":"chekStartNo5","nost5":"nost5","chekEndNo5":"chekEndNo5","unitAmt5":"unitAmt5","totalIssuAmt":"totalIssuAmt","dpinInsnEcludYn":"dpinInsnEcludYn","gnralTketIssuWay":"gnralTketIssuWay","brncd":"brncd","idtrek":"idtrek","issuFeeRceitpTypngYn":"issuFeeRceitpTypngYn","feeLevyDstcd":"feeLevyDstcd","cnclDstic":"cnclDstic","CnclResnDstic":"CnclResnDstic","CnclResnCtnt":"CnclResnCtnt","CustIdnfr":"CustIdnfr","CustMgtNo":"CustMgtNo"}},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0499241" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFL0101110_INPUT" TranClass="MCI" SvcCode="KFL" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="cshTrferDstcd" length="0" CtrlId="cshTrferDstcd" Type="Combo"/>
+						<w2:key dataType="text" name="" id="cshTrfamt" length="14" CtrlId="cshTrfamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="RqstrAcno" length="14" CtrlId="RqstrAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="RqstrCnoDstcd" length="0" CtrlId="RqstrCnoDstcd" Type="Combo"/>
+						<w2:key dataType="text" name="" id="RqstrCno" length="13" CtrlId="RqstrCno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="rqstrCustnm" length="28" CtrlId="rqstrCustnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cbill1" length="0" CtrlId="cbill1" Type="Combo"/>
+						<w2:key dataType="text" name="" id="chekStartNo1" length="8" CtrlId="chekStartNo1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nost1" length="4" CtrlId="nost1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chekEndNo1" length="8" CtrlId="chekEndNo1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="unitAmt1" length="14" CtrlId="unitAmt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cbill2" length="0" CtrlId="cbill2" Type="Combo"/>
+						<w2:key dataType="text" name="" id="chekStartNo2" length="8" CtrlId="chekStartNo2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nost2" length="4" CtrlId="nost2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chekEndNo2" length="8" CtrlId="chekEndNo2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="unitAmt2" length="14" CtrlId="unitAmt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cbill3" length="0" CtrlId="cbill3" Type="Combo"/>
+						<w2:key dataType="text" name="" id="chekStartNo3" length="8" CtrlId="chekStartNo3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nost3" length="4" CtrlId="nost3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chekEndNo3" length="8" CtrlId="chekEndNo3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="unitAmt3" length="14" CtrlId="unitAmt3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cbill4" length="0" CtrlId="cbill4" Type="Combo"/>
+						<w2:key dataType="text" name="" id="chekStartNo4" length="8" CtrlId="chekStartNo4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nost4" length="4" CtrlId="nost4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chekEndNo4" length="8" CtrlId="chekEndNo4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="unitAmt4" length="14" CtrlId="unitAmt4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cbill5" length="0" CtrlId="cbill5" Type="Combo"/>
+						<w2:key dataType="text" name="" id="chekStartNo5" length="8" CtrlId="chekStartNo5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nost5" length="4" CtrlId="nost5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="chekEndNo5" length="8" CtrlId="chekEndNo5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="unitAmt5" length="14" CtrlId="unitAmt5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="totalIssuAmt" length="14" CtrlId="totalIssuAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dpinInsnEcludYn" length="0" CtrlId="dpinInsnEcludYn" Type="Combo"/>
+						<w2:key dataType="text" name="" id="gnralTketIssuWay" length="1" CtrlId="gnralTketIssuWay" Type="Edit"/>
+						<w2:key dataType="text" name="" id="brncd" length="4" CtrlId="brncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="idtrek" length="8" CtrlId="idtrek" Type="Edit"/>
+						<w2:key dataType="text" name="" id="issuFeeRceitpTypngYn" length="0" CtrlId="issuFeeRceitpTypngYn" Type="Combo"/>
+						<w2:key dataType="text" name="" id="feeLevyDstcd" length="0" CtrlId="feeLevyDstcd" Type="Combo"/>
+						<w2:key dataType="text" name="" id="cnclDstic" length="0" CtrlId="cnclDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="CnclResnDstic" length="0" CtrlId="CnclResnDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="CnclResnCtnt" length="22" CtrlId="CnclResnCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="CustIdnfr" length="10" CtrlId="CustIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="CustMgtNo" length="5" CtrlId="CustMgtNo" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFL0101110_OUTPUT" TranClass="MCI" SvcCode="KFL" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0499241_OUTPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KFL01011000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[실명증표스캔]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFL01011000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="cshTrferDstcd" length="0" CtrlId="cshTrferDstcd"/>
+						<w2:key dataType="text" name="" id="cshTrfamt" length="14" CtrlId="cshTrfamt"/>
+						<w2:key dataType="text" name="" id="RqstrAcno" length="14" CtrlId="RqstrAcno"/>
+						<w2:key dataType="text" name="" id="RqstrCnoDstcd" length="0" CtrlId="RqstrCnoDstcd"/>
+						<w2:key dataType="text" name="" id="RqstrCno" length="13" CtrlId="RqstrCno"/>
+						<w2:key dataType="text" name="" id="rqstrCustnm" length="28" CtrlId="rqstrCustnm"/>
+						<w2:key dataType="text" name="" id="cbill1" length="0" CtrlId="cbill1"/>
+						<w2:key dataType="text" name="" id="chekStartNo1" length="8" CtrlId="chekStartNo1"/>
+						<w2:key dataType="text" name="" id="nost1" length="4" CtrlId="nost1"/>
+						<w2:key dataType="text" name="" id="chekEndNo1" length="8" CtrlId="chekEndNo1"/>
+						<w2:key dataType="text" name="" id="unitAmt1" length="14" CtrlId="unitAmt1"/>
+						<w2:key dataType="text" name="" id="cbill2" length="0" CtrlId="cbill2"/>
+						<w2:key dataType="text" name="" id="chekStartNo2" length="8" CtrlId="chekStartNo2"/>
+						<w2:key dataType="text" name="" id="nost2" length="4" CtrlId="nost2"/>
+						<w2:key dataType="text" name="" id="chekEndNo2" length="8" CtrlId="chekEndNo2"/>
+						<w2:key dataType="text" name="" id="unitAmt2" length="14" CtrlId="unitAmt2"/>
+						<w2:key dataType="text" name="" id="cbill3" length="0" CtrlId="cbill3"/>
+						<w2:key dataType="text" name="" id="chekStartNo3" length="8" CtrlId="chekStartNo3"/>
+						<w2:key dataType="text" name="" id="nost3" length="4" CtrlId="nost3"/>
+						<w2:key dataType="text" name="" id="chekEndNo3" length="8" CtrlId="chekEndNo3"/>
+						<w2:key dataType="text" name="" id="unitAmt3" length="14" CtrlId="unitAmt3"/>
+						<w2:key dataType="text" name="" id="cbill4" length="0" CtrlId="cbill4"/>
+						<w2:key dataType="text" name="" id="chekStartNo4" length="8" CtrlId="chekStartNo4"/>
+						<w2:key dataType="text" name="" id="nost4" length="4" CtrlId="nost4"/>
+						<w2:key dataType="text" name="" id="chekEndNo4" length="8" CtrlId="chekEndNo4"/>
+						<w2:key dataType="text" name="" id="unitAmt4" length="14" CtrlId="unitAmt4"/>
+						<w2:key dataType="text" name="" id="cbill5" length="0" CtrlId="cbill5"/>
+						<w2:key dataType="text" name="" id="chekStartNo5" length="8" CtrlId="chekStartNo5"/>
+						<w2:key dataType="text" name="" id="nost5" length="4" CtrlId="nost5"/>
+						<w2:key dataType="text" name="" id="chekEndNo5" length="8" CtrlId="chekEndNo5"/>
+						<w2:key dataType="text" name="" id="unitAmt5" length="14" CtrlId="unitAmt5"/>
+						<w2:key dataType="text" name="" id="totalIssuAmt" length="14" CtrlId="totalIssuAmt"/>
+						<w2:key dataType="text" name="" id="dpinInsnEcludYn" length="0" CtrlId="dpinInsnEcludYn"/>
+						<w2:key dataType="text" name="" id="gnralTketIssuWay" length="1" CtrlId="gnralTketIssuWay"/>
+						<w2:key dataType="text" name="" id="brncd" length="4" CtrlId="brncd"/>
+						<w2:key dataType="text" name="" id="idtrek" length="8" CtrlId="idtrek"/>
+						<w2:key dataType="text" name="" id="issuFeeRceitpTypngYn" length="0" CtrlId="issuFeeRceitpTypngYn"/>
+						<w2:key dataType="text" name="" id="feeLevyDstcd" length="0" CtrlId="feeLevyDstcd"/>
+						<w2:key dataType="text" name="" id="cnclDstic" length="0" CtrlId="cnclDstic"/>
+						<w2:key dataType="text" name="" id="CnclResnDstic" length="0" CtrlId="CnclResnDstic"/>
+						<w2:key dataType="text" name="" id="CnclResnCtnt" length="22" CtrlId="CnclResnCtnt"/>
+						<w2:key dataType="text" name="" id="CustIdnfr" length="10" CtrlId="CustIdnfr"/>
+						<w2:key dataType="text" name="" id="CustMgtNo" length="5" CtrlId="CustMgtNo"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+// 2013.06.26 일부취소 기동시 BICOM의 취소정정사유구분코드 입력오류를 정정 - 명진영
+// 2013.06.26 고액(10억이상) 일반자기앞수표 발행시 이미지 스캔안내처리 - 명진영
+// 2014.02.05 거래금액 2천만원 이상인경우 대리인여부 필수항목으로 변경 - 명진영
+// 2016.08.05 자기앞수표 발행수수료 징수 프로세스 신규개발 - 명진영(발행수수료 OPEN시 	로직 삭제필요)
+// 2016.11.29 실명증표스캔시 고객구분 착오변경 로직제거 - 명진영
+// 2016.12.10 자기앞수표 발행수수료 징수 프로세스 오픈처리 - 명진영(TEST로직 삭제)
+// 2017.08.21 디지털 서식관리 구축관련 적용
+// 2018.08.24 발행인계좌번호, 발행인고객번호 입력 시 수수료조회 개선 - 문병구
+// 2019.07.18 특정금융정보법 개정에 의한 대리인 권한 확인 요건 변경 - 조재현
+//            (P20190728645_KFL190163)
+
+
+
+
+
+
+
+
+/////////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+
+// 실명증표 축약 이미지Key 보관을 위한 전역 변수 선언
+scwin.strImageKey1 = "";
+scwin.strImageKey2 = "";
+scwin.strImageKey3 = "";
+scwin.strImageKey4 = "";
+scwin.strImageKey5 = "";
+scwin.strImageKey6 = "";
+scwin.strImageKey7 = "";
+scwin.strImageKey8 = "";
+
+// 고객실명번호 보관을 위한 전역 변수 선언
+scwin.strCuniqno = "";
+
+
+// 실명증표 인자문구를 보관하기 위한 전역변수 선언
+scwin.strScanTyping = "";
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+
+/////////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+
+scwin.OnInitScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    /*	공통버튼용*/
+
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 실명증표 스캔 버튼의 Visible 설정값 정의 - 스캔 대상 거래화면일 경우
+    //////////////////////////////////////////////////////////////////////////////
+
+    // 실명증표 스캔버튼 숨기기 설정
+    $c.iz.data.commonButtonVisible(7, false);
+
+    // 해당 지점의 그린뱅크 오픈 여부 확인
+    // Return : TRUE(오픈 대상 지점), FALSE(오픈 미대상 지점)
+    if ($c.com.critical.checkGreenBankOpen()) {
+        //대상 지점인 경우 실명증표 스캔 버튼이 보이도록 속성 변경
+        $c.iz.data.commonButtonVisible(7, true);
+        // 스캔화면 자동호출대상인 경우 실명증표 스캔 버튼 클릭 이벤트 호출
+        //OnSendKey8();
+    }
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+    //////////////// [디지털서식] 디지털 버튼 삽입로직-Start /////////////////////2017.08.21
+    $c.com.critical.cmdDigitalForm("DF_INIT", "");
+    //////////////// [디지털서식] 디지털 버튼 삽입로직-End  //////////////////////	
+};
+
+
+
+scwin.accAmt = new Array(0, 0, 0, 0, 0);
+/*
+function total(cbill,nost,unitAmt,no){
+	//총발행금액 = 권종1 이 10 이면 100000 * 매수 (매수 0 이면 1)을 누적
+
+	if (trim(cbill.GetComboKey) == "010")
+	{
+		accAmt[no] = 100000 * nost.Data;
+	}
+
+	//총발행금액 = 권종이 30 이면 300000 * 매수 (매수 0 이면 1)을 누적
+	else if (trim(cbill.GetComboKey) == "030")
+	{
+		accAmt[no] = 300000 * nost.Data;
+	}
+
+	//총발행금액 = 권종이 50 이면 500000 * 매수 (매수 0 이면 1)을 누적
+	else if (trim(cbill.GetComboKey) == "050")
+	{
+		accAmt[no] = 500000 * nost.Data;
+	}
+
+	//총발행금액 = 권종이 100 이면 1000000 * 매수 (매수 0 이면 1)을 누적
+	else if (trim(cbill.GetComboKey) == "100")
+	{
+		accAmt[no] = 1000000 * nost.Data;
+	}
+
+	//총발행금액 = 권종이 99 이면   발행금액 * 매수 (매수 0 이면 1)을 누적
+	else if (trim(cbill.GetComboKey) == "099")
+	{
+		accAmt[no] = unitAmt.Data;
+	}
+	totalIssuAmt.Data = accAmt[0] + accAmt[1] + accAmt[2] + accAmt[3] + accAmt[4];
+	
+}
+*/
+/*
+function unitTotal(cbill,nost,no){
+	//총발행금액 = 권종1 이 10 이면 100000
+	var unitAmt = 0;
+	if (trim(cbill.GetComboKey) == "010")
+	{
+		unitAmt = 100000;
+	}
+
+	//총발행금액 = 권종이 30 이면 300000 
+	else if (trim(cbill.GetComboKey) == "030")
+	{
+		unitAmt = 300000;
+	}
+
+	//총발행금액 = 권종이 50 이면 500000 
+	else if (trim(cbill.GetComboKey) == "050")
+	{
+		unitAmt = 500000;
+	}
+
+	//총발행금액 = 권종이 100 이면 1000000
+	else if (trim(cbill.GetComboKey) == "100")
+	{
+		unitAmt = 1000000;
+	}
+
+	//총발행금액 = 권종이 99 이면   발행금액 
+	else if (trim(cbill.GetComboKey) == "099")
+	{
+		unitAmt =  unitAmt.Data;
+	}
+	return unitAmt;
+}
+*/
+
+
+scwin.RqstrCnoDstcd_OnItemChanged = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    if (RqstrCno.getValue() != "") {
+        return;
+    } else {
+        if (RqstrCnoDstcd.getValue() == "1" || RqstrCnoDstcd.getValue() == "6") {
+            RqstrCno.setEditFormat("AAAAAA-AAAAAAA");
+        } else if (RqstrCnoDstcd.getValue() == "2") {
+            RqstrCno.setEditFormat("AAA-AA-AAAAA");
+        } else if (RqstrCnoDstcd.getValue() == "3") {
+            RqstrCno.setEditFormat("AAAAAA-AAAAAAA");
+        } else {
+            RqstrCno.setEditFormat("AAAAAAAAAAAAA");
+        }
+    }
+};
+
+
+//-----------------------------------------------------------
+// 검색구분(고객번호,고객정보번호) 변경에 따른 이벤트
+//-----------------------------------------------------------
+scwin.serchNoDstic_OnItemChanged = function(e) {
+    if (RqstrAcno.getValue() == "") {
+        //고객번호 선택
+        if (serchNoDstic.getValue() == "1") {
+            //발행인고객구분코드, 발행인고객번호 활성화
+            RqstrCnoDstcd.clear();
+            RqstrCnoDstcd.show('');
+            RqstrCnoDstcd.setMandatory(true);
+            RqstrCno.setValue();
+            RqstrCno.show('');
+            RqstrCno.setMandatory(true);
+
+
+            //고객정보번호 비활성화
+            CustIdnfr.setValue();
+            CustIdnfr.hide();
+            CustIdnfr.setMandatory(false);
+            CustMgtNo.setValue();
+            CustMgtNo.hide();
+            CustMgtNo.setMandatory(false);
+
+            //Button4 위치조정
+            Button4.setPosition(395, serchNoDstic.Y);
+        }
+        //고객정보번호 선택
+        else {
+            //발행인고객구분코드, 발행인고객번호 비활성화
+            RqstrCnoDstcd.clear();
+            RqstrCnoDstcd.hide();
+            RqstrCnoDstcd.setMandatory(false);
+            RqstrCno.setValue();
+            RqstrCno.hide();
+            RqstrCno.setMandatory(false);
+
+            //고객정보번호 활성화,위치조정
+            CustIdnfr.setValue();
+            CustIdnfr.show('');
+            CustIdnfr.setMandatory(true);
+            CustMgtNo.setValue();
+            CustMgtNo.show('');
+            CustMgtNo.setMandatory(true);
+            CustIdnfr.setPosition(250, serchNoDstic.Y);
+            CustMgtNo.setPosition(338, serchNoDstic.Y);
+
+            //Button4 위치조정
+            Button4.setPosition(388, serchNoDstic.Y);
+        }
+    } else {
+        serchNoDstic.getValue() == "1";
+        RqstrCnoDstcd.setMandatory(false);
+        RqstrCno.setMandatory(false);
+        CustIdnfr.setMandatory(false);
+        CustMgtNo.setMandatory(false);
+    }
+};
+
+
+
+scwin.Button2_OnClick = function(e) {
+    //Get data:  고객번호(cuniqno), 고객명(custnm)
+    //	고객명조회	KAA04900001
+    Link.scopDstic = "B";
+    if (serchNoDstic.getValue() == "1") {
+        Link.cuniqno = RqstrCno.getValue();
+        Link.custnm = rqstrCustnm.getValue(); //고객명 입력해도 전체 조회됨, =무의미  
+    } else {
+        Link.custIdnfr = CustIdnfr.getValue();
+        Link.custMgtNo = CustMgtNo.getValue();
+    }
+    $c.iz.screen.popup("KAA04900001", "DATALINK");
+    //	RqstrCno.Data = Link.cuniqno;
+    //	rqstrCustnm.Data        = Link.custnm;   // 18.08.24
+
+
+    var custIdnfrStr = Link.custIdnfr;
+    var custMgtNoStr = Link.custMgtNo;
+    var custnmStr = Link.custnm;
+
+    //고객정보가 존재하지 않거나, 고객명조회 팝업창에서 고객명을 선택하지 않고
+    //화면을 닫기버튼 또는 X 버튼으로 화면을 닫은 경우 
+    if ("undefined" == typeof(custIdnfrStr) || "" == custIdnfrStr) {
+        autoInquryCustnm.setValue();
+        autoInquryCustnm.hide();
+        rqstrCustnm.show('');
+        rqstrCustnm.setPosition(168, Text_rqstrCustnm.Y);
+        Desc4.show('');
+        scwin.custIdnfrFee = '0000000000'; // 수수료조회를 위한 KBPIN 조립
+    } else if ("" == custnmStr) {
+        // 잠재고객 등의 사유로 고객명 없는 경우 --> 고객명 직접 입력
+        autoInquryCustnm.setValue();
+        autoInquryCustnm.hide();
+        rqstrCustnm.show('');
+        rqstrCustnm.setPosition(168, Text_rqstrCustnm.Y);
+        Desc4.show('');
+        scwin.custIdnfrFee = custIdnfrStr; // 수수료조회를 위한 KBPIN 조립
+    } else {
+        autoInquryCustnm.show('');
+        autoInquryCustnm.setValue(custnmStr);
+        rqstrCustnm.hide();
+        rqstrCustnm.setValue();
+        Desc4.hide();
+        scwin.custIdnfrFee = custIdnfrStr; // 수수료조회를 위한 KBPIN 조립
+    }
+    $c.iz.data.clearLinkData();
+};
+
+
+scwin.Button4_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    //고객주의 의무등록조회(KAA04740001)	
+    //고객번호 선택
+    if (serchNoDstic.getValue() == "1") {
+        Link.cno = RqstrCno.getValue();
+    } else {
+        //고객정보번호 선택
+        Link.CustIdnfr = CustIdnfr.getValue();
+    }
+    $c.iz.screen.popup("KAA04740001", "DATALINK");
+};
+
+
+
+scwin.cbill1_OnItemChanged = function(e) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    ////권종은 10, 30, 50, 100, 99 이외는 권종오류 message처리
+    if (cbill1.getValue() == "010") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        unitAmt1.setValue();
+        nost1.setDisabled(false);
+        chekStartNo1.setMandatory(false);
+        unitAmt1.setDisabled(true);
+        unitAmt1.setValue(100000);
+        unitTotAmt1.setValue(0);
+    } else if (cbill1.getValue() == "030") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        unitAmt1.setValue();
+        nost1.setDisabled(false);
+        chekStartNo1.setMandatory(false);
+        unitAmt1.setDisabled(true);
+        unitAmt1.setValue(300000);
+        unitTotAmt1.setValue(0);
+    } else if (cbill1.getValue() == "050") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        unitAmt1.setValue();
+        nost1.setDisabled(false);
+        chekStartNo1.setMandatory(false);
+        unitAmt1.setDisabled(true);
+        unitAmt1.setValue(500000);
+        unitTotAmt1.setValue(0);
+    } else if (cbill1.getValue() == "100") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        unitAmt1.setValue();
+        nost1.setDisabled(false);
+        chekStartNo1.setMandatory(false);
+        unitAmt1.setDisabled(true);
+        unitAmt1.setValue(1000000);
+        unitTotAmt1.setValue(0);
+    } else if (cbill1.getValue() == "099") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        unitAmt1.setValue();
+        nost1.setDisabled(false);
+        unitAmt1.setDisabled(false);
+        chekStartNo1.setMandatory(true);
+        unitAmt1.setMandatory(true);
+        unitAmt1.setValue(0);
+        unitTotAmt1.setValue(0);
+    } else if (cbill1.getValue() == "") {
+        nost1.setValue();
+        chekStartNo1.setValue();
+        chekEndNo1.setValue();
+        chekStartNo1.setMandatory(false);
+        unitAmt1.setMandatory(false);
+        unitAmt1.setValue(0);
+        unitTotAmt1.setValue(0);
+    }
+};
+
+
+/*  수표예정번호 등록으로 수표시작번호 미입력할수 있음 */
+
+
+scwin.cbill2_OnItemChanged = function(e) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    ////권종은 10, 30, 50, 100, 99 이외는 권종오류 message처리
+    if (cbill2.getValue() == "") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue(0);
+        unitTotAmt2.setValue(0);
+        nost2.setMandatory(false);
+        chekStartNo2.setDisabled(true);
+        chekStartNo2.setMandatory(false);
+        unitAmt2.setMandatory(false);
+        scwin.SettotalIssuAmt();
+        return;
+    } else {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setMandatory(true);
+        chekStartNo2.setDisabled(false);
+        unitAmt2.setMandatory(true);
+        unitTotAmt2.setValue(0);
+        scwin.SettotalIssuAmt();
+    }
+    if (cbill2.getValue() == "010") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setDisabled(false);
+        chekStartNo2.setMandatory(false);
+        unitAmt2.setDisabled(true);
+        unitAmt2.setValue(100000);
+        unitTotAmt2.setValue(0);
+    } else if (cbill2.getValue() == "030") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setDisabled(false);
+        chekStartNo2.setMandatory(false);
+        unitAmt2.setDisabled(true);
+        unitAmt2.setValue(300000);
+        unitTotAmt2.setValue(0);
+    } else if (cbill2.getValue() == "050") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setDisabled(false);
+        chekStartNo2.setMandatory(false);
+        unitAmt2.setDisabled(true);
+        unitAmt2.setValue(500000);
+        unitTotAmt2.setValue(0);
+    } else if (cbill2.getValue() == "100") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setDisabled(false);
+        chekStartNo2.setMandatory(false);
+        unitAmt2.setDisabled(true);
+        unitAmt2.setValue(1000000);
+        unitTotAmt2.setValue(0);
+    } else if (cbill2.getValue() == "099") {
+        nost2.setValue();
+        chekStartNo2.setValue();
+        chekEndNo2.setValue();
+        unitAmt2.setValue();
+        nost2.setDisabled(false);
+        unitAmt2.setDisabled(false);
+        chekStartNo2.setMandatory(true);
+        unitAmt2.setMandatory(true);
+        unitAmt2.setValue(0);
+        unitTotAmt2.setValue(0);
+    }
+};
+
+scwin.cbill3_OnItemChanged = function(e) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    ////권종은 10, 30, 50, 100, 99 이외는 권종오류 message처리
+    if (cbill3.getValue() == "") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue(0);
+        unitTotAmt3.setValue(0);
+        nost3.setMandatory(false);
+        chekStartNo3.setDisabled(true);
+        chekStartNo3.setMandatory(false);
+        unitAmt3.setMandatory(false);
+        scwin.SettotalIssuAmt();
+        return;
+    } else {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setMandatory(true);
+        chekStartNo3.setDisabled(false);
+        unitAmt3.setMandatory(true);
+        unitTotAmt3.setValue(0);
+        scwin.SettotalIssuAmt();
+    }
+    if (cbill3.getValue() == "010") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setDisabled(false);
+        chekStartNo3.setMandatory(false);
+        unitAmt3.setDisabled(true);
+        unitAmt3.setValue(100000);
+        unitTotAmt3.setValue(0);
+    } else if (cbill3.getValue() == "030") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setDisabled(false);
+        chekStartNo3.setMandatory(false);
+        unitAmt3.setDisabled(true);
+        unitAmt3.setValue(300000);
+        unitTotAmt3.setValue(0);
+    } else if (cbill3.getValue() == "050") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setDisabled(false);
+        chekStartNo3.setMandatory(false);
+        unitAmt3.setDisabled(true);
+        unitAmt3.setValue(500000);
+        unitTotAmt3.setValue(0);
+    } else if (cbill3.getValue() == "100") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setDisabled(false);
+        chekStartNo3.setMandatory(false);
+        unitAmt3.setDisabled(true);
+        unitAmt3.setValue(1000000);
+        unitTotAmt3.setValue(0);
+    } else if (cbill3.getValue() == "099") {
+        nost3.setValue();
+        chekStartNo3.setValue();
+        chekEndNo3.setValue();
+        unitAmt3.setValue();
+        nost3.setDisabled(false);
+        unitAmt3.setDisabled(false);
+        chekStartNo3.setMandatory(true);
+        unitAmt3.setMandatory(true);
+        unitAmt3.setValue(0);
+        unitTotAmt3.setValue(0);
+    }
+};
+
+
+scwin.cbill4_OnItemChanged = function(e) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    ////권종은 10, 30, 50, 100, 99 이외는 권종오류 message처리
+    if (cbill4.getValue() == "") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue(0);
+        unitTotAmt4.setValue(0);
+        nost4.setMandatory(false);
+        chekStartNo4.setDisabled(true);
+        chekStartNo4.setMandatory(false);
+        unitAmt4.setMandatory(false);
+        scwin.SettotalIssuAmt();
+        return;
+    } else {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setMandatory(true);
+        chekStartNo4.setDisabled(false);
+        unitAmt4.setMandatory(true);
+        unitTotAmt4.setValue(0);
+        scwin.SettotalIssuAmt();
+    }
+    if (cbill4.getValue() == "010") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setDisabled(false);
+        chekStartNo4.setMandatory(false);
+        unitAmt4.setDisabled(true);
+        unitAmt4.setValue(100000);
+        unitTotAmt4.setValue(0);
+    } else if (cbill4.getValue() == "030") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setDisabled(false);
+        chekStartNo4.setMandatory(false);
+        unitAmt4.setDisabled(true);
+        unitAmt4.setValue(300000);
+        unitTotAmt4.setValue(0);
+    } else if (cbill4.getValue() == "050") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setDisabled(false);
+        chekStartNo4.setMandatory(false);
+        unitAmt4.setDisabled(true);
+        unitAmt4.setValue(500000);
+        unitTotAmt4.setValue(0);
+    } else if (cbill4.getValue() == "100") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setDisabled(false);
+        chekStartNo4.setMandatory(false);
+        unitAmt4.setDisabled(true);
+        unitAmt4.setValue(1000000);
+        unitTotAmt4.setValue(0);
+    } else if (cbill4.getValue() == "099") {
+        nost4.setValue();
+        chekStartNo4.setValue();
+        chekEndNo4.setValue();
+        unitAmt4.setValue();
+        nost4.setDisabled(false);
+        unitAmt4.setDisabled(false);
+        chekStartNo4.setMandatory(true);
+        unitAmt4.setMandatory(true);
+        unitAmt4.setValue(0);
+        unitTotAmt4.setValue(0);
+    }
+};
+
+
+scwin.cbill5_OnItemChanged = function(e) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    ////권종은 10, 30, 50, 100, 99 이외는 권종오류 message처리
+    if (cbill5.getValue() == "") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue(0);
+        unitTotAmt5.setValue(0);
+        nost5.setMandatory(false);
+        chekStartNo5.setDisabled(true);
+        chekStartNo5.setMandatory(false);
+        unitAmt5.setMandatory(false);
+        scwin.SettotalIssuAmt();
+        return;
+    } else {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setMandatory(true);
+        chekStartNo5.setDisabled(false);
+        unitAmt5.setMandatory(true);
+        unitTotAmt5.setValue(0);
+        scwin.SettotalIssuAmt();
+    }
+    if (cbill5.getValue() == "010") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setDisabled(false);
+        chekStartNo5.setMandatory(false);
+        unitAmt5.setDisabled(true);
+        unitAmt5.setValue(100000);
+        unitTotAmt5.setValue(0);
+    } else if (cbill5.getValue() == "030") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setDisabled(false);
+        chekStartNo5.setMandatory(false);
+        unitAmt5.setDisabled(true);
+        unitAmt5.setValue(300000);
+        unitTotAmt5.setValue(0);
+    } else if (cbill5.getValue() == "050") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setDisabled(false);
+        chekStartNo5.setMandatory(false);
+        unitAmt5.setDisabled(true);
+        unitAmt5.setValue(500000);
+        unitTotAmt5.setValue(0);
+    } else if (cbill5.getValue() == "100") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setDisabled(false);
+        chekStartNo5.setMandatory(false);
+        unitAmt5.setDisabled(true);
+        unitAmt5.setValue(1000000);
+        unitTotAmt5.setValue(0);
+    } else if (cbill5.getValue() == "099") {
+        nost5.setValue();
+        chekStartNo5.setValue();
+        chekEndNo5.setValue();
+        unitAmt5.setValue();
+        nost5.setDisabled(false);
+        unitAmt5.setDisabled(false);
+        chekStartNo5.setMandatory(true);
+        unitAmt5.setMandatory(true);
+        unitAmt5.setValue(0);
+        unitTotAmt5.setValue(0);
+    }
+};
+
+
+scwin.nost1_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    scwin.SettotalIssuAmt();
+    if (nost1.getValue() == "") {
+        chekEndNo1.setValue("");
+        return;
+    }
+    if (nost1.getValue() != "" && chekStartNo1.getValue() != "") {
+        chekEndNo1.setValue(parseFloat(chekStartNo1.getValue()) + parseFloat(nost1.getValue()) - 1);
+    }
+    //	if (nost1.Data != ""  && cbill1.Data != "099")
+    if (nost1.getValue() != "" && cbill1.getValue() != "") {
+        unitTotAmt1.setValue(parseInt(nost1.getValue()) * parseInt(unitAmt1.getValue()));
+    }
+};
+
+scwin.unitAmt1_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    scwin.SettotalIssuAmt();
+    if ((unitAmt1.getValue() > 0) && (cbill1.getValue() == "099")) {
+        unitTotAmt1.setValue(parseInt(nost1.getValue()) * parseInt(unitAmt1.getValue()));
+    }
+};
+
+
+scwin.nost2_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if (nost2.getValue() == "") {
+        chekEndNo2.setValue("");
+        return;
+    }
+    if (nost2.getValue() != "" && chekStartNo2.getValue() != "") {
+        chekEndNo2.setValue(parseFloat(chekStartNo2.getValue()) + parseFloat(nost2.getValue()) - 1);
+    }
+    if (nost2.getValue() != "" && cbill2.getValue() != "") {
+        unitTotAmt2.setValue(parseInt(nost2.getValue()) * parseInt(unitAmt2.getValue()));
+    }
+};
+
+
+scwin.unitAmt2_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if ((unitAmt2.getValue() > 0) && (cbill2.getValue() == "099")) {
+        unitTotAmt2.setValue(parseInt(nost2.getValue()) * parseInt(unitAmt2.getValue()));
+    }
+};
+
+
+scwin.nost3_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    scwin.SettotalIssuAmt();
+    if (nost3.getValue() == "") {
+        chekEndNo3.setValue("");
+        return;
+    }
+    if (nost3.getValue() != "" && chekStartNo3.getValue() != "") {
+        chekEndNo3.setValue(parseFloat(chekStartNo3.getValue()) + parseFloat(nost3.getValue()) - 1);
+    }
+    if (nost3.getValue() != "" && cbill3.getValue() != "") {
+        unitTotAmt3.setValue(parseInt(nost3.getValue()) * parseInt(unitAmt3.getValue()));
+    }
+};
+
+scwin.unitAmt3_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if ((unitAmt3.getValue() > 0) && (cbill3.getValue() == "099")) {
+        unitTotAmt3.setValue(parseInt(nost3.getValue()) * parseInt(unitAmt3.getValue()));
+    }
+};
+
+
+scwin.nost4_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if (nost4.getValue() == "") {
+        chekEndNo4.setValue("");
+        return;
+    }
+    if (nost4.getValue() != "" && chekStartNo4.getValue() != "") {
+        chekEndNo4.setValue(parseFloat(chekStartNo4.getValue()) + parseFloat(nost4.getValue()) - 1);
+    }
+    if (nost4.getValue() != "" && cbill4.getValue() != "") {
+        unitTotAmt4.setValue(parseInt(nost4.getValue()) * parseInt(unitAmt4.getValue()));
+    }
+};
+
+scwin.unitAmt4_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if ((unitAmt4.getValue() > 0) && (cbill4.getValue() == "099")) {
+        unitTotAmt4.setValue(parseInt(nost4.getValue()) * parseInt(unitAmt4.getValue()));
+    }
+};
+
+
+scwin.nost5_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if (nost5.getValue() == "") {
+        chekEndNo5.setValue("");
+        return;
+    }
+    if (nost5.getValue() != "" && chekStartNo5.getValue() != "") {
+        chekEndNo5.setValue(parseFloat(chekStartNo5.getValue()) + parseFloat(nost5.getValue()) - 1);
+    }
+    if (nost5.getValue() != "" && cbill5.getValue() != "") {
+        unitTotAmt5.setValue(parseInt(nost5.getValue()) * parseInt(unitAmt5.getValue()));
+    }
+};
+
+scwin.unitAmt5_OnValidate = function(info) {
+    scwin.SettotalIssuAmt();
+    if ((unitAmt5.getValue() > 0) && (cbill5.getValue() == "099")) {
+        unitTotAmt5.setValue(parseInt(nost5.getValue()) * parseInt(unitAmt5.getValue()));
+    }
+};
+
+
+scwin.totalIssuAmt_OnValidate = function(info) {
+    //발행총금액 > 0 활성화
+    if (totalIssuAmt.getValue() > 0) {
+        totalIssuAmt.setDisabled(false);
+    }
+    scwin.SetProxyMandatory();
+};
+
+
+
+
+scwin.fillChar = function(Character, Len, Value) {
+    if (Value == "") {
+        return;
+    }
+    var strReturnValue = Value;
+    if (Len > Value.length) {
+        for (var i = Value.length; i < Len; i++) {
+            strReturnValue = Character + strReturnValue;
+        }
+    }
+    return strReturnValue;
+};
+
+
+scwin.SettotalIssuAmt = function() {
+    var strnost1Amt = 0;
+    var strnost2Amt = 0;
+    var strnost3Amt = 0;
+    var strnost4Amt = 0;
+    var strnost5Amt = 0;
+    totalIssuAmt.setValue(0);
+    if (nost1.getValue() != 0 && nost1.getValue() != "" && unitAmt1.getValue() != 0 && unitAmt1.getValue() != "") {
+        strnost1Amt = parseInt(nost1.getValue()) * parseInt(unitAmt1.getValue());
+    }
+    if (nost2.getValue() != 0 && nost2.getValue() != "" && unitAmt2.getValue() != 0 && unitAmt2.getValue() != "") {
+        strnost2Amt = parseInt(nost2.getValue()) * parseInt(unitAmt2.getValue());
+    }
+    if (nost3.getValue() != 0 && nost3.getValue() != "" && unitAmt3.getValue() != 0 && unitAmt3.getValue() != "") {
+        strnost3Amt = parseInt(nost3.getValue()) * parseInt(unitAmt3.getValue());
+    }
+    if (nost4.getValue() != 0 && nost4.getValue() != "" && unitAmt4.getValue() != 0 && unitAmt4.getValue() != "") {
+        strnost4Amt = parseInt(nost4.getValue()) * parseInt(unitAmt4.getValue());
+    }
+    if (nost5.getValue() != 0 && nost5.getValue() != "" && unitAmt5.getValue() != 0 && unitAmt5.getValue() != "") {
+        strnost5Amt = parseInt(nost5.getValue()) * parseInt(unitAmt5.getValue());
+    }
+    totalIssuAmt.setValue(strnost1Amt + strnost2Amt + strnost3Amt + strnost4Amt + strnost5Amt);
+};
+
+scwin.chekStartNo1_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (chekStartNo1.getValue() == "") {
+        chekEndNo1.setValue("");
+        return;
+    }
+    if (nost1.getValue() != "" && chekStartNo1.getValue() != "") {
+        chekEndNo1.setValue(parseFloat(chekStartNo1.getValue()) + parseFloat(nost1.getValue()) - 1);
+    }
+    chekStartNo1.setValue(scwin.fillChar("0", 8, chekStartNo1.getValue()));
+};
+
+scwin.chekStartNo2_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (chekStartNo2.getValue() == "") {
+        chekEndNo2.setValue("");
+        return;
+    }
+    if (nost2.getValue() != "" && chekStartNo2.getValue() != "") {
+        chekEndNo2.setValue(parseFloat(chekStartNo2.getValue()) + parseFloat(nost2.getValue()) - 1);
+    }
+    chekStartNo2.setValue(scwin.fillChar("0", 8, chekStartNo2.getValue()));
+};
+
+scwin.chekStartNo3_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (chekStartNo3.getValue() == "") {
+        chekEndNo3.setValue("");
+        return;
+    }
+    if (nost3.getValue() != "" && chekStartNo3.getValue() != "") {
+        chekEndNo3.setValue(parseFloat(chekStartNo3.getValue()) + parseFloat(nost3.getValue()) - 1);
+    }
+    chekStartNo3.setValue(scwin.fillChar("0", 8, chekStartNo3.getValue()));
+};
+
+scwin.chekStartNo4_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (chekStartNo4.getValue() == "") {
+        chekEndNo4.setValue("");
+        return;
+    }
+    if (nost4.getValue() != "" && chekStartNo4.getValue() != "") {
+        chekEndNo4.setValue(parseFloat(chekStartNo4.getValue()) + parseFloat(nost4.getValue()) - 1);
+    }
+    chekStartNo4.setValue(scwin.fillChar("0", 8, chekStartNo4.getValue()));
+};
+
+scwin.chekStartNo5_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (chekStartNo5.getValue() == "") {
+        chekEndNo5.setValue("");
+        return;
+    }
+    if (nost5.getValue() != "" && chekStartNo5.getValue() != "") {
+        chekEndNo5.setValue(parseFloat(chekStartNo5.getValue()) + parseFloat(nost5.getValue()) - 1);
+    }
+    chekStartNo5.setValue(scwin.fillChar("0", 8, chekStartNo5.getValue()));
+};
+
+
+scwin.chekEndNo1_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    chekEndNo1.setValue(scwin.fillChar("0", 8, chekEndNo1.getValue()));
+};
+
+scwin.chekEndNo2_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    chekEndNo2.setValue(scwin.fillChar("0", 8, chekEndNo2.getValue()));
+};
+
+scwin.chekEndNo3_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    chekEndNo3.setValue(scwin.fillChar("0", 8, chekEndNo3.getValue()));
+};
+
+scwin.chekEndNo4_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    chekEndNo4.setValue(scwin.fillChar("0", 8, chekEndNo4.getValue()));
+};
+
+scwin.chekEndNo5_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    chekEndNo5.setValue(scwin.fillChar("0", 8, chekEndNo5.getValue()));
+};
+
+scwin.CnclResnDstic_OnItemChanged = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    if (CnclResnDstic.getValue() == "99") {
+        Text_CnclResnCtnt.show('');
+        CnclResnCtnt.show('');
+        CnclResnCtnt.setMandatory(true);
+    } else {
+        Text_CnclResnCtnt.hide();
+        CnclResnCtnt.hide();
+        CnclResnCtnt.setMandatory(false);
+    }
+};
+
+scwin.cnclDstic_OnItemChanged = function(e) {
+    //* 콤보내용 :  9 취소, 8 정정, 7 정정취소
+    //* 9 취소 선택시
+    //  수표발행정보 그룹박스 활성화 그외 항목은 비활성화
+    //  '거래취소정정사유구분' 항목 활성화
+    //* 8 정정 및 7 정정취소 선택시
+    //  수표발행정보 그룹박스 활성화 그외 항목은 비활성화
+    //  '기산일',  '거래취소정정사유구분'  항목 활성화
+    //주의 : 취소정정구분 콤보박스 아무런 값도 선택되지 않은경우는 정상거래이므로 기존 이벤트 적용되어야함
+    //
+    //** 공통정보 조립 **
+    //- 취소구분코드에  9 취소, 8 정정, 7 정정취소 null 인 경우 0
+    //- 취소유형구분코드 = '7', 취소사유내용,   트랜코드  공통부에 조립요청 
+
+    scwin.SetProxyMandatory(); // 대리인필수지정
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+
+    GroupBox4.setDisabled(false);
+    cshTrferDstcd.setDisabled(false);
+    cshTrfamt.setDisabled(false);
+    RqstrAcno.setDisabled(false);
+    RqstrCnoDstcd.setDisabled(false);
+    RqstrCno.setDisabled(false);
+    rqstrCustnm.setDisabled(false);
+    GroupBox5.setDisabled(false);
+    PanelKYC.setDisabled(false);
+    PanelKYC.show('');
+    if (cnclDstic.getValue() == "9") {
+        CnclResnDstic.setDisabled(false);
+        GroupBox4.setValue("");
+        cshTrferDstcd.setDisabled(true);
+        cshTrferDstcd.setMandatory(false); //18.08.24
+        cshTrfamt.setDisabled(true);
+        RqstrAcno.setDisabled(false);
+        RqstrCnoDstcd.setDisabled(false);
+        RqstrCno.setDisabled(false);
+        rqstrCustnm.setDisabled(false);
+    } else if (cnclDstic.getValue() == "8" || cnclDstic.getValue() == "7") {
+        GroupBox4.setValue("");
+        CnclResnDstic.setDisabled(false);
+        cshTrferDstcd.setDisabled(true);
+        cshTrferDstcd.setMandatory(false); //18.08.24
+        cshTrfamt.setDisabled(true);
+        RqstrAcno.setDisabled(false);
+        RqstrCnoDstcd.setDisabled(false);
+        RqstrCno.setDisabled(false);
+        rqstrCustnm.setDisabled(false);
+        PanelKYC.hide();
+        PanelKYC.setDisabled(true);
+        $c.iz.data.messageSlide("※금일 중요증서잔고 변동유의※ \n\n " + "수표발행 정정거래후 정당한 수표발행분에 대한 거래는" + " 반드시 [기산일자]를 입력해야 수표중요증서 재고수량에 변동이 없습니다.");
+    } else if (cnclDstic.getValue() == "0") {
+        GroupBox4.setDisabled(false);
+        cshTrferDstcd.setDisabled(false);
+        cshTrferDstcd.setMandatory(true); //18.08.24
+        cshTrfamt.setDisabled(false);
+        RqstrAcno.setDisabled(false);
+        RqstrCnoDstcd.setDisabled(false);
+        RqstrCno.setDisabled(false);
+        rqstrCustnm.setDisabled(false);
+        GroupBox5.setDisabled(false);
+        PanelKYC.setDisabled(false);
+        PanelKYC.show('');
+        CnclResnDstic.setValue("00");
+    }
+};
+
+/*
+function OnSendKey()
+{
+
+	if(cnclDstic.Data == "8" || cnclDstic.Data == "7"){
+		SetTranID("KFL0101110");
+		
+		///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////////////////
+		// 실명증표스캔 이미지전송후, 넘겨받은 이미지키를 등록거래시 업무공통부에 설정
+		// SetImageKeyInTranHeader() 공통함수는 등록거래에 사용하는 거래코드의 SetTranID 밑에 작성
+		//////////////////////////////////////////////////////////////////////////////////////////
+
+		// 업무공통부에 PPR 실명증표 이미지키 설정
+		SetImageKeyInTranHeader();
+	
+		///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+		
+		Tran.ASend();
+	}
+	else{
+		SetTranID("KFL0101110");
+		if (SetChildData("SetTranHeader()", "PanelKYC") == false)
+			return false;
+		
+		///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////////////////
+		// 실명증표스캔 이미지전송후, 넘겨받은 이미지키를 등록거래시 업무공통부에 설정
+		// SetImageKeyInTranHeader() 공통함수는 등록거래에 사용하는 거래코드의 SetTranID 밑에 작성
+		//////////////////////////////////////////////////////////////////////////////////////////
+
+		// 업무공통부에 PPR 실명증표 이미지키 설정
+		SetImageKeyInTranHeader();
+	
+		///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+		
+		Tran.ASend();
+	}
+}*/
+
+scwin.OnSendKey = function() {
+    //고객정보번호(고객식별자+관리번호) 체크
+    if (serchNoDstic.getValue() == "2") {
+        var tmpCustIdnfr1 = CustIdnfr.getValue();
+        if (tmpCustIdnfr1.substr(9, 1) == "") {
+            $c.iz.data.messageSlide("고객식별자 10자리를 \n정확하게 입력하십시요.");
+            CustIdnfr.focus();
+            return;
+        }
+        if (CustMgtNo.getValue() == "") {
+            $c.iz.data.messageSlide("고객관리번호를 \n입력하여 주십시요.");
+            CustMgtNo.focus();
+            return;
+        }
+        //고객관리번호 채우기
+        CustMgtNo.setValue(scwin.fillChar("0", 5, CustMgtNo.getValue()));
+    }
+    if (RqstrAcno.getValue() == "") {
+        if (serchNoDstic.getValue() == "1") {
+            if ((RqstrCnoDstcd.getValue() == "") || (RqstrCno.getValue() == "")) {
+                $c.iz.data.messageSlide("발행인계좌번호 또는 발행인고객번호를 입력해야합니다.");
+                return;
+            }
+        } else {
+            if ((CustIdnfr.getValue() == "") || (CustMgtNo.getValue() == "")) {
+                $c.iz.data.messageSlide("발행인계좌번호 또는 발행인고객정보번호를 입력해야합니다.");
+                return;
+            }
+        }
+    } else {
+        var CnoBank = "";
+        CnoBank = RqstrCno.getValue();
+        if (CnoBank.substr(2, 4) == "BANK") {
+            if (serchNoDstic.getValue() == "1") {
+                if ((RqstrCnoDstcd.getValue() == "") || (RqstrCno.getValue() == "")) {
+                    $c.iz.data.messageSlide("발행인고객번호를 입력해야합니다.");
+                    return;
+                }
+            } else {
+                $c.iz.data.messageSlide("발행인고객번호를 입력해야합니다.");
+                return;
+            }
+        } else {
+            if (((RqstrCnoDstcd.getValue() != "") || (RqstrCno.getValue() != "")) ||
+                ((CustIdnfr.getValue() != "") || (CustMgtNo.getValue() != ""))) {
+                $c.iz.data.messageSlide("발행인계좌번호 또는 발행인고객번호 중 한가지 항목만 선택 입력합니다.");
+                return;
+            }
+        }
+    }
+
+    //180907  T1BANKxxx, T2BANKxxx 일경우 계좌번호 필수입력 및 일반권거래인지 검증 
+    if ("" != RqstrCno.getValue()) {
+        var bankStr = RqstrCno.getValue().substr(2, 4).toUpperCase();
+        if ("BANK" == bankStr) {
+            if ("" == RqstrAcno.getValue()) {
+                $c.iz.data.messageSlide("발행인계좌번호를 입력해야합니다.");
+                return;
+            }
+            if ("099" == cbill1.getValue() ||
+                "099" == cbill2.getValue() ||
+                "099" == cbill3.getValue() ||
+                "099" == cbill4.getValue() ||
+                "099" == cbill5.getValue()) {
+                $c.iz.data.messageSlide("일반권은 TxBANKxxx를 발행인고객번호로 입력할 수 없습니다");
+                return;
+            }
+        }
+    }
+    if (cnclDstic.getValue() == "" || cnclDstic.getValue() == "0") {
+        if (cshTrferDstcd.getValue() == "") {
+            $c.iz.data.messageSlide("현금대체구분코드는 필수입력항목입니다");
+            return;
+        }
+    }
+    if (CnclResnDstic.getValue() == "99" && CnclResnCtnt.getValue() == "") {
+        $c.iz.data.messageSlide("기타오류에 해당하는 사유내용을 입력하세요.");
+        return;
+    }
+    /*	  if ((RqstrAcno.Value ==  "") &&
+    	      (RqstrCno.Value  ==  ""))
+        	{
+    	      MessageSlide("발행의뢰인계좌번호 또는 발행의뢰인고객번호중 한가지 항목는 선택 입력해야합니다  ");
+    	      return;
+            }
+          else
+    */
+    if (cnclDstic.getValue() != "0") {
+        //var CancelCode = CnclResnCtnt.Data                //취소사유코드
+        var CancelCode = CnclResnDstic.getValue(); //취소사유코드 - 2013.06.26 오류정정함
+
+        //취소사유내용
+        var CancelDesc;
+        if (CnclResnDstic.getValue() == "99") {
+            CancelDesc = CnclResnCtnt.getValue();
+        } else {
+            CancelDesc = CnclResnDstic.GetComboValue;
+        }
+    }
+    if (cnclDstic.getValue() == "9") {
+        $c.iz.tran.setTranID("KFL0101110");
+        if ($c.iz.data.setChildData("SetTranHeader()", "PanelKYC") == false) return false;
+
+        ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////////////////
+        // 실명증표스캔 이미지전송후, 넘겨받은 이미지키를 등록거래시 업무공통부에 설정
+        // SetImageKeyInTranHeader() 공통함수는 등록거래에 사용하는 거래코드의 SetTranID 밑에 작성
+        //////////////////////////////////////////////////////////////////////////////////////////
+
+        // 업무공통부에 PPR 실명증표 이미지키 설정
+        $c.com.setImageKeyInTranHeader();
+        $c.iz.tran.setCancelTran("9", "7", "0", "1", CancelCode, CancelDesc);
+        $c.iz.tran.WaitSend();
+    } else if (cnclDstic.getValue() == "8") {
+        $c.iz.tran.setTranID("KFL0101110");
+        $c.com.setImageKeyInTranHeader();
+        $c.iz.tran.setCancelTran("8", "7", "0", "1", CancelCode, CancelDesc);
+        $c.iz.tran.WaitSend();
+    } else if (cnclDstic.getValue() == "7") {
+        $c.iz.tran.setTranID("KFL0101110");
+        $c.com.setImageKeyInTranHeader();
+        $c.iz.tran.setCancelTran("7", "7", "0", "1", CancelCode, CancelDesc);
+        $c.iz.tran.WaitSend();
+    } else {
+        // 일반권 고액(10억이상)발행인 경우 스캔안내 POPUP처리
+        var IsPopupTarget = false;
+        if (Number(unitAmt1.getValue()) >= 1000000000 && "099" == cbill1.getValue()) {
+            IsPopupTarget = true;
+        }
+        if (Number(unitAmt2.getValue()) >= 1000000000 && "099" == cbill2.getValue()) {
+            IsPopupTarget = true;
+        }
+        if (Number(unitAmt3.getValue()) >= 1000000000 && "099" == cbill3.getValue()) {
+            IsPopupTarget = true;
+        }
+        if (Number(unitAmt4.getValue()) >= 1000000000 && "099" == cbill4.getValue()) {
+            IsPopupTarget = true;
+        }
+        if (Number(unitAmt5.getValue()) >= 1000000000 && "099" == cbill5.getValue()) {
+            IsPopupTarget = true;
+        }
+        if ("" != idtrek.getValue()) // 기산일거래시 고액(10억) 스캔관련 팝업제외
+
+        {
+            IsPopupTarget = false;
+        }
+        if (true == IsPopupTarget) {
+            var bRsult = $c.iz.data.confirm("일반자기앞수표 발행(장당 10억원이상)시에는 반드시 수표 스캔을 완료하고\n" + "교부하시기 바라며, 금융사고예방을 위해 수표 교부 후 스캔은 금지됩니다.\n" + "   - 수표 이미지 스캔 등록 [06-13-301] : 대출스캐너 이용              \n" + "취소 선택시 수표발행거래가 실행되지 않습니다!!", "발행확인");
+        }
+        if (false == IsPopupTarget || true == bRsult) {
+            $c.iz.tran.setTranID("KFL0101110");
+            if ($c.iz.data.setChildData("SetTranHeader()", "PanelKYC") == false) return false;
+
+            ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////////////////
+            // 실명증표스캔 이미지전송후, 넘겨받은 이미지키를 등록거래시 업무공통부에 설정
+            // SetImageKeyInTranHeader() 공통함수는 등록거래에 사용하는 거래코드의 SetTranID 밑에 작성
+            //////////////////////////////////////////////////////////////////////////////////////////
+
+            // 업무공통부에 PPR 실명증표 이미지키 설정
+            $c.com.setImageKeyInTranHeader();
+
+
+            //////// [디지털서식] 실행거래 전 디지털서식 작성완료 확인-Start /////////////2017.08.21
+
+            // 디지털서식 작성중인지 확인
+            if ($c.com.critical.cmdDigitalForm("DF_ISCONNECT", "") == "1") {
+                // 디지털서식 작성완료 여부 확인
+                if ($c.com.critical.cmdDigitalForm("DF_VALIDATE", $c.iz._tran.tranId) != "1") {
+                    var confirmRtn = $c.iz.data.confirm("디지털서식 작성이 완료되지 않았습니다.\n" + "   그래도 계속 실행하시겠습니까?\n" + "   ※확인을 누르시면 작성중인\n" + " 디지털서식은 저장되지 않습니다.", "디지털서식 작성 미완료 알림");
+                    if (confirmRtn == true) {
+                        // 확인을 누르면 디지털서식 연동해제 요청 후 기존거래 진행
+                        $c.com.critical.cmdDigitalForm("DF_DISCONNECT", "");
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            //////// [디지털서식] 실행거래 전 디지털서식 작성완료 확인-End   /////////////
+
+            $c.iz.tran.WaitSend();
+        }
+    }
+};
+
+
+
+scwin.GetScreenManualInfo = function() {
+    return $c.com.getManualString1() + $c.com.getManualString2() + $c.com.getManualString3();
+};
+
+
+
+//-----------------------------------------------------------
+// 고객관리번호 채우기
+//-----------------------------------------------------------
+scwin.fillChar = function(Character, Len, Value) {
+    if (Value == "") {
+        return;
+    }
+    var strReturnValue = Value;
+    if (Len > Value.length) {
+        for (var i = Value.length; i < Len; i++) {
+            strReturnValue = Character + strReturnValue;
+        }
+    }
+    return strReturnValue;
+};
+
+
+
+//------------------------------------------------------------
+// 실명증표 스캔버튼 선택시
+//------------------------------------------------------------
+scwin.OnSendKey8 = function() {
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 등록거래 대상 화면의 공통 버튼 중 실명증표 스캔버튼을 선택하여
+    // 실명증표 스캔 팝업 화면을 호출함
+    //////////////////////////////////////////////////////////////////////////////
+
+    // 실명증표 스캔 팝업을 호출하여 스캔처리후 조건에 따라 고객실명번호를 화면에 출력함
+    // @name   : PopupIdscan(trancode, isloan, isautoinput, cuniqno)
+    // @param  : trancode - 등록거래코드, isloan - 여신업무여부, isautoinput - 고객실명번호 출력여부,
+    //           cuniqno - 업무화면에 자동입력될 고객실명번호 Control명
+    $c.com.popupIdScan("KFL0101110", false, true, "RqstrCno");
+
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+    /*var  cno  =   "";					//실명증표스캔시 고객구분 착오변경 로직제거 2016.11.29
+	cno       =   RqstrCno.data;
+	if  (cno.substr(7,1)   >   "4")
+	{
+	     RqstrCnoDstcd.Data  =   "3";
+	}     
+	else
+	{
+         RqstrCnoDstcd.Data  =   "1"; 
+    }*/
+};
+
+
+
+scwin.OnEndTran = function() {
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 실행이 정상적으로 완료된후 실명증표 이미지key관련 전역변수 초기화
+    //////////////////////////////////////////////////////////////////////////////
+
+    //실행거래 정상 수행완료 여부 확인
+    if ($c.iz._tran.tranId == "KFL0101110" && $c.iz._tran.bError == false) {
+        // 실행거래가 정상적으로 완료된 경우 실명증표이미지key 전역변수 초기화
+        $c.com.initImageKey();
+    }
+
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+};
+
+//대리인필수지정
+scwin.SetProxyMandatory = function() {
+    // 총발행금액이 2천만원 이상인 경우 대리인 여부 필수항목으로 설정 - 2014.02.04 명진영
+    //if  ( (Number(totalIssuAmt.Value) >= 20000000) && ('0' == cnclDstic.Value) )
+    if ((Number(totalIssuAmt.getValue()) >= 15000000) && ('0' == cnclDstic.getValue())) {
+        $c.iz.data.setChildData("kYCDputRiPsnYn.Required=true;", "PanelKYC");
+    } else {
+        $c.iz.data.setChildData("kYCDputRiPsnYn.Required=false;", "PanelKYC");
+    }
+};
+
+//수수료구분코드 설정
+scwin.SetFeeDstcd = function() {
+    // 2016.12.12일 open예정으로 운영엔 이 시점까지는 임의면제로 운영시스템 일시반영
+    // 2016.12.12일 open시에 본 테스트로직 제거필요 test
+    // ******************************** TEST ********************************
+    /*if ( 'd' == System.servicemode || 'D' == System.servicemode )
+    {
+    	InquiryFeeButton.Enabled     = true;
+    }
+    else
+    {
+    	InquiryFeeButton.Enabled     = false;
+    	feeLevyDstcd.Value           = '1';		// 수수료구분코드(0:현금, 9:대체, 1:면제)
+    	return ;
+    }*/
+    // **********************************************************************
+
+    if ("" != idtrek.getValue()) // 기산일
+
+    {
+        feeLevyDstcd.setDisabled(true);
+        feeLevyDstcd.setMandatory(false);
+        feeLevyDstcd.setValue('1'); // 수수료구분코드(0:현금, 9:대체, 1:면제)
+        issuFeeRceitpTypngYn.setDisabled(true);
+        issuFeeRceitpTypngYn.setValue('0'); // 발행수수료인자여부
+        InquiryFeeButton.setDisabled(true);
+        return;
+    }
+    if ('0' != cnclDstic.getValue()) // 거래취소정정구분
+
+    {
+        feeLevyDstcd.setDisabled(true);
+        feeLevyDstcd.setMandatory(false);
+        feeLevyDstcd.setValue('1'); // 수수료구분코드(0:현금, 9:대체, 1:면제)
+        issuFeeRceitpTypngYn.setDisabled(true);
+        issuFeeRceitpTypngYn.setValue('0'); // 발행수수료인자여부
+        InquiryFeeButton.setDisabled(true);
+        return;
+    }
+
+    // 일반권 권종입력한 경우 수수료징수구분 활성화
+    if ("099" == cbill1.getValue() || "099" == cbill2.getValue() || "099" == cbill3.getValue() || "099" == cbill4.getValue() || "099" == cbill5.getValue()) {
+        feeLevyDstcd.setDisabled(false);
+        feeLevyDstcd.setMandatory(true);
+        feeLevyDstcd.clearData();
+        issuFeeRceitpTypngYn.setDisabled(false);
+        issuFeeRceitpTypngYn.setValue('1'); // 발행수수료인자여부
+        InquiryFeeButton.setDisabled(false);
+    } else {
+        feeLevyDstcd.setDisabled(true);
+        feeLevyDstcd.setMandatory(false);
+        feeLevyDstcd.setValue('1'); // 수수료구분코드(0:현금, 9:대체, 1:면제)
+        issuFeeRceitpTypngYn.setDisabled(true);
+        issuFeeRceitpTypngYn.setValue('0'); // 발행수수료인자여부
+        InquiryFeeButton.setDisabled(true);
+    }
+};
+
+//기산일변경 이벤트처리
+scwin.idtrek_OnValidate = function(info) {
+    scwin.SetFeeDstcd(); // 수수료징수구분코드 설정
+};
+
+//수수료조회버튼클릭 이벤트처리
+scwin.custIdnfrFee; //18.08.24
+
+scwin.InquiryFeeButton_OnClick = function(e) {
+    var gnralNost = 0;
+    if ("099" == cbill1.getValue()) {
+        gnralNost = gnralNost + Number(nost1.getValue());
+    }
+    if ("099" == cbill2.getValue()) {
+        gnralNost = gnralNost + Number(nost2.getValue());
+    }
+    if ("099" == cbill3.getValue()) {
+        gnralNost = gnralNost + Number(nost3.getValue());
+    }
+    if ("099" == cbill4.getValue()) {
+        gnralNost = gnralNost + Number(nost4.getValue());
+    }
+    if ("099" == cbill5.getValue()) {
+        gnralNost = gnralNost + Number(nost5.getValue());
+    }
+    Link.custIdnfr = scwin.custIdnfrFee; // 18.08.24 
+    Link.gnralNost = gnralNost;
+    $c.iz.screen.popup("KFL04326001", "DATALINK"); // 자기앞수표 발행수수료조회 팝업호출
+    $c.iz.data.clearLinkData();
+};
+
+scwin.RqstrAcno_OnValidate = function(info) {
+    //발행인계좌번호 입력 시 고객계좌조회 처리  18.08.24
+
+
+    //고객정보거래안내  KAA0499241 : 계좌번호로 KBPIN, 고객명 단순 참조 (거래TIME 고려)
+    //검색번호구분	serchNoDstcd    2:계좌번호
+
+    if ("" != RqstrAcno.getValue()) {
+        $c.iz.tran.setTranID("KAA0499241");
+        $c.iz.tran.setInFDData("KAA0499241", "serchNoDstcd", "2");
+        $c.iz.tran.setInFDData("KAA0499241", "serchNo", RqstrAcno.getValue());
+        //			Tran.ASend();	
+        $c.iz.tran.WaitSend();
+        if (false == $c.iz._tran.bError) {
+            var custIdnfrStr = $c.iz.tran.getOutFDData("KAA0499241", "screen", "custIdnfr");
+            var custMgtNoStr = $c.iz.tran.getOutFDData("KAA0499241", "screen", "custMgtNo");
+            var custnmStr = $c.iz.tran.getOutFDData("KAA0499241", "screen", "custnm");
+            if ("" == custIdnfrStr) {
+                autoInquryCustnm.setValue();
+                RqstrCnoDstcd.setDisabled(false); //발행인고객구분 활성화
+                RqstrCno.setDisabled(false); //발행인고객번호 활성화		 	
+                scwin.custIdnfrFee = '0000000000'; //수수료조회를 위한 KBPIN 조립
+            } else {
+                autoInquryCustnm.show('');
+                autoInquryCustnm.setValue(custnmStr);
+                rqstrCustnm.hide();
+                rqstrCustnm.setValue();
+                Desc4.hide();
+                RqstrCnoDstcd.setDisabled(true); //발행인고객구분 비활성화
+                RqstrCno.setDisabled(true); //발행인고객번호 비활성화
+                RqstrCnoDstcd.clear();
+                RqstrCno.setValue();
+                Button2.setDisabled(true); //고객명조회버튼 비활성화
+                scwin.custIdnfrFee = custIdnfrStr; //수수료조회를 위한 KBPIN 조립
+            }
+        } else {
+            autoInquryCustnm.setValue();
+            RqstrCnoDstcd.setDisabled(false); //발행인고객구분 활성화
+            RqstrCno.setDisabled(false); //발행인고객번호 활성화		 			
+            scwin.custIdnfrFee = '0000000000'; //수수료조회를 위한 KBPIN 조립
+        }
+    }
+};
+
+scwin.RqstrCno_OnValidate = function(info) {
+    //발행인고객번호 입력 시 고객명조회 자동팝업 18.08.24
+    var bankStr = RqstrCno.getValue().substr(2, 4);
+    bankStr = bankStr.toUpperCase();
+    if ("BANK" == bankStr) {
+        autoInquryCustnm.show('');
+        autoInquryCustnm.setValue();
+        rqstrCustnm.hide();
+        rqstrCustnm.setValue();
+        Button2.setDisabled(true); //고객명조회버튼 비활성화
+        Desc4.hide();
+        return; //T1BANKxxx, T2BANKxxx return
+    }
+    if ("" != RqstrCno.getValue()) {
+        scwin.Button2_OnClick();
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="자기앞수표발행" meta_screenId="KFL01011000" groupcocd="KB0" scncall="0113001" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:1074px;" screentype="AType" meta_author="ITBANK-8737DB4A" meta_user="S012020(허훈만)" meata_date="2008/11/21 15:45:49" savezorder="1" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="2" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:168px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox4" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox4" hierarchy="GroupBox4">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_cshTrfamt" tabIndex="1" linespace="2" label="현금대체구분" orgid="Text_cshTrfamt" hierarchy="Text_cshTrfamt" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:168px; top:42px; width:75px; height:24px; color:rgb(0,0,0);" id="cshTrferDstcd" indicator="현금대체구분코드" tabIndex="2" mandatory="true" class="req" charcasing="0" index="0" items="0=현금;9=대체;" appearance="minimal" orgid="cshTrferDstcd" hierarchy="cshTrferDstcd" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFL01011000.cshTrferDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[9]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:252px; top:42px; width:130px; height:24px; align:right; text-align:right;" id="cshTrfamt" indicator="현금대체금액" tooltip="전체현금 또는 전체대체인 경우 금액자리 미입력\\" tabIndex="3" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" orgid="cshTrfamt" hierarchy="cshTrfamt" ref="data:dma_KFL01011000.cshTrfamt"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:390px; top:42px; width:220px; height:24px; align:middleleft; text-align:middleleft;" id="Desc1" tabIndex="4" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;전액&amp;nbsp;현금&amp;nbsp;또는&amp;nbsp;대체인&amp;nbsp;경우&amp;nbsp;미입력" orgid="Desc1" hierarchy="Desc1" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:72px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_issuRqstrAcno" tabIndex="5" linespace="2" label="발행인계좌번호" orgid="Text_issuRqstrAcno" hierarchy="Text_issuRqstrAcno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:72px; width:116px; height:24px;" id="RqstrAcno" indicator="발행의뢰인계좌번호" tabIndex="6" dataType="number" editFormat="######-##-######" maxlength="16" dupname="acno" charcasing="0" multipattern="계좌번호" allowChar="0-9" ninemode="0" ev:onviewchange="scwin.RqstrAcno_OnValidate" orgid="RqstrAcno" hierarchy="RqstrAcno" ref="data:dma_KFL01011000.RqstrAcno"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:294px; top:72px; width:315px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2" tabIndex="7" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;발행인계좌번호&amp;nbsp;또는&amp;nbsp;발행인고객번호&amp;nbsp;중&amp;nbsp;선택&amp;nbsp;입력&amp;nbsp;" orgid="Desc2" hierarchy="Desc2" escape="false" class="kb_txt_blue kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:102px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_RqstrCno" tabIndex="8" linespace="2" label="발행인고객번호" orgid="Text_RqstrCno" hierarchy="Text_RqstrCno" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:168px; top:102px; width:39px; height:24px; color:rgb(0,0,0);" id="RqstrCnoDstcd" indicator="발행인고객구분코드" tabIndex="9" displayMode="value" charcasing="0" index="0" items="1=주민등록번호;2=사업자등록번호;3=외국인등록번호및재외국민(외국인국적동포)국내거소신고번호;4=여권번호;5=기타;6=재외국민주민등록번호;" appearance="minimal" ev:onchange="scwin.RqstrCnoDstcd_OnItemChanged" orgid="RqstrCnoDstcd" hierarchy="RqstrCnoDstcd" selectedIndex="0" ref="data:dma_KFL01011000.RqstrCnoDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[주민등록번호]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[사업자등록번호]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[외국인등록번호및재외국민(외국인국적동포)국내거소신고번호]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[여권번호]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[기타]]></xf:label>
+							<xf:value><![CDATA[5]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[재외국민주민등록번호]]></xf:label>
+							<xf:value><![CDATA[6]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:216px; top:102px; width:95px; height:24px;" id="RqstrCno" indicator="발행의뢰인고객번호" tabIndex="10" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999" maxlength="13" charcasing="0" ninemode="0" ev:onviewchange="scwin.RqstrCno_OnValidate" orgid="RqstrCno" hierarchy="RqstrCno" ref="data:dma_KFL01011000.RqstrCno"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:330px; top:102px; width:84px; height:24px; font-size:8.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Button4" tabIndex="11" showimage="0" text="고객확인의무" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button4_OnClick" orgid="Button4" hierarchy="Button4">
+					<xf:label><![CDATA[고객확인의무]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:852px; top:102px; width:200px; height:24px; display:none;" id="rqstrCustnm" indicator="발행의뢰인성명" tabIndex="12" allowChar="가-힣" validateOnInput="true" maxlength="28" imeMode="반자" charcasing="0" checkebcdic="1" placeholder="직접 입력" ninemode="0" orgid="rqstrCustnm" hierarchy="rqstrCustnm" ref="data:dma_KFL01011000.rqstrCustnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:90px; top:132px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_rqstrCustnm" tabIndex="13" linespace="2" label="발행인성명" orgid="Text_rqstrCustnm" hierarchy="Text_rqstrCustnm" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:132px; width:200px; height:24px;" id="autoInquryCustnm" indicator="자동조회고객명" tabIndex="14" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="50" imeMode="반자" charcasing="0" readOnly="true" checkebcdic="1" ninemode="0" orgid="autoInquryCustnm" hierarchy="autoInquryCustnm"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:372px; top:132px; width:24px; height:24px; font-size:8.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Button2" tabIndex="15" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Desc" style="position:absolute; left:402px; top:132px; width:260px; height:24px; display:none; align:middleleft; text-align:middleleft;" id="Desc4" tabIndex="16" imagealign="MiddleLeft" linespace="2" label="☜&amp;nbsp;고객정보&amp;nbsp;미존재시&amp;nbsp;발행인성명&amp;nbsp;필수&amp;nbsp;입력" orgid="Desc4" hierarchy="Desc4" escape="false" class="kb_txt_blue kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox id="title_GroupBox4" class="title_h2" label="발행인정보"/>
+			</xf:group>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:912px; top:180px; width:158px; height:24px; borderraised2;" id="LinkText1" tabIndex="2" href="KFL06301000" class="btn_def_link" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+				<xf:label><![CDATA[10억이상 수표 이미지등록]]></xf:label>
+			</w2:anchor>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:186px; width:1056px; height:312px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox1" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; width:32px; height:24px; color:rgb(0,0,0);" id="Text_cbill" tabIndex="1" linespace="2" label="권종" orgid="Text_cbill" hierarchy="Text_cbill" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:204px; top:42px; width:32px; height:24px; color:rgb(0,0,0); align:middlecenter; text-align:middlecenter;" id="Text_nost" tabIndex="2" linespace="2" label="매수" orgid="Text_nost" hierarchy="Text_nost" class="kb_MiddleCenter"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:288px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_chekStartNo" tabIndex="3" linespace="2" label="수표시작번호" orgid="Text_chekStartNo" hierarchy="Text_chekStartNo" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:426px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_chekEndzNo" tabIndex="4" linespace="2" label="수표종료번호" orgid="Text_chekEndzNo" hierarchy="Text_chekEndzNo" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:594px; top:42px; width:70px; height:24px; color:rgb(0,0,0);" id="Text_unitAmt" tabIndex="5" linespace="2" label="단&amp;nbsp;위&amp;nbsp;금&amp;nbsp;액" orgid="Text_unitAmt" hierarchy="Text_unitAmt" escape="false" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:834px; top:42px; width:70px; height:24px; color:rgb(0,0,0);" id="Text_unitTotAmt" tabIndex="6" linespace="2" label="발&amp;nbsp;행&amp;nbsp;금&amp;nbsp;액" orgid="Text_unitTotAmt" hierarchy="Text_unitTotAmt" escape="false" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:72px; width:59px; height:24px; color:rgb(0,0,0);" id="cbill1" indicator="권종1" tabIndex="7" mandatory="true" class="req" keyLength="3" charcasing="0" datasource="1" instancefile="200000599" index="0" appearance="minimal" ev:onchange="scwin.cbill1_OnItemChanged" orgid="cbill1" hierarchy="cbill1" ref="data:dma_KFL01011000.cbill1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:198px; top:72px; width:39px; height:24px; align:right; text-align:right;" id="nost1" indicator="매수1" tabIndex="8" dataType="number" displayFormat="#,###" maxlength="5" charcasing="0" mandatory="true" class="req" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.nost1_OnValidate" orgid="nost1" hierarchy="nost1" ref="data:dma_KFL01011000.nost1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:300px; top:72px; width:60px; height:24px;" id="chekStartNo1" indicator="수표시작번호1" tabIndex="9" allowChar="0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekStartNo1_OnValidate" orgid="chekStartNo1" hierarchy="chekStartNo1" ref="data:dma_KFL01011000.chekStartNo1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:72px; width:60px; height:24px;" id="chekEndNo1" indicator="수표종료번호1" tabIndex="10" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekEndNo1_OnValidate" orgid="chekEndNo1" hierarchy="chekEndNo1" ref="data:dma_KFL01011000.chekEndNo1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:570px; top:72px; width:130px; height:24px; align:right; text-align:right;" id="unitAmt1" indicator="단위금액1" tabIndex="11" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" initValue="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.unitAmt1_OnValidate" orgid="unitAmt1" hierarchy="unitAmt1" ref="data:dma_KFL01011000.unitAmt1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:72px; width:130px; height:24px; text-align:right;" id="unitTotAmt1" indicator="단위소계금액1" tabIndex="12" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" initValue="0" ninemode="0" insertcomma="1" rightalign="1" orgid="unitTotAmt1" hierarchy="unitTotAmt1"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:102px; width:59px; height:24px; color:rgb(0,0,0);" id="cbill2" indicator="권종2" tabIndex="13" keyLength="3" charcasing="0" datasource="1" instancefile="200000599" index="0" appearance="minimal" ev:onchange="scwin.cbill2_OnItemChanged" orgid="cbill2" hierarchy="cbill2" ref="data:dma_KFL01011000.cbill2"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:198px; top:102px; width:39px; height:24px; align:right; text-align:right;" id="nost2" indicator="매수2" tabIndex="14" dataType="number" displayFormat="#,###" maxlength="5" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.nost2_OnValidate" orgid="nost2" hierarchy="nost2" ref="data:dma_KFL01011000.nost2"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:300px; top:102px; width:60px; height:24px;" id="chekStartNo2" indicator="수표시작번호2" tabIndex="15" allowChar="0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekStartNo2_OnValidate" orgid="chekStartNo2" hierarchy="chekStartNo2" ref="data:dma_KFL01011000.chekStartNo2"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:102px; width:60px; height:24px;" id="chekEndNo2" indicator="수표종료번호2" tabIndex="16" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekEndNo2_OnValidate" orgid="chekEndNo2" hierarchy="chekEndNo2" ref="data:dma_KFL01011000.chekEndNo2"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:570px; top:102px; width:130px; height:24px; align:right; text-align:right;" id="unitAmt2" indicator="단위금액2" tabIndex="17" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" initValue="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.unitAmt2_OnValidate" orgid="unitAmt2" hierarchy="unitAmt2" ref="data:dma_KFL01011000.unitAmt2"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:102px; width:130px; height:24px; text-align:right;" id="unitTotAmt2" indicator="단위소계금액2" tabIndex="18" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" initValue="0" ninemode="0" insertcomma="1" rightalign="1" orgid="unitTotAmt2" hierarchy="unitTotAmt2"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:132px; width:59px; height:24px; color:rgb(0,0,0);" id="cbill3" indicator="권종3" tabIndex="19" keyLength="3" charcasing="0" datasource="1" instancefile="200000599" index="0" appearance="minimal" ev:onchange="scwin.cbill3_OnItemChanged" orgid="cbill3" hierarchy="cbill3" ref="data:dma_KFL01011000.cbill3"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:198px; top:132px; width:39px; height:24px; align:right; text-align:right;" id="nost3" indicator="매수3" tabIndex="20" dataType="number" displayFormat="#,###" maxlength="5" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.nost3_OnValidate" orgid="nost3" hierarchy="nost3" ref="data:dma_KFL01011000.nost3"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:300px; top:132px; width:60px; height:24px;" id="chekStartNo3" indicator="수표시작번호3" tabIndex="21" allowChar="0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekStartNo3_OnValidate" orgid="chekStartNo3" hierarchy="chekStartNo3" ref="data:dma_KFL01011000.chekStartNo3"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:132px; width:60px; height:24px;" id="chekEndNo3" indicator="수표종료번호3" tabIndex="22" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekEndNo3_OnValidate" orgid="chekEndNo3" hierarchy="chekEndNo3" ref="data:dma_KFL01011000.chekEndNo3"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:570px; top:132px; width:130px; height:24px; align:right; text-align:right;" id="unitAmt3" indicator="단위금액3" tabIndex="23" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" initValue="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.unitAmt3_OnValidate" orgid="unitAmt3" hierarchy="unitAmt3" ref="data:dma_KFL01011000.unitAmt3"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:132px; width:130px; height:24px; text-align:right;" id="unitTotAmt3" indicator="단위소계금액3" tabIndex="24" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" initValue="0" ninemode="0" insertcomma="1" rightalign="1" orgid="unitTotAmt3" hierarchy="unitTotAmt3"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:162px; width:59px; height:24px; color:rgb(0,0,0);" id="cbill4" indicator="권종4" tabIndex="25" keyLength="3" charcasing="0" datasource="1" instancefile="200000599" index="0" appearance="minimal" ev:onchange="scwin.cbill4_OnItemChanged" orgid="cbill4" hierarchy="cbill4" ref="data:dma_KFL01011000.cbill4"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:198px; top:162px; width:39px; height:24px; align:right; text-align:right;" id="nost4" indicator="매수4" tabIndex="26" dataType="number" displayFormat="#,###" maxlength="5" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.nost4_OnValidate" orgid="nost4" hierarchy="nost4" ref="data:dma_KFL01011000.nost4"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:300px; top:162px; width:60px; height:24px;" id="chekStartNo4" indicator="수표시작번호5" tabIndex="27" allowChar="0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekStartNo4_OnValidate" orgid="chekStartNo4" hierarchy="chekStartNo4" ref="data:dma_KFL01011000.chekStartNo4"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:162px; width:60px; height:24px;" id="chekEndNo4" indicator="수표종료번호4" tabIndex="28" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekEndNo4_OnValidate" orgid="chekEndNo4" hierarchy="chekEndNo4" ref="data:dma_KFL01011000.chekEndNo4"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:570px; top:162px; width:130px; height:24px; align:right; text-align:right;" id="unitAmt4" indicator="단위금액4" tabIndex="29" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" initValue="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.unitAmt4_OnValidate" orgid="unitAmt4" hierarchy="unitAmt4" ref="data:dma_KFL01011000.unitAmt4"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:162px; width:130px; height:24px; text-align:right;" id="unitTotAmt4" indicator="단위소계금액4" tabIndex="30" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" initValue="0" ninemode="0" insertcomma="1" rightalign="1" orgid="unitTotAmt4" hierarchy="unitTotAmt4"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:192px; width:59px; height:24px; color:rgb(0,0,0);" id="cbill5" indicator="권종5" tabIndex="31" keyLength="3" charcasing="0" datasource="1" instancefile="200000599" index="0" appearance="minimal" ev:onchange="scwin.cbill5_OnItemChanged" orgid="cbill5" hierarchy="cbill5" ref="data:dma_KFL01011000.cbill5"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:198px; top:192px; width:39px; height:24px; align:right; text-align:right;" id="nost5" indicator="매수5" tabIndex="32" dataType="number" displayFormat="#,###" maxlength="5" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.nost5_OnValidate" orgid="nost5" hierarchy="nost5" ref="data:dma_KFL01011000.nost5"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:300px; top:192px; width:60px; height:24px;" id="chekStartNo5" indicator="수표시작번호5" tabIndex="33" allowChar="0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekStartNo5_OnValidate" orgid="chekStartNo5" hierarchy="chekStartNo5" ref="data:dma_KFL01011000.chekStartNo5"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:192px; width:60px; height:24px;" id="chekEndNo5" indicator="수표종료번호5" tabIndex="34" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" charcasing="0" ninemode="0" ev:onviewchange="scwin.chekEndNo5_OnValidate" orgid="chekEndNo5" hierarchy="chekEndNo5" ref="data:dma_KFL01011000.chekEndNo5"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:570px; top:192px; width:130px; height:24px; align:right; text-align:right;" id="unitAmt5" indicator="단위금액5" tabIndex="35" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" initValue="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.unitAmt5_OnValidate" orgid="unitAmt5" hierarchy="unitAmt5" ref="data:dma_KFL01011000.unitAmt5"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:192px; width:130px; height:24px; text-align:right;" id="unitTotAmt5" indicator="단위소계금액5" tabIndex="36" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" initValue="0" ninemode="0" insertcomma="1" rightalign="1" orgid="unitTotAmt5" hierarchy="unitTotAmt5"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:612px; top:222px; width:87px; height:24px; color:rgb(0,0,0);" id="Text_totalIssuAmt" tabIndex="37" linespace="2" label="총&amp;nbsp;발&amp;nbsp;행&amp;nbsp;금&amp;nbsp;액" orgid="Text_totalIssuAmt" hierarchy="Text_totalIssuAmt" escape="false" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:222px; width:130px; height:24px; align:right; text-align:right;" id="totalIssuAmt" indicator="총발행금액" tabIndex="38" disabled="true" dataType="number" displayFormat="##,###,###,###,###" maxlength="18" charcasing="0" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.totalIssuAmt_OnValidate" orgid="totalIssuAmt" hierarchy="totalIssuAmt" ref="data:dma_KFL01011000.totalIssuAmt"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:24px; top:252px; width:520px; height:24px; align:middleleft; text-align:middleleft; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc5" tabIndex="39" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;100만원이하&amp;nbsp;소액&amp;nbsp;일반자기앞수표&amp;nbsp;발행은&amp;nbsp;은행내부업무상&amp;nbsp;목적외&amp;nbsp;발행을&amp;nbsp;금지합니다.&amp;nbsp;" orgid="Desc5" hierarchy="Desc5" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:24px; top:276px; width:437px; height:24px; color:rgb(51,102,255); align:middleleft; text-align:middleleft; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc6" tabIndex="40" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;금액&amp;nbsp;등이&amp;nbsp;착오&amp;nbsp;인자된&amp;nbsp;일반자기앞수표는&amp;nbsp;즉시&amp;nbsp;서손(불용등록)등록&amp;nbsp;요망." orgid="Desc6" hierarchy="Desc6" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox id="title_GroupBox1" class="title_h2" label="수표발행정보(장당&amp;nbsp;10억원이상&amp;nbsp;수표는&amp;nbsp;연번으로&amp;nbsp;발행이&amp;nbsp;불가능하니&amp;nbsp;건별로&amp;nbsp;입력하세요!!)" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:504px; width:1056px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="4" id="GroupBox3" tabIndex="4" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:textbox ctype="Text" style="position:absolute; left:60px; top:12px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_feeLevyDstcd" tabIndex="1" linespace="2" label="수수료징수구분" orgid="Text_feeLevyDstcd" hierarchy="Text_feeLevyDstcd" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:168px; top:12px; width:75px; height:24px; color:rgb(0,0,0);" id="feeLevyDstcd" indicator="수수료징수구분" tabIndex="2" disabled="true" inittype="Key" initvalue="1" charcasing="0" index="0" items="0=현금;9=대체;1=면제;" appearance="minimal" orgid="feeLevyDstcd" hierarchy="feeLevyDstcd" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFL01011000.feeLevyDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[9]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[면제]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<xf:trigger ctype="Button" style="position:absolute; left:264px; top:12px; width:80px; height:24px; font-size:8.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="InquiryFeeButton" tabIndex="3" disabled="true" text="수수료조회" type="button" class="btn_def1" ev:onclick="scwin.InquiryFeeButton_OnClick" orgid="InquiryFeeButton" hierarchy="InquiryFeeButton">
+					<xf:label><![CDATA[수수료조회]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:534px; top:12px; width:162px; height:24px; color:rgb(0,0,0);" id="Text_issuFeeRceitpTypngYn" tabIndex="4" linespace="2" label="발행수수료영수증인자여부" orgid="Text_issuFeeRceitpTypngYn" hierarchy="Text_issuFeeRceitpTypngYn" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:702px; top:12px; width:45px; height:24px; color:rgb(0,0,0);" id="issuFeeRceitpTypngYn" indicator="발행수수료영수증인자여부" tabIndex="5" disabled="true" inittype="Key" initvalue="0" charcasing="0" datasource="1" instancefile="102132000" index="0" appearance="minimal" orgid="issuFeeRceitpTypngYn" hierarchy="issuFeeRceitpTypngYn" ref="data:dma_KFL01011000.issuFeeRceitpTypngYn"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:558px; width:1056px; height:138px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="5" id="GroupBox5" tabIndex="5" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox5" hierarchy="GroupBox5">
+				<w2:textbox ctype="Text" style="position:absolute; left:84px; top:12px; width:77px; height:24px; color:rgb(0,0,0);" id="Text_brncd" tabIndex="1" label="발&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;행&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;점" orgid="Text_brncd" hierarchy="Text_brncd" escape="false" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:12px; width:32px; height:24px;" id="brncd" indicator="발행점" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" ninemode="0" orgid="brncd" hierarchy="brncd" ref="data:dma_KFL01011000.brncd"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:210px; top:12px; width:450px; height:24px; align:middleleft; text-align:middleleft;" id="Desc97" tabIndex="3" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;폐쇄점에서&amp;nbsp;발행된&amp;nbsp;수표에&amp;nbsp;대한&amp;nbsp;정정&amp;nbsp;및&amp;nbsp;기산일거래시&amp;nbsp;입력(통합점만&amp;nbsp;가능)" orgid="Desc97" hierarchy="Desc97" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:48px; top:42px; width:114px; height:24px; color:rgb(0,0,0);" id="Text_idtrek" tabIndex="4" linespace="2" label="기&amp;nbsp;산&amp;nbsp;일&amp;nbsp;(&amp;nbsp;발행일&amp;nbsp;)" orgid="Text_idtrek" hierarchy="Text_idtrek" escape="false" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:168px; top:42px; width:102px; height:24px;" id="idtrek" indicator="기산일" tooltip="발행정정시 거래일자를 당일이 아닌 소급하여 일자를 적용시 사용한다." tabIndex="5" maxlength="10" charcasing="0" validationtype="유효날짜검증" ninemode="0" showcalendarbutton="1" ev:onviewchange="scwin.idtrek_OnValidate" orgid="idtrek" hierarchy="idtrek" displayFormat="yyyy/MM/dd" ref="data:dma_KFL01011000.idtrek"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:276px; top:42px; width:251px; height:24px; align:middleleft; text-align:middleleft; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc98" tabIndex="6" imagealign="MiddleLeft" label="*기산일발행&amp;nbsp;혹은&amp;nbsp;발행정정시&amp;nbsp;입력&amp;nbsp;필요함" orgid="Desc98" hierarchy="Desc98" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:136px; height:24px; color:rgb(0,0,0);" id="Text_dpinInsnEcludYn" tabIndex="7" linespace="2" label="예금보험부보제외여부" orgid="Text_dpinInsnEcludYn" hierarchy="Text_dpinInsnEcludYn" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:168px; top:72px; width:103px; height:24px; color:rgb(0,0,0);" id="dpinInsnEcludYn" indicator="예금보험부보제외여부" tabIndex="8" charcasing="0" index="0" items="1=부보제외;" appearance="minimal" orgid="dpinInsnEcludYn" hierarchy="dpinInsnEcludYn" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFL01011000.dpinInsnEcludYn">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[부보제외]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:36px; top:102px; width:121px; height:24px; color:rgb(0,0,0);" id="Text_gnralTketIssuWay" tabIndex="9" linespace="2" label="일&amp;nbsp;반&amp;nbsp;권&amp;nbsp;발&amp;nbsp;행&amp;nbsp;방&amp;nbsp;법" orgid="Text_gnralTketIssuWay" hierarchy="Text_gnralTketIssuWay" escape="false" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:102px; width:11px; height:24px;" id="gnralTketIssuWay" indicator="일반권발행방법" tabIndex="10" allowChar="0-9" validateOnInput="true" editFormat="9" maxlength="1" charcasing="0" ninemode="0" orgid="gnralTketIssuWay" hierarchy="gnralTketIssuWay" ref="data:dma_KFL01011000.gnralTketIssuWay"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:186px; top:102px; width:133px; height:24px; align:middleleft; text-align:middleleft;" id="Desc99" tabIndex="11" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;1&amp;nbsp;:&amp;nbsp;수표발행기&amp;nbsp;사용" orgid="Desc99" hierarchy="Desc99" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+			</xf:group>
+			<w2:pageFrame ctype="Panel" style="position:absolute; left:12px; top:702px; width:1056px; height:246px;" id="PanelKYC" tabIndex="6" container="1" joinscreenno="KAA06762A01" dynamicmove="1" orgid="PanelKYC" hierarchy="PanelKYC"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:954px; width:1056px; height:108px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="7" id="GroupBox6" tabIndex="7" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox6" hierarchy="GroupBox6">
+				<w2:textbox ctype="Text" style="position:absolute; left:48px; top:42px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_cnclCorrcDstic" tabIndex="1" label="거래취소정정구분" orgid="Text_cnclCorrcDstic" hierarchy="Text_cnclCorrcDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:168px; top:42px; width:75px; height:24px; color:rgb(0,0,0);" id="cnclDstic" indicator="거래취소정정구분" tabIndex="2" initvalue="0" index="0" items="0=정상;9=취소;8=정정;" appearance="minimal" ev:onchange="scwin.cnclDstic_OnItemChanged" orgid="cnclDstic" hierarchy="cnclDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFL01011000.cnclDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[정상]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[취소]]></xf:label>
+							<xf:value><![CDATA[9]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[정정]]></xf:label>
+							<xf:value><![CDATA[8]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:560px; top:42px; width:136px; height:24px; color:rgb(0,0,0);" id="Text_tranCnclCorrcResnDstic" tabIndex="3" label="거래취소정정사유구분" orgid="Text_tranCnclCorrcResnDstic" hierarchy="Text_tranCnclCorrcResnDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:702px; top:42px; width:52px; height:24px; color:rgb(0,0,0);" id="CnclResnDstic" indicator="거래취소정정사유구분" tabIndex="4" disabled="true" keyLength="2" initvalue="00" datasource="1" instancefile="104322000" index="0" appearance="minimal" ev:onchange="scwin.CnclResnDstic_OnItemChanged" orgid="CnclResnDstic" hierarchy="CnclResnDstic" ref="data:dma_KFL01011000.CnclResnDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:586px; top:72px; width:110px; height:24px; color:rgb(0,0,0); display:none;" id="Text_CnclResnCtnt" tabIndex="5" label="기타오류사유내용" orgid="Text_CnclResnCtnt" hierarchy="Text_CnclResnCtnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:702px; top:72px; width:158px; height:24px; display:none;" id="CnclResnCtnt" indicator="기타오류사유내용" tabIndex="6" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" ninemode="0" orgid="CnclResnCtnt" hierarchy="CnclResnCtnt" ref="data:dma_KFL01011000.CnclResnCtnt"/>
+				<w2:textbox id="title_GroupBox6" class="title_h2" label="일부취소시&amp;nbsp;입력항목" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:1134px; width:1056px; height:73px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="8" id="GroupBox7" tabIndex="8" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox7" hierarchy="GroupBox7">
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:12px; top:36px; width:83px; height:24px; color:rgb(0,0,0);" id="serchNoDstic" indicator="검색번호구분" tabIndex="1" disabled="true" keyLength="12" dropdownstyle="DropDownList" displayMode="label" inittype="Value" initvalue="고객번호" index="0" items="1=고객번호;2=KB-PIN;" appearance="minimal" ev:onchange="scwin.serchNoDstic_OnItemChanged" orgid="serchNoDstic" hierarchy="serchNoDstic" selectedIndex="0" ref="data:dtm_component.serchNoDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[고객번호]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB-PIN]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:414px; top:36px; width:81px; height:24px; display:none;" id="CustIdnfr" indicator="고객식별자" tabIndex="2" editFormat="99999-99999" maxlength="11" placeholder="고객식별자" ninemode="0" orgid="CustIdnfr" hierarchy="CustIdnfr" ref="data:dma_KFL01011000.CustIdnfr"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:534px; top:36px; width:39px; height:24px; display:none;" id="CustMgtNo" indicator="고객관리번호" tabIndex="3" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" placeholder="관리번호" ninemode="0" orgid="CustMgtNo" hierarchy="CustMgtNo" ref="data:dma_KFL01011000.CustMgtNo"/>
+				<w2:textbox id="title_GroupBox7" class="title_h2" label="숨김"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KJM06704000.scn"  meta_screenId="KJM06704000" meta_screenName="통합입지급 정리" meta_desc="" meta_author="S012017(최석호)">
+		<w2:type craft="true" craftSrc="/xml/KJM06704000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KJM0470441" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KJM0470441_INPUT":{"@id":"dma_KJM0470441_INPUT","mgtNo":"mgtNo","arngNo":"arngNo"}},"target":{"dma_KJM0470441_OUTPUT_screen___KJM06704000":{"@id":"dma_KJM0470441_OUTPUT_screen___KJM06704000","mgtNo":"mgtNo","arngNo":"arngNo","occurInfo__acctgDstic":"occurInfo__acctgDstic","occurInfo__intgraTiaccCd":"occurInfo__intgraTiaccCd","occurInfo__tiaccName":"occurInfo__tiaccName","occurInfo__acitmClsfiCd":"occurInfo__acitmClsfiCd","occurInfo__acitmClsfiName":"occurInfo__acitmClsfiName","occurInfo__cmbnCd":"occurInfo__cmbnCd","occurInfo__cmbnCdName":"occurInfo__cmbnCdName","occurInfo__fundCd":"occurInfo__fundCd","occurInfo__fundCdName":"occurInfo__fundCdName","occurInfo__occurDte":"occurInfo__occurDte","occurInfo__acitmPrcssDd":"occurInfo__acitmPrcssDd","occurInfo__arngDstic":"occurInfo__arngDstic","occurInfo__occurAmt":"occurInfo__occurAmt","occurInfo__uncrBal":"occurInfo__uncrBal","occurInfo__tranResnCtnt1":"occurInfo__tranResnCtnt1","occurInfo__sclqDd":"occurInfo__sclqDd","occurInfo__arngWayCtnt":"occurInfo__arngWayCtnt","arngInfo__inotTranStusDstic":"arngInfo__inotTranStusDstic","arngInfo__arngPrcssStusDstic":"arngInfo__arngPrcssStusDstic","arngInfo__rcdrwDstic":"arngInfo__rcdrwDstic","arngInfo__clsngAfTranYn":"arngInfo__clsngAfTranYn","arngInfo__cupldTranDstic":"arngInfo__cupldTranDstic","arngInfo__tranYmd":"arngInfo__tranYmd","arngInfo__tranAmtDstcd1":"arngInfo__tranAmtDstcd1","arngInfo__tranAmt1":"arngInfo__tranAmt1","arngInfo__tranAmtDstcd2":"arngInfo__tranAmtDstcd2","arngInfo__tranAmt2":"arngInfo__tranAmt2","arngInfo__tranAmtSum":"arngInfo__tranAmtSum","arngInfo__tranResnCtnt":"arngInfo__tranResnCtnt","arngInfo__dtailTranResn":"arngInfo__dtailTranResn","arngInfo__tranDte":"arngInfo__tranDte","arngInfo__tranHMS":"arngInfo__tranHMS","arngInfo__tranEmpid":"arngInfo__tranEmpid","arngInfo__tranEmnm":"arngInfo__tranEmnm","cupldPrcssInfo__ondmdCupldInfo__ondmd":"cupldPrcssInfo__ondmdCupldInfo__ondmd","cupldPrcssInfo__ondmdCupldInfo__trsaccAcno":"cupldPrcssInfo__ondmdCupldInfo__trsaccAcno","cupldPrcssInfo__ondmdCupldInfo__dpstrName":"cupldPrcssInfo__ondmdCupldInfo__dpstrName","cupldPrcssInfo__ondmdCupldInfo__reqnm":"cupldPrcssInfo__ondmdCupldInfo__reqnm","cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex","cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd","cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2","etcInfo__slipNo":"etcInfo__slipNo","etcInfo__tranCnclCorrcResnCd":"etcInfo__tranCnclCorrcResnCd","etcInfo__orglArngNo":"etcInfo__orglArngNo","etcInfo__spvsrAthorDstic":"etcInfo__spvsrAthorDstic","etcInfo__spvsrAthorResn":"etcInfo__spvsrAthorResn","etcInfo__fracAthorBrncd":"etcInfo__fracAthorBrncd","etcInfo__fracAthorBrnName":"etcInfo__fracAthorBrnName","etcInfo__fracAthorEmpid":"etcInfo__fracAthorEmpid","etcInfo__fracAthorEmnm":"etcInfo__fracAthorEmnm","etcInfo__plAthorBrncd":"etcInfo__plAthorBrncd","etcInfo__plAthorBrnName":"etcInfo__plAthorBrnName","etcInfo__plAthorEmpid":"etcInfo__plAthorEmpid","etcInfo__plAthorEmnm":"etcInfo__plAthorEmnm","etcInfo__ogtranYMS":"etcInfo__ogtranYMS","etcInfo__intgraTelgmUniqno":"etcInfo__intgraTelgmUniqno","etcInfo__cnclRstrScop":"etcInfo__cnclRstrScop","occurInfo__dtailTranResn1":"occurInfo__dtailTranResn1","cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo","cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd","etcInfo__spvsrAthorResnName":"etcInfo__spvsrAthorResnName"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJM0670461" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KJM0670461_INPUT":{"@id":"dma_KJM0670461_INPUT","mgtNo":"mgtNo","arngInfo__tranAmtDstcd1":"arngInfo__tranAmtDstcd1","arngInfo__tranAmt1":"arngInfo__tranAmt1","arngInfo__tranAmtDstcd2":"arngInfo__tranAmtDstcd2","arngInfo__tranAmt2":"arngInfo__tranAmt2","arngInfo__tranAmtSum":"arngInfo__tranAmtSum","arngInfo__tranResnCtnt":"arngInfo__tranResnCtnt","arngInfo__dtailTranResn":"arngInfo__dtailTranResn","cupldPrcssInfo__ondmdCupldInfo__ondmd":"cupldPrcssInfo__ondmdCupldInfo__ondmd","cupldPrcssInfo__ondmdCupldInfo__trsaccAcno":"cupldPrcssInfo__ondmdCupldInfo__trsaccAcno","cupldPrcssInfo__ondmdCupldInfo__reqnm":"cupldPrcssInfo__ondmdCupldInfo__reqnm","cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex","cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2"}},"target":{"dma_KJM0670461_OUTPUT_screen___KJM06704000":{"@id":"dma_KJM0670461_OUTPUT_screen___KJM06704000","mgtNo":"mgtNo","arngNo":"arngNo","occurInfo__acctgDstic":"occurInfo__acctgDstic","occurInfo__intgraTiaccCd":"occurInfo__intgraTiaccCd","occurInfo__tiaccName":"occurInfo__tiaccName","occurInfo__acitmClsfiCd":"occurInfo__acitmClsfiCd","occurInfo__acitmClsfiName":"occurInfo__acitmClsfiName","occurInfo__cmbnCd":"occurInfo__cmbnCd","occurInfo__cmbnCdName":"occurInfo__cmbnCdName","occurInfo__fundCd":"occurInfo__fundCd","occurInfo__fundCdName":"occurInfo__fundCdName","occurInfo__occurDte":"occurInfo__occurDte","occurInfo__acitmPrcssDd":"occurInfo__acitmPrcssDd","occurInfo__arngDstic":"occurInfo__arngDstic","occurInfo__occurAmt":"occurInfo__occurAmt","occurInfo__uncrBal":"occurInfo__uncrBal","occurInfo__tranResnCtnt1":"occurInfo__tranResnCtnt1","occurInfo__sclqDd":"occurInfo__sclqDd","occurInfo__arngWayCtnt":"occurInfo__arngWayCtnt","arngInfo__inotTranStusDstic":"arngInfo__inotTranStusDstic","arngInfo__arngPrcssStusDstic":"arngInfo__arngPrcssStusDstic","arngInfo__rcdrwDstic":"arngInfo__rcdrwDstic","arngInfo__clsngAfTranYn":"arngInfo__clsngAfTranYn","arngInfo__cupldTranDstic":"arngInfo__cupldTranDstic","arngInfo__tranYmd":"arngInfo__tranYmd","arngInfo__tranResnCtnt":"arngInfo__tranResnCtnt","arngInfo__dtailTranResn":"arngInfo__dtailTranResn","arngInfo__tranDte":"arngInfo__tranDte","arngInfo__tranHMS":"arngInfo__tranHMS","arngInfo__tranEmpid":"arngInfo__tranEmpid","arngInfo__tranEmnm":"arngInfo__tranEmnm","cupldPrcssInfo__ondmdCupldInfo__ondmd":"cupldPrcssInfo__ondmdCupldInfo__ondmd","cupldPrcssInfo__ondmdCupldInfo__trsaccAcno":"cupldPrcssInfo__ondmdCupldInfo__trsaccAcno","cupldPrcssInfo__ondmdCupldInfo__dpstrName":"cupldPrcssInfo__ondmdCupldInfo__dpstrName","cupldPrcssInfo__ondmdCupldInfo__reqnm":"cupldPrcssInfo__ondmdCupldInfo__reqnm","cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex","cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd","cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2","etcInfo__slipNo":"etcInfo__slipNo","etcInfo__tranCnclCorrcResnCd":"etcInfo__tranCnclCorrcResnCd","etcInfo__orglArngNo":"etcInfo__orglArngNo","etcInfo__spvsrAthorDstic":"etcInfo__spvsrAthorDstic","etcInfo__spvsrAthorResn":"etcInfo__spvsrAthorResn","etcInfo__fracAthorBrncd":"etcInfo__fracAthorBrncd","etcInfo__fracAthorBrnName":"etcInfo__fracAthorBrnName","etcInfo__fracAthorEmpid":"etcInfo__fracAthorEmpid","etcInfo__fracAthorEmnm":"etcInfo__fracAthorEmnm","etcInfo__plAthorBrncd":"etcInfo__plAthorBrncd","etcInfo__plAthorBrnName":"etcInfo__plAthorBrnName","etcInfo__plAthorEmpid":"etcInfo__plAthorEmpid","etcInfo__plAthorEmnm":"etcInfo__plAthorEmnm","ogtranYMS":"ogtranYMS","intgraTelgmUniqno":"intgraTelgmUniqno","cnclRstrScop":"cnclRstrScop","occurInfo__dtailTranResn1":"occurInfo__dtailTranResn1","cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno","cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo","cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd":"cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd","etcInfo__spvsrAthorResnName":"etcInfo__spvsrAthorResnName"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KHC0401041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJM0472041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM0470441_INPUT" TranClass="MCI" SvcCode="KJM" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mgtNo" length="16" CtrlId="mgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngNo" length="3" CtrlId="arngNo" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM0470441_OUTPUT_screen___KJM06704000" TranClass="MCI" SvcCode="KJM" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mgtNo" length="16" CtrlId="mgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngNo" length="3" CtrlId="arngNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acctgDstic" length="0" CtrlId="acctgDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="occurInfo__intgraTiaccCd" length="13" CtrlId="intgraTiaccCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__tiaccName" length="40" CtrlId="tiaccName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmClsfiCd" length="3" CtrlId="acitmClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmClsfiName" length="40" CtrlId="acitmClsfiName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__cmbnCd" length="3" CtrlId="cmbnCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__cmbnCdName" length="30" CtrlId="cmbnCdName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__fundCd" length="3" CtrlId="fundCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__fundCdName" length="30" CtrlId="fundCdName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__occurDte" length="8" CtrlId="occurDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmPrcssDd" length="8" CtrlId="acitmPrcssDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__arngDstic" length="0" CtrlId="arngDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="occurInfo__occurAmt" length="15" CtrlId="occurAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__uncrBal" length="15" CtrlId="uncrBal" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__tranResnCtnt1" length="90" CtrlId="tranResnCtnt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__sclqDd" length="8" CtrlId="sclqDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__arngWayCtnt" length="300" CtrlId="arngWayCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__inotTranStusDstic" length="0" CtrlId="inotTranStusDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__arngPrcssStusDstic" length="0" CtrlId="arngPrcssStusDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__rcdrwDstic" length="0" CtrlId="rcdrwDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__clsngAfTranYn" length="0" CtrlId="clsngAfTranYn" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__cupldTranDstic" length="0" CtrlId="cupldTranDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranYmd" length="8" CtrlId="tranYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtDstcd1" length="0" CtrlId="tranAmtDstcd1" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmt1" length="15" CtrlId="tranAmt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtDstcd2" length="0" CtrlId="tranAmtDstcd2" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmt2" length="15" CtrlId="tranAmt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtSum" length="15" CtrlId="tranAmtSum" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranResnCtnt" length="50" CtrlId="tranResnCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__dtailTranResn" length="100" CtrlId="dtailTranResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranDte" length="8" CtrlId="tranDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranHMS" length="6" CtrlId="tranHMS" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranEmpid" length="7" CtrlId="tranEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranEmnm" length="30" CtrlId="tranEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__ondmd" length="0" CtrlId="ondmd" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__trsaccAcno" length="14" CtrlId="trsaccAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__dpstrName" length="50" CtrlId="dpstrName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__reqnm" length="30" CtrlId="reqnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex" length="0" CtrlId="intnlrmtRvsex" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd" length="4" CtrlId="inwrBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName" length="30" CtrlId="inwrBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1" length="40" CtrlId="drblCtnt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2" length="40" CtrlId="drblCtnt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__slipNo" length="5" CtrlId="slipNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__tranCnclCorrcResnCd" length="0" CtrlId="tranCnclCorrcResnCd" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__orglArngNo" length="3" CtrlId="orglArngNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorDstic" length="0" CtrlId="spvsrAthorDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorResn" length="8" CtrlId="spvsrAthorResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorBrncd" length="4" CtrlId="fracAthorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorBrnName" length="30" CtrlId="fracAthorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorEmpid" length="7" CtrlId="fracAthorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorEmnm" length="30" CtrlId="fracAthorEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorBrncd" length="4" CtrlId="plAthorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorBrnName" length="30" CtrlId="plAthorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorEmpid" length="7" CtrlId="plAthorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorEmnm" length="30" CtrlId="plAthorEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__ogtranYMS" length="20" CtrlId="ogtranYMS" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__intgraTelgmUniqno" length="36" CtrlId="intgraTelgmUniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__cnclRstrScop" length="80" CtrlId="cnclRstrScop" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__dtailTranResn1" length="300" CtrlId="dtailTranResn1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno" length="20" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo" length="6" CtrlId="drblNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd" length="0" CtrlId="mnrcvBnkCd" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorResnName" length="30" CtrlId="spvsrAthorResnName" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM0670461_INPUT" TranClass="MCI" SvcCode="KJM" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mgtNo" length="16" CtrlId="mgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtDstcd1" length="0" CtrlId="tranAmtDstcd1" Type="Combo"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmt1" length="15" CtrlId="tranAmt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtDstcd2" length="0" CtrlId="tranAmtDstcd2" Type="Combo"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmt2" length="15" CtrlId="tranAmt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranAmtSum" length="15" CtrlId="tranAmtSum" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranResnCtnt" length="50" CtrlId="tranResnCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__dtailTranResn" length="100" CtrlId="dtailTranResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__ondmd" length="0" CtrlId="ondmd" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__trsaccAcno" length="14" CtrlId="trsaccAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__reqnm" length="30" CtrlId="reqnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex" length="0" CtrlId="intnlrmtRvsex" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd" length="4" CtrlId="inwrBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1" length="40" CtrlId="drblCtnt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2" length="40" CtrlId="drblCtnt2" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM0670461_OUTPUT_screen___KJM06704000" TranClass="MCI" SvcCode="KJM" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mgtNo" length="16" CtrlId="mgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngNo" length="3" CtrlId="arngNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acctgDstic" length="0" CtrlId="acctgDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="occurInfo__intgraTiaccCd" length="13" CtrlId="intgraTiaccCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__tiaccName" length="40" CtrlId="tiaccName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmClsfiCd" length="3" CtrlId="acitmClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmClsfiName" length="40" CtrlId="acitmClsfiName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__cmbnCd" length="3" CtrlId="cmbnCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__cmbnCdName" length="30" CtrlId="cmbnCdName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__fundCd" length="3" CtrlId="fundCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__fundCdName" length="30" CtrlId="fundCdName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__occurDte" length="8" CtrlId="occurDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__acitmPrcssDd" length="8" CtrlId="acitmPrcssDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__arngDstic" length="0" CtrlId="arngDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="occurInfo__occurAmt" length="15" CtrlId="occurAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__uncrBal" length="15" CtrlId="uncrBal" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__tranResnCtnt1" length="90" CtrlId="tranResnCtnt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__sclqDd" length="8" CtrlId="sclqDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__arngWayCtnt" length="300" CtrlId="arngWayCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__inotTranStusDstic" length="0" CtrlId="inotTranStusDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__arngPrcssStusDstic" length="0" CtrlId="arngPrcssStusDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__rcdrwDstic" length="0" CtrlId="rcdrwDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__clsngAfTranYn" length="0" CtrlId="clsngAfTranYn" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__cupldTranDstic" length="0" CtrlId="cupldTranDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranYmd" length="8" CtrlId="tranYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranResnCtnt" length="50" CtrlId="tranResnCtnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__dtailTranResn" length="100" CtrlId="dtailTranResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranDte" length="8" CtrlId="tranDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranHMS" length="6" CtrlId="tranHMS" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranEmpid" length="7" CtrlId="tranEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="arngInfo__tranEmnm" length="30" CtrlId="tranEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__ondmd" length="0" CtrlId="ondmd" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__trsaccAcno" length="14" CtrlId="trsaccAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__dpstrName" length="50" CtrlId="dpstrName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__ondmdCupldInfo__reqnm" length="30" CtrlId="reqnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__intnlrmtRvsex" length="0" CtrlId="intnlrmtRvsex" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrncd" length="4" CtrlId="inwrBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__inwrBrnName" length="30" CtrlId="inwrBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt1" length="40" CtrlId="drblCtnt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblCtnt2" length="40" CtrlId="drblCtnt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__slipNo" length="5" CtrlId="slipNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__tranCnclCorrcResnCd" length="0" CtrlId="tranCnclCorrcResnCd" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__orglArngNo" length="3" CtrlId="orglArngNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorDstic" length="0" CtrlId="spvsrAthorDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorResn" length="8" CtrlId="spvsrAthorResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorBrncd" length="4" CtrlId="fracAthorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorBrnName" length="30" CtrlId="fracAthorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorEmpid" length="7" CtrlId="fracAthorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__fracAthorEmnm" length="30" CtrlId="fracAthorEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorBrncd" length="4" CtrlId="plAthorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorBrnName" length="30" CtrlId="plAthorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorEmpid" length="7" CtrlId="plAthorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="etcInfo__plAthorEmnm" length="30" CtrlId="plAthorEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="ogtranYMS" length="20" CtrlId="ogtranYMS" Type="Edit"/>
+						<w2:key dataType="text" name="" id="intgraTelgmUniqno" length="36" CtrlId="intgraTelgmUniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cnclRstrScop" length="80" CtrlId="cnclRstrScop" Type="Edit"/>
+						<w2:key dataType="text" name="" id="occurInfo__dtailTranResn1" length="300" CtrlId="dtailTranResn1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__acno" length="20" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__drblNo" length="6" CtrlId="drblNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cupldPrcssInfo__intnlrmtRvsexCupldInfo__mnrcvBnkCd" length="0" CtrlId="mnrcvBnkCd" Type="char"/>
+						<w2:key dataType="text" name="" id="etcInfo__spvsrAthorResnName" length="30" CtrlId="spvsrAthorResnName" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KHC0401041_OUTPUT" TranClass="MCI" SvcCode="KHC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM0472041_OUTPUT" TranClass="MCI" SvcCode="KJM" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KJM06704000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[정리]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[취소]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJM06704000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mgtNo" length="16" CtrlId="mgtNo"/>
+						<w2:key dataType="text" name="" id="arngNo" length="3" CtrlId="arngNo"/>
+						<w2:key dataType="text" name="" id="acctgDstic" length="0" CtrlId="acctgDstic"/>
+						<w2:key dataType="text" name="" id="intgraTiaccCd" length="13" CtrlId="intgraTiaccCd"/>
+						<w2:key dataType="text" name="" id="tiaccName" length="40" CtrlId="tiaccName"/>
+						<w2:key dataType="text" name="" id="acitmClsfiCd" length="3" CtrlId="acitmClsfiCd"/>
+						<w2:key dataType="text" name="" id="acitmClsfiName" length="40" CtrlId="acitmClsfiName"/>
+						<w2:key dataType="text" name="" id="cmbnCd" length="3" CtrlId="cmbnCd"/>
+						<w2:key dataType="text" name="" id="cmbnCdName" length="30" CtrlId="cmbnCdName"/>
+						<w2:key dataType="text" name="" id="fundCd" length="3" CtrlId="fundCd"/>
+						<w2:key dataType="text" name="" id="fundCdName" length="30" CtrlId="fundCdName"/>
+						<w2:key dataType="text" name="" id="occurDte" length="8" CtrlId="occurDte"/>
+						<w2:key dataType="text" name="" id="acitmPrcssDd" length="8" CtrlId="acitmPrcssDd"/>
+						<w2:key dataType="text" name="" id="arngDstic" length="0" CtrlId="arngDstic"/>
+						<w2:key dataType="text" name="" id="occurAmt" length="15" CtrlId="occurAmt"/>
+						<w2:key dataType="text" name="" id="uncrBal" length="15" CtrlId="uncrBal"/>
+						<w2:key dataType="text" name="" id="tranResnCtnt1" length="90" CtrlId="tranResnCtnt1"/>
+						<w2:key dataType="text" name="" id="sclqDd" length="8" CtrlId="sclqDd"/>
+						<w2:key dataType="text" name="" id="arngWayCtnt" length="300" CtrlId="arngWayCtnt"/>
+						<w2:key dataType="text" name="" id="inotTranStusDstic" length="0" CtrlId="inotTranStusDstic"/>
+						<w2:key dataType="text" name="" id="arngPrcssStusDstic" length="0" CtrlId="arngPrcssStusDstic"/>
+						<w2:key dataType="text" name="" id="rcdrwDstic" length="0" CtrlId="rcdrwDstic"/>
+						<w2:key dataType="text" name="" id="clsngAfTranYn" length="0" CtrlId="clsngAfTranYn"/>
+						<w2:key dataType="text" name="" id="cupldTranDstic" length="0" CtrlId="cupldTranDstic"/>
+						<w2:key dataType="text" name="" id="tranYmd" length="8" CtrlId="tranYmd"/>
+						<w2:key dataType="text" name="" id="tranAmtDstcd1" length="0" CtrlId="tranAmtDstcd1"/>
+						<w2:key dataType="text" name="" id="tranAmt1" length="15" CtrlId="tranAmt1"/>
+						<w2:key dataType="text" name="" id="tranAmtDstcd2" length="0" CtrlId="tranAmtDstcd2"/>
+						<w2:key dataType="text" name="" id="tranAmt2" length="15" CtrlId="tranAmt2"/>
+						<w2:key dataType="text" name="" id="tranAmtSum" length="15" CtrlId="tranAmtSum"/>
+						<w2:key dataType="text" name="" id="tranResnCtnt" length="50" CtrlId="tranResnCtnt"/>
+						<w2:key dataType="text" name="" id="dtailTranResn" length="100" CtrlId="dtailTranResn"/>
+						<w2:key dataType="text" name="" id="tranDte" length="8" CtrlId="tranDte"/>
+						<w2:key dataType="text" name="" id="tranHMS" length="6" CtrlId="tranHMS"/>
+						<w2:key dataType="text" name="" id="tranEmpid" length="7" CtrlId="tranEmpid"/>
+						<w2:key dataType="text" name="" id="tranEmnm" length="30" CtrlId="tranEmnm"/>
+						<w2:key dataType="text" name="" id="ondmd" length="0" CtrlId="ondmd"/>
+						<w2:key dataType="text" name="" id="trsaccAcno" length="14" CtrlId="trsaccAcno"/>
+						<w2:key dataType="text" name="" id="dpstrName" length="50" CtrlId="dpstrName"/>
+						<w2:key dataType="text" name="" id="reqnm" length="30" CtrlId="reqnm"/>
+						<w2:key dataType="text" name="" id="intnlrmtRvsex" length="0" CtrlId="intnlrmtRvsex"/>
+						<w2:key dataType="text" name="" id="inwrBrncd" length="4" CtrlId="inwrBrncd"/>
+						<w2:key dataType="text" name="" id="inwrBrnName" length="30" CtrlId="inwrBrnName"/>
+						<w2:key dataType="text" name="" id="drblCtnt1" length="40" CtrlId="drblCtnt1"/>
+						<w2:key dataType="text" name="" id="drblCtnt2" length="40" CtrlId="drblCtnt2"/>
+						<w2:key dataType="text" name="" id="slipNo" length="5" CtrlId="slipNo"/>
+						<w2:key dataType="text" name="" id="tranCnclCorrcResnCd" length="0" CtrlId="tranCnclCorrcResnCd"/>
+						<w2:key dataType="text" name="" id="orglArngNo" length="3" CtrlId="orglArngNo"/>
+						<w2:key dataType="text" name="" id="spvsrAthorDstic" length="0" CtrlId="spvsrAthorDstic"/>
+						<w2:key dataType="text" name="" id="spvsrAthorResn" length="8" CtrlId="spvsrAthorResn"/>
+						<w2:key dataType="text" name="" id="fracAthorBrncd" length="4" CtrlId="fracAthorBrncd"/>
+						<w2:key dataType="text" name="" id="fracAthorBrnName" length="30" CtrlId="fracAthorBrnName"/>
+						<w2:key dataType="text" name="" id="fracAthorEmpid" length="7" CtrlId="fracAthorEmpid"/>
+						<w2:key dataType="text" name="" id="fracAthorEmnm" length="30" CtrlId="fracAthorEmnm"/>
+						<w2:key dataType="text" name="" id="plAthorBrncd" length="4" CtrlId="plAthorBrncd"/>
+						<w2:key dataType="text" name="" id="plAthorBrnName" length="30" CtrlId="plAthorBrnName"/>
+						<w2:key dataType="text" name="" id="plAthorEmpid" length="7" CtrlId="plAthorEmpid"/>
+						<w2:key dataType="text" name="" id="plAthorEmnm" length="30" CtrlId="plAthorEmnm"/>
+						<w2:key dataType="text" name="" id="ogtranYMS" length="20" CtrlId="ogtranYMS"/>
+						<w2:key dataType="text" name="" id="intgraTelgmUniqno" length="36" CtrlId="intgraTelgmUniqno"/>
+						<w2:key dataType="text" name="" id="cnclRstrScop" length="80" CtrlId="cnclRstrScop"/>
+						<w2:key dataType="text" name="" id="dtailTranResn1" length="300" CtrlId="dtailTranResn1"/>
+						<w2:key dataType="text" name="" id="acno" length="20" CtrlId="acno"/>
+						<w2:key dataType="text" name="" id="drblNo" length="6" CtrlId="drblNo"/>
+						<w2:key dataType="text" name="" id="mnrcvBnkCd" length="0" CtrlId="mnrcvBnkCd"/>
+						<w2:key dataType="text" name="" id="spvsrAthorResnName" length="30" CtrlId="spvsrAthorResnName"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {}; /*  조회 버튼 클릭 */
+scwin.Button3_OnClick = async function(e) {
+    $c.iz.tran.setTranID("KJM0470441");
+    await $c.iz.tran.ASend();
+    tranResnCtnt.setMandatory(true); //거래사유 입력 필수
+};
+
+scwin.OnEndTran = function() {
+    if ($c.iz._tran.bError == true) return;
+    if ($c.iz._tran.tranId == "KJM0470441") {
+        /* 관리번호로 조회 */
+
+        if ($c.iz._tran.bError == false) {
+            if (acitmPrcssDd.getValue() != "") {
+                $c.iz.data.commonButtonEnable(0, true); //정리 버튼 활성화
+                $c.iz.data.commonButtonEnable(1, true); //취소 버튼 활성화					
+            }
+            scwin.intgraTiaccCd_chk(); //통합계정과목기준 입지급 판정
+        }
+    }
+    if (arngNo.getValue() == "001") {
+        //발생내역
+        tranAmtDstcd1.setDisabled(false); //금액1
+        tranAmt1.setDisabled(false); //금액1
+        tranAmtDstcd2.setDisabled(false); //금액1
+        tranAmt2.setDisabled(false); //금액2
+        tranResnCtnt.setDisabled(false); //거래사유내용
+        dtailTranResn.setDisabled(false); //상세거래사유내용
+        if (inotStusDsticName1.getValue() == "입금") {
+            ondmd.setDisabled(false); //요구불 체크박스
+        } else {
+            ondmd.setDisabled(true); //요구불 체크박스
+        }
+        intnlrmtRvsex.setDisabled(false); //전금/역환 체크박스
+        $c.iz.data.commonButtonEnable(0, true); //정리 버튼 활성화
+        $c.iz.data.commonButtonEnable(1, false); //취소 버튼 비활성화					
+    } else {
+        tranAmtDstcd1.setDisabled(true); //금액1
+        tranAmt1.setDisabled(true); //금액1
+        tranAmtDstcd2.setDisabled(true); //금액1
+        tranAmt2.setDisabled(true); //금액2
+        tranResnCtnt.setDisabled(true); //거래사유내용
+        dtailTranResn.setDisabled(true); //상세거래사유내용
+        ondmd.setDisabled(true); //요구불 체크박스
+        intnlrmtRvsex.setDisabled(true); //전금/역환 체크박스
+        $c.iz.data.commonButtonEnable(0, false); //정리 버튼 비활성화
+        $c.iz.data.commonButtonEnable(1, true); //취소 버튼 비활성화					
+    }
+};
+
+/* 요구불 체크박스 클릭 */
+scwin.ondmd_OnItemChanged = function(info) {
+    if (ondmd.getValue() == "1") {
+        trsaccAcno.setDisabled(false);
+        Button4.setDisabled(false);
+        reqnm.setDisabled(false);
+        reqnm.setValue("KB " + $c.user.getUserProfile('userBzwkBrnName'));
+        trsaccAcno.setMandatory(true);
+        reqnm.setMandatory(true);
+        GroupBox8.setValue("");
+        GroupBox8.setDisabled(true);
+    } else if (ondmd.getValue() == 0) {
+        trsaccAcno.setDisabled(true);
+        Button4.setDisabled(true);
+        reqnm.setDisabled(true);
+        trsaccAcno.setValue("");
+        Button4.setValue("");
+        reqnm.setValue();
+        dpstrName.setValue();
+        trsaccAcno.setMandatory(false);
+        reqnm.setMandatory(false);
+        GroupBox8.setDisabled(false);
+    }
+};
+/* 요구불계좌번호 검증 -> 예금주명 가져오기 */
+scwin.trsaccAcno_OnValidate = function(info) {
+    $c.com.queryCustNameByAccount('1', trsaccAcno, '000', dpstrName);
+};
+/* 전금역환 체크박스 클릭 */
+scwin.intnlrmtRvsex_OnItemChanged = function(info) {
+    if (intnlrmtRvsex.getValue() == "1") {
+        /*ondmd.Value = "0";
+        ondmd_ControlEnble(false);
+        ondmd_ControlClear();
+        intnlrmtRvsex_ControlEnable(true);*/
+        GroupBox4.setValue("");
+        GroupBox4.setDisabled(true);
+        inwrBrncd.setDisabled(false);
+        Button5.setDisabled(false);
+        mnrcvBnkCd.setDisabled(false);
+        acno.setDisabled(false);
+        drblCtnt1.setDisabled(false);
+        drblCtnt2.setDisabled(false);
+        inwrBrncd.setMandatory(true);
+        drblCtnt1.setMandatory(true);
+    } else if (intnlrmtRvsex.getValue() == 0) {
+        GroupBox4.setDisabled(false);
+        inwrBrncd.setDisabled(true);
+        Button5.setDisabled(true);
+        mnrcvBnkCd.setDisabled(true);
+        acno.setDisabled(true);
+        drblCtnt1.setDisabled(true);
+        drblCtnt2.setDisabled(true);
+        inwrBrncd.setValue("");
+        Button5.setValue("");
+        mnrcvBnkCd.clear();
+        acno.setValue();
+        drblCtnt1.setValue();
+        drblCtnt2.setValue();
+        inwrBrnName.setValue();
+        drblNo.setValue();
+        inwrBrncd.setMandatory(false);
+        drblCtnt1.setMandatory(false);
+    }
+};
+
+scwin.intnlrmtRvsex_ControlEnable = function(State) {
+    inwrBrncd.setDisabled(State);
+    mnrcvBnkCd.setDisabled(State);
+    acno.setDisabled(State);
+    drblCtnt1.setDisabled(State);
+    drblCtnt2.setDisabled(State);
+    inwrBrncd.setDisabled(State);
+};
+
+scwin.intnlrmtRvsex_ControlClear = function() {
+    inwrBrncd.setValue();
+    mnrcvBnkCd.clear();
+    drblNo.setValue();
+    acno.setValue();
+    drblCtnt1.setValue();
+    drblCtnt2.setValue();
+    inwrBrncd.setValue();
+    inwrBrnName.setValue();
+};
+
+scwin.ondmd_ControlEnble = function(State) {
+    Button4.setDisabled(State);
+    trsaccAcno.setDisabled(State);
+    reqnm.setDisabled(State);
+};
+
+scwin.ondmd_ControlClear = function() {
+    trsaccAcno.setValue();
+    dpstrName.setValue();
+    reqnm.setValue();
+};
+
+scwin.LinkText1_OnClick = function(e) {
+    //정리내역조회			KJM04706000	
+    //계정처리일(acitmPrcssDd) -> KJM04706000화면의
+    //조회시작일(inquryStartDd)과 조회종료일(inquryEndDd) 에 SETTING하여 화면 연동처리
+
+    Link.inquryStartDd = acitmPrcssDd.getValue();
+    Link.inquryEndDd = acitmPrcssDd.getValue();
+    Link.brncd = $c.user.getUserProfile('userBzwkBrncd');
+    $c.iz.screen.screenOpen("KJM04706000", "DATALINK");
+};
+
+scwin.LinkText2_OnClick = function(e) {
+    //기본원장내역조회			KJM04703000	
+    //발생일자(occurDte) -> KJM04703000화면의
+    //조회시작일(inquryStartDd)과 조회종료일(inquryEndDd) 에 SETTING하여 화면 연동처리
+
+    Link.inquryStartDd = occurDte.getValue();
+    Link.inquryEndDd = occurDte.getValue();
+    Link.brncd = mgtNo.getValue().substr(6, 4);
+    $c.iz.screen.screenOpen("KJM04703000", "DATALINK");
+};
+
+scwin.LinkText3_OnClick = function(e) {
+    //관리번호별정리내역			KJM04705000	
+    //관리번호(mgtNo) ->  KJM04705000화면의 관리번호(mgtNo)에 SET 하여 
+    //화면 연동처리
+
+    Link.mgtNo = mgtNo.getValue();
+    $c.iz.screen.screenOpen("KJM04705000", "DATALINK");
+};
+
+
+scwin.tranAmtSum_Fun = function() {
+    var strtranAmt1 = tranAmt1.getValue();
+    var strtranAmt2 = tranAmt2.getValue();
+    var strtranAmtSum = 0;
+    if (strtranAmt1 == "") {
+        strtranAmt1 = 0;
+    }
+    if (strtranAmt2 == "") {
+        strtranAmt2 = 0;
+    }
+    strtranAmtSum = parseInt(strtranAmt1) + parseInt(strtranAmt2);
+    tranAmtSum.setValue(strtranAmtSum);
+};
+
+scwin.tranAmt1_OnValidate = function(info) {
+    //금액1
+    scwin.tranAmtSum_Fun();
+};
+
+scwin.tranAmt2_OnValidate = function(info) {
+    //금액2
+    scwin.tranAmtSum_Fun();
+};
+
+scwin.Button4_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.popup("KJM06758001", "DATALINK");
+    var strtrsaccAcno = Link.trsaccAcno;
+    if (strtrsaccAcno != "" && typeof(strtrsaccAcno) != "undefined") {
+        trsaccAcno.setValue(strtrsaccAcno);
+    }
+};
+
+scwin.Button5_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.popup("KJI04811000", "DATALINK");
+    var strbrncd = Link.brncd;
+    var strbrnName = Link.brnName;
+    var strbrnHanglName = Link.brnHanglName;
+    if (strbrncd != "" && typeof(strbrncd) != "undefined") {
+        inwrBrncd.setValue(strbrncd);
+        inwrBrnName.setValue(strbrnHanglName);
+    }
+};
+
+scwin.inwrBrncd_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    $c.com.getCommonBrnName(inwrBrncd, inwrBrnName);
+};
+
+scwin.OnInitScreen = async function() {
+    //여기에 구현코드를 삽입하세요.
+    if (mgtNo.getValue() != "") {
+        $c.iz.tran.setTranID("KJM0470441");
+        await $c.iz.tran.ASend();
+        tranResnCtnt.setMandatory(true); //거래사유 입력 필수
+    }
+};
+/* 정리 버튼 */
+scwin.OnSendKey = async function() {
+    if (acctgDstic.getValue() == "") {
+        $c.iz.data.message("관리번호를 입력하여 조회를 먼저 한후 거래하시기 바랍니다.");
+        return;
+    }
+    if (arngNo.getValue() != "001") {
+        $c.iz.data.message("관리번호옆 정리번호에 공란(또는 001)을 입력하여 조회를 먼저 한후 거래하시기 바랍니다.");
+        return;
+    }
+    if (tranAmtSum.getValue() == 0) {
+        $c.iz.data.message("정리할 금액을 입력하세요. ");
+        tranAmtDstcd1.focus();
+        return;
+    }
+    if (tranResnCtnt.getValue() == "") {
+        $c.iz.data.message("거래사유를 입력하세요. ");
+        tranResnCtnt.focus();
+        return;
+    }
+    $c.iz.tran.setTranID("KJM0670461");
+    await $c.iz.tran.ASend();
+};
+/* (정리)취소 버튼 */
+scwin.OnSendKey2 = function() {
+    //1. 취소버튼을 누르면 KJM04701001화면을 호출한다
+    //2. corrcCnclDstic 에 '9'를 set 한다.
+    //3. 이체계좌번호(trsaccAcno) 또는 타발점코드(inwrBrncd)에 값이없으면, KJM04701001화면의 연동유무(cupldEonot)에 '0'을 있으면 '1'을 set한다
+    //4. 거래일자(tranDte) 를 KJM04701001화면의 거래일자(tranDte) 에 set 한다.
+    //5. 거래시각(tranHMS)을 KJM04701001화면의 거래시각(tranHMS)에 set 한다.
+    //6. 부점코드(brncd) 를 KJM04701001 화면의 거래부점(trbrn)에 set 한다. 
+    //7. 관리번호(mgtNo)를 KJM04701001 화면의 관리번호(mgtNo)에 set 한다
+    //8. 정리번호(arngNo)를 KJM04701001 화면의 정리번호(arngNo)에 set 한다
+    //9. 직원번호(tranEmpid)를 KJM04701001 화면의 직원번호(tranEmpid)에 set 한다.
+    //10. KJM04701001의 거래유형(tranPtrn)은 거래금액합계(tranAmtSum)와 대체금액(trfamt)이 같으면 '대체'를 대체금액(trfamt)이 '0'이면 '현금'을 set 하고 
+    //     대체금액(trfamt)이 '0'이 아닌데 거래금액합계(tranAmtSum)와 대체금액(trfamt)이 다르면 '일부대체' 라고 표시한다.
+    //11. 거래금액합계(tranAmtSum) 을 KJM04701001화면의 거래금액(tranAmt)에 set 한다.
+    //12. KJM04701001화면의 거래코드(tranCd)는 'KJM0670461'를 set한다.
+    //13. 원거래일시(ogtranYMS) 은 KJM04701001 화면의 원거래일시(ogtranYMS) set한다.
+    //14. 통합전문고유번호(intgraTelgmUniqno)  은 KJM04701001 화면의 통합전문고유번호(intgraTelgmUniqno)set한다.
+    //15. 취소복원영역(cnclRstrScop)  은 KJM04701001 화면의 취소복원영역(cnclRstrScop) set한다.
+
+    if (acctgDstic.getValue() == "") {
+        $c.iz.data.message("관리번호를 입력하여 조회를 먼저 한후 거래하시기 바랍니다.");
+        return;
+    }
+    if (arngNo.getValue() == "001" || tranYmd.getValue() == "") {
+        $c.iz.data.message("발생거래는 취소대상 거래가 아닙니다. 관리번호옆 정리번호를 입력하여 조회를 먼저 한후 거래하시기 바랍니다.");
+        mgtNo.focus();
+        return;
+    }
+    if (orglArngNo.getValue() != "000") {
+        $c.iz.data.message("해당 거래는 이미 취소된 거래입니다. 관리번호별정리내역조회(04-73-009)로 확인하시기 바랍니다.");
+        return;
+    }
+    if (tranDte.getValue() != $c.user.getUserProfile('tranBaseYmd')) {
+        $c.iz.data.message("취소거래는 당일 발생분만 가능합니다.");
+        return;
+    }
+    Link.corrcCnclDstic = "9";
+    if ($c.iz.data.trim(trsaccAcno.getValue()) == "" && $c.iz.data.trim(inwrBrncd.getValue()) == "") {
+        Link.cupldEonot = "0";
+    } else {
+        Link.cupldEonot = "1";
+    }
+    Link.tranDte = tranDte.getValue();
+    Link.tranHMS = tranHMS.getValue();
+    Link.trbrn = $c.user.getUserProfile('userBzwkBrncd');
+    Link.mgtNo = mgtNo.getValue();
+    Link.arngNo = arngNo.getValue();
+    Link.empid = tranEmpid.getValue();
+    var vtrfamt = 0; //대체금액
+
+    if (tranAmtDstcd1.getValue() == "09") {
+        //금액구분1:09-대체
+        vtrfamt = Number(tranAmt1.getValue());
+    }
+    if (tranAmtDstcd2.getValue() == "09") {
+        //금액구분2:09-대체
+        vtrfamt = Number(vtrfamt) + Number(tranAmt2.getValue());
+    }
+    if (vtrfamt == 0) {
+        Link.tranPtrn = "현금";
+    } else {
+        if (tranAmtSum.getValue() == vtrfamt) {
+            Link.tranPtrn = "대체";
+        } else {
+            Link.tranPtrn = "일부대체";
+        }
+    }
+    Link.tranAmt = tranAmtSum.getValue();
+    Link.tranCd = "KJM0670461";
+    Link.ogtranYMS = ogtranYMS.getValue();
+    Link.intgraTelgmUniqno = intgraTelgmUniqno.getValue();
+    Link.cnclRstrScop = cnclRstrScop.getValue();
+    $c.iz.screen.popup("KJM04701001", "DATALINK");
+};
+
+scwin.mgtNo_OnValidate = function(info) {
+    //관리번호
+    $c.iz.data.commonButtonEnable(0, false); //정리 버튼 활성화
+    $c.iz.data.commonButtonEnable(1, false); //취소 버튼 활성화					
+    scwin.ClearScr(); //화면 클리어
+    inotStusDsticName1.setValue();
+    inotStusDsticName2.setValue();
+};
+
+scwin.arngNo_OnValidate = function(info) {
+    var varngNo = arngNo.getValue();
+    if (arngNo.getValue().length == 2) {
+        varngNo = "0" + arngNo.getValue();
+    } else if (arngNo.getValue().length == 1) {
+        varngNo = "00" + arngNo.getValue();
+    }
+    arngNo.setValue(varngNo);
+    scwin.ClearScr(); //화면 클리어
+    inotStusDsticName1.setValue();
+    inotStusDsticName2.setValue();
+};
+
+scwin.ClearScr = function() {
+    //화면초기화
+    GroupBox2.setValue("");
+    GroupBox6.setValue("");
+    GroupBox3.setValue("");
+    GroupBox7.setValue("");
+    GroupBox4.setValue("");
+    GroupBox8.setValue("");
+    GroupBox5.setValue("");
+    ogtranYMS.setValue("");
+    intgraTelgmUniqno.setValue("");
+    cnclRstrScop.setValue("");
+    dtailTranResn.setValue("");
+    mnrcvBnkCd.setValue("");
+    acno.setValue("");
+    drblNo.setValue("");
+    spvsrAthorResnName.setValue("");
+    ondmd.setValue("0");
+    intnlrmtRvsex.setValue("0");
+    scwin.ondmd_OnItemChanged();
+    scwin.intnlrmtRvsex_OnItemChanged();
+};
+
+scwin.intgraTiaccCd_chk = function() {
+    //통합계정과목기준 입지급 판정
+    if (intgraTiaccCd.getValue() == "") return;
+    $c.iz.tran.setTranID("KJM0472041"); //계정과목검색
+    $c.iz.tran.setInFDData("KJM0472041", "inquryCndn/acctgDstic", acctgDstic.getValue()); //회계구분
+    $c.iz.tran.setInFDData("KJM0472041", "inquryCndn/bSISDstic", '0'); //BSIS구분:0-해당무
+    $c.iz.tran.setInFDData("KJM0472041", "inquryCndn/acitmSerchDstic", '2'); //계정검색구분:2-계정코드
+    $c.iz.tran.setInFDData("KJM0472041", "inquryCndn/acitmSerchName", intgraTiaccCd.getValue()); //계정검색명:계정과목코드
+    $c.iz.tran.setInFDData("KJM0472041", "inquryCndn/tranDstic", '2'); //거래구분
+    $c.iz.tran.WaitSend();
+    if ($c.iz._tran.tranId == "KJM0472041") {
+        if ($c.iz._tran.bError == false) {
+            var GridData = $c.iz.tran.getOutMultiAllData("screen", "indxSerch/dataBook");
+            var re = new RegExp("\x06\x05", "g");
+            var re2 = new RegExp("\x06", "g");
+            var comStr = GridData.replace(/\s/g, "").replace(re, ";").replace(re2, ":");
+            var arrGridbrnCd = comStr.split(":");
+            for (var i = 0; i < arrGridbrnCd.length; i++) {
+                if (i == 2) //계정분류코드
+                    var acitmDstic = arrGridbrnCd[i];
+            }
+        }
+    }
+    if (acitmDstic == "1" || acitmDstic == "6") {
+        //계정분류코드:1-자산,6-비용
+        inotStusDsticName1.setValue("출금");
+        inotStusDsticName2.setValue("입금");
+        if (arngNo.getValue() == "001") {
+            tranAmtDstcd1.SetCondition("00,09,91,93"); //발생이 출금계정임으로 정리는 입금거래입
+            tranAmtDstcd2.SetCondition("00,09,91,93");
+        }
+    } else {
+        inotStusDsticName1.setValue("입금");
+        inotStusDsticName2.setValue("출금");
+        if (arngNo.getValue() == "001") {
+            tranAmtDstcd1.SetCondition("00,09"); //발생이 입금계정임으로 정리는 출금거래임
+            tranAmtDstcd2.SetCondition("00,09");
+        }
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="통합입지급 정리" meta_screenId="KJM06704000" groupcocd="KB0" scncall="0673009" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:1080px;" screentype="AType" meta_author="KDM" meta_user="S012017(최석호)" meata_date="2009/05/13 15:18:44" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="2" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:12px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_mgtNo" tabIndex="1" label="관리번호" orgid="Text_mgtNo" hierarchy="Text_mgtNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:12px; width:137px; height:24px;" id="mgtNo" indicator="관리번호" tabIndex="2" dataType="text" editFormat="YYYY-MM-####-######" maxlength="19" mandatory="true" class="req" ninemode="0" ev:onviewchange="scwin.mgtNo_OnValidate" orgid="mgtNo" hierarchy="mgtNo" ref="data:dma_KJM06704000.mgtNo"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:281px; top:12px; width:25px; height:24px;" id="arngNo" indicator="정리번호" tabIndex="3" allowChar="0-9" validateOnInput="true" editFormat="###" maxlength="3" minlength="3" ninemode="0" ev:onviewchange="scwin.arngNo_OnValidate" orgid="arngNo" hierarchy="arngNo" ref="data:dma_KJM06704000.arngNo"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:312px; top:12px; width:60px; height:24px;" id="Button3" tabIndex="4" text="조회" type="button" class="btn_def1" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="Button3">
+					<xf:label><![CDATA[조회]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group id="" style="">
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:60px; width:48px; height:24px; text-align:center;" id="inotStusDsticName1" indicator="입출상태구분명1" tabIndex="2" disabled="true" editFormat="H(4)" maxlength="4" prefix="[" suffix="]" fixspace="1" ninemode="0" orgid="inotStusDsticName1" hierarchy="inotStusDsticName1"/>
+				<w2:textbox id="" label="]" style="position:absolute; left:167px; top:60px"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:60px; width:1056px; height:198px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox2" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_acctgDstic" tabIndex="1" label="회계구분" orgid="Text_acctgDstic" hierarchy="Text_acctgDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:42px; width:45px; height:24px; color:rgb(0,0,0);" id="acctgDstic" indicator="회계구분" tabIndex="2" disabled="true" datasource="1" instancefile="104163000" index="0" appearance="minimal" orgid="acctgDstic" hierarchy="acctgDstic" ref="data:dma_KJM06704000.acctgDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:72px; width:95px; height:24px;" id="intgraTiaccCd" indicator="통합계정과목코드" tabIndex="3" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999" maxlength="13" minlength="13" ninemode="0" orgid="intgraTiaccCd" hierarchy="intgraTiaccCd" ref="data:dma_KJM06704000.intgraTiaccCd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:238px; top:72px; width:140px; height:24px;" id="tiaccName" indicator="계정과목명" tabIndex="4" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" minlength="40" imeMode="반자" ninemode="0" orgid="tiaccName" hierarchy="tiaccName" ref="data:dma_KJM06704000.tiaccName"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:72px; width:25px; height:24px;" id="acitmClsfiCd" indicator="계정분류코드" tabIndex="5" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="###" maxlength="3" minlength="3" ninemode="0" orgid="acitmClsfiCd" hierarchy="acitmClsfiCd" ref="data:dma_KJM06704000.acitmClsfiCd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:684px; top:72px; width:152px; height:24px;" id="acitmClsfiName" indicator="계정분류명" tabIndex="6" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" minlength="40" imeMode="반자" ninemode="0" orgid="acitmClsfiName" hierarchy="acitmClsfiName" ref="data:dma_KJM06704000.acitmClsfiName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_intgraTiaccCd" tabIndex="7" label="통합계정과목코드" orgid="Text_intgraTiaccCd" hierarchy="Text_intgraTiaccCd" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:564px; top:72px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_acitmClsfiCd" tabIndex="8" label="계정분류코드" orgid="Text_acitmClsfiCd" hierarchy="Text_acitmClsfiCd" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:102px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_cmbnCd" tabIndex="9" label="합동코드" orgid="Text_cmbnCd" hierarchy="Text_cmbnCd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:102px; width:25px; height:24px;" id="cmbnCd" indicator="합동코드" tabIndex="10" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="###" maxlength="3" minlength="3" ninemode="0" orgid="cmbnCd" hierarchy="cmbnCd" ref="data:dma_KJM06704000.cmbnCd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:170px; top:102px; width:208px; height:24px;" id="cmbnCdName" indicator="합동코드명" tabIndex="11" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="cmbnCdName" hierarchy="cmbnCdName" ref="data:dma_KJM06704000.cmbnCdName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:590px; top:102px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_fundCd" tabIndex="12" label="펀드코드" orgid="Text_fundCd" hierarchy="Text_fundCd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:102px; width:25px; height:24px;" id="fundCd" indicator="펀드코드" tabIndex="13" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="###" maxlength="3" minlength="3" ninemode="0" orgid="fundCd" hierarchy="fundCd" ref="data:dma_KJM06704000.fundCd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:684px; top:102px; width:152px; height:24px;" id="fundCdName" indicator="펀드코드명" tabIndex="14" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="fundCdName" hierarchy="fundCdName" ref="data:dma_KJM06704000.fundCdName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:132px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_occurDte" tabIndex="15" label="신규등록일" orgid="Text_occurDte" hierarchy="Text_occurDte" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:138px; top:132px; width:74px; height:24px;" id="occurDte" indicator="발생일자" tabIndex="16" disabled="true" maxlength="10" minlength="8" ninemode="0" orgid="occurDte" hierarchy="occurDte" displayFormat="yyyy/MM/dd" ref="data:dma_KJM06704000.occurDte"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:228px; top:132px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_acitmPrcssDd" tabIndex="17" label="계정처리일" orgid="Text_acitmPrcssDd" hierarchy="Text_acitmPrcssDd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:304px; top:132px; width:74px; height:24px;" id="acitmPrcssDd" indicator="계정처리일" tabIndex="18" disabled="true" maxlength="10" minlength="8" ninemode="0" orgid="acitmPrcssDd" hierarchy="acitmPrcssDd" displayFormat="yyyy/MM/dd" ref="data:dma_KJM06704000.acitmPrcssDd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:590px; top:132px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_arngDstic" tabIndex="19" label="정리구분" orgid="Text_arngDstic" hierarchy="Text_arngDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:654px; top:132px; width:45px; height:24px; color:rgb(0,0,0);" id="arngDstic" indicator="정리구분" tabIndex="20" disabled="true" datasource="1" instancefile="200005155" index="0" appearance="minimal" orgid="arngDstic" hierarchy="arngDstic" ref="data:dma_KJM06704000.arngDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:162px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_occurAmt" tabIndex="21" label="발생금액" orgid="Text_occurAmt" hierarchy="Text_occurAmt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:162px; width:137px; height:24px; text-align:right;" id="occurAmt" indicator="발생금액" tabIndex="22" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" minlength="15" ninemode="0" insertcomma="1" rightalign="1" orgid="occurAmt" hierarchy="occurAmt" ref="data:dma_KJM06704000.occurAmt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:577px; top:162px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_uncrBal" tabIndex="23" label="미정리잔액" orgid="Text_uncrBal" hierarchy="Text_uncrBal" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:162px; width:137px; height:24px; text-align:right;" id="uncrBal" indicator="미정리잔액" tabIndex="24" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" minlength="15" ninemode="0" insertcomma="1" rightalign="1" orgid="uncrBal" hierarchy="uncrBal" ref="data:dma_KJM06704000.uncrBal"/>
+				<w2:textbox id="title_GroupBox2" class="title_h2" label="발생정보"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:264px; width:1056px; height:108px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="4" id="GroupBox6" tabIndex="4" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox6" hierarchy="GroupBox6">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:12px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_tranResnCtnt" tabIndex="1" label="거래사유" orgid="Text_tranResnCtnt" hierarchy="Text_tranResnCtnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:12px; width:376px; height:24px;" id="tranResnCtnt1" indicator="거래사유내용" tabIndex="2" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="90" minlength="90" imeMode="반자" ninemode="0" orgid="tranResnCtnt1" hierarchy="tranResnCtnt1" ref="data:dma_KJM06704000.tranResnCtnt1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:42px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_sclqDd" tabIndex="3" label="정리예정일" orgid="Text_sclqDd" hierarchy="Text_sclqDd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:138px; top:42px; width:74px; height:24px;" id="sclqDd" indicator="정리예정일" tabIndex="4" disabled="true" maxlength="10" minlength="8" ninemode="0" orgid="sclqDd" hierarchy="sclqDd" displayFormat="yyyy/MM/dd" ref="data:dma_KJM06704000.sclqDd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_arngWayCtnt" tabIndex="5" label="정리방법" orgid="Text_arngWayCtnt" hierarchy="Text_arngWayCtnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:72px; width:604px; height:24px;" id="arngWayCtnt" indicator="정리방법내용" tabIndex="6" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="300" minlength="300" imeMode="반자" ninemode="0" orgid="arngWayCtnt" hierarchy="arngWayCtnt" ref="data:dma_KJM06704000.arngWayCtnt"/>
+			</xf:group>
+			<xf:group id="" style="">
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:378px; width:48px; height:24px; text-align:center;" id="inotStusDsticName2" indicator="입출상태구분명2" tabIndex="5" disabled="true" editFormat="H(4)" maxlength="4" prefix="[" suffix="]" fixspace="1" ninemode="0" orgid="inotStusDsticName2" hierarchy="inotStusDsticName2"/>
+				<w2:textbox id="" label="]" style="position:absolute; left:167px; top:378px"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:378px; width:1056px; height:198px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="6" id="GroupBox3" tabIndex="6" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_inotTranStusDstic" tabIndex="1" label="입출거래상태구분" orgid="Text_inotTranStusDstic" hierarchy="Text_inotTranStusDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:42px; width:52px; height:24px; color:rgb(0,0,0);" id="inotTranStusDstic" indicator="입출거래상태구분" tabIndex="2" disabled="true" keyLength="2" datasource="1" instancefile="200005153" index="0" appearance="minimal" orgid="inotTranStusDstic" hierarchy="inotTranStusDstic" ref="data:dma_KJM06704000.inotTranStusDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:538px; top:42px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_arngPrcssStusDstic" tabIndex="3" label="정리처리상태구분" orgid="Text_arngPrcssStusDstic" hierarchy="Text_arngPrcssStusDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:654px; top:42px; width:45px; height:24px; color:rgb(0,0,0);" id="arngPrcssStusDstic" indicator="정리처리상태구분" tabIndex="4" disabled="true" datasource="1" instancefile="200005152" index="0" appearance="minimal" orgid="arngPrcssStusDstic" hierarchy="arngPrcssStusDstic" ref="data:dma_KJM06704000.arngPrcssStusDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:63px; top:72px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_rcdrwDstic" tabIndex="5" label="입출금구분" orgid="Text_rcdrwDstic" hierarchy="Text_rcdrwDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:72px; width:45px; height:24px; color:rgb(0,0,0);" id="rcdrwDstic" indicator="입출금구분" tabIndex="6" disabled="true" datasource="1" instancefile="102667020" index="0" appearance="minimal" orgid="rcdrwDstic" hierarchy="rcdrwDstic" ref="data:dma_KJM06704000.rcdrwDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:551px; top:72px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_clsngAfTranYn" tabIndex="7" label="마감후거래여부" orgid="Text_clsngAfTranYn" hierarchy="Text_clsngAfTranYn" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:654px; top:72px; width:45px; height:24px; color:rgb(0,0,0);" id="clsngAfTranYn" indicator="마감후거래여부" tabIndex="8" disabled="true" datasource="1" instancefile="102132000" index="0" appearance="minimal" orgid="clsngAfTranYn" hierarchy="clsngAfTranYn" ref="data:dma_KJM06704000.clsngAfTranYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:102px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_cupldTranDstic" tabIndex="9" label="연동거래구분" orgid="Text_cupldTranDstic" hierarchy="Text_cupldTranDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:102px; width:45px; height:24px; color:rgb(0,0,0);" id="cupldTranDstic" indicator="연동거래구분" tabIndex="10" disabled="true" datasource="1" instancefile="102221000" index="0" appearance="minimal" orgid="cupldTranDstic" hierarchy="cupldTranDstic" ref="data:dma_KJM06704000.cupldTranDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:577px; top:102px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_tranYmd" tabIndex="11" label="거래년월일" orgid="Text_tranYmd" hierarchy="Text_tranYmd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:654px; top:102px; width:74px; height:24px;" id="tranYmd" indicator="거래년월일" tabIndex="12" disabled="true" maxlength="10" minlength="8" ninemode="0" orgid="tranYmd" hierarchy="tranYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KJM06704000.tranYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:94px; top:132px; width:40px; height:24px; color:rgb(0,0,0);" id="Text_amt1" tabIndex="13" linespace="2" label="금액1" orgid="Text_amt1" hierarchy="Text_amt1" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:132px; width:40px; height:24px; color:rgb(0,0,0);" id="tranAmtDstcd1" indicator="거래금액구분1" tabIndex="14" autosize="0" mandatory="true" class="req" keyLength="2" displayMode="value" charcasing="0" index="0" items="00=현금;09=대체;91=자기앞수표,타행송금영수증;93=국공채(이표),우편환증서,국고수표;" appearance="minimal" orgid="tranAmtDstcd1" hierarchy="tranAmtDstcd1" selectedIndex="0" ref="data:dma_KJM06704000.tranAmtDstcd1">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[09]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자기앞수표,타행송금영수증]]></xf:label>
+							<xf:value><![CDATA[91]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국공채(이표),우편환증서,국고수표]]></xf:label>
+							<xf:value><![CDATA[93]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:186px; top:132px; width:137px; height:24px; text-align:right;" id="tranAmt1" indicator="거래금액1" tabIndex="15" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" charcasing="0" mandatory="true" class="req" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.tranAmt1_OnValidate" orgid="tranAmt1" hierarchy="tranAmt1" ref="data:dma_KJM06704000.tranAmt1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:608px; top:132px; width:40px; height:24px; color:rgb(0,0,0);" id="Text_amt2" tabIndex="16" linespace="2" label="금액2" orgid="Text_amt2" hierarchy="Text_amt2" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:654px; top:132px; width:40px; height:24px; color:rgb(0,0,0);" id="tranAmtDstcd2" indicator="거래금액구분2" tabIndex="17" autosize="0" keyLength="2" displayMode="value" charcasing="0" index="0" items="00=현금;09=대체;91=자기앞수표,타행송금영수증;93=국공채(이표),우편환증서,국고수표;" appearance="minimal" orgid="tranAmtDstcd2" hierarchy="tranAmtDstcd2" selectedIndex="0" ref="data:dma_KJM06704000.tranAmtDstcd2">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[09]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자기앞수표,타행송금영수증]]></xf:label>
+							<xf:value><![CDATA[91]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국공채(이표),우편환증서,국고수표]]></xf:label>
+							<xf:value><![CDATA[93]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:699px; top:132px; width:137px; height:24px; text-align:right;" id="tranAmt2" indicator="거래금액2" tabIndex="18" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" charcasing="0" ninemode="0" insertcomma="1" rightalign="1" ev:onviewchange="scwin.tranAmt2_OnValidate" orgid="tranAmt2" hierarchy="tranAmt2" ref="data:dma_KJM06704000.tranAmt2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:162px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_tranAmtSum" tabIndex="19" label="거래금액합계" orgid="Text_tranAmtSum" hierarchy="Text_tranAmtSum" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:186px; top:162px; width:137px; height:24px; text-align:right;" id="tranAmtSum" indicator="거래금액합계" tabIndex="20" disabled="true" dataType="number" displayFormat="###,###,###,###,###" maxlength="19" minlength="1" ninemode="0" insertcomma="1" rightalign="1" orgid="tranAmtSum" hierarchy="tranAmtSum" ref="data:dma_KJM06704000.tranAmtSum"/>
+				<w2:textbox id="title_GroupBox3" class="title_h2" label="정리정보"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:582px; width:1056px; height:108px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="7" id="GroupBox7" tabIndex="7" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox7" hierarchy="GroupBox7">
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:12px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_tranResnCtnt_1" tabIndex="1" label="거래사유내용" orgid="Text_tranResnCtnt_1" hierarchy="Text_tranResnCtnt_1" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:12px; width:600px; height:24px;" id="tranResnCtnt" indicator="상세거래사유" tabIndex="2" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="50" minlength="4" imeMode="반자" ninemode="0" orgid="tranResnCtnt" hierarchy="tranResnCtnt" ref="data:dma_KJM06704000.tranResnCtnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_dtailTranResn_1" tabIndex="3" label="상세사유내용" orgid="Text_dtailTranResn_1" hierarchy="Text_dtailTranResn_1" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:42px; width:600px; height:24px;" id="dtailTranResn" indicator="상세거래사유" tabIndex="4" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="100" minlength="4" imeMode="반자" ninemode="0" orgid="dtailTranResn" hierarchy="dtailTranResn" ref="data:dma_KJM06704000.dtailTranResn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_tranDte" tabIndex="5" label="거래일시" orgid="Text_tranDte" hierarchy="Text_tranDte" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:138px; top:72px; width:74px; height:24px;" id="tranDte" indicator="거래일자" tabIndex="6" disabled="true" maxlength="10" minlength="8" ninemode="0" orgid="tranDte" hierarchy="tranDte" displayFormat="yyyy/MM/dd" ref="data:dma_KJM06704000.tranDte"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:218px; top:72px; width:60px; height:24px;" id="tranHMS" indicator="거래시각" tabIndex="7" disabled="true" dataType="text" editFormat="hh:mm:ss" maxlength="8" minlength="6" ninemode="0" orgid="tranHMS" hierarchy="tranHMS" ref="data:dma_KJM06704000.tranHMS"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:590px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_tranEmpid" tabIndex="8" label="거래직원" orgid="Text_tranEmpid" hierarchy="Text_tranEmpid" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:72px; width:53px; height:24px;" id="tranEmpid" indicator="거래직원번호" tabIndex="9" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" minlength="7" ninemode="0" orgid="tranEmpid" hierarchy="tranEmpid" ref="data:dma_KJM06704000.tranEmpid"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:714px; top:72px; width:104px; height:24px;" id="tranEmnm" indicator="거래직원명" tabIndex="10" autosize="0" disabled="true" editFormat="H(30)" maxlength="30" minlength="30" ninemode="0" orgid="tranEmnm" hierarchy="tranEmnm" ref="data:dma_KJM06704000.tranEmnm"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:696px; width:522px; height:138px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="8" id="GroupBox4" tabIndex="8" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox4" hierarchy="GroupBox4">
+				<xf:select ctype="CheckBox" style="position:absolute; left:54px; top:12px; width:96px; height:24px; color:rgb(0,0,0);" id="ondmd" indicator="요구불" tabIndex="1" OnValue="1" falseValue="0" autodup="1802465090" index="0" ev:onviewchange="scwin.ondmd_OnItemChanged" orgid="ondmd" hierarchy="ondmd" appearance="full" renderType="checkboxgroup" ref="data:dma_KJM06704000.ondmd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[요구불 입금]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</xf:select>
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_trsaccAcno" tabIndex="2" label="이체계좌번호" orgid="Text_trsaccAcno" hierarchy="Text_trsaccAcno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:42px; width:144px; height:24px;" id="trsaccAcno" indicator="이체계좌번호" tabIndex="3" autosize="0" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999" maxlength="14" minlength="5" ninemode="0" ev:onviewchange="scwin.trsaccAcno_OnValidate" orgid="trsaccAcno" hierarchy="trsaccAcno" ref="data:dma_KJM06704000.trsaccAcno"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:288px; top:42px; width:24px; height:24px; background-color:rgb(255,255,255);" id="Button4" tabIndex="4" disabled="true" imagealign="MiddleCenter" gradientendcolor="11954037" text="주요계좌번호" enableimage="icon_search.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button4_OnClick" orgid="Button4" hierarchy="Button4">
+					<xf:label><![CDATA[주요계좌번호]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_dpstrName" tabIndex="5" label="예금주명" orgid="Text_dpstrName" hierarchy="Text_dpstrName" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:72px; width:168px; height:24px;" id="dpstrName" indicator="예금주명" tabIndex="6" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="50" imeMode="반자" ninemode="0" orgid="dpstrName" hierarchy="dpstrName" ref="data:dma_KJM06704000.dpstrName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:102px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_reqnm" tabIndex="7" label="의뢰인명" orgid="Text_reqnm" hierarchy="Text_reqnm" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:102px; width:168px; height:24px;" id="reqnm" indicator="의뢰인명" tabIndex="8" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="2" imeMode="반자" ninemode="0" orgid="reqnm" hierarchy="reqnm" ref="data:dma_KJM06704000.reqnm"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:540px; top:696px; width:528px; height:138px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="9" id="GroupBox8" tabIndex="9" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox8" hierarchy="GroupBox8">
+				<xf:select ctype="CheckBox" style="position:absolute; left:54px; top:12px; width:85px; height:24px; color:rgb(0,0,0);" id="intnlrmtRvsex" indicator="전금역환" tabIndex="1" OnValue="1" falseValue="0" autodup="758264117" index="0" ev:onviewchange="scwin.intnlrmtRvsex_OnItemChanged" orgid="intnlrmtRvsex" hierarchy="intnlrmtRvsex" appearance="full" renderType="checkboxgroup" ref="data:dma_KJM06704000.intnlrmtRvsex">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[전금/역환]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</xf:select>
+				<w2:textbox ctype="Text" style="position:absolute; left:49px; top:42px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_inwrBrncd" tabIndex="2" label="타발점코드" orgid="Text_inwrBrncd" hierarchy="Text_inwrBrncd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:42px; width:32px; height:24px;" id="inwrBrncd" indicator="타발부점코드" tabIndex="3" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" ninemode="0" ev:onviewchange="scwin.inwrBrncd_OnValidate" orgid="inwrBrncd" hierarchy="inwrBrncd" ref="data:dma_KJM06704000.inwrBrncd"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:163px; top:42px; width:24px; height:24px; background-color:rgb(255,255,255);" id="Button5" tabIndex="4" disabled="true" imagealign="MiddleCenter" gradientendcolor="16777211" enableimage="icon_search.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button5_OnClick" orgid="Button5" hierarchy="Button5">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:192px; top:42px; width:168px; height:24px;" id="inwrBrnName" indicator="타발부점명" tabIndex="5" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" imeMode="반자" ninemode="0" orgid="inwrBrnName" hierarchy="inwrBrnName" ref="data:dma_KJM06704000.inwrBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:54px; top:72px; width:66px; height:24px; color:rgb(0,0,0);" id="Text_drblCtnt1" tabIndex="6" label="취결내용1" orgid="Text_drblCtnt1" hierarchy="Text_drblCtnt1" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:72px; width:228px; height:24px;" id="drblCtnt1" indicator="취결내용1" tabIndex="7" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" ninemode="0" orgid="drblCtnt1" hierarchy="drblCtnt1" ref="data:dma_KJM06704000.drblCtnt1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:54px; top:102px; width:66px; height:24px; color:rgb(0,0,0);" id="Text_drblCtnt2" tabIndex="8" label="취결내용2" orgid="Text_drblCtnt2" hierarchy="Text_drblCtnt2" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:102px; width:228px; height:24px;" id="drblCtnt2" indicator="취결내용2" tabIndex="9" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" ninemode="0" orgid="drblCtnt2" hierarchy="drblCtnt2" ref="data:dma_KJM06704000.drblCtnt2"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:840px; width:1056px; height:198px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="10" id="GroupBox5" tabIndex="10" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox5" hierarchy="GroupBox5">
+				<w2:textbox ctype="Text" style="position:absolute; left:76px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_slipNo" tabIndex="1" label="전표번호" orgid="Text_slipNo" hierarchy="Text_slipNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:42px; width:39px; height:24px;" id="slipNo" indicator="전표번호" tabIndex="2" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="#####" maxlength="5" minlength="5" ninemode="0" orgid="slipNo" hierarchy="slipNo" ref="data:dma_KJM06704000.slipNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_tranCnclCorrcResnCd" tabIndex="3" label="거래취소정정사유" orgid="Text_tranCnclCorrcResnCd" hierarchy="Text_tranCnclCorrcResnCd" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:72px; width:52px; height:24px; color:rgb(0,0,0);" id="tranCnclCorrcResnCd" indicator="거래취소정정사유코드" tabIndex="4" disabled="true" keyLength="2" datasource="1" instancefile="104322000" index="0" appearance="minimal" orgid="tranCnclCorrcResnCd" hierarchy="tranCnclCorrcResnCd" ref="data:dma_KJM06704000.tranCnclCorrcResnCd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:577px; top:72px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_orglArngNo" tabIndex="5" label="원정리번호" orgid="Text_orglArngNo" hierarchy="Text_orglArngNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:72px; width:25px; height:24px;" id="orglArngNo" indicator="원정리번호" tabIndex="6" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="###" maxlength="3" minlength="3" ninemode="0" orgid="orglArngNo" hierarchy="orglArngNo" ref="data:dma_KJM06704000.orglArngNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:102px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_spvsrAthorDstic" tabIndex="7" label="책임자승인구분" orgid="Text_spvsrAthorDstic" hierarchy="Text_spvsrAthorDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:138px; top:102px; width:45px; height:24px; color:rgb(0,0,0);" id="spvsrAthorDstic" indicator="책임자승인구분" tabIndex="8" disabled="true" datasource="1" instancefile="103350000" index="0" appearance="minimal" orgid="spvsrAthorDstic" hierarchy="spvsrAthorDstic" ref="data:dma_KJM06704000.spvsrAthorDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:102px; width:60px; height:24px;" id="spvsrAthorResn" indicator="책임자승인사유" tabIndex="9" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" minlength="4" ninemode="0" orgid="spvsrAthorResn" hierarchy="spvsrAthorResn" ref="data:dma_KJM06704000.spvsrAthorResn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:551px; top:102px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_spvsrAthorResn" tabIndex="10" label="책임자승인사유" orgid="Text_spvsrAthorResn" hierarchy="Text_spvsrAthorResn" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:132px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_fracAthorBrncd" tabIndex="11" label="단수승인부점코드" orgid="Text_fracAthorBrncd" hierarchy="Text_fracAthorBrncd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:132px; width:32px; height:24px;" id="fracAthorBrncd" indicator="단수승인부점코드" tabIndex="12" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="####" maxlength="4" minlength="4" ninemode="0" orgid="fracAthorBrncd" hierarchy="fracAthorBrncd" ref="data:dma_KJM06704000.fracAthorBrncd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:176px; top:132px; width:180px; height:24px;" id="fracAthorBrnName" indicator="단수승인부점명" tabIndex="13" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="fracAthorBrnName" hierarchy="fracAthorBrnName" ref="data:dma_KJM06704000.fracAthorBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:590px; top:132px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_fracAthorEmpid" tabIndex="14" label="직원번호" orgid="Text_fracAthorEmpid" hierarchy="Text_fracAthorEmpid" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:132px; width:53px; height:24px;" id="fracAthorEmpid" indicator="단수승인직원번호" tabIndex="15" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" minlength="7" ninemode="0" orgid="fracAthorEmpid" hierarchy="fracAthorEmpid" ref="data:dma_KJM06704000.fracAthorEmpid"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:714px; top:132px; width:172px; height:24px;" id="fracAthorEmnm" indicator="단수승인직원명" tabIndex="16" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="fracAthorEmnm" hierarchy="fracAthorEmnm" ref="data:dma_KJM06704000.fracAthorEmnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:162px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_plAthorBrncd" tabIndex="17" label="복수승인부점코드" orgid="Text_plAthorBrncd" hierarchy="Text_plAthorBrncd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:138px; top:162px; width:32px; height:24px;" id="plAthorBrncd" indicator="복수승인부점코드" tabIndex="18" disabled="true" allowChar="0-9" validateOnInput="true" editFormat="####" maxlength="4" minlength="4" ninemode="0" orgid="plAthorBrncd" hierarchy="plAthorBrncd" ref="data:dma_KJM06704000.plAthorBrncd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:176px; top:162px; width:180px; height:24px;" id="plAthorBrnName" indicator="복수승인부점명" tabIndex="19" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="plAthorBrnName" hierarchy="plAthorBrnName" ref="data:dma_KJM06704000.plAthorBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:590px; top:162px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_plAthorEmpid" tabIndex="20" label="직원번호" orgid="Text_plAthorEmpid" hierarchy="Text_plAthorEmpid" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:654px; top:162px; width:53px; height:24px;" id="plAthorEmpid" indicator="복수승인직원번호" tabIndex="21" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" minlength="7" ninemode="0" orgid="plAthorEmpid" hierarchy="plAthorEmpid" ref="data:dma_KJM06704000.plAthorEmpid"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:714px; top:162px; width:172px; height:24px;" id="plAthorEmnm" indicator="복수승인직원명" tabIndex="22" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="plAthorEmnm" hierarchy="plAthorEmnm" ref="data:dma_KJM06704000.plAthorEmnm"/>
+				<w2:textbox id="title_GroupBox5" class="title_h2" label="기타정보"/>
+			</xf:group>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:12px; top:1044px; width:102px; height:24px; borderraised2;" id="LinkText1" tabIndex="11" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText1_OnClick" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+				<xf:label><![CDATA[정리내역조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:120px; top:1044px; width:132px; height:24px; borderraised2;" id="LinkText2" tabIndex="12" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText2_OnClick" orgid="LinkText2" hierarchy="LinkText2" outerDiv="false">
+				<xf:label><![CDATA[기본원장내역조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:258px; top:1044px; width:144px; height:24px; borderraised2;" id="LinkText3" tabIndex="13" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText3_OnClick" orgid="LinkText3" hierarchy="LinkText3" outerDiv="false">
+				<xf:label><![CDATA[관리번호별 정리내역]]></xf:label>
+			</w2:anchor>
+			<w2:textbox ctype="Text" style="position:absolute; left:57px; top:1098px; width:71px; height:24px; color:rgb(0,0,0); display:none;" id="Text_ogtranYMS" tabIndex="14" label="원거래일시" orgid="Text_ogtranYMS" hierarchy="Text_ogtranYMS" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1098px; width:144px; height:24px; display:none;" id="ogtranYMS" indicator="원거래일시" tabIndex="15" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" minlength="20" ninemode="0" orgid="ogtranYMS" hierarchy="ogtranYMS" ref="data:dma_KJM06704000.ogtranYMS"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:18px; top:1128px; width:110px; height:24px; color:rgb(0,0,0); display:none;" id="Text_intgraTelgmUniqno" tabIndex="16" label="통합전문고유번호" orgid="Text_intgraTelgmUniqno" hierarchy="Text_intgraTelgmUniqno" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1128px; width:256px; height:24px; display:none;" id="intgraTelgmUniqno" indicator="통합전문고유번호" tabIndex="17" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999999999999999999999999999999999" maxlength="36" minlength="36" ninemode="0" orgid="intgraTelgmUniqno" hierarchy="intgraTelgmUniqno" ref="data:dma_KJM06704000.intgraTelgmUniqno"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:44px; top:1158px; width:84px; height:24px; color:rgb(0,0,0); display:none;" id="Text_cnclRstrScop" tabIndex="18" label="취소복원영역" orgid="Text_cnclRstrScop" hierarchy="Text_cnclRstrScop" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1158px; width:564px; height:24px; display:none;" id="cnclRstrScop" indicator="취소복원영역" tabIndex="19" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999999999999999999999999999999999999999999999999999999999999999" maxlength="80" minlength="80" ninemode="0" orgid="cnclRstrScop" hierarchy="cnclRstrScop" ref="data:dma_KJM06704000.cnclRstrScop"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:44px; top:1188px; width:84px; height:24px; color:rgb(0,0,0); display:none;" id="Text_dtailTranResn" tabIndex="20" label="상세거래사유" orgid="Text_dtailTranResn" hierarchy="Text_dtailTranResn" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1188px; width:604px; height:24px; display:none;" id="dtailTranResn1" indicator="상세거래사유" tabIndex="21" autosize="0" disabled="true" editFormat="H(300)" maxlength="300" minlength="300" ninemode="0" orgid="dtailTranResn1" hierarchy="dtailTranResn1" ref="data:dma_KJM06704000.dtailTranResn1"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:414px; top:1218px; width:58px; height:24px; color:rgb(0,0,0); display:none;" id="Text_acno" tabIndex="22" label="계좌번호" orgid="Text_acno" hierarchy="Text_acno" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:474px; top:1218px; width:144px; height:24px; display:none;" id="acno" indicator="계좌번호" tabIndex="23" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" ninemode="0" orgid="acno" hierarchy="acno" ref="data:dma_KJM06704000.acno"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:726px; top:1218px; width:58px; height:24px; color:rgb(0,0,0); display:none;" id="Text_drblNo" tabIndex="24" label="취결번호" orgid="Text_drblNo" hierarchy="Text_drblNo" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:786px; top:1218px; width:46px; height:24px; display:none;" id="drblNo" indicator="취결번호" tabIndex="25" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999" maxlength="6" ninemode="0" orgid="drblNo" hierarchy="drblNo" ref="data:dma_KJM06704000.drblNo"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:70px; top:1224px; width:58px; height:24px; color:rgb(0,0,0); display:none;" id="Text_mnrcvBnkCd" tabIndex="26" label="입금은행" orgid="Text_mnrcvBnkCd" hierarchy="Text_mnrcvBnkCd" class="kb_MiddleRight"/>
+			<w2:kb_selectbox ctype="Combo" style="position:absolute; left:132px; top:1224px; width:59px; height:24px; color:rgb(0,0,0); display:none;" id="mnrcvBnkCd" indicator="입금은행코드" tabIndex="27" disabled="true" keyLength="3" datasource="1" instancefile="200004049" index="0" appearance="minimal" orgid="mnrcvBnkCd" hierarchy="mnrcvBnkCd" ref="data:dma_KJM06704000.mnrcvBnkCd"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:588px; top:1248px; width:196px; height:24px; color:rgb(0,0,0); display:none;" id="Text1" tabIndex="28" label="승인사유명:삭제안하고&amp;nbsp;숨겨놓음" orgid="Text1" hierarchy="Text1" escape="false" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:786px; top:1248px; width:164px; height:24px; display:none;" id="spvsrAthorResnName" indicator="책임자승인사유명" tabIndex="29" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="30" imeMode="반자" ninemode="0" orgid="spvsrAthorResnName" hierarchy="spvsrAthorResnName" ref="data:dma_KJM06704000.spvsrAthorResnName"/>
+		</xf:group>
+	</body>
+</html>

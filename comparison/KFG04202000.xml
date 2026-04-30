@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFG04202000.scn"  meta_screenId="KFG04202000" meta_screenName="거래내역조회" meta_desc="" meta_author="S012064(이창현)">
+		<w2:type craft="true" craftSrc="/xml/KFG04202000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KFG0420142" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFG0420142_INPUT":{"@id":"dma_KFG0420142_INPUT","acno":"acno"}},"target":{"dma_KFG0420142_OUTPUT_screen___KFG04201000":{"@id":"dma_KFG0420142_OUTPUT_screen___KFG04201000","acno":"acno"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KFG0420241" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFG0420241_INPUT":{"@id":"dma_KFG0420241_INPUT","acno":"acno","lnpMod":"lnpMod","inquryStartDd":"inquryStartDd","inquryEndDd":"inquryEndDd","tranDstic":"tranDstic","receiptDstic":"receiptDstic","cnfCustnm":"cnfCustnm","custOgNo":"custOgNo","cnfFundDstic":"cnfFundDstic","cnfMrvamt":"cnfMrvamt","tranDte":"tranDte","tranNo":"tranNo","cnclDstic":"cnclDstic","nextKey":"nextKey"}},"target":{"dlt_KFG0420241_OUTPUT_screen___KFG04202000_trnhisGrid1__dataDvsn":{"@id":"dlt_KFG0420241_OUTPUT_screen___KFG04202000_trnhisGrid1__dataDvsn","selct":"selct","tranDte":"tranDte","tranNo":"tranNo","tranName":"tranName","tranCd":"tranCd","ogtranYMS":"ogtranYMS","cnclRstrInfoCtnt":"cnclRstrInfoCtnt","ogtranGuid":"ogtranGuid","cupldTranDstcd":"cupldTranDstcd","cnclYn":"cnclYn","tranNoacc":"tranNoacc","tranAmt":"tranAmt","rmandrNoacc":"rmandrNoacc","valpr":"valpr","valprBsprc":"valprBsprc","fee":"fee","tax":"tax","chek":"chek","trfer":"trfer","csh":"csh","tranTtm":"tranTtm","npsRqstr":"npsRqstr","chnlDstic":"chnlDstic","prcssBrncd":"prcssBrncd","trmno":"trmno","tranEmpid":"tranEmpid","spvsrNo":"spvsrNo","tranFundCd":"tranFundCd","sumry1":"sumry1","sumry2":"sumry2","taxBsprc":"taxBsprc","cnclCTranAbilYn":"cnclCTranAbilYn"},"dma_KFG0420241_OUTPUT_screen___KFG04202000":{"@id":"dma_KFG0420241_OUTPUT_screen___KFG04202000","custNo":"custNo","custnm":"custnm","lnkgAcno":"lnkgAcno","fundCd":"fundCd","fundName":"fundName","fundPtrn":"fundPtrn","fundAttriDstcd":"fundAttriDstcd","ofernStylYn":"ofernStylYn","mnrcvDstic":"mnrcvDstic","trnhisGrid1__outptLineCnt":"trnhisGrid1__outptLineCnt","trnhisGrid1__nextKey":"trnhisGrid1__nextKey","acno":"acno"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KFG0100112" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFG0100112_INPUT":{"@id":"dma_KFG0100112_INPUT","acnInfo__acno":"acnInfo__acno","tranAmtInfo__rceitAmt1":"tranAmtInfo__rceitAmt1"}},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0420142_INPUT" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0420142_OUTPUT_screen___KFG04201000" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0420241_INPUT" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnpMod" length="0" CtrlId="lnpMod" Type="CheckBox"/>
+						<w2:key dataType="text" name="" id="inquryStartDd" length="8" CtrlId="inquryStartYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="inquryEndDd" length="8" CtrlId="inquryEndYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tranDstic" length="0" CtrlId="tranDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="receiptDstic" length="1" CtrlId="receiptDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cnfCustnm" length="42" CtrlId="cnfCustnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custOgNo" length="14" CtrlId="custOgNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cnfFundDstic" length="10" CtrlId="cnfFundDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cnfMrvamt" length="14" CtrlId="cnfMrvamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tranDte" length="8" CtrlId="tranDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tranNo" length="7" CtrlId="tranNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="cnclDstic" length="1" CtrlId="cnclDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nextKey" length="100" CtrlId="nextKey" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KFG0420241_OUTPUT_screen___KFG04202000_trnhisGrid1__dataDvsn" saveRemovedData="true" CtrlId="dataDvsn" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="selct" length="1" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranDte" length="8" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranNo" length="7" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranName" length="20" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranCd" length="10" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="ogtranYMS" length="20" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cnclRstrInfoCtnt" length="80" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="ogtranGuid" length="36" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cupldTranDstcd" length="1" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cnclYn" length="1" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranNoacc" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranAmt" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="rmandrNoacc" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="valpr" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="valprBsprc" length="15" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fee" length="15" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tax" length="15" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="chek" length="15" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="trfer" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="csh" length="19" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranTtm" length="6" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="npsRqstr" length="10" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="chnlDstic" length="10" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="prcssBrncd" length="20" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="trmno" length="3" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranEmpid" length="7" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="spvsrNo" length="3" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranFundCd" length="10" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="sumry1" length="102" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="sumry2" length="102" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="taxBsprc" length="15" CtrlId="dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cnclCTranAbilYn" length="1" CtrlId="dataDvsn" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0420241_OUTPUT_screen___KFG04202000" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="custNo" length="10" CtrlId="custno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custnm" length="42" CtrlId="custnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnkgAcno" length="14" CtrlId="lnkgAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fundCd" length="10" CtrlId="fundCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fundName" length="262" CtrlId="fundName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fundPtrn" length="0" CtrlId="fundPtrn" Type="char"/>
+						<w2:key dataType="text" name="" id="fundAttriDstcd" length="1" CtrlId="fundAttriDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="ofernStylYn" length="1" CtrlId="ofernStylYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mnrcvDstic" length="1" CtrlId="mnrcvDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="trnhisGrid1__outptLineCnt" length="5" CtrlId="outptLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="trnhisGrid1__nextKey" length="100" CtrlId="nextKey" Type="Edit"/>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0100112_INPUT" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acnInfo__acno" length="14" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="tranAmtInfo__rceitAmt1" length="18" CtrlId="edt_mrv_Amt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG0100112_OUTPUT" TranClass="MCI" SvcCode="KFG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KFG04202000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행2]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFG04202000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="14" CtrlId="acno"/>
+						<w2:key dataType="text" name="" id="lnpMod" length="0" CtrlId="lnpMod"/>
+						<w2:key dataType="text" name="" id="inquryStartYmd" length="8" CtrlId="inquryStartYmd"/>
+						<w2:key dataType="text" name="" id="inquryEndYmd" length="8" CtrlId="inquryEndYmd"/>
+						<w2:key dataType="text" name="" id="tranDstic" length="0" CtrlId="tranDstic"/>
+						<w2:key dataType="text" name="" id="receiptDstic" length="1" CtrlId="receiptDstic"/>
+						<w2:key dataType="text" name="" id="cnfCustnm" length="42" CtrlId="cnfCustnm"/>
+						<w2:key dataType="text" name="" id="custOgNo" length="14" CtrlId="custOgNo"/>
+						<w2:key dataType="text" name="" id="cnfFundDstic" length="10" CtrlId="cnfFundDstic"/>
+						<w2:key dataType="text" name="" id="cnfMrvamt" length="14" CtrlId="cnfMrvamt"/>
+						<w2:key dataType="text" name="" id="tranDte" length="8" CtrlId="tranDte"/>
+						<w2:key dataType="text" name="" id="tranNo" length="7" CtrlId="tranNo"/>
+						<w2:key dataType="text" name="" id="cnclDstic" length="1" CtrlId="cnclDstic"/>
+						<w2:key dataType="text" name="" id="nextKey" length="100" CtrlId="nextKey"/>
+						<w2:key dataType="text" name="" id="custno" length="10" CtrlId="custno"/>
+						<w2:key dataType="text" name="" id="custnm" length="42" CtrlId="custnm"/>
+						<w2:key dataType="text" name="" id="lnkgAcno" length="14" CtrlId="lnkgAcno"/>
+						<w2:key dataType="text" name="" id="fundCd" length="10" CtrlId="fundCd"/>
+						<w2:key dataType="text" name="" id="fundName" length="262" CtrlId="fundName"/>
+						<w2:key dataType="text" name="" id="fundPtrn" length="0" CtrlId="fundPtrn"/>
+						<w2:key dataType="text" name="" id="fundAttriDstcd" length="1" CtrlId="fundAttriDstcd"/>
+						<w2:key dataType="text" name="" id="ofernStylYn" length="1" CtrlId="ofernStylYn"/>
+						<w2:key dataType="text" name="" id="mnrcvDstic" length="1" CtrlId="mnrcvDstic"/>
+						<w2:key dataType="text" name="" id="outptLineCnt" length="5" CtrlId="outptLineCnt"/>
+						<w2:key dataType="text" name="" id="edt_mrv_Amt" length="18" CtrlId="edt_mrv_Amt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataDvsn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="selct"/>
+						<w2:column dataType="text" name="" id="tranDte_01"/>
+						<w2:column dataType="text" name="" id="tranNo_01"/>
+						<w2:column dataType="text" name="" id="tranName"/>
+						<w2:column dataType="text" name="" id="tranCd"/>
+						<w2:column dataType="text" name="" id="ogtranYMS"/>
+						<w2:column dataType="text" name="" id="cnclRstrInfoCtnt"/>
+						<w2:column dataType="text" name="" id="ogtranGuid"/>
+						<w2:column dataType="text" name="" id="cupldTranDstcd"/>
+						<w2:column dataType="text" name="" id="cnclYn"/>
+						<w2:column dataType="text" name="" id="tranNoacc"/>
+						<w2:column dataType="text" name="" id="tranAmt"/>
+						<w2:column dataType="text" name="" id="rmandrNoacc"/>
+						<w2:column dataType="text" name="" id="valpr"/>
+						<w2:column dataType="text" name="" id="valprBsprc"/>
+						<w2:column dataType="text" name="" id="s01"/>
+						<w2:column dataType="text" name="" id="fee"/>
+						<w2:column dataType="text" name="" id="tax"/>
+						<w2:column dataType="text" name="" id="chek"/>
+						<w2:column dataType="text" name="" id="trfer"/>
+						<w2:column dataType="text" name="" id="csh"/>
+						<w2:column dataType="text" name="" id="tranTtm"/>
+						<w2:column dataType="text" name="" id="npsRqstr"/>
+						<w2:column dataType="text" name="" id="chnlDstic"/>
+						<w2:column dataType="text" name="" id="prcssBrncd"/>
+						<w2:column dataType="text" name="" id="trmno"/>
+						<w2:column dataType="text" name="" id="tranEmpid"/>
+						<w2:column dataType="text" name="" id="spvsrNo"/>
+						<w2:column dataType="text" name="" id="tranFundCd"/>
+						<w2:column dataType="text" name="" id="sumry1"/>
+						<w2:column dataType="text" name="" id="sumry2"/>
+						<w2:column dataType="text" name="" id="cnclCTranAbilYn"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+ ASIS에서 문법에 어긋난 문장이 발견되었습니다. 이는 WCRAFT에서 // ✖ 로 변환합니다.  
+ // ✖ 로 변환된 곳을 찾아 ASIS소스를 참고하여 문법에 맞도록 변환해주세요. 
+
+----------------------------------------------------
+[0] 기존 문법 오류
+----------------------------------------------------
+	> // ✖ 오류 확인 - 기존 소스 확인 필요
+
+*/
+
+
+scwin.bfAcno;
+scwin.bfStartYmd;
+scwin.bfEndYmd;
+scwin.bfLnpMod;
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+
+//2009-06-25 YHS 확인
+
+scwin.popUpEvent = function() {
+    Link.tranCd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranCd");
+    Link.ogtranYMS = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "ogtranYMS");
+    Link.cnclRstrInfoCtnt = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclRstrInfoCtnt"); // by.yyg 20090704
+    Link.cupldTranDstcd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cupldTranDstcd"); // by.leecj 20090813
+    Link.ogtranGUID = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "ogtranGuid"); // by.yyg 20090704
+    Link.acno = acno.getValue();
+    Link.tranYmd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte");
+    Link.acnStus = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "acnStus");
+    Link.tranName = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName");
+    Link.tranNoacc = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranNoacc");
+    Link.tranTtm = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranTtm");
+    Link.rmandrNoacc = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "rmandrNoacc");
+    Link.tranAmt = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranAmt");
+    Link.csh = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "csh");
+    Link.trfer = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "trfer");
+    Link.chek = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "chek");
+    Link.rpurchFee = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "rpurchFee");
+    Link.txbfValpr = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "valpr");
+    Link.idtrek = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "idtrek");
+    Link.hndlnBrn = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "prcssBrncd");
+    Link.trmno = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "trmno");
+    Link.slipNo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "slipNo");
+    Link.chnlDstic = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "chnlDstic");
+    Link.mdiaDstic = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "mdiaDstic");
+    Link.tranEmpid = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranEmpid");
+    Link.cnclYn = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclYn"); // 그리드내 취소구분 추가(2013.10.28)
+    $c.iz.screen.popup("KFG04202001", "DATALINK");
+};
+
+// 취소버튼 클릭 시 이벤트
+scwin.Button1_OnClick = function(e) {
+    //취소
+    // 조회된 데이터가 없으면 에러처리
+    if (dataDvsn.getTotalRow() == 0) {
+        $c.iz.data.alert("취소대상거래가 없습니다.", "오류");
+        return;
+    }
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 거래가 없습니다.", "오류");
+        return;
+    }
+
+    // 채널구분이 05(센터컷)인 경우 단말취소가 불가능하므로 에러처리
+    var channel = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "chnlDstic");
+    var test1 = channel.substring(0, 2);
+    var tranEmpid = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranEmpid");
+    //	var cnclRstrInfoCtnt  = dataDvsn.GetCellDataSaveName(dataDvsn.GetSelectRow(), "cnclRstrInfoCtnt");	 
+    var TranName = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName");
+    var cnclCTranAbilYn = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclCTranAbilYn");
+    if (channel.substring(0, 2) == '05') {
+        // 채널구분이 05(센터컷)인 경우 자동이체만 창구취소 허용 + 목표도달자동환매 창구취소허용 (JITKB)
+        // + 펀드정기지급서비스 창구취소허용 20181128
+        if (tranEmpid.substring(0, 7) == 'C301301' || tranEmpid.substring(0, 7) == 'C372101' || tranEmpid.substring(0, 7) == 'C324352' || tranEmpid.substring(0, 7) == 'C340139') {
+
+        } else {
+            // 2015.10.01 C340103, C340110, C340111 입금예약분 취소 추가
+            if ((tranEmpid.substring(0, 7) == 'C340103' || tranEmpid.substring(0, 7) == 'C340110' || tranEmpid.substring(0, 7) == 'C340111') && tranName.substring(0, 4) == 'N102') {
+
+            } else {
+                //20190131 연금일괄매매예약 취소 가능  
+                if ((tranEmpid.substring(0, 7) == 'C340137' && (tranName.substring(0, 4) == 'N910' || tranName.substring(0, 4) == 'N202')) || /* 출금/해약 예약 취소 */
+                    (tranEmpid.substring(0, 7) == 'C340136' && (tranName.substring(0, 4) == 'N102')) || /* 입금예약 취소 */
+                    (tranEmpid.substring(0, 7) == 'C340137' && tranName.substring(0, 4) == 'N301')) {
+                    //
+
+                } else {
+                    $c.iz.data.alert("센터컷 거래는 창구에서 단말취소 할수 없습니다.", "오류");
+                    return;
+                }
+            }
+        }
+    } else if (channel.substring(0, 2) == '01') {
+        var prcssBrncd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "prcssBrncd");
+        if (prcssBrncd.substring(0, 4) == '1117') {
+            //1117
+            $c.iz.data.alert("본부 일부상환출금예약 거래는 단말취소 할수 없습니다.", "오류");
+            return;
+        }
+        if (tranName.substring(0, 4) == 'N910' && cnclCTranAbilYn == '0') {
+            $c.iz.data.alert("취소 불가능한 거래입니다.", "오류");
+            return;
+        }
+    }
+
+
+    // 이미 취소된 거래를 다시 취소버튼 클릭시 오류(2013.10.28)	
+    var wkcnclYn = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclYn").substring(0, 1); // 그리드내 취소구분
+    if (wkcnclYn != '0') {
+        $c.iz.data.alert("이미 취소된 거래는 취소가 불가능합니다.", "오류");
+        return;
+    }
+
+    // 시스템현재날짜와 취소대상거래년월일(tranYmd)이 다르면 (취소대상거래가 현재일이 아니면) 에러처리	
+    var tranymd = $c.user.getUserProfile('nowBzoprYmd'); // 영업일
+    var seltrandt = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte"); // 선택거래년월일
+    if (tranymd == seltrandt) {
+        //취소구분코드 9 (취소) 셋
+        Link.cnclCd = "9";
+        scwin.popUpEvent();
+    } else {
+        $c.iz.data.alert("당일취소거래가 아닙니다. 당일거래만 취소가능합니다", "오류");
+    }
+};
+
+scwin.LinkText1_OnClick = function(e) {
+    // 펀드코드를 넘김
+    var tmp = '04';
+    Link.KAF_fundCd = tmp.concat(fundCd.getValue());
+    // 부도출금
+    $c.iz.screen.screenOpen("KAF04706000", "DATALINK");
+};
+
+scwin.LinkText2_OnClick = function(e) {
+    // 지급계산서 발급
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 거래가 없습니다.", "오류");
+        return;
+    }
+
+    // 선택된 거래가 출금이 아니면 지급계산서 발급 버튼클릭 안됨
+    var strTranName = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName");
+    if (strTranName.length > 4) {
+        if (strTranName.substring(0, 4) == 'N201' || strTranName.substring(0, 4) == 'N203' ||
+            strTranName.substring(0, 4) == 'N205' || strTranName.substring(0, 4) == 'N206' ||
+            strTranName.substring(0, 4) == 'N302' || strTranName.substring(0, 4) == 'N209' ||
+            strTranName.substring(0, 4) == 'N211' ||
+            strTranName.substring(0, 4) == 'N213' || strTranName.substring(0, 4) == 'N215') {
+
+        } else {
+            $c.iz.data.alert("지급계산서 발급 대상이 아닙니다.", "오류");
+            return;
+        }
+    }
+    var strTranDte = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte");
+    var strTranNo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranNo");
+    // 계좌번호를 넘김
+    Link.acno = acno.getValue();
+    // 거래일자를 넘김
+    Link.tranDte = strTranDte;
+    // 거래번호를 넘김
+    Link.tranNo = strTranNo;
+    // Link.
+    $c.iz.screen.screenOpen("KFG04211000", "DATALINK");
+};
+
+scwin.LinkText3_OnClick = function(e) {
+    // 출금상세내역조회
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 출금거래가 없습니다.", "오류");
+        return;
+    }
+
+    // 선택된 거래가 출금이 아니면 출금상세내역조회 발급 버튼클릭 안됨
+    var strTranName = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName");
+    if (strTranName.length > 4) {
+        if (strTranName.substring(0, 4) == 'N201' || strTranName.substring(0, 4) == 'N203' ||
+            strTranName.substring(0, 4) == 'N205' || strTranName.substring(0, 4) == 'N206' ||
+            strTranName.substring(0, 4) == 'N302' || strTranName.substring(0, 4) == 'N209' ||
+            strTranName.substring(0, 4) == 'N211' ||
+            strTranName.substring(0, 4) == 'N213' || strTranName.substring(0, 4) == 'N215') {
+
+        } else {
+            $c.iz.data.alert("출금상세내역조회 대상이 아닙니다.", "오류");
+            return;
+        }
+    }
+    var strTranDte = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte");
+    var strTranNo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranNo");
+    // 계좌번호를 넘김
+    Link.acno = acno.getValue();
+    // 거래일자를 넘김
+    Link.drwotDte = strTranDte;
+    // 거래번호를 넘김
+    Link.tranNo = strTranNo;
+    // Link.
+    $c.iz.screen.screenOpen("KFG04402000", "DATALINK");
+};
+
+scwin.LinkText5_OnClick = function(e) {
+    // 자계좌입출금거래내역상세내역조회
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 입출금거래가 없습니다.", "오류");
+        return;
+    }
+
+    // 선택된 거래가 출금이 아니면 출금상세내역조회 발급 버튼클릭 안됨
+    //	var strTranName = dataDvsn.GetCellDataSaveName(dataDvsn.GetSelectRow(), "tranName");	
+    //	if ( strTranName.length > 4 ) {	 
+    //	    if (strTranName.substring(0,4) == 'N201' ||  strTranName.substring(0,4) == 'N203' ||
+    //	        strTranName.substring(0,4) == 'N205' ||  strTranName.substring(0,4) == 'N206' ||
+    //	        strTranName.substring(0,4) == 'N302' ||  strTranName.substring(0,4) == 'N209' ||
+    //	        strTranName.substring(0,4) == 'N211' || 
+    //	        strTranName.substring(0,4) == 'N213' ||  strTranName.substring(0,4) == 'N215')	    
+    //	    {}
+    //	    else  
+    //    	{
+    //	      alert("출금상세내역조회 대상이 아닙니다.", "오류");
+    //	      return;
+    //    	} 
+    //  }
+
+    var strTranDte = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte");
+    var strTranNo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranNo");
+    // 계좌번호를 넘김
+    Link.acno = acno.getValue();
+    // 거래일자를 넘김
+    Link.inquryStartYmd = strTranDte;
+    // 거래번호를 넘김
+    Link.tranNo = strTranNo;
+    // 입금 출금 구분코드 넘김
+
+    // 선택된 거래가 출금이 아니면 출금상세내역조회 발급 버튼클릭 안됨
+    var strTranName = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName");
+    if (strTranName.length > 4) {
+        if (strTranName.substring(0, 4) == 'N101' || strTranName.substring(0, 4) == 'N201' ||
+            strTranName.substring(0, 4) == 'N102' || strTranName.substring(0, 4) == 'N202' ||
+            strTranName.substring(0, 4) == 'N103' || strTranName.substring(0, 4) == 'N203' ||
+            strTranName.substring(0, 4) == 'N106' || strTranName.substring(0, 4) == 'N212' ||
+            strTranName.substring(0, 4) == 'N112' || strTranName.substring(0, 4) == 'N213' ||
+            strTranName.substring(0, 4) == 'N110') {
+            if (strTranName.substring(0, 4) == 'N101' || strTranName.substring(0, 4) == 'N102' ||
+                strTranName.substring(0, 4) == 'N103' || strTranName.substring(0, 4) == 'N106' ||
+                strTranName.substring(0, 4) == 'N112' || strTranName.substring(0, 4) == 'N110') {
+                Link.tranDstic = "1";
+            } else {
+                Link.tranDstic = "2";
+            }
+        } else {
+            $c.iz.data.alert("자계좌상세내역조회 대상이 아닙니다.", "오류");
+            return;
+        }
+    }
+
+    // Link.
+    $c.iz.screen.screenOpen("KFG04260000", "DATALINK");
+};
+
+// 그리드출력필드 클릭 시 이벤트
+scwin.dataDvsn_OnDClick = function(Arg1, Arg2, Arg3) {
+    // 그리드필드 8번째 항목 (연동정보)필드 클릭 시 연동정보팝업 실행
+    if (Arg2 == 8) {
+        // 연동정보가 0 (해당무)이면 연동정보가 팝업을 안띄움
+        var cupldinfo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cupldTranDstcd");
+        if (cupldinfo == '0') {
+            $c.iz.data.alert("연동정보가 없습니다.", "오류");
+            return;
+        }
+        Link.TranCd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranCd");
+        Link.CupldTranDstcd = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cupldTranDstcd");
+        Link.CnclRstrInfo = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclRstrInfoCtnt");
+        // 연동정보팝업 실행
+        $c.iz.screen.popup("KHD04005000", "DATALINK");
+    } else {
+        //Link.cnclCd = "2";
+        // 거래내역상세조회 팝업실행
+        // 취소구분코드 = 0(정상)으로 셋
+        Link.cnclCd = "0";
+        scwin.popUpEvent();
+    }
+};
+
+
+scwin.OnInitScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.tran.setSendKey(1);
+    acno.focus();
+    inquryEndYmd.setValue($c.user.getUserProfile('nowBzoprYmd'));
+    inquryStartYmd.setValue($c.com.getAccDate($c.user.getUserProfile('nowBzoprYmd'), -6, "M"));
+    receiptDstic.setValue('0'); //20100326 김소영- 확인서인자 1, 그냥 조회 0 
+    fundAttriDstcd.setValue(' ');
+
+    //20170801 김소영
+    Button1.show('');
+    Button1.setDisabled(false);
+    Button_correct.hide();
+    Button_correct.setDisabled(true);
+    edt_mrv_Amt.setValue(0); //20170725 데이터삭제
+};
+
+
+scwin.OnSendKey2 = async function() {
+    // next key로 송신시 조회조건이 변경되었는지를 체크하기 위함.	
+    scwin.bfAcno = acno.getValue();
+    scwin.bfStartYmd = inquryStartYmd.getValue();
+    scwin.bfEndYmd = inquryEndYmd.getValue();
+    scwin.bfLnpMod = lnpMod.getValue();
+    //alert(" bfLnpMod  "+bfLnpMod," ");
+    nextKey.setValue(""); // NextKey초기화    
+    dataDvsn.removeAll(); // grid 삭제 초기화
+    GroupBox2.setValue(""); // groupbox 데이터초기화
+
+    var iDecimalPoint;
+    var iAmtDecimalPoint;
+    $c.iz.tran.setTranID("KFG0420241");
+    // 55과목 or 24과목이 아니면 에러처리
+    var stracno = acno.getValue();
+    var acnolen = stracno.length;
+    // 계좌번호가 14 && 과목코드가 55, 24가 아니면 오류팝업
+    if (acnolen == 14 && acno.getValue().substring(4, 6) != "55" && acno.getValue().substring(4, 6) != "24") {
+        $c.iz.data.alert("펀드계좌만 조회가능합니다.", "오류");
+        return;
+    }
+    if (acno.getValue().substring(4, 6) == "24") {
+        iDecimalPoint = 3; //좌수
+        iAmtDecimalPoint = 2; //금액
+    } else {
+        iDecimalPoint = 0;
+        iAmtDecimalPoint = 0;
+
+    } /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("tranNoacc")) = iDecimalPoint; //거래좌수*/ // ✖ = iDecimalPoint; //거래좌수
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("tranAmt")) = iAmtDecimalPoint; //거래금액*/
+    // ✖ = iAmtDecimalPoint; //거래금액
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("rmandrNoacc")) = iDecimalPoint; //잔고좌수*/
+    // ✖ = iDecimalPoint; //잔고좌수
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("valpr")) = iAmtDecimalPoint; //평가금액*/
+    // ✖ = iAmtDecimalPoint; //평가금액
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("fee")) = iAmtDecimalPoint; //수수료*/
+    // ✖ = iAmtDecimalPoint; //수수료
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("trfer")) = iAmtDecimalPoint; //대체*/
+    // ✖ = iAmtDecimalPoint; //대체
+
+    /*ORG SRC: dataDvsn.DataDispDecimalPoint(1, dataDvsn.GetSaveNameCol("csh")) = iAmtDecimalPoint; //현금*/
+    // ✖ = iAmtDecimalPoint; //현금	
+
+    $c.iz.tran.lockScreen();
+    await $c.iz.tran.ASend();
+    //********* 인스턴스 변경 [임시] *****************************//	
+    //var str = Tran.GetOutMultiData("KFG0420241", "trnhisGrid1/dataDvsn", "tranName");	
+    //alert (str, "str");
+    //********* 인스턴스 변경 [임시] *****************************//	
+
+    // 박재규 20170610 역내외화펀드개발	( 소수점자리수 재조정 펀드속성구분코드로 변경함) 
+    if (fundAttriDstcd.getValue() == '3') {
+        //역외펀드
+        iDecimalPoint = 3; //좌수
+        iAmtDecimalPoint = 2; //금액
+    } else if (fundAttriDstcd.getValue() == '4') {
+        //역내외화펀드	
+        iDecimalPoint = 0; //좌수
+        iAmtDecimalPoint = 2; //금액			
+    } else {
+        iDecimalPoint = 0;
+        iAmtDecimalPoint = 0;
+    }
+    for (i = 1; i < dataDvsn.getTotalRow() + 1; i++) {
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("tranNoacc")) = iDecimalPoint; //거래좌수*/
+        // ✖ = iDecimalPoint; //거래좌수
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("tranAmt")) = iAmtDecimalPoint; //거래금액*/
+        // ✖ = iAmtDecimalPoint; //거래금액
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("rmandrNoacc")) = iDecimalPoint; //잔고좌수*/
+        // ✖ = iDecimalPoint; //잔고좌수
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("valpr")) = iAmtDecimalPoint; //평가금액*/
+        // ✖ = iAmtDecimalPoint; //평가금액
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("fee")) = iAmtDecimalPoint; //수수료*/
+        // ✖ = iAmtDecimalPoint; //수수료
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("trfer")) = iAmtDecimalPoint; //대체*/
+        // ✖ = iAmtDecimalPoint; //대체
+
+        /*ORG SRC: dataDvsn.CellDispDecimalPoint(i, dataDvsn.GetSaveNameCol("csh")) = iAmtDecimalPoint; //현금*/
+        // ✖ = iAmtDecimalPoint; //현금
+    }
+};
+
+
+scwin.dataDvsn_OnPageChange = async function(Arg1, Arg2) {
+    //여기에 구현코드를 삽입하세요.
+
+    if (acno.getValue() != scwin.bfAcno ||
+        inquryStartYmd.getValue() != scwin.bfStartYmd ||
+        inquryEndYmd.getValue() != scwin.bfEndYmd ||
+        lnpMod.getValue() != scwin.bfLnpMod) {
+        $c.iz.data.alert("조회조건이 변경되었습니다!\n실행버튼을 사용 바랍니다.", "오류");
+        return false;
+    }
+    $c.iz.tran.setTranID("KFG0420241");
+    $c.iz.tran.setInFDData("KFG0420241", "nextKey", dataDvsn.getNextKey());
+    await $c.iz.tran.ASend();
+};
+
+scwin.dataDvsn_OnItemChanged = function(Arg1, Arg2, Arg3) {
+    if (Arg2 == 0 && Arg3 == "Y") {
+        for (var i = 1; i <= dataDvsn.getTotalRow(); i++) {
+            if (i != Arg1 && dataDvsn.getCellData(i, 0) == "Y") {
+                dataDvsn.setCellData(i, 0, "N");
+            }
+        }
+    }
+};
+
+scwin.Button2_OnClick = function(e) {
+    //	dataDvsn.ExcelExport(0,false,false, true,"-1", ";;;"+"거래내역 조회");
+    //	dataDvsn.ExcelExportS(0,false,false, true,"", ";;;"+"거래내역 조회");
+    //	dataDvsn.ExcelExportS(0,false,false, true,"", "",false, false, "", true);
+    //    dataDvsn.ExcelExportS(0,false,false, true,"","|2|거래내역",false,false,"거래내역 조회",
+    //  엑셀내보내기시 계좌번호, 고객명, 조회일자, 상품명도 엑셀로 내보내도록 수정(2014.12.22)
+    dataDvsn.ExcelExportS(0, false, false, true, "", "계좌번호 : ;" + acno.getValue().substr(0, 6) + "-" + acno.getValue().substr(6, 2) + "-" + acno.getValue().substr(8, 6) + ";" + "고객명   : ;" + custnm.getValue() + ";" + "조회일자 : ;" + inquryStartYmd.getValue().substr(0, 4) + "-" + inquryStartYmd.getValue().substr(4, 2) + "-" + inquryStartYmd.getValue().substr(6, 2) + "  ∼  " + inquryEndYmd.getValue().substr(0, 4) + "-" + inquryEndYmd.getValue().substr(4, 2) + "-" + inquryEndYmd.getValue().substr(6, 2) + ";" + "상품명   : ;" + fundName.getValue() + "|2|펀드거래내역조회", false, false, "거래내역 조회", false, "|0|5|6|7", "", false, false, "", "용지방향=가로;배율=50%;용지크기=A4;");
+};
+
+scwin.OnEndTran = function() {
+    receiptDstic.setValue('0'); //20100326 김소영- 확인서인자 1, 그냥 조회 0  
+    dataDvsn.setCellData(dataDvsn.getFocusedRowIndex(), "selct", 'N'); //20100326 김소영 확인서 인자 후 체크 선택 해제 
+
+    //여기에 구현코드를 삽입하세요.
+    if ($c.iz._tran.bError) {
+        Button_receipt.setDisabled(true);
+        Button_correct.setDisabled(true); //20170725 정정버튼도비활성화처리 
+        edt_mrv_Amt.setValue(0); //20170725 데이터삭제
+        return;
+    }
+    if ($c.iz._tran.tranId == "KFG0420241") {
+        //20170801 모집식펀드일 경우 취소버튼-->정정버튼
+        edt_mrv_Amt.setValue(0); //20170725 데이터삭제
+        var tranymd = $c.user.getUserProfile('nowBzoprYmd'); // 영업일
+        var seltrandt = dataDvsn.getCellData(1, "tranDte"); // 선택거래년월일 	    
+
+        if (ofernStylYn.getValue() == '1' && (tranymd != seltrandt)) {
+            Button1.hide(); //취소버튼
+            Button1.setDisabled(true);
+            Button_correct.show(''); //정정버튼 
+            Button_correct.setDisabled(false);
+
+            //20170801 정정처리금액(매입금액 + 수수료)
+            edt_mrv_Amt.setValue(Number(dataDvsn.getCellData(2, "trfer")) + Number(dataDvsn.getCellData(2, "csh")));
+        } else {
+            Button1.show('');
+            Button1.setDisabled(false);
+            Button_correct.hide();
+            Button_correct.setDisabled(true);
+        }
+    }
+
+    // 고객번호 패턴변경 - 시작
+
+    /* 20170801_start 현재 AAAAA-AAAAA 이 패턴만 사용함
+    var strPattern = "AAAAA-AAAAA";	    //고객식별자(20150204)
+    var strPattern1 = "AAAAAA-AA*****"
+    var strPattern2 = "AAAAAAAAAAAAA"
+    var strPattern3 = "AAA-AA-*****"	
+    var strCustNo = " ";
+    var strCustNo = Tran.GetOutFDData("KFG0420241", "screen", "custNo");	// 고객번호			
+    custno.SetPattern(strPattern);        //고객식별자(20150204)  	
+    20170801_end */
+
+    /* 20170801 이전 주석처리_start 
+	var len = strCustNo.length;
+
+    var i = 0;        
+    while( i < len && strCustNo.substr(i, 1)== " " )
+    {    	    	
+        i ++;       
+    }
+    strCustNo = strCustNo.substr( i , len - i);
+	
+	if(strCustNo.length == 13)	// 내국인 주민번호
+	{
+		custno.SetPattern(strPattern1);
+	}
+	else if(strCustNo.length == 10)	// 사업자번호
+	{
+		custno.SetPattern(strPattern3);
+	}
+	else
+	{
+		custno.SetPattern(strPattern2);
+	}
+	20170801 이전 주석처리_end
+	*/
+
+    //custno.Value = strCustNo; 20170801 
+
+    // 고객번호 패턴변경 - 종료	
+
+};
+
+
+scwin.dataDvsn_OnPopupClick = function(Arg1, Arg2) {
+    //여기에 구현코드를 삽입하세요.
+
+};
+
+
+
+
+scwin.Button3_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    var wk_sysymd = $c.user.getUserProfile('nowBzoprYmd');
+    //시스템날짜     
+    inquryYms.setValue("");
+    inquryYms.setValue($c.iz.tran.getOutFDData("outputChannel", "screen", "OutptRsultWritYMS").substr(0, 12));
+
+    //  alert("inquryYms",inquryYms.Data);
+    //	SetOzGridData("CHECKED","tranDte|tranNo|tranName|cnclYn|tranNoacc|tranAmt|rmandrNoacc|valpr|valprBsprc|tax|tranTtm|chnlDstic|prcssBrncd|trmno|tranFundCd|","dataBook");
+    $c.iz.SetOzGridData("ALL", "tranDte|tranNo|tranName|cnclYn|tranNoacc|tranAmt|rmandrNoacc|valpr|valprBsprc|tax|tranTtm|chnlDstic|prcssBrncd|trmno|tranFundCd|", "dataDvsn");
+    $c.iz.report.appendOzDataSetDel50();
+    var ozrParm = "acno=" + acno.getValue() + ";" + "custnm=" + custnm.getValue() + ";" + "fundName=" + fundName.getValue() + ";" + "inquiryStartYmd=" + inquryStartYmd.getValue() + ";" + "inquiryEndYmd=" + inquryEndYmd.getValue() + ";" + "inquiryYms=" + inquryYms.getValue() + ";";
+    var odiParamValue = "";
+    //    Message(ozrParm);
+    $c.iz.CallOzViewer50("KFG", "/KFG/KFG04202000", "KFG04202000", ozrParm, odiParamValue, false);
+};
+
+scwin.LinkText4_OnClick = function(e) {
+    //고객정보조회
+    Link.serchNoDstcd = "3";
+    //Link.hserchNo = acno.Data;
+    Link.serchCustIdnfr = custno.getValue();
+    $c.iz.screen.screenOpen("KAA04300000", "DATALINK");
+};
+
+scwin.acno_1_OnValidate = function(info) {
+    //입력한 계좌번호 또는 MS read한 계좌번호가 통장번호로 입력되었을때 
+    //원장의 계좌번호로 치환하는 함수 
+    //주의사항 : KFG0420142 트랜을 추가하고 사용해야 함
+
+    var cvAcno = $c.com.kfg.queryFindAcno(acno);
+    if (cvAcno != "") {
+        acno.setValue(cvAcno);
+    }
+};
+
+scwin.acno_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+
+    //acno_1.Data = acno.Data;
+
+    //입력한 계좌번호 또는 MS read한 계좌번호가 통장번호로 입력되었을때 
+
+    //원장의 계좌번호로 치환하는 함수 
+
+    //주의사항 : KFG0420142 트랜을 추가하고 사용해야 함       
+
+    //var cvAcno = KFG_queryFindAcno(acno);   
+
+    //if  (cvAcno != "" ) { 
+
+    //	acno.Data = cvAcno;	
+
+    //	}
+
+};
+
+// 20100326 예탁금보관 확인서 인자 버튼 추가
+scwin.Button_receipt_OnClick = async function(e) {
+    // 거래구분이 입금예약인 경우 선택 시 버튼 활성화 및 인자 
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 거래가 없습니다.", "오류");
+        return;
+    }
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte") < 20100216) // 2010년 2월 16일 이후 거래만 가능
+
+    {
+        $c.iz.data.alert("2010년 2월 16일 이후만 예탁금 보관 확인서 인자가 가능합니다.", "오류");
+        return;
+    }
+    var compText = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName").substring(0, 4);
+    if (compText != "N102" && compText != "N106" && compText != "N110" && compText != "N112") // 입금예약 선택 아닐때 
+
+    {
+        $c.iz.data.alert("입금예약일 때 만 예탁금 보관 확인서 인자가 가능합니다.", "오류");
+        return;
+    }
+    var canText = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclYn").substring(0, 1);
+    if (canText != '0') {
+        $c.iz.data.alert("취소 거래는 예탁금 보관 확인서 인자가 불가능합니다.", "오류");
+        return;
+    }
+    var subjText = acno.getValue().substring(4, 6);
+    //  박재규 subjText에서 ->fundAttriDstcd.Data(펀드속성코드)로 변경함	
+    //	if ( subjText == '24' )
+    if (fundAttriDstcd.getValue() == '3') //역외코드
+
+    {
+        //2010.12.10 shkim		alert("해외 펀드 계좌는 예탁금 보관 확인서 인자가 불가능합니다.", "오류");
+        $c.iz.data.alert("역외 펀드 계좌는 예탁금 보관 확인서 인자가 불가능합니다.", "오류");
+        return;
+    }
+    $c.iz.tran.setTranID("KFG0420241");
+    await $c.iz.tran.ASend();
+};
+
+//20100326 김소영 row 선택 시 확인서 인자를 위한 입력 값 셋팅 및 버튼 활성화 제어
+scwin.dataDvsn_OnClick = function(Arg1, Arg2, Arg3) {
+    var compText = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranName").substring(0, 4); // 거래명
+    var canText = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclYn").substring(0, 1); //취소여부
+    var subjText = acno.getValue().substring(4, 6); //과목코드
+    var dateText = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte"); //거래일자
+
+    GroupBox4.setValue(""); //입력 값 초기화 
+    // 입금예약,기일예약,이전입금예약,WISE입금예약 정상(취소아님),국내수익증권펀드, 차세대 오픈 날 이후 거래  
+    // 골든라이프연금 모계좌는 투자자예탁금확인서 발급 불가(자펀드마다 예탁 보관일수가 상이 할수 있음)
+    // --> 자계좌별로 투자자예탁금확인서 인자할것 (2014.07.25)
+    if (Arg2 == 0 && dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "Y" &&
+        (compText == "N102" || compText == "N106" || compText == "N110" || compText == "N112") &&
+        //  박재규 subjText에서 ->fundAttriDstcd.Data(펀드속성코드)로 변경함		    
+        //		&& canText == '0' && subjText =='55' 
+        canText == '0' && (fundAttriDstcd.getValue() == '1' || fundAttriDstcd.getValue() == '2' || fundAttriDstcd.getValue() == '4') &&
+        dateText >= '20100216' && fundCd.getValue().substring(2, 5) != '900') {
+        cnfCustnm.setValue(custnm.getValue()); //고객명 		
+        cnfFundDstic.setValue(fundCd.getValue()); //펀드코드	
+
+        //입금금액
+        cnfMrvamt.setValue(Number(dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "trfer")) + Number(dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "csh"))); //펀드명		
+
+        tranDte.setValue(dateText);
+        tranNo.setValue(dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranNo")); //거래번호
+        cnclDstic.setValue(canText); // 취소구분
+        custOgNo.setValue(custno.getValue());
+        Button_receipt.setDisabled(false);
+
+        //인자 구분자 셋팅 
+        receiptDstic.setValue('1'); //20100326 김소영- 확인서인자 1, 그냥 조회 0  
+    } else {
+        Button_receipt.setDisabled(true);
+        receiptDstic.setValue('0'); //20100326 김소영- 확인서인자 1, 그냥 조회 0  
+    }
+};
+
+//20100326 김소영 
+//scroll Lock버튼 클릭 후 실행 하였을 경우 거래내역을 조회하기 위함.
+scwin.UnLockScreen = function() {
+    receiptDstic.setValue('0'); //20100326 김소영- 확인서인자 1, 그냥 조회 0 
+    dataDvsn.setCellData(dataDvsn.getFocusedRowIndex(), "selct", 'N'); //20100326 김소영 체크 선택 해제  
+    Button_receipt.setDisabled(true);
+    fundAttriDstcd.setValue(' ');
+};
+
+//20170801 모집식펀드 정정처리
+scwin.Button_correct_OnClick = async function(e) {
+    //여기에 구현코드를 삽입하세요.
+
+    // 조회된 데이터가 없으면 에러처리
+    if (dataDvsn.getTotalRow() == 0) {
+        $c.iz.data.alert("정정대상거래가 없습니다.", "오류");
+        return;
+    }
+    if (dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "selct") == "N") // 선택안됨
+
+    {
+        $c.iz.data.alert("선택된 거래가 없습니다.", "오류");
+        return;
+    }
+
+    // 이미 취소된 거래를 다시 취소버튼 클릭시 오류
+    var wkcnclYn = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "cnclYn").substring(0, 1); // 그리드내 취소구분
+    /*
+     * 2019.11.26 계좌해지된 계좌는 정정처리 불가
+     * 선택한 거래는 정상인데 계좌상태는 해지된 계좌이면 정정처리 불가
+     */
+    if (wkcnclYn == '0') {
+        var headerRowCnt = dataDvsn.getHeaderRows();
+        for (var i = headerRowCnt; i < (dataDvsn.getTotalRow() + headerRowCnt); i++) {
+            // 계좌해지 거래가 있으면
+            if (wkcnclYn == '0' && dataDvsn.getCellData(i, "tranName").substr(0, 4) == "N301") {
+                // 취소여부(구분) 변경
+                wkcnclYn = 'Z';
+            }
+        }
+    }
+    if (wkcnclYn != '0') {
+        $c.iz.data.alert("이미 정정된 거래는 정정처리가 불가능합니다.", "오류");
+        return;
+    }
+
+    /*
+     * 2019.11.26 정정거래시 외화모집식펀드는 16:00:00 이후 거래 불가
+     * 펀드계좌의 과목코드가 '024'이면 체크함
+     */
+    if (acno.getValue().substring(4, 6) == "24" && Number($c.com.getTime()) > 160000) {
+        $c.iz.data.alert("외화모집식펀드 정정거래는 16시 이후 거래가 불가능합니다.", "오류");
+        return;
+    }
+    var seltrandt = dataDvsn.getCellData(dataDvsn.getFocusedRowIndex(), "tranDte"); // 선택거래년월일    
+
+    //정정처리금액(매입금액 + 수수료)
+    edt_mrv_Amt.setValue(Number(dataDvsn.getCellData(2, "trfer")) + Number(dataDvsn.getCellData(2, "csh")));
+    $c.iz.tran.setTranID("KFG0100112");
+    $c.iz.tran.setInFDData("KFG0100112", "tranDstic", "08"); //거래구분 : 모집식정정 처리 
+    $c.iz.tran.setInFDData("KFG0100112", "mnrcvDstic", mnrcvDstic.getValue()); //입금구분 : 2.연결계좌이체  4.MMF계좌에서 이체
+    $c.iz.tran.setInFDData("KFG0100112", "tranAmtInfo/rceitDstic1", "09"); //수납구분(09:대체)		
+    $c.iz.tran.setInFDData("KFG0100112", "acnInfo/tranYmd", seltrandt); //거래년월일
+    $c.iz.tran.setInFDData("KFG0100112", "acnInfo/tranSerno", 2); //거래일련번호
+    await $c.iz.tran.ASend();
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="거래내역조회" meta_screenId="KFG04202000" groupcocd="KB0" scncall="0450002" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:800px;" screentype="AType" meta_author="신정연" meta_user="S012064(이창현)" meata_date="2009/02/18 15:17:26" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<w2:anchor ctype="LinkText" style="position:absolute; left:450px; top:708px; width:92px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:400;" id="LinkText5" tabIndex="1" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText5_OnClick" orgid="LinkText5" hierarchy="LinkText5" outerDiv="false">
+				<xf:label><![CDATA[자계좌상세]]></xf:label>
+			</w2:anchor>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:96px; width:1056px; height:108px; background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox2" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:35px; top:12px; width:49px; height:24px; color:rgb(0,0,0);" id="Text_KbPin" tabIndex="1" linespace="2" label="KB-PIN" orgid="Text_KbPin" hierarchy="Text_KbPin" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:90px; top:12px; width:84px; height:24px;" id="custno" indicator="고객번호" tabIndex="2" autosize="0" disabled="true" editFormat="99999-99999" maxlength="11" ninemode="0" orgid="custno" hierarchy="custno" ref="data:dma_KFG04202000.custno"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:180px; top:12px; width:298px; height:24px;" id="custnm" indicator="고객명" tabIndex="3" disabled="true" editFormat="H(42)" maxlength="42" ninemode="0" orgid="custnm" hierarchy="custnm" ref="data:dma_KFG04202000.custnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:604px; top:12px; width:58px; height:24px; color:rgb(0,0,0);" id="Text6" tabIndex="4" linespace="2" label="연결계좌" orgid="Text6" hierarchy="Text6" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:666px; top:12px; width:116px; height:24px;" id="lnkgAcno" indicator="연결계좌번호" tabIndex="5" dataType="number" editFormat="######-##-######" maxlength="16" readOnly="true" multipattern="계좌번호" ninemode="0" orgid="lnkgAcno" hierarchy="lnkgAcno" ref="data:dma_KFG04202000.lnkgAcno"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:90px; top:42px; width:74px; height:24px;" id="fundCd" indicator="펀드코드" tabIndex="6" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" readOnly="true" ninemode="0" orgid="fundCd" hierarchy="fundCd" ref="data:dma_KFG04202000.fundCd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:42px; width:588px; height:24px;" id="fundName" indicator="펀드명" tabIndex="7" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="262" imeMode="반자" readOnly="true" ninemode="0" orgid="fundName" hierarchy="fundName" ref="data:dma_KFG04202000.fundName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text7" tabIndex="8" linespace="2" label="펀드유형" orgid="Text7" hierarchy="Text7" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:90px; top:72px; width:52px; height:24px; color:rgb(0,0,0);" id="fundPtrn" indicator="펀드유형" tabIndex="9" disabled="true" keyLength="2" datasource="1" instancefile="103800000" index="0" appearance="minimal" orgid="fundPtrn" hierarchy="fundPtrn" ref="data:dma_KFG04202000.fundPtrn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:552px; top:72px; width:110px; height:24px; color:rgb(0,0,0); display:none;" id="Text14" tabIndex="10" label="펀드속성구분코드" orgid="Text14" hierarchy="Text14" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:666px; top:72px; width:11px; height:24px; display:none;" id="fundAttriDstcd" indicator="펀드속성구분코드" tabIndex="11" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="fundAttriDstcd" hierarchy="fundAttriDstcd" ref="data:dma_KFG04202000.fundAttriDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:690px; top:72px; width:97px; height:24px; color:rgb(0,0,0); display:none;" id="Text_ofernStylYn" tabIndex="12" label="모집식펀드여부" orgid="Text_ofernStylYn" hierarchy="Text_ofernStylYn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:792px; top:72px; width:11px; height:24px; display:none;" id="ofernStylYn" indicator="모집식펀드여부" tabIndex="13" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="ofernStylYn" hierarchy="ofernStylYn" ref="data:dma_KFG04202000.ofernStylYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:816px; top:72px; width:58px; height:24px; color:rgb(0,0,0); display:none;" id="Text_mnrcvDstic" tabIndex="14" label="입금구분" orgid="Text_mnrcvDstic" hierarchy="Text_mnrcvDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:876px; top:72px; width:11px; height:24px; display:none;" id="mnrcvDstic" indicator="입금구분" tabIndex="15" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="mnrcvDstic" hierarchy="mnrcvDstic" ref="data:dma_KFG04202000.mnrcvDstic"/>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:768px; width:505px; height:24px; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Text13_15" tabIndex="3" label="*투자자&amp;nbsp;예탁금&amp;nbsp;확인서&amp;nbsp;발급은&amp;nbsp;차세대오픈(2010.02.16)&amp;nbsp;이후&amp;nbsp;거래내역만&amp;nbsp;가능합니다." orgid="Text13_15" hierarchy="Text13_15" escape="false" class="kb_txt_red kb_MiddleRight"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:486px; top:822px; width:1056px; height:118px; background-color:rgb(238,238,238); display:none;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="4" id="GroupBox4" tabIndex="4" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox4" hierarchy="GroupBox4">
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:6px; width:42px; height:19px; color:rgb(0,0,0); display:none;" id="Text_cnfCustnm" tabIndex="1" label="고객명" orgid="Text_cnfCustnm" hierarchy="Text_cnfCustnm" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:6px; width:298px; height:19px; display:none; font-size:10pt; letter-spacing:0; font-weight:700;" id="cnfCustnm" indicator="고객명" tabIndex="2" disabled="true" editFormat="H(42)" maxlength="42" ninemode="0" orgid="cnfCustnm" hierarchy="cnfCustnm" ref="data:dma_KFG04202000.cnfCustnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:30px; width:54px; height:19px; color:rgb(0,0,0);" id="Text_cnfFundDstic" tabIndex="3" label="펀드코드" orgid="Text_cnfFundDstic" hierarchy="Text_cnfFundDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:30px; width:64px; height:19px; display:none;" id="cnfFundDstic" indicator="펀드코드" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="cnfFundDstic" hierarchy="cnfFundDstic" ref="data:dma_KFG04202000.cnfFundDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:222px; top:30px; width:54px; height:19px; color:rgb(0,0,0); display:none;" id="Text_custOgNo" tabIndex="5" label="고객번호" orgid="Text_custOgNo" hierarchy="Text_custOgNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:306px; top:30px; width:88px; height:19px; display:none;" id="custOgNo" indicator="고객번호" tabIndex="6" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999" maxlength="14" ninemode="0" orgid="custOgNo" hierarchy="custOgNo" ref="data:dma_KFG04202000.custOgNo"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:42px; width:11px; height:19px; display:none; font-size:10pt; letter-spacing:0; font-weight:700;" id="cnclDstic" indicator="취소구분코드" tabIndex="7" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="cnclDstic" hierarchy="cnclDstic" ref="data:dma_KFG04202000.cnclDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:48px; width:78px; height:19px; color:rgb(0,0,0); display:none;" id="Text_cnfMrvamt" tabIndex="8" label="입금예약금액" orgid="Text_cnfMrvamt" hierarchy="Text_cnfMrvamt" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:300px; top:48px; width:78px; height:19px; color:rgb(0,0,0); display:none;" id="Text_cnclDstic" tabIndex="9" label="취소구분코드" orgid="Text_cnclDstic" hierarchy="Text_cnclDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:54px; width:130px; height:19px; display:none; text-align:right; font-size:10pt; letter-spacing:0; font-weight:700;" id="cnfMrvamt" indicator="입금예약금액" tabIndex="10" disabled="true" dataType="number" editFormat="-#,###,###,##9.999" maxlength="18" decimallength="3" ninemode="0" insertcomma="1" rightalign="1" orgid="cnfMrvamt" hierarchy="cnfMrvamt" ref="data:dma_KFG04202000.cnfMrvamt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:78px; width:54px; height:19px; color:rgb(0,0,0); display:none;" id="Text_tranNo" tabIndex="11" label="거래번호" orgid="Text_tranNo" hierarchy="Text_tranNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:414px; top:78px; width:60px; height:19px; display:none; font-size:10pt; letter-spacing:0; font-weight:700;" id="tranDte" indicator="거래일자" tabIndex="12" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" ninemode="0" orgid="tranDte" hierarchy="tranDte" ref="data:dma_KFG04202000.tranDte"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:114px; top:84px; width:53px; height:19px; display:none; font-size:10pt; letter-spacing:0; font-weight:700;" id="tranNo" indicator="거래번호" tabIndex="13" disabled="true" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#######" maxlength="7" ninemode="0" orgid="tranNo" hierarchy="tranNo" ref="data:dma_KFG04202000.tranNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:216px; top:84px; width:54px; height:19px; color:rgb(0,0,0); display:none;" id="Text_tranDte" tabIndex="14" label="거래일자" orgid="Text_tranDte" hierarchy="Text_tranDte" class="kb_MiddleRight"/>
+			</xf:group>
+			<xf:trigger ctype="Button" style="position:absolute; left:834px; top:210px; width:165px; height:24px;" id="Button_receipt" tabIndex="5" disabled="true" text="투자자 예탁금 확인서" type="button" class="btn_def1" ev:onclick="scwin.Button_receipt_OnClick" orgid="Button_receipt" hierarchy="Button_receipt">
+				<xf:label><![CDATA[투자자 예탁금 확인서]]></xf:label>
+			</xf:trigger>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:738px; width:489px; height:24px; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Text13" tabIndex="6" label="*차세대오픈(2010.02.16)&amp;nbsp;이전&amp;nbsp;거래내역에서의&amp;nbsp;세금은&amp;nbsp;[적요1]항목에&amp;nbsp;표기됩니다." orgid="Text13" hierarchy="Text13" escape="false" class="kb_txt_red kb_MiddleRight"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:18px; top:834px; width:1056px; height:134px; background-color:rgb(238,238,238); display:none;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="7" id="GroupBox3" tabIndex="7" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:kb_input ctype="Edit" style="position:absolute; left:18px; top:6px; width:88px; height:24px; display:none;" id="inquryYms" indicator="시스템일시" tabIndex="1" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999999999" maxlength="12" ninemode="0" orgid="inquryYms" hierarchy="inquryYms"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:276px; top:6px; width:116px; height:24px; display:none;" id="acno_1" indicator="계좌번호" tabIndex="2" dataType="number" editFormat="######-##-######" maxlength="16" multipattern="계좌번호" ninemode="0" ev:onviewchange="scwin.acno_1_OnValidate" orgid="acno_1" hierarchy="acno_1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:42px; width:62px; height:24px; color:rgb(0,0,0);" id="Tex10" tabIndex="3" linespace="2" label="총라인수" orgid="Tex10" hierarchy="Tex10" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:186px; top:42px; width:39px; height:24px; align:right; text-align:right;" id="totalLineCnt" indicator="출력라인수" tabIndex="4" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" ninemode="0" rightalign="1" orgid="totalLineCnt" hierarchy="totalLineCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:258px; top:42px; width:76px; height:24px; color:rgb(0,0,0);" id="Text11" tabIndex="5" linespace="2" label="출력라인수" orgid="Text11" hierarchy="Text11" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:396px; top:42px; width:39px; height:24px; align:right; text-align:right;" id="outptLineCnt" indicator="출력라인수" tabIndex="6" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" ninemode="0" rightalign="1" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_KFG04202000.outptLineCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:84px; width:55px; height:24px; color:rgb(0,0,0);" id="Text_nextKey" tabIndex="7" linespace="2" label="NextKey" orgid="Text_nextKey" hierarchy="Text_nextKey" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:186px; top:84px; width:184px; height:24px;" id="nextKey" indicator="NextKey" tabIndex="8" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999" maxlength="100" ninemode="0" orgid="nextKey" hierarchy="nextKey" ref="data:dma_KFG04202000.nextKey"/>
+			</xf:group>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:342px; top:708px; width:100px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:400;" id="LinkText4" tabIndex="8" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText4_OnClick" orgid="LinkText4" hierarchy="LinkText4" outerDiv="false">
+				<xf:label><![CDATA[고객정보조회]]></xf:label>
+			</w2:anchor>
+			<xf:trigger ctype="Button" style="position:absolute; left:870px; top:708px; width:93px; height:24px;" id="Button3" tabIndex="9" text="보고서" type="button" class="btn_def1" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="Button3">
+				<xf:label><![CDATA[보고서]]></xf:label>
+			</xf:trigger>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:216px; top:708px; width:120px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:400;" id="LinkText3" tabIndex="10" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText3_OnClick" orgid="LinkText3" hierarchy="LinkText3" outerDiv="false">
+				<xf:label><![CDATA[출금상세내역조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:108px; top:708px; width:104px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:400;" id="LinkText2" tabIndex="11" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText2_OnClick" orgid="LinkText2" hierarchy="LinkText2" outerDiv="false">
+				<xf:label><![CDATA[지급계산서발급]]></xf:label>
+			</w2:anchor>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:82px; background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="12" id="GroupBox1" tabIndex="12" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:26px; top:12px; width:58px; height:24px; color:rgb(0,0,0);" id="Text1" tabIndex="1" linespace="2" label="계좌번호" orgid="Text1" hierarchy="Text1" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:90px; top:12px; width:116px; height:24px;" id="acno" indicator="계좌번호" tabIndex="2" dataType="number" msread="1" editFormat="######-##-######" maxlength="16" dupname="acno" mandatory="true" class="req" multipattern="계좌번호" validationtype="계좌번호검증" ninemode="0" postprocessing="배출" ev:onviewchange="scwin.acno_OnValidate" orgid="acno" hierarchy="acno" ref="data:dma_KFG04202000.acno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:565px; top:12px; width:97px; height:24px; color:rgb(0,0,0); display:none;" id="Text_receiptDstic" tabIndex="3" label="확인서인자구분" orgid="Text_receiptDstic" hierarchy="Text_receiptDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:666px; top:10px; width:11px; height:24px; display:none;" id="receiptDstic" indicator="확인서인자구분" tabIndex="4" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="receiptDstic" hierarchy="receiptDstic" ref="data:dma_KFG04202000.receiptDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:26px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text2" tabIndex="5" linespace="2" label="조회일자" orgid="Text2" hierarchy="Text2" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:90px; top:42px; width:102px; height:24px;" id="inquryStartYmd" indicator="조회시작일" tabIndex="6" maxlength="10" mandatory="true" class="req" validationtype="유효날짜검증" ninemode="0" showcalendarbutton="1" orgid="inquryStartYmd" hierarchy="inquryStartYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KFG04202000.inquryStartYmd"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:193px; top:42px; width:15px; height:24px; color:rgb(0,0,0); align:middleleft; text-align:middleleft;" id="Desc1" tabIndex="7" imagealign="MiddleLeft" linespace="2" label="~" orgid="Desc1" hierarchy="Desc1" class="kb_MiddleLeft kb_txt_black"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:210px; top:42px; width:102px; height:24px;" id="inquryEndYmd" indicator="조회종료일" tabIndex="8" maxlength="10" mandatory="true" class="req" validationtype="유효날짜검증" ninemode="0" showcalendarbutton="1" orgid="inquryEndYmd" hierarchy="inquryEndYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KFG04202000.inquryEndYmd"/>
+				<xf:select ctype="CheckBox" style="position:absolute; left:318px; top:42px; width:214px; height:24px; color:rgb(0,0,0); font-size:10pt; letter-spacing:0; font-weight:400;" id="lnpMod" indicator="정렬방식" tabIndex="9" OnValue="2" falseValue="1" autodup="0" index="0" orgid="lnpMod" hierarchy="lnpMod" appearance="full" renderType="checkboxgroup" ref="data:dma_KFG04202000.lnpMod">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[역순조회일 경우 체크하세요]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</xf:select>
+				<w2:textbox ctype="Text" style="position:absolute; left:604px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text12" tabIndex="10" linespace="2" label="조회구분" orgid="Text12" hierarchy="Text12" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:666px; top:42px; width:131px; height:24px; color:rgb(0,0,0);" id="tranDstic" indicator="거래구분" tabIndex="11" mandatory="true" class="req" initvalue="0" index="0" items="0=전체;1=입금거래내역;2=출금거래내역;" appearance="minimal" orgid="tranDstic" hierarchy="tranDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFG04202000.tranDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[전체]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[입금거래내역]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[출금거래내역]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+			</xf:group>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:12px; top:708px; width:92px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:400;" id="LinkText1" tabIndex="13" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText1_OnClick" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+				<xf:label><![CDATA[펀드원장조회]]></xf:label>
+			</w2:anchor>
+			<xf:trigger ctype="Button" style="position:absolute; left:1008px; top:210px; width:60px; height:24px;" id="Button1" tabIndex="14" showimage="0" text="취소" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="Button1">
+				<xf:label><![CDATA[취소]]></xf:label>
+			</xf:trigger>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:12px; top:242px; width:1058px; height:460px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dataDvsn" tabIndex="15" tabstop="0" enterstop="0" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" controlmode="Sheet" sheetwidth="1056" sheetheight="460" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="1" mergesheet="msNone" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#cccccc" hiddenbackcolor="#aca899" labelbackcolor="#eeeeee" editablecolordiff="0" datarowheight="24" headrowheight="24" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataDvsn" hierarchy="dataDvsn" ev:oncelldblclick="scwin.dataDvsn_OnDClick" ev:onviewchange="scwin.dataDvsn_OnItemChanged" ev:onclick="scwin.dataDvsn_OnClick" dataList="data:dlt_dataDvsn">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="checkbox" value="선택" width="36"/>
+							<w2:column id="column2" inputType="text" value="거래일자" width="83"/>
+							<w2:column id="column3" inputType="text" value="거래번호" width="97"/>
+							<w2:column id="column4" inputType="text" value="거래명" width="173"/>
+							<w2:column id="column5" inputType="text" value="거래코드" width="100"/>
+							<w2:column id="column6" inputType="text" value="원거래일시" width="93"/>
+							<w2:column id="column7" inputType="text" value="취소복원정보내용" width="100"/>
+							<w2:column id="column8" inputType="text" value="원거래GUID" width="100"/>
+							<w2:column id="column9" inputType="text" value="연동정보" width="63"/>
+							<w2:column id="column10" inputType="text" value="취소구분" width="61"/>
+							<w2:column id="column11" inputType="text" value="거래좌수" width="151"/>
+							<w2:column id="column12" inputType="text" value="거래금액" width="142"/>
+							<w2:column id="column13" inputType="text" value="잔고좌수" width="146"/>
+							<w2:column id="column14" inputType="text" value="평가금액" width="141"/>
+							<w2:column id="column15" inputType="text" value="평가금액기준가" width="147"/>
+							<w2:column id="column16" inputType="text" value="과표기준가" width="150"/>
+							<w2:column id="column17" inputType="text" value="수수료" width="145"/>
+							<w2:column id="column18" inputType="text" value="세금" width="155"/>
+							<w2:column id="column19" inputType="text" value="수표" width="142"/>
+							<w2:column id="column20" inputType="text" value="대체" width="147"/>
+							<w2:column id="column21" inputType="text" value="현금" width="138"/>
+							<w2:column id="column22" inputType="text" value="거래시간" width="77"/>
+							<w2:column id="column23" inputType="text" value="무통장의뢰인" width="123"/>
+							<w2:column id="column24" inputType="text" value="채널구분" width="82"/>
+							<w2:column id="column25" inputType="text" value="처리부점코드" width="100"/>
+							<w2:column id="column26" inputType="text" value="단말번호" width="75"/>
+							<w2:column id="column27" inputType="text" value="거래직원번호" width="95"/>
+							<w2:column id="column28" inputType="text" value="책임자번호" width="90"/>
+							<w2:column id="column29" inputType="text" value="펀드코드" width="119"/>
+							<w2:column id="column30" inputType="text" value="적요1" width="323"/>
+							<w2:column id="column31" inputType="text" value="적요2" width="329"/>
+							<w2:column id="column32" inputType="text" value="취소정정가능여부" width="100"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="selct" inputType="checkbox" width="36" hidden="false"/>
+							<w2:column id="tranDte_01" inputType="text" width="83" hidden="false"/>
+							<w2:column id="tranNo_01" inputType="text" width="97" hidden="false"/>
+							<w2:column id="tranName" inputType="dtComboEdit" width="173" hidden="false"/>
+							<w2:column id="tranCd" inputType="text" width="100" hidden="true"/>
+							<w2:column id="ogtranYMS" inputType="text" width="93" hidden="true"/>
+							<w2:column id="cnclRstrInfoCtnt" inputType="text" width="100" hidden="true"/>
+							<w2:column id="ogtranGuid" inputType="text" width="100" hidden="true"/>
+							<w2:column id="cupldTranDstcd" inputType="dtComboEdit" width="63" hidden="false"/>
+							<w2:column id="cnclYn" inputType="dtComboEdit" width="61" hidden="false"/>
+							<w2:column id="tranNoacc" inputType="text" width="151" hidden="false"/>
+							<w2:column id="tranAmt" inputType="text" width="142" hidden="false"/>
+							<w2:column id="rmandrNoacc" inputType="text" width="146" hidden="false"/>
+							<w2:column id="valpr" inputType="text" width="141" hidden="false"/>
+							<w2:column id="valprBsprc" inputType="text" width="147" hidden="false"/>
+							<w2:column id="s01" inputType="text" width="150" hidden="false"/>
+							<w2:column id="fee" inputType="text" width="145" hidden="false"/>
+							<w2:column id="tax" inputType="text" width="155" hidden="false"/>
+							<w2:column id="chek" inputType="text" width="142" hidden="false"/>
+							<w2:column id="trfer" inputType="text" width="147" hidden="false"/>
+							<w2:column id="csh" inputType="text" width="138" hidden="false"/>
+							<w2:column id="tranTtm" inputType="text" width="77" hidden="false"/>
+							<w2:column id="npsRqstr" inputType="text" width="123" hidden="false"/>
+							<w2:column id="chnlDstic" inputType="dtComboEdit" width="82" hidden="false"/>
+							<w2:column id="prcssBrncd" inputType="text" width="100" hidden="false"/>
+							<w2:column id="trmno" inputType="text" width="75" hidden="false"/>
+							<w2:column id="tranEmpid" inputType="text" width="95" hidden="false"/>
+							<w2:column id="spvsrNo" inputType="text" width="90" hidden="false"/>
+							<w2:column id="tranFundCd" inputType="text" width="119" hidden="false"/>
+							<w2:column id="sumry1" inputType="text" width="323" hidden="false"/>
+							<w2:column id="sumry2" inputType="text" width="329" hidden="false"/>
+							<w2:column id="cnclCTranAbilYn" inputType="text" width="100" hidden="true"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<xf:trigger ctype="Button" style="position:absolute; left:972px; top:708px; width:97px; height:24px;" id="Button2" tabIndex="16" showimage="0" text="엑셀내보내기" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+				<xf:label><![CDATA[엑셀내보내기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox ctype="Text" style="position:absolute; left:36px; top:138px; width:58px; height:24px; color:rgb(0,0,0);" id="Text5" tabIndex="17" linespace="2" label="펀드정보" orgid="Text5" hierarchy="Text5" class="kb_MiddleRight"/>
+			<xf:trigger ctype="Button" style="position:absolute; left:1008px; top:210px; width:60px; height:24px;" id="Button_correct" tabIndex="18" showimage="0" text="정정" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button_correct_OnClick" orgid="Button_correct" hierarchy="Button_correct">
+				<xf:label><![CDATA[정정]]></xf:label>
+			</xf:trigger>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:660px; top:210px; width:165px; height:24px; display:none; text-align:right;" id="edt_mrv_Amt" indicator="수납금액1" tabIndex="19" dataType="number" displayFormat="###,###,###,###,###.###" maxlength="23" decimallength="2" ninemode="0" insertcomma="1" rightalign="1" orgid="edt_mrv_Amt" hierarchy="edt_mrv_Amt" ref="data:dma_KFG04202000.edt_mrv_Amt"/>
+		</xf:group>
+	</body>
+</html>

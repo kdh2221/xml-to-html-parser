@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KFC04001000.scn"  meta_screenId="KFC04001000" meta_screenName="여신원장조회" meta_desc="" meta_author="S012021(박찬일)">
+		<w2:type craft="true" craftSrc="/xml/KFC04001000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KFC0400140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KFC0400140_INPUT":{"@id":"dma_KFC0400140_INPUT","acno":"acno","exeNo":"exeNo","outptDstcd":"outptDstcd","inquryYn1":"inquryYn1"}},"target":{"dma_KFC0400140_OUTPUT_screen___KFC04001000":{"@id":"dma_KFC0400140_OUTPUT_screen___KFC04001000","bascInfo__spare5":"bascInfo__spare5","bascInfo__aBTAcnDstic":"bascInfo__aBTAcnDstic","bascInfo__ovrduIrtAplyBaseDd":"bascInfo__ovrduIrtAplyBaseDd","bascInfo__scrtRelatdNoti":"bascInfo__scrtRelatdNoti","fndtInfo__acno1":"fndtInfo__acno1","fndtInfo__exeNo1":"fndtInfo__exeNo1","fndtInfo__olAcnExeNo":"fndtInfo__olAcnExeNo","fndtInfo__ssno":"fndtInfo__ssno","fndtInfo__ctcrCustIdnfr":"fndtInfo__ctcrCustIdnfr","fndtInfo__ctcrCustMgtNo":"fndtInfo__ctcrCustMgtNo","fndtInfo__custnm":"fndtInfo__custnm","fndtInfo__prdctLagClsfiCd":"fndtInfo__prdctLagClsfiCd","fndtInfo__prdctMedmClsfiCd":"fndtInfo__prdctMedmClsfiCd","fndtInfo__prdctTmpltCd":"fndtInfo__prdctTmpltCd","fndtInfo__prdctNo":"fndtInfo__prdctNo","fndtInfo__prdctName":"fndtInfo__prdctName","fndtInfo__lnQulfiDstic":"fndtInfo__lnQulfiDstic","fndtInfo__lnQulfiName":"fndtInfo__lnQulfiName","fndtInfo__ctrcStusDstcd":"fndtInfo__ctrcStusDstcd","fndtInfo__ctrcStusName":"fndtInfo__ctrcStusName","fndtInfo__ctrcNthCretnResnDstcd":"fndtInfo__ctrcNthCretnResnDstcd","fndtInfo__ctrcNthCretnResnName":"fndtInfo__ctrcNthCretnResnName","fndtInfo__ctrcNthDscrdResnDstcd":"fndtInfo__ctrcNthDscrdResnDstcd","fndtInfo__ctrcNthDscrdResnName":"fndtInfo__ctrcNthDscrdResnName","bascInfo__agreDte":"bascInfo__agreDte","bascInfo__mgtbrn":"bascInfo__mgtbrn","bascInfo__mgtbrnName":"bascInfo__mgtbrnName","bascInfo__cncycd":"bascInfo__cncycd","bascInfo__cnpr":"bascInfo__cnpr","bascInfo__expirDdPsn":"bascInfo__expirDdPsn","bascInfo__solicBrn":"bascInfo__solicBrn","bascInfo__solicBrnName":"bascInfo__solicBrnName","bascInfo__lnExeCutamt":"bascInfo__lnExeCutamt","bascInfo__lastIntCalcDd":"bascInfo__lastIntCalcDd","bascInfo__docsKeepBrn":"bascInfo__docsKeepBrn","bascInfo__docsKeepBrnName":"bascInfo__docsKeepBrnName","bascInfo__lnBal":"bascInfo__lnBal","bascInfo__nextPaymtDd":"bascInfo__nextPaymtDd","bascInfo__lastTrnbrn":"bascInfo__lastTrnbrn","bascInfo__lastTranBrnName":"bascInfo__lastTranBrnName","bascInfo__hgstAgreAmt":"bascInfo__hgstAgreAmt","bascInfo__lastTranDd":"bascInfo__lastTranDd","bascInfo__ctrcTrmCnt":"bascInfo__ctrcTrmCnt","bascInfo__ctrcTrmUnitDsticName":"bascInfo__ctrcTrmUnitDsticName","bascInfo__rpayWayDstic":"bascInfo__rpayWayDstic","bascInfo__rpayWayName":"bascInfo__rpayWayName","bascInfo__cretnYmd":"bascInfo__cretnYmd","bascInfo__tmdferCnt":"bascInfo__tmdferCnt","bascInfo__intAhedPstaqDstcd":"bascInfo__intAhedPstaqDstcd","bascInfo__intAhedPstaqDsticName":"bascInfo__intAhedPstaqDsticName","bascInfo__intCalcUnitDstic":"bascInfo__intCalcUnitDstic","bascInfo__intCalcUnitDsticName":"bascInfo__intCalcUnitDsticName","bascInfo__dscrdDte":"bascInfo__dscrdDte","bascInfo__ppayNoday":"bascInfo__ppayNoday","bascInfo__agrePaymtDd":"bascInfo__agrePaymtDd","bascInfo__uncolcBndAcnStusDstcd":"bascInfo__uncolcBndAcnStusDstcd","bascInfo__uncolcBndAcnStusDstic":"bascInfo__uncolcBndAcnStusDstic","bascInfo__lastTranIrt":"bascInfo__lastTranIrt","bascInfo__lnbzBascIrtDstcd":"bascInfo__lnbzBascIrtDstcd","bascInfo__lnbzBascIrtDstic":"bascInfo__lnbzBascIrtDstic","bascInfo__crsppoRegiDstcd":"bascInfo__crsppoRegiDstcd","bascInfo__crsppoRegiDstic":"bascInfo__crsppoRegiDstic","bascInfo__ovrduYn":"bascInfo__ovrduYn","bascInfo__lspyNth":"bascInfo__lspyNth","bascInfo__aBTDd":"bascInfo__aBTDd","bascInfo__cyclPerFixIrtDstic":"bascInfo__cyclPerFixIrtDstic","bascInfo__cyclPerFixIrtDsticName":"bascInfo__cyclPerFixIrtDsticName","bascInfo__aBTAcno":"bascInfo__aBTAcno","bascInfo__lnbzAthorNo":"bascInfo__lnbzAthorNo","bascInfo__irtFlxblCyclDstic":"bascInfo__irtFlxblCyclDstic","bascInfo__irtFlxblCyclDsticName":"bascInfo__irtFlxblCyclDsticName","bascInfo__intgraAfAcno":"bascInfo__intgraAfAcno","bascInfo__kCGFAcno":"bascInfo__kCGFAcno","bascInfo__intPaymtCyclDstic":"bascInfo__intPaymtCyclDstic","bascInfo__intPaymtCyclDsticName":"bascInfo__intPaymtCyclDsticName","bascInfo__grntyIsupolNo":"bascInfo__grntyIsupolNo","bascInfo__limtAcno":"bascInfo__limtAcno","bascInfo__prcplPaymtCyclDstic":"bascInfo__prcplPaymtCyclDstic","bascInfo__prcplPaymtCyclDsticName":"bascInfo__prcplPaymtCyclDsticName","bascInfo__lnbzAthorAplcnNo":"bascInfo__lnbzAthorAplcnNo","bascInfo__lnbzAthorAplcnSerno":"bascInfo__lnbzAthorAplcnSerno","bascInfo__spare4":"bascInfo__spare4","bascInfo__exmtnARceptNo":"bascInfo__exmtnARceptNo","bascInfo__mainScurtyDstic":"bascInfo__mainScurtyDstic","bascInfo__msgCtnt":"bascInfo__msgCtnt"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KIG11AGBB0" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KIG11AGBB0_INPUT":{"@id":"dma_KIG11AGBB0_INPUT","lnbzAthorAplcnNo":"lnbzAthorAplcnNo","junalAcno":"junalAcno","junalzIrt":"junalzIrt","scurtyDstcd":"scurtyDstcd","prdctLagClsfiCd":"prdctLagClsfiCd","prdctMedmClsfiCd":"prdctMedmClsfiCd","prdctTmpltCd":"prdctTmpltCd","prdctNo":"prdctNo","lnQulfiDstic":"lnQulfiDstic","mgtBrncd":"mgtBrncd","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo"}},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFC0400140_INPUT" TranClass="MCI" SvcCode="KFC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="16" CtrlId="acno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="exeNo" length="7" CtrlId="exeNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="outptDstcd" length="0" CtrlId="outptDstcd" Type="Combo"/>
+						<w2:key dataType="text" name="" id="inquryYn1" length="0" CtrlId="outptDstcd_2" Type="Combo"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFC0400140_OUTPUT_screen___KFC04001000" TranClass="MCI" SvcCode="KFC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="bascInfo__spare5" length="20" CtrlId="spare5" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__aBTAcnDstic" length="1" CtrlId="aBTAcnDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__ovrduIrtAplyBaseDd" length="8" CtrlId="ovrduIrtAplyBaseDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__scrtRelatdNoti" length="100" CtrlId="scrtRelatdNoti" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__acno1" length="20" CtrlId="acno1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__exeNo1" length="7" CtrlId="exeNo1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__olAcnExeNo" length="8" CtrlId="olAcnExeNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ssno" length="20" CtrlId="ssno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctcrCustIdnfr" length="10" CtrlId="ctcrCustIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctcrCustMgtNo" length="5" CtrlId="ctcrCustMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__custnm" length="52" CtrlId="custnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__prdctLagClsfiCd" length="2" CtrlId="prdctLagClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__prdctMedmClsfiCd" length="2" CtrlId="prdctMedmClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__prdctTmpltCd" length="3" CtrlId="prdctTmpltCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__prdctNo" length="5" CtrlId="prdctNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__prdctName" length="72" CtrlId="prdctName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__lnQulfiDstic" length="3" CtrlId="lnQulfiDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__lnQulfiName" length="80" CtrlId="lnQulfiName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcStusDstcd" length="1" CtrlId="ctrcStusDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcStusName" length="10" CtrlId="ctrcStusName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcNthCretnResnDstcd" length="3" CtrlId="ctrcNthCretnResnDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcNthCretnResnName" length="32" CtrlId="ctrcNthCretnResnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcNthDscrdResnDstcd" length="3" CtrlId="ctrcNthDscrdResnDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="fndtInfo__ctrcNthDscrdResnName" length="32" CtrlId="ctrcNthDscrdResnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__agreDte" length="8" CtrlId="agreDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__mgtbrn" length="4" CtrlId="mgtbrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__mgtbrnName" length="22" CtrlId="mgtbrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__cncycd" length="3" CtrlId="cncycd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__cnpr" length="17" CtrlId="cnpr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__expirDdPsn" length="8" CtrlId="expirDdPsn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__solicBrn" length="4" CtrlId="solicBrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__solicBrnName" length="22" CtrlId="solicBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnExeCutamt" length="17" CtrlId="lnExeCutamt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lastIntCalcDd" length="8" CtrlId="lastIntCalcDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__docsKeepBrn" length="4" CtrlId="docsKeepBrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__docsKeepBrnName" length="22" CtrlId="docsKeepBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnBal" length="17" CtrlId="lnBal" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__nextPaymtDd" length="8" CtrlId="nextPaymtDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lastTrnbrn" length="4" CtrlId="lastTrnbrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lastTranBrnName" length="22" CtrlId="lastTranBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__hgstAgreAmt" length="17" CtrlId="hgstAgreAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lastTranDd" length="8" CtrlId="lastTranDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__ctrcTrmCnt" length="3" CtrlId="ctrcTrmCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__ctrcTrmUnitDsticName" length="10" CtrlId="ctrcTrmUnitDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__rpayWayDstic" length="2" CtrlId="rpayWayDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__rpayWayName" length="22" CtrlId="rpayWayName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__cretnYmd" length="8" CtrlId="cretnYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__tmdferCnt" length="3" CtrlId="tmdferCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intAhedPstaqDstcd" length="1" CtrlId="intAhedPstaqDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intAhedPstaqDsticName" length="10" CtrlId="intAhedPstaqDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intCalcUnitDstic" length="2" CtrlId="intCalcUnitDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intCalcUnitDsticName" length="14" CtrlId="intCalcUnitDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__dscrdDte" length="8" CtrlId="dscrdDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__ppayNoday" length="5" CtrlId="ppayNoday" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__agrePaymtDd" length="2" CtrlId="agrePaymtDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__uncolcBndAcnStusDstcd" length="1" CtrlId="uncolcBndAcnStusDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__uncolcBndAcnStusDstic" length="22" CtrlId="uncolcBndAcnStusDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lastTranIrt" length="9" CtrlId="lastTranIrt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnbzBascIrtDstcd" length="2" CtrlId="lnbzBascIrtDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnbzBascIrtDstic" length="30" CtrlId="lnbzBascIrtDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__crsppoRegiDstcd" length="2" CtrlId="crsppoRegiDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__crsppoRegiDstic" length="22" CtrlId="crsppoRegiDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__ovrduYn" length="10" CtrlId="ovrduYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lspyNth" length="5" CtrlId="lspyNth" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__aBTDd" length="2" CtrlId="aBTDd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__cyclPerFixIrtDstic" length="1" CtrlId="cyclPerFixIrtDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__cyclPerFixIrtDsticName" length="10" CtrlId="cyclPerFixIrtDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__aBTAcno" length="16" CtrlId="aBTAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnbzAthorNo" length="20" CtrlId="lnbzAthorNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__irtFlxblCyclDstic" length="3" CtrlId="irtFlxblCyclDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__irtFlxblCyclDsticName" length="14" CtrlId="irtFlxblCyclDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intgraAfAcno" length="16" CtrlId="intgraAfAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__kCGFAcno" length="20" CtrlId="kCGFAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intPaymtCyclDstic" length="3" CtrlId="intPaymtCyclDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__intPaymtCyclDsticName" length="22" CtrlId="intPaymtCyclDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__grntyIsupolNo" length="18" CtrlId="grntyIsupolNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__limtAcno" length="20" CtrlId="limtAcno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__prcplPaymtCyclDstic" length="3" CtrlId="prcplPaymtCyclDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__prcplPaymtCyclDsticName" length="22" CtrlId="prcplPaymtCyclDsticName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnbzAthorAplcnNo" length="13" CtrlId="lnbzAthorAplcnNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__lnbzAthorAplcnSerno" length="3" CtrlId="lnbzAthorAplcnSerno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__spare4" length="3" CtrlId="spare4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__exmtnARceptNo" length="20" CtrlId="exmtnARceptNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__mainScurtyDstic" length="3" CtrlId="mainScurtyDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="bascInfo__msgCtnt" length="10" CtrlId="msgCtnt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KIG11AGBB0_INPUT" TranClass="MCI" SvcCode="KIG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="lnbzAthorAplcnNo" length="13" CtrlId="lnbzAthorAplcnNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="junalAcno" length="20" CtrlId="acno1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="junalzIrt" length="9" CtrlId="lastTranIrt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="scurtyDstcd" length="3" CtrlId="mainScurtyDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctLagClsfiCd" length="2" CtrlId="prdctLagClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctMedmClsfiCd" length="2" CtrlId="prdctMedmClsfiCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctTmpltCd" length="3" CtrlId="prdctTmpltCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctNo" length="5" CtrlId="prdctNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="lnQulfiDstic" length="3" CtrlId="lnQulfiDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mgtBrncd" length="4" CtrlId="mgtbrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="ctcrCustIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="ctcrCustMgtNo" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KIG11AGBB0_OUTPUT" TranClass="MCI" SvcCode="KIG" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KFC04001000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[실명증표조회]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KFC04001000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="acno" length="16" CtrlId="acno"/>
+						<w2:key dataType="text" name="" id="exeNo" length="7" CtrlId="exeNo"/>
+						<w2:key dataType="text" name="" id="outptDstcd" length="0" CtrlId="outptDstcd"/>
+						<w2:key dataType="text" name="" id="outptDstcd_2" length="0" CtrlId="outptDstcd_2"/>
+						<w2:key dataType="text" name="" id="spare5" length="20" CtrlId="spare5"/>
+						<w2:key dataType="text" name="" id="aBTAcnDstic" length="1" CtrlId="aBTAcnDstic"/>
+						<w2:key dataType="text" name="" id="ovrduIrtAplyBaseDd" length="8" CtrlId="ovrduIrtAplyBaseDd"/>
+						<w2:key dataType="text" name="" id="scrtRelatdNoti" length="100" CtrlId="scrtRelatdNoti"/>
+						<w2:key dataType="text" name="" id="acno1" length="20" CtrlId="acno1"/>
+						<w2:key dataType="text" name="" id="exeNo1" length="7" CtrlId="exeNo1"/>
+						<w2:key dataType="text" name="" id="olAcnExeNo" length="8" CtrlId="olAcnExeNo"/>
+						<w2:key dataType="text" name="" id="ssno" length="20" CtrlId="ssno"/>
+						<w2:key dataType="text" name="" id="ctcrCustIdnfr" length="10" CtrlId="ctcrCustIdnfr"/>
+						<w2:key dataType="text" name="" id="ctcrCustMgtNo" length="5" CtrlId="ctcrCustMgtNo"/>
+						<w2:key dataType="text" name="" id="custnm" length="52" CtrlId="custnm"/>
+						<w2:key dataType="text" name="" id="prdctLagClsfiCd" length="2" CtrlId="prdctLagClsfiCd"/>
+						<w2:key dataType="text" name="" id="prdctMedmClsfiCd" length="2" CtrlId="prdctMedmClsfiCd"/>
+						<w2:key dataType="text" name="" id="prdctTmpltCd" length="3" CtrlId="prdctTmpltCd"/>
+						<w2:key dataType="text" name="" id="prdctNo" length="5" CtrlId="prdctNo"/>
+						<w2:key dataType="text" name="" id="prdctName" length="72" CtrlId="prdctName"/>
+						<w2:key dataType="text" name="" id="lnQulfiDstic" length="3" CtrlId="lnQulfiDstic"/>
+						<w2:key dataType="text" name="" id="lnQulfiName" length="80" CtrlId="lnQulfiName"/>
+						<w2:key dataType="text" name="" id="ctrcStusDstcd" length="1" CtrlId="ctrcStusDstcd"/>
+						<w2:key dataType="text" name="" id="ctrcStusName" length="10" CtrlId="ctrcStusName"/>
+						<w2:key dataType="text" name="" id="ctrcNthCretnResnDstcd" length="3" CtrlId="ctrcNthCretnResnDstcd"/>
+						<w2:key dataType="text" name="" id="ctrcNthCretnResnName" length="32" CtrlId="ctrcNthCretnResnName"/>
+						<w2:key dataType="text" name="" id="ctrcNthDscrdResnDstcd" length="3" CtrlId="ctrcNthDscrdResnDstcd"/>
+						<w2:key dataType="text" name="" id="ctrcNthDscrdResnName" length="32" CtrlId="ctrcNthDscrdResnName"/>
+						<w2:key dataType="text" name="" id="agreDte" length="8" CtrlId="agreDte"/>
+						<w2:key dataType="text" name="" id="mgtbrn" length="4" CtrlId="mgtbrn"/>
+						<w2:key dataType="text" name="" id="mgtbrnName" length="22" CtrlId="mgtbrnName"/>
+						<w2:key dataType="text" name="" id="cncycd" length="3" CtrlId="cncycd"/>
+						<w2:key dataType="text" name="" id="cnpr" length="17" CtrlId="cnpr"/>
+						<w2:key dataType="text" name="" id="expirDdPsn" length="8" CtrlId="expirDdPsn"/>
+						<w2:key dataType="text" name="" id="solicBrn" length="4" CtrlId="solicBrn"/>
+						<w2:key dataType="text" name="" id="solicBrnName" length="22" CtrlId="solicBrnName"/>
+						<w2:key dataType="text" name="" id="lnExeCutamt" length="17" CtrlId="lnExeCutamt"/>
+						<w2:key dataType="text" name="" id="lastIntCalcDd" length="8" CtrlId="lastIntCalcDd"/>
+						<w2:key dataType="text" name="" id="docsKeepBrn" length="4" CtrlId="docsKeepBrn"/>
+						<w2:key dataType="text" name="" id="docsKeepBrnName" length="22" CtrlId="docsKeepBrnName"/>
+						<w2:key dataType="text" name="" id="lnBal" length="17" CtrlId="lnBal"/>
+						<w2:key dataType="text" name="" id="nextPaymtDd" length="8" CtrlId="nextPaymtDd"/>
+						<w2:key dataType="text" name="" id="lastTrnbrn" length="4" CtrlId="lastTrnbrn"/>
+						<w2:key dataType="text" name="" id="lastTranBrnName" length="22" CtrlId="lastTranBrnName"/>
+						<w2:key dataType="text" name="" id="hgstAgreAmt" length="17" CtrlId="hgstAgreAmt"/>
+						<w2:key dataType="text" name="" id="lastTranDd" length="8" CtrlId="lastTranDd"/>
+						<w2:key dataType="text" name="" id="ctrcTrmCnt" length="3" CtrlId="ctrcTrmCnt"/>
+						<w2:key dataType="text" name="" id="ctrcTrmUnitDsticName" length="10" CtrlId="ctrcTrmUnitDsticName"/>
+						<w2:key dataType="text" name="" id="rpayWayDstic" length="2" CtrlId="rpayWayDstic"/>
+						<w2:key dataType="text" name="" id="rpayWayName" length="22" CtrlId="rpayWayName"/>
+						<w2:key dataType="text" name="" id="cretnYmd" length="8" CtrlId="cretnYmd"/>
+						<w2:key dataType="text" name="" id="tmdferCnt" length="3" CtrlId="tmdferCnt"/>
+						<w2:key dataType="text" name="" id="intAhedPstaqDstcd" length="1" CtrlId="intAhedPstaqDstcd"/>
+						<w2:key dataType="text" name="" id="intAhedPstaqDsticName" length="10" CtrlId="intAhedPstaqDsticName"/>
+						<w2:key dataType="text" name="" id="intCalcUnitDstic" length="2" CtrlId="intCalcUnitDstic"/>
+						<w2:key dataType="text" name="" id="intCalcUnitDsticName" length="14" CtrlId="intCalcUnitDsticName"/>
+						<w2:key dataType="text" name="" id="dscrdDte" length="8" CtrlId="dscrdDte"/>
+						<w2:key dataType="text" name="" id="ppayNoday" length="5" CtrlId="ppayNoday"/>
+						<w2:key dataType="text" name="" id="agrePaymtDd" length="2" CtrlId="agrePaymtDd"/>
+						<w2:key dataType="text" name="" id="uncolcBndAcnStusDstcd" length="1" CtrlId="uncolcBndAcnStusDstcd"/>
+						<w2:key dataType="text" name="" id="uncolcBndAcnStusDstic" length="22" CtrlId="uncolcBndAcnStusDstic"/>
+						<w2:key dataType="text" name="" id="lastTranIrt" length="9" CtrlId="lastTranIrt"/>
+						<w2:key dataType="text" name="" id="lnbzBascIrtDstcd" length="2" CtrlId="lnbzBascIrtDstcd"/>
+						<w2:key dataType="text" name="" id="lnbzBascIrtDstic" length="30" CtrlId="lnbzBascIrtDstic"/>
+						<w2:key dataType="text" name="" id="crsppoRegiDstcd" length="2" CtrlId="crsppoRegiDstcd"/>
+						<w2:key dataType="text" name="" id="crsppoRegiDstic" length="22" CtrlId="crsppoRegiDstic"/>
+						<w2:key dataType="text" name="" id="ovrduYn" length="10" CtrlId="ovrduYn"/>
+						<w2:key dataType="text" name="" id="lspyNth" length="5" CtrlId="lspyNth"/>
+						<w2:key dataType="text" name="" id="aBTDd" length="2" CtrlId="aBTDd"/>
+						<w2:key dataType="text" name="" id="cyclPerFixIrtDstic" length="1" CtrlId="cyclPerFixIrtDstic"/>
+						<w2:key dataType="text" name="" id="cyclPerFixIrtDsticName" length="10" CtrlId="cyclPerFixIrtDsticName"/>
+						<w2:key dataType="text" name="" id="aBTAcno" length="16" CtrlId="aBTAcno"/>
+						<w2:key dataType="text" name="" id="lnbzAthorNo" length="20" CtrlId="lnbzAthorNo"/>
+						<w2:key dataType="text" name="" id="irtFlxblCyclDstic" length="3" CtrlId="irtFlxblCyclDstic"/>
+						<w2:key dataType="text" name="" id="irtFlxblCyclDsticName" length="14" CtrlId="irtFlxblCyclDsticName"/>
+						<w2:key dataType="text" name="" id="intgraAfAcno" length="16" CtrlId="intgraAfAcno"/>
+						<w2:key dataType="text" name="" id="kCGFAcno" length="20" CtrlId="kCGFAcno"/>
+						<w2:key dataType="text" name="" id="intPaymtCyclDstic" length="3" CtrlId="intPaymtCyclDstic"/>
+						<w2:key dataType="text" name="" id="intPaymtCyclDsticName" length="22" CtrlId="intPaymtCyclDsticName"/>
+						<w2:key dataType="text" name="" id="grntyIsupolNo" length="18" CtrlId="grntyIsupolNo"/>
+						<w2:key dataType="text" name="" id="limtAcno" length="20" CtrlId="limtAcno"/>
+						<w2:key dataType="text" name="" id="prcplPaymtCyclDstic" length="3" CtrlId="prcplPaymtCyclDstic"/>
+						<w2:key dataType="text" name="" id="prcplPaymtCyclDsticName" length="22" CtrlId="prcplPaymtCyclDsticName"/>
+						<w2:key dataType="text" name="" id="lnbzAthorAplcnNo" length="13" CtrlId="lnbzAthorAplcnNo"/>
+						<w2:key dataType="text" name="" id="lnbzAthorAplcnSerno" length="3" CtrlId="lnbzAthorAplcnSerno"/>
+						<w2:key dataType="text" name="" id="spare4" length="3" CtrlId="spare4"/>
+						<w2:key dataType="text" name="" id="exmtnARceptNo" length="20" CtrlId="exmtnARceptNo"/>
+						<w2:key dataType="text" name="" id="mainScurtyDstic" length="3" CtrlId="mainScurtyDstic"/>
+						<w2:key dataType="text" name="" id="msgCtnt" length="10" CtrlId="msgCtnt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+//XXXXXXXXXX The K 프로젝트 패키지 적용 START XXXXXXXXXX//
+scwin.strPackageCallYesNo = "N"; //패키지호출여부
+scwin.objPackageCustLinkData = "";
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {}; //패키지고객정보
+//XXXXXXXXXX The K 프로젝트 패키지 적용 E N D XXXXXXXXXX//
+
+//**************  TAB clear  ***********************************************************************//
+
+scwin.OnSendKey = async function() {
+    if (scwin.Sunap_Check()) {
+
+
+    } else {
+        return;
+    }
+
+    //화면 새로고침없이 거래할 경우 기존출력데이타 init (꼭 해주어야함)
+    $c.iz.data.setChildData("cleartab_01()", "Panel1");
+    $c.iz.data.setChildData("cleartab_02()", "Panel2");
+    $c.iz.data.setChildData("cleartab_03()", "Panel3");
+    GroupBox6.setValue("");
+    GroupBox7.setValue("");
+    scrtRelatdNoti.hide();
+    scrtRelatdNoti.setValue();
+    TAB1.setSelectedTabIndex(0);
+    $c.iz.tran.setTranID("KFC0400140");
+    await $c.iz.tran.ASend();
+    if (hgstAgreAmt.getValue() == 0) {
+        LinkText8.hide();
+    } else {
+        LinkText8.show('');
+    }
+};
+
+
+
+//**************  입력화면 (바로가기)  ****************************************************************//
+
+scwin.LinkText1_OnClick = function(e) {
+    //대출금이자및상환예비조회
+    Link.acno = acno.getValue();
+    Link.exeNo = exeNo.getValue();
+    $c.iz.screen.screenOpen("KFC04019000", "DATALINK");
+};
+
+scwin.LinkText2_OnClick = function(e) {
+    //거래내역조회
+    Link.acno = acno.getValue();
+    Link.exeNo = exeNo.getValue();
+    $c.iz.screen.screenOpen("KFC04011000", "DATALINK");
+};
+
+scwin.LinkText3_OnClick = function(e) {
+    //계좌적용이율조회
+    Link.acno = acno.getValue();
+    Link.exeNo = exeNo.getValue();
+    $c.iz.screen.screenOpen("KFC04068000", "DATALINK");
+};
+
+scwin.LinkText4_OnClick = function(e) {
+    //고객종합정보조회
+    Link.serchNoDstcd = "2";
+    Link.serchNo = acno.getValue();
+    $c.iz.screen.screenOpen("KAA04300000", "DATALINK");
+};
+
+scwin.LinkText5_OnClick = function(e) {
+    //담보내역조회
+    Link.inquryDstic = "2";
+    Link.scurtyLnbzAcno = acno.getValue();
+    $c.iz.screen.screenOpen("KIE04611000", "DATALINK");
+};
+
+scwin.LinkText6_OnClick = function(e) {
+    //한도조회
+    //Link.inquryDstcd = "1";
+    //Link.acno = acno.Data;
+    $c.iz.screen.screenOpen("KFC04089000", "");
+};
+
+scwin.LinkText7_OnClick = function(e) {
+    //여신기타조회
+    Link.acno = acno.getValue();
+    Link.exeNo = exeNo.getValue();
+    $c.iz.screen.screenOpen("KFC04002000", "DATALINK");
+};
+
+scwin.LinkText7_1_OnClick = function(e) {
+    //여신조건변경
+    Link.tranKnd = '01';
+    Link.acno = acno.getValue();
+    $c.iz.screen.screenOpen("KHC05210000", "DATALINK");
+};
+
+scwin.LinkText8_OnClick = function(e) {
+    //수신 원장조회
+    Link.acno = acno.getValue();
+    $c.iz.screen.screenOpen("KFA04009000", "DATALINK");
+};
+
+scwin.LinkText1_10_OnClick = function(e) {
+    //채무자기본정보
+    //alert(""+ctcrCustIdnfr.Data.length,"")
+    if (ctcrCustIdnfr.getValue().length > 0) {
+        //Link.cuniqno = acno.Data;
+        //Link.cuniqnoSelct = "1";
+        Link.custIdnfr = ctcrCustIdnfr.getValue();
+    }
+    $c.iz.screen.screenOpen("KIB11100000", "DATALINK");
+};
+
+//20150911 적용
+scwin.LinkText600_OnClick = function(e) {
+    $c.iz.tran.setTranID("KIG11AGBB0");
+    //최종여신승인신청번호
+    lnbzAthorAplcnNo.setValue(lnbzAthorNo_temp.getValue());
+    //대출금액
+    $c.iz.tran.setInFDData("KIG11AGBB0", "junalAmt", Math.round(cnpr.getValue()));
+    //거래직원번호
+    $c.iz.tran.setInFDData("KIG11AGBB0", "junalFnshEmpid", $c.user.getUserProfile('empid'));
+    //불할기표차수
+    $c.iz.tran.setInFDData("KIG11AGBB0", "patinJunalDgre", 0);
+    //대출실행부점
+    $c.iz.tran.setInFDData("KIG11AGBB0", "lnExeBrncd", "3377");
+    //처리구분
+    $c.iz.tran.setInFDData("KIG11AGBB0", "prcssDstcd", "0");
+    //SMS 통지여부
+    $c.iz.tran.setInFDData("KIG11AGBB0", "sMSNotiYn", "0");
+    //거래화면	
+    $c.iz.tran.setInFDData("KIG11AGBB0", "tranScrenNo", "KFC04001000");
+    $c.iz.tran.WaitSend();
+};
+
+//**************  출력부 ***************************************//
+
+scwin.TAB1_OnItemChanged = function(info) {
+    // 기본정보
+    if (TAB1.getSelectedTabIndex() == "0") {
+        if (Panel1.getValue() == "") {
+            Panel1.setSrc("KFC04001A01.xml");
+            Panel1.BindPanelData("KFC0400140");
+        }
+    }
+
+    //담보내역,조기상환수수료내역조회,공동차주및실소유자
+    if (TAB1.getSelectedTabIndex() == "1") {
+        if (Panel2.getValue() == "") {
+            Panel2.setSrc("KFC04001A02.xml");
+            Panel2.BindPanelData("KFC0400140");
+        }
+    }
+};
+
+scwin.OnEndTran = function() {
+    //화면출력
+    if ($c.iz._tran.bError == false && outptDstcd.getValue() == "0") {
+        GroupBox6.show('');
+        GroupBox7.show('');
+        TAB1.show('');
+        ctrcStusName.setStyle("color", $c.iz.data.getRGBValue(255, 0, 0));
+        if (ctrcStusDstcd.getValue() == "1") {
+            ctrcStusName.setStyle("color", $c.iz.data.getRGBValue(0, 0, 255));
+        }
+        /*	      //예금담보인 경우 메세지 출력  (상품대분류 20, 상품중분료 01) 
+        	      if( ovrduIrtAplyBaseDd.Data <= User.nowBzoprYmd 
+        	         && prdctLagClsfiCd.Data  == "20"
+        	         && prdctMedmClsfiCd.Data == "01"
+        	         && ctrcStusDstcd.Data == "1"
+        	         ){
+        		  	scrtRelatdNoti.Data = '이자납입 지연중입니다.';	
+        	      //scrtRelatdNoti.ClearData();
+        	      	scrtRelatdNoti.Visible = true;
+        	      
+        	      }else{
+        	      
+        	      	scrtRelatdNoti.ClearData();
+        	      	scrtRelatdNoti.Visible = false;
+        	      
+        	      //Alert("연체기준일" +ovrduIrtAplyBaseDd.Data+"중분류"+prdctMedmClsfiCd.Data, "확인");
+        		  }
+        */
+        //alert("에러코드"+tran.ErrCd,"");  
+        if ($c.iz._tran.errCd == 'N0000016') {
+            if (acno.getValue().length > 14 || acno.getValue().substr(1, 1) == 'M') {
+
+            } else {
+                Link.inquryDstcd = "1";
+                Link.acno = acno.getValue();
+                $c.iz.screen.screenOpen("KFC04089000", "DATALINK");
+            }
+        }
+    }
+    //장표출력	    
+    if ($c.iz._tran.bError == false && outptDstcd.getValue() != "0") {
+        GroupBox6.hide();
+        GroupBox7.hide();
+        scrtRelatdNoti.setValue();
+        scrtRelatdNoti.hide();
+        TAB1.hide();
+    }
+
+    //고객정보번호(관리번호)	      
+    if ($c.iz._tran.bError == false && ctcrCustMgtNo.getValue() == '00000') {
+        ctcrCustMgtNo.hide();
+    }
+    if (ctcrCustMgtNo.getValue() != '00000') {
+        ctcrCustMgtNo.show('');
+    }
+
+    //유동화관련메시지
+    if (scrtRelatdNoti.getValue() == "") {
+        scrtRelatdNoti.hide();
+    } else {
+        if (outptDstcd.getValue() != "0") {
+            scrtRelatdNoti.setValue();
+            scrtRelatdNoti.hide();
+        } else {
+            scrtRelatdNoti.show('');
+            scrtRelatdNoti.setStyle("color", $c.iz.data.getRGBValue(255, 0, 0));
+        }
+    }
+
+    //금액 init
+    if (cncycd.getValue() == "KRW") {
+        cnpr.SetDispDecimalPoint(0); //대출금액
+        lnExeCutamt.SetDispDecimalPoint(0); //실행금액
+        lnBal.SetDispDecimalPoint(0);
+        //대출잔액
+        hgstAgreAmt.SetDispDecimalPoint(0); //최고약정금액  
+    } else {
+        cnpr.SetDispDecimalPoint(2); //대출금액
+        lnExeCutamt.SetDispDecimalPoint(2); //실행금액
+        lnBal.SetDispDecimalPoint(2); //대출잔액
+        hgstAgreAmt.SetDispDecimalPoint(2);
+    }
+
+    //연체여부
+    if (ovrduYn.getValue() == "연체") {
+        ovrduYn.setStyle("color", $c.iz.data.getRGBValue(255, 0, 0));
+    }
+    if (ovrduYn.getValue() == "정상") {
+        ovrduYn.setStyle("color", $c.iz.data.getRGBValue(0, 0, 255));
+    }
+
+    //미수채권 
+    if (uncolcBndAcnStusDstcd.getValue() == "0") {
+        uncolcBndAcnStusDstic.setStyle("color", $c.iz.data.getRGBValue(0, 0, 0));
+    } else {
+        uncolcBndAcnStusDstic.setStyle("color", $c.iz.data.getRGBValue(255, 0, 0));
+    }
+
+    //일부상각계좌여부
+    if (spare4.getValue() == "여") {
+        spare4.setStyle("color", $c.iz.data.getRGBValue(255, 0, 0));
+    } else if (spare4.getValue() == "부") {
+        spare4.setStyle("color", $c.iz.data.getRGBValue(0, 0, 0));
+    }
+    imageKey.setValue("");
+    // KFC04001A01 화면에서 이미지키 받아오기
+    $c.iz.data.setChildData("SendData()", "Panel1");
+    if (Link.gdVar != 0) {
+        var strKey = Link.imkey;
+        if (strKey.substr(9, 3) == "KEY") {
+            imageKey.setValue(strKey.substr(15, 37));
+        }
+    }
+    ///////////////////////KB자산유동화적격대출////////////////////////
+    // 20-03-311-00026
+    // 20-03-312-00021
+    // 20-03-314-00011
+    // 20-03-317-00008
+    // 20-02-116-00009
+    //추가 20-03-311-00028(중기)
+    // 20-03-312-00022
+    // 20-03-314-00012
+    // 20-03-317-00011
+    // 20-02-116-00012
+    //  유동화 적격대출 피담보 채권확정
+    //  (기 설정 근저당권 활용제한됨에 유의 및 대출금 완제시 근저당권 해지요망)
+    //////////////////////////////////////////////////////////////////////////////
+    if (mgtbrn.getValue() == '8961') {
+        if ((prdctLagClsfiCd.getValue() == "20" && prdctMedmClsfiCd.getValue() == "03" &&
+                ((prdctTmpltCd.getValue() == "311" && (prdctNo.getValue() == "00026" || prdctNo.getValue() == "00028")) ||
+                    (prdctTmpltCd.getValue() == "312" && (prdctNo.getValue() == "00021" || prdctNo.getValue() == "00022")) ||
+                    (prdctTmpltCd.getValue() == "314" && (prdctNo.getValue() == "00011" || prdctNo.getValue() == "00012")) ||
+                    (prdctTmpltCd.getValue() == "317" && (prdctNo.getValue() == "00008" || prdctNo.getValue() == "00011")))) ||
+            (prdctLagClsfiCd.getValue() == "20" && prdctMedmClsfiCd.getValue() == "02" && prdctTmpltCd.getValue() == "116" &&
+                (prdctNo.getValue() == "00009" || prdctNo.getValue() == "00012"))) {
+            $c.iz.data.setChildData('dataBook1.SetCellFontColor(dataBook1.RowCount,0,"#FF0000")', "Panel1");
+            $c.iz.data.setChildData('dataBook1.SetCellFontColor(dataBook1.RowCount-1,0,"#FF0000")', "Panel1");
+        }
+    }
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 조회거래후 실명증표 조회버튼을 Visible 설정값을 정의함
+    // 조회버튼 Visible의 True 조건 
+    //   1. 조회거래가 정상적으로 수행완료
+    //   2. 해당 지점이 현재 일자 기준으로 오픈 대상지점
+    //   3. 조회거래 결과값에 실명증표이미지Key값 포함(등록거래시 스캔된 경우)
+    //////////////////////////////////////////////////////////////////////////////
+
+    // 실명증표 조회버튼 숨기기 설정
+    // 단말 공통 버튼중 8번째 버튼을 사용하지 않은 경우
+    $c.iz.data.commonButtonVisible(7, false);
+
+    //조회거래 정상 수행완료 여부 확인
+    if ($c.iz._tran.tranId == "KFC0400140" && $c.iz._tran.bError == false) {
+        // 해당 지점의 그린뱅크 오픈 여부 확인
+        // Return : TRUE(오픈 대상 지점), FALSE(오픈 미대상 지점)
+        if ($c.com.critical.checkGreenBankOpen()) {
+            //대상 지점이면서 조회거래 결과값에 실명증표이미지Key 포함여부 확인
+            if (imageKey.getValue() != "") {
+                // 실명증표 조회버튼을 보이도록 설정변경
+                $c.iz.data.commonButtonVisible(7, true);
+            }
+        }
+    }
+
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+    //20150911 대출실행확인 추가, 처리대상목록조회(PPT04A11000)에서 호출시 (link 예시)
+    //	Link.acno = "78140204095167";
+    //	Link.tempScnNo = 'PPT04A11000';
+    //	Popup("KFC04001000","DATALINK");
+    /* 2020-01-16 정수원님 요청으로 PPT04A11000 -> PPT06K02000으로 변경
+      if( User.userBzwkBrncd == "3377" && tempScnNo.value == 'PPT04A11000'){
+    */
+    if ($c.user.getUserProfile('userBzwkBrncd') == "3377" && tempScnNo.getValue() == 'PPT06K02000') {
+        var UserSOD = $c.user.getUserProfile('SOD_ROLE_LIST');
+        var ArrUserSOD = UserSOD.split("|");
+        for (i = 0; i <= ArrUserSOD.length; i++) {
+            if (ArrUserSOD[i] == "20233") {
+                //실행버튼 활성화
+                LinkText600.show('');
+                scwin.Set_change();
+            }
+        }
+    }
+
+    //실행확인 정상 수행완료 여부 확인
+    if ($c.iz._tran.tranId == "KIG11AGBB0" && $c.iz._tran.bError == false) {
+        // 실행버튼 비활성화
+        LinkText600.setDisabled(true);
+    } else {
+        // 실행버튼 활성화
+        LinkText600.setDisabled(false);
+    }
+    //전자조회표 출력 2016-05-20
+    if ($c.iz._tran.bError == false && outptDstcd.getValue() == "4") {
+        var imgCustRelnmNo = ssno.getValue(); //고객실명번호(주민번호 앞 6자리)
+        var imgCustIdnfr = ctcrCustIdnfr.getValue(); //고객식별자
+        var imgCustMgtNo = ctcrCustMgtNo.getValue(); //고객관리번호
+        var imgCustnm = custnm.getValue(); //고객명
+        // 고객식별자 || 고객번호가 있으면 전자조회표 출력  처리    	
+        if (imgCustIdnfr != "" || imgCustRelnmNo != "") {
+            $c.iz.data.setAPGlobalData("KMB.IMG_supplInquryNo", "0000000"); // 추가조회번호 (고객정보, 신용보증업무는 "0000000" 입력)
+
+            if (imgCustRelnmNo.length == 13) {
+                $c.iz.data.setAPGlobalData("KMB.IMG_custRelnmNo", imgCustRelnmNo.substring(0, 6)); // 고객실명번호 (주민등록번호 앞 6자리)
+            } else {
+                $c.iz.data.setAPGlobalData("KMB.IMG_custRelnmNo", '000000'); // 사업자 및 법인
+            }
+            $c.iz.data.setAPGlobalData("KMB.IMG_custIdnfr", imgCustIdnfr); // 고객식별자  
+            $c.iz.data.setAPGlobalData("KMB.IMG_custMgtNo", imgCustMgtNo); // 고객관리번호
+            $c.iz.data.setAPGlobalData("KMB.IMG_custnm", imgCustnm); // 고객명      
+            $c.iz.data.setAPGlobalData("KMB.IMG_elctrInquryKndDstic", "14"); // 전자조회표종류구분 - 14.여신원장조회표
+            $c.iz.data.setAPGlobalData("KMB.IMG_cupldYn", ""); // 연동여부
+            $c.iz.data.setAPGlobalData("KMB.IMG_formID", "KFC04001000"); // 화면번호
+            $c.iz.data.setAPGlobalData("KMB.IMG_elctrFxdfDstcd", "00"); // 전자서식구분
+
+
+            if ($c.iz.data.getAPGlobalData("KMB.IMG_PBPRDATA") == "" || $c.iz.data.getAPGlobalData("KMB.IMG_elctrFxdfDstcd") == "") {
+                var imgMessage = "고객님의 전자조회표 출력 이미지 파일이 없습니다. ";
+                imgMessage += "\n검색번호를 다시한번 확인 하신 후 ";
+                imgMessage += "\n화면 왼쪽 상단의 출력구분을 확인하여 주십시오";
+                $c.iz.data.alert(imgMessage, "안내");
+            } else {
+                // 전자조회표생성 화면 호출
+                //하이픈있는 계좌가 들어오는 경우
+                var strAcno1;
+                var tempAcno1 = '';
+                for (var i = 0; i < acno1.getValue().length; i++) {
+                    strAcno1 = acno1.getValue().substr(i, 1);
+                    if (strAcno1 != '-') {
+                        tempAcno1 += strAcno1;
+                    }
+                }
+                Link.accountNo = tempAcno1; //추가 LINK 
+                $c.iz.screen.popup("KMB04990001", "");
+            }
+        }
+    }
+
+    //자동이체계좌번호가 정상이 아닌 경우
+    if ($c.iz._tran.tranId == "KFC0400140" && $c.iz._tran.bError == false && aBTAcnDstic.getValue() == '2') {
+        var msg = $c.iz.data.confirm("해당 대출계좌와 연결되어 있는 자동이체 계좌가 정상적이지 않습니다. \n\n" + "* '확인' 선택시 자동이체 등록화면[06-75-001]으로 연동됩니다.\n", "자동이체계좌 확인");
+        if (msg) {
+            Link.drwotAcno11 = aBTAcno.getValue();
+            //KJH06101A01.drwotAcno = drwotAcno11.Value ;
+            //SetChildData("drwotAcno", "Panel1");
+
+            //SetChildtControlData("drwotAcno.Data", "Link.drwotAcno11", "Panel1", 0); 
+            //메인화면의 패널에 데이터 이동은?
+            $c.iz.screen.screenOpen("KJH06101000", "DATALINK");
+        } else {
+            return;
+        }
+    }
+    //통장자동대출확정 미등록 계좌인 경우 팝업문구 안내 : 여신한도운용구분이 3인경우(회전한도(미확정))
+    var msgCtnt_temp;
+    msgCtnt_temp = msgCtnt.data.substr(0, 1);
+    if ($c.iz._tran.tranId == "KFC0400140" && $c.iz._tran.bError == false && msgCtnt_temp == '3') {
+        $c.iz.data.alert("본 계좌는 조건부통장자동대출로서 별도 확정등록이 필요한 계좌입니다. 조건부 통장자동대출은 \n" + "한도약정 후 영업점에서 별도의 확정등록 거래를 하여야 대출금 사용 가능합니다. \n" + "거래화면: 여신계좌정보등록변경[06-20-016], 거래종류:35(통장자동대출 확정 등록) \n" + "※  관련문서: 가계 부동산담보 통장자동대출 확정등록 거래 신설(여신기획부 286, 2014.5.13)\n", "확인");
+    }
+};
+
+//20150911 대출실행확인 추가, 처리대상목록조회(PPT04A11000)에서 호출시 (link 예시)
+scwin.Set_change = function() {
+    //고객명 custnm
+    custnm.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+
+    //만기일자 expirDdPsn
+    expirDdPsn.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //대출금액 cnpr
+    cnpr.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //대출기간 ctrcTrmCnt
+    ctrcTrmCnt.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //상환방법구분 rpayWayDstic,rpayWayName
+    rpayWayDstic.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    rpayWayName.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //적용거치기간 tmdferCnt
+    tmdferCnt.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //이자계산단위 intCalcUnitDstic,intCalcUnitDsticName
+    intCalcUnitDstic.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    intCalcUnitDsticName.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //약정납입일 agrePaymtDd
+    agrePaymtDd.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //자동이체일 aBTDd
+    aBTDd.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    //금리변동주기 irtFlxblCyclDstic,irtFlxblCyclDsticName
+    irtFlxblCyclDstic.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0));
+    irtFlxblCyclDsticName.setStyle("color", $c.iz.data.getRGBValue(255, 55, 0)); //GetRGBValue(255,255,0);   
+
+    //if( trim(custnm.Value) != trim(spare5.Value)){
+    if (aBTAcnDstic.getValue() == '1') {
+        //자동이체계좌 aBTAcno
+        aBTAcno.setStyle("color", $c.iz.data.getRGBValue(0, 0, 255)); //GetRGBValue(0,255,0);   
+    }
+    TAB1.setSelectedTabIndex(1);
+};
+
+scwin.OnInitScreen = function() {
+    //조회목적 자금세탁방지업무(A) 화면에서 삭제
+
+    outptDstcd_2.DeleteItemByKey("A");
+
+    // 대출실행센터인 경우 다른 화면에서 링크된 경우 조회목적을 9:내부업무처리으로 셋팅 2017.06.15
+    // 변경 본부부서[01]인 경우 조회목적 SPACE 나머지는 1:고객관리(업무상담) 으로 셋팅 2017.06.21 최종
+    if ($c.user.getUserProfile('brcCd') != "01") {
+        //12.여신관리센터 인 경우 7:여신관리로 수정
+        if ($c.user.getUserProfile('brcCd') == "12") {
+            outptDstcd_2.SetCurSel(6);
+        } else {
+            outptDstcd_2.SetCurSel(0);
+        }
+    }
+
+    //감사부는 9:내부업무처리로 셋팅 2017.07.04 영업감사부 추가 0223 2019.08.XX
+    if ($c.user.getUserProfile('userBzwkBrncd') == "3209" || $c.user.getUserProfile('userBzwkBrncd') == "0223") {
+        outptDstcd_2.SetCurSel(8);
+    }
+
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 거래화면이 보여질때 무조건 실명증표 조회버튼을 Visible 설정값을 정의함
+    // Visible 설정값은 조회거래의 결과에 따라 속성이 변경됨
+    //////////////////////////////////////////////////////////////////////////////
+
+    // 실명증표 조회버튼 숨기기 설정
+    $c.iz.data.commonButtonVisible(7, false);
+
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+    //실행버튼 활성화
+    LinkText600.hide();
+    TAB1.hide();
+    GroupBox6.hide();
+    GroupBox7.hide();
+    scrtRelatdNoti.setValue();
+    scrtRelatdNoti.hide();
+    Panel1.setSrc("KFC04001A01.xml");
+    if (ECB_YN.getValue() == "Y") {
+        LinkText1.hide();
+        LinkText2.hide();
+        LinkText3.hide();
+        LinkText4.hide();
+        LinkText5.hide();
+        LinkText6.hide();
+        LinkText7.hide();
+    }
+    if (acno.getValue() != "") {
+        scwin.OnSendKey();
+    }
+
+    //XXXXX The K 프로젝트 패키지 적용 START XXXXX//
+    if (!scwin.setPackageInit()) {
+        // Return : true(패키지 적용), false(패키지 미적용)
+        // 패키지 미적용일경우 스크립트 추가
+
+
+    }
+    //XXXXX The K 프로젝트 패키지 적용 E N D XXXXX//
+
+};
+
+
+
+
+scwin.lnbzAthorNo_OnRClick = function(e) {
+    //여신승인번호	
+    ContextMenu2.ClearContextMenu();
+    var hMenu = ContextMenu2.GetContextMenu("EtcContextMenu");
+    if (hMenu) {
+        ContextMenu2.AppendMenuItem(hMenu, "35", "대출승인조회", "UserData2");
+        ContextMenu2.AppendMenuItem(hMenu, "36", "복사 CTRL+C", "UserData3");
+        ContextMenu2.TrackContextMenu();
+    }
+};
+
+scwin.ContextMenu2_OnClickContextMenu = function(pControlName, nMenuID, pUserData) {
+    if (nMenuID == "35") {
+        Link.inquryDstic = "1";
+        Link.athorNo = lnbzAthorNo.getValue();
+        $c.iz.screen.screenOpen("KFC04037000", "DATALINK");
+    }
+    if (nMenuID == "36") {
+        ControlDataCopy("lnbzAthorNo");
+        return;
+    }
+};
+
+
+scwin.limtAcno_OnRClick = function(e) {
+    //한도계좌번호
+    ContextMenu3.ClearContextMenu();
+    var hMenu = ContextMenu3.GetContextMenu("EtcContextMenu");
+    if (hMenu) {
+        ContextMenu3.AppendMenuItem(hMenu, "37", "한도조회", "UserData2");
+        ContextMenu3.AppendMenuItem(hMenu, "38", "복사 CTRL+C", "UserData3");
+        ContextMenu3.TrackContextMenu();
+    }
+};
+
+scwin.ContextMenu3_OnClickContextMenu = function(pControlName, nMenuID, pUserData) {
+    if (nMenuID == "37") {
+        Link.inquryDstcd = "1";
+        Link.acno = limtAcno.getValue();
+        $c.iz.screen.screenOpen("KFC04089000", "DATALINK");
+    }
+    if (nMenuID == "38") {
+        ControlDataCopy("limtAcno");
+        return;
+    }
+};
+//보증보험증권번호 ContextMenu5 추가 2013.07.31
+scwin.grntyIsupolNo_OnRClick = function(e) {
+    //한도계좌번호
+    ContextMenu5.ClearContextMenu();
+    var hMenu = ContextMenu5.GetContextMenu("EtcContextMenu");
+    if (hMenu) {
+        ContextMenu5.AppendMenuItem(hMenu, "40", "서울보증보험 증권내용 조회", "UserData2");
+        ContextMenu5.AppendMenuItem(hMenu, "41", "정부보증학자금 보증기관 조회", "UserData3");
+        ContextMenu5.AppendMenuItem(hMenu, "42", "주택담보노후연금보증 조회", "UserData4");
+        ContextMenu5.AppendMenuItem(hMenu, "43", "KB캐피탈 보증내역 조회", "UserData5");
+        ContextMenu5.AppendMenuItem(hMenu, "44", "복사 CTRL+C", "UserData6");
+        ContextMenu5.TrackContextMenu();
+    }
+};
+
+scwin.ContextMenu5_OnClickContextMenu = function(pControlName, nMenuID, pUserData) {
+    if (nMenuID == "40") {
+        //	    Link.inquryDstcd = "1";
+        Link.isupolNo = grntyIsupolNo.getValue();
+        $c.iz.screen.screenOpen("KIA04026000", "DATALINK");
+    }
+    if (nMenuID == "41") {
+        //	    Link.inquryDstcd = "1";
+        Link.grntyNo = grntyIsupolNo.getValue();
+        $c.iz.screen.screenOpen("KIA04033000", "DATALINK");
+    }
+    if (nMenuID == "42") {
+        //	    Link.inquryDstcd = "1";
+        Link.grntyNo = grntyIsupolNo.getValue();
+        $c.iz.screen.screenOpen("KIA04034000", "DATALINK");
+    }
+    if (nMenuID == "43") {
+        //	    Link.inquryDstcd = "1";
+        Link.grltNo = grntyIsupolNo.getValue();
+        $c.iz.screen.screenOpen("KIA04070000", "DATALINK");
+    }
+    if (nMenuID == "44") {
+        ControlDataCopy("grntyIsupolNo");
+        return;
+    }
+};
+
+scwin.kCGFAcno_OnRClick = function(e) {
+    //신보계좌번호 연결
+    ContextMenu4.ClearContextMenu();
+    var hMenu = ContextMenu4.GetContextMenu("EtcContextMenu");
+    if (hMenu) {
+        ContextMenu4.AppendMenuItem(hMenu, "33", "신용보증원장조회", "UserData2");
+        ContextMenu4.AppendMenuItem(hMenu, "34", "복사   CTRL+C", "UserData3");
+        ContextMenu4.TrackContextMenu();
+    }
+};
+
+scwin.ContextMenu4_OnClickContextMenu = function(pControlName, nMenuID, pUserData) {
+    if (nMenuID == "33") {
+        Link.cdtgrnAcno = kCGFAcno.getValue();
+        $c.iz.screen.screenOpen("KIA04001000", "DATALINK | AUTOSEND");
+    }
+    if (nMenuID == "34") {
+        ControlDataCopy("kCGFAcno");
+        return;
+    }
+};
+
+
+scwin.Sunap_Check = function() {
+    // Host전송전 입력항목 정합성검증 
+    // 계좌번호 체크
+    var ACNO_ENG = acno.getValue();
+    if (ACNO_ENG.substr(1, 1) >= "A" &&
+        ACNO_ENG.substr(1, 1) <= "Z") {
+        $c.iz.data.alert("계좌번호 입력오류, 계좌번호를 확인바랍니다.", "입력 오류");
+        acno.focus();
+        return false;
+    }
+    return true;
+};
+
+
+scwin.acno_OnRClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    //계좌번호 연결
+    // 여신거래내역조회/등록변경내역조회/가지급등록내역조회/자동대출관련내역조회
+    ContextMenu1.ClearContextMenu();
+    var hMenu = ContextMenu1.GetContextMenu("EtcContextMenu");
+    if (hMenu) {
+        ContextMenu1.AppendMenuItem(hMenu, "24", "가지급등록내역조회", "UserData4");
+        ContextMenu1.AppendMenuItem(hMenu, "25", "등록변경내역조회", "UserData5");
+        ContextMenu1.AppendMenuItem(hMenu, "26", "자동대출관련내역조회", "UserData6");
+        ContextMenu1.AppendMenuItem(hMenu, "27", "복사     CTRL+C", "UserData7");
+        ContextMenu1.AppendMenuItem(hMenu, "28", "붙여넣기 CTRL+v", "UserData8");
+        ContextMenu1.TrackContextMenu();
+    }
+};
+
+scwin.ContextMenu1_OnClickContextMenu = function(pControlName, nMenuID, pUserData) {
+    if (nMenuID == "24") {
+        Link.acno = acno.getValue();
+        $c.iz.screen.screenOpen("KFC04003000", "DATALINK");
+    }
+    if (nMenuID == "25") {
+        Link.acno = acno.getValue();
+        $c.iz.screen.screenOpen("KFC04006000", "DATALINK");
+    }
+    if (nMenuID == "26") {
+        Link.acno = acno.getValue();
+        $c.iz.screen.screenOpen("KFC04219000", "DATALINK");
+    }
+    if (nMenuID == "27") {
+        ControlDataCopy("acno");
+        return;
+    }
+    if (nMenuID == "28") {
+        ControlDataPaste("acno");
+        return;
+    }
+};
+
+scwin.OnSendKey8 = function() {
+    //여기에 구현코드를 삽입하세요.
+    ///////////////////////GreenBank-실명증표 스캐닝-Start////////////////////////
+    // 조회거래 대상 화면의 공통 버튼 중 실명증표 이미지조회버튼을 선택하여
+    // 실명증표 이미지 보기 팝업 화면을 호출함
+    //////////////////////////////////////////////////////////////////////////////
+
+    // 실명증표 이미지Key의 존재여부 확인
+    if (imageKey.getValue() != "") {
+        // 조회결과로 넘겨준 실명증표이미지Key값을 실명증표 이미지조회화면으로 넘겨줌
+        // 조회결과에 실명증표이미지Key가 여러개인 경우에는
+        // 실명증표이미지Key(37자리)&","&실명증표이미지Key(37자리) 형태로 조합함
+        Link.pImageKey = imageKey.getValue();
+        // 실명증표이미지 조회화면 팝업으로 호출
+        $c.iz.screen.popup("KMB06101100", "DATALINK");
+    }
+    // 실명증표 이미지Key가 없는 경우 에러메세지를 출력
+    else {
+        $c.iz.data.alert("조회할 실명증표 이미지가 없습니다.", "실명증표조회");
+        // 실명증표 이미지 조회버튼의 속성을 변경하여 버튼을 선택할 수 없도록 처리
+        // 단말 공통 버튼중 8번째 버튼을 사용하지 않은 경우
+        $c.iz.data.commonButtonVisible(7, false);
+    }
+
+    ///////////////////////GreenBank-실명증표 스캐닝-End//////////////////////////
+
+};
+
+
+scwin.acno_OnValidate = function(info) {
+    //하이픈있는 계좌가 들어오는 경우
+    var strAcno;
+    var tempAcno = '';
+    for (var i = 0; i < acno.getValue().length; i++) {
+        strAcno = acno.getValue().substr(i, 1);
+        if (strAcno != '-') {
+            tempAcno += strAcno;
+        }
+    }
+    acno.setValue(tempAcno);
+};
+
+scwin.LinkText601_OnClick = function(e) {
+    //계좌번호 변환조회로 링크
+    //하이픈있는 계좌가 들어오는 경우
+    var strAcno;
+    var tempAcno = '';
+    for (var i = 0; i < acno1.getValue().length; i++) {
+        strAcno = acno1.getValue().substr(i, 1);
+        if (strAcno != '-') {
+            tempAcno += strAcno;
+        }
+    }
+    tempAcno;
+    Link.acno = tempAcno;
+    $c.iz.screen.popup("KJI04052000", "DATALINK");
+};
+
+scwin.LinkText603_OnClick = function(e) {
+    //자동이체계좌번호 변환조회로 링크
+    //하이픈있는 계좌가 들어오는 경우
+    var strAcno;
+    var tempAcno = '';
+    for (var i = 0; i < aBTAcno.getValue().length; i++) {
+        strAcno = aBTAcno.getValue().substr(i, 1);
+        if (strAcno != '-') {
+            tempAcno += strAcno;
+        }
+    }
+    tempAcno;
+    Link.acno = tempAcno;
+    $c.iz.screen.popup("KJI04052000", "DATALINK");
+};
+
+//XXXXXXXXXX The K 프로젝트 패키지 적용 START XXXXXXXXXX//
+scwin.setPackageInit = function() {
+    // 고객맞춤형업무 호출상태 설정
+    $c.com.commSetPackageCallState();
+    if (scwin.strPackageCallYesNo != "Y") {
+        return false;
+    }
+
+    // 고객맞춤형업무 연동 데이터 설정
+    // CommSetPackageLinkData(실명증표스캔, 디지털서명);
+    $c.com.commSetPackageLinkData(false, false);
+
+    // 1. 패키지연동 업무데이터 설정
+    acno.setValue(scwin.objPackageCustLinkData.acno); //계좌번호
+
+    // 2. 연동데이터 변경 불가
+    // 3. 업무 스크립트 추가
+
+    return true;
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="여신원장조회" meta_screenId="KFC04001000" groupcocd="KB0" scncall="0420001" keyword="대출원장조회표" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:1610px;" screentype="AType" meta_author="JHKIM" meta_user="S012021(박찬일)" meata_date="2010/03/10 09:22:41" savezorder="0" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="5" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<w2:kb_input ctype="Edit" style="position:absolute; left:576px; top:1686px; width:95px; height:24px; display:none;" id="lnbzAthorNo_temp" tabIndex="1" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999" maxlength="13" ninemode="0" orgid="lnbzAthorNo_temp" hierarchy="lnbzAthorNo_temp"/>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:912px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText7_1" tabIndex="2" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText7_1_OnClick" orgid="LinkText7_1" hierarchy="LinkText7_1" outerDiv="false">
+				<xf:label><![CDATA[여신조건변경]]></xf:label>
+			</w2:anchor>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:108px; background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox1" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:50px; top:12px; width:66px; height:24px; color:rgb(0,0,0);" id="Text_acno" tabIndex="1" linespace="2" label="*계좌번호" orgid="Text_acno" hierarchy="Text_acno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:12px; width:116px; height:24px;" id="acno" indicator="계좌번호" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999999" maxlength="16" minlength="11" ksc5601="1" mandatory="true" class="req" ninemode="0" ev:onrickick="scwin.acno_OnRClick" ev:onviewchange="scwin.acno_OnValidate" orgid="acno" hierarchy="acno" ref="data:dma_KFC04001000.acno"/>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:252px; top:12px; width:88px; height:24px; display:none; borderraised2;" id="LinkText8" tabIndex="3" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText8_OnClick" orgid="LinkText8" hierarchy="LinkText8" outerDiv="false">
+					<xf:label><![CDATA[수신원장조회]]></xf:label>
+				</w2:anchor>
+				<w2:floatingLayer ctype="ContextMenu" style="position:absolute; left:348px; top:12px; width:72px; height:24px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="ContextMenu1" tabIndex="4" tabstop="0" enterstop="0" autosize="0" container="0" enable="1" paper="0" adjusttheme="1" orgid="ContextMenu1" hierarchy="ContextMenu1"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:750px; top:12px; width:74px; height:24px; display:none;" id="ECB_YN" tabIndex="5" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="ECB_YN" hierarchy="ECB_YN"/>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:972px; top:12px; width:74px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText600" tabIndex="6" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText600_OnClick" orgid="LinkText600" hierarchy="LinkText600" outerDiv="false">
+					<xf:label><![CDATA[실행확인]]></xf:label>
+				</w2:anchor>
+				<w2:textbox ctype="Text" style="position:absolute; left:58px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_exeNo" tabIndex="7" label="실행번호" orgid="Text_exeNo" hierarchy="Text_exeNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:126px; top:42px; width:53px; height:24px; text-align:right;" id="exeNo" indicator="실행번호" tabIndex="8" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#######" maxlength="7" ninemode="0" rightalign="1" orgid="exeNo" hierarchy="exeNo" ref="data:dma_KFC04001000.exeNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:222px; top:42px; width:553px; height:24px; color:rgb(51,102,255);" id="Text2" tabIndex="9" label="*&amp;nbsp;할인어음,기업구매자금,기업구매카드,전자채권,미래채권,선박선수금환급보증&amp;nbsp;건별&amp;nbsp;실행번호" orgid="Text2" hierarchy="Text2" escape="false" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:92px; height:24px; color:rgb(0,0,0);" id="Text_outptDstcd" tabIndex="10" linespace="2" label="*출력구분코드" orgid="Text_outptDstcd" hierarchy="Text_outptDstcd" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:126px; top:72px; width:299px; height:24px; color:rgb(0,0,0);" id="outptDstcd" indicator="출력구분코드" tabIndex="11" mandatory="true" class="req" initvalue="0" index="0" items="0=화면;1=장표;2=장표(중도상환/담보/공동차주);3=장표(관련계좌/세대/고객통지/사고신고);4=전자조회표;9=장표(전체);" appearance="minimal" orgid="outptDstcd" hierarchy="outptDstcd" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KFC04001000.outptDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[화면]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[장표]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[장표(중도상환/담보/공동차주)]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[장표(관련계좌/세대/고객통지/사고신고)]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[전자조회표]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[장표(전체)]]></xf:label>
+							<xf:value><![CDATA[9]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:570px; top:72px; width:66px; height:24px; color:rgb(0,0,0);" id="Text_outptDstcd_4" tabIndex="12" linespace="2" label="*조회목적" orgid="Text_outptDstcd_4" hierarchy="Text_outptDstcd_4" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:642px; top:72px; width:35px; height:24px; color:rgb(0,0,0);" id="outptDstcd_2" indicator="조회목적" tabIndex="13" mandatory="true" class="req" datasource="1" instancefile="122071000" index="0" appearance="minimal" orgid="outptDstcd_2" hierarchy="outptDstcd_2" ref="data:dma_KFC04001000.outptDstcd_2"/>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:333px; top:1716px; width:84px; height:24px; color:rgb(0,0,0); display:none;" id="Text_aBTAcno" tabIndex="4" label="자동이체계좌" orgid="Text_aBTAcno" hierarchy="Text_aBTAcno" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:576px; top:1650px; width:81px; height:24px; display:none;" id="tempScnNo" tabIndex="5" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999" maxlength="11" ninemode="0" orgid="tempScnNo" hierarchy="tempScnNo"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:426px; top:1686px; width:144px; height:24px; display:none;" id="spare5" indicator="예비5" tabIndex="6" allowChar="가-힣" validateOnInput="true" maxlength="20" imeMode="반자" ninemode="0" orgid="spare5" hierarchy="spare5" ref="data:dma_KFC04001000.spare5"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:276px; top:1686px; width:141px; height:24px; color:rgb(0,0,0); display:none;" id="Text_spare5" tabIndex="7" label="예비5(자동이체고객명)" orgid="Text_spare5" hierarchy="Text_spare5" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1686px; width:11px; height:24px; display:none;" id="aBTAcnDstic" indicator="자동이체계좌구분" tabIndex="8" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="aBTAcnDstic" hierarchy="aBTAcnDstic" ref="data:dma_KFC04001000.aBTAcnDstic"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:18px; top:1686px; width:110px; height:24px; color:rgb(0,0,0); display:none;" id="Text_aBTAcnDstic" tabIndex="9" label="자동이체계좌구분" orgid="Text_aBTAcnDstic" hierarchy="Text_aBTAcnDstic" class="kb_MiddleRight"/>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:816px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText1_10" tabIndex="10" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText1_10_OnClick" orgid="LinkText1_10" hierarchy="LinkText1_10" outerDiv="false">
+				<xf:label><![CDATA[채무자기본정보]]></xf:label>
+			</w2:anchor>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:426px; top:1650px; width:60px; height:24px; display:none;" id="ovrduIrtAplyBaseDd" indicator="연체이율적용기준일" tabIndex="11" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" ninemode="0" orgid="ovrduIrtAplyBaseDd" hierarchy="ovrduIrtAplyBaseDd" ref="data:dma_KFC04001000.ovrduIrtAplyBaseDd"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:294px; top:1650px; width:123px; height:24px; color:rgb(0,0,0); display:none;" id="Text_ovrduIrtAplyBaseDd" tabIndex="12" label="연체이율적용기준일" orgid="Text_ovrduIrtAplyBaseDd" hierarchy="Text_ovrduIrtAplyBaseDd" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:12px; top:1650px; width:263px; height:24px; display:none;" id="imageKey" tabIndex="13" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999999999999999999999999999" maxlength="37" ninemode="0" orgid="imageKey" hierarchy="imageKey"/>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:180px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText7" tabIndex="14" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText7_OnClick" orgid="LinkText7" hierarchy="LinkText7" outerDiv="false">
+				<xf:label><![CDATA[여신기타조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:12px; top:120px; width:162px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText1" tabIndex="15" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText1_OnClick" orgid="LinkText1" hierarchy="LinkText1" outerDiv="false">
+				<xf:label><![CDATA[대출금이자및상환예비조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:276px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText2" tabIndex="16" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText2_OnClick" orgid="LinkText2" hierarchy="LinkText2" outerDiv="false">
+				<xf:label><![CDATA[거래내역조회]]></xf:label>
+			</w2:anchor>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:12px; top:150px; width:804px; height:24px; font-size:10pt; letter-spacing:0; font-weight:700;" id="scrtRelatdNoti" indicator="유동화관련알림" tabIndex="17" allowChar="가-힣" validateOnInput="true" maxlength="100" imeMode="반자" readOnly="true" ninemode="0" orgid="scrtRelatdNoti" hierarchy="scrtRelatdNoti" ref="data:dma_KFC04001000.scrtRelatdNoti"/>
+			<xf:group class="sub_title_tab">
+				<w2:tabControl ctype="TAB" style="position:absolute; left:12px; top:852px; width:1056px; height:744px; color:rgb(0,0,0);" tab="18" id="TAB1" tabIndex="18" 탭수="2" headerfacebackcolor="16777215" intemplate="0" ev:onviewchange="scwin.TAB1_OnItemChanged" orgid="TAB1" hierarchy="TAB1" useMoveNextTabFocus="false" confirmTrueAction="exist" useConfirmMessage="false" confirmFalseAction="new">
+					<w2:tabs label="추가정보" id="tabs1" style="" disabled="false"/>
+					<w2:tabs label="중도상환/담보/공동차주" id="tabs2" style="" disabled="false"/>
+					<w2:content ctype="TABPAGE" style="position:absolute; left:0px; top:0px; width:1056px; height:744px; background-color:rgb(238,238,238);" tab="0" label="추가정보" tabIndex="0" tabno="0">
+						<w2:pageFrame ctype="Panel" style="position:absolute; left:12px; top:42px; width:1032px; height:700px;" id="Panel1" tabIndex="1" orgid="Panel1" hierarchy="TAB1.Panel1"/>
+					</w2:content>
+					<w2:content ctype="TABPAGE" style="position:absolute; left:0px; top:0px; width:1056px; height:744px; background-color:rgb(238,238,238);" tab="0" label="중도상환/담보/공동차주" tabIndex="0" tabno="1">
+						<w2:pageFrame ctype="Panel" style="position:absolute; left:12px; top:42px; width:1032px; height:700px;" id="Panel2" tabIndex="1" orgid="Panel2" hierarchy="TAB1.Panel2"/>
+					</w2:content>
+				</w2:tabControl>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:180px; width:1056px; height:200px; background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="19" id="GroupBox6" tabIndex="19" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox6" hierarchy="GroupBox6">
+				<xf:group ctype="TableLayout" style="position:absolute; left:12px; top:12px; width:1026px; height:176px;" tab="1" id="TableLayout5" tabIndex="1" col="20" row="6" showline="1" linecolor="11513775" tagname="table" class="w2tb" orgid="TableLayout5" hierarchy="TableLayout5">
+					<w2:attributes>
+						<w2:summary/>
+					</w2:attributes>
+					<xf:group tagname="caption"/>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:51px;" tagname="col"/>
+						<xf:group style="width:61px;" tagname="col"/>
+						<xf:group style="width:41px;" tagname="col"/>
+						<xf:group style="width:56px;" tagname="col"/>
+						<xf:group style="width:54px;" tagname="col"/>
+						<xf:group style="width:15px;" tagname="col"/>
+						<xf:group style="width:83px;" tagname="col"/>
+						<xf:group style="width:52px;" tagname="col"/>
+						<xf:group style="width:50px;" tagname="col"/>
+						<xf:group style="width:53px;" tagname="col"/>
+						<xf:group style="width:26px;" tagname="col"/>
+						<xf:group style="width:1px;" tagname="col"/>
+						<xf:group style="width:134px;" tagname="col"/>
+						<xf:group style="width:45px;" tagname="col"/>
+						<xf:group style="width:72px;" tagname="col"/>
+						<xf:group style="width:94px;" tagname="col"/>
+						<xf:group style="width:8px;" tagname="col"/>
+						<xf:group style="width:113px;" tagname="col"/>
+						<xf:group style="width:77px;" tagname="col"/>
+						<xf:group style="width:14px;" tagname="col"/>
+						<xf:group style="width:64px;" tagname="col"/>
+						<xf:group style="width:78px;" tagname="col"/>
+						<xf:group style="width:59px;" tagname="col"/>
+						<xf:group style="width:42px;" tagname="col"/>
+						<xf:group style="width:17px;" tagname="col"/>
+						<xf:group style="width:74px;" tagname="col"/>
+						<xf:group style="width:103px;" tagname="col"/>
+						<xf:group style="width:726px;" tagname="col"/>
+						<xf:group style="width:37px;" tagname="col"/>
+						<xf:group style="width:44px;" tagname="col"/>
+						<xf:group style="width:91px;" tagname="col"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="0" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="0" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="0" oldcellrect="0, 0, 51, 29" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="0" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="0" style="width:41px;" MergeInfo="0" columnspan="6" rowlumnspan="0" spanedcell="1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="0" oldcellrect="110, 0, 151, 29" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="0" style="width:56px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="205" columnInfo="0" style="width:54px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="258" columnInfo="0" style="width:15px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="270" columnInfo="0" style="width:83px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="351" columnInfo="0" style="width:52px;" MergeInfo="0" columnspan="8" rowlumnspan="0" spanedcell="1" cellbackcolor="14799043" spanedcellposx="7" spanedcellposy="0" oldcellrect="351, 0, 403, 29" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="0" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="0" style="width:41px;" MergeInfo="0" columnspan="12" rowlumnspan="0" spanedcell="1" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="0" oldcellrect="462, 0, 503, 29" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="502" columnInfo="0" style="width:50px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="0" style="width:53px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="603" columnInfo="0" style="width:26px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="628" columnInfo="0" style="width:1px;" MergeInfo="0" columnspan="14" rowlumnspan="0" spanedcell="1" cellbackcolor="14799043" spanedcellposx="13" spanedcellposy="0" oldcellrect="628, 0, 629, 29" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="628" columnInfo="0" style="width:134px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="0" style="width:45px;" MergeInfo="0" columnspan="19" rowlumnspan="0" spanedcell="1" cellbackcolor="16777215" spanedcellposx="15" spanedcellposy="0" oldcellrect="760, 0, 805, 29" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="0" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="15" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="0" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="15" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="0" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="15" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="954" columnInfo="0" style="width:72px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="15" spanedcellposy="0" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="28" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="1" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="1" oldcellrect="0, 28, 51, 59" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="28" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="28" style="width:41px;" MergeInfo="0" columnspan="6" rowlumnspan="1" spanedcell="1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="1" oldcellrect="110, 28, 151, 59" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="28" style="width:94px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="240" columnInfo="28" style="width:8px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="1" oldcellrect="178, 23, 186, 47" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="258" columnInfo="28" style="width:15px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="240" columnInfo="28" style="width:113px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="351" columnInfo="28" style="width:52px;" MergeInfo="0" columnspan="8" rowlumnspan="1" spanedcell="1" cellbackcolor="14799043" spanedcellposx="7" spanedcellposy="1" oldcellrect="351, 28, 403, 59" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="28" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="28" style="width:77px;" MergeInfo="0" columnspan="11" rowlumnspan="1" spanedcell="1" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="1" oldcellrect="462, 28, 539, 59" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="538" columnInfo="28" style="width:14px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="28" style="width:14px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="564" columnInfo="28" style="width:64px;" MergeInfo="0" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="9" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="626" columnInfo="28" style="width:78px;" MergeInfo="0" columnspan="19" rowlumnspan="1" spanedcell="1" cellbackcolor="15132390" spanedcellposx="13" spanedcellposy="1" oldcellrect="626, 28, 704, 59" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="703" columnInfo="28" style="width:59px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="28" style="width:45px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="28" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="28" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="28" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="954" columnInfo="28" style="width:72px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="1" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="58" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="2" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="2" oldcellrect="0, 58, 51, 89" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="58" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="58" style="width:41px;" MergeInfo="0" columnspan="19" rowlumnspan="2" spanedcell="1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" oldcellrect="110, 58, 151, 89" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="58" style="width:42px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="191" columnInfo="58" style="width:53px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="227" columnInfo="58" style="width:17px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="227" columnInfo="58" style="width:74px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="300" columnInfo="58" style="width:103px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="58" style="width:61px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="58" style="width:41px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="502" columnInfo="58" style="width:50px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="58" style="width:53px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="603" columnInfo="58" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="653" columnInfo="58" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="703" columnInfo="58" style="width:59px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="58" style="width:45px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="58" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="58" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="58" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="300" columnInfo="58" style="width:726px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="88" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="3" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="3" oldcellrect="0, 88, 51, 118" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="88" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="88" style="width:41px;" MergeInfo="0" columnspan="6" rowlumnspan="2" spanedcell="1" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" oldcellrect="110, 88, 151, 118" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="88" style="width:42px;" MergeInfo="0" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="191" columnInfo="88" style="width:53px;" MergeInfo="0" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="2" spanedcellposy="2" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="227" columnInfo="88" style="width:1px;" MergeInfo="0" columnspan="6" rowlumnspan="3" spanedcell="1" cellbackcolor="16777215" spanedcellposx="5" spanedcellposy="3" oldcellrect="227, 88, 228, 118" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="227" columnInfo="88" style="width:74px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="5" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="300" columnInfo="88" style="width:103px;" MergeInfo="0" columnspan="19" rowlumnspan="3" spanedcell="1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" oldcellrect="300, 88, 403, 118" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="88" style="width:37px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" oldcellrect="288, 46, 325, 70" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="88" style="width:41px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="502" columnInfo="88" style="width:50px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="88" style="width:53px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="603" columnInfo="88" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="653" columnInfo="88" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="703" columnInfo="88" style="width:59px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="88" style="width:45px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="88" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="88" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="88" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="300" columnInfo="88" style="width:726px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="3" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="117" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="4" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="4" oldcellrect="0, 117, 51, 147" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="117" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="117" style="width:42px;" MergeInfo="0" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="117" style="width:56px;" MergeInfo="0" columnspan="19" rowlumnspan="4" spanedcell="1" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" oldcellrect="150, 117, 206, 147" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="205" columnInfo="117" style="width:54px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="258" columnInfo="117" style="width:15px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="270" columnInfo="117" style="width:44px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="312" columnInfo="117" style="width:91px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="117" style="width:61px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="117" style="width:41px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="502" columnInfo="117" style="width:50px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="117" style="width:53px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="603" columnInfo="117" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="653" columnInfo="117" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="703" columnInfo="117" style="width:59px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="117" style="width:45px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="117" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="117" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="117" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="954" columnInfo="117" style="width:72px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="4" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group rowInfo="0" columnInfo="146" style="width:51px;" MergeInfo="0" columnspan="1" rowlumnspan="5" spanedcell="1" cellbackcolor="14799043" spanedcellposx="0" spanedcellposy="5" oldcellrect="0, 146, 51, 176" controlalign="TopLeft" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="50" columnInfo="146" style="width:61px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="0" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="110" columnInfo="146" style="width:42px;" MergeInfo="0" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="150" columnInfo="146" style="width:56px;" MergeInfo="0" columnspan="5" rowlumnspan="5" spanedcell="1" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="5" oldcellrect="150, 146, 206, 176" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="205" columnInfo="146" style="width:39px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="5" oldcellrect="147, 92, 186, 116" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="258" columnInfo="146" style="width:15px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="3" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="272" columnInfo="146" style="width:42px;" MergeInfo="0" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="312" columnInfo="146" style="width:91px;" MergeInfo="0" columnspan="11" rowlumnspan="5" spanedcell="1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="5" oldcellrect="312, 146, 403, 176" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="402" columnInfo="146" style="width:61px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="462" columnInfo="146" style="width:41px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="502" columnInfo="146" style="width:50px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="551" columnInfo="146" style="width:53px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="7" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="603" columnInfo="146" style="width:42px;" MergeInfo="0" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="643" columnInfo="146" style="width:61px;" MergeInfo="0" columnspan="19" rowlumnspan="5" spanedcell="1" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" oldcellrect="643, 146, 704, 176" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="703" columnInfo="146" style="width:59px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="760" columnInfo="146" style="width:45px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="804" columnInfo="146" style="width:51px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="854" columnInfo="146" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="904" columnInfo="146" style="width:52px;" MergeInfo="1" columnspan="0" rowlumnspan="0" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+						<xf:group rowInfo="643" columnInfo="146" style="width:383px;" MergeInfo="1" columnspan="-1" rowlumnspan="-1" cellbackcolor="16777215" spanedcellposx="13" spanedcellposy="5" celltobborder="1" cellleftborder="1" cellrightborder="1" cellbottomborder="1" tagname="td" class="w2tb_td"/>
+					</xf:group>
+				</xf:group>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:14px; width:239px; height:24px; font-size:10pt; letter-spacing:0; font-weight:700;" id="acno1" indicator="기표계좌번호" tabIndex="1" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" readOnly="true" ninemode="0" tbrowidx="0" orgid="acno1" hierarchy="acno1" ref="data:dma_KFC04001000.acno1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:413px; top:14px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_exeNo1" tabIndex="2" label="실행번호" tbrowidx="0" orgid="Text_exeNo1" hierarchy="Text_exeNo1" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:476px; top:14px; width:163px; height:24px;" id="exeNo1" indicator="실행번호" tabIndex="3" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" readOnly="true" ninemode="0" tbrowidx="0" orgid="exeNo1" hierarchy="exeNo1" ref="data:dma_KFC04001000.exeNo1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:690px; top:14px; width:81px; height:24px; color:rgb(0,0,0);" id="Text_olAcnExeNo" tabIndex="4" label="(구)실행번호" tbrowidx="0" orgid="Text_olAcnExeNo" hierarchy="Text_olAcnExeNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:774px; top:14px; width:262px; height:24px;" id="olAcnExeNo" indicator="구계좌실행번호" tabIndex="5" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999" maxlength="8" readOnly="true" ninemode="0" tbrowidx="0" orgid="olAcnExeNo" hierarchy="olAcnExeNo" ref="data:dma_KFC04001000.olAcnExeNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:35px; top:42px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_ctcrCustIdnfr_4" tabIndex="6" label="본인확인번호" tbrowidx="1" orgid="Text_ctcrCustIdnfr_4" hierarchy="Text_ctcrCustIdnfr_4" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:44px; width:239px; height:24px;" id="ssno" indicator="고객번호" tabIndex="7" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" readOnly="true" ninemode="0" tbrowidx="2" orgid="ssno" hierarchy="ssno" ref="data:dma_KFC04001000.ssno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:419px; top:42px; width:49px; height:24px; color:rgb(0,0,0);" id="Text_ctcrCustIdnfr" tabIndex="8" label="KB-PIN" tbrowidx="1" orgid="Text_ctcrCustIdnfr" hierarchy="Text_ctcrCustIdnfr" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:476px; top:44px; width:99px; height:24px;" id="ctcrCustIdnfr" indicator="고객식별자" tabIndex="9" autosize="0" editFormat="99999-99999" maxlength="11" readOnly="true" ninemode="0" tbrowidx="2" orgid="ctcrCustIdnfr" hierarchy="ctcrCustIdnfr" ref="data:dma_KFC04001000.ctcrCustIdnfr"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:578px; top:44px; width:60px; height:24px;" id="ctcrCustMgtNo" indicator="고객관리번호" tabIndex="10" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" readOnly="true" ninemode="0" tbrowidx="2" orgid="ctcrCustMgtNo" hierarchy="ctcrCustMgtNo" ref="data:dma_KFC04001000.ctcrCustMgtNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:74px; top:72px; width:45px; height:24px; color:rgb(0,0,0);" id="Text_custnm" tabIndex="11" label="고객명" tbrowidx="3" orgid="Text_custnm" hierarchy="Text_custnm" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:73px; width:912px; height:24px;" id="custnm" indicator="고객명" tabIndex="12" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="52" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="4" orgid="custnm" hierarchy="custnm" ref="data:dma_KFC04001000.custnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:62px; top:102px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_prdctLagClsfiCd" tabIndex="13" label="상품코드" tbrowidx="5" orgid="Text_prdctLagClsfiCd" hierarchy="Text_prdctLagClsfiCd" class="kb_MiddleRight"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:102px; width:30px; height:24px;" id="prdctLagClsfiCd" indicator="상품대분류코드" tabIndex="14" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" suffix="-" ninemode="0" tbrowidx="5" orgid="prdctLagClsfiCd" hierarchy="prdctLagClsfiCd" ref="data:dma_KFC04001000.prdctLagClsfiCd"/>
+					<w2:textbox id="" label="-" style="position:absolute; left:159px; top:102px" class="kb_MiddleRight"/>
+				</xf:group>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:164px; top:102px; width:30px; height:24px;" id="prdctMedmClsfiCd" indicator="상품중분류코드" tabIndex="15" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" suffix="-" ninemode="0" tbrowidx="5" orgid="prdctMedmClsfiCd" hierarchy="prdctMedmClsfiCd" ref="data:dma_KFC04001000.prdctMedmClsfiCd"/>
+					<w2:textbox id="" label="-" style="position:absolute; left:199px; top:102px" class="kb_MiddleRight"/>
+				</xf:group>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:205px; top:102px; width:37px; height:24px;" id="prdctTmpltCd" indicator="상품템플릿코드" tabIndex="16" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" suffix="-" ninemode="0" tbrowidx="5" orgid="prdctTmpltCd" hierarchy="prdctTmpltCd" ref="data:dma_KFC04001000.prdctTmpltCd"/>
+					<w2:textbox id="" label="-" style="position:absolute; left:247px; top:102px" class="kb_MiddleRight"/>
+				</xf:group>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:242px; top:102px; width:39px; height:24px;" id="prdctNo" indicator="상품번호" tabIndex="17" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" readOnly="true" ninemode="0" tbrowidx="5" orgid="prdctNo" hierarchy="prdctNo" ref="data:dma_KFC04001000.prdctNo"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:314px; top:102px; width:722px; height:24px; font-size:10pt; letter-spacing:0; font-weight:700;" id="prdctName" indicator="상품명" tabIndex="18" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="72" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="5" orgid="prdctName" hierarchy="prdctName" ref="data:dma_KFC04001000.prdctName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:62px; top:131px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_lnQulfiDstic" tabIndex="19" label="대출자격" tbrowidx="6" orgid="Text_lnQulfiDstic" hierarchy="Text_lnQulfiDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:131px; width:38px; height:24px;" id="lnQulfiDstic" indicator="대출자격구분" tabIndex="20" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" tbrowidx="6" orgid="lnQulfiDstic" hierarchy="lnQulfiDstic" ref="data:dma_KFC04001000.lnQulfiDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:164px; top:131px; width:872px; height:24px;" id="lnQulfiName" indicator="대출자격명" tabIndex="21" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="80" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="6" orgid="lnQulfiName" hierarchy="lnQulfiName" ref="data:dma_KFC04001000.lnQulfiName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:62px; top:160px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_ctrcStusDstcd" tabIndex="22" label="계좌상태" tbrowidx="7" orgid="Text_ctrcStusDstcd" hierarchy="Text_ctrcStusDstcd" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:124px; top:161px; width:38px; height:24px;" id="ctrcStusDstcd" indicator="계약상태구분코드" tabIndex="23" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcStusDstcd" hierarchy="ctrcStusDstcd" ref="data:dma_KFC04001000.ctrcStusDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:164px; top:161px; width:119px; height:24px; font-size:10pt; letter-spacing:0; font-weight:700;" id="ctrcStusName" indicator="계약상태명" tabIndex="24" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcStusName" hierarchy="ctrcStusName" ref="data:dma_KFC04001000.ctrcStusName"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:286px; top:161px; width:38px; height:24px;" id="ctrcNthCretnResnDstcd" indicator="계약회차생성사유구분코드" tabIndex="25" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcNthCretnResnDstcd" hierarchy="ctrcNthCretnResnDstcd" ref="data:dma_KFC04001000.ctrcNthCretnResnDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:326px; top:161px; width:288px; height:24px;" id="ctrcNthCretnResnName" indicator="계약회차생성사유명" tabIndex="26" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="32" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcNthCretnResnName" hierarchy="ctrcNthCretnResnName" ref="data:dma_KFC04001000.ctrcNthCretnResnName"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:617px; top:161px; width:38px; height:24px;" id="ctrcNthDscrdResnDstcd" indicator="계약회차폐기사유구분코드" tabIndex="27" autosize="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcNthDscrdResnDstcd" hierarchy="ctrcNthDscrdResnDstcd" ref="data:dma_KFC04001000.ctrcNthDscrdResnDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:657px; top:161px; width:379px; height:24px;" id="ctrcNthDscrdResnName" indicator="계약회차폐기사유명" tabIndex="28" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="32" imeMode="반자" readOnly="true" ninemode="0" tbrowidx="8" orgid="ctrcNthDscrdResnName" hierarchy="ctrcNthDscrdResnName" ref="data:dma_KFC04001000.ctrcNthDscrdResnName"/>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:68px; top:14px; width:48px; height:21px; background-color:rgb(195,210,235); align:middleright; border없음; font-size:10pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="LinkText601" tabIndex="29" textcolor="3876114" autosize="1" adjusttheme="0" linkbehavior="AllwaysUnderline" tbrowidx="0" un="1" class="btn_def_link" ev:onclick="scwin.LinkText601_OnClick" orgid="LinkText601" hierarchy="LinkText601" outerDiv="false">
+					<xf:label><![CDATA[계좌번호]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:720px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText6" tabIndex="20" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText6_OnClick" orgid="LinkText6" hierarchy="LinkText6" outerDiv="false">
+				<xf:label><![CDATA[한도조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:624px; top:120px; width:90px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText5" tabIndex="21" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText5_OnClick" orgid="LinkText5" hierarchy="LinkText5" outerDiv="false">
+				<xf:label><![CDATA[담보내역조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:498px; top:120px; width:120px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText4" tabIndex="22" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText4_OnClick" orgid="LinkText4" hierarchy="LinkText4" outerDiv="false">
+				<xf:label><![CDATA[고객종합정보조회]]></xf:label>
+			</w2:anchor>
+			<w2:anchor ctype="LinkText" style="position:absolute; left:372px; top:120px; width:120px; height:24px; borderraised2; font-size:10pt; letter-spacing:0; font-weight:0; font-family:나눔고딕;" id="LinkText3" tabIndex="23" textcolor="3876114" class="btn_def_link" ev:onclick="scwin.LinkText3_OnClick" orgid="LinkText3" hierarchy="LinkText3" outerDiv="false">
+				<xf:label><![CDATA[계좌적용이율조회]]></xf:label>
+			</w2:anchor>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:384px; width:1056px; height:462px; background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="24" id="GroupBox7" tabIndex="24" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox7" hierarchy="GroupBox7">
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_agreDte" tabIndex="1" label="신규일자" orgid="Text_agreDte" hierarchy="Text_agreDte" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:42px; width:74px; height:24px;" id="agreDte" indicator="약정일자" tabIndex="2" maxlength="10" readOnly="true" ninemode="0" orgid="agreDte" hierarchy="agreDte" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.agreDte"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:254px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_mgtbrn" tabIndex="3" label="관리점번" orgid="Text_mgtbrn" hierarchy="Text_mgtbrn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:42px; width:32px; height:24px;" id="mgtbrn" indicator="관리부점" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="mgtbrn" hierarchy="mgtbrn" ref="data:dma_KFC04001000.mgtbrn"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:366px; top:42px; width:158px; height:24px;" id="mgtbrnName" indicator="관리부점명" tabIndex="5" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="mgtbrnName" hierarchy="mgtbrnName" ref="data:dma_KFC04001000.mgtbrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:732px; top:42px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_cnpr" tabIndex="6" label="대출금액" orgid="Text_cnpr" hierarchy="Text_cnpr" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:798px; top:42px; width:25px; height:24px;" id="cncycd" indicator="통화코드" tabIndex="7" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" orgid="cncycd" hierarchy="cncycd" ref="data:dma_KFC04001000.cncycd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:42px; width:158px; height:24px; text-align:right;" id="cnpr" indicator="기표금액" tabIndex="8" dataType="number" displayFormat="###,###,###,###,###.##" maxlength="22" readOnly="true" decimallength="2" ninemode="0" insertcomma="1" rightalign="1" orgid="cnpr" hierarchy="cnpr" ref="data:dma_KFC04001000.cnpr"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_expirDdPsn" tabIndex="9" label="만기일자" orgid="Text_expirDdPsn" hierarchy="Text_expirDdPsn" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:72px; width:74px; height:24px;" id="expirDdPsn" indicator="만기일자" tabIndex="10" maxlength="10" readOnly="true" ninemode="0" orgid="expirDdPsn" hierarchy="expirDdPsn" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.expirDdPsn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:252px; top:72px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_solicBrn" tabIndex="11" label="권유점번" orgid="Text_solicBrn" hierarchy="Text_solicBrn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:72px; width:32px; height:24px;" id="solicBrn" indicator="권유부점" tabIndex="12" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="solicBrn" hierarchy="solicBrn" ref="data:dma_KFC04001000.solicBrn"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:366px; top:72px; width:158px; height:24px;" id="solicBrnName" indicator="권유부점명" tabIndex="13" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="solicBrnName" hierarchy="solicBrnName" ref="data:dma_KFC04001000.solicBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:696px; top:72px; width:94px; height:24px; color:rgb(0,0,0);" id="Text_lnExeCutamt" tabIndex="14" label="실행금액(누계)" orgid="Text_lnExeCutamt" hierarchy="Text_lnExeCutamt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:72px; width:158px; height:24px; text-align:right;" id="lnExeCutamt" indicator="대출실행누계금액" tabIndex="15" dataType="number" displayFormat="###,###,###,###,###.##" maxlength="22" readOnly="true" decimallength="2" ninemode="0" insertcomma="1" rightalign="1" orgid="lnExeCutamt" hierarchy="lnExeCutamt" ref="data:dma_KFC04001000.lnExeCutamt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:102px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_lastIntCalcDd" tabIndex="16" label="최종이수일" orgid="Text_lastIntCalcDd" hierarchy="Text_lastIntCalcDd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:102px; width:74px; height:24px;" id="lastIntCalcDd" indicator="최종이자계산일" tabIndex="17" maxlength="10" readOnly="true" ninemode="0" orgid="lastIntCalcDd" hierarchy="lastIntCalcDd" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.lastIntCalcDd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:241px; top:102px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_docsKeepBrn" tabIndex="18" label="서류보관점" orgid="Text_docsKeepBrn" hierarchy="Text_docsKeepBrn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:102px; width:32px; height:24px;" id="docsKeepBrn" indicator="서류보관부점" tabIndex="19" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="docsKeepBrn" hierarchy="docsKeepBrn" ref="data:dma_KFC04001000.docsKeepBrn"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:366px; top:102px; width:158px; height:24px;" id="docsKeepBrnName" indicator="서류보관부점명" tabIndex="20" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="docsKeepBrnName" hierarchy="docsKeepBrnName" ref="data:dma_KFC04001000.docsKeepBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:732px; top:102px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_lnBal" tabIndex="21" label="대출잔액" orgid="Text_lnBal" hierarchy="Text_lnBal" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:102px; width:158px; height:24px; text-align:right;" id="lnBal" indicator="대출잔액" tabIndex="22" dataType="number" displayFormat="###,###,###,###,###.##" maxlength="22" readOnly="true" decimallength="2" ninemode="0" insertcomma="1" rightalign="1" orgid="lnBal" hierarchy="lnBal" ref="data:dma_KFC04001000.lnBal"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:132px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_nextPaymtDd" tabIndex="23" label="다음납입일" orgid="Text_nextPaymtDd" hierarchy="Text_nextPaymtDd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:132px; width:74px; height:24px;" id="nextPaymtDd" indicator="다음납입일" tabIndex="24" maxlength="10" readOnly="true" ninemode="0" orgid="nextPaymtDd" hierarchy="nextPaymtDd" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.nextPaymtDd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:241px; top:132px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_lastTrnbrn" tabIndex="25" label="최종거래점" orgid="Text_lastTrnbrn" hierarchy="Text_lastTrnbrn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:132px; width:32px; height:24px;" id="lastTrnbrn" indicator="최종거래부점" tabIndex="26" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="lastTrnbrn" hierarchy="lastTrnbrn" ref="data:dma_KFC04001000.lastTrnbrn"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:366px; top:132px; width:158px; height:24px;" id="lastTranBrnName" indicator="최종거래부점명" tabIndex="27" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="lastTranBrnName" hierarchy="lastTranBrnName" ref="data:dma_KFC04001000.lastTranBrnName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:654px; top:132px; width:136px; height:24px; color:rgb(0,0,0);" id="Text_hgstAgreAmt" tabIndex="28" label="자동대출최고약정금액" orgid="Text_hgstAgreAmt" hierarchy="Text_hgstAgreAmt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:132px; width:158px; height:24px; text-align:right;" id="hgstAgreAmt" indicator="최고약정금액" tabIndex="29" dataType="number" displayFormat="###,###,###,###,###.##" maxlength="22" readOnly="true" decimallength="2" ninemode="0" insertcomma="1" rightalign="1" orgid="hgstAgreAmt" hierarchy="hgstAgreAmt" ref="data:dma_KFC04001000.hgstAgreAmt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:162px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_lastTranDd" tabIndex="30" label="최종거래일" orgid="Text_lastTranDd" hierarchy="Text_lastTranDd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:162px; width:74px; height:24px;" id="lastTranDd" indicator="최종거래일" tabIndex="31" maxlength="10" readOnly="true" ninemode="0" orgid="lastTranDd" hierarchy="lastTranDd" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.lastTranDd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:254px; top:162px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_ctrcTrmCnt" tabIndex="32" label="대출기간" orgid="Text_ctrcTrmCnt" hierarchy="Text_ctrcTrmCnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:162px; width:25px; height:24px; text-align:right;" id="ctrcTrmCnt" indicator="계약기간수" tabIndex="33" dataType="number" displayFormat="###" maxlength="3" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" orgid="ctrcTrmCnt" hierarchy="ctrcTrmCnt" ref="data:dma_KFC04001000.ctrcTrmCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:408px; top:162px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_ctrcTrmUnitDstic" tabIndex="34" label="대출기간단위" orgid="Text_ctrcTrmUnitDstic" hierarchy="Text_ctrcTrmUnitDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:522px; top:162px; width:74px; height:24px;" id="ctrcTrmUnitDsticName" indicator="계약기간단위구분명" tabIndex="35" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ninemode="0" orgid="ctrcTrmUnitDsticName" hierarchy="ctrcTrmUnitDsticName" ref="data:dma_KFC04001000.ctrcTrmUnitDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:706px; top:162px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_rpayWayDstic" tabIndex="36" label="상환방법구분" orgid="Text_rpayWayDstic" hierarchy="Text_rpayWayDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:162px; width:18px; height:24px;" id="rpayWayDstic" indicator="상환방법구분" tabIndex="37" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" ninemode="0" orgid="rpayWayDstic" hierarchy="rpayWayDstic" ref="data:dma_KFC04001000.rpayWayDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:162px; width:158px; height:24px;" id="rpayWayName" indicator="상환방법명" tabIndex="38" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="rpayWayName" hierarchy="rpayWayName" ref="data:dma_KFC04001000.rpayWayName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:192px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_cretnYmd" tabIndex="39" label="생성일자" orgid="Text_cretnYmd" hierarchy="Text_cretnYmd" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:192px; width:74px; height:24px;" id="cretnYmd" indicator="생성일자" tabIndex="40" maxlength="10" readOnly="true" ninemode="0" orgid="cretnYmd" hierarchy="cretnYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.cretnYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:228px; top:192px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_tmdferCnt" tabIndex="41" label="적용거치기간" orgid="Text_tmdferCnt" hierarchy="Text_tmdferCnt" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:192px; width:25px; height:24px; text-align:right;" id="tmdferCnt" indicator="거치기간수" tabIndex="42" dataType="number" displayFormat="###" maxlength="3" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" orgid="tmdferCnt" hierarchy="tmdferCnt" ref="data:dma_KFC04001000.tmdferCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:421px; top:192px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_intAhedPstaqDstic" tabIndex="43" label="이자선후취" orgid="Text_intAhedPstaqDstic" hierarchy="Text_intAhedPstaqDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:192px; width:11px; height:24px;" id="intAhedPstaqDstcd" indicator="이자선후취구분코드" tabIndex="44" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="intAhedPstaqDstcd" hierarchy="intAhedPstaqDstcd" ref="data:dma_KFC04001000.intAhedPstaqDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:522px; top:192px; width:74px; height:24px;" id="intAhedPstaqDsticName" indicator="이자선후취구분명" tabIndex="45" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ninemode="0" orgid="intAhedPstaqDsticName" hierarchy="intAhedPstaqDsticName" ref="data:dma_KFC04001000.intAhedPstaqDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:706px; top:192px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_intCalcUnitDstic" tabIndex="46" label="이자계산단위" orgid="Text_intCalcUnitDstic" hierarchy="Text_intCalcUnitDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:192px; width:18px; height:24px;" id="intCalcUnitDstic" indicator="이자계산단위구분" tabIndex="47" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" ninemode="0" orgid="intCalcUnitDstic" hierarchy="intCalcUnitDstic" ref="data:dma_KFC04001000.intCalcUnitDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:192px; width:102px; height:24px;" id="intCalcUnitDsticName" indicator="이자계산단위구분명" tabIndex="48" allowChar="가-힣" validateOnInput="true" maxlength="14" imeMode="반자" readOnly="true" ninemode="0" orgid="intCalcUnitDsticName" hierarchy="intCalcUnitDsticName" ref="data:dma_KFC04001000.intCalcUnitDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:222px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_dscrdDte" tabIndex="49" label="폐기일자" orgid="Text_dscrdDte" hierarchy="Text_dscrdDte" class="kb_MiddleRight"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:102px; top:222px; width:74px; height:24px;" id="dscrdDte" indicator="폐기일자" tabIndex="50" maxlength="10" readOnly="true" ninemode="0" orgid="dscrdDte" hierarchy="dscrdDte" displayFormat="yyyy/MM/dd" ref="data:dma_KFC04001000.dscrdDte"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:254px; top:222px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_ppayNoday" tabIndex="51" label="선납일수" orgid="Text_ppayNoday" hierarchy="Text_ppayNoday" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:222px; width:39px; height:24px; text-align:right;" id="ppayNoday" indicator="선납일수" tabIndex="52" dataType="number" displayFormat="#####" maxlength="5" readOnly="true" ninemode="0" rightalign="1" orgid="ppayNoday" hierarchy="ppayNoday" ref="data:dma_KFC04001000.ppayNoday"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:421px; top:222px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_agrePaymtDd" tabIndex="53" label="약정납입일" orgid="Text_agrePaymtDd" hierarchy="Text_agrePaymtDd" class="kb_MiddleRight"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:522px; top:222px; width:37px; height:24px;" id="agrePaymtDd" indicator="약정납입일" tabIndex="54" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" suffix="일" ninemode="0" orgid="agrePaymtDd" hierarchy="agrePaymtDd" ref="data:dma_KFC04001000.agrePaymtDd"/>
+					<w2:textbox id="" label="일" style="position:absolute; left:564px; top:222px" class="kb_MiddleRight"/>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:680px; top:222px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_uncolcBndAcnStusDstic" tabIndex="55" label="미수채권계좌상태" orgid="Text_uncolcBndAcnStusDstic" hierarchy="Text_uncolcBndAcnStusDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:222px; width:11px; height:24px;" id="uncolcBndAcnStusDstcd" indicator="미수채권계좌상태구분코드" tabIndex="56" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="uncolcBndAcnStusDstcd" hierarchy="uncolcBndAcnStusDstcd" ref="data:dma_KFC04001000.uncolcBndAcnStusDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:222px; width:158px; height:24px;" id="uncolcBndAcnStusDstic" indicator="미수채권계좌상태구분" tabIndex="57" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="uncolcBndAcnStusDstic" hierarchy="uncolcBndAcnStusDstic" ref="data:dma_KFC04001000.uncolcBndAcnStusDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:252px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_lastTranIrt" tabIndex="58" label="적용이율" orgid="Text_lastTranIrt" hierarchy="Text_lastTranIrt" class="kb_MiddleRight"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:102px; top:252px; width:93px; height:24px; text-align:right;" id="lastTranIrt" indicator="기표이율" tabIndex="59" dataType="number" displayFormat="#,###.#####" maxlength="11" readOnly="true" suffix="%" decimallength="5" ninemode="0" insertcomma="1" rightalign="1" orgid="lastTranIrt" hierarchy="lastTranIrt" ref="data:dma_KFC04001000.lastTranIrt"/>
+					<w2:textbox id="" label="%" style="position:absolute; left:200px; top:252px" class="kb_MiddleRight"/>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:228px; top:252px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_lnbzBascIrtDstic" tabIndex="60" label="기본금리구분" orgid="Text_lnbzBascIrtDstic" hierarchy="Text_lnbzBascIrtDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:252px; width:18px; height:24px;" id="lnbzBascIrtDstcd" indicator="여신기본금리구분코드" tabIndex="61" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" ninemode="0" orgid="lnbzBascIrtDstcd" hierarchy="lnbzBascIrtDstcd" ref="data:dma_KFC04001000.lnbzBascIrtDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:348px; top:252px; width:214px; height:24px;" id="lnbzBascIrtDstic" indicator="여신기본금리구분" tabIndex="62" allowChar="가-힣" validateOnInput="true" maxlength="30" imeMode="반자" readOnly="true" ninemode="0" orgid="lnbzBascIrtDstic" hierarchy="lnbzBascIrtDstic" ref="data:dma_KFC04001000.lnbzBascIrtDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:680px; top:252px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_crsppoRegiDstic" tabIndex="63" label="워크아웃등록현황" orgid="Text_crsppoRegiDstic" hierarchy="Text_crsppoRegiDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:252px; width:18px; height:24px;" id="crsppoRegiDstcd" indicator="신용회복지원등록구분코드" tabIndex="64" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" ninemode="0" orgid="crsppoRegiDstcd" hierarchy="crsppoRegiDstcd" ref="data:dma_KFC04001000.crsppoRegiDstcd"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:252px; width:158px; height:24px;" id="crsppoRegiDstic" indicator="신용회복지원등록구분" tabIndex="65" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="crsppoRegiDstic" hierarchy="crsppoRegiDstic" ref="data:dma_KFC04001000.crsppoRegiDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:37px; top:282px; width:58px; height:24px; color:rgb(0,0,0);" id="Text_ovrduYn" tabIndex="66" label="연체여부" orgid="Text_ovrduYn" hierarchy="Text_ovrduYn" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:102px; top:282px; width:74px; height:24px;" id="ovrduYn" indicator="연체여부" tabIndex="67" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ninemode="0" orgid="ovrduYn" hierarchy="ovrduYn" ref="data:dma_KFC04001000.ovrduYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:228px; top:282px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_lspyNth" tabIndex="68" label="최종납입회차" orgid="Text_lspyNth" hierarchy="Text_lspyNth" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:324px; top:282px; width:46px; height:24px; text-align:right;" id="lspyNth" indicator="최종납입회차" tabIndex="69" dataType="number" displayFormat="##,###" maxlength="6" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" orgid="lspyNth" hierarchy="lspyNth" ref="data:dma_KFC04001000.lspyNth"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:426px; top:282px; width:71px; height:24px; color:rgb(0,0,0);" id="Text_aBTDd" tabIndex="70" label="자동이체일" orgid="Text_aBTDd" hierarchy="Text_aBTDd" class="kb_MiddleRight"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:522px; top:282px; width:37px; height:24px;" id="aBTDd" indicator="자동이체일" tabIndex="71" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" readOnly="true" suffix="일" ninemode="0" orgid="aBTDd" hierarchy="aBTDd" ref="data:dma_KFC04001000.aBTDd"/>
+					<w2:textbox id="" label="일" style="position:absolute; left:564px; top:282px" class="kb_MiddleRight"/>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:693px; top:282px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_cyclPerFixIrtDstic" tabIndex="72" label="주기별금리구분" orgid="Text_cyclPerFixIrtDstic" hierarchy="Text_cyclPerFixIrtDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:282px; width:11px; height:24px;" id="cyclPerFixIrtDstic" indicator="주기별고정금리구분" tabIndex="73" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="cyclPerFixIrtDstic" hierarchy="cyclPerFixIrtDstic" ref="data:dma_KFC04001000.cyclPerFixIrtDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:282px; width:74px; height:24px;" id="cyclPerFixIrtDsticName" indicator="주기별고정금리구분명" tabIndex="74" allowChar="가-힣" validateOnInput="true" maxlength="10" imeMode="반자" readOnly="true" ninemode="0" orgid="cyclPerFixIrtDsticName" hierarchy="cyclPerFixIrtDsticName" ref="data:dma_KFC04001000.cyclPerFixIrtDsticName"/>
+				<w2:anchor ctype="LinkText" style="position:absolute; left:72px; top:312px; width:84px; height:24px; background-color:rgb(238,238,238); align:middleright; border없음; font-size:10pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="LinkText603" tabIndex="75" textcolor="3876114" adjusttheme="0" linkbehavior="AllwaysUnderline" un="1" class="btn_def_link" ev:onclick="scwin.LinkText603_OnClick" orgid="LinkText603" hierarchy="LinkText603" outerDiv="false">
+					<xf:label><![CDATA[자동이체계좌]]></xf:label>
+				</w2:anchor>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:312px; width:130px; height:24px;" id="aBTAcno" indicator="자동이체계좌번호" tabIndex="76" dataType="number" editFormat="#######-##-#######" maxlength="18" readOnly="true" multipattern="계좌번호(16)" ninemode="0" orgid="aBTAcno" hierarchy="aBTAcno" ref="data:dma_KFC04001000.aBTAcno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:360px; top:312px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_lnbzAthorNo" tabIndex="77" label="여신승인번호" orgid="Text_lnbzAthorNo" hierarchy="Text_lnbzAthorNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:456px; top:312px; width:144px; height:24px;" id="lnbzAthorNo" indicator="여신승인번호" tabIndex="78" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" readOnly="true" ninemode="0" ev:onrickick="scwin.lnbzAthorNo_OnRClick" orgid="lnbzAthorNo" hierarchy="lnbzAthorNo" ref="data:dma_KFC04001000.lnbzAthorNo"/>
+				<w2:floatingLayer ctype="ContextMenu" style="position:absolute; left:540px; top:312px; width:72px; height:24px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="ContextMenu2" tabIndex="79" tabstop="0" enterstop="0" autosize="0" container="0" enable="1" paper="0" adjusttheme="1" orgid="ContextMenu2" hierarchy="ContextMenu2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:706px; top:312px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_irtFlxblCyclDstic" tabIndex="80" label="금리변동주기" orgid="Text_irtFlxblCyclDstic" hierarchy="Text_irtFlxblCyclDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:312px; width:25px; height:24px;" id="irtFlxblCyclDstic" indicator="금리변동주기구분" tabIndex="81" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" orgid="irtFlxblCyclDstic" hierarchy="irtFlxblCyclDstic" ref="data:dma_KFC04001000.irtFlxblCyclDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:312px; width:102px; height:24px;" id="irtFlxblCyclDsticName" indicator="금리변동주기구분명" tabIndex="82" allowChar="가-힣" validateOnInput="true" maxlength="14" imeMode="반자" readOnly="true" ninemode="0" orgid="irtFlxblCyclDsticName" hierarchy="irtFlxblCyclDsticName" ref="data:dma_KFC04001000.irtFlxblCyclDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:60px; top:342px; width:97px; height:24px; color:rgb(0,0,0);" id="Text_intgraAfAcno" tabIndex="83" label="통합후계좌번호" orgid="Text_intgraAfAcno" hierarchy="Text_intgraAfAcno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:342px; width:130px; height:24px;" id="intgraAfAcno" indicator="통합후계좌번호" tabIndex="84" dataType="number" editFormat="#######-##-#######" maxlength="18" readOnly="true" multipattern="계좌번호(16)" ninemode="0" orgid="intgraAfAcno" hierarchy="intgraAfAcno" ref="data:dma_KFC04001000.intgraAfAcno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:360px; top:342px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_kCGFAcno" tabIndex="85" label="신보계좌번호" orgid="Text_kCGFAcno" hierarchy="Text_kCGFAcno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:456px; top:342px; width:144px; height:24px;" id="kCGFAcno" indicator="신보계좌번호" tabIndex="86" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" readOnly="true" ninemode="0" ev:onrickick="scwin.kCGFAcno_OnRClick" orgid="kCGFAcno" hierarchy="kCGFAcno" ref="data:dma_KFC04001000.kCGFAcno"/>
+				<w2:floatingLayer ctype="ContextMenu" style="position:absolute; left:540px; top:342px; width:72px; height:24px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="ContextMenu4" tabIndex="87" tabstop="0" enterstop="0" autosize="0" container="0" enable="1" paper="0" adjusttheme="1" orgid="ContextMenu4" hierarchy="ContextMenu4"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:706px; top:342px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_intPaymtCyclDstic" tabIndex="88" label="이자납입주기" orgid="Text_intPaymtCyclDstic" hierarchy="Text_intPaymtCyclDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:342px; width:25px; height:24px;" id="intPaymtCyclDstic" indicator="이자납입주기구분" tabIndex="89" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" orgid="intPaymtCyclDstic" hierarchy="intPaymtCyclDstic" ref="data:dma_KFC04001000.intPaymtCyclDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:342px; width:158px; height:24px;" id="intPaymtCyclDsticName" indicator="이자납입주기구분명" tabIndex="90" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="intPaymtCyclDsticName" hierarchy="intPaymtCyclDsticName" ref="data:dma_KFC04001000.intPaymtCyclDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:47px; top:372px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_grntyIsupolNo" tabIndex="91" label="보증보험증권번호" orgid="Text_grntyIsupolNo" hierarchy="Text_grntyIsupolNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:372px; width:130px; height:24px;" id="grntyIsupolNo" indicator="보증보험증권번호" tabIndex="92" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999999999999999" maxlength="18" readOnly="true" ninemode="0" ev:onrickick="scwin.grntyIsupolNo_OnRClick" orgid="grntyIsupolNo" hierarchy="grntyIsupolNo" ref="data:dma_KFC04001000.grntyIsupolNo"/>
+				<w2:floatingLayer ctype="ContextMenu" style="position:absolute; left:234px; top:372px; width:72px; height:24px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="ContextMenu5" tabIndex="93" tabstop="0" enterstop="0" autosize="0" container="0" enable="1" paper="0" adjusttheme="1" orgid="ContextMenu5" hierarchy="ContextMenu5"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:360px; top:372px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_limtAcno" tabIndex="94" label="한도계좌번호" orgid="Text_limtAcno" hierarchy="Text_limtAcno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:456px; top:372px; width:144px; height:24px;" id="limtAcno" indicator="한도계좌번호" tabIndex="95" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" imeMode="반자" readOnly="true" ninemode="0" ev:onrickick="scwin.limtAcno_OnRClick" orgid="limtAcno" hierarchy="limtAcno" ref="data:dma_KFC04001000.limtAcno"/>
+				<w2:floatingLayer ctype="ContextMenu" style="position:absolute; left:540px; top:372px; width:72px; height:24px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="ContextMenu3" tabIndex="96" tabstop="0" enterstop="0" autosize="0" container="0" enable="1" paper="0" adjusttheme="1" orgid="ContextMenu3" hierarchy="ContextMenu3"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:706px; top:372px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_prcplPaymtCyclDstic" tabIndex="97" label="원금납입주기" orgid="Text_prcplPaymtCyclDstic" hierarchy="Text_prcplPaymtCyclDstic" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:372px; width:25px; height:24px;" id="prcplPaymtCyclDstic" indicator="원금납입주기구분" tabIndex="98" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" orgid="prcplPaymtCyclDstic" hierarchy="prcplPaymtCyclDstic" ref="data:dma_KFC04001000.prcplPaymtCyclDstic"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:834px; top:372px; width:158px; height:24px;" id="prcplPaymtCyclDsticName" indicator="원금납입주기구분명" tabIndex="99" allowChar="가-힣" validateOnInput="true" maxlength="22" imeMode="반자" readOnly="true" ninemode="0" orgid="prcplPaymtCyclDsticName" hierarchy="prcplPaymtCyclDsticName" ref="data:dma_KFC04001000.prcplPaymtCyclDsticName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:21px; top:402px; width:136px; height:24px; color:rgb(0,0,0);" id="Text_lnbzAthorAplcnNo" tabIndex="100" label="최종여신승인신청번호" orgid="Text_lnbzAthorAplcnNo" hierarchy="Text_lnbzAthorAplcnNo" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:402px; width:95px; height:24px;" id="lnbzAthorAplcnNo" indicator="여신승인신청번호" tabIndex="101" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999" maxlength="13" readOnly="true" ninemode="0" orgid="lnbzAthorAplcnNo" hierarchy="lnbzAthorAplcnNo" ref="data:dma_KFC04001000.lnbzAthorAplcnNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:308px; top:402px; width:136px; height:24px; color:rgb(0,0,0);" id="Text_lnbzAthorAplcnSerno" tabIndex="102" label="최종승인신청일련번호" orgid="Text_lnbzAthorAplcnSerno" hierarchy="Text_lnbzAthorAplcnSerno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:456px; top:402px; width:25px; height:24px;" id="lnbzAthorAplcnSerno" indicator="여신승인신청일련번호" tabIndex="103" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="###" maxlength="3" readOnly="true" ninemode="0" orgid="lnbzAthorAplcnSerno" hierarchy="lnbzAthorAplcnSerno" ref="data:dma_KFC04001000.lnbzAthorAplcnSerno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:680px; top:402px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_prcplPaymtCyclDstic_4" tabIndex="104" label="일부상각계좌여부" orgid="Text_prcplPaymtCyclDstic_4" hierarchy="Text_prcplPaymtCyclDstic_4" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:804px; top:402px; width:25px; height:24px;" id="spare4" indicator="예비4" tabIndex="105" allowChar="가-힣" validateOnInput="true" maxlength="3" imeMode="반자" readOnly="true" ninemode="0" orgid="spare4" hierarchy="spare4" ref="data:dma_KFC04001000.spare4"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:47px; top:432px; width:110px; height:24px; color:rgb(0,0,0);" id="Text_lnbzAthorAplcnNo_4" tabIndex="106" label="자산심사접수번호" orgid="Text_lnbzAthorAplcnNo_4" hierarchy="Text_lnbzAthorAplcnNo_4" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:432px; width:144px; height:24px;" id="exmtnARceptNo" indicator="자산심사접수번호" tabIndex="107" allowChar="가-힣" validateOnInput="true" maxlength="20" imeMode="반자" readOnly="true" ninemode="0" orgid="exmtnARceptNo" hierarchy="exmtnARceptNo" ref="data:dma_KFC04001000.exmtnARceptNo"/>
+				<w2:textbox id="title_GroupBox7" class="title_h2" label="여신원장조회"/>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:57px; top:1620px; width:71px; height:24px; color:rgb(0,0,0); display:none;" id="Text_mainScurtyDstic" tabIndex="25" label="주담보구분" orgid="Text_mainScurtyDstic" hierarchy="Text_mainScurtyDstic" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:1620px; width:25px; height:24px; display:none;" id="mainScurtyDstic" indicator="담보구분코드" tabIndex="26" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999" maxlength="3" readOnly="true" ninemode="0" orgid="mainScurtyDstic" hierarchy="mainScurtyDstic" ref="data:dma_KFC04001000.mainScurtyDstic"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:336px; top:1746px; width:71px; height:24px; color:rgb(0,0,0); display:none;" id="Text_msgCtnt" tabIndex="27" label="메세지내용" orgid="Text_msgCtnt" hierarchy="Text_msgCtnt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:426px; top:1746px; width:74px; height:24px; display:none;" id="msgCtnt" indicator="메세지내용" tabIndex="28" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="msgCtnt" hierarchy="msgCtnt" ref="data:dma_KFC04001000.msgCtnt"/>
+		</xf:group>
+	</body>
+</html>

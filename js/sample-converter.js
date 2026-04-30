@@ -21,6 +21,31 @@
  */
 const SampleConverter = (() => {
 
+  // ─── 태그 리네이밍 설정 ───
+  // 원본 XML의 컴포넌트 태그는 기본적으로 그대로 보존된다.
+  // 필요 시 아래 매핑에 규칙을 추가하면 변환 출력에서 태그명이 치환된다.
+  // 예) xf:input → w2:kb_input 으로 바꾸려면 'xf:input': 'w2:kb_input' 추가.
+  // 속성은 변경하지 않고 원본 그대로 유지한다.
+  // 매핑이 비어 있으면 원본 태그 그대로 유지된다.
+  const TAG_RENAME_MAP = {
+    // 'xf:input': 'w2:kb_input',
+    // 'xf:select1': 'w2:kb_selectbox',
+    // 'w2:gridView': 'w2:kb_gridView',
+  };
+
+  /** 직렬화된 XML 문자열에 TAG_RENAME_MAP 적용 (태그명만 치환, 속성은 원본 유지). */
+  function applyTagRename(xmlStr) {
+    if (!xmlStr) return xmlStr;
+    let out = xmlStr;
+    for (const src of Object.keys(TAG_RENAME_MAP)) {
+      const dst = TAG_RENAME_MAP[src];
+      const srcEsc = src.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp(`<${srcEsc}(\\s|/|>)`, 'g'), `<${dst}$1`);
+      out = out.replace(new RegExp(`</${srcEsc}>`, 'g'), `</${dst}>`);
+    }
+    return out;
+  }
+
   function esc(str) {
     return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -299,8 +324,8 @@ const SampleConverter = (() => {
 
     // outerHTML → 들여쓰기 정리
     const raw = new XMLSerializer().serializeToString(clone);
-    // xmlns 정리 (중복 네임스페이스 선언 제거)
-    const cleaned = raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+    // xmlns 정리 (중복 네임스페이스 선언 제거) + 태그 리네이밍 적용
+    const cleaned = applyTagRename(raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
     // 들여쓰기 적용 (버튼은 한 줄로)
     const lines = cleaned.split('\n').map(l => l.trim()).filter(l => l);
     if (lines.length === 1 || isButton) {
@@ -316,6 +341,11 @@ const SampleConverter = (() => {
     const pad = '\t'.repeat(indent);
     const el = comp.el;
     if (!el) return `${pad}<w2:gridView id="${esc(comp.id)}" class="gvw" style="width:100%; height:150px;"/>`;
+
+    // 출력 태그: 원본 태그 그대로 보존. 단 w2:IBSheet는 w2:gridView로 정규화.
+    const origTag = el.tagName;
+    const localName = origTag.split(':').pop().toLowerCase();
+    const outTag = localName === 'ibsheet' ? 'w2:gridView' : origTag;
 
     const attrs = {};
     for (const attr of el.attributes) {
@@ -346,7 +376,7 @@ const SampleConverter = (() => {
       }
     }
 
-    return `${pad}<w2:gridView${attrStr}>\n${inner}${pad}</w2:gridView>`;
+    return applyTagRename(`${pad}<${outTag}${attrStr}>\n${inner}${pad}</${outTag}>`);
   }
 
   function serializeGridChild(el, indent) {
@@ -1148,7 +1178,7 @@ const SampleConverter = (() => {
     clone.setAttribute('style', '');
 
     const raw = new XMLSerializer().serializeToString(clone);
-    const cleaned = raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+    const cleaned = applyTagRename(raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
     const innerLines = cleaned.split('\n').map(l => l.trim()).filter(l => l);
     return innerLines.map((l, i) => i === 0 ? pad + l : pad + '\t' + l).join('\n');
   }
@@ -1164,7 +1194,7 @@ const SampleConverter = (() => {
     clone.setAttribute('style', '');
 
     const raw = new XMLSerializer().serializeToString(clone);
-    const cleaned = raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+    const cleaned = applyTagRename(raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
     const innerLines = cleaned.split('\n').map(l => l.trim()).filter(l => l);
 
     const lines = [];
@@ -1185,7 +1215,7 @@ const SampleConverter = (() => {
     clone.setAttribute('style', '');
 
     const raw = new XMLSerializer().serializeToString(clone);
-    const cleaned = raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+    const cleaned = applyTagRename(raw.replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
     const innerLines = cleaned.split('\n').map(l => l.trim()).filter(l => l);
 
     const lines = [];
@@ -1282,7 +1312,7 @@ const SampleConverter = (() => {
         clone.setAttribute('style', '');
         if (!clone.getAttribute('hierarchy') && btn.id) clone.setAttribute('hierarchy', btn.id);
         if (!clone.getAttribute('orgid') && btn.id) clone.setAttribute('orgid', btn.id);
-        const raw = new XMLSerializer().serializeToString(clone).replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+        const raw = applyTagRename(new XMLSerializer().serializeToString(clone).replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
         const btnLines = raw.split('\n').map(l => l.trim()).filter(l => l);
         btnLines.forEach((l, i) => lines.push(i === 0 ? `${p1}\t${l}` : `${p1}\t\t${l}`));
       });
@@ -1321,7 +1351,7 @@ const SampleConverter = (() => {
       clone.setAttribute('style', '');
       if (!clone.getAttribute('hierarchy') && comp.id) clone.setAttribute('hierarchy', comp.id);
       if (!clone.getAttribute('orgid') && comp.id) clone.setAttribute('orgid', comp.id);
-      const raw = new XMLSerializer().serializeToString(clone).replace(/ xmlns(?::\w+)?="[^"]*"/g, '');
+      const raw = applyTagRename(new XMLSerializer().serializeToString(clone).replace(/ xmlns(?::\w+)?="[^"]*"/g, ''));
       const cLines = raw.split('\n').map(l => l.trim()).filter(l => l);
       cLines.forEach((l, i) => lines.push(i === 0 ? `${p2}\t${l}` : `${p2}\t\t${l}`));
       lines.push(`${p2}</xf:group>`);

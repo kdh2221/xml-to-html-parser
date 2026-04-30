@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KAA49000000.scn"  meta_screenId="KAA49000000" meta_screenName="고객성명조회" meta_desc="" meta_author="">
+		<w2:type craft="true" craftSrc="/xml/KAA49000000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0490041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0490041_INPUT":{"@id":"dma_KAA0490041_INPUT","serchNo":"serchNo","dtalsCustGrid__dmndPageNo":"dtalsCustGrid__dmndPageNo","dtalsCustGrid__pageLineCnt":"dtalsCustGrid__pageLineCnt"}},"target":{"dlt_KAA0490041_OUTPUT_screen___KAA04900000_dtalsCustGrid__dataDvsn":{"@id":"dlt_KAA0490041_OUTPUT_screen___KAA04900000_dtalsCustGrid__dataDvsn","cuniqno":"cuniqno","cuniqnoDstcd":"cuniqnoDstcd","custNo":"custNo","dtalsCustnm":"dtalsCustnm","errYn":"errYn"},"dma_KAA0490041_OUTPUT_screen___KAA04900000":{"@id":"dma_KAA0490041_OUTPUT_screen___KAA04900000","serchNo":"serchNo","dtalsCustGrid__totalLineCnt":"dtalsCustGrid__totalLineCnt","dtalsCustGrid__outptLineCnt":"dtalsCustGrid__outptLineCnt"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490041_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="serchNo" length="" CtrlId="serchNo"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__dmndPageNo" length="" CtrlId="dtalsCustGrid_dmndPageNo"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__pageLineCnt" length="" CtrlId="dtalsCustGrid_pageLineCnt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA0490041_OUTPUT_screen___KAA04900000_dtalsCustGrid__dataDvsn" saveRemovedData="true" CtrlId="dtalsCustGrid_dataDvsn" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="cuniqno" length="" CtrlId="dtalsCustGrid_dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cuniqnoDstcd" length="" CtrlId="dtalsCustGrid_dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="custNo" length="" CtrlId="dtalsCustGrid_dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="dtalsCustnm" length="" CtrlId="dtalsCustGrid_dataDvsn" Type="Multi"/>
+						<w2:column dataType="text" name="" id="errYn" length="" CtrlId="dtalsCustGrid_dataDvsn" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490041_OUTPUT_screen___KAA04900000" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="serchNo" length="" CtrlId="serchNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__totalLineCnt" length="" CtrlId="dtalsCustGrid_totalLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__outptLineCnt" length="" CtrlId="dtalsCustGrid_outptLineCnt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA49000000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA49000000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="serchNo" length="" CtrlId="serchNo"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid_dmndPageNo" length="" CtrlId="dtalsCustGrid_dmndPageNo"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid_pageLineCnt" length="" CtrlId="dtalsCustGrid_pageLineCnt"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid_totalLineCnt" length="" CtrlId="dtalsCustGrid_totalLineCnt"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid_outptLineCnt" length="" CtrlId="dtalsCustGrid_outptLineCnt"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dtalsCustGrid_dataDvsn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="cuniqno"/>
+						<w2:column dataType="text" name="" id="cuniqnoDstcd"/>
+						<w2:column dataType="text" name="" id="custNo"/>
+						<w2:column dataType="text" name="" id="dtalsCustnm"/>
+						<w2:column dataType="text" name="" id="errYn"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+scwin.dtalsCustGrid_dataDvsn_OnClick = function(Arg1, Arg2, Arg3) {
+    //여기에 구현코드를 삽입하세요.
+    Link.cuniqnoDstcd = dtalsCustGrid_dataDvsn.getCellData(Arg1, 1);
+    Link.cuniqno = dtalsCustGrid_dataDvsn.getCellData(Arg1, 0);
+    Link.custNo = dtalsCustGrid_dataDvsn.getCellData(Arg1, 2);
+    Link.custnm = dtalsCustGrid_dataDvsn.getCellData(Arg1, 3);
+    Link.errYn = dtalsCustGrid_dataDvsn.getCellData(Arg1, 4);
+    $c.iz.screen.screenClose();
+};
+
+scwin.OnInitScreen = async function() {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.tran.setTranID("KAA0490041");
+    await $c.iz.tran.ASend();
+};
+
+scwin.dtalsCustGrid_dataDvsn_OnPageChange = async function(Arg1, Arg2) {
+    //여기에 구현코드를 삽입하세요.
+    if (dtalsCustGrid_dmndPageNo.getValue() != dtalsCustGrid_dataDvsn.getCurrentPage()) {
+        dtalsCustGrid_dmndPageNo.setValue(dtalsCustGrid_dataDvsn.getCurrentPage());
+        dtalsCustGrid_pageLineCnt.setValue("15");
+        $c.iz.tran.setTranID("KAA0490041");
+        await $c.iz.tran.ASend();
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="고객성명조회" meta_screenId="KAA49000000" customclass="Kes" style="background-color:rgb(255,255,255); width:755px; height:545px;" screentype="AType" meta_author="HAKCOM" meata_date="2008/09/19 10:15:30" snaptogrid="1" gridstepx="4" gridstepy="4" gridshape="Line" screendivide="3" class="content_body conversion">
+			<w2:textbox ctype="Text" style="position:absolute; left:8px; top:308px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_serchNo" tabIndex="1" tabstop="0" enterstop="0" autosize="1" enable="1" container="0" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="검색번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_serchNo" hierarchy="Text_serchNo" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:308px; width:144px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="serchNo" tabIndex="2" tabstop="1" enterstop="1" autosize="1" disabled="false" container="0" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showmonthbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="serchNo" hierarchy="serchNo" ref="data:dma_KAA49000000.serchNo"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:8px; top:332px; width:112px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_dtalsCustGrid_dmndPageNo" tabIndex="3" tabstop="0" enterstop="0" autosize="1" enable="1" container="0" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="요청페이지번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_dtalsCustGrid_dmndPageNo" hierarchy="Text_dtalsCustGrid_dmndPageNo" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:332px; width:25px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="dtalsCustGrid_dmndPageNo" tabIndex="4" tabstop="1" enterstop="1" autosize="1" disabled="false" container="0" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="###" maxlength="3" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showmonthbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="dtalsCustGrid_dmndPageNo" hierarchy="dtalsCustGrid_dmndPageNo" ref="data:dma_KAA49000000.dtalsCustGrid_dmndPageNo"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:8px; top:356px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_dtalsCustGrid_pageLineCnt" tabIndex="5" tabstop="0" enterstop="0" autosize="1" enable="1" container="0" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="페이지라인수" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_dtalsCustGrid_pageLineCnt" hierarchy="Text_dtalsCustGrid_pageLineCnt" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:356px; width:25px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="dtalsCustGrid_pageLineCnt" tabIndex="6" tabstop="1" enterstop="1" autosize="1" disabled="false" container="0" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="###" maxlength="3" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showmonthbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="dtalsCustGrid_pageLineCnt" hierarchy="dtalsCustGrid_pageLineCnt" ref="data:dma_KAA49000000.dtalsCustGrid_pageLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:8px; top:260px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_dtalsCustGrid_totalLineCnt" tabIndex="7" tabstop="0" enterstop="0" autosize="1" enable="1" visible="1" container="0" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="전체건수" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_dtalsCustGrid_totalLineCnt" hierarchy="Text_dtalsCustGrid_totalLineCnt" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:81px; top:260px; width:25px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="dtalsCustGrid_totalLineCnt" tabIndex="8" tabstop="1" enterstop="1" autosize="1" disabled="true" visible="1" container="0" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="###" maxlength="3" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showmonthbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="dtalsCustGrid_totalLineCnt" hierarchy="dtalsCustGrid_totalLineCnt" ref="data:dma_KAA49000000.dtalsCustGrid_totalLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:8px; top:404px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_dtalsCustGrid_outptLineCnt" tabIndex="9" tabstop="0" enterstop="0" autosize="1" enable="1" container="0" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="출력라인수" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_dtalsCustGrid_outptLineCnt" hierarchy="Text_dtalsCustGrid_outptLineCnt" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:404px; width:25px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="dtalsCustGrid_outptLineCnt" tabIndex="10" tabstop="1" enterstop="1" autosize="1" disabled="false" container="0" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="###" maxlength="3" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showmonthbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="dtalsCustGrid_outptLineCnt" hierarchy="dtalsCustGrid_outptLineCnt" ref="data:dma_KAA49000000.dtalsCustGrid_outptLineCnt"/>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:8px; top:8px; width:746px; height:248px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dtalsCustGrid_dataDvsn" tabIndex="11" tabstop="0" enterstop="0" autoFit="none" disabled="false" visible="1" container="0" paper="0" intemplate="0" 확장모드="0" controlmode="Sheet" sheetwidth="744" sheetheight="248" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="1" mergesheet="msNone" headbackcolor="#d9d2f0" databackcolor="#ffffff" dataaltanatebackcolor="#f2eff6" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#fff5e4" sheetoutlinecolor="#c0c0c0" sheetbackcolor="#ffffff" outlinecolor="#a0a0a0" inlinecolor="#d9d2f0" notnullbackcolor="#ff0000" editablecolordiff="0" datarowheight="20" headrowheight="20" rowheightmin="20" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="0" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" hiddenbackcolor="#aca899" orgid="dtalsCustGrid_dataDvsn" hierarchy="dtalsCustGrid_dataDvsn" ev:onclick="scwin.dtalsCustGrid_dataDvsn_OnClick" dataList="data:dlt_dtalsCustGrid_dataDvsn">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="고객실명번호" width="153"/>
+							<w2:column id="column2" inputType="text" value="고객실명번호구분코드" width="139"/>
+							<w2:column id="column3" inputType="text" value="고객번호" width="190"/>
+							<w2:column id="column4" inputType="text" value="고객명" width="235"/>
+							<w2:column id="column5" inputType="text" value="오류여부" width="161"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="cuniqno" inputType="text" width="153" hidden="false"/>
+							<w2:column id="cuniqnoDstcd" inputType="text" width="139" hidden="true"/>
+							<w2:column id="custNo" inputType="text" width="190" hidden="false"/>
+							<w2:column id="dtalsCustnm" inputType="text" width="235" hidden="false"/>
+							<w2:column id="errYn" inputType="select" width="161" hidden="false"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KAA04900002.scn"  meta_screenId="KAA04900002" meta_screenName="고객성명조회(팝업)" meta_desc="" meta_author="S012069(윤강민)">
+		<w2:type craft="true" craftSrc="/xml/KAA04900002.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0490041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0490041_INPUT":{"@id":"dma_KAA0490041_INPUT","scopDstic":"scopDstic","cuniqno":"cuniqno","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo","coprBzmanDtalsCustInquryYn":"coprBzmanDtalsCustInquryYn","coprInfoSelctAbilYn":"coprInfoSelctAbilYn","totalLineCnt":"totalLineCnt","pinpadInptYn":"pinpadInptYn"}},"target":{"dlt_KAA0490041_OUTPUT_screen___KAA04900002_dtalsCustGrid__dataBook":{"@id":"dlt_KAA0490041_OUTPUT_screen___KAA04900002_dtalsCustGrid__dataBook","dtalsCustPtrnClsfiDstcd":"dtalsCustPtrnClsfiDstcd","dtalsCustPtrnName":"dtalsCustPtrnName","cuniqno":"cuniqno","cuniqnoDstcd":"cuniqnoDstcd","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo","custnm":"custnm","custnm2":"custnm2","cardCustnm":"cardCustnm","fnameErrDstcd":"fnameErrDstcd","fnameErrDsticName":"fnameErrDsticName","rprsName":"rprsName","n2ndInquryAbilYn":"n2ndInquryAbilYn","coprInfoSelctAbilYn":"coprInfoSelctAbilYn"},"dma_KAA0490041_OUTPUT_screen___KAA04900002":{"@id":"dma_KAA0490041_OUTPUT_screen___KAA04900002","dtalsCustGrid__totalLineCnt":"dtalsCustGrid__totalLineCnt","dtalsCustGrid__outptLineCnt":"dtalsCustGrid__outptLineCnt","ppsnBzmanJntRpsntYn":"ppsnBzmanJntRpsntYn","custEndStusDstcd":"custEndStusDstcd"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490041_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="scopDstic" length="0" CtrlId="scopDstic" Type="Combo"/>
+						<w2:key dataType="text" name="" id="cuniqno" length="20" CtrlId="cuniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="coprBzmanDtalsCustInquryYn" length="1" CtrlId="coprBzmanDtalsCustInquryYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="coprInfoSelctAbilYn" length="1" CtrlId="coprInfoSelctAbilYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="totalLineCnt" length="5" CtrlId="totalLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="pinpadInptYn" length="1" CtrlId="pinpadInptYn" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA0490041_OUTPUT_screen___KAA04900002_dtalsCustGrid__dataBook" saveRemovedData="true" CtrlId="dataBook" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="dtalsCustPtrnClsfiDstcd" length="2" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="dtalsCustPtrnName" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cuniqno" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cuniqnoDstcd" length="2" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="custIdnfr" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="custMgtNo" length="5" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="custnm" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="custnm2" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardCustnm" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fnameErrDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="fnameErrDsticName" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="rprsName" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="n2ndInquryAbilYn" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprInfoSelctAbilYn" length="1" CtrlId="dataBook" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490041_OUTPUT_screen___KAA04900002" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__totalLineCnt" length="5" CtrlId="totalLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dtalsCustGrid__outptLineCnt" length="5" CtrlId="outptLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="ppsnBzmanJntRpsntYn" length="1" CtrlId="ppsnBzmanJntRpsntYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custEndStusDstcd" length="1" CtrlId="custEndStusDstcd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA04900002_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA04900002">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="scopDstic" length="0" CtrlId="scopDstic"/>
+						<w2:key dataType="text" name="" id="cuniqno" length="20" CtrlId="cuniqno"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo"/>
+						<w2:key dataType="text" name="" id="coprBzmanDtalsCustInquryYn" length="1" CtrlId="coprBzmanDtalsCustInquryYn"/>
+						<w2:key dataType="text" name="" id="coprInfoSelctAbilYn" length="1" CtrlId="coprInfoSelctAbilYn"/>
+						<w2:key dataType="text" name="" id="totalLineCnt" length="5" CtrlId="totalLineCnt"/>
+						<w2:key dataType="text" name="" id="pinpadInptYn" length="1" CtrlId="pinpadInptYn"/>
+						<w2:key dataType="text" name="" id="outptLineCnt" length="5" CtrlId="outptLineCnt"/>
+						<w2:key dataType="text" name="" id="ppsnBzmanJntRpsntYn" length="1" CtrlId="ppsnBzmanJntRpsntYn"/>
+						<w2:key dataType="text" name="" id="custEndStusDstcd" length="1" CtrlId="custEndStusDstcd"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataBook" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="dtalsCustPtrnClsfiDstcd"/>
+						<w2:column dataType="text" name="" id="dtalsCustPtrnName"/>
+						<w2:column dataType="text" name="" id="cuniqno_01"/>
+						<w2:column dataType="text" name="" id="cuniqno_2"/>
+						<w2:column dataType="text" name="" id="cuniqnoDstcd"/>
+						<w2:column dataType="text" name="" id="custIdnfr_01"/>
+						<w2:column dataType="text" name="" id="custMgtNo_01"/>
+						<w2:column dataType="text" name="" id="custnm"/>
+						<w2:column dataType="text" name="" id="custnm2"/>
+						<w2:column dataType="text" name="" id="cardCustnm"/>
+						<w2:column dataType="text" name="" id="fnameErrDstcd"/>
+						<w2:column dataType="text" name="" id="fnameErrDsticName"/>
+						<w2:column dataType="text" name="" id="rprsName"/>
+						<w2:column dataType="text" name="" id="n2ndInquryAbilYn"/>
+						<w2:column dataType="text" name="" id="coprInfoSelctAbilYn"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+scwin.delStr = /-/g;
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {}; //HYPEN 대체문자
+
+
+
+//************************************* OnInitScreen EVENT *************************************
+
+scwin.OnInitScreen = function() {
+    pinpadInptYn.setValue(); //핀패드 조회 여부 초기화
+
+    //본 팝업화면이 호출될 때 넘겨진 파라메터 중 고객번호(cuniqno), 고객식별자(custIdnfr) 둘 중에 null이 아닌 것이 하나라도 있으면 아래 거래처리를 한다.
+    //(고객성명조회:KAA0490041)거래처리하여 고객성명을 조회한다.
+
+    //2. 파라메터로 넘어온 값 중 영역구분(scopDstic)이 공백이면 'B'로 셋팅
+    cuniqno.focus();
+    if (scopDstic.getValue() == "") {
+        scopDstic.setValue("B");
+    }
+    if (cuniqno.getValue() != "" || custIdnfr.getValue() != "") {
+        scwin.fn_sendKey();
+    }
+};
+
+scwin.fn_sendKey = async function() {
+    cuniqno.setValue(cuniqno.getValue().replace(scwin.delStr, ""));
+    totalLineCnt.setValue();
+    dataBook.removeAll();
+    $c.iz.tran.setTranID("KAA0490041");
+    await $c.iz.tran.ASend();
+};
+
+//************************************* GRID EVENT *********************************************
+
+scwin.dataBook_OnDClick = function(Arg1, Arg2, Arg3) {
+    // 2차조회가능여부(n2ndInquryAbilYn) = '1' 일 경우 
+    //    1. 입력항목의 고객번호(cuniqno), 고객식별자(custIdnfr), 고객관리번호(custMgtNo)를 Clear한다.
+    //    2. 해당 Row의 고객식별자 -> 입력의 고객식별자(custIdnfr)
+    //    3. 총라인수(totalLineCnt)를 Clear한다.
+
+    // 2차조회가능여부(n2ndInquryAbilYn) = '1' 이 아닐 경우
+    //   2.1 법인정보선택가능여부(coprInfoSelctAbilYn) = '1' 인 경우
+    //       호출한 원 화면으로 선택된 그리드의 결과값을 전송하고 창을 닫는다.
+
+    //		 법인정보선택가능여부(coprInfoSelctAbilYn) = '1' 이 아닌경우 경우  더블클릭해도 아무 반응이 없어야 함     
+
+
+
+    if (Arg1 != 0) {
+        var n2nB = dataBook.getCellData(Arg1, "n2ndInquryAbilYn"); //2차조회가능여부
+        var GcorInfo = dataBook.getCellData(Arg1, "coprInfoSelctAbilYn"); //법인정보선택가능여부
+        if (n2nB == 1) {
+            cuniqno.setValue();
+            custIdnfr.setValue();
+            custMgtNo.setValue();
+            totalLineCnt.setValue();
+            custIdnfr.setValue(dataBook.getCellData(Arg1, "custIdnfr"));
+            scwin.fn_sendKey();
+        } else {
+            if (GcorInfo == 1) {
+                Link.cuniqno = dataBook.getCellData(Arg1, "cuniqno"); //고객번호
+                Link.cuniqnoDstcd = dataBook.getCellData(Arg1, "cuniqnoDstcd"); //고객고유번호구분코드
+                //alert(dataBook.GetCellDataSaveName(Arg1,"cuniqnoDstcd"),"구분코드");
+                Link.dtalsCustPtrnClsfiDstcd = dataBook.getCellData(Arg1, "dtalsCustPtrnClsfiDstcd"); //세부고객유형분류구분코드
+                Link.custIdnfr = dataBook.getCellData(Arg1, "custIdnfr"); //고객식별자
+                Link.custMgtNo = dataBook.getCellData(Arg1, "custMgtNo"); //고객관리번호
+                Link.custnm = dataBook.getCellData(Arg1, "custnm"); //고객명
+                Link.custnm2 = dataBook.getCellData(Arg1, "custnm2"); //고객명2
+                Link.cardCustnm = dataBook.getCellData(Arg1, "cardCustnm"); //카드고객명
+                Link.rprsName = dataBook.getCellData(Arg1, "rprsName"); //대표자명
+                Link.fnameErrDstcd = dataBook.getCellData(Arg1, "fnameErrDstcd"); //성명오류구분코드
+                Link.fnameErrDsticName = dataBook.getCellData(Arg1, "fnameErrDsticName"); //성명오류구분명
+                Link.outptLineCnt = outptLineCnt.getValue();
+                if (dataBook.getCellData(Arg1, "dtalsCustPtrnClsfiDstcd") == '12' ||
+                    dataBook.getCellData(Arg1, "dtalsCustPtrnClsfiDstcd") == '13') {
+                    for (i = 1; i <= dataBook.getTotalRow(); i++) {
+                        if (dataBook.getCellData(i, "dtalsCustPtrnClsfiDstcd") == '11' ||
+                            dataBook.getCellData(i, "dtalsCustPtrnClsfiDstcd") == '14') {
+                            //alert(dataBook.GetCellDataSaveName(i,"cuniqno"),"2");
+                            Link.kecCuniqno = dataBook.getCellData(i, "cuniqno");
+                            $c.iz.screen.screenClose();
+                        }
+                    }
+                }
+                Link.custEndStusDstcd = custEndStusDstcd.getValue();
+                $c.iz.screen.screenClose();
+            }
+        }
+    }
+};
+
+
+
+//************************************* BUTTON EVENT *******************************************
+
+scwin.Button1_OnClick = function(e) {
+    // 확인버튼
+    //호출한 원 화면으로 선택된 그리드의 결과값을 전송하고 창을 닫는다.
+
+
+    var row = dataBook.getFocusedRowIndex();
+    Link.cuniqno = dataBook.getCellData(row, "cuniqno"); //고객번호
+    Link.cuniqnoDstcd = dataBook.getCellData(row, "cuniqnoDstcd"); //고객고유번호구분코드
+    //alert(dataBook.GetCellDataSaveName(row,"cuniqnoDstcd"),"구분코드");
+    Link.dtalsCustPtrnClsfiDstcd = dataBook.getCellData(row, "dtalsCustPtrnClsfiDstcd"); //세부고객유형분류구분코드
+    Link.custIdnfr = dataBook.getCellData(row, "custIdnfr"); //고객식별자
+    Link.custMgtNo = dataBook.getCellData(row, "custMgtNo"); //고객관리번호
+    Link.custnm = dataBook.getCellData(row, "custnm"); //고객명
+    Link.custnm2 = dataBook.getCellData(row, "custnm2"); //고객명2
+    Link.cardCustnm = dataBook.getCellData(row, "cardCustnm"); //카드고객명
+    Link.rprsName = dataBook.getCellData(row, "rprsName"); //대표자명
+    Link.fnameErrDstcd = dataBook.getCellData(row, "fnameErrDstcd"); //성명오류구분코드
+    Link.fnameErrDsticName = dataBook.getCellData(row, "fnameErrDsticName"); //성명오류구분명
+
+    if (dataBook.getCellData(row, "dtalsCustPtrnClsfiDstcd") == '12' ||
+        dataBook.getCellData(row, "dtalsCustPtrnClsfiDstcd") == '13') {
+        for (i = 1; i <= dataBook.getTotalRow(); i++) {
+            if (dataBook.getCellData(i, "dtalsCustPtrnClsfiDstcd") == '11' ||
+                dataBook.getCellData(i, "dtalsCustPtrnClsfiDstcd") == '14') {
+                //alert(dataBook.GetCellDataSaveName(i,"cuniqno"),"2");
+                Link.kecCuniqno = dataBook.getCellData(i, "cuniqno");
+                $c.iz.screen.screenClose();
+            }
+        }
+    }
+    Link.custEndStusDstcd = custEndStusDstcd.getValue();
+    $c.iz.screen.screenClose();
+};
+
+
+scwin.btnClear_OnClick = function(e) {
+    //사업장주소초기화
+    //사업장우편번호, 사업장우편번호주소, 사업장상세주소를 Clear한다									
+
+    cuniqno.setValue();
+    custIdnfr.setValue();
+    custMgtNo.setValue();
+    cuniqno.focus();
+};
+
+
+
+
+//************************************* COMMON BUTTON EVENT ************************************
+
+scwin.OnSendKey = function() {
+    //1. 고객번호(cuniqno), 고객식별자(custIdnfr) 둘 중에 null이 아닌 것이 하나라도 있으면 아래 거래처리를 한다.
+    //2. 고객번호(cuniqno), 고객식별자(custIdnfr) 둘 다 null일 경우 "고객번호 또는 고객식별자를 입력해 주십시오." 메시지 처리
+
+    //1. (고객성명조회:KAA0490041)거래처리하여 고객성명을 조회한다.
+
+
+    if (cuniqno.getValue() == "" && custIdnfr.getValue() == "") {
+        $c.iz.data.message("고객번호 또는 고객정보번호를 입력해 주십시오.");
+        cuniqno.focus();
+    } else {
+        scwin.fn_sendKey();
+    }
+};
+
+
+
+scwin.Button2_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    $c.iz.screen.screenClose();
+};
+
+scwin.OnEndTran = function() {
+    var strDtalsCustPtrnClsfiDstcd = "";
+    var countDtalsCustPtrnClsfiDstcd = "";
+    var strCuniqno = "";
+    var strCuniqno_2 = "";
+    pinpadInptYn.setValue(); //핀패드 조회 여부 초기화	
+
+    //여기에 구현코드를 삽입하세요.
+    if ($c.iz._tran.tranId == "KAA0490041") {
+        if ($c.iz._tran.bError == false) {
+            if (ppsnBzmanJntRpsntYn.getValue() == "1") {
+                $c.iz.data.message("해당 사업자번호의 개인사업자가 여러 건 존재합니다.");
+                Link.cuniqno = cuniqno.getValue(); // 사업자번호
+                $c.iz.screen.popup("KAA04905001", "DATALINK");
+                var tempValue1 = Link.custIdnfr;
+                var tempValue2 = Link.custMgtNo;
+                var tempValue3 = Link.rprsCuniqno;
+                if (tempValue1 != "" && typeof(tempValue1) != "undefined") {
+                    // 고유정보번호
+                    if (tempValue3 != "") {
+                        custIdnfr.setValue(tempValue1);
+                    } else {
+                        custIdnfr.setValue(tempValue1);
+                        custMgtNo.setValue(tempValue2);
+                    }
+                    // 고객구분
+                    cuniqno.setValue("");
+                    scwin.OnSendKey();
+                }
+            }
+
+            //거래종료상태구분
+            if (custEndStusDstcd.getValue() == "1") {
+                custEndStusText.show('');
+            } else {
+                custEndStusText.hide();
+            }
+            for (i = 1; i <= dataBook.getTotalRow(); i++) {
+                strDtalsCustPtrnClsfiDstcd = dataBook.getCellData(i, "dtalsCustPtrnClsfiDstcd"); // 세부고객유형구분
+                strCuniqno = dataBook.getCellData(i, "cuniqno"); // 개인고객번호
+                strCuniqno_2 = strCuniqno.substr(0, 7);
+
+                //			alert(strCuniqno,"고객번호");
+                //			alert(strCuniqno_2,"본인확인번호");
+
+                if (strDtalsCustPtrnClsfiDstcd == "12") {
+                    //	개인사업자
+                    dataBook.setCellData(i, "cuniqno_2", strCuniqno);
+                } else {
+                    dataBook.setCellData(i, "cuniqno_2", strCuniqno_2);
+                }
+            }
+        } else {
+            // KB-PIN 중복 
+            if ($c.iz._tran.treatCd == "UKAA1977") {
+                var tmp = $c.iz._tran.errMsg; //사용자 맞춤 메세지 
+                var arrValue1 = tmp.split("(");
+                if (arrValue1.length > 2) {
+                    var tmp_custIdnfr1 = arrValue1[1].substr(0, 10);
+                    var tmp_custIdnfr2 = arrValue1[2].substr(0, 10);
+                    Link.custIdnfr1 = tmp_custIdnfr1;
+                    Link.custIdnfr2 = tmp_custIdnfr2;
+                    Link.cuniqno = cuniqno.getValue();
+                    $c.iz.screen.popup("KAA0490000P", "DATALINK");
+                    // 재조회 
+                    var tmp_custIdnfr = Link.pick_custIdnfr;
+                    if (typeof(tmp_custIdnfr) != "undefined" && tmp_custIdnfr != '') {
+                        custIdnfr.setValue(tmp_custIdnfr);
+                        cuniqno.setValue("");
+                        scwin.OnSendKey();
+                    }
+                }
+            }
+        }
+    }
+};
+
+scwin.cuniqno_OnKeyTyped = function(Key) {
+    //	var strSerchNo = cuniqno.Data;
+    //	var strTemp = strSerchNo.replace("-", "");
+    //	while(strSerchNo != strTemp)
+    //	{
+    //		strSerchNo = strTemp;
+    //		strTemp = strSerchNo.replace("-", "");
+    //	}
+    //	cuniqno.Data = strTemp;
+    custIdnfr.setValue();
+};
+
+scwin.custIdnfr_OnKeyTyped = function(Key) {
+    cuniqno.setValue();
+};
+//function cuniqno_OnValidate(){
+//	var strSerchNo = cuniqno.Data;
+//	var strTemp = strSerchNo.replace("-", "");
+//	while(strSerchNo != strTemp)
+//	{
+//		strSerchNo = strTemp;
+//		strTemp = strSerchNo.replace("-", "");
+//	}
+//	cuniqno.Data = strTemp;
+//}
+scwin.btnPinPad_OnClick = function(e) {
+    //* 주민번호 핀패드 입력 : 2015.01.05 
+    $c.iz.data.message("고객님께 Pin-Pad로 주민번호 요청중입니다. " + "(취소하려면 Shift + ESC 키를 눌러주세요)");
+    var pinCuniqno = ReadPinPadPasswordSound(39, 13, 13, 1);
+    SendResultPinPadPasswordClose();
+    $c.iz.data.message("");
+    if ($c.iz.data.trim(pinCuniqno) != '') {
+        cuniqno.setValue(pinCuniqno);
+        custIdnfr.setValue();
+        custMgtNo.setValue();
+        pinpadInptYn.setValue('1'); //핀패드 조회 여부 SETTING
+
+        scwin.OnSendKey();
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="고객성명조회(팝업)" meta_screenId="KAA04900002" groupcocd="KB0" customclass="Kes" style="background-color:rgb(255,255,255); width:744px; height:402px;" screentype="AType" meta_author="MAINPC" meta_user="S012069(윤강민)" meata_date="2009/05/27 14:14:04" savezorder="1" snaptogrid="1" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" conversion="331101" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:726px; height:78px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:12px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_scopDstic" tabIndex="1" autosize="0" label="영역구분" orgid="Text_scopDstic" hierarchy="Text_scopDstic" class="kb_MiddleRight"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:90px; top:12px; width:75px; height:24px; color:rgb(0,0,0);" id="scopDstic" indicator="영역구분" tabIndex="2" index="0" items="A=전체;B=은행;C=카드;" appearance="minimal" orgid="scopDstic" hierarchy="scopDstic" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KAA04900002.scopDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[전체]]></xf:label>
+							<xf:value><![CDATA[A]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[은행]]></xf:label>
+							<xf:value><![CDATA[B]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[카드]]></xf:label>
+							<xf:value><![CDATA[C]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_cuniqno" tabIndex="3" autosize="0" label="고객번호" orgid="Text_cuniqno" hierarchy="Text_cuniqno" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:90px; top:42px; width:144px; height:24px;" id="cuniqno" indicator="고객번호" tabIndex="4" editDisplayChar="*" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999{9999999999999}" maxlength="20" MPatternMaskingLen="13" orgid="cuniqno" hierarchy="cuniqno" ev:onkeyup="scwin.cuniqno_OnKeyTyped" ref="data:dma_KAA04900002.cuniqno"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:240px; top:42px; width:76px; height:24px;" id="btnPinPad" tabIndex="5" text="PinPad" type="button" class="btn_def1" ev:onclick="scwin.btnPinPad_OnClick" orgid="btnPinPad" hierarchy="btnPinPad">
+					<xf:label><![CDATA[PinPad]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:384px; top:42px; width:48px; height:24px; color:rgb(0,0,0);" id="Text_custIdnfr" tabIndex="6" autosize="0" label="KB-PIN" orgid="Text_custIdnfr" hierarchy="Text_custIdnfr" class="kb_MiddleRight"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:438px; top:42px; width:81px; height:24px;" id="custIdnfr" indicator="고객식별자" tabIndex="7" editFormat="99999-99999" maxlength="11" orgid="custIdnfr" hierarchy="custIdnfr" ev:onkeyup="scwin.custIdnfr_OnKeyTyped" ref="data:dma_KAA04900002.custIdnfr"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:522px; top:42px; width:39px; height:24px;" id="custMgtNo" indicator="고객관리번호" tabIndex="8" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" orgid="custMgtNo" hierarchy="custMgtNo" ref="data:dma_KAA04900002.custMgtNo"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:660px; top:42px; width:54px; height:24px;" id="btnClear" tabIndex="9" text="초기화" type="button" class="btn_def1" ev:onclick="scwin.btnClear_OnClick" orgid="btnClear" hierarchy="btnClear">
+					<xf:label><![CDATA[초기화]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:12px; top:102px; width:726px; height:259px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dataBook" indicator="데이터부" tabIndex="2" tabstop="0" enterstop="0" autoFit="lastColumn" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" controlmode="Sheet" sheetwidth="724" sheetheight="259" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msNone" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#cccccc" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="24" headrowheight="24" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataBook" hierarchy="dataBook" ev:oncelldblclick="scwin.dataBook_OnDClick" dataList="data:dlt_dataBook">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="세부고객유형분류구분코드" width="48"/>
+							<w2:column id="column2" inputType="text" value="세부고객유형" width="140"/>
+							<w2:column id="column3" inputType="text" value="고객번호" width="126"/>
+							<w2:column id="column4" inputType="text" value="본인확인번호" width="109"/>
+							<w2:column id="column5" inputType="text" value="고객고유번호구분코드" width="230"/>
+							<w2:column id="column6" inputType="text" value="KB-PIN" width="120" colSpan="2" rowSpan="1"/>
+							<w2:column id="column8" inputType="text" value="고객명" width="72"/>
+							<w2:column id="column9" inputType="text" value="고객명2" width="168"/>
+							<w2:column id="column10" inputType="text" value="카드고객명" width="120"/>
+							<w2:column id="column11" inputType="text" value="성명오류구분코드" width="120"/>
+							<w2:column id="column12" inputType="text" value="성명오류" width="166"/>
+							<w2:column id="column13" inputType="text" value="대표자명" width="81"/>
+							<w2:column id="column14" inputType="text" value="2차조회가능여부" width="120"/>
+							<w2:column id="column15" inputType="text" value="법인정보선택가능여부" width="120"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="dtalsCustPtrnClsfiDstcd" inputType="text" width="48" hidden="true"/>
+							<w2:column id="dtalsCustPtrnName" inputType="text" width="140" hidden="false"/>
+							<w2:column id="cuniqno_01" inputType="text" width="126" hidden="true"/>
+							<w2:column id="cuniqno_2" inputType="text" width="109" hidden="false"/>
+							<w2:column id="cuniqnoDstcd" inputType="text" width="230" hidden="true"/>
+							<w2:column id="custIdnfr_01" inputType="text" width="120" hidden="false"/>
+							<w2:column id="custMgtNo_01" inputType="text" width="72" hidden="false"/>
+							<w2:column id="custnm" inputType="text" width="168" hidden="false"/>
+							<w2:column id="custnm2" inputType="text" width="120" hidden="true"/>
+							<w2:column id="cardCustnm" inputType="text" width="120" hidden="true"/>
+							<w2:column id="fnameErrDstcd" inputType="text" width="166" hidden="true"/>
+							<w2:column id="fnameErrDsticName" inputType="text" width="81" hidden="false"/>
+							<w2:column id="rprsName" inputType="text" width="120" hidden="false"/>
+							<w2:column id="n2ndInquryAbilYn" inputType="text" width="120" hidden="true"/>
+							<w2:column id="coprInfoSelctAbilYn" inputType="text" width="120" hidden="true" ref="data:dma_KAA04900002.coprInfoSelctAbilYn"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:366px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_totalLineCnt" tabIndex="3" autosize="0" label="전체건수" orgid="Text_totalLineCnt" hierarchy="Text_totalLineCnt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:78px; top:366px; width:39px; height:24px;" id="totalLineCnt" indicator="총라인수" tabIndex="4" disabled="true" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" orgid="totalLineCnt" hierarchy="totalLineCnt" ref="data:dma_KAA04900002.totalLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:192px; top:366px; width:211px; height:24px; display:none; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="custEndStusText" tabIndex="5" label="*&amp;nbsp;1단계&amp;nbsp;보안조치&amp;nbsp;대상&amp;nbsp;고객입니다." orgid="custEndStusText" hierarchy="custEndStusText" escape="false" class="kb_txt_red kb_MiddleRight"/>
+			<xf:trigger ctype="Button" style="position:absolute; left:612px; top:366px; width:60px; height:24px;" id="Button1" tabIndex="6" text="확인" type="button" class="btn_def1" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="Button1">
+				<xf:label><![CDATA[확인]]></xf:label>
+			</xf:trigger>
+			<xf:trigger ctype="Button" style="position:absolute; left:678px; top:366px; width:60px; height:24px;" id="Button2" tabIndex="7" text="닫기" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+				<xf:label><![CDATA[닫기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox ctype="Text" style="position:absolute; left:168px; top:432px; width:79px; height:24px; color:rgb(0,0,0); display:none;" id="Text_outptLineCnt" tabIndex="8" autosize="0" label="출력라인수" orgid="Text_outptLineCnt" hierarchy="Text_outptLineCnt" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:258px; top:432px; width:39px; height:24px; display:none;" id="outptLineCnt" indicator="출력라인수" tabIndex="9" disabled="true" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_KAA04900002.outptLineCnt"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:324px; top:432px; width:165px; height:24px; color:rgb(0,0,0); display:none;" id="Text_ppsnBzmanJntRpsntYn" tabIndex="10" autosize="0" label="개인사업자공동대표여부" orgid="Text_ppsnBzmanJntRpsntYn" hierarchy="Text_ppsnBzmanJntRpsntYn" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:498px; top:432px; width:11px; height:24px; display:none;" id="ppsnBzmanJntRpsntYn" indicator="개인사업자공동대표여부" tabIndex="11" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="ppsnBzmanJntRpsntYn" hierarchy="ppsnBzmanJntRpsntYn" ref="data:dma_KAA04900002.ppsnBzmanJntRpsntYn"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:546px; top:438px; width:122px; height:24px; color:rgb(0,0,0); display:none;" id="Text_ppsnBzmanJntRpsntYn_3" tabIndex="12" autosize="0" label="거래종료상태구분" orgid="Text_ppsnBzmanJntRpsntYn_3" hierarchy="Text_ppsnBzmanJntRpsntYn_3" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:672px; top:438px; width:11px; height:24px; display:none;" id="custEndStusDstcd" indicator="거래종료고객상태구분" tabIndex="13" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="custEndStusDstcd" hierarchy="custEndStusDstcd" ref="data:dma_KAA04900002.custEndStusDstcd"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:450px; width:194px; height:24px; color:rgb(0,0,0); display:none;" id="Text_coprBzmanDtalsCustInquryYn" tabIndex="14" autosize="0" label="법인사업자세부고객조회여부" orgid="Text_coprBzmanDtalsCustInquryYn" hierarchy="Text_coprBzmanDtalsCustInquryYn" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:228px; top:450px; width:11px; height:24px; display:none;" id="coprBzmanDtalsCustInquryYn" indicator="법인사업자세부고객조회여부" tabIndex="15" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="coprBzmanDtalsCustInquryYn" hierarchy="coprBzmanDtalsCustInquryYn" ref="data:dma_KAA04900002.coprBzmanDtalsCustInquryYn"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:330px; top:450px; width:108px; height:24px; color:rgb(0,0,0); display:none;" id="Text_pinpadInptYn" tabIndex="16" autosize="0" label="핀패드입력여부" orgid="Text_pinpadInptYn" hierarchy="Text_pinpadInptYn" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:480px; top:450px; width:11px; height:24px; display:none;" id="pinpadInptYn" indicator="핀패드입력여부" tabIndex="17" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="pinpadInptYn" hierarchy="pinpadInptYn" ref="data:dma_KAA04900002.pinpadInptYn"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:12px; top:474px; width:151px; height:24px; color:rgb(0,0,0); display:none;" id="Text_coprInfoSelctAbilYn" tabIndex="18" autosize="0" label="법인정보선택가능여부" orgid="Text_coprInfoSelctAbilYn" hierarchy="Text_coprInfoSelctAbilYn" class="kb_MiddleRight"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:228px; top:474px; width:11px; height:24px; display:none;" id="coprInfoSelctAbilYn_01" indicator="법인정보선택가능여부" tabIndex="19" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" orgid="coprInfoSelctAbilYn" hierarchy="coprInfoSelctAbilYn"/>
+		</xf:group>
+	</body>
+</html>

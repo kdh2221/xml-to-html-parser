@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KEC04M8A000.scn"  meta_screenId="KEC04M8A000" meta_screenName="수수료예상조회" meta_desc="" meta_author="">
+		<w2:type craft="true" craftSrc="/xml/KEC04M8A000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KEC04M8A41" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KEC04M8A41_INPUT":{"@id":"dma_KEC04M8A41_INPUT","InData__AccountID":"InData__AccountID"}},"target":{"dma_KEC04M8A41_OUTPUT_screen___KEC04M8A000":{"@id":"dma_KEC04M8A41_OUTPUT_screen___KEC04M8A000","OutData__fldCustomerName":"OutData__fldCustomerName","OutData__fldSystemKindDistinctionName":"OutData__fldSystemKindDistinctionName","OutData__fldMgivstNewYmd":"OutData__fldMgivstNewYmd","OutData__fldAssetNewYmd":"OutData__fldAssetNewYmd","OutData__fldUserBramMgivstFeeBurden":"OutData__fldUserBramMgivstFeeBurden","OutData__fldUserBramAssetFeeBurden":"OutData__fldUserBramAssetFeeBurden","OutData__fldApctBramMgivstFeeBurden":"OutData__fldApctBramMgivstFeeBurden","OutData__fldApctBramAssetFeeBurden":"OutData__fldApctBramAssetFeeBurden","OutData__fldMgivstPreThisYmd":"OutData__fldMgivstPreThisYmd","OutData__fldAssetPreThisYmd":"OutData__fldAssetPreThisYmd","OutData__fldSystemKindDistinction":"OutData__fldSystemKindDistinction","OutData__fldManagementCode":"OutData__fldManagementCode"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KEC04M8A42" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KEC04M8A42_INPUT":{"@id":"dma_KEC04M8A42_INPUT","InData__AccountID":"InData__AccountID","InData__cboInquiryGubn":"InData__cboInquiryGubn","InData__fldStartingYymmdd":"InData__fldStartingYymmdd"}},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A41_INPUT" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="InData__AccountID" length="14" CtrlId="AccountID" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A41_OUTPUT_screen___KEC04M8A000" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="OutData__fldCustomerName" length="50" CtrlId="fldCustomerName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldSystemKindDistinctionName" length="20" CtrlId="fldSystemKindDistinctionName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldMgivstNewYmd" length="8" CtrlId="fldMgivstNewYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldAssetNewYmd" length="8" CtrlId="fldAssetNewYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldUserBramMgivstFeeBurden" length="20" CtrlId="fldUserBramMgivstFeeBurden" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldUserBramAssetFeeBurden" length="20" CtrlId="fldUserBramAssetFeeBurden" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldApctBramMgivstFeeBurden" length="20" CtrlId="fldApctBramMgivstFeeBurden" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldApctBramAssetFeeBurden" length="20" CtrlId="fldApctBramAssetFeeBurden" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldMgivstPreThisYmd" length="8" CtrlId="fldMgivstPreThisYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldAssetPreThisYmd" length="8" CtrlId="fldAssetPreThisYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldSystemKindDistinction" length="1" CtrlId="fldSystemKindDistinction" Type="Edit"/>
+						<w2:key dataType="text" name="" id="OutData__fldManagementCode" length="4" CtrlId="fldManagementCode" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A42_INPUT" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="InData__AccountID" length="14" CtrlId="AccountID" Type="Edit"/>
+						<w2:key dataType="text" name="" id="InData__cboInquiryGubn" length="0" CtrlId="cboInquiryGubn" Type="Combo"/>
+						<w2:key dataType="text" name="" id="InData__fldStartingYymmdd" length="8" CtrlId="fldStartingYymmdd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A42_OUTPUT" TranClass="MCI" SvcCode="KEC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KEC04M8A000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KEC04M8A000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="AccountID" length="14" CtrlId="AccountID"/>
+						<w2:key dataType="text" name="" id="fldCustomerName" length="50" CtrlId="fldCustomerName"/>
+						<w2:key dataType="text" name="" id="fldSystemKindDistinctionName" length="20" CtrlId="fldSystemKindDistinctionName"/>
+						<w2:key dataType="text" name="" id="fldMgivstNewYmd" length="8" CtrlId="fldMgivstNewYmd"/>
+						<w2:key dataType="text" name="" id="fldAssetNewYmd" length="8" CtrlId="fldAssetNewYmd"/>
+						<w2:key dataType="text" name="" id="fldUserBramMgivstFeeBurden" length="20" CtrlId="fldUserBramMgivstFeeBurden"/>
+						<w2:key dataType="text" name="" id="fldUserBramAssetFeeBurden" length="20" CtrlId="fldUserBramAssetFeeBurden"/>
+						<w2:key dataType="text" name="" id="fldApctBramMgivstFeeBurden" length="20" CtrlId="fldApctBramMgivstFeeBurden"/>
+						<w2:key dataType="text" name="" id="fldApctBramAssetFeeBurden" length="20" CtrlId="fldApctBramAssetFeeBurden"/>
+						<w2:key dataType="text" name="" id="fldMgivstPreThisYmd" length="8" CtrlId="fldMgivstPreThisYmd"/>
+						<w2:key dataType="text" name="" id="fldAssetPreThisYmd" length="8" CtrlId="fldAssetPreThisYmd"/>
+						<w2:key dataType="text" name="" id="fldSystemKindDistinction" length="1" CtrlId="fldSystemKindDistinction"/>
+						<w2:key dataType="text" name="" id="fldManagementCode" length="4" CtrlId="fldManagementCode"/>
+						<w2:key dataType="text" name="" id="cboInquiryGubn" length="0" CtrlId="cboInquiryGubn"/>
+						<w2:key dataType="text" name="" id="fldStartingYymmdd" length="8" CtrlId="fldStartingYymmdd"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+//include KEC_GetGridData(strGridData, colName);
+scwin.acnoInfo = "";
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {}; //계좌번호찾기팝업에서 넘어온 그리드데이터(구분자로 연결된 String)
+
+scwin.cboInquiryGubn_OnItemChanged = function(e) {
+    //여기에 구현코드를 삽입하세요.
+    //	1.콤보에 key-value 로 
+    //   '1'- 계약응당일 
+    //   '2'- 부담금납입을 select item에 등록합니다. 
+    //	2. 화면 ONLOAD시 조회구분이 계약응당일('1')로 셋팅한다. 
+    //	3. 계약응당일('1')이 선택되면 자동으로 패널에 'KEC04M8AA01'화면을 로드 합니다. 
+    //	4. 부담금납입('2')이 선택되면 자동으로 패널에 'KEC04M8AA02'화면을 로드 합니다. 
+    if (cboInquiryGubn.getValue() == "1") {
+        $c.iz.data.commonButtonEnable(0, true); //실행
+        Panel1.setSrc("KEC04M8AA01.xml");
+    } else {
+        $c.iz.data.commonButtonEnable(0, false); //실행
+
+        Panel1.setSrc("KEC04M8AA02.xml");
+    }
+};
+
+scwin.AccountID_OnValidate = async function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (AccountID.getValue().length == 14) {
+        if ($c.com.kec.CheckAccountNo(AccountID.getValue()) == false) {
+            AccountID.setValue("");
+            return false;
+        }
+        $c.iz.tran.setTranID("KEC04M8A41");
+        await $c.iz.tran.ASend();
+    }
+};
+
+scwin.OnInitScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    fldStartingYymmdd.setValue($c.user.getUserProfile('tranBaseYmd'));
+};
+
+scwin.OnSendKey = async function() {
+    //여기에 구현코드를 삽입하세요.
+
+    var inquiryGubn = cboInquiryGubn.getValue();
+    var startingYymmdd = fldStartingYymmdd.getValue();
+    var paymentScheduleYymmdd = "";
+    var paymentScheduledBurdenAmount = "";
+    if (inquiryGubn == "1") {
+        if (startingYymmdd > $c.user.getUserProfile('tranBaseYmd')) {
+            $c.iz.data.message("조회기준일자를  확인해 주십시요. 미래일자로는 조회가 불가합니다.");
+            return;
+        }
+    } else if (inquiryGubn == "2") {
+        paymentScheduleYymmdd = $c.iz.data.getChildData("fldPaymentScheduledYymmdd.Data", "Panel1");
+        paymentScheduledBurdenAmount = $c.iz.data.getChildData("fldPaymentScheduledBurdenAmount.Data", "Panel1");
+        if (paymentScheduleYymmdd == "") {
+            $c.iz.data.message("납입예정일자 항목에 값이 입력되지 않았습니다.");
+            return;
+        } else if (fldPaymentScheduledBurdenAmount.Data == "") {
+            $c.iz.data.message("납입예정부담금 항목에 값이 입력되지 않았습니다.");
+            return;
+        } else if (paymentScheduleYymmdd == "" && fldPaymentScheduledBurdenAmount.Data == "") {
+            $c.iz.data.message("납입예정부담금 항목과 납입예정일자 항목에 값이 입력되지 않았습니다.");
+            return;
+        }
+        if (paymentScheduleYymmdd < $c.user.getUserProfile('tranBaseYmd')) {
+            $c.iz.data.message("납입예정일자를 확인해 주십시요. 과거년월일로는 조회가 불가합니다.");
+            return;
+        }
+        if (paymentScheduleYymmdd >= fldManagementInstitutionAnnualDate.Data) {
+            $c.iz.data.message("납입예정일자를 확인해 주십시요. 운용관리계약 응당일이전 날짜만 조회가 가능합니다.");
+            return;
+        }
+        if (paymentScheduleYymmdd >= fldAssetManagementAnnualDate.Data) {
+            $c.iz.data.message("납입예정일자를 확인해 주십시요. 자산관리계약 응당일이전 날짜만 조회가 가능합니다.");
+            return;
+        }
+        if (fldPaymentScheduledBurdenAmount.Data == "0") {
+            $c.iz.data.message("0원 보다 큰 금액을 입력해 주십시요.");
+            return;
+        }
+    }
+    $c.iz.tran.setTranID("KEC04M8A42");
+    await $c.iz.tran.ASend();
+};
+
+scwin.Button3_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+
+    //사용자조회	KEC04U21001
+    //운용관리의 기업형 IRA 사용자정보를 조회한다. 
+    //sendData : 없음
+    //getData  : 고객번호(fldCustomNumber_g) -> 다계좌입금 화면의 사용자고객번호(fldUserNumber)
+    //              고객명 (fldCustomName_g)  -> 다계좌입금 화면의 사용자고객명(fldUserName)
+
+
+
+
+    Link.lnkfldScrNo = "KEC04M8A000";
+    Link.lnkValueCheck = "1";
+    $c.iz.screen.popup("KEC04U21001", "DATALINK");
+    scwin.acnoInfo = Link.lnkAcnoInfo;
+    fldCustomerName.setValue($c.com.kec.GetGridData(scwin.acnoInfo, "fldCustomName_g"));
+    AccountID.setValue($c.com.kec.GetGridData(scwin.acnoInfo, "fldAccountNumber_g"));
+    fldSystemKindDistinctionName.setValue($c.com.kec.GetGridData(scwin.acnoInfo, "fldContractClassName_g"));
+    fldSystemKindDistinction.setValue($c.com.kec.GetGridData(scwin.acnoInfo, "fldContractClass_g"));
+    //fldSystemKindDistinctionName.Data		= KEC_GetGridData(acnoInfo, "fldContractClassName_g"); 
+    scwin.AccountID_OnValidate();
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="수수료예상조회" meta_screenId="KEC04M8A000" scncall="0212028" customclass="Kes" style="background-color:rgb(250,250,250); width:755px; height:605px;" screentype="AType" meta_author="2B8B6DB949994EF" meata_date="2009/08/27 13:22:48" savezorder="1" snaptogrid="1" gridstepx="4" gridstepy="4" gridshape="Line" screendivide="2" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:8px; width:744px; height:68px; background-color:rgb(238,238,238); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" adjusttheme="1" apperance="Tab" transparent="0" headbackcolor="11636610" dynamicmove="0" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:20px; width:62px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_AccountID" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="계좌번호" image="없음" intemplate="0" 확장모드="0" orgid="Text_AccountID" hierarchy="Text_AccountID" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:76px; top:20px; width:100px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="AccountID" indicator="계좌번호" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" dataType="number" pinpad="아니오" msread="0" editFormat="######-##-######" maxlength="16" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="true" class="req" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="계좌번호" MPatternMaskingLen="0" validationtype="계좌번호검증" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" ev:onviewchange="scwin.AccountID_OnValidate" orgid="AccountID" hierarchy="AccountID" ref="data:dma_KEC04M8A000.AccountID"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:176px; top:20px; width:20px; height:20px; background-color:rgb(250,250,250);  align:middlecenter; text-align:middlecenter; font-size:8.5pt; letter-spacing:0; font-weight:700;" id="Button3" tabIndex="3" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" showfocusrect="1" gradientstyle="없음" gradientendcolor="11954037" theme="Normal" enableimage="icon_search.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_ico_search" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="Button3">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:204px; top:20px; width:208px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldCustomerName" indicator="고객" tabIndex="4" tabstop="1" enterstop="1" autosize="0" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="50" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldCustomerName" hierarchy="fldCustomerName" ref="data:dma_KEC04M8A000.fldCustomerName"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:416px; top:20px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldSystemKindDistinctionName" indicator="계약구분명" tabIndex="5" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldSystemKindDistinctionName" hierarchy="fldSystemKindDistinctionName" ref="data:dma_KEC04M8A000.fldSystemKindDistinctionName"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:548px; top:20px; width:62px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_cboInquiryGubn" tabIndex="6" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="조회구분" image="없음" intemplate="0" 확장모드="0" orgid="Text_cboInquiryGubn" hierarchy="Text_cboInquiryGubn" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:636px; top:20px; width:98px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="cboInquiryGubn" indicator="조회구분" tabIndex="7" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" mandatory="true" class="req" semirequired="0" keyLength="1" maxdropdownitems="10" popupthreshold="0" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Key" initvalue="1" maxinputlength="0" showcombolist="0" recvseteventenable="1" autoskip="1" autodup="1" charcasing="1" sorted="0" keyvalidation="1" datasource="0" allitemkey="9" fixspace="5" theme="Normal" index="0" items="1=계약응당일;2=부담금납입;" allkey="9" allvalue="전체" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.cboInquiryGubn_OnItemChanged" orgid="cboInquiryGubn" hierarchy="cboInquiryGubn" selectedIndex="0" ref="data:dma_KEC04M8A000.cboInquiryGubn">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[계약응당일]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[부담금납입]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:548px; top:44px; width:86px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldStartingYymmdd" tabIndex="8" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="조회기준일자" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldStartingYymmdd" hierarchy="Text_fldStartingYymmdd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:636px; top:44px; width:88px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldStartingYymmdd" indicator="조회기준일자" tabIndex="9" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="true" class="req" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" woncurrency="0" insertcomma="0" showcalendarbutton="1" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldStartingYymmdd" hierarchy="fldStartingYymmdd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8A000.fldStartingYymmdd"/>
+				<w2:textbox id="title_GroupBox1" class="title_h2" label="조회조건"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:80px; width:744px; height:144px; background-color:rgb(238,238,238); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox2" tabIndex="2" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" adjusttheme="1" apperance="Tab" transparent="0" headbackcolor="11636610" dynamicmove="0" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:20px; width:90px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldMgivstNewYmd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="운용관리신규일" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldMgivstNewYmd" hierarchy="Text_fldMgivstNewYmd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:156px; top:20px; width:64px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldMgivstNewYmd" indicator="운용관리신규일" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="1" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldMgivstNewYmd" hierarchy="fldMgivstNewYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8A000.fldMgivstNewYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:368px; top:20px; width:90px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldAssetNewYmd" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="자산관리신규일" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldAssetNewYmd" hierarchy="Text_fldAssetNewYmd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:516px; top:20px; width:64px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldAssetNewYmd" indicator="자산관리신규일" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="1" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldAssetNewYmd" hierarchy="fldAssetNewYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8A000.fldAssetNewYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:48px; width:138px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldMgivstFeeBurden" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="운용관리수수료부담주체" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldMgivstFeeBurden" hierarchy="Text_fldMgivstFeeBurden" class="kb_MiddleLeft"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:368px; top:48px; width:138px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldAssetFeeBurden" tabIndex="6" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="자산관리수수료부담주체" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldAssetFeeBurden" hierarchy="Text_fldAssetFeeBurden" class="kb_MiddleLeft"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:20px; top:68px; width:120px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text2" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="-&amp;nbsp;사용자부담금&amp;nbsp;부분" image="없음" intemplate="0" 확장모드="0" orgid="Text2" hierarchy="Text2" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:156px; top:68px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldUserBramMgivstFeeBurden" indicator="사용자부담금운용관리수수료부담주체" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldUserBramMgivstFeeBurden" hierarchy="fldUserBramMgivstFeeBurden" ref="data:dma_KEC04M8A000.fldUserBramMgivstFeeBurden"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:380px; top:68px; width:120px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text4" tabIndex="9" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="-&amp;nbsp;사용자부담금&amp;nbsp;부분" image="없음" intemplate="0" 확장모드="0" orgid="Text4" hierarchy="Text4" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:516px; top:68px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldUserBramAssetFeeBurden" indicator="사용자부담금자산관리수수료부담주체" tabIndex="10" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldUserBramAssetFeeBurden" hierarchy="fldUserBramAssetFeeBurden" ref="data:dma_KEC04M8A000.fldUserBramAssetFeeBurden"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:20px; top:92px; width:120px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text3" tabIndex="11" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="-&amp;nbsp;가입자부담금&amp;nbsp;부분" image="없음" intemplate="0" 확장모드="0" orgid="Text3" hierarchy="Text3" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:156px; top:92px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldApctBramMgivstFeeBurden" indicator="가입자부담금운용관리수수료부담주체" tabIndex="12" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="true" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldApctBramMgivstFeeBurden" hierarchy="fldApctBramMgivstFeeBurden" ref="data:dma_KEC04M8A000.fldApctBramMgivstFeeBurden"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:380px; top:92px; width:120px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text5" tabIndex="13" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="-&amp;nbsp;가입자부담금&amp;nbsp;부분" image="없음" intemplate="0" 확장모드="0" orgid="Text5" hierarchy="Text5" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:516px; top:92px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldApctBramAssetFeeBurden" indicator="가입자부담금자산관리수수료부담주체" tabIndex="14" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldApctBramAssetFeeBurden" hierarchy="fldApctBramAssetFeeBurden" ref="data:dma_KEC04M8A000.fldApctBramAssetFeeBurden"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:120px; width:138px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldMgivstPreThisYmd" tabIndex="15" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="운용관리직전계약응당일" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldMgivstPreThisYmd" hierarchy="Text_fldMgivstPreThisYmd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:156px; top:120px; width:64px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldMgivstPreThisYmd" indicator="운용관리직전계약응당일" tabIndex="16" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="1" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldMgivstPreThisYmd" hierarchy="fldMgivstPreThisYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8A000.fldMgivstPreThisYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:368px; top:120px; width:138px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldAssetPreThisYmd" tabIndex="17" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="자산관리직전계약응당일" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldAssetPreThisYmd" hierarchy="Text_fldAssetPreThisYmd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:516px; top:120px; width:64px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldAssetPreThisYmd" indicator="자산관리직전계약응당일" tabIndex="18" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="1" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldAssetPreThisYmd" hierarchy="fldAssetPreThisYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KEC04M8A000.fldAssetPreThisYmd"/>
+				<w2:textbox id="title_GroupBox2" class="title_h2" label="계약정보"/>
+			</xf:group>
+			<w2:textbox ctype="Desc" style="position:absolute; left:8px; top:236px; width:696px; height:20px; background-color:rgb(255,255,255); color:rgb(113,100,154); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Desc1" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="-5" overlapped="0" label="※&amp;nbsp;조회된&amp;nbsp;수수료&amp;nbsp;다음&amp;nbsp;계약응당일&amp;nbsp;실제로&amp;nbsp;산출되는&amp;nbsp;수수료와&amp;nbsp;일치하지&amp;nbsp;않으며,&amp;nbsp;&amp;nbsp;조회일자가&amp;nbsp;다음&amp;nbsp;계약응당일에서&amp;nbsp;멀수록&amp;nbsp;&amp;nbsp;" image="없음" intemplate="0" 확장모드="0" orgid="Desc1" hierarchy="Desc1" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+			<w2:textbox ctype="Desc" style="position:absolute; left:28px; top:256px; width:234px; height:20px; background-color:rgb(255,255,255); color:rgb(113,100,154); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Desc2" tabIndex="4" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="-5" overlapped="0" label="오차가&amp;nbsp;커짐을&amp;nbsp;반드시&amp;nbsp;안내해야&amp;nbsp;합니다.&amp;nbsp;" image="없음" intemplate="0" 확장모드="0" orgid="Desc2" hierarchy="Desc2" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:-364px; top:264px; width:38px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldCustomerName" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="고객" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldCustomerName" hierarchy="Text_fldCustomerName" class="kb_MiddleLeft"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:276px; width:100px; height:20px; background-color:rgb(238,238,238); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="6" id="GroupBox3" tabIndex="6" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" adjusttheme="1" apperance="Tab" transparent="0" headbackcolor="11636610" dynamicmove="0" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox3" hierarchy="GroupBox3">
+				<w2:textbox id="title_GroupBox3" class="title_h2" label="조회내역"/>
+			</xf:group>
+			<w2:pageFrame ctype="Panel" style="position:absolute; left:0px; top:292px; width:756px; height:308px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Panel1" tabIndex="7" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" joinscreen="1" joinscreenno="KEC04M8AA01" dock="None" autoscroll="0" minimize="0" panelautosize="0" dynamicmove="0" intemplate="0" 확장모드="0" orgid="Panel1" hierarchy="Panel1"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:172px; top:660px; width:10px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldSystemKindDistinction" indicator="계약구분코드" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldSystemKindDistinction" hierarchy="fldSystemKindDistinction" ref="data:dma_KEC04M8A000.fldSystemKindDistinction"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:36px; top:664px; width:78px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldSystemKindDistinction" tabIndex="9" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="계약구분코드" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldSystemKindDistinction" hierarchy="Text_fldSystemKindDistinction" class="kb_MiddleLeft"/>
+			<w2:textbox ctype="Text" style="position:absolute; left:208px; top:664px; width:54px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_fldManagementCode" tabIndex="10" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="관리부점" image="없음" intemplate="0" 확장모드="0" orgid="Text_fldManagementCode" hierarchy="Text_fldManagementCode" class="kb_MiddleLeft"/>
+			<w2:kb_input ctype="Edit" style="position:absolute; left:348px; top:664px; width:28px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); display:none; align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="fldManagementCode" indicator="관리부점" tabIndex="11" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="fldManagementCode" hierarchy="fldManagementCode" ref="data:dma_KEC04M8A000.fldManagementCode"/>
+		</xf:group>
+	</body>
+</html>

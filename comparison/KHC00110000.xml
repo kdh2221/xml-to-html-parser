@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KHC00110000.scn"  meta_screenId="KHC00110000" meta_screenName="요구불신규" meta_desc="" meta_author="">
+		<w2:type craft="true" craftSrc="/xml/KHC00110000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KHC00110HC0000" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KHC00110HC0000_INPUT":{"@id":"dma_KHC00110HC0000_INPUT","prdctTmpltCd":"prdctTmpltCd","prdctSerno":"prdctSerno","inhabBzno":"inhabBzno","custnm":"custnm","pwdNewYn":"pwdNewYn","pwd":"pwd","atmUtznNo":"atmUtznNo","GROUP1__mnrcvDstic1":"GROUP1__mnrcvDstic1","GROUP1__mrvamt1":"GROUP1__mrvamt1","GROUP1__mnrcvDstic2":"GROUP1__mnrcvDstic2","GROUP1__mrvamt2":"GROUP1__mrvamt2","GROUP1__mnrcvDstic3":"GROUP1__mnrcvDstic3","GROUP1__mrvamt3":"GROUP1__mrvamt3","GROUP1__newamt":"GROUP1__newamt","GROUP1__rtchkAmy":"GROUP1__rtchkAmy","GROUP5__elctrBnkbkIssuDstc":"GROUP5__elctrBnkbkIssuDstc","GROUP2__siseRegiDstcd":"GROUP2__siseRegiDstcd","GROUP5__dpclssuncYn":"GROUP5__dpclssuncYn","GROUP3__lvtpSavnYn":"GROUP3__lvtpSavnYn","GROUP3__lvtpSavnJoinTagetDstcd":"GROUP3__lvtpSavnJoinTagetDstcd","GROUP3__lvtpSavnClam":"GROUP3__lvtpSavnClam","GROUP4__nEGOAthorDstcd":"GROUP4__nEGOAthorDstcd","GROUP4__nEGOAthorIrtNo":"GROUP4__nEGOAthorIrtNo","GROUP4__aplyIrt":"GROUP4__aplyIrt","GROUP4__cstdCngpYn":"GROUP4__cstdCngpYn","GROUP2__solicEmpid":"GROUP2__solicEmpid","GROUP2__solicBrncd":"GROUP2__solicBrncd","GROUP2__cnselEmpid":"GROUP2__cnselEmpid","GROUP2__cnfrmDocFactorYn":"GROUP2__cnfrmDocFactorYn","GROUP6__noresiDstcd":"GROUP6__noresiDstcd","GROUP6__noresiDpostDtitmDstic":"GROUP6__noresiDpostDtitmDstic","GROUP6__noresiFreeCrleMnrcvResn":"GROUP6__noresiFreeCrleMnrcvResn","GROUP6__apctDstcd":"GROUP6__apctDstcd","GROUP6__jntNmnlYn":"GROUP6__jntNmnlYn","GROUP6__idtrek":"GROUP6__idtrek","GROUP6__salryTrsaccDte":"GROUP6__salryTrsaccDte","GROUP7__cDDSupplCnfrm":"GROUP7__cDDSupplCnfrm","GROUP7__finacToDstcd":"GROUP7__finacToDstcd","GROUP7__EtcResn":"GROUP7__EtcResn","GROUP7__prxyCno":"GROUP7__prxyCno","GROUP7__fndsSourcDstcd":"GROUP7__fndsSourcDstcd"}},"target":{"dma_KHC00110HC0000_OUTPUT_screen___KHC00110000":{"@id":"dma_KHC00110HC0000_OUTPUT_screen___KHC00110000","prdctTmpltCd":"prdctTmpltCd","prdctTmpltNm":"prdctTmpltNm","prdctSerno":"prdctSerno","prdctnm":"prdctnm","inhabBzno":"inhabBzno","custnm":"custnm","pwdNewYn":"pwdNewYn","pwd":"pwd","atmUtznNo":"atmUtznNo","GROUP1__mnrcvDstic1":"GROUP1__mnrcvDstic1","GROUP1__mrvamt1":"GROUP1__mrvamt1","GROUP1__mnrcvDstic2":"GROUP1__mnrcvDstic2","GROUP1__mrvamt2":"GROUP1__mrvamt2","GROUP1__mnrcvDstic3":"GROUP1__mnrcvDstic3","GROUP1__mrvamt3":"GROUP1__mrvamt3","GROUP5__elctrBnkbkIssuDstc":"GROUP5__elctrBnkbkIssuDstc","GROUP2__siseRegiDstcd":"GROUP2__siseRegiDstcd","GROUP3__lvtpSavnYn":"GROUP3__lvtpSavnYn","GROUP3__lvtpSavnJoinTagetDstcd":"GROUP3__lvtpSavnJoinTagetDstcd","GROUP3__lvtpSavnClam":"GROUP3__lvtpSavnClam","GROUP4__nEGOAthorDstcd":"GROUP4__nEGOAthorDstcd","GROUP4__nEGOAthorIrtNo":"GROUP4__nEGOAthorIrtNo","GROUP4__aplyIrt":"GROUP4__aplyIrt","GROUP4__cstdCngpYn":"GROUP4__cstdCngpYn","GROUP2__solicEmpid":"GROUP2__solicEmpid","GROUP2__solicEmpNm":"GROUP2__solicEmpNm","GROUP2__solicBrncd":"GROUP2__solicBrncd","GROUP2__solicBrnNm":"GROUP2__solicBrnNm","GROUP2__cnselEmpid":"GROUP2__cnselEmpid","GROUP2__cnselEmpNm":"GROUP2__cnselEmpNm","GROUP2__cnfrmDocFactorYn":"GROUP2__cnfrmDocFactorYn","GROUP6__noresiDstcd":"GROUP6__noresiDstcd","GROUP6__noresiDpostDtitmDstic":"GROUP6__noresiDpostDtitmDstic","GROUP6__noresiFreeCrleMnrcvResn":"GROUP6__noresiFreeCrleMnrcvResn","GROUP6__apctDstcd":"GROUP6__apctDstcd","GROUP6__idtrek":"GROUP6__idtrek","GROUP6__salryTrsaccDte":"GROUP6__salryTrsaccDte","GROUP7__cDDSupplCnfrm":"GROUP7__cDDSupplCnfrm","GROUP7__finacToDstcd":"GROUP7__finacToDstcd","GROUP7__EtcResn":"GROUP7__EtcResn","GROUP7__prxyCno":"GROUP7__prxyCno","GROUP7__fndsSourcDstcd":"GROUP7__fndsSourcDstcd","GROUP8__NonOpbrn":"GROUP8__NonOpbrn","GROUP8__NonOpbrnNm":"GROUP8__NonOpbrnNm","GROUP8__acnSerno":"GROUP8__acnSerno","prdctLagClsfiCd":"prdctLagClsfiCd","prdctMedmClsfiCd":"prdctMedmClsfiCd","taxpreflinfo":"taxpreflinfo","nEGOlrtinfo":"nEGOlrtinfo"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KHC00110HC0000_INPUT" TranClass="MCI" SvcCode="KHC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="prdctTmpltCd" length="" CtrlId="prdctTmpltCd"/>
+						<w2:key dataType="text" name="" id="prdctSerno" length="" CtrlId="prdctSerno"/>
+						<w2:key dataType="text" name="" id="inhabBzno" length="" CtrlId="inhabBzno"/>
+						<w2:key dataType="text" name="" id="custnm" length="" CtrlId="custnm"/>
+						<w2:key dataType="text" name="" id="pwdNewYn" length="" CtrlId="pwdNewYn"/>
+						<w2:key dataType="text" name="" id="pwd" length="" CtrlId="pwd"/>
+						<w2:key dataType="text" name="" id="atmUtznNo" length="" CtrlId="atmUtznNo"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic1" length="" CtrlId="GROUP1_mnrcvDstic1"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt1" length="" CtrlId="GROUP1_mrvamt1"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic2" length="" CtrlId="GROUP1_mnrcvDstic2"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt2" length="" CtrlId="GROUP1_mrvamt2"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic3" length="" CtrlId="GROUP1_mnrcvDstic3"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt3" length="" CtrlId="GROUP1_mrvamt3"/>
+						<w2:key dataType="text" name="" id="GROUP1__newamt" length="" CtrlId="GROUP1_newamt"/>
+						<w2:key dataType="text" name="" id="GROUP1__rtchkAmy" length="" CtrlId="rtchkAmy"/>
+						<w2:key dataType="text" name="" id="GROUP5__elctrBnkbkIssuDstc" length="" CtrlId="GROUP5_elctrBnkbkIssuDstc"/>
+						<w2:key dataType="text" name="" id="GROUP2__siseRegiDstcd" length="" CtrlId="GROUP2_siseRegiDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP5__dpclssuncYn" length="" CtrlId="dpclssuncYn"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnYn" length="" CtrlId="GROUP3_lvtpSavnYn"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnJoinTagetDstcd" length="" CtrlId="GROUP3_lvtpSavnJoinTagetDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnClam" length="" CtrlId="GROUP3_lvtpSavnClam"/>
+						<w2:key dataType="text" name="" id="GROUP4__nEGOAthorDstcd" length="" CtrlId="GROUP4_nEGOAthorDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP4__nEGOAthorIrtNo" length="" CtrlId="GROUP4_nEGOAthorIrtNo"/>
+						<w2:key dataType="text" name="" id="GROUP4__aplyIrt" length="" CtrlId="GROUP4_aplyIrt"/>
+						<w2:key dataType="text" name="" id="GROUP4__cstdCngpYn" length="" CtrlId="GROUP4_cstdCngpYn"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicEmpid" length="" CtrlId="GROUP2_solicEmpid"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicBrncd" length="" CtrlId="GROUP2_solicBrncd"/>
+						<w2:key dataType="text" name="" id="GROUP2__cnselEmpid" length="" CtrlId="GROUP2_cnselEmpid"/>
+						<w2:key dataType="text" name="" id="GROUP2__cnfrmDocFactorYn" length="" CtrlId="GROUP2_cnfrmDocFactorYn"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiDstcd" length="" CtrlId="GROUP6_noresiDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiDpostDtitmDstic" length="" CtrlId="GROUP6_noresiDpostDtitmDstic"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiFreeCrleMnrcvResn" length="" CtrlId="GROUP6_noresiFreeCrleMnrcvResn"/>
+						<w2:key dataType="text" name="" id="GROUP6__apctDstcd" length="" CtrlId="apctDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP6__jntNmnlYn" length="" CtrlId="GROUP6_jntNmnlYn"/>
+						<w2:key dataType="text" name="" id="GROUP6__idtrek" length="" CtrlId="GROUP6_idtrek"/>
+						<w2:key dataType="text" name="" id="GROUP6__salryTrsaccDte" length="" CtrlId="GROUP6_salryTrsaccDte"/>
+						<w2:key dataType="text" name="" id="GROUP7__cDDSupplCnfrm" length="" CtrlId="GROUP7_cDDSupplCnfrm"/>
+						<w2:key dataType="text" name="" id="GROUP7__finacToDstcd" length="" CtrlId="GROUP7_finacToDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP7__EtcResn" length="" CtrlId="GROUP7_EtcResn"/>
+						<w2:key dataType="text" name="" id="GROUP7__prxyCno" length="" CtrlId="GROUP7_prxyCno"/>
+						<w2:key dataType="text" name="" id="GROUP7__fndsSourcDstcd" length="" CtrlId="GROUP7_fndsSourcDstcd"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KHC00110HC0000_OUTPUT_screen___KHC00110000" TranClass="MCI" SvcCode="KHC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="prdctTmpltCd" length="" CtrlId="prdctTmpltCd" Type="char"/>
+						<w2:key dataType="text" name="" id="prdctTmpltNm" length="" CtrlId="prdctTmpltNm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctSerno" length="" CtrlId="prdctSerno" Type="char"/>
+						<w2:key dataType="text" name="" id="prdctnm" length="" CtrlId="prdctnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="inhabBzno" length="" CtrlId="inhabBzno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custnm" length="" CtrlId="custnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="pwdNewYn" length="" CtrlId="pwdNewYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="pwd" length="" CtrlId="pwd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="atmUtznNo" length="" CtrlId="atmUtznNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic1" length="" CtrlId="GROUP1_mnrcvDstic1" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt1" length="" CtrlId="GROUP1_mrvamt1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic2" length="" CtrlId="GROUP1_mnrcvDstic2" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt2" length="" CtrlId="GROUP1_mrvamt2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP1__mnrcvDstic3" length="" CtrlId="GROUP1_mnrcvDstic3" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP1__mrvamt3" length="" CtrlId="GROUP1_mrvamt3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP5__elctrBnkbkIssuDstc" length="" CtrlId="GROUP5_elctrBnkbkIssuDstc" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP2__siseRegiDstcd" length="" CtrlId="GROUP2_siseRegiDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnYn" length="" CtrlId="GROUP3_lvtpSavnYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnJoinTagetDstcd" length="" CtrlId="GROUP3_lvtpSavnJoinTagetDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP3__lvtpSavnClam" length="" CtrlId="GROUP3_lvtpSavnClam" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP4__nEGOAthorDstcd" length="" CtrlId="GROUP4_nEGOAthorDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP4__nEGOAthorIrtNo" length="" CtrlId="GROUP4_nEGOAthorIrtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP4__aplyIrt" length="" CtrlId="GROUP4_aplyIrt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP4__cstdCngpYn" length="" CtrlId="GROUP4_cstdCngpYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicEmpid" length="" CtrlId="GROUP2_solicEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicEmpNm" length="" CtrlId="GROUP2_solicEmpNm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicBrncd" length="" CtrlId="GROUP2_solicBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__solicBrnNm" length="" CtrlId="GROUP2_solicBrnNm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__cnselEmpid" length="" CtrlId="GROUP2_cnselEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__cnselEmpNm" length="" CtrlId="GROUP2_cnselEmpNm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP2__cnfrmDocFactorYn" length="" CtrlId="GROUP2_cnfrmDocFactorYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiDstcd" length="" CtrlId="GROUP6_noresiDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiDpostDtitmDstic" length="" CtrlId="GROUP6_noresiDpostDtitmDstic" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP6__noresiFreeCrleMnrcvResn" length="" CtrlId="GROUP6_noresiFreeCrleMnrcvResn" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP6__apctDstcd" length="" CtrlId="apctDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP6__idtrek" length="" CtrlId="GROUP6_idtrek" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP6__salryTrsaccDte" length="" CtrlId="GROUP6_salryTrsaccDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP7__cDDSupplCnfrm" length="" CtrlId="GROUP7_cDDSupplCnfrm" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP7__finacToDstcd" length="" CtrlId="GROUP7_finacToDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP7__EtcResn" length="" CtrlId="GROUP7_EtcResn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP7__prxyCno" length="" CtrlId="GROUP7_prxyCno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP7__fndsSourcDstcd" length="" CtrlId="GROUP7_fndsSourcDstcd" Type="char"/>
+						<w2:key dataType="text" name="" id="GROUP8__NonOpbrn" length="" CtrlId="GROUP8_NonOpbrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP8__NonOpbrnNm" length="" CtrlId="GROUP8_NonOpbrnNm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="GROUP8__acnSerno" length="" CtrlId="GROUP8_acnSerno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="prdctLagClsfiCd" length="" CtrlId="prdctLagClsfiCd" Type="char"/>
+						<w2:key dataType="text" name="" id="prdctMedmClsfiCd" length="" CtrlId="prdctMedmClsfiCd" Type="char"/>
+						<w2:key dataType="text" name="" id="taxpreflinfo" length="" CtrlId="taxpreflinfo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="nEGOlrtinfo" length="" CtrlId="nEGOlrtinfo" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KHC00110000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KHC00110000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="prdctTmpltCd" length="" CtrlId="prdctTmpltCd"/>
+						<w2:key dataType="text" name="" id="prdctSerno" length="" CtrlId="prdctSerno"/>
+						<w2:key dataType="text" name="" id="inhabBzno" length="" CtrlId="inhabBzno"/>
+						<w2:key dataType="text" name="" id="custnm" length="" CtrlId="custnm"/>
+						<w2:key dataType="text" name="" id="pwdNewYn" length="" CtrlId="pwdNewYn"/>
+						<w2:key dataType="text" name="" id="pwd" length="" CtrlId="pwd"/>
+						<w2:key dataType="text" name="" id="atmUtznNo" length="" CtrlId="atmUtznNo"/>
+						<w2:key dataType="text" name="" id="GROUP1_mnrcvDstic1" length="" CtrlId="GROUP1_mnrcvDstic1"/>
+						<w2:key dataType="text" name="" id="GROUP1_mrvamt1" length="" CtrlId="GROUP1_mrvamt1"/>
+						<w2:key dataType="text" name="" id="GROUP1_mnrcvDstic2" length="" CtrlId="GROUP1_mnrcvDstic2"/>
+						<w2:key dataType="text" name="" id="GROUP1_mrvamt2" length="" CtrlId="GROUP1_mrvamt2"/>
+						<w2:key dataType="text" name="" id="GROUP1_mnrcvDstic3" length="" CtrlId="GROUP1_mnrcvDstic3"/>
+						<w2:key dataType="text" name="" id="GROUP1_mrvamt3" length="" CtrlId="GROUP1_mrvamt3"/>
+						<w2:key dataType="text" name="" id="GROUP1_newamt" length="" CtrlId="GROUP1_newamt"/>
+						<w2:key dataType="text" name="" id="rtchkAmy" length="" CtrlId="rtchkAmy"/>
+						<w2:key dataType="text" name="" id="GROUP5_elctrBnkbkIssuDstc" length="" CtrlId="GROUP5_elctrBnkbkIssuDstc"/>
+						<w2:key dataType="text" name="" id="GROUP2_siseRegiDstcd" length="" CtrlId="GROUP2_siseRegiDstcd"/>
+						<w2:key dataType="text" name="" id="dpclssuncYn" length="" CtrlId="dpclssuncYn"/>
+						<w2:key dataType="text" name="" id="GROUP3_lvtpSavnYn" length="" CtrlId="GROUP3_lvtpSavnYn"/>
+						<w2:key dataType="text" name="" id="GROUP3_lvtpSavnJoinTagetDstcd" length="" CtrlId="GROUP3_lvtpSavnJoinTagetDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP3_lvtpSavnClam" length="" CtrlId="GROUP3_lvtpSavnClam"/>
+						<w2:key dataType="text" name="" id="GROUP4_nEGOAthorDstcd" length="" CtrlId="GROUP4_nEGOAthorDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP4_nEGOAthorIrtNo" length="" CtrlId="GROUP4_nEGOAthorIrtNo"/>
+						<w2:key dataType="text" name="" id="GROUP4_aplyIrt" length="" CtrlId="GROUP4_aplyIrt"/>
+						<w2:key dataType="text" name="" id="GROUP4_cstdCngpYn" length="" CtrlId="GROUP4_cstdCngpYn"/>
+						<w2:key dataType="text" name="" id="GROUP2_solicEmpid" length="" CtrlId="GROUP2_solicEmpid"/>
+						<w2:key dataType="text" name="" id="GROUP2_solicBrncd" length="" CtrlId="GROUP2_solicBrncd"/>
+						<w2:key dataType="text" name="" id="GROUP2_cnselEmpid" length="" CtrlId="GROUP2_cnselEmpid"/>
+						<w2:key dataType="text" name="" id="GROUP2_cnfrmDocFactorYn" length="" CtrlId="GROUP2_cnfrmDocFactorYn"/>
+						<w2:key dataType="text" name="" id="GROUP6_noresiDstcd" length="" CtrlId="GROUP6_noresiDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP6_noresiDpostDtitmDstic" length="" CtrlId="GROUP6_noresiDpostDtitmDstic"/>
+						<w2:key dataType="text" name="" id="GROUP6_noresiFreeCrleMnrcvResn" length="" CtrlId="GROUP6_noresiFreeCrleMnrcvResn"/>
+						<w2:key dataType="text" name="" id="apctDstcd" length="" CtrlId="apctDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP6_jntNmnlYn" length="" CtrlId="GROUP6_jntNmnlYn"/>
+						<w2:key dataType="text" name="" id="GROUP6_idtrek" length="" CtrlId="GROUP6_idtrek"/>
+						<w2:key dataType="text" name="" id="GROUP6_salryTrsaccDte" length="" CtrlId="GROUP6_salryTrsaccDte"/>
+						<w2:key dataType="text" name="" id="GROUP7_cDDSupplCnfrm" length="" CtrlId="GROUP7_cDDSupplCnfrm"/>
+						<w2:key dataType="text" name="" id="GROUP7_finacToDstcd" length="" CtrlId="GROUP7_finacToDstcd"/>
+						<w2:key dataType="text" name="" id="GROUP7_EtcResn" length="" CtrlId="GROUP7_EtcResn"/>
+						<w2:key dataType="text" name="" id="GROUP7_prxyCno" length="" CtrlId="GROUP7_prxyCno"/>
+						<w2:key dataType="text" name="" id="GROUP7_fndsSourcDstcd" length="" CtrlId="GROUP7_fndsSourcDstcd"/>
+						<w2:key dataType="text" name="" id="prdctTmpltNm" length="" CtrlId="prdctTmpltNm"/>
+						<w2:key dataType="text" name="" id="prdctnm" length="" CtrlId="prdctnm"/>
+						<w2:key dataType="text" name="" id="GROUP2_solicEmpNm" length="" CtrlId="GROUP2_solicEmpNm"/>
+						<w2:key dataType="text" name="" id="GROUP2_solicBrnNm" length="" CtrlId="GROUP2_solicBrnNm"/>
+						<w2:key dataType="text" name="" id="GROUP2_cnselEmpNm" length="" CtrlId="GROUP2_cnselEmpNm"/>
+						<w2:key dataType="text" name="" id="GROUP8_NonOpbrn" length="" CtrlId="GROUP8_NonOpbrn"/>
+						<w2:key dataType="text" name="" id="GROUP8_NonOpbrnNm" length="" CtrlId="GROUP8_NonOpbrnNm"/>
+						<w2:key dataType="text" name="" id="GROUP8_acnSerno" length="" CtrlId="GROUP8_acnSerno"/>
+						<w2:key dataType="text" name="" id="prdctLagClsfiCd" length="" CtrlId="prdctLagClsfiCd"/>
+						<w2:key dataType="text" name="" id="prdctMedmClsfiCd" length="" CtrlId="prdctMedmClsfiCd"/>
+						<w2:key dataType="text" name="" id="taxpreflinfo" length="" CtrlId="taxpreflinfo"/>
+						<w2:key dataType="text" name="" id="nEGOlrtinfo" length="" CtrlId="nEGOlrtinfo"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+scwin.OnInitScreen = function() {
+    GroupBox7.hide();
+    GroupBox8.hide();
+    GROUP6_idtrek.setValue(scwin.getDate());
+};
+
+scwin.pwdNewYn_OnKillFocus = function() {
+    if (pwdNewYn.getValue() == "1") {
+        pwd.setMandatory(false);
+        pwd.setDisabled(true);
+    } else {
+        pwd.setMandatory(true);
+        pwd.setDisabled(false);
+        pwd.focus();
+    }
+};
+
+scwin.NewAmt = function() {
+    if (GROUP1_mnrcvDstic1.getValue() == "91" || GROUP1_mnrcvDstic2.getValue() == "91" || GROUP1_mnrcvDstic3.getValue() == "91") {
+        GROUP1_newamt.setDisabled(false);
+    } else {
+        GROUP1_newamt.setDisabled(true);
+    }
+};
+
+
+scwin.GROUP1_mnrcvDstic1_OnItemChanged = function(e) {
+    scwin.NewAmt();
+    if (GROUP1_mnrcvDstic1.getSelectedIndex() == GROUP1_mnrcvDstic2.getSelectedIndex() ||
+        GROUP1_mnrcvDstic1.getSelectedIndex() == GROUP1_mnrcvDstic3.getSelectedIndex()) {
+        $c.iz.data.alert("같은 종류의 수납구분을 선택 할 수 없습니다.", "수납구분 선택 오류");
+        GROUP1_mnrcvDstic1.clear();
+        GROUP1_mnrcvDstic1.focus();
+        return false;
+    }
+    if (GROUP1_mnrcvDstic1.getSelectedIndex() != "") {
+        GROUP1_mrvamt1.setDisabled(false);
+    } else {
+        GROUP1_mrvamt1.setDisabled(true);
+    }
+};
+
+scwin.GROUP1_mnrcvDstic2_OnItemChanged = function(e) {
+    scwin.NewAmt();
+    if (GROUP1_mnrcvDstic2.getSelectedIndex() == GROUP1_mnrcvDstic1.getSelectedIndex() ||
+        GROUP1_mnrcvDstic2.getSelectedIndex() == GROUP1_mnrcvDstic3.getSelectedIndex()) {
+        $c.iz.data.alert("같은 종류의 수납구분을 선택 할 수 없습니다.", "수납구분 선택 오류");
+        GROUP1_mnrcvDstic2.clear();
+        GROUP1_mnrcvDstic2.focus();
+        return false;
+    }
+    if (GROUP1_mnrcvDstic2.getSelectedIndex() != "") {
+        GROUP1_mrvamt2.setDisabled(false);
+    } else {
+        GROUP1_mrvamt2.setDisabled(true);
+    }
+};
+
+scwin.GROUP1_mnrcvDstic3_OnItemChanged = function(e) {
+    scwin.NewAmt();
+    if (GROUP1_mnrcvDstic3.getSelectedIndex() == GROUP1_mnrcvDstic2.getSelectedIndex() ||
+        GROUP1_mnrcvDstic3.getSelectedIndex() == GROUP1_mnrcvDstic1.getSelectedIndex()) {
+        $c.iz.data.alert("같은 종류의 수납구분을 선택 할 수 없습니다.", "수납구분 선택 오류");
+        GROUP1_mnrcvDstic3.clear();
+        GROUP1_mnrcvDstic3.focus();
+        return false;
+    }
+    if (GROUP1_mnrcvDstic3.getSelectedIndex() != "") {
+        GROUP1_mrvamt3.setDisabled(false);
+    } else {
+        GROUP1_mrvamt3.setDisabled(true);
+    }
+};
+
+scwin.NewAmtACC = function() {
+    var amt1 = 0;
+    var amt2 = 0;
+    var amt3 = 0;
+    var AccNewAmt = 0;
+    if (GROUP1_mrvamt1.getValue() == "") {
+        amt1 = 0;
+    } else {
+        amt1 = parseFloat(GROUP1_mrvamt1.getValue());
+    }
+    if (GROUP1_mrvamt2.getValue() == "") {
+        amt2 = 0;
+    } else {
+        amt2 = parseFloat(GROUP1_mrvamt2.getValue());
+    }
+    if (GROUP1_mrvamt3.getValue() == "") {
+        amt3 = 0;
+    } else {
+        amt3 = parseFloat(GROUP1_mrvamt3.getValue());
+    }
+    if (rtchkAmy.getValue() == "") {
+        ramt = 0;
+    } else {
+        ramt = parseFloat(rtchkAmy.getValue());
+    }
+    AccNewAmt = amt1 + amt2 + amt3;
+    GROUP1_newamt.setValue(AccNewAmt);
+};
+
+scwin.GROUP1_mrvamt1_OnKillFocus = function() {
+    scwin.NewAmtACC();
+};
+
+scwin.GROUP1_mrvamt2_OnKillFocus = function() {
+    scwin.NewAmtACC();
+};
+
+scwin.GROUP1_mrvamt3_OnKillFocus = function() {
+    scwin.NewAmtACC();
+};
+
+
+scwin.GROUP5_elctrBnkbkIssuDstc_OnItemChanged = function(e) {
+    if ($c.iz.data.trim(GROUP5_elctrBnkbkIssuDstc.getValue()) != "") {
+        GROUP2_siseRegiDstcd.setValue("4");
+        GROUP2_siseRegiDstcd.setDisabled(true);
+        bnkbkdsgnDstcd.setDisabled(true);
+        dpclssuncYn.setDisabled(true);
+        bnkbkdsgnDstcd.clear();
+        dpclssuncYn.setValue();
+    } else {
+        GROUP2_siseRegiDstcd.setDisabled(false);
+        bnkbkdsgnDstcd.setDisabled(false);
+        dpclssuncYn.setDisabled(false);
+        GROUP2_siseRegiDstcd.focus();
+    }
+};
+
+scwin.GROUP5_elctrBnkbkIssuDstc_OnKillFocus = function() {
+    if ($c.iz.data.trim(GROUP5_elctrBnkbkIssuDstc.getValue()) != "") {
+        GROUP2_siseRegiDstcd.setValue("4");
+        GROUP2_siseRegiDstcd.setDisabled(true);
+        bnkbkdsgnDstcd.setDisabled(true);
+        dpclssuncYn.setDisabled(true);
+        bnkbkdsgnDstcd.clear();
+        dpclssuncYn.setValue();
+    } else {
+        GROUP2_siseRegiDstcd.setDisabled(false);
+        bnkbkdsgnDstcd.setDisabled(false);
+        dpclssuncYn.setDisabled(false);
+        GROUP2_siseRegiDstcd.focus();
+    }
+};
+
+scwin.dpclssuncYn_OnKillFocus = function() {
+    if ($c.iz.data.trim(dpclssuncYn.getValue()) != "") {
+        dpclssuncYn.setDisabled(true);
+    }
+};
+
+scwin.GROUP6_noresiDstcd_OnItemChanged = function(e) {
+    //	if (Trim(GROUP6_noresiDstcd.Data) != "")
+    //	{
+    //		GROUP6_noresiDpostDtitmDstic.Enabled = false;
+    //		GROUP6_noresiFreeCrleMnrcvResn.Enabled = false;
+    //	}
+    valnoresiDstcd.setValue(GROUP6_noresiDstcd.GetComboValue);
+};
+
+scwin.GROUP6_idtrek_OnKillFocus = function() {
+    if (parseFloat(GROUP6_idtrek.getValue()) > scwin.getDate()) {
+        $c.iz.data.message("기산일은 현재날짜보다 클수 없습니다.");
+        GROUP6_idtrek.setValue(scwin.getDate());
+        GROUP6_idtrek.focus();
+    }
+};
+
+//현재날짜(YYYYMMDD)
+scwin.getDate = function() {
+    var date = new Date();
+    var strYmd = "";
+    var strDate = "";
+    var strMonth = "";
+    strYmd += date.getFullYear().toString();
+    strMonth = (date.getMonth() + 1).toString();
+    if (strMonth < 10) strYmd += "0" + strMonth;
+
+    else strYmd += strMonth;
+    strDate = date.getDate();
+    if (strDate < 10) strYmd += "0" + strDate;
+
+    else strYmd += strDate;
+    return strYmd;
+};
+
+scwin.GROUP6_salryTrsaccDte_OnKillFocus = function() {
+    if (parseFloat(GROUP6_salryTrsaccDte.getValue()) < 1 || parseFloat(GROUP6_salryTrsaccDte.getValue()) > 31) {
+        $c.iz.data.message("급여이체일의 입력 범위는 1~31 까지 입니다.");
+        GROUP6_salryTrsaccDte.setValue();
+        GROUP6_salryTrsaccDte.focus();
+    }
+};
+
+scwin.OnSendKey = function() {
+    //	SetTranID("KHC00110HC0000");
+    //	Tran.ASend();
+    if (prdctTmpltCd.getValue() == "") {
+        $c.iz.data.alert("상품종류는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (prdctSerno.getValue() == "") {
+        $c.iz.data.alert("세부상품종류는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (inhabBzno.getValue() == "") {
+        $c.iz.data.alert("주민사업자번호는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (custnm.getValue() == "") {
+        $c.iz.data.alert("고객명은 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (pwd.getValue() == "") {
+        $c.iz.data.alert("비밀번호는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (GROUP1_mnrcvDstic1.getValue() == "") {
+        $c.iz.data.alert("수납금액1은 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (GROUP2_siseRegiDstcd.getValue() == "") {
+        $c.iz.data.alert("인감서명거래구분은 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    //	if (GROUP3_lvtpSavnClam.Data == "" && GroupBox7.Visible == true)
+    //	{
+    //		Alert("생계형저축한도금액은 필수항목 입니다.","필수항목 오류");
+    //		return;
+    //	}
+    if (GROUP2_solicEmpid.getValue() == "") {
+        $c.iz.data.alert("권유직원번호는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    if (GROUP2_solicBrncd.getValue() == "") {
+        $c.iz.data.alert("권유점번호는 필수항목 입니다.", "필수항목 오류");
+        return;
+    }
+    $c.iz.data.messageSlide("요구불신규:신규거래 신청서를 인자하세요");
+    if (dpclssuncYn.getValue() == "1") {
+        $c.iz.data.alert("요구불신규가 정상적으로 처리 되었습니다.\n\n직불카드 발급화면으로 이동합니다.", "정상처리");
+        Link.acno = "00153700000123";
+        $c.iz.screen.screenOpen("KJE00101000", "DATALINK");
+    } else {
+        $c.iz.data.alert("요구불신규가 정상적으로 처리 되었습니다.", "정상처리");
+    }
+};
+
+scwin.prdctTmpltCd_OnItemChanged = function(e) {
+    prdctTmpltNm.setValue(prdctTmpltCd.GetComboValue);
+    scwin.goodsSelect();
+    prdctSerno.clear();
+    prdctnm.setValue();
+    if (prdctTmpltCd.getValue() == "") {
+        prdctTmpltNm.setValue();
+    }
+};
+
+scwin.prdctSerno_OnItemChanged = function(e) {
+    prdctnm.setValue(prdctSerno.GetComboValue);
+    scwin.goodsSelect();
+    if (prdctSerno.getValue() == "") {
+        prdctTmpltCd.clear();
+        prdctTmpltNm.setValue();
+        prdctnm.setValue();
+    }
+};
+
+scwin.goodsSelect = function() {
+    //	세금우대 상품인 경우만 세금우대관련정보 그룹이 화면에 나타나고 그외는 안보이게 한다(세금우대정보 필드가 "Y"인 경우 DISPLAY)
+    //	상품종류 : 002 세부상품종류 : 00001 인 경우 DISPLAY
+    if (prdctTmpltCd.getValue() == "002" && prdctSerno.getValue() == "00001") {
+        GroupBox7.show('');
+        GroupBox8.hide();
+        prdctnm.setValue("저축예금");
+    } else if (prdctTmpltCd.getValue() == "003" && prdctSerno.getValue() == "00007") {
+        GroupBox7.hide();
+        GroupBox8.show('');
+        prdctnm.setValue("KB우대기업자유");
+        Edit40.setValue(5.00);
+    } else {
+        GroupBox7.hide();
+        GroupBox8.hide();
+    }
+};
+
+scwin.btnCusnmSch_OnClick = function(e) {
+    if (inhabBzno.getValue() == "8801011234567") {
+        Link.serchNo = inhabBzno.getValue();
+        $c.iz.screen.popup("KAA04900000", "DATALINK");
+        custnm.setValue(Link.custnm);
+    } else {
+        $c.iz.screen.popup("KAA00010000", "DATALINK");
+    }
+};
+
+
+scwin.btnprdct_OnClick = function(e) {
+    Link.prdctHanglName = prdctnm.getValue();
+    Link.prdctLagClsfiCd = "01";
+    Link.prdctMedmClsfiCd = "01";
+    $c.iz.screen.popup("PDM04001000", "DATALINK");
+    prdctnm.setValue(Link.prdctHanglName);
+    prdctTmpltCd.setValue(Link.prdctTmpltCd);
+    prdctSerno.setValue(Link.prdctNo);
+    inhabBzno.focus();
+};
+
+//function pwd_OnKillFocus()
+//{
+//	if (pwd.Data == "4949")
+//	{
+//		pwdconfirm.Data = "사용가능 비밀번호";
+//	}
+//	else
+//	{
+//		pwdconfirm.Data = "사용불가 비밀번호 입니다";
+//	}
+//}
+//
+//
+//function atmUtznNo_OnKillFocus()
+//{
+//	if (atmUtznNo.Data == "4950")
+//	{
+//		atmUtznNoconfirm.Data = "사용가능 자동화기기 이용번호";
+//	}
+//	else
+//	{
+//		atmUtznNoconfirm.Data = "사용불가 자동화기기 이용번호";
+//	}
+//}
+
+
+scwin.pwd_OnKillFocus = function() {
+    if (pwd.getValue() != "4949") {
+        $c.iz.data.alert("주민번호 또는 사업자번호의 4자리와 비밀번호가 일치합니다.\n다른 번호를 사용 하십시요.", "비밀번호 오류");
+        pwd.setValue();
+        pwd.focus();
+    }
+};
+
+scwin.atmUtznNo_OnKillFocus = function() {
+    if (atmUtznNo.getValue() != "4950") {
+        $c.iz.data.alert("사용불가 자동화기기 이용번호 입니다.", "자동화기기 이용번호 오류");
+        atmUtznNo.setValue();
+        atmUtznNo.focus();
+    }
+};
+
+
+scwin.GROUP6_noresiDpostDtitmDstic_OnItemChanged = function(e) {
+    valnoresiDpostDtitmDstic.setValue(GROUP6_noresiDpostDtitmDstic.GetComboValue);
+};
+
+scwin.GROUP6_noresiFreeCrleMnrcvResn_OnItemChanged = function(e) {
+    valnoresiFreeCrleMnrcvResn.setValue(GROUP6_noresiFreeCrleMnrcvResn.GetComboValue);
+};
+
+scwin.apctDstcd_OnItemChanged = function(e) {
+    valapctDstcd.setValue(apctDstcd.GetComboValue);
+};
+
+scwin.GROUP1_newamt_OnKillFocus = function() {
+    if (GROUP1_newamt.getValue() != "") {
+        var amt1 = 0;
+        var amt2 = 0;
+        var amt3 = 0;
+        var ramt = 0;
+        var AccNewAmt = 0;
+        if (GROUP1_mrvamt1.getValue() == "") {
+            amt1 = 0;
+        } else {
+            amt1 = parseFloat(GROUP1_mrvamt1.getValue());
+        }
+        if (GROUP1_mrvamt2.getValue() == "") {
+            amt2 = 0;
+        } else {
+            amt2 = parseFloat(GROUP1_mrvamt2.getValue());
+        }
+        if (GROUP1_mrvamt3.getValue() == "") {
+            amt3 = 0;
+        } else {
+            amt3 = parseFloat(GROUP1_mrvamt3.getValue());
+        }
+        if (GROUP1_newamt.getValue() == "") {
+            AccNewAmt = 0;
+        } else {
+            AccNewAmt = parseFloat(GROUP1_newamt.getValue());
+        }
+
+        //		if (rtchkAmy.Data == "")
+        //		{
+        //			ramt = 0;
+        //		}
+        //		else
+        //		{
+        //			ramt = parseFloat(rtchkAmy.Data);
+        //		}
+        ramt = amt1 + amt2 + amt3 - AccNewAmt;
+        rtchkAmy.setValue(ramt);
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="요구불신규" meta_screenId="KHC00110000" customclass="Kes" style="background-color:rgb(255,255,255); width:755px; height:844px;" screentype="AType" meta_author="지용수" meata_date="2008/08/29 15:01:57" snaptogrid="1" gridstepx="4" gridstepy="4" gridshape="Line" screendivide="2" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:8px; width:744px; height:148px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox4" tabIndex="1" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox4" hierarchy="GroupBox4">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:4px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_prdctTmpltCd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="상품종류" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_prdctTmpltCd" hierarchy="Text_prdctTmpltCd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:4px; width:48px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctTmpltCd" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="true" class="req" keyLength="3" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="101563" fixspace="5" theme="Normal" index="0" items="001=보통예금;002=저축예금;003=기업자유;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.prdctTmpltCd_OnItemChanged" orgid="prdctTmpltCd" hierarchy="prdctTmpltCd" selectedIndex="0" ref="data:dma_KHC00110000.prdctTmpltCd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[보통예금]]></xf:label>
+							<xf:value><![CDATA[001]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[저축예금]]></xf:label>
+							<xf:value><![CDATA[002]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[기업자유]]></xf:label>
+							<xf:value><![CDATA[003]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:196px; top:4px; width:144px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctTmpltNm" tabIndex="3" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="prdctTmpltNm" hierarchy="prdctTmpltNm" ref="data:dma_KHC00110000.prdctTmpltNm"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:344px; top:4px; width:84px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:0;" id="btnprdct" tabIndex="4" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="상품조회" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" ev:onclick="scwin.btnprdct_OnClick" orgid="btnprdct" hierarchy="btnprdct">
+					<xf:label><![CDATA[상품조회]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:28px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_prdctSerno" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="세부상품종류" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_prdctSerno" hierarchy="Text_prdctSerno" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:28px; width:62px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctSerno" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="true" class="req" keyLength="5" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="108054" fixspace="5" theme="Normal" index="0" items="00001=일반기업자유;00002=건설회사통장;00003=공통명의통장;00004=피해보상이행통장;00005=KB기업종합통장;00006=KB사랑나눔통장;00007=KB우대기업자유;00008=사업자우대통장;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.prdctSerno_OnItemChanged" orgid="prdctSerno" hierarchy="prdctSerno" selectedIndex="0" ref="data:dma_KHC00110000.prdctSerno">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[일반기업자유]]></xf:label>
+							<xf:value><![CDATA[00001]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[건설회사통장]]></xf:label>
+							<xf:value><![CDATA[00002]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[공통명의통장]]></xf:label>
+							<xf:value><![CDATA[00003]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[피해보상이행통장]]></xf:label>
+							<xf:value><![CDATA[00004]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB기업종합통장]]></xf:label>
+							<xf:value><![CDATA[00005]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB사랑나눔통장]]></xf:label>
+							<xf:value><![CDATA[00006]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB우대기업자유]]></xf:label>
+							<xf:value><![CDATA[00007]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[사업자우대통장]]></xf:label>
+							<xf:value><![CDATA[00008]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:212px; top:28px; width:214px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctnm" tabIndex="7" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="999999999999999999999999999999" maxlength="30" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" invalidchars="a-z" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="prdctnm" hierarchy="prdctnm" ref="data:dma_KHC00110000.prdctnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:52px; width:119px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_inhabBzno" tabIndex="8" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="주민/사업자번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_inhabBzno" hierarchy="Text_inhabBzno" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:52px; width:102px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="inhabBzno" tabIndex="9" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="999999-9999999" maxlength="14" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="inhabBzno" hierarchy="inhabBzno" ref="data:dma_KHC00110000.inhabBzno"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:252px; top:52px; width:160px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:0;" id="Button5" tabIndex="10" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="고객주의의무등록조회" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button5" hierarchy="Button5">
+					<xf:label><![CDATA[고객주의의무등록조회]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:76px; width:56px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_custnm" tabIndex="11" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="고객명" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_custnm" hierarchy="Text_custnm" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:76px; width:214px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="custnm" tabIndex="12" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="30" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="custnm" hierarchy="custnm" ref="data:dma_KHC00110000.custnm"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:364px; top:76px; width:108px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="btnCusnmSch" tabIndex="13" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="중복고객조회" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" ev:onclick="scwin.btnCusnmSch_OnClick" orgid="btnCusnmSch" hierarchy="btnCusnmSch">
+					<xf:label><![CDATA[중복고객조회]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:100px; width:161px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_pwdNewYn" tabIndex="14" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비밀번호없이&amp;nbsp;신규여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_pwdNewYn" hierarchy="Text_pwdNewYn" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:172px; top:100px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="pwdNewYn" tabIndex="15" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:pwdNewYn_OnKillFocus;" orgid="pwdNewYn" hierarchy="pwdNewYn" ref="data:dma_KHC00110000.pwdNewYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:184px; top:100px; width:167px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc1" tabIndex="16" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="1:비밀번호없이&amp;nbsp;신규할때" image="없음" intemplate="0" 확장모드="0" orgid="Desc1" hierarchy="Desc1" escape="false" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:100px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_pwd" tabIndex="17" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비밀번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_pwd" hierarchy="Text_pwd" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:100px; width:32px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="pwd" tabIndex="18" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="****" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:pwd_OnKillFocus;" orgid="pwd" hierarchy="pwd" ref="data:dma_KHC00110000.pwd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:124px; width:140px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_atmUtznNo" tabIndex="19" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="자동화기기이용번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_atmUtznNo" hierarchy="Text_atmUtznNo" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:124px; width:32px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="atmUtznNo" tabIndex="20" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="****" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:atmUtznNo_OnKillFocus;" orgid="atmUtznNo" hierarchy="atmUtznNo" ref="data:dma_KHC00110000.atmUtznNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:124px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_custDesigNo" tabIndex="21" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="고객지정번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_custDesigNo" hierarchy="Text_custDesigNo" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:124px; width:60px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="custDesigNo" tabIndex="22" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="########" maxlength="8" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="custDesigNo" hierarchy="custDesigNo"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:568px; top:124px; width:107px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button17" tabIndex="23" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="가능번호조회" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button17" hierarchy="Button17">
+					<xf:label><![CDATA[가능번호조회]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:159px; width:744px; height:97px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox5" tabIndex="2" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox5" hierarchy="GroupBox5">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:20px; width:77px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP1_mrvamt1" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="수납금액1" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP1_mrvamt1" hierarchy="Text_GROUP1_mrvamt1" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:104px; top:20px; width:41px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mnrcvDstic1" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="true" class="req" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="100526" fixspace="5" theme="Normal" index="0" items="00=현금;09=대체;91=자기앞수표, 타행송금영수증;92=당좌수표, 약속어음;93=국공채(이표), 우표환증서, 국고수표;96=가계수표;98=조회필;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP1_mnrcvDstic1_OnItemChanged" orgid="GROUP1_mnrcvDstic1" hierarchy="GROUP1_mnrcvDstic1" selectedIndex="0" ref="data:dma_KHC00110000.GROUP1_mnrcvDstic1">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[09]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자기앞수표, 타행송금영수증]]></xf:label>
+							<xf:value><![CDATA[91]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[당좌수표, 약속어음]]></xf:label>
+							<xf:value><![CDATA[92]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국공채(이표), 우표환증서, 국고수표]]></xf:label>
+							<xf:value><![CDATA[93]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[가계수표]]></xf:label>
+							<xf:value><![CDATA[96]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[조회필]]></xf:label>
+							<xf:value><![CDATA[98]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:20px; width:165px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mrvamt1" tabIndex="3" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###,###" maxlength="23" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP1_mrvamt1_OnKillFocus;" orgid="GROUP1_mrvamt1" hierarchy="GROUP1_mrvamt1" ref="data:dma_KHC00110000.GROUP1_mrvamt1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:20px; width:77px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP1_mrvamt2" tabIndex="4" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="수납금액2" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP1_mrvamt2" hierarchy="Text_GROUP1_mrvamt2" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:459px; top:20px; width:41px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mnrcvDstic2" tabIndex="5" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="100526" fixspace="5" theme="Normal" index="0" items="00=현금;09=대체;91=자기앞수표, 타행송금영수증;92=당좌수표, 약속어음;93=국공채(이표), 우표환증서, 국고수표;96=가계수표;98=조회필;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP1_mnrcvDstic2_OnItemChanged" orgid="GROUP1_mnrcvDstic2" hierarchy="GROUP1_mnrcvDstic2" selectedIndex="0" ref="data:dma_KHC00110000.GROUP1_mnrcvDstic2">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[09]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자기앞수표, 타행송금영수증]]></xf:label>
+							<xf:value><![CDATA[91]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[당좌수표, 약속어음]]></xf:label>
+							<xf:value><![CDATA[92]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국공채(이표), 우표환증서, 국고수표]]></xf:label>
+							<xf:value><![CDATA[93]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[가계수표]]></xf:label>
+							<xf:value><![CDATA[96]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[조회필]]></xf:label>
+							<xf:value><![CDATA[98]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:20px; width:165px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mrvamt2" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###,###" maxlength="23" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP1_mrvamt2_OnKillFocus;" orgid="GROUP1_mrvamt2" hierarchy="GROUP1_mrvamt2" ref="data:dma_KHC00110000.GROUP1_mrvamt2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:44px; width:77px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP1_mrvamt3" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="수납금액3" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP1_mrvamt3" hierarchy="Text_GROUP1_mrvamt3" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:104px; top:44px; width:41px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mnrcvDstic3" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="100526" fixspace="5" theme="Normal" index="0" items="00=현금;09=대체;91=자기앞수표, 타행송금영수증;92=당좌수표, 약속어음;93=국공채(이표), 우표환증서, 국고수표;96=가계수표;98=조회필;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP1_mnrcvDstic3_OnItemChanged" orgid="GROUP1_mnrcvDstic3" hierarchy="GROUP1_mnrcvDstic3" selectedIndex="0" ref="data:dma_KHC00110000.GROUP1_mnrcvDstic3">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[현금]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[대체]]></xf:label>
+							<xf:value><![CDATA[09]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자기앞수표, 타행송금영수증]]></xf:label>
+							<xf:value><![CDATA[91]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[당좌수표, 약속어음]]></xf:label>
+							<xf:value><![CDATA[92]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국공채(이표), 우표환증서, 국고수표]]></xf:label>
+							<xf:value><![CDATA[93]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[가계수표]]></xf:label>
+							<xf:value><![CDATA[96]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[조회필]]></xf:label>
+							<xf:value><![CDATA[98]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:44px; width:165px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_mrvamt3" tabIndex="9" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###,###" maxlength="23" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP1_mrvamt3_OnKillFocus;" orgid="GROUP1_mrvamt3" hierarchy="GROUP1_mrvamt3" ref="data:dma_KHC00110000.GROUP1_mrvamt3"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:69px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP1_newamt" tabIndex="10" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="신규금액" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP1_newamt" hierarchy="Text_GROUP1_newamt" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:148px; top:69px; width:165px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP1_newamt" tabIndex="11" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###,###" maxlength="23" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP1_newamt_OnKillFocus;" orgid="GROUP1_newamt" hierarchy="GROUP1_newamt" ref="data:dma_KHC00110000.GROUP1_newamt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:69px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_rtchkAmy" tabIndex="12" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="회금금액" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_rtchkAmy" hierarchy="Text_rtchkAmy" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:69px; width:165px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="rtchkAmy" tabIndex="13" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###,###" maxlength="23" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="rtchkAmy" hierarchy="rtchkAmy" ref="data:dma_KHC00110000.rtchkAmy"/>
+				<w2:textbox id="title_GroupBox5" class="title_h2" label="입금&amp;nbsp;정보&amp;nbsp;내역" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:259px; width:744px; height:69px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox6" tabIndex="3" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox6" hierarchy="GroupBox6">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:21px; width:126px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP5_elctrBnkbkIssuDstc" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="전자통장발급구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP5_elctrBnkbkIssuDstc" hierarchy="Text_GROUP5_elctrBnkbkIssuDstc" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:21px; width:109px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP5_elctrBnkbkIssuDstc" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" fixspace="5" theme="Normal" index="0" items="1=일반창구용;2=VM용;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP5_elctrBnkbkIssuDstc_OnItemChanged" userData2=" onkillfocus:GROUP5_elctrBnkbkIssuDstc_OnKillFocus;" orgid="GROUP5_elctrBnkbkIssuDstc" hierarchy="GROUP5_elctrBnkbkIssuDstc" selectedIndex="0" ref="data:dma_KHC00110000.GROUP5_elctrBnkbkIssuDstc">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[일반창구용]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[VM용]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:21px; width:126px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP2_siseRegiDstcd" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="인감서명거래구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP2_siseRegiDstcd" hierarchy="Text_GROUP2_siseRegiDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:504px; top:21px; width:102px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_siseRegiDstcd" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="true" class="req" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="105185" fixspace="5" theme="Normal" index="0" items="0=해당무;1=인감;2=서명;3=인감+서명;4=PIN-PAD;" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP2_siseRegiDstcd" hierarchy="GROUP2_siseRegiDstcd" selectedIndex="0" ref="data:dma_KHC00110000.GROUP2_siseRegiDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[해당무]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[인감]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[서명]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[인감+서명]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[PIN-PAD]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:45px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_bnkbkdsgnDstcd" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="통장디자인" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_bnkbkdsgnDstcd" hierarchy="Text_bnkbkdsgnDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:45px; width:109px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="bnkbkdsgnDstcd" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" fixspace="5" theme="Normal" index="0" items="00=해당무;01=일반통장;02=KIDS통장;03=YOUTH통장;04=여성통장;05=VIP통장;" intemplate="0" 확장모드="0" appearance="minimal" orgid="bnkbkdsgnDstcd" hierarchy="bnkbkdsgnDstcd" selectedIndex="0" ref="data:dtm_component.bnkbkdsgnDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[해당무]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[일반통장]]></xf:label>
+							<xf:value><![CDATA[01]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KIDS통장]]></xf:label>
+							<xf:value><![CDATA[02]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[YOUTH통장]]></xf:label>
+							<xf:value><![CDATA[03]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[여성통장]]></xf:label>
+							<xf:value><![CDATA[04]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[VIP통장]]></xf:label>
+							<xf:value><![CDATA[05]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:45px; width:126px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_dpclssuncYn" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="직불카드발급여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_dpclssuncYn" hierarchy="Text_dpclssuncYn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:45px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="dpclssuncYn" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:dpclssuncYn_OnKillFocus;" orgid="dpclssuncYn" hierarchy="dpclssuncYn" ref="data:dma_KHC00110000.dpclssuncYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:520px; top:45px; width:69px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc5" tabIndex="9" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="(1:Y/0:N)" image="없음" intemplate="0" 확장모드="0" orgid="Desc5" hierarchy="Desc5" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox id="title_GroupBox6" class="title_h2" label="통장/카드&amp;nbsp;정보" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:332px; width:744px; height:69px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="4" id="GroupBox7" tabIndex="4" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="1" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox7" hierarchy="GroupBox7">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:21px; width:112px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP3_lvtpSavnYn" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="생계형저축여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP3_lvtpSavnYn" hierarchy="Text_GROUP3_lvtpSavnYn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:21px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP3_lvtpSavnYn" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP3_lvtpSavnYn" hierarchy="GROUP3_lvtpSavnYn" ref="data:dma_KHC00110000.GROUP3_lvtpSavnYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:164px; top:21px; width:69px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc3" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="(1:Y/0:N)" image="없음" intemplate="0" 확장모드="0" orgid="Desc3" hierarchy="Desc3" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:21px; width:168px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP3_lvtpSavnJoinTagetDstcd" tabIndex="4" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="생계형저축가입대상구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP3_lvtpSavnJoinTagetDstcd" hierarchy="Text_GROUP3_lvtpSavnJoinTagetDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:543px; top:21px; width:45px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP3_lvtpSavnJoinTagetDstcd" tabIndex="5" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="101508" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP3_lvtpSavnJoinTagetDstcd" hierarchy="GROUP3_lvtpSavnJoinTagetDstcd" ref="data:dma_KHC00110000.GROUP3_lvtpSavnJoinTagetDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:45px; width:140px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP3_lvtpSavnClam" tabIndex="6" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="생계형저축한도금액" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP3_lvtpSavnClam" hierarchy="Text_GROUP3_lvtpSavnClam" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:45px; width:137px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP3_lvtpSavnClam" tabIndex="7" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###,###,###,###,###" maxlength="19" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP3_lvtpSavnClam" hierarchy="GROUP3_lvtpSavnClam" ref="data:dma_KHC00110000.GROUP3_lvtpSavnClam"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:288px; top:45px; width:21px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button13" tabIndex="8" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="icon_file.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button13" hierarchy="Button13">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:textbox id="title_GroupBox7" class="title_h2" label="세금우대관련정보"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:404px; width:744px; height:67px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="5" id="GroupBox8" tabIndex="5" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="1" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox8" hierarchy="GroupBox8">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:19px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP4_nEGOAthorDstcd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="네고승인구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP4_nEGOAthorDstcd" hierarchy="Text_GROUP4_nEGOAthorDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:19px; width:102px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP4_nEGOAthorDstcd" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="100671" fixspace="5" theme="Normal" index="0" items="00=점포장;01=본부팀장;02=부행장;" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP4_nEGOAthorDstcd" hierarchy="GROUP4_nEGOAthorDstcd" selectedIndex="0" ref="data:dma_KHC00110000.GROUP4_nEGOAthorDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[점포장]]></xf:label>
+							<xf:value><![CDATA[00]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[본부팀장]]></xf:label>
+							<xf:value><![CDATA[01]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[부행장]]></xf:label>
+							<xf:value><![CDATA[02]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:19px; width:126px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP4_nEGOAthorIrtNo" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="네고승인금리번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP4_nEGOAthorIrtNo" hierarchy="Text_GROUP4_nEGOAthorIrtNo" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:19px; width:95px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP4_nEGOAthorIrtNo" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="#############" maxlength="13" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP4_nEGOAthorIrtNo" hierarchy="GROUP4_nEGOAthorIrtNo" ref="data:dma_KHC00110000.GROUP4_nEGOAthorIrtNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:43px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP4_aplyIrt" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="적용금리" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP4_aplyIrt" hierarchy="Text_GROUP4_aplyIrt" class="kb_MiddleLeft"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:104px; top:43px; width:58px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP4_aplyIrt" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###.##" maxlength="6" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" suffix="%" fixspace="5" multipattern="없음" validationtype="없음" decimallength="2" minussign="0" ninemode="1" currencysign="없음" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP4_aplyIrt" hierarchy="GROUP4_aplyIrt" ref="data:dma_KHC00110000.GROUP4_aplyIrt"/>
+					<w2:textbox id="" label="%" style="position:absolute; left:167px; top:43px"/>
+				</xf:group>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:168px; top:43px; width:175px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="Edit40" tabIndex="7" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" displayFormat="###.##" maxlength="6" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" prefix="최대입력가능금리" suffix="%" fixspace="5" multipattern="없음" validationtype="없음" decimallength="2" minussign="0" ninemode="1" insertcomma="1" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="Edit40" hierarchy="Edit40"/>
+					<w2:textbox id="" label="%" style="position:absolute; left:348px; top:43px"/>
+				</xf:group>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:43px; width:147px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP4_cstdCngpYn" tabIndex="8" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="Custody협의체결여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP4_cstdCngpYn" hierarchy="Text_GROUP4_cstdCngpYn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:521px; top:43px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP4_cstdCngpYn" tabIndex="9" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP4_cstdCngpYn" hierarchy="GROUP4_cstdCngpYn" ref="data:dma_KHC00110000.GROUP4_cstdCngpYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:536px; top:43px; width:69px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc4" tabIndex="10" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="(1:Y/0:N)" image="없음" intemplate="0" 확장모드="0" orgid="Desc4" hierarchy="Desc4" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox id="title_GroupBox8" class="title_h2" label="네고&amp;nbsp;금리&amp;nbsp;내역" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:477px; width:744px; height:67px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="6" id="GroupBox9" tabIndex="6" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox9" hierarchy="GroupBox9">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:19px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP2_solicEmpid" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="권유직원번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP2_solicEmpid" hierarchy="Text_GROUP2_solicEmpid" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:19px; width:53px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_solicEmpid" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" initValue="1234567" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_solicEmpid" hierarchy="GROUP2_solicEmpid" ref="data:dma_KHC00110000.GROUP2_solicEmpid"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:203px; top:19px; width:21px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button10" tabIndex="3" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="icon_file.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button10" hierarchy="Button10">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:226px; top:19px; width:74px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_solicEmpNm" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(10)" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" initValue="홍길동" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_solicEmpNm" hierarchy="GROUP2_solicEmpNm" ref="data:dma_KHC00110000.GROUP2_solicEmpNm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:19px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP2_solicBrncd" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="권유점번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP2_solicBrncd" hierarchy="Text_GROUP2_solicBrncd" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:19px; width:32px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_solicBrncd" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="true" class="req" predisppattern="0" initValue="0121" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_solicBrncd" hierarchy="GROUP2_solicBrncd" ref="data:dma_KHC00110000.GROUP2_solicBrncd"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:540px; top:19px; width:21px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button11" tabIndex="7" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="icon_file.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button11" hierarchy="Button11">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:564px; top:19px; width:144px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_solicBrnNm" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(20)" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" initValue="차세대IT개발부" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_solicBrnNm" hierarchy="GROUP2_solicBrnNm" ref="data:dma_KHC00110000.GROUP2_solicBrnNm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:43px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP2_cnselEmpid" tabIndex="9" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="상담직원번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP2_cnselEmpid" hierarchy="Text_GROUP2_cnselEmpid" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:43px; width:53px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_cnselEmpid" tabIndex="10" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" initValue="1234567" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_cnselEmpid" hierarchy="GROUP2_cnselEmpid" ref="data:dma_KHC00110000.GROUP2_cnselEmpid"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:202px; top:43px; width:21px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button12" tabIndex="11" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="icon_file.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button12" hierarchy="Button12">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:226px; top:43px; width:74px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_cnselEmpNm" tabIndex="12" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(10)" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" initValue="홍길동" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_cnselEmpNm" hierarchy="GROUP2_cnselEmpNm" ref="data:dma_KHC00110000.GROUP2_cnselEmpNm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:43px; width:175px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP2_cnfrmDocFactorYn" tabIndex="13" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="개설확인서&amp;nbsp;인자필요여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP2_cnfrmDocFactorYn" hierarchy="Text_GROUP2_cnfrmDocFactorYn" escape="false" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:552px; top:43px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP2_cnfrmDocFactorYn" tabIndex="14" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP2_cnfrmDocFactorYn" hierarchy="GROUP2_cnfrmDocFactorYn" ref="data:dma_KHC00110000.GROUP2_cnfrmDocFactorYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:568px; top:43px; width:69px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc2" tabIndex="15" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="(1:Y/0:N)" image="없음" intemplate="0" 확장모드="0" orgid="Desc2" hierarchy="Desc2" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox id="title_GroupBox9" class="title_h2" label="직원&amp;nbsp;관련&amp;nbsp;정보" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:546px; width:744px; height:118px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="7" id="GroupBox10" tabIndex="7" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox10" hierarchy="GroupBox10">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:20px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_noresiDstcd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비거주자구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_noresiDstcd" hierarchy="Text_GROUP6_noresiDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:20px; width:34px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_noresiDstcd" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="106128" fixspace="5" theme="Normal" index="0" items="0=일반(외국인거주자);1=외국인 비거주자(기타);3=국민인 비거주자;4=외국인 비거주자(주한미국인, 주한외교관);" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP6_noresiDstcd_OnItemChanged" orgid="GROUP6_noresiDstcd" hierarchy="GROUP6_noresiDstcd" selectedIndex="0" ref="data:dma_KHC00110000.GROUP6_noresiDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[일반(외국인거주자)]]></xf:label>
+							<xf:value><![CDATA[0]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[외국인 비거주자(기타)]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[국민인 비거주자]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[외국인 비거주자(주한미국인, 주한외교관)]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:184px; top:20px; width:180px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="valnoresiDstcd" tabIndex="3" tabstop="1" enterstop="1" autosize="0" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(100)" maxlength="100" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="valnoresiDstcd" hierarchy="valnoresiDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:20px; width:168px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_noresiDpostDtitmDstic" tabIndex="4" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비거주자예금세과목구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_noresiDpostDtitmDstic" hierarchy="Text_GROUP6_noresiDpostDtitmDstic" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:543px; top:20px; width:34px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_noresiDpostDtitmDstic" tabIndex="5" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="106139" fixspace="5" theme="Normal" index="0" items="1=요구불 주식 투자용;2=요구불 채권 투자용;3=요구불 원화채권 발행전용;4=요구불 일반 거주주자 원화예금;5=저축성 주식 투자용;6=저축성 원화채권 발행 전용;7=저축성 일반비거주자 원화예금;8=비거주자자유원예금;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP6_noresiDpostDtitmDstic_OnItemChanged" orgid="GROUP6_noresiDpostDtitmDstic" hierarchy="GROUP6_noresiDpostDtitmDstic" selectedIndex="0" ref="data:dma_KHC00110000.GROUP6_noresiDpostDtitmDstic">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[요구불 주식 투자용]]></xf:label>
+							<xf:value><![CDATA[1]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[요구불 채권 투자용]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[요구불 원화채권 발행전용]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[요구불 일반 거주주자 원화예금]]></xf:label>
+							<xf:value><![CDATA[4]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[저축성 주식 투자용]]></xf:label>
+							<xf:value><![CDATA[5]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[저축성 원화채권 발행 전용]]></xf:label>
+							<xf:value><![CDATA[6]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[저축성 일반비거주자 원화예금]]></xf:label>
+							<xf:value><![CDATA[7]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[비거주자자유원예금]]></xf:label>
+							<xf:value><![CDATA[8]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:581px; top:20px; width:160px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="valnoresiDpostDtitmDstic" tabIndex="6" tabstop="1" enterstop="1" autosize="0" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(100)" maxlength="100" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="valnoresiDpostDtitmDstic" hierarchy="valnoresiDpostDtitmDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:46px; width:168px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_noresiFreeCrleMnrcvResn" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비거주자자유원입금사유" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_noresiFreeCrleMnrcvResn" hierarchy="Text_GROUP6_noresiFreeCrleMnrcvResn" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:180px; top:46px; width:41px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_noresiFreeCrleMnrcvResn" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" fixspace="5" theme="Normal" index="0" items="11=국외에서 송금(휴대반입 포함);12=본인명의 대외계정에서 이체;13=본인명의 자유원계정,투자번용비거주자 원화계정 및 비거주자원환신탁계정에서의 이체;14=무역거래 관련 입금(외국인거주자 제외);15=무역외거래 관련 입금(외국인거주자 제외);16=자본거래관련 입금;17=원화차입금 입금;18=원화차입금 회수;99=기타;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.GROUP6_noresiFreeCrleMnrcvResn_OnItemChanged" orgid="GROUP6_noresiFreeCrleMnrcvResn" hierarchy="GROUP6_noresiFreeCrleMnrcvResn" selectedIndex="0" ref="data:dma_KHC00110000.GROUP6_noresiFreeCrleMnrcvResn">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[국외에서 송금(휴대반입 포함)]]></xf:label>
+							<xf:value><![CDATA[11]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[본인명의 대외계정에서 이체]]></xf:label>
+							<xf:value><![CDATA[12]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[본인명의 자유원계정,투자번용비거주자 원화계정 및 비거주자원환신탁계정에서의 이체]]></xf:label>
+							<xf:value><![CDATA[13]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[무역거래 관련 입금(외국인거주자 제외)]]></xf:label>
+							<xf:value><![CDATA[14]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[무역외거래 관련 입금(외국인거주자 제외)]]></xf:label>
+							<xf:value><![CDATA[15]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[자본거래관련 입금]]></xf:label>
+							<xf:value><![CDATA[16]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[원화차입금 입금]]></xf:label>
+							<xf:value><![CDATA[17]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[원화차입금 회수]]></xf:label>
+							<xf:value><![CDATA[18]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[기타]]></xf:label>
+							<xf:value><![CDATA[99]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:224px; top:46px; width:210px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="valnoresiFreeCrleMnrcvResn" tabIndex="9" tabstop="1" enterstop="1" autosize="0" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(100)" maxlength="100" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="valnoresiFreeCrleMnrcvResn" hierarchy="valnoresiFreeCrleMnrcvResn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:70px; width:140px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_apctDstcd" tabIndex="10" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="당선통장가입자구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_apctDstcd" hierarchy="Text_apctDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:146px; top:70px; width:34px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="apctDstcd" tabIndex="11" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="value" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" fixspace="5" theme="Normal" index="0" items="8=당선통장기초단체장;9=당선통장광역단체장;" intemplate="0" 확장모드="0" appearance="minimal" ev:onchange="scwin.apctDstcd_OnItemChanged" orgid="apctDstcd" hierarchy="apctDstcd" selectedIndex="0" ref="data:dma_KHC00110000.apctDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[당선통장기초단체장]]></xf:label>
+							<xf:value><![CDATA[8]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[당선통장광역단체장]]></xf:label>
+							<xf:value><![CDATA[9]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</w2:kb_selectbox>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:184px; top:70px; width:180px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="valapctDstcd" tabIndex="12" tabstop="1" enterstop="1" autosize="0" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999" maxlength="100" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="valapctDstcd" hierarchy="valapctDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:70px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_jntNmnlYn" tabIndex="13" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="공동명의여부" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_jntNmnlYn" hierarchy="Text_GROUP6_jntNmnlYn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:70px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_jntNmnlYn" tabIndex="14" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP6_jntNmnlYn" hierarchy="GROUP6_jntNmnlYn" ref="data:dma_KHC00110000.GROUP6_jntNmnlYn"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:520px; top:70px; width:69px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc6" tabIndex="15" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="(1:Y/0:N)" image="없음" intemplate="0" 확장모드="0" orgid="Desc6" hierarchy="Desc6" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:94px; width:56px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_idtrek" tabIndex="16" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="기산일" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_idtrek" hierarchy="Text_GROUP6_idtrek" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:146px; top:94px; width:74px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_idtrek" tabIndex="17" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP6_idtrek_OnKillFocus;" orgid="GROUP6_idtrek" hierarchy="GROUP6_idtrek" displayFormat="yyyy/MM/dd" ref="data:dma_KHC00110000.GROUP6_idtrek"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:94px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP6_salryTrsaccDte" tabIndex="18" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="급여이체일" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP6_salryTrsaccDte" hierarchy="Text_GROUP6_salryTrsaccDte" class="kb_MiddleLeft"/>
+				<xf:group id="" style="">
+					<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:94px; width:37px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP6_salryTrsaccDte" tabIndex="19" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="##" maxlength="2" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="1" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" suffix="일" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" userData2=" onkillfocus:GROUP6_salryTrsaccDte_OnKillFocus;" orgid="GROUP6_salryTrsaccDte" hierarchy="GROUP6_salryTrsaccDte" ref="data:dma_KHC00110000.GROUP6_salryTrsaccDte"/>
+					<w2:textbox id="" label="일" style="position:absolute; left:546px; top:94px"/>
+				</xf:group>
+				<w2:textbox id="title_GroupBox10" class="title_h2" label="기&amp;nbsp;&amp;nbsp;타" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:667px; width:237px; height:16px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="8" id="GroupBox14" tabIndex="8" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox14" hierarchy="GroupBox14">
+				<w2:textbox id="title_GroupBox14" class="title_h2" label="고객주의의무제도&amp;nbsp;추가&amp;nbsp;입력사항" escape="false"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:682px; width:744px; height:102px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="9" id="GroupBox11" tabIndex="9" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="1" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox11" hierarchy="GroupBox11">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:5px; width:154px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP7_cDDSupplCnfrm" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="고객주의의무추가확인" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP7_cDDSupplCnfrm" hierarchy="Text_GROUP7_cDDSupplCnfrm" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:164px; top:5px; width:52px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP7_cDDSupplCnfrm" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="0" datasource="0" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP7_cDDSupplCnfrm" hierarchy="GROUP7_cDDSupplCnfrm" ref="data:dma_KHC00110000.GROUP7_cDDSupplCnfrm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:372px; top:5px; width:126px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP7_finacToDstcd" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="금융거래목적구분" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP7_finacToDstcd" hierarchy="Text_GROUP7_finacToDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:504px; top:5px; width:52px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP7_finacToDstcd" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="0" datasource="0" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP7_finacToDstcd" hierarchy="GROUP7_finacToDstcd" ref="data:dma_KHC00110000.GROUP7_finacToDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:29px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP7_EtcResn" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="기타사유" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP7_EtcResn" hierarchy="Text_GROUP7_EtcResn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:29px; width:284px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP7_EtcResn" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(40)" maxlength="40" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP7_EtcResn" hierarchy="GROUP7_EtcResn" ref="data:dma_KHC00110000.GROUP7_EtcResn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:7px; top:53px; width:112px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP7_prxyCno" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="대리인고객번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP7_prxyCno" hierarchy="Text_GROUP7_prxyCno" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:53px; width:109px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP7_prxyCno" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="###############" maxlength="15" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP7_prxyCno" hierarchy="GROUP7_prxyCno" ref="data:dma_KHC00110000.GROUP7_prxyCno"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:260px; top:53px; width:216px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button14" tabIndex="9" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="고객(대리인)주의의무등록조회" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button14" hierarchy="Button14">
+					<xf:label><![CDATA[고객(대리인)주의의무등록조회]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:77px; width:182px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP7_fndsSourcDstcd" tabIndex="10" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="실제당사자여부(자금출처)" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP7_fndsSourcDstcd" hierarchy="Text_GROUP7_fndsSourcDstcd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:193px; top:77px; width:45px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP7_fndsSourcDstcd" tabIndex="11" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="1" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="GROUP7_fndsSourcDstcd" hierarchy="GROUP7_fndsSourcDstcd" ref="data:dma_KHC00110000.GROUP7_fndsSourcDstcd"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:787px; width:744px; height:29px; background-color:rgb(243,243,239); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="10" id="GroupBox12" tabIndex="10" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox12" hierarchy="GroupBox12">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:5px; width:70px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP8_NonOpbrn" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="비개설점" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP8_NonOpbrn" hierarchy="Text_GROUP8_NonOpbrn" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:146px; top:5px; width:32px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP8_NonOpbrn" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP8_NonOpbrn" hierarchy="GROUP8_NonOpbrn" ref="data:dma_KHC00110000.GROUP8_NonOpbrn"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:180px; top:5px; width:21px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button15" tabIndex="3" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" showimage="1" imagealign="MiddleCenter" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="icon_file.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button15" hierarchy="Button15">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:204px; top:5px; width:74px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP8_NonOpbrnNm" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" editFormat="H(10)" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP8_NonOpbrnNm" hierarchy="GROUP8_NonOpbrnNm" ref="data:dma_KHC00110000.GROUP8_NonOpbrnNm"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:280px; top:5px; width:83px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc8" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="취소시&amp;nbsp;사용" image="없음" intemplate="0" 확장모드="0" orgid="Desc8" hierarchy="Desc8" escape="false" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:368px; top:5px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_GROUP8_acnSerno" tabIndex="6" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="계좌일련번호" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_GROUP8_acnSerno" hierarchy="Text_GROUP8_acnSerno" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:504px; top:5px; width:60px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="GROUP8_acnSerno" tabIndex="7" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" dataType="number" pinpad="아니오" msread="0" allowChar="0-9" validateOnInput="true" displayFormat="########" maxlength="8" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="GROUP8_acnSerno" hierarchy="GROUP8_acnSerno" ref="data:dma_KHC00110000.GROUP8_acnSerno"/>
+				<w2:textbox ctype="Desc" style="position:absolute; left:568px; top:5px; width:76px; height:21px; background-color:rgb(255,255,255); align:middleleft; text-align:middleleft; border없음; font-size:10pt; letter-spacing:0; font-weight:400;" id="Desc9" tabIndex="8" tabstop="0" enterstop="0" autosize="1" container="0" disabled="false" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" label="취소시사용" image="없음" intemplate="0" 확장모드="0" orgid="Desc9" hierarchy="Desc9" class="kb_txt_brown kb_MiddleLeft kb_txt_purple"/>
+			</xf:group>
+			<xf:trigger ctype="Button" style="position:absolute; left:8px; top:820px; width:116px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button18" tabIndex="11" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="금융IC카드신규" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button18" hierarchy="Button18">
+				<xf:label><![CDATA[금융IC카드신규]]></xf:label>
+			</xf:trigger>
+			<xf:trigger ctype="Button" style="position:absolute; left:128px; top:820px; width:104px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button19" tabIndex="12" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="직불카드발급" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button19" hierarchy="Button19">
+				<xf:label><![CDATA[직불카드발급]]></xf:label>
+			</xf:trigger>
+			<xf:trigger ctype="Button" style="position:absolute; left:236px; top:820px; width:144px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button20" tabIndex="13" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="계좌간자동이체등록" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button20" hierarchy="Button20">
+				<xf:label><![CDATA[계좌간자동이체등록]]></xf:label>
+			</xf:trigger>
+			<xf:trigger ctype="Button" style="position:absolute; left:384px; top:820px; width:76px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button21" tabIndex="14" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="고객등록" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button21" hierarchy="Button21">
+				<xf:label><![CDATA[고객등록]]></xf:label>
+			</xf:trigger>
+			<xf:trigger ctype="Button" style="position:absolute; left:464px; top:820px; width:128px; height:21px; background- color:rgb(0,0,0); align:middleright; text-align:middleright; font-size:10pt; letter-spacing:0; font-weight:400;" id="Button22" tabIndex="15" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" text="고객주의의무등록" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" imagebutton="0" showfocusrect="1" gradientstyle="세로2" gradientendcolor="12117744" theme="Normal" enableimage="Screen_btnBullet.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" orgid="Button22" hierarchy="Button22">
+				<xf:label><![CDATA[고객주의의무등록]]></xf:label>
+			</xf:trigger>
+			<xf:group ctype="GroupBox" style="position:absolute; left:19px; top:888px; width:238px; height:125px; background-color:rgb(243,243,239); color:rgb(0,0,0); display:none; align:left; font-size:10pt; letter-spacing:0;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="16" id="GroupBox13" tabIndex="16" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" paper="0" apperance="Tab" transparent="0" headbackcolor="11982045" dynamicmove="0" image="T_O_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox13" hierarchy="GroupBox13">
+				<w2:textbox ctype="Text" style="position:absolute; left:22px; top:18px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_prdctLagClsfiCd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="상품대분류" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_prdctLagClsfiCd" hierarchy="Text_prdctLagClsfiCd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:160px; top:18px; width:52px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctLagClsfiCd" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="101539" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="prdctLagClsfiCd" hierarchy="prdctLagClsfiCd" ref="data:dma_KHC00110000.prdctLagClsfiCd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:22px; top:43px; width:84px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_prdctMedmClsfiCd" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="상품중분류" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_prdctMedmClsfiCd" hierarchy="Text_prdctMedmClsfiCd" class="kb_MiddleLeft"/>
+				<w2:kb_selectbox ctype="Combo" style="position:absolute; left:160px; top:43px; width:52px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="prdctMedmClsfiCd" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" mandatory="false" keyLength="2" maxdropdownitems="10" dropdownstyle="DropDown" senddatatype="Key" displayMode="Key+Value(desc)" inittype="Index" maxinputlength="0" autoskip="1" autodup="1" charactercasing="0" sorted="0" keyvalidation="1" datasource="0" instancefile="101559" fixspace="5" theme="Normal" index="0" intemplate="0" 확장모드="0" appearance="minimal" orgid="prdctMedmClsfiCd" hierarchy="prdctMedmClsfiCd" ref="data:dma_KHC00110000.prdctMedmClsfiCd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:20px; top:70px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_taxpreflinfo" tabIndex="5" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="세금우대정보" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_taxpreflinfo" hierarchy="Text_taxpreflinfo" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:160px; top:70px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="taxpreflinfo" tabIndex="6" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="taxpreflinfo" hierarchy="taxpreflinfo" ref="data:dma_KHC00110000.taxpreflinfo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:20px; top:94px; width:98px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:10.5pt; letter-spacing:0; font-weight:400;" id="Text_nEGOlrtinfo" tabIndex="7" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="5" linespace="2" label="네고금리정보" image="S_O_bullet.gif" intemplate="0" 확장모드="0" orgid="Text_nEGOlrtinfo" hierarchy="Text_nEGOlrtinfo" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:160px; top:94px; width:11px; height:21px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; font-size:10pt; letter-spacing:0; font-weight:400;" id="nEGOlrtinfo" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="0" rightalign="0" readOnly="false" selectall="1" ksc5601="0" autoDecimalPoint="false" senddecimalpoint="0" mandatory="false" predisppattern="0" autoskip="1" autodup="1" multiline="0" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" validationtype="없음" decimallength="0" minussign="0" ninemode="0" currencysign="없음" insertcomma="0" showcalendarbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" intemplate="0" 확장모드="0" orgid="nEGOlrtinfo" hierarchy="nEGOlrtinfo" ref="data:dma_KHC00110000.nEGOlrtinfo"/>
+				<w2:textbox id="title_GroupBox13" class="title_h2" label="그룹박스"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

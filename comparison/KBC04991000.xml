@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KBC04991000.scn"  meta_screenId="KBC04991000" meta_screenName="신용카드포인트관련계정입출내역조회" meta_desc="" meta_author="">
+		<w2:type craft="true" craftSrc="/xml/KBC04991000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KBC0499143" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KBC0499143_INPUT":{"@id":"dma_KBC0499143_INPUT","brnCd":"brnCd","startAcctgYmd":"startAcctgYmd","endAcctgYmd":"endAcctgYmd"}},"target":{"dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid__dataBook":{"@id":"dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid__dataBook","brnCd":"brnCd","acctgYmd":"acctgYmd","acctgBaseDstcd":"acctgBaseDstcd","acctgSlipDstcd":"acctgSlipDstcd","cardTiaccCd":"cardTiaccCd","cardTiaccName":"cardTiaccName","detcrdsdDstcd":"detcrdsdDstcd","tranAmt":"tranAmt","cardELedgrDstcd":"cardELedgrDstcd","cardEPointDstcd":"cardEPointDstcd","cardStndSumryCd":"cardStndSumryCd","cardSumryCtnt":"cardSumryCtnt","balStndSumryCd":"balStndSumryCd","balSumryCtnt":"balSumryCtnt","cardTPrcssDstcd":"cardTPrcssDstcd","jrnzSerno":"jrnzSerno","jrnzDgre":"jrnzDgre","cardInotTranNo":"cardInotTranNo","cardBndDbsDstcd":"cardBndDbsDstcd","bndNth":"bndNth","prcssCtnt":"prcssCtnt"},"dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid1__dataBook1":{"@id":"dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid1__dataBook1","brnCd1":"brnCd1","baseYmd":"baseYmd","acctgBaseDstcd1":"acctgBaseDstcd1","cardTiaccCd1":"cardTiaccCd1","cardTiaccName1":"cardTiaccName1","balStndSumryCd1":"balStndSumryCd1","balSumryCtnt1":"balSumryCtnt1","prdayBal":"prdayBal","detsdAmt":"detsdAmt","crsdAmt":"crsdAmt","bal":"bal"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KBC0499143_INPUT" TranClass="MCI" SvcCode="KBC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="brnCd" length="4" CtrlId="brnCd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="startAcctgYmd" length="8" CtrlId="startAcctgYmd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="endAcctgYmd" length="8" CtrlId="endAcctgYmd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid__dataBook" saveRemovedData="true" CtrlId="dataBook" TranClass="MCI" SvcCode="KBC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="brnCd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="acctgYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="acctgBaseDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="acctgSlipDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardTiaccCd" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardTiaccName" length="52" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="detcrdsdDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="tranAmt" length="16" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardELedgrDstcd" length="3" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardEPointDstcd" length="2" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardStndSumryCd" length="3" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardSumryCtnt" length="60" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="balStndSumryCd" length="3" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="balSumryCtnt" length="60" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardTPrcssDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="jrnzSerno" length="6" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="jrnzDgre" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardInotTranNo" length="9" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardBndDbsDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="bndNth" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="prcssCtnt" length="182" CtrlId="dataBook" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="dlt_KBC0499143_OUTPUT_screen___KBC04991000_grid1__dataBook1" saveRemovedData="true" CtrlId="dataBook1" TranClass="MCI" SvcCode="KBC" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="brnCd1" length="4" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="baseYmd" length="8" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="acctgBaseDstcd1" length="1" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardTiaccCd1" length="10" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="cardTiaccName1" length="52" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="balStndSumryCd1" length="3" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="balSumryCtnt1" length="60" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="prdayBal" length="16" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="detsdAmt" length="16" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="crsdAmt" length="16" CtrlId="dataBook1" Type="Multi"/>
+						<w2:column dataType="text" name="" id="bal" length="16" CtrlId="dataBook1" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KBC04991000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[실행]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KBC04991000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="brnCd" length="4" CtrlId="brnCd"/>
+						<w2:key dataType="text" name="" id="startAcctgYmd" length="8" CtrlId="startAcctgYmd"/>
+						<w2:key dataType="text" name="" id="endAcctgYmd" length="8" CtrlId="endAcctgYmd"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataBook" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="AutoSeq"/>
+						<w2:column dataType="text" name="" id="brnCd_01"/>
+						<w2:column dataType="text" name="" id="acctgYmd"/>
+						<w2:column dataType="text" name="" id="acctgBaseDstcd"/>
+						<w2:column dataType="text" name="" id="acctgSlipDstcd"/>
+						<w2:column dataType="text" name="" id="cardTiaccCd"/>
+						<w2:column dataType="text" name="" id="cardTiaccName"/>
+						<w2:column dataType="text" name="" id="detcrdsdDstcd"/>
+						<w2:column dataType="text" name="" id="tranAmt"/>
+						<w2:column dataType="text" name="" id="cardELedgrDstcd"/>
+						<w2:column dataType="text" name="" id="cardEPointDstcd"/>
+						<w2:column dataType="text" name="" id="cardStndSumryCd"/>
+						<w2:column dataType="text" name="" id="cardSumryCtnt"/>
+						<w2:column dataType="text" name="" id="balStndSumryCd"/>
+						<w2:column dataType="text" name="" id="balSumryCtnt"/>
+						<w2:column dataType="text" name="" id="cardTPrcssDstcd"/>
+						<w2:column dataType="text" name="" id="jrnzSerno"/>
+						<w2:column dataType="text" name="" id="jrnzDgre"/>
+						<w2:column dataType="text" name="" id="cardInotTranNo"/>
+						<w2:column dataType="text" name="" id="cardBndDbsDstcd"/>
+						<w2:column dataType="text" name="" id="bndNth"/>
+						<w2:column dataType="text" name="" id="prcssCtnt"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="dlt_dataBook1" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="AutoSeq_01"/>
+						<w2:column dataType="text" name="" id="brnCd1"/>
+						<w2:column dataType="text" name="" id="baseYmd"/>
+						<w2:column dataType="text" name="" id="acctgBaseDstcd1"/>
+						<w2:column dataType="text" name="" id="cardTiaccCd1"/>
+						<w2:column dataType="text" name="" id="cardTiaccName1"/>
+						<w2:column dataType="text" name="" id="balStndSumryCd1"/>
+						<w2:column dataType="text" name="" id="balSumryCtnt1"/>
+						<w2:column dataType="text" name="" id="prdayBal"/>
+						<w2:column dataType="text" name="" id="detsdAmt"/>
+						<w2:column dataType="text" name="" id="crsdAmt"/>
+						<w2:column dataType="text" name="" id="bal"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+scwin.Button1_OnClick = function(e) {
+    //Send Data - 부점코드(brnCd) -> 부점코드(brncd)
+    //Get Data - 부점코드(brncd) -> 부점코드(brnCd)
+    //           부점명(brnName) -> 부점명(brnName)
+    Link.brncd = brnCd.getValue();
+    $c.iz.screen.popup("KJI04811000", "DATALINK");
+    brnCd.setValue(Link.brncd);
+    brnName.setValue(Link.brnName);
+};
+
+scwin.brnCd_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    if (brnCd.getValue() == "9999") {
+        brnName.setValue("전체총괄점");
+    } else {
+        $c.com.getCommonBrnName(brnCd, brnName);
+    }
+};
+
+scwin.OnInitScreen = function() {
+    //여기에 구현코드를 삽입하세요.
+    //일자
+    startAcctgYmd.setValue($c.user.getUserProfile('bfBzoprYmd'));
+    endAcctgYmd.setValue($c.user.getUserProfile('bfBzoprYmd'));
+    brnCd.setValue('9999');
+};
+
+
+scwin.startAcctgYmd_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    endAcctgYmd.setValue(startAcctgYmd.getValue());
+};
+
+
+
+
+scwin.OnSendKey = async function() {
+    //MCI거래실행 : [KBC0499143]
+    //연계항목 : 부점코드,시작회계년월일,종료회계년월일
+
+    dataBook.removeAll();
+    dataBook1.removeAll();
+    $c.iz.tran.setTranID("KBC0499143");
+    await $c.iz.tran.ASend();
+};
+
+scwin.Button2_OnClick = function(e) {
+    //grid data를 엑셀파일로 내려받기
+
+    if (dataBook.getTotalRow() != 0) {
+        dataBook.ExcelExport(-1);
+    }
+};
+
+scwin.Button3_OnClick = function(e) {
+    //grid1 data를 엑셀파일로 내려받기
+
+    if (dataBook1.getTotalRow() != 0) {
+        dataBook1.ExcelExport(-1);
+    }
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="신용카드포인트관련계정입출내역조회" meta_screenId="KBC04991000" scncall="0461991" customclass="Kes" style="background-color:rgb(250,250,250); width:945px; height:545px;" screentype="BType" meta_author="KB-386C2174B653" meata_date="2010/07/16 14:15:58" savezorder="0" snaptogrid="1" gridstepx="4" gridstepy="4" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:4px; width:932px; height:68px; background-color:rgb(238,238,238); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" adjusttheme="1" apperance="Tab" transparent="0" headbackcolor="11636610" dynamicmove="0" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="GroupBox1">
+				<w2:textbox ctype="Text" style="position:absolute; left:8px; top:20px; width:54px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_brnCd" tabIndex="1" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="부점코드" image="없음" intemplate="0" 확장모드="0" orgid="Text_brnCd" hierarchy="Text_brnCd" class="kb_MiddleLeft"/>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:132px; top:20px; width:28px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="brnCd" indicator="원장구분" tabIndex="2" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="true" class="req" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" ev:onviewchange="scwin.brnCd_OnValidate" orgid="brnCd" hierarchy="brnCd" ref="data:dma_KBC04991000.brnCd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:436px; top:20px; width:66px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text_startAcctgYmd" tabIndex="3" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="회계년월일" image="없음" intemplate="0" 확장모드="0" orgid="Text_startAcctgYmd" hierarchy="Text_startAcctgYmd" class="kb_MiddleLeft"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:560px; top:20px; width:88px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="startAcctgYmd" indicator="시작회계년월일" tabIndex="4" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="true" class="req" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" woncurrency="0" insertcomma="0" showcalendarbutton="1" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" ev:onviewchange="scwin.startAcctgYmd_OnValidate" orgid="startAcctgYmd" hierarchy="startAcctgYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KBC04991000.startAcctgYmd"/>
+				<w2:inputCalendar ctype="Edit" style="position:absolute; left:664px; top:20px; width:88px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="endAcctgYmd" indicator="종료회계년월일" tabIndex="5" tabstop="1" enterstop="1" autosize="1" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" pinpad="아니오" msread="0" maxlength="10" minlength="0" encrypt="0" afterinput="0" imeMode="전자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="true" class="req" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" woncurrency="0" insertcomma="0" showcalendarbutton="1" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" voicetype="비밀번호:1" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="endAcctgYmd" hierarchy="endAcctgYmd" displayFormat="yyyy/MM/dd" ref="data:dma_KBC04991000.endAcctgYmd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:648px; top:20px; width:12px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:middleleft; text-align:middleleft; border없음; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="Text4" tabIndex="6" tabstop="0" enterstop="0" autosize="1" container="0" enable="1" visible="1" paper="0" adjusttheme="1" transparent="1" ticker="0" tickeinterval="10" blinkinterval="0" imagealign="MiddleLeft" imagespace="0" linespace="-5" overlapped="0" label="~" image="없음" intemplate="0" 확장모드="0" orgid="Text4" hierarchy="Text4" class="kb_MiddleLeft"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:164px; top:20px; width:20px; height:20px; background-color:rgb(250,250,250);  align:middlecenter; text-align:middlecenter; font-size:8.5pt; letter-spacing:0; font-weight:700;" id="Button1" tabIndex="7" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" showimage="1" imagealign="MiddleCenter" imagefit="1" toggle="0" showfocusrect="1" gradientstyle="없음" gradientendcolor="12117744" theme="Normal" enableimage="icon_search.gif" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_ico_search" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="Button1">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:kb_input ctype="Edit" style="position:absolute; left:192px; top:20px; width:124px; height:20px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; borderline; text-align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="brnName" indicator="부점명" tabIndex="8" tabstop="1" enterstop="1" autosize="1" container="0" disabled="true" visible="1" paper="0" adjusttheme="1" dataType="text" pinpad="아니오" msread="0" allowChar="가-힣" validateOnInput="true" maxlength="20" minlength="0" encrypt="0" afterinput="0" imeMode="반자" senddatatype="0" charcasing="1" readOnly="false" recvseteventenable="0" selectall="1" ksc5601="0" checkebcdic="0" autoDecimalPoint="false" senddecimalpoint="1" mandatory="false" semirequired="0" predisppattern="0" autoskip="1" autodup="1" multiline="0" wordbreak="1" wantreturn="0" autohscroll="0" autovscroll="0" horizontalscroll="0" verticalscroll="0" multirow="5" multicol="12" showrowcounr="0" checkcolcount="0" checkrowcount="0" border="Line" unlimited="0" index="0" fixspace="5" multipattern="없음" MPatternMaskingLen="0" validationtype="없음" decimallength="0" ninemode="0" currencysign="없음" woncurrency="0" insertcomma="0" showcalendarbutton="0" showeraserbutton="0" noprint="0" relativeprint="0" halfpitch="0" repeatprint="0" hyungbae="0" postprocessing="배출안함" rightalign="0" intemplate="0" 확장모드="0" orgid="brnName" hierarchy="brnName"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:868px; top:20px; width:62px; height:20px;  color:rgb(255,255,255); align:middlecenter; text-align:middlecenter; font-size:8.5pt; letter-spacing:0; font-weight:700;" id="Button2" tabIndex="9" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" showfocusrect="1" gradientstyle="세로" gradientendcolor="11768958" theme="Normal" text="Excel" enableimage="없음" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="Button2">
+					<xf:label><![CDATA[Excel]]></xf:label>
+				</xf:trigger>
+				<w2:textbox id="title_GroupBox1" class="title_h2" label="신용카드포인트관련계정입출내역"/>
+			</xf:group>
+			<xf:group class="grd_wrap">
+				<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:8px; top:49px; width:934px; height:303px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="dataBook" indicator="데이터부" tabIndex="2" tabstop="1" enterstop="1" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" intemplate="0" 확장모드="0" controlmode="Sheet" sheetwidth="932" sheetheight="303" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msNone" headbackcolor="#c3d0e1" databackcolor="#ffffff" dataaltanatebackcolor="#e6f0fa" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#fff5aa" sheetoutlinecolor="#c0c0c0" sheetbackcolor="#ffffff" outlinecolor="#a0a0a0" inlinecolor="#c0c0c0" notnullbackcolor="#b9f0ff" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="20" headrowheight="20" rowheightmin="20" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="1" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataBook" hierarchy="dataBook" dataList="data:dlt_dataBook">
+					<w2:caption id="caption1" style="" value="this is a grid caption."/>
+					<w2:header id="header1" style="">
+						<w2:row id="" style="">
+							<w2:column id="column1" inputType="text" value="순서" width="30"/>
+							<w2:column id="column2" inputType="text" value="부점코드" width="67"/>
+							<w2:column id="column3" inputType="text" value="회계년월일" width="79"/>
+							<w2:column id="column4" inputType="text" value="회계기준구분" width="91"/>
+							<w2:column id="column5" inputType="text" value="회계전표구분" width="91"/>
+							<w2:column id="column6" inputType="text" value="카드계정과목코드" width="100"/>
+							<w2:column id="column7" inputType="text" value="카드계정과목명" width="100"/>
+							<w2:column id="column8" inputType="text" value="차대변구분" width="100"/>
+							<w2:column id="column9" inputType="text" value="거래금액" width="100"/>
+							<w2:column id="column10" inputType="text" value="카드정산원장구분" width="100"/>
+							<w2:column id="column11" inputType="text" value="카드정산포인트구분" width="100"/>
+							<w2:column id="column12" inputType="text" value="카드표준적요코드" width="100"/>
+							<w2:column id="column13" inputType="text" value="카드표준적요내용" width="100"/>
+							<w2:column id="column14" inputType="text" value="잔액표준적요코드" width="100"/>
+							<w2:column id="column15" inputType="text" value="잔액표준적요내용" width="100"/>
+							<w2:column id="column16" inputType="text" value="카드거래처리구분" width="100"/>
+							<w2:column id="column17" inputType="text" value="분개일련번호" width="91"/>
+							<w2:column id="column18" inputType="text" value="분개차수" width="67"/>
+							<w2:column id="column19" inputType="text" value="카드입출거래번호" width="100"/>
+							<w2:column id="column20" inputType="text" value="카드채권매각구분" width="100"/>
+							<w2:column id="column21" inputType="text" value="채권회차" width="67"/>
+							<w2:column id="column22" inputType="text" value="처리내용" width="100"/>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="" style="">
+							<w2:column id="AutoSeq" inputType="dtDataSeq" width="30" hidden="false"/>
+							<w2:column id="brnCd_01" inputType="text" width="67" hidden="false"/>
+							<w2:column id="acctgYmd" inputType="text" width="79" hidden="false"/>
+							<w2:column id="acctgBaseDstcd" inputType="select" width="91" hidden="false"/>
+							<w2:column id="acctgSlipDstcd" inputType="select" width="91" hidden="false"/>
+							<w2:column id="cardTiaccCd" inputType="text" width="100" hidden="false"/>
+							<w2:column id="cardTiaccName" inputType="text" width="100" hidden="false"/>
+							<w2:column id="detcrdsdDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="tranAmt" inputType="text" width="100" hidden="false"/>
+							<w2:column id="cardELedgrDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="cardEPointDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="cardStndSumryCd" inputType="text" width="100" hidden="false"/>
+							<w2:column id="cardSumryCtnt" inputType="text" width="100" hidden="false"/>
+							<w2:column id="balStndSumryCd" inputType="text" width="100" hidden="false"/>
+							<w2:column id="balSumryCtnt" inputType="text" width="100" hidden="false"/>
+							<w2:column id="cardTPrcssDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="jrnzSerno" inputType="text" width="91" hidden="false"/>
+							<w2:column id="jrnzDgre" inputType="text" width="67" hidden="false"/>
+							<w2:column id="cardInotTranNo" inputType="text" width="100" hidden="false"/>
+							<w2:column id="cardBndDbsDstcd" inputType="select" width="100" hidden="false"/>
+							<w2:column id="bndNth" inputType="text" width="67" hidden="false"/>
+							<w2:column id="prcssCtnt" inputType="text" width="100" hidden="false"/>
+						</w2:row>
+					</w2:gBody>
+				</w2:kb_gridView>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:8px; top:364px; width:932px; height:162px; background-color:rgb(238,238,238); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0;border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox2" tabIndex="3" tabstop="0" enterstop="0" autosize="0" container="1" disabled="false" visible="1" paper="0" adjusttheme="1" apperance="Tab" transparent="0" headbackcolor="11636610" dynamicmove="0" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="GroupBox2">
+				<xf:group class="grd_wrap">
+					<w2:kb_gridView ctype="IBSheet" style="position:absolute; left:4px; top:18px; width:926px; height:136px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:8.5pt; letter-spacing:0; font-weight:400;" id="dataBook1" indicator="데이터부1" tabIndex="1" tabstop="1" enterstop="1" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" intemplate="0" 확장모드="0" controlmode="Sheet" sheetwidth="924" sheetheight="136" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msNone" headbackcolor="#c3d0e1" databackcolor="#ffffff" dataaltanatebackcolor="#e6f0fa" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#fff5aa" sheetoutlinecolor="#c0c0c0" sheetbackcolor="#ffffff" outlinecolor="#a0a0a0" inlinecolor="#c0c0c0" notnullbackcolor="#b9f0ff" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="20" headrowheight="20" rowheightmin="20" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="1" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataBook1" hierarchy="dataBook1" dataList="data:dlt_dataBook1">
+						<w2:caption id="caption1" style="" value="this is a grid caption."/>
+						<w2:header id="header1" style="">
+							<w2:row id="" style="">
+								<w2:column id="column1" inputType="text" value="순서" width="30"/>
+								<w2:column id="column2" inputType="text" value="부점코드" width="67"/>
+								<w2:column id="column3" inputType="text" value="기준년월일" width="79"/>
+								<w2:column id="column4" inputType="text" value="회계기준구분" width="91"/>
+								<w2:column id="column5" inputType="text" value="카드계정과목코드" width="100"/>
+								<w2:column id="column6" inputType="text" value="카드계정과목명" width="100"/>
+								<w2:column id="column7" inputType="text" value="잔액표준적요코드" width="100"/>
+								<w2:column id="column8" inputType="text" value="잔액표준적요내용" width="100"/>
+								<w2:column id="column9" inputType="text" value="전일잔액" width="100"/>
+								<w2:column id="column10" inputType="text" value="차변금액" width="100"/>
+								<w2:column id="column11" inputType="text" value="대변금액" width="100"/>
+								<w2:column id="column12" inputType="text" value="잔액" width="100"/>
+							</w2:row>
+						</w2:header>
+						<w2:gBody id="gBody1" style="">
+							<w2:row id="" style="">
+								<w2:column id="AutoSeq_01" inputType="dtDataSeq" width="30" hidden="false"/>
+								<w2:column id="brnCd1" inputType="text" width="67" hidden="false"/>
+								<w2:column id="baseYmd" inputType="text" width="79" hidden="false"/>
+								<w2:column id="acctgBaseDstcd1" inputType="select" width="91" hidden="false"/>
+								<w2:column id="cardTiaccCd1" inputType="text" width="100" hidden="false"/>
+								<w2:column id="cardTiaccName1" inputType="text" width="100" hidden="false"/>
+								<w2:column id="balStndSumryCd1" inputType="text" width="100" hidden="false"/>
+								<w2:column id="balSumryCtnt1" inputType="text" width="100" hidden="false"/>
+								<w2:column id="prdayBal" inputType="text" width="100" hidden="false"/>
+								<w2:column id="detsdAmt" inputType="text" width="100" hidden="false"/>
+								<w2:column id="crsdAmt" inputType="text" width="100" hidden="false"/>
+								<w2:column id="bal" inputType="text" width="100" hidden="false"/>
+							</w2:row>
+						</w2:gBody>
+					</w2:kb_gridView>
+				</xf:group>
+				<w2:textbox id="title_GroupBox2" class="title_h2" label="신용카드포인트관련계정집계내역"/>
+			</xf:group>
+			<xf:trigger ctype="Button" style="position:absolute; left:876px; top:356px; width:62px; height:20px;  color:rgb(255,255,255); align:middlecenter; text-align:middlecenter; font-size:8.5pt; letter-spacing:0; font-weight:700;" id="Button3" tabIndex="4" tabstop="0" enterstop="0" autosize="0" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" showimage="1" imagealign="MiddleLeft" imagefit="0" toggle="0" showfocusrect="1" gradientstyle="세로" gradientendcolor="11768958" theme="Normal" text="Excel" enableimage="없음" disableimage="없음" mouseoverimage="없음" intemplate="0" 확장모드="0" type="button" class="btn_def1" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="Button3">
+				<xf:label><![CDATA[Excel]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,2307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_convertType="Craft" meta_craftVer="20251209" meta_convertVer="1" meta_convertRuleVer="1" meta_asisFileNm="KAA06410000.scn"  meta_screenId="KAA06410000" meta_screenName="영업점특별선정고객정보" meta_desc="" meta_author="S012069(윤강민)">
+		<w2:type craft="true" craftSrc="/xml/KAA06410000.info">COMPONENT</w2:type>
+		<w2:buildDate/>
+		<w2:MSA/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:workflowCollection/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0641061" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0641061_INPUT":{"@id":"dma_KAA0641061_INPUT","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo","mgtBrncd":"mgtBrncd","mgtbrnName":"mgtbrnName","dpst3MnthsAvbal":"dpst3MnthsAvbal","n3MnthszErnAmt":"n3MnthszErnAmt","regiBrnName":"regiBrnName","regiBrn":"regiBrn","regiEmnm":"regiEmnm","regiEmp":"regiEmp","regiDte":"regiDte","regiRevocDstic1":"regiRevocDstic1","choicBase":"choicBase","bbrnChoicGrd":"bbrnChoicGrd"}},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0641461" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0641461_INPUT":{"@id":"dma_KAA0641461_INPUT","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo","dmndBrncd":"dmndBrncd","regiRevocDstic2":"regiRevocDstic2","athorDte":"athorDte","athorStus":"athorStus","athorBrncd":"athorBrncd","athorBrnName":"athorBrnName","athorEmpid":"athorEmpid","athorEmnm":"athorEmnm"}},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KJI0481140" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0441041" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0441041_INPUT":{"@id":"dma_KAA0441041_INPUT","serchNo":"serchNo","serchNoDstcd":"serchNoDstcd","cardCustMgtNo":"cardCustMgtNo"}},"target":{"dlt_KAA0441041_OUTPUT_screen___KAA06410000_CoprKbStarGrid__dataBook":{"@id":"dlt_KAA0441041_OUTPUT_screen___KAA06410000_CoprKbStarGrid__dataBook","mainCustIdnfr":"mainCustIdnfr","mainCuniqno":"mainCuniqno","mainCustNm":"mainCustNm","mainHgstCDstcd":"mainHgstCDstcd","mainHgstCDstNm":"mainHgstCDstNm","mainCMgtBrncd":"mainCMgtBrncd","mainCMgtBrnNm":"mainCMgtBrnNm","subCustIdnfr":"subCustIdnfr","subCuniqno":"subCuniqno","subCustNm":"subCustNm","subHgstCDstcd":"subHgstCDstcd","subCMgtBrncd":"subCMgtBrncd","subCMgtBrnNm":"subCMgtBrnNm","coprKsrDstic":"coprKsrDstic","coprKsrDsticNm":"coprKsrDsticNm","coprBzmanIdnfr":"coprBzmanIdnfr","coprBzmanUniqno":"coprBzmanUniqno","coprBzmanNm":"coprBzmanNm","coprKscGrdDstcd":"coprKscGrdDstcd","coprKscGrdNm":"coprKscGrdNm","regiYmd":"regiYmd","regiHms":"regiHms","regiBrncd":"regiBrncd","regiBrnNm":"regiBrnNm","regiEmpid":"regiEmpid","regiEmpNm":"regiEmpNm","revocYmd":"revocYmd","revocHms":"revocHms","revocBrncd":"revocBrncd","revocBrnNm":"revocBrnNm","revocEmpid":"revocEmpid","revocEmpNm":"revocEmpNm","qulfiRSchedYmd":"qulfiRSchedYmd","regiYn":"regiYn"},"dma_KAA0441041_OUTPUT_screen___KAA06410000":{"@id":"dma_KAA0441041_OUTPUT_screen___KAA06410000","cuniqno":"cuniqno","custnm":"custnm","custIdnfr":"custIdnfr","custMgtNo":"custMgtNo","selfAtualGrdDstcd":"selfAtualGrdDstcd","mgtBrncd":"mgtBrncd","mgtbrnName":"mgtbrnName","dpst3MnthsAvbal":"dpst3MnthsAvbal","n3MnthszErnAmt":"n3MnthszErnAmt","regiBrn":"regiBrn","regiBrnName":"regiBrnName","regiEmnm":"regiEmnm","regiEmp":"regiEmp","regiDte":"regiDte","regiRevocDstic1":"regiRevocDstic1","choicBase":"choicBase","bbrnChoicGrd":"bbrnChoicGrd","sBrnLimt1Noitm":"sBrnLimt1Noitm","sBrnLimt2Noitm":"sBrnLimt2Noitm","sBrnLimt3Noitm":"sBrnLimt3Noitm","sBrnLimt4Noitm":"sBrnLimt4Noitm","sBrnUseQanty1":"sBrnUseQanty1","sBrnUseQanty2":"sBrnUseQanty2","sBrnUseQanty3":"sBrnUseQanty3","sBrnUseQanty4":"sBrnUseQanty4","sBrnRAbilNoitm1":"sBrnRAbilNoitm1","sBrnRAbilNoitm2":"sBrnRAbilNoitm2","sBrnRAbilNoitm3":"sBrnRAbilNoitm3","sBrnRAbilNoitm4":"sBrnRAbilNoitm4","dmndBrncd":"dmndBrncd","regiRevocDstic2":"regiRevocDstic2","athorDte":"athorDte","athorStus":"athorStus","athorBrnName":"athorBrnName","athorBrncd":"athorBrncd","athorEmnm":"athorEmnm","athorEmpid":"athorEmpid","hBrnLimt1Noitm":"hBrnLimt1Noitm","hBrnLimt2Noitm":"hBrnLimt2Noitm","hBrnLimt3Noitm":"hBrnLimt3Noitm","hBrnLimt4Noitm":"hBrnLimt4Noitm","hBrnUheQanty1":"hBrnUheQanty1","hBrnUheQanty2":"hBrnUheQanty2","hBrnUheQanty3":"hBrnUheQanty3","hBrnUheQanty4":"hBrnUheQanty4","hBrnRAbilNoitm1":"hBrnRAbilNoitm1","hBrnRAbilNoitm2":"hBrnRAbilNoitm2","hBrnRAbilNoitm3":"hBrnRAbilNoitm3","hBrnRAbilNoitm4":"hBrnRAbilNoitm4","kBrnLimt1Noitm":"kBrnLimt1Noitm","kBrnLimt2Noitm":"kBrnLimt2Noitm","kBrnLimt3Noitm":"kBrnLimt3Noitm","kBrnUseQanty1":"kBrnUseQanty1","kBrnUseQanty2":"kBrnUseQanty2","kBrnUseQanty3":"kBrnUseQanty3","kBrnRAbilNoitm1":"kBrnRAbilNoitm1","kBrnRAbilNoitm2":"kBrnRAbilNoitm2","kBrnRAbilNoitm3":"kBrnRAbilNoitm3","choicInquryDstcd":"choicInquryDstcd","custPtrnClsfiDstcd":"custPtrnClsfiDstcd","ppsnBsnoJntRpsnYn":"ppsnBsnoJntRpsnYn","jobPrhbYn":"jobPrhbYn","sBrncd":"sBrncd","kBrncd":"kBrncd","CoprKbStarGrid__totalLineCnt":"CoprKbStarGrid__totalLineCnt","CoprKbStarGrid__outptLineCnt":"CoprKbStarGrid__outptLineCnt"}}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0641661" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0641661_INPUT":{"@id":"dma_KAA0641661_INPUT","mainCustIdnfr":"mainCustIdnfr","subCustIdnfr":"subCustIdnfr","coprKsrDstic":"coprKsrDstic","coprBzmanIdnfr":"coprBzmanIdnfr","coprKscGrdDstcd":"coprKscGrdDstcd","regiYmd":"regiYmd","regiBrncd":"regiBrncd","regiEmpid":"regiEmpid","regiYn":"regiYn"}},"target":{}}'/>
+			<xf:submission mode="asynchronous" method="post" id="KAA0490641" encoding="UTF-8" mediatype="application/json" webtopRef='{"reference":{"dma_KAA0490641_INPUT":{"@id":"dma_KAA0490641_INPUT","scopDstic":"scopDstic","serchCustIdnfr":"serchCustIdnfr","serchCustMgtNo":"serchCustMgtNo","serchCuniqno":"serchCuniqno","serchCustnm":"serchCustnm","custPzClsfiDstcd":"custPzClsfiDstcd"}},"target":{"dma_KAA0490641_OUTPUT_screen___KAA06060000":{"@id":"dma_KAA0490641_OUTPUT_screen___KAA06060000","serchCustIdnfr":"serchCustIdnfr","serchCustMgtNo":"serchCustMgtNo","serchCuniqno":"serchCuniqno","serchDtalsCustPtrnClsfiDstcd":"serchDtalsCustPtrnClsfiDstcd","serchCuniqnoDstcd":"serchCuniqnoDstcd","serchCustPtrnClsfiDstcd":"serchCustPtrnClsfiDstcd","serchCustnm1":"serchCustnm1","serchCustnm2":"serchCustnm2"}}}'/>
+			<w2:dataCollection>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641061_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mgtBrncd" length="4" CtrlId="mgtBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mgtbrnName" length="42" CtrlId="mgtbrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dpst3MnthsAvbal" length="13" CtrlId="dpst3MnthsAvbal" Type="Edit"/>
+						<w2:key dataType="text" name="" id="n3MnthszErnAmt" length="13" CtrlId="n3MnthszErnAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiBrnName" length="42" CtrlId="regiBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiBrn" length="4" CtrlId="regiBrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiEmnm" length="52" CtrlId="regiEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiEmp" length="7" CtrlId="regiEmp" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiDte" length="8" CtrlId="regiDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic1" length="0" CtrlId="regiRevocDstic1" Type="RadioButton"/>
+						<w2:key dataType="text" name="" id="choicBase" length="0" CtrlId="choicBase" Type="Combo"/>
+						<w2:key dataType="text" name="" id="bbrnChoicGrd" length="0" CtrlId="bbrnChoicGrd" Type="Combo"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641061_OUTPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641461_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dmndBrncd" length="4" CtrlId="dmndBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic2" length="0" CtrlId="regiRevocDstic2" Type="RadioButton"/>
+						<w2:key dataType="text" name="" id="athorDte" length="8" CtrlId="athorDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorStus" length="0" CtrlId="athorStus" Type="Combo"/>
+						<w2:key dataType="text" name="" id="athorBrncd" length="4" CtrlId="athorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorBrnName" length="20" CtrlId="athorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorEmpid" length="7" CtrlId="athorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorEmnm" length="25" CtrlId="athorEmnm" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641461_OUTPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KJI0481140_OUTPUT" TranClass="MCI" SvcCode="KJI" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0441041_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="serchNo" length="20" CtrlId="serchNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchNoDstcd" length="0" CtrlId="serchNoDstcd" Type="Combo"/>
+						<w2:key dataType="text" name="" id="cardCustMgtNo" length="5" CtrlId="cardCustMgtNo" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA0441041_OUTPUT_screen___KAA06410000_CoprKbStarGrid__dataBook" saveRemovedData="true" CtrlId="dataBook" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="mainCustIdnfr" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainCuniqno" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainCustNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainHgstCDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainHgstCDstNm" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainCMgtBrncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="mainCMgtBrnNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subCustIdnfr" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subCuniqno" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subCustNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subHgstCDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subCMgtBrncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="subCMgtBrnNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprKsrDstic" length="2" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprKsrDsticNm" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprBzmanIdnfr" length="10" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprBzmanUniqno" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprBzmanNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprKscGrdDstcd" length="1" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="coprKscGrdNm" length="20" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiHms" length="6" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiBrncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiBrnNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiEmpid" length="7" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiEmpNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocHms" length="6" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocBrncd" length="4" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocBrnNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocEmpid" length="7" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="revocEmpNm" length="42" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="qulfiRSchedYmd" length="8" CtrlId="dataBook" Type="Multi"/>
+						<w2:column dataType="text" name="" id="regiYn" length="1" CtrlId="dataBook" Type="Multi"/>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0441041_OUTPUT_screen___KAA06410000" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="cuniqno" length="13" CtrlId="cuniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custnm" length="42" CtrlId="custnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo" Type="Edit"/>
+						<w2:key dataType="text" name="" id="selfAtualGrdDstcd" length="0" CtrlId="hQChoicGrd" Type="char"/>
+						<w2:key dataType="text" name="" id="mgtBrncd" length="4" CtrlId="mgtBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="mgtbrnName" length="42" CtrlId="mgtbrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dpst3MnthsAvbal" length="13" CtrlId="dpst3MnthsAvbal" Type="Edit"/>
+						<w2:key dataType="text" name="" id="n3MnthszErnAmt" length="13" CtrlId="n3MnthszErnAmt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiBrn" length="4" CtrlId="regiBrn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiBrnName" length="42" CtrlId="regiBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiEmnm" length="52" CtrlId="regiEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiEmp" length="7" CtrlId="regiEmp" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiDte" length="8" CtrlId="regiDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic1" length="0" CtrlId="regiRevocDstic1" Type="RadioButton"/>
+						<w2:key dataType="text" name="" id="choicBase" length="0" CtrlId="choicBase" Type="char"/>
+						<w2:key dataType="text" name="" id="bbrnChoicGrd" length="0" CtrlId="bbrnChoicGrd" Type="char"/>
+						<w2:key dataType="text" name="" id="sBrnLimt1Noitm" length="4" CtrlId="sBrnLimt1Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnLimt2Noitm" length="4" CtrlId="sBrnLimt2Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnLimt3Noitm" length="4" CtrlId="sBrnLimt3Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnLimt4Noitm" length="4" CtrlId="sBrnLimt4Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty1" length="4" CtrlId="sBrnUseQanty1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty2" length="4" CtrlId="sBrnUseQanty2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty3" length="4" CtrlId="sBrnUseQanty3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty4" length="4" CtrlId="sBrnUseQanty3_3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm1" length="4" CtrlId="sBrnRAbilNoitm1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm2" length="4" CtrlId="sBrnRAbilNoitm2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm3" length="4" CtrlId="sBrnRAbilNoitm3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm4" length="4" CtrlId="sBrnRAbilNoitm4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="dmndBrncd" length="4" CtrlId="dmndBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic2" length="0" CtrlId="regiRevocDstic2" Type="RadioButton"/>
+						<w2:key dataType="text" name="" id="athorDte" length="8" CtrlId="athorDte" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorStus" length="0" CtrlId="athorStus" Type="char"/>
+						<w2:key dataType="text" name="" id="athorBrnName" length="20" CtrlId="athorBrnName" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorBrncd" length="4" CtrlId="athorBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorEmnm" length="25" CtrlId="athorEmnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="athorEmpid" length="7" CtrlId="athorEmpid" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnLimt1Noitm" length="6" CtrlId="hBrnLimt1Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnLimt2Noitm" length="6" CtrlId="hBrnLimt2Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnLimt3Noitm" length="6" CtrlId="hBrnLimt3Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnLimt4Noitm" length="6" CtrlId="hBrnLimt4Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnUheQanty1" length="6" CtrlId="hBrnUseQanty1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnUheQanty2" length="6" CtrlId="hBrnUseQanty2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnUheQanty3" length="6" CtrlId="hBrnUseQanty3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnUheQanty4" length="6" CtrlId="hBrnUseQanty3_3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm1" length="6" CtrlId="hBrnRAbilNoitm1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm2" length="6" CtrlId="hBrnRAbilNoitm2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm3" length="6" CtrlId="hBrnRAbilNoitm3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm4" length="6" CtrlId="hBrnRAbilNoitm4" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnLimt1Noitm" length="4" CtrlId="kBrnLimt1Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnLimt2Noitm" length="4" CtrlId="kBrnLimt2Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnLimt3Noitm" length="4" CtrlId="kBrnLimt3Noitm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty1" length="4" CtrlId="kBrnUseQanty1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty2" length="4" CtrlId="kBrnUseQanty2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty3" length="4" CtrlId="kBrnUseQanty3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm1" length="4" CtrlId="kBrnRAbilNoitm1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm2" length="4" CtrlId="kBrnRAbilNoitm2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm3" length="4" CtrlId="kBrnRAbilNoitm3" Type="Edit"/>
+						<w2:key dataType="text" name="" id="choicInquryDstcd" length="1" CtrlId="choicInquryDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custPtrnClsfiDstcd" length="1" CtrlId="custPtrnClsfiDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="ppsnBsnoJntRpsnYn" length="1" CtrlId="ppsnBsnoJntRpsnYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="jobPrhbYn" length="1" CtrlId="jobPrhbYn" Type="Edit"/>
+						<w2:key dataType="text" name="" id="sBrncd" length="4" CtrlId="sBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="kBrncd" length="4" CtrlId="kBrncd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="CoprKbStarGrid__totalLineCnt" length="5" CtrlId="totalLineCnt" Type="Edit"/>
+						<w2:key dataType="text" name="" id="CoprKbStarGrid__outptLineCnt" length="5" CtrlId="outptLineCnt" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641661_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="mainCustIdnfr" length="10" CtrlId="mainCustIdnfr_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="subCustIdnfr" length="10" CtrlId="custIdnfr_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="coprKsrDstic" length="0" CtrlId="coprKsrDstic_tab2" Type="Combo"/>
+						<w2:key dataType="text" name="" id="coprBzmanIdnfr" length="10" CtrlId="coprBzmanIdnfr_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="coprKscGrdDstcd" length="0" CtrlId="bbrnChoicGrd_tab2" Type="Combo"/>
+						<w2:key dataType="text" name="" id="regiYmd" length="8" CtrlId="regiYmd_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiBrncd" length="4" CtrlId="regiBrncd_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiEmpid" length="7" CtrlId="regiEmpid_tab2" Type="Edit"/>
+						<w2:key dataType="text" name="" id="regiYn" length="0" CtrlId="regiYn_tab2" Type="RadioButton"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0641661_OUTPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo/>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490641_INPUT" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="scopDstic" length="1" CtrlId="scopDstic" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustIdnfr" length="10" CtrlId="serchCustIdnfrT" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustMgtNo" length="5" CtrlId="serchCustMgtNoT" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCuniqno" length="20" CtrlId="serchCuniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustnm" length="40" CtrlId="serchCustnm" Type="Edit"/>
+						<w2:key dataType="text" name="" id="custPzClsfiDstcd" length="1" CtrlId="serchCustPtrnClsfiDstcd" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA0490641_OUTPUT_screen___KAA06060000" TranClass="MCI" SvcCode="KAA" Timeout="120" InputFS="FSIn" OutputFS="FSOut">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="serchCustIdnfr" length="10" CtrlId="serchCustIdnfrT" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustMgtNo" length="5" CtrlId="serchCustMgtNoT" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCuniqno" length="20" CtrlId="serchCuniqno" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchDtalsCustPtrnClsfiDstcd" length="2" CtrlId="serchDtalsCustPtrnClsfiDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCuniqnoDstcd" length="2" CtrlId="serchCuniqnoDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustPtrnClsfiDstcd" length="1" CtrlId="serchCustPtrnClsfiDstcd" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustnm1" length="40" CtrlId="serchCustnm1" Type="Edit"/>
+						<w2:key dataType="text" name="" id="serchCustnm2" length="40" CtrlId="serchCustnm2" Type="Edit"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_KAA06410000_CommonBtn" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="Type" name="Type" dataType="text"/>
+						<w2:column id="Caption" name="Caption" dataType="text"/>
+						<w2:column id="Visible" name="Visible" dataType="text"/>
+						<w2:column id="Enable" name="Enable" dataType="text"/>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<Type><![CDATA[CommonButton1]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[1]]></Visible>
+							<Enable><![CDATA[1]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton2]]></Type>
+							<Caption><![CDATA[조회]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton3]]></Type>
+							<Caption><![CDATA[입력]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton4]]></Type>
+							<Caption><![CDATA[수정]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton5]]></Type>
+							<Caption><![CDATA[삭제]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton6]]></Type>
+							<Caption><![CDATA[닫기]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton7]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+						<w2:row>
+							<Type><![CDATA[CommonButton8]]></Type>
+							<Caption><![CDATA[]]></Caption>
+							<Visible><![CDATA[0]]></Visible>
+							<Enable><![CDATA[0]]></Enable>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" repeatNode="map" id="dma_KAA06410000">
+					<w2:keyInfo>
+						<w2:key dataType="text" name="" id="custIdnfr" length="10" CtrlId="custIdnfr"/>
+						<w2:key dataType="text" name="" id="custMgtNo" length="5" CtrlId="custMgtNo"/>
+						<w2:key dataType="text" name="" id="mgtBrncd" length="4" CtrlId="mgtBrncd"/>
+						<w2:key dataType="text" name="" id="mgtbrnName" length="42" CtrlId="mgtbrnName"/>
+						<w2:key dataType="text" name="" id="dpst3MnthsAvbal" length="13" CtrlId="dpst3MnthsAvbal"/>
+						<w2:key dataType="text" name="" id="n3MnthszErnAmt" length="13" CtrlId="n3MnthszErnAmt"/>
+						<w2:key dataType="text" name="" id="regiBrnName" length="42" CtrlId="regiBrnName"/>
+						<w2:key dataType="text" name="" id="regiBrn" length="4" CtrlId="regiBrn"/>
+						<w2:key dataType="text" name="" id="regiEmnm" length="52" CtrlId="regiEmnm"/>
+						<w2:key dataType="text" name="" id="regiEmp" length="7" CtrlId="regiEmp"/>
+						<w2:key dataType="text" name="" id="regiDte" length="8" CtrlId="regiDte"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic1" length="0" CtrlId="regiRevocDstic1"/>
+						<w2:key dataType="text" name="" id="choicBase" length="0" CtrlId="choicBase"/>
+						<w2:key dataType="text" name="" id="bbrnChoicGrd" length="0" CtrlId="bbrnChoicGrd"/>
+						<w2:key dataType="text" name="" id="dmndBrncd" length="4" CtrlId="dmndBrncd"/>
+						<w2:key dataType="text" name="" id="regiRevocDstic2" length="0" CtrlId="regiRevocDstic2"/>
+						<w2:key dataType="text" name="" id="athorDte" length="8" CtrlId="athorDte"/>
+						<w2:key dataType="text" name="" id="athorStus" length="0" CtrlId="athorStus"/>
+						<w2:key dataType="text" name="" id="athorBrncd" length="4" CtrlId="athorBrncd"/>
+						<w2:key dataType="text" name="" id="athorBrnName" length="20" CtrlId="athorBrnName"/>
+						<w2:key dataType="text" name="" id="athorEmpid" length="7" CtrlId="athorEmpid"/>
+						<w2:key dataType="text" name="" id="athorEmnm" length="25" CtrlId="athorEmnm"/>
+						<w2:key dataType="text" name="" id="serchNo" length="20" CtrlId="serchNo"/>
+						<w2:key dataType="text" name="" id="serchNoDstcd" length="0" CtrlId="serchNoDstcd"/>
+						<w2:key dataType="text" name="" id="cardCustMgtNo" length="5" CtrlId="cardCustMgtNo"/>
+						<w2:key dataType="text" name="" id="cuniqno" length="13" CtrlId="cuniqno"/>
+						<w2:key dataType="text" name="" id="custnm" length="42" CtrlId="custnm"/>
+						<w2:key dataType="text" name="" id="hQChoicGrd" length="0" CtrlId="hQChoicGrd"/>
+						<w2:key dataType="text" name="" id="sBrnLimt1Noitm" length="4" CtrlId="sBrnLimt1Noitm"/>
+						<w2:key dataType="text" name="" id="sBrnLimt2Noitm" length="4" CtrlId="sBrnLimt2Noitm"/>
+						<w2:key dataType="text" name="" id="sBrnLimt3Noitm" length="4" CtrlId="sBrnLimt3Noitm"/>
+						<w2:key dataType="text" name="" id="sBrnLimt4Noitm" length="4" CtrlId="sBrnLimt4Noitm"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty1" length="4" CtrlId="sBrnUseQanty1"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty2" length="4" CtrlId="sBrnUseQanty2"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty3" length="4" CtrlId="sBrnUseQanty3"/>
+						<w2:key dataType="text" name="" id="sBrnUseQanty3_3" length="4" CtrlId="sBrnUseQanty3_3"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm1" length="4" CtrlId="sBrnRAbilNoitm1"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm2" length="4" CtrlId="sBrnRAbilNoitm2"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm3" length="4" CtrlId="sBrnRAbilNoitm3"/>
+						<w2:key dataType="text" name="" id="sBrnRAbilNoitm4" length="4" CtrlId="sBrnRAbilNoitm4"/>
+						<w2:key dataType="text" name="" id="hBrnLimt1Noitm" length="6" CtrlId="hBrnLimt1Noitm"/>
+						<w2:key dataType="text" name="" id="hBrnLimt2Noitm" length="6" CtrlId="hBrnLimt2Noitm"/>
+						<w2:key dataType="text" name="" id="hBrnLimt3Noitm" length="6" CtrlId="hBrnLimt3Noitm"/>
+						<w2:key dataType="text" name="" id="hBrnLimt4Noitm" length="6" CtrlId="hBrnLimt4Noitm"/>
+						<w2:key dataType="text" name="" id="hBrnUseQanty1" length="6" CtrlId="hBrnUseQanty1"/>
+						<w2:key dataType="text" name="" id="hBrnUseQanty2" length="6" CtrlId="hBrnUseQanty2"/>
+						<w2:key dataType="text" name="" id="hBrnUseQanty3" length="6" CtrlId="hBrnUseQanty3"/>
+						<w2:key dataType="text" name="" id="hBrnUseQanty3_3" length="6" CtrlId="hBrnUseQanty3_3"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm1" length="6" CtrlId="hBrnRAbilNoitm1"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm2" length="6" CtrlId="hBrnRAbilNoitm2"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm3" length="6" CtrlId="hBrnRAbilNoitm3"/>
+						<w2:key dataType="text" name="" id="hBrnRAbilNoitm4" length="6" CtrlId="hBrnRAbilNoitm4"/>
+						<w2:key dataType="text" name="" id="kBrnLimt1Noitm" length="4" CtrlId="kBrnLimt1Noitm"/>
+						<w2:key dataType="text" name="" id="kBrnLimt2Noitm" length="4" CtrlId="kBrnLimt2Noitm"/>
+						<w2:key dataType="text" name="" id="kBrnLimt3Noitm" length="4" CtrlId="kBrnLimt3Noitm"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty1" length="4" CtrlId="kBrnUseQanty1"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty2" length="4" CtrlId="kBrnUseQanty2"/>
+						<w2:key dataType="text" name="" id="kBrnUseQanty3" length="4" CtrlId="kBrnUseQanty3"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm1" length="4" CtrlId="kBrnRAbilNoitm1"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm2" length="4" CtrlId="kBrnRAbilNoitm2"/>
+						<w2:key dataType="text" name="" id="kBrnRAbilNoitm3" length="4" CtrlId="kBrnRAbilNoitm3"/>
+						<w2:key dataType="text" name="" id="choicInquryDstcd" length="1" CtrlId="choicInquryDstcd"/>
+						<w2:key dataType="text" name="" id="custPtrnClsfiDstcd" length="1" CtrlId="custPtrnClsfiDstcd"/>
+						<w2:key dataType="text" name="" id="ppsnBsnoJntRpsnYn" length="1" CtrlId="ppsnBsnoJntRpsnYn"/>
+						<w2:key dataType="text" name="" id="jobPrhbYn" length="1" CtrlId="jobPrhbYn"/>
+						<w2:key dataType="text" name="" id="sBrncd" length="4" CtrlId="sBrncd"/>
+						<w2:key dataType="text" name="" id="kBrncd" length="4" CtrlId="kBrncd"/>
+						<w2:key dataType="text" name="" id="totalLineCnt" length="5" CtrlId="totalLineCnt"/>
+						<w2:key dataType="text" name="" id="outptLineCnt" length="5" CtrlId="outptLineCnt"/>
+						<w2:key dataType="text" name="" id="mainCustIdnfr_tab2" length="10" CtrlId="mainCustIdnfr_tab2"/>
+						<w2:key dataType="text" name="" id="custIdnfr_tab2" length="10" CtrlId="custIdnfr_tab2"/>
+						<w2:key dataType="text" name="" id="coprKsrDstic_tab2" length="0" CtrlId="coprKsrDstic_tab2"/>
+						<w2:key dataType="text" name="" id="coprBzmanIdnfr_tab2" length="10" CtrlId="coprBzmanIdnfr_tab2"/>
+						<w2:key dataType="text" name="" id="bbrnChoicGrd_tab2" length="0" CtrlId="bbrnChoicGrd_tab2"/>
+						<w2:key dataType="text" name="" id="regiYmd_tab2" length="8" CtrlId="regiYmd_tab2"/>
+						<w2:key dataType="text" name="" id="regiBrncd_tab2" length="4" CtrlId="regiBrncd_tab2"/>
+						<w2:key dataType="text" name="" id="regiEmpid_tab2" length="7" CtrlId="regiEmpid_tab2"/>
+						<w2:key dataType="text" name="" id="regiYn_tab2" length="0" CtrlId="regiYn_tab2"/>
+						<w2:key dataType="text" name="" id="scopDstic" length="1" CtrlId="scopDstic"/>
+						<w2:key dataType="text" name="" id="serchCustIdnfrT" length="10" CtrlId="serchCustIdnfrT"/>
+						<w2:key dataType="text" name="" id="serchCustMgtNoT" length="5" CtrlId="serchCustMgtNoT"/>
+						<w2:key dataType="text" name="" id="serchCuniqno" length="20" CtrlId="serchCuniqno"/>
+						<w2:key dataType="text" name="" id="serchCustnm" length="40" CtrlId="serchCustnm"/>
+						<w2:key dataType="text" name="" id="serchCustPtrnClsfiDstcd" length="1" CtrlId="serchCustPtrnClsfiDstcd"/>
+						<w2:key dataType="text" name="" id="serchDtalsCustPtrnClsfiDstcd" length="2" CtrlId="serchDtalsCustPtrnClsfiDstcd"/>
+						<w2:key dataType="text" name="" id="serchCuniqnoDstcd" length="2" CtrlId="serchCuniqnoDstcd"/>
+						<w2:key dataType="text" name="" id="serchCustnm1" length="40" CtrlId="serchCustnm1"/>
+						<w2:key dataType="text" name="" id="serchCustnm2" length="40" CtrlId="serchCustnm2"/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap id="dtm_component" baseNode="map">
+					<w2:keyInfo>
+						<w2:key id="serchNoDstcd" name="serchNoDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchNo" name="serchNo" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustIdnfr" name="serchCustIdnfr" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustMgtNo" name="serchCustMgtNo" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="cardCustMgtNo" name="cardCustMgtNo" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="selfConfirmNo" name="selfConfirmNo" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custnm" name="custnm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custIdnfr" name="custIdnfr" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custMgtNo" name="custMgtNo" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="scopDstic" name="scopDstic" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustIdnfrT" name="serchCustIdnfrT" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustMgtNoT" name="serchCustMgtNoT" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCuniqno" name="serchCuniqno" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustnm" name="serchCustnm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchDtalsCustPtrnClsfiDstcd" name="serchDtalsCustPtrnClsfiDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCuniqnoDstcd" name="serchCuniqnoDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustPtrnClsfiDstcd" name="serchCustPtrnClsfiDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustnm1" name="serchCustnm1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCustnm2" name="serchCustnm2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="searchDstic" name="searchDstic" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="serchCuniqno_bakcup" name="serchCuniqno_bakcup" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="cuniqno" name="cuniqno" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hQChoicGrd" name="hQChoicGrd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="mgtBrncd" name="mgtBrncd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="mgtbrnName" name="mgtbrnName" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="dpst3MnthsAvbal" name="dpst3MnthsAvbal" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="n3MnthszErnAmt" name="n3MnthszErnAmt" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiBrn" name="regiBrn" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiBrnName" name="regiBrnName" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiEmnm" name="regiEmnm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiEmp" name="regiEmp" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiRevocDstic1" name="regiRevocDstic1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="choicBase" name="choicBase" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="bbrnChoicGrd" name="bbrnChoicGrd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnLimt1Noitm" name="sBrnLimt1Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnLimt2Noitm" name="sBrnLimt2Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnLimt3Noitm" name="sBrnLimt3Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnLimt4Noitm" name="sBrnLimt4Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnUseQanty1" name="sBrnUseQanty1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnUseQanty2" name="sBrnUseQanty2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnUseQanty3" name="sBrnUseQanty3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnUseQanty3_3" name="sBrnUseQanty3_3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnRAbilNoitm1" name="sBrnRAbilNoitm1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnRAbilNoitm2" name="sBrnRAbilNoitm2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnRAbilNoitm3" name="sBrnRAbilNoitm3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrnRAbilNoitm4" name="sBrnRAbilNoitm4" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="dmndBrncd" name="dmndBrncd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="dmndBrnName" name="dmndBrnName" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiRevocDstic2" name="regiRevocDstic2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="athorStus" name="athorStus" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="athorBrnName" name="athorBrnName" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="athorBrncd" name="athorBrncd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="athorEmnm" name="athorEmnm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="athorEmpid" name="athorEmpid" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnLimt1Noitm" name="hBrnLimt1Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnLimt2Noitm" name="hBrnLimt2Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnLimt3Noitm" name="hBrnLimt3Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnLimt4Noitm" name="hBrnLimt4Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnUseQanty1" name="hBrnUseQanty1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnUseQanty2" name="hBrnUseQanty2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnUseQanty3" name="hBrnUseQanty3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnUseQanty3_3" name="hBrnUseQanty3_3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnRAbilNoitm1" name="hBrnRAbilNoitm1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnRAbilNoitm2" name="hBrnRAbilNoitm2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnRAbilNoitm3" name="hBrnRAbilNoitm3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="hBrnRAbilNoitm4" name="hBrnRAbilNoitm4" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="selfConfirmNo_tab2" name="selfConfirmNo_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custIdnfr_tab2" name="custIdnfr_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custnm_tab2" name="custnm_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="cuniqno_tab2" name="cuniqno_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="coprKsrDstic_tab2" name="coprKsrDstic_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="mainCuniqno_tab2" name="mainCuniqno_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="bbrnChoicGrd_tab2" name="bbrnChoicGrd_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="coprBzmanIdnfr_tab2" name="coprBzmanIdnfr_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="mainCustIdnfr_tab2" name="mainCustIdnfr_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="mainCustNm_tab2" name="mainCustNm_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="coprBzmanUniqno_tab2" name="coprBzmanUniqno_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="coprBzmanNm_tab2" name="coprBzmanNm_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiBrncd_tab2" name="regiBrncd_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiBrnNm_tab2" name="regiBrnNm_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiEmpNm_tab2" name="regiEmpNm_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiEmpid_tab2" name="regiEmpid_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="regiYn_tab2" name="regiYn_tab2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnLimt1Noitm" name="kBrnLimt1Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnLimt2Noitm" name="kBrnLimt2Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnLimt3Noitm" name="kBrnLimt3Noitm" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnUseQanty1" name="kBrnUseQanty1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnUseQanty2" name="kBrnUseQanty2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnUseQanty3" name="kBrnUseQanty3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnRAbilNoitm1" name="kBrnRAbilNoitm1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnRAbilNoitm2" name="kBrnRAbilNoitm2" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrnRAbilNoitm3" name="kBrnRAbilNoitm3" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="choicInquryDstcd" name="choicInquryDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="custPtrnClsfiDstcd" name="custPtrnClsfiDstcd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="ppsnBsnoJntRpsnYn" name="ppsnBsnoJntRpsnYn" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="selfAtualGrdDstcd_1" name="selfAtualGrdDstcd_1" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="jobPrhbYn" name="jobPrhbYn" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="sBrncd" name="sBrncd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="kBrncd" name="kBrncd" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="totalLineCnt" name="totalLineCnt" dataType="number" length="" ref="" in="" out="" control_id=""/>
+						<w2:key id="outptLineCnt" name="outptLineCnt" dataType="number" length="" ref="" in="" out="" control_id=""/>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" id="dlt_dataBook" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column dataType="text" name="" id="coprKsrDsticNm"/>
+						<w2:column dataType="text" name="" id="subCuniqno"/>
+						<w2:column dataType="text" name="" id="subSelfConfirmNo"/>
+						<w2:column dataType="text" name="" id="subCustIdnfr"/>
+						<w2:column dataType="text" name="" id="subCustNm"/>
+						<w2:column dataType="text" name="" id="regiYnNm"/>
+						<w2:column dataType="text" name="" id="regiBrnNm"/>
+						<w2:column dataType="text" name="" id="regiEmpid"/>
+						<w2:column dataType="text" name="" id="regiYmd"/>
+						<w2:column dataType="text" name="" id="subCMgtBrnNm"/>
+						<w2:column dataType="text" name="" id="coprKscGrdNm"/>
+						<w2:column dataType="text" name="" id="qulfiRSchedYmd"/>
+						<w2:column dataType="text" name="" id="coprBzmanIdnfr"/>
+						<w2:column dataType="text" name="" id="coprBzmanUniqno"/>
+						<w2:column dataType="text" name="" id="coprBzmanNm"/>
+						<w2:column dataType="text" name="" id="mainCuniqno"/>
+						<w2:column dataType="text" name="" id="mainSelfConfirmNo"/>
+						<w2:column dataType="text" name="" id="mainCustIdnfr"/>
+						<w2:column dataType="text" name="" id="revocBrnNm"/>
+						<w2:column dataType="text" name="" id="revocEmpid"/>
+						<w2:column dataType="text" name="" id="revocYmd"/>
+						<w2:column dataType="text" name="" id="coprKsrDstic"/>
+						<w2:column dataType="text" name="" id="mainCustNm"/>
+						<w2:column dataType="text" name="" id="regiBrncd"/>
+						<w2:column dataType="text" name="" id="regiEmpNm"/>
+						<w2:column dataType="text" name="" id="regiHms"/>
+						<w2:column dataType="text" name="" id="revocEmpNm"/>
+						<w2:column dataType="text" name="" id="revocBrncd"/>
+						<w2:column dataType="text" name="" id="revocHms"/>
+						<w2:column dataType="text" name="" id="coprKscGrdDstcd"/>
+						<w2:column dataType="text" name="" id="mainHgstCDstcd"/>
+						<w2:column dataType="text" name="" id="mainHgstCDstNm"/>
+						<w2:column dataType="text" name="" id="mainCMgtBrncd"/>
+						<w2:column dataType="text" name="" id="mainCMgtBrnNm"/>
+						<w2:column dataType="text" name="" id="subHgstCDstcd"/>
+						<w2:column dataType="text" name="" id="subCMgtBrncd"/>
+						<w2:column dataType="text" name="" id="regiYn"/>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+/* ★AIcraft guide★    
+스크립트 수작업 유의사항
+*/
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// History
+////////////////////////////////////////////////////////////////////////////////////////////
+// 20120712 : 법인KB스타 대표및가족 선정등록 기능 추가(탭 방식)
+// 20120716 : 그리드의 자격해제년월일 (+6개월) 계산 추가
+// 20120717 : 그리드의 해제시각 속성 변경
+//          : 그리드에 '등록구분' 한글명 기능 추가
+//          : 법인사업자번호 입력시, 고객유형 체크(법인사업자만 가능)
+//          : 그리드에 '자격해제년월일' 출력 매핑
+// 20120718 : 선정사유가 '법인대표자'이외이면서, 부고객번호와 주고객번호 같을때 오류메세지
+//          : S-MVP와 법인KB스타 중복 등록 방지 기능 추가
+// 20120719 : 법인스타 가족정보 불러오기...활성화 복원 기능 정비
+//          : S-MVP 영업점한도 그룹박스 위치 조정
+// 20120720 : 해제는 등록점에서만 가능하도록 조건 추가
+// 20120723 : 한도 초과 오류 메세지 내용 변경 및 S-MVP/개인KB스타 등록에도 기능 추가
+//          : 중복 등록 오류 안내 메세지 내용 변경
+// 20120725 : 법인KB스타 그리스에서 항목 선택시, 등급구분 콤보박스 비활성화 처리
+//          : '가족관계 없음' 버튼 숨기기 및 비활성화
+//          : 법인대표자주민번호가 '개인'만 가능하도록 에러메세지 추가
+// 20120730 : 개인KB스타 영업점 한도 타이틀명 수정
+// 20120813 : 법인KB스타 그리드의 등록,해제 한글명 표시 조건 변경
+// 20150302 : 본인확인번호 및 KB-PIN 적용(P20141608590 - 고객정보번호 활용 확대)
+// 20150618 : 본부선정등급 값 오타 수정(프리미업스타 -> 프리미엄스타)
+//          : 연계서식 패널 위치 조정(개인KB스타 탭 밖)
+// 20180816 : 영업점선정 퇴직직원특별선정등급 값 수정 및 관리부점 변경
+// 20190717 : 영업점선정 기준추가 - 우량가망고객(본부부서)
+////////////////////////////////////////////////////////////////////////////////////////////
+
+scwin.SavedData;
+scwin.strDAmndBrncd = dmndBrncd.getValue();
+scwin.LegthStrDAmndBrncd = scwin.strDAmndBrncd.length;
+
+scwin.onpageload = function() {
+	scwin.OnInitScreen();
+};
+
+scwin.onpageunload = function() {};
+
+//==================================화면로드시==============================================
+
+scwin.OnInitScreen = async function() {
+    //1. 좌측프레임에서 들어오는 고객식별자, 고객관리번호로 조회처리를 한다. DATA가  없으면 빈 화면을 출력한다
+    //1. (S-MVP 영업점선정고객조회 : KAA0441041)거래처리
+    scwin.serchNoDstcd_OnItemChanged();
+    cuniqno.setValue("");
+    selfConfirmNo.setValue(""); //본인확인번호
+    custnm.setValue("");
+    custIdnfr.setValue("");
+    custMgtNo.setValue("");
+    ppsnBsnoJntRpsnYn.setValue("");
+
+    //화면 초기화(S-MVP 탭)
+    GroupBox1.setValue("");
+    GroupBox2.setValue("");
+    GroupBox_Gaein3.setValue("");
+
+    // 영업점선정등급 콤보박스
+    //bbrnChoicGrd.SetComboItems("0-해당무;1-MVP스타;2-로얄스타;3-골드스타;5-프리미엄스타;9-일반고객;");
+    bbrnChoicGrd.SetComboItems("0-해당무;");
+    regiRevocDstic1.setSelectedIndex(0);
+    regiRevocDstic2.setSelectedIndex(0);
+
+    //choicBase.SetCurSel(0);		// 선정기준
+    bbrnChoicGrd.setSelectedIndex(0);
+    athorStus.setSelectedIndex(0);
+    GroupBox_Hidden.setValue(""); //히든 컨트롤 그룹
+
+    //법인KB스타 탭
+    GroupBox_Bubin1.setValue("");
+    GroupBox_Bubin2.setValue("");
+    GroupBox_Bubin3.setValue("");
+    GroupBox_Hidden.setValue("");
+    dlt_dataBook.removeAll();
+    coprKsrDstic_tab2.setSelectedIndex(0); //법인KB스타관계구분(선정기준)
+    bbrnChoicGrd_tab2.setSelectedIndex(0); //법인KB스타선정등급(영업점선정등급)
+    regiYn_tab2.setSelectedIndex(0); //법인KB스타 등록해제구분
+
+
+    if ($c.iz.data.trim(custIdnfr.getValue()) != "" && $c.iz.data.trim(custMgtNo.getValue()) != "") {
+        $c.iz.tran.setTranID("KAA0441041");
+        await $c.tran.ASend();
+    }
+    athorDte.setValue($c.user.getUserProfile('tranBaseYmd'));
+    athorBrncd.setValue($c.user.getUserProfile('userBzwkBrncd'));
+    athorBrnName.setValue($c.user.getUserProfile('userBzwkBrnName'));
+    athorEmnm.setValue($c.user.getUserProfile('empName'));
+    if (regiRevocDstic1.getValue() == "2") {
+        choicBase.setDisabled(true); // 선정기준
+        bbrnChoicGrd.setDisabled(true);
+    } else {
+        choicBase.setDisabled(false); // 선정기준
+        bbrnChoicGrd.setDisabled(false);
+        if (choicBase.setValue("00")) {
+            bbrnChoicGrd.setDisabled(true);
+        }
+        if ($c.user.getUserProfile('userBzwkBrncd') == "3869" || $c.user.getUserProfile('userBzwkBrncd') == "1764") {
+            choicBase.AddComboItems("12-우량가망고객(본부부서)");
+        }
+    }
+
+    // 2017.01.23 부점명 변경 반영(3140 마케팅부-> 9607 데이터분석부)
+    //2017-12-28 부점코드변경 9607 -> 3869
+    if ($c.user.getUserProfile('userBzwkBrncd') == "3869" || $c.user.getUserProfile('userBzwkBrncd') == "1764") {
+        // 9607 : 데이터분석부, 4055 : 여신IT개발부 --> 1764: 정보개발부
+        Button2.setDisabled(false); // 승인등록 버튼
+        GroupBox2.setStyle(display, "");
+        GroupBox_Gaein4.setStyle(display, "");
+    } else {
+        Button2.setDisabled(true); // 승인등록 버튼
+        GroupBox2.setStyle(display, "none"); // 본부승인 그룹박스를 숨김
+        GroupBox_Gaein4.setStyle(display, "none"); // 본부승인 그룹박스를 숨김
+    }
+    choicBase.setSelectedIndex(0); // 선정기준
+};
+
+scwin.serchNoDstcd_OnItemChanged = function(info) {
+    //검색구분
+    if (serchNoDstcd.getValue() == '3') {
+        //고객정보번호 선택시
+        serchNo.hide();
+        serchCustIdnfr.show('');
+        serchCustMgtNo.show('');
+        serchCustIdnfr.focus();
+        serchCustIdnfr.setMandatory(true);
+        serchNo.setMandatory(false);
+        Button5.show('');
+    } else {
+        serchNo.show('');
+        serchCustIdnfr.hide();
+        serchCustMgtNo.hide();
+        serchNo.focus();
+        serchCustIdnfr.setMandatory(false);
+        serchNo.setMandatory(true);
+        Button5.hide();
+    }
+};
+
+scwin.MakeMgtNo = function(strMgtNo) {
+    var tmpMgtNo = strMgtNo.toString();
+    var tmpLength = 6;
+    if (tmpMgtNo == "") return "";
+    tmpLength = tmpLength - tmpMgtNo.length;
+    for (var i = 1; i < tmpLength; i++) {
+        tmpMgtNo = "0" + tmpMgtNo;
+    }
+    return tmpMgtNo;
+};
+
+
+scwin.OnSendKey = async function() {
+    // 실행버튼
+
+    cuniqno.setValue("");
+    selfConfirmNo.setValue(""); //본인확인번호
+    custnm.setValue("");
+    cuniqno.setValue("");
+    custnm.setValue("");
+    custIdnfr.setValue("");
+    custMgtNo.setValue("");
+    ppsnBsnoJntRpsnYn.setValue("");
+
+    //화면초기화
+    GroupBox1.setValue("");
+    GroupBox2.setValue("");
+    GroupBox_Gaein3.setValue("");
+    GroupBox_Hidden.setValue(""); //히든 컨트롤 그룹
+
+    //법인KB스타 탭
+    GroupBox_Bubin1.setValue("");
+    GroupBox_Bubin2.setValue("");
+    GroupBox_Bubin3.setValue("");
+    GroupBox_Hidden.setValue("");
+    dlt_dataBook.removeAll();
+    coprKsrDstic_tab2.setSelectedIndex(0); //법인KB스타관계구분(선정기준)
+    bbrnChoicGrd_tab2.setSelectedIndex(0); //법인KB스타선정등급(영업점선정등급)
+    regiYn_tab2.setSelectedIndex(0); //법인KB스타 등록해제구분
+
+    coprKsrDstic_tab2.setDisabled(false); //법인KB스타관계구분(선정기준)
+    bbrnChoicGrd_tab2.setDisabled(false); //법인KB스타선정등급구분코드
+    //mainCuniqno_tab2.Enabled = true;		//주고객고유번호
+    mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+    //coprBzmanUniqno_tab2.Enabled = true;	//법인사업자번호
+    coprBzmanUniqno_tab2.setReadOnly(false); //법인사업자번호
+
+    Button_tab2_GetFamily.setDisabled(false); //법인스타 가족정보 불러오기 버튼
+
+    if (serchNoDstcd.getValue() == '3') {
+        serchNo.setValue(serchCustIdnfr.getValue() + scwin.MakeMgtNo(serchCustMgtNo.getValue()));
+    }
+    $c.iz.tran.setTranID("KAA0441041");
+    $c.iz.tran.noLockScreen();
+    await $c.tran.ASend();
+
+
+    //조회후 결과값 save
+    scwin.SavedData = this.GetScreenControlData();
+};
+
+//==================================버튼이벤트==========================================
+
+scwin.Button1_OnClick = async function(e) {
+    //개인KB스타 고객등록 버튼
+    //1. (S-MVP영업점선정고객등록 : KAA0641061)거래처리
+
+    //등록시 고객식별자체크
+    if (custIdnfr.getValue() == "") {
+        $c.iz.data.message("KB-PIN이 없습니다. 조회 후 처리하시기 바랍니다.");
+        serchNo.focus();
+        return false;
+    }
+
+    //매월10일전 2영업일 오류처리
+    if (jobPrhbYn.getValue() == "Y") {
+        $c.iz.data.alert("매월 스타클럽 등급선정일 전 2영업일은 등급선정작업으로 인해 거래가 제한됩니다.", "알림");
+        serchNo.focus();
+        return false;
+    }
+
+    //등록,해제선택
+    if (regiRevocDstic1.getValue() == "") {
+        $c.iz.data.alert("등록, 해제를 선택하여 주십시요", "");
+        regiRevocDstic1.focus();
+        return false;
+    }
+    if (regiRevocDstic1.getValue() == "1") {
+        //등록거래이면서
+        if (choicInquryDstcd.getValue() == 'K') {
+            // 이미 법인KB스타 등록 고객
+            $c.iz.data.alert("현재 법인KB스타대표/가족 등급을 보유하고 있는 고객입니다.\n재선정 필요시 기존 선정등록 내역을 해제 처리 후 재등록하시기 바랍니다.", "중복 선정 불가 안내");
+            return false;
+        }
+    } else if (regiRevocDstic1.getValue() == "2") {
+        //해제거래이면서
+
+
+        //해제하는 부점이, 관리점 또는 등록점과 동일한지 체크
+        if ($c.user.getUserProfile('userBzwkBrncd') != regiBrn.getValue() && $c.user.getUserProfile('userBzwkBrncd') != mgtBrncd.getValue()) {
+            $c.iz.data.alert("등록했던 부점 또는 관리부점에서만 해제가 가능합니다.\n등록점 : " + regiBrn.getValue() + ", 관리점 : " + mgtBrncd.getValue() + ", 거래점 : " + $c.user.getUserProfile('userBzwkBrncd'), "안내");
+            return false;
+        }
+
+        //해제버튼 클릭 시 안내 메시지 팝업
+        if ($c.iz.data.confirm("선정 해제시 해당 고객의 등급은 당월 은행 실질등급으로 변경됩니다.\n가족합산등급 등 최고등급을 보유하고 있는 고객일 경우 해당 등급은 매월 10일에 반영되오니 고객응대에 참고하시기 바랍니다.", "해제 안내") != true) {
+            //취소 선택했을 때
+            return false;
+        }
+    }
+    var CurrData = this.GetScreenControlData();
+
+    //	alert("변경전내용 SavedData ===>"+SavedData, "안내");	
+    //	alert("변경후내용 CurrData  ===>"+CurrData, "안내");		
+
+    if (CurrData == scwin.SavedData) {
+        $c.iz.data.alert("변경사항이 없습니다", "");
+        return false;
+    }
+    if (athorStus.getValue() != '1') {
+        if (regiRevocDstic1.getValue() == '1') {
+            if (choicBase.getValue() == '04') {
+                // 선정기준 (04:S-MVP(사회지도층인사))
+
+                // 2017.01.23 부점명 변경 반영(3140 마케팅부-> 9607 데이터분석부)
+                //2017-12-28 부점명 변경 9607 데이터분석부 -> 3869 개인고객부
+                //alert("S-MVP(사회지도층인사)선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.","알림");
+                $c.iz.data.alert("사회지도층인사 선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.", "알림");
+                return false;
+            } else if (choicBase.getValue() == '05') {
+                // 선정기준 (05:S-MVP(당행전직임원))
+
+                //alert("S-MVP(당행전직임원)선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.","알림");
+                $c.iz.data.alert("당행전직임원 선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.", "알림");
+                return false;
+            } else if (choicBase.getValue() == '11') {
+                // 선정기준 (11:S-MVP(당행전직본부장))
+
+                //alert("S-MVP(당행전직본부장)선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.","알림");
+                $c.iz.data.alert("당행전직본부장 선정 등록은 개인고객부 심사 승인 사항으로 \n  개인고객부에 요청후 선정 등록 바랍니다.", "알림");
+                return false;
+            }
+        }
+    }
+
+    //선정기준체크
+    if (choicBase.getValue() == '00') {
+        // 선정기준 (00:해당무)
+        $c.iz.data.alert("선정기준을 00(해당무)로 등록할 수 없습니다. 선정기준을 확인해주세요.", "알림");
+        choicBase.focus();
+        return false;
+    }
+
+    //영업점선정등급체크
+    if (bbrnChoicGrd.getValue() == '0') {
+        $c.iz.data.alert("영업점선정등급을 0(해당무)로 등록할 수 없습니다. 영업점선정등급을 확인해주세요.", "알림");
+        bbrnChoicGrd.focus();
+        return false;
+    }
+    $c.iz.tran.setTranID("KAA0641061");
+    $c.iz.tran.noLockScreen();
+    await $c.tran.ASend();
+};
+
+scwin.Button2_OnClick = async function(e) {
+    //승인등록 버튼
+    //1. (S-MVP본부승인등록 : KAA0641461)거래처리
+
+    //등록시고객식별자체크
+    if (custIdnfr.getValue() == "") {
+        $c.iz.data.message("KB-PIN이 없습니다. 조회 후 처리하시기 바랍니다.");
+        serchNo.focus();
+        return false;
+    }
+
+    //매월10일전 2영업일 오류처리
+    if (jobPrhbYn.getValue() == "Y") {
+        $c.iz.data.alert("매월 스타클럽 등급선정일 전 2영업일은 등급선정작업으로 인해 거래가 제한됩니다.", "알림");
+        serchNo.focus();
+        return false;
+    }
+    if (regiRevocDstic2.getValue() == "") {
+        $c.iz.data.alert("등록, 해제를 선택하여 주십시요", "");
+        regiRevocDstic2.focus();
+        return false;
+    }
+    if (regiRevocDstic2.getValue() == "1") {
+        // 등록거래이면서
+        //등록가능고객수 체크
+        if (bbrnChoicGrd.getValue() == '1') {
+            //MVP
+            if (sBrnRAbilNoitm1.getValue() <= 0) {
+                //MVP 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(MVP)", "한도 초과 에러");
+                return false;
+            }
+        } else if (bbrnChoicGrd.getValue() == '2') {
+            //로얄
+            if (sBrnRAbilNoitm2.getValue() <= 0) {
+                //로얄 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(로얄)", "한도 초과 에러");
+                return false;
+            }
+        } else if (bbrnChoicGrd.getValue() == '3') {
+            //골드
+            if (sBrnRAbilNoitm3.getValue() <= 0) {
+                //골드 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(골드)", "한도 초과 에러");
+                return false;
+            }
+        } else if (bbrnChoicGrd.getValue() == '4') {
+            //프리미엄
+            if (sBrnRAbilNoitm4.getValue() <= 0) {
+                //프리미엄 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(프리미엄)", "한도 초과 에러");
+                return false;
+            }
+        }
+    }
+    var CurrData = this.GetScreenControlData();
+
+    //	alert("변경전내용 SavedData ===>"+SavedData, "안내");	
+    //	alert("변경후내용 CurrData  ===>"+CurrData, "안내");		
+
+    if (CurrData == scwin.SavedData) {
+        $c.iz.data.alert("변경사항이 없습니다", "");
+        return false;
+    }
+    $c.iz.tran.setTranID("KAA0641461");
+    $c.iz.tran.noLockScreen();
+    await $c.tran.ASend();
+};
+
+
+scwin.Button3_OnClick = function(e) {
+    //여기에 구현코드를 삽입하세요.
+
+    $c.iz.screen.popup("KJI04811000", "DATALINK");
+    dmndBrncd.setValue(Link.brncd); //부점코드조회
+    dmndBrnName.setValue(Link.brnName); //부점명조회
+};
+
+
+scwin.dmndBrncd_OnKeyTyped = function(e) {
+    if (scwin.LegthStrDAmndBrncd < 4) {
+        dmndBrnName.setValue("");
+    } else {
+        $c.com.getCommonBrnName(dmndBrncd, dmndBrnName);
+    }
+};
+
+
+//등록해제구분(탭1)
+scwin.regiRevocDstic1_OnItemChanged = function(info) {
+    //선정기준 콤보박스 활성화/비활성화
+    if (regiRevocDstic1.getValue() == "2") {
+        choicBase.setDisabled(true); // 선정기준(탭1)
+        bbrnChoicGrd.setDisabled(true);
+    } else {
+        choicBase.setDisabled(false); // 선정기준(탭1)
+        bbrnChoicGrd.setDisabled(false);
+        if (choicBase.setValue("00")) {
+            bbrnChoicGrd.setDisabled(true);
+        }
+    }
+};
+
+//등록해제구분(탭2-법인KB스타)
+scwin.regiYn_tab2_OnItemChanged = function(info) {
+    //선정기준 콤보박스 활성화/비활성화
+    if (regiYn_tab2.getValue() == "2") {
+        coprKsrDstic_tab2.setDisabled(true); // 선정기준(탭2)
+        bbrnChoicGrd_tab2.setDisabled(true);
+    } else {
+        coprKsrDstic_tab2.setDisabled(false); // 선정기준(탭2)
+        bbrnChoicGrd_tab2.setDisabled(false);
+    }
+};
+
+
+// 선정기준
+scwin.choicBase_OnItemChanged = function(info) {
+    switch (choicBase.getValue()) {
+        case "00":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("0-해당무;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(true);
+            break;
+        case "01":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("0-해당무;1-MVP스타;2-로얄스타;3-골드스타;5-프리미엄스타;9-일반고객;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "02":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("0-해당무;1-MVP스타;2-로얄스타;3-골드스타;5-프리미엄스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "03":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "04":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "05":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "06":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("2-로얄스타;3-골드스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "07":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "08":
+            bbrnChoicGrd.removeAll();
+            //bbrnChoicGrd.SetComboItems("2-로얄스타;");
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "09":
+            bbrnChoicGrd.removeAll();
+            //bbrnChoicGrd.SetComboItems("2-로얄스타;5-프리미엄스타;");
+            bbrnChoicGrd.SetComboItems("2-로얄스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "10":
+            bbrnChoicGrd.removeAll();
+            //bbrnChoicGrd.SetComboItems("2-로얄스타;3-골드스타;");
+            bbrnChoicGrd.SetComboItems("3-골드스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "11":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("1-MVP스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        case "12":
+            bbrnChoicGrd.removeAll();
+            bbrnChoicGrd.SetComboItems("0-해당무;1-MVP스타;2-로얄스타;3-골드스타;5-프리미엄스타;");
+            bbrnChoicGrd.setSelectedIndex(0);
+            bbrnChoicGrd.setDisabled(false);
+            break;
+        default:
+    }
+};
+
+
+
+scwin.OnEndTran = async function() {
+    //S-MVP영업점선정고객등록
+    if ($c.iz._tran.tranId == "KAA0641061" && $c.iz._tran.bError == false) {
+        cuniqno.setValue("");
+        selfConfirmNo.setValue(""); //본인확인번호
+        custnm.setValue("");
+        cuniqno.setValue("");
+        custnm.setValue("");
+        custIdnfr.setValue("");
+        custMgtNo.setValue("");
+        ppsnBsnoJntRpsnYn.setValue("");
+        GroupBox1.setValue("");
+        GroupBox2.setValue("");
+        GroupBox_Hidden.setValue(""); //히든 컨트롤 그룹
+
+        $c.iz.tran.setTranID("KAA0441041");
+        $c.iz.tran.noLockScreen();
+        await $c.tran.ASend();
+
+        //조회후 결과값 save
+        scwin.SavedData = this.GetScreenControlData();
+    }
+
+    //법인KB스타대표개인등급선정고객등록
+    if ($c.iz._tran.tranId == "KAA0641661" && $c.iz._tran.bError == false) {
+        serchNo.setValue(mainCustIdnfr_tab2.getValue()); //주고객식별자
+        serchCustIdnfr.setValue(mainCustIdnfr_tab2.getValue()); //주고객식별자
+        serchNoDstcd.setValue('3');
+        cuniqno.setValue("");
+        selfConfirmNo.setValue(""); //본인확인번호
+        custnm.setValue("");
+        cuniqno.setValue("");
+        custnm.setValue("");
+        custIdnfr.setValue("");
+        custMgtNo.setValue("");
+        ppsnBsnoJntRpsnYn.setValue("");
+        GroupBox_Hidden.setValue(""); //히든 컨트롤 그룹
+
+        //법인KB스타 탭
+        GroupBox_Bubin1.setValue("");
+        GroupBox_Bubin2.setValue("");
+        GroupBox_Bubin3.setValue("");
+        GroupBox_Hidden.setValue("");
+        dlt_dataBook.removeAll();
+        coprKsrDstic_tab2.setSelectedIndex(0); //법인KB스타관계구분(선정기준)
+        bbrnChoicGrd_tab2.setSelectedIndex(0); //법인KB스타선정등급(영업점선정등급)
+        regiYn_tab2.setSelectedIndex(0); //법인KB스타 등록해제구분
+
+        coprKsrDstic_tab2.setDisabled(false); //법인KB스타관계구분(선정기준)
+        bbrnChoicGrd_tab2.setDisabled(false); //법인KB스타선정등급구분코드
+        //mainCuniqno_tab2.Enabled = true;		//주고객고유번호
+        mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+        //coprBzmanUniqno_tab2.Enabled = true;	//법인사업자번호
+        coprBzmanUniqno_tab2.setReadOnly(false); //법인사업자번호
+
+        Button_tab2_GetFamily.setDisabled(false); //법인스타 가족정보 불러오기 버튼
+
+        $c.iz.tran.setTranID("KAA0441041");
+        $c.iz.tran.noLockScreen();
+        await $c.tran.ASend();
+
+        //조회후 결과값 save
+        scwin.SavedData = this.GetScreenControlData();
+    }
+
+    //S-MVP영업점선정고객조회
+    if ($c.iz._tran.tranId == "KAA0441041" && $c.iz._tran.bError == false) {
+        //본인확인번호
+        selfConfirmNo.setValue(cuniqno.getValue().substr(0, 7));
+
+        //선정조회구분코드가 K(법인KB스타)인 경우, tab2 열기	
+        if (choicInquryDstcd.getValue() == "K") {
+            TAB1.setSelectedTabIndex(1); //법인KB스타
+        } else {
+            TAB1.setSelectedTabIndex(0); //개인KB스타
+        }
+        if (dataBook.getTotalRow() > 0) {
+            for (var r = 1; r <= dataBook.getTotalRow(); r++) {
+                var row_subCuniqno = dlt_dataBook.getCellData(r, "subCuniqno");
+                dlt_dataBook.setCellData(r, "subSelfConfirmNo", row_subCuniqno.substr(0, 7));
+                var row_mainCuniqno = dlt_dataBook.getCellData(r, "mainCuniqno");
+                dlt_dataBook.setCellData(r, "mainSelfConfirmNo", row_mainCuniqno.substr(0, 7));
+                if (dlt_dataBook.getCellData(r, "regiYn") == '1') {
+                    //등록여부(1:등록,2:해제)
+                    dlt_dataBook.setCellData(r, "regiYnNm", "등록");
+                } else {
+                    dlt_dataBook.setCellData(r, "regiYnNm", "해제");
+                }
+            }
+        }
+        if (dmndBrncd.getValue() != "") {
+            $c.com.getCommonBrnName(dmndBrncd, dmndBrnName);
+        }
+
+        /*
+         * 개인사업자번호로 조회시 공동대표인경우 팝업 OPEN
+         */
+        if (ppsnBsnoJntRpsnYn.getValue() == "1") {
+            Link.cuniqno = serchNo.getValue(); // 고객고유번호
+            $c.iz.screen.popup("KAA04905001", "DATALINK");
+            var tempValue1 = Link.custIdnfr;
+            var tempValue2 = Link.custMgtNo;
+            if (tempValue1 != "" && typeof(tempValue1) != "undefined") {
+                // 고유정보번호 
+                serchNoDstcd.setValue("3");
+                serchNo.setValue(tempValue1 + tempValue2);
+                serchCustIdnfr.setValue(tempValue1);
+                serchCustMgtNo.setValue(tempValue2);
+            }
+        }
+
+
+        //조회한 고객번호로, 기본 값 채워주기(법인KB스타 탭)
+        cuniqno_tab2.setValue(cuniqno.getValue()); //부고객고객번호
+        selfConfirmNo_tab2.setValue(cuniqno_tab2.getValue().substr(0, 7)); //부고객본인확인번호
+        custnm_tab2.setValue(custnm.getValue()); //부고객고객명
+        custIdnfr_tab2.setValue(custIdnfr.getValue()); //부고객고객식별자
+
+        mainCuniqno_tab2.setValue(cuniqno.getValue()); //주고객고유번호
+        mainCustNm_tab2.setValue(custnm.getValue()); //주고객명
+        mainCustIdnfr_tab2.setValue(custIdnfr.getValue()); //주고객식별자
+
+        coprKsrDstic_tab2.setSelectedIndex(1); //법인KB스타관계구분(선정기준) 1:법인대표자 		
+
+        coprKsrDstic_tab2.setDisabled(true); //선정기준
+        //mainCuniqno_tab2.Enabled  = false;	//법인대표자주민번호
+        mainCustIdnfr_tab2.setReadOnly(true); //주고객식별자(법인대표자)
+
+
+        //조회후 결과값 save
+        scwin.SavedData = this.GetScreenControlData();
+    }
+
+    //법인대표자주민번호 및 법인사업자번호 고객검색 후
+    if ($c.iz._tran.tranId == "KAA0490641" && $c.iz._tran.bError == false) {
+        //검색된 고객식별자가 없는 경우
+        if (serchCustIdnfrT.getValue() == "") {
+            if (searchDstic.getValue() == '2') {
+                // 검색구분 2:법인사업자번호
+                $c.iz.data.alert("해당 사업자번호의 고객정보가 존재하지 않습니다.\n입력 고객번호:" + serchCuniqno_bakcup.getValue(), "안내");
+                coprBzmanUniqno_tab2.focus(); //법인사업자번호
+            } else {
+                $c.iz.data.alert("고객정보가 없습니다. 입력한 고객번호를 확인해주세요.\n입력 고객번호:" + serchCuniqno_bakcup.getValue(), "안내");
+                mainCuniqno_tab2.focus(); //법인대표자주민번호
+            }
+        } else {
+            if (searchDstic.getValue() == '1') {
+                // 검색구분 1:법인대표자고객번호
+
+                if (serchCustPtrnClsfiDstcd.getValue() == '1') {
+                    //고객유형분류 1:개인
+
+                    mainCustNm_tab2.setValue(serchCustnm1.getValue()); //법인대표자주민번호 고객명
+                    mainCustIdnfr_tab2.setValue(serchCustIdnfrT.getValue()); //법인대표자주민번호 식별자
+                } else {
+                    mainCustNm_tab2.setValue("");
+                    mainCustIdnfr_tab2.setValue("");
+                    $c.iz.data.alert("개인만 가능합니다. 법인대표자 KB-PIN을 확인해주세요.\n고객번호:" + serchCuniqno.getValue() + ", KB-PIN:" + serchCustIdnfrT.getValue() + ", 고객유형:" + serchCustPtrnClsfiDstcd.getValue(), "안내");
+                    mainCuniqno_tab2.focus(); //법인대표자주민번호
+                }
+            } else if (searchDstic.getValue() == '2') {
+                // 검색구분 2:법인사업자번호
+
+                if (serchCustPtrnClsfiDstcd.getValue() == '4' || //고객유형분류 4:법인사업자
+                    serchCustPtrnClsfiDstcd.getValue() == '5' || //고객유형분류 5:임의단체
+                    serchCustPtrnClsfiDstcd.getValue() == '6' || //고객유형분류 6:해외현지법인
+                    serchCustPtrnClsfiDstcd.getValue() == '7') {
+                    //고객유형분류 7:외국기업
+
+                    coprBzmanNm_tab2.setValue(serchCustnm1.getValue());
+                    coprBzmanIdnfr_tab2.setValue(serchCustIdnfrT.getValue());
+                } else {
+                    coprBzmanNm_tab2.setValue("");
+                    coprBzmanIdnfr_tab2.setValue("");
+                    $c.iz.data.alert("법인사업자 및 임의단체만 가능합니다. 법인사업자번호를 확인해주세요.\n고객번호:" + serchCuniqno.getValue() + ", KB-PIN:" + serchCustIdnfrT.getValue() + ", 고객유형:" + serchCustPtrnClsfiDstcd.getValue(), "안내");
+                    coprBzmanUniqno_tab2.focus(); //법인사업자번호
+                }
+            }
+        }
+    }
+};
+
+
+//******************************* [고객상세] 팝업 OPEN  *******************************
+scwin.Text_cutInfo_OnClick = function(e) {
+    if (custIdnfr.getValue() != "") {
+        Link.serchNo = custIdnfr.getValue() + custMgtNo.getValue();
+        Link.serchNoDstcd = "3";
+        Link.cardCustMgtNo = cardCustMgtNo.getValue();
+        Link.inquryObjctv = "1";
+        $c.iz.screen.popup("KAA04908001", "DATALINK");
+    } else {
+        $c.iz.data.alert("고객정보가 유효하지 않습니다.", "안내");
+        return;
+    }
+};
+
+scwin.Button4_OnClick = function(e) {
+    $c.iz.screen.popup("KAA06410001", "DATALINK");
+};
+
+scwin.Button_tab2_GetFamily_OnClick = function(e) {
+    //법인스타 가족정보 불러오기 버튼
+
+    // 가족관계조회 팝업 호출
+    if (custIdnfr.getValue() != "") {
+        //법인KB 선정등록 그룹박스 초기화
+        scwin.Button_Init_tab2_OnClick();
+        coprKsrDstic_tab2.setDisabled(false); //선정기준
+        //mainCuniqno_tab2.Enabled  = true;	//법인대표자주민번호
+        mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+
+        Link.serchNo = custIdnfr.getValue() + custMgtNo.getValue();
+        Link.serchNoDstcd = "3";
+        //Link.cardCustMgtNo = cardCustMgtNo.Data;
+        //Link.inquryObjctv = "1";
+
+        $c.iz.screen.popup("KAA04129001", "DATALINK");
+
+        //가족관계가 존재하여, 선택한 경우
+        cuniqno_tab2.setValue(Link.cuniqno_tab2); // 부고객고객번호
+        selfConfirmNo_tab2.setValue(cuniqno_tab2.getValue().substr(0, 7)); //부고객본인확인번호
+        custnm_tab2.setValue(Link.custnm_tab2); // 부고객고객명
+        custIdnfr_tab2.setValue(Link.custIdnfr_tab2); // 부고객고객식별자
+
+        coprKsrDstic_tab2.focus(); //선정기준
+    } else {
+        $c.iz.data.alert("고객정보가 유효하지 않습니다.\n조회 후, 거래하세요.", "안내");
+        serchNo.focus();
+        return;
+    }
+};
+
+scwin.dataBook_OnClick = function(Arg1, Arg2, Arg3) {
+    //그리드의 항목을 클릭한 경우
+
+    if (Arg1 > 0) {
+        //그리드 항목을 입력필드로 전송    	
+        cuniqno_tab2.setValue(dlt_dataBook.getCellData(Arg1, "subCuniqno")); //부고객고유번호
+        selfConfirmNo_tab2.setValue(dlt_dataBook.getCellData(Arg1, "subSelfConfirmNo")); //부고객본인확인번호
+        custnm_tab2.setValue(dlt_dataBook.getCellData(Arg1, "subCustNm")); //부고객명
+        custIdnfr_tab2.setValue(dlt_dataBook.getCellData(Arg1, "subCustIdnfr")); //부고객식별자
+
+        coprKsrDstic_tab2.setValue(dlt_dataBook.getCellData(Arg1, "coprKsrDstic")); //법인KB스타관계구분(선정기준)
+        bbrnChoicGrd_tab2.setValue(dlt_dataBook.getCellData(Arg1, "coprKscGrdDstcd")); //법인KB스타선정등급구분
+
+        mainCuniqno_tab2.setValue(dlt_dataBook.getCellData(Arg1, "mainCuniqno")); //주고객고유번호
+        mainCustIdnfr_tab2.setValue(dlt_dataBook.getCellData(Arg1, "mainCustIdnfr")); //주고객식별자
+        mainCustNm_tab2.setValue(dlt_dataBook.getCellData(Arg1, "mainCustNm")); //주고객명
+
+        coprBzmanUniqno_tab2.setValue(dlt_dataBook.getCellData(Arg1, "coprBzmanUniqno")); //법인사업자번호
+        coprBzmanIdnfr_tab2.setValue(dlt_dataBook.getCellData(Arg1, "coprBzmanIdnfr")); //법인사업자식별자
+        coprBzmanNm_tab2.setValue(dlt_dataBook.getCellData(Arg1, "coprBzmanNm")); //법인사업자명
+
+        regiBrncd_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiBrncd")); //등록부점코드
+        regiBrnNm_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiBrnNm")); //등록부점명
+        regiEmpNm_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiEmpNm")); //등록직원명
+        regiEmpid_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiEmpid")); //등록직원번호
+        regiYmd_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiYmd")); //등록년월일
+        regiYn_tab2.setValue(dlt_dataBook.getCellData(Arg1, "regiYn")); //등록여부
+
+        coprKsrDstic_tab2.setDisabled(true); //법인KB스타관계구분(선정기준)
+        bbrnChoicGrd_tab2.setDisabled(true); //법인KB스타선정등급구분코드
+        //mainCuniqno_tab2.Enabled 		= false;	//주고객고유번호
+        if (mainCustIdnfr_tab2.getReadOnly() == false) {
+            mainCustIdnfr_tab2.setReadOnly(true); //주고객식별자(법인대표자)
+        }
+        //coprBzmanUniqno_tab2.Enabled	= false;	//법인사업자번호
+        if (coprBzmanUniqno_tab2.getReadOnly() == false) {
+            coprBzmanUniqno_tab2.setReadOnly(true); //법인사업자번호
+        }
+    }
+};
+
+scwin.Button_Regi_tab2_OnClick = async function(e) {
+    //법인KB스타 등록버튼
+
+    //등록시고객식별자체크
+    if (custIdnfr.getValue() == "") {
+        $c.iz.data.message("KB-PIN이 없습니다. 조회 후 처리하시기 바랍니다.");
+        serchNo.focus();
+        return false;
+    }
+
+    //매월10일전 2영업일 오류처리
+    if (jobPrhbYn.getValue() == "Y") {
+        $c.iz.data.alert("매월 스타클럽 등급선정일 전 2영업일은 등급선정작업으로 인해 거래가 제한됩니다.", "알림");
+        serchNo.focus();
+        return false;
+    }
+
+    //	var CurrData = this.GetScreenControlData();
+    //	if (CurrData == SavedData)  {	
+    //	    Alert("변경사항이 없습니다", "");
+    //        return false;
+    //	}		
+
+    //등록,해제선택
+    if (regiYn_tab2.getValue() == "") {
+        $c.iz.data.alert("등록, 해제를 선택하여 주십시요", "");
+        regiYn_tab2.focus();
+        return false;
+    }
+
+
+    //법인KB스타 등록 거래
+    if (regiYn_tab2.getValue() == '1') {
+        //등록이면서
+
+        //이미 S(S-MVP) 등록상태 체크
+        if (choicInquryDstcd.getValue() == 'S') {
+            $c.iz.data.alert("현재 S-MVP/개인KB스타 영업점선정등급을 보유하고 있는 고객입니다.\n재선정 필요시 기존 선정등록 내역을 해제 처리 후 재등록하시기 바랍니다.", "중복 선정 불가 안내");
+            return false;
+        }
+
+        //등록가능고객수 체크
+        if (bbrnChoicGrd_tab2.getValue() == '1') {
+            //MVP
+            if (kBrnRAbilNoitm1.getValue() <= 0) {
+                //MVP 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(MVP)", "한도 초과 에러");
+                return false;
+            }
+        } else if (bbrnChoicGrd_tab2.getValue() == '2') {
+            //로얄
+            if (kBrnRAbilNoitm2.getValue() <= 0) {
+                //로얄 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(로얄)", "한도 초과 에러");
+                return false;
+            }
+        } else if (bbrnChoicGrd_tab2.getValue() == '3') {
+            //골드
+            if (kBrnRAbilNoitm3.getValue() <= 0) {
+                //골드 한도
+                $c.iz.data.alert("영업점 선정 한도 초과로 등록이 불가합니다.(골드)", "한도 초과 에러");
+                return false;
+            }
+        }
+
+        //고객번호(부고객) 체크
+        if (custIdnfr_tab2.getValue() == '') {
+            $c.iz.data.alert("등록할 고객번호가 없습니다. \"법인스타 가족정보 불러오기\" 버튼을 눌러서, 등록할 고객을 선택하세요.\n가족관계가 없는 경우, \"법인대표자\" 본인만 등록 가능합니다.", "알림");
+            Button_tab2_GetFamily.focus();
+            return false;
+        }
+    } else if (regiYn_tab2.getValue() == '2') {
+        //해제이면서
+
+        //고객번호(부고객) 체크
+        if (custIdnfr_tab2.getValue() == '') {
+            $c.iz.data.alert("고객번호가 없습니다. 선정 정보 리스트에서 해제할 고객을 선택하세요.", "알림");
+            Button_tab2_GetFamily.focus();
+            return false;
+        }
+
+        //해제하는 부점이, 등록점과 동일한지 체크
+        if (regiBrncd_tab2.getValue() != $c.user.getUserProfile('userBzwkBrncd')) {
+            $c.iz.data.alert("등록했던 부점에서만 해제가 가능합니다.\n등록점:" + regiBrncd_tab2.getValue() + ", 거래점:" + $c.user.getUserProfile('userBzwkBrncd'), "안내");
+            return false;
+        }
+
+        //해제버튼 클릭 시 안내 메시지 팝업
+        if ($c.iz.data.confirm("선정 해제시 해당 고객의 등급은 당월 은행 실질등급으로 변경됩니다.\n가족합산등급 등 최고등급을 보유하고 있는 고객일 경우 해당 등급은 매월 10일에 반영되오니 고객응대에 참고하시기 바랍니다.", "해제 안내") != true) {
+            //취소 선택했을 때
+            return false;
+        }
+    }
+
+
+    //법인대표자주민번호 체크
+    if (mainCustIdnfr_tab2.getValue() == '') {
+        $c.iz.data.alert("법인대표자 KB-PIN을 입력해주세요.", "알림");
+        //mainCuniqno_tab2.SetFocus();
+        mainCustIdnfr_tab2.focus(); //주고객식별자(법인대표자)
+        return false;
+    }
+
+    //법인사업자번호 체크
+    if (coprBzmanIdnfr_tab2.getValue() == '') {
+        $c.iz.data.alert("법인사업자번호를 입력해주세요.", "알림");
+        coprBzmanUniqno_tab2.focus();
+        return false;
+    }
+
+    //선정기준 체크
+    if (coprKsrDstic_tab2.getValue() == '00') {
+        // 선정기준 (00:해당무)
+        $c.iz.data.alert("선정기준을 00(해당무)로 등록할 수 없습니다. 선정기준을 확인해주세요.", "알림");
+        coprKsrDstic_tab2.focus();
+        return false;
+    }
+
+    //선정기준 체크(배우자, 자녀인 경우, 부고객번호와 주고객번호가 같을 수가 없다.
+    if (coprKsrDstic_tab2.getValue() != '01') {
+        // 선정기준 (01:법인대표자가 아닌)
+
+        var strKsrName = "";
+        if (coprKsrDstic_tab2.getValue() == '02') {
+            // 선정기준 (02:법인배우자)
+            strKsrName = "법인배우자";
+        } else if (coprKsrDstic_tab2.getValue() == '03') {
+            // 선정기준 (02:법인자녀)
+            strKsrName = "법인자녀";
+        } else {
+            strKsrName = "해당무";
+        }
+
+        //고객고유번호로 비교
+        if (cuniqno_tab2.getValue() == mainCuniqno_tab2.getValue()) {
+            $c.iz.data.alert("등록 대상 고객과 법인대표자가 동일합니다. 선정기준을 확인 후, 다시 거래해주세요.\n입력된 선정기준 : " + strKsrName, "알림");
+            mainCustIdnfr_tab2.focus();
+            return false;
+        }
+        //고객식별자로 비교
+        if (custIdnfr_tab2.getValue() == mainCustIdnfr_tab2.getValue()) {
+            $c.iz.data.alert("등록 대상 고객과 법인대표자가 동일합니다. 선정기준을 확인 후, 다시 거래해주세요.\n입력된 선정기준 : " + strKsrName, "알림");
+            mainCustIdnfr_tab2.focus();
+            return false;
+        }
+    }
+
+    //영업점선정등급 체크
+    if (bbrnChoicGrd_tab2.getValue() == '0') {
+        $c.iz.data.alert("영업점선정등급을 0(해당무)로 등록할 수 없습니다. 영업점선정등급을 확인해주세요.", "알림");
+        bbrnChoicGrd_tab2.focus();
+        return false;
+    }
+    $c.iz.tran.setTranID("KAA0641661");
+    $c.iz.tran.noLockScreen();
+    await $c.tran.ASend();
+};
+
+scwin.coprKsrDstic_tab2_OnItemChanged = function(info) {
+    //법인KB스타관계구분(선정기준)
+
+    if (coprKsrDstic_tab2.getValue() == '01') {
+        //01:법인대표자(본인)
+        if (custIdnfr_tab2.getValue() == "") {
+            //(부)고객식별자가 없는 경우, 조회된 고객번호로 셋팅
+
+            //조회한 고객번호로, 기본 값 채워주기(법인KB스타 탭)
+            cuniqno_tab2.setValue(cuniqno.getValue()); //부고객고객번호
+            selfConfirmNo_tab2.setValue(cuniqno_tab2.getValue().substr(0, 7)); //부고객본인확인번호
+            custnm_tab2.setValue(custnm.getValue()); //부고객고객명
+            custIdnfr_tab2.setValue(custIdnfr.getValue()); //부고객고객식별자
+
+            mainCuniqno_tab2.setValue(cuniqno.getValue()); //주고객고유번호
+            mainCustNm_tab2.setValue(custnm.getValue()); //주고객명
+            mainCustIdnfr_tab2.setValue(custIdnfr.getValue()); //주고객식별자
+        } else {
+            //부고객번호로 법인대표자 고객번호 채우기
+            mainCuniqno_tab2.setValue(cuniqno_tab2.getValue()); //법인대표자주민번호 = (부)고객번호
+            mainCustNm_tab2.setValue(custnm_tab2.getValue()); //법인대표자명		 = (부)고객명
+            mainCustIdnfr_tab2.setValue(custIdnfr_tab2.getValue()); //법인대표자식별자 	 = (부)고객식별자
+        }
+
+        //mainCuniqno_tab2.Enabled = false;	//법인대표자주민번호
+        mainCustIdnfr_tab2.setReadOnly(true); //주고객식별자(법인대표자)
+    } else {
+        //		mainCuniqno_tab2.Clear();	//법인대표자주민번호
+        //		mainCustNm_tab2.Clear();	//법인대표자명
+        //		mainCustIdnfr_tab2.Clear();	//법인대표자고객식별자
+
+        //mainCuniqno_tab2.Enabled = true;	//법인대표자주민번호
+        mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+    }
+};
+
+scwin.Button_mainCuniqno_tab2_OnClick = function(e) {
+    //링크변수초기화
+    Link.cuniqno = "";
+    Link.custIdnfr = mainCustIdnfr_tab2.getValue();
+    Link.custMgtNo = "";
+    $c.iz.screen.popup("KAA04900004", "DATALINK");
+
+    //고객식별자
+    mainCustIdnfr_tab2.setValue(Link.custIdnfr);
+    //고객번호
+    mainCuniqno_tab2.setValue(Link.cuniqno);
+    //고객명
+    mainCustNm_tab2.setValue(Link.custnm);
+};
+
+scwin.Button_mainCuniqno_tab2_OnClick_backup = async function() {
+    //법인대표자고객번호(주고객)의 식별자 찾기
+
+    GroupBox_search.setValue("");
+    if (mainCuniqno_tab2.getValue() == "") {
+        $c.iz.data.message("법인대표자고객번호를 입력해 주십시오.");
+        mainCuniqno_tab2.focus();
+    } else if (mainCuniqno_tab2.getValue() != "") {
+        searchDstic.setValue('1'); //법인대표자고객번호
+
+        serchCuniqno.setValue(mainCuniqno_tab2.getValue()); //법인대표자고객번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+scwin.mainCuniqno_tab2_OnKeyTyped = async function(Key) {
+    //법인대표자고객번호 입력시
+    var strMainCuniqno = mainCuniqno_tab2.getValue();
+    var legthStrMainCuniqno = strMainCuniqno.length;
+    if (legthStrMainCuniqno < 13) {
+        mainCustNm_tab2.setValue("");
+        mainCustIdnfr_tab2.setValue("");
+    } else {
+        GroupBox_search.setValue("");
+        searchDstic.setValue('1'); //법인대표자고객번호
+
+        serchCuniqno.setValue(mainCuniqno_tab2.getValue()); //법인대표자고객번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+scwin.mainCuniqno_tab2_OnValidate = async function(info) {
+    //법인대표자고객번호 입력시
+
+    //그리드의 항목을 클릭하여 선택한 경우, 자동조회기능 SKIP
+    if (dataBook.getFocusedRowIndex() > 0) {
+        return false;
+    }
+
+    //선정기준에 '법인대표자'를 선택하여, 비활성화된 경우, 자동조회기능 SKIP
+    if (mainCuniqno_tab2.getDisabled() == false) {
+        return false;
+    }
+    var strMainCuniqno = mainCuniqno_tab2.getValue();
+    var legthStrMainCuniqno = strMainCuniqno.length;
+    if (legthStrMainCuniqno < 13) {
+        mainCustNm_tab2.setValue("");
+        mainCustIdnfr_tab2.setValue("");
+    } else {
+        GroupBox_search.setValue("");
+        searchDstic.setValue('1'); //법인대표자고객번호
+
+        serchCuniqno.setValue(mainCuniqno_tab2.getValue()); //법인대표자고객번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+
+scwin.Button_coprBzmanUniqno_tab2_OnClick = async function(e) {
+    //법인사업자번호의 식별자 찾기
+
+    GroupBox_search.setValue("");
+    if (coprBzmanUniqno_tab2.getValue() == "") {
+        $c.iz.data.message("법인사업자번호를 입력해 주십시오.");
+        coprBzmanUniqno_tab2.focus();
+    } else if (coprBzmanUniqno_tab2.getValue() != "") {
+        searchDstic.setValue('2'); //법인사업자번호
+
+        serchCuniqno.setValue(coprBzmanUniqno_tab2.getValue()); //법인사업자번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+
+scwin.coprBzmanUniqno_tab2_OnKeyTyped = async function(Key) {
+    //법인사업자번호 입력시
+    var strCoprBzmanUniqno = coprBzmanUniqno_tab2.getValue();
+    var legthCoprBzmanUniqno = strCoprBzmanUniqno.length;
+    if (legthCoprBzmanUniqno < 10) {
+        coprBzmanNm_tab2.setValue("");
+        coprBzmanIdnfr_tab2.setValue("");
+    } else {
+        GroupBox_search.setValue("");
+        searchDstic.setValue('2'); //법인사업자번호
+
+        serchCuniqno.setValue(coprBzmanUniqno_tab2.getValue()); //법인사업자번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+
+scwin.coprBzmanUniqno_tab2_OnValidate = async function(info) {
+    //법인사업자번호 입력시
+
+    //그리드의 항목을 클릭하여 선택한 경우, 자동조회기능 SKIP	
+    if (dataBook.getFocusedRowIndex() > 0) {
+        return false;
+    }
+    var strCoprBzmanUniqno = coprBzmanUniqno_tab2.getValue();
+    var legthCoprBzmanUniqno = strCoprBzmanUniqno.length;
+    if (legthCoprBzmanUniqno < 10) {
+        coprBzmanNm_tab2.setValue("");
+        coprBzmanIdnfr_tab2.setValue("");
+    } else {
+        GroupBox_search.setValue("");
+        searchDstic.setValue('2'); //법인사업자번호
+
+        serchCuniqno.setValue(coprBzmanUniqno_tab2.getValue()); //법인사업자번호
+        serchCuniqno_bakcup.setValue(serchCuniqno.getValue());
+        serchCustIdnfrT.setValue("");
+        serchCustMgtNoT.setValue("");
+        scopDstic.setValue("B");
+        $c.iz.tran.setTranID("KAA0490641");
+        await $c.tran.ASend();
+    }
+};
+
+scwin.Button_Init_tab2_OnClick = function(e) {
+    //법인KB스타-선정등록 그룹 초기화
+    GroupBox_Bubin2.setValue("");
+    coprKsrDstic_tab2.setSelectedIndex(0); //법인KB스타관계구분(선정기준)
+    bbrnChoicGrd_tab2.setSelectedIndex(0); //법인KB스타선정등급(영업점선정등급)
+    regiYn_tab2.setSelectedIndex(0); //법인KB스타 등록해제구분
+
+    coprKsrDstic_tab2.setDisabled(false); //법인KB스타관계구분(선정기준)
+    bbrnChoicGrd_tab2.setDisabled(false); //법인KB스타선정등급구분코드
+    //mainCuniqno_tab2.Enabled 	 = true;	//주고객고유번호
+    mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+    //coprBzmanUniqno_tab2.Enabled = true;	//법인사업자번호
+    coprBzmanUniqno_tab2.setReadOnly(false); //법인사업자번호
+
+    Button_tab2_GetFamily.setDisabled(false); //법인스타 가족정보 불러오기 버튼
+};
+
+scwin.CheckBox_noFamily_OnItemChanged = function(info) {
+    //가족관계 없음 체크박스
+
+    //조회된 고객번호가 있는지 체크
+    if (custIdnfr.getValue() != "") {
+        //가족관계가 없는 경우(본인이 법인사업자 대표자인 경우로 판단)
+        if (CheckBox_noFamily.IsChecked == true) {
+            $c.iz.data.alert("가족관계가 없는 고객인 경우, 법인대표자로만 등록 가능합니다.", "안내");
+
+            //가족관계가 없는 경우(본인이 법인사업자 대표자인 경우로 판단)
+            cuniqno_tab2.setValue(cuniqno.getValue()); //부고객고객번호
+            selfConfirmNo_tab2.setValue(cuniqno_tab2.getValue().substr(0, 7)); //부고객본인확인번호
+            custnm_tab2.setValue(custnm.getValue()); //부고객고객명
+            custIdnfr_tab2.setValue(custIdnfr.getValue()); //부고객고객식별자
+
+            mainCuniqno_tab2.setValue(cuniqno.getValue()); //주고객고유번호
+            mainCustNm_tab2.setValue(custnm.getValue()); //주고객명
+            mainCustIdnfr_tab2.setValue(custIdnfr.getValue()); //주고객식별자
+
+            coprKsrDstic_tab2.setSelectedIndex(1); //법인KB스타관계구분(선정기준) 1:법인대표자
+            coprKsrDstic_tab2.setDisabled(true); //법인KB스타관계구분(선정기준)
+
+            //mainCuniqno_tab2.Enabled  = false;	//주고객고유번호
+            mainCustIdnfr_tab2.setReadOnly(true); //주고객식별자(법인대표자)
+
+            Button_tab2_GetFamily.setDisabled(true); //법인스타 가족정보 불러오기 버튼
+        } else {
+            coprKsrDstic_tab2.setSelectedIndex(0); //법인KB스타관계구분(선정기준) 1:법인대표자
+            coprKsrDstic_tab2.setDisabled(false); //법인KB스타관계구분(선정기준)
+
+            //mainCuniqno_tab2.Enabled  = true;		//주고객고유번호
+            mainCustIdnfr_tab2.setReadOnly(false); //주고객식별자(법인대표자)
+
+            Button_tab2_GetFamily.setDisabled(false); //법인스타 가족정보 불러오기 버튼
+        }
+    } else {
+        $c.iz.data.alert("고객정보가 유효하지 않습니다.\n조회 후, 거래하세요.", "안내");
+        CheckBox_noFamily.setValue("");
+        serchNo.focus();
+        return;
+    }
+};
+
+scwin.TAB1_OnItemChanged = function(info) {
+    //탭을 바꿀때, 기등록정보 종류 체크
+
+    if (choicInquryDstcd.getValue() == 'S') {
+        //S : S-MVP/개인KB스타가 등록되어 있는 고객
+        if (TAB1.getSelectedTabIndex() == '1') {
+            //법인KB스타대표/가족 탭
+            $c.iz.data.alert("현재 S-MVP/개인KB스타 영업점선정등급을 보유하고 있는 고객입니다.\n재선정 필요시 기존 선정등록 내역을 해제 처리 후 재등록하시기 바랍니다.", "중복 선정 불가 안내");
+            return false;
+        }
+    } else if (choicInquryDstcd.getValue() == 'K') {
+        //K : 법인KB스타가 등록되어 있는 고객
+        if (TAB1.getSelectedTabIndex() == '0') {
+            //S-MVP/개인KB스타 탭
+            $c.iz.data.alert("현재 법인KB스타대표/가족 등급을 보유하고 있는 고객입니다.\n재선정 필요시 기존 선정등록 내역을 해제 처리 후 재등록하시기 바랍니다.", "중복 선정 불가 안내");
+            return false;
+        }
+    }
+};
+
+scwin.Button5_OnClick = function(e) {
+    //링크변수초기화
+    Link.cuniqno = "";
+    Link.custIdnfr = "";
+    Link.custMgtNo = "";
+    $c.iz.screen.popup("KAA04900004", "DATALINK");
+
+    //고객식별자
+    serchCustIdnfr.setValue(Link.custIdnfr);
+    //고객관리번호
+    serchCustMgtNo.setValue(Link.custMgtNo);
+};
+
+scwin.mainCustIdnfr_tab2_OnValidate = function(info) {
+    //여기에 구현코드를 삽입하세요.
+    scwin.Button_mainCuniqno_tab2_OnClick();
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" pagewidth="" pageheight="" ev:onpageunload="scwin.onpageunload">
+		<xf:group meta_screenName="영업점특별선정고객정보" meta_screenId="KAA06410000" groupcocd="KB0" scncall="0600410" customclass="Kes" style="background-color:rgb(255,255,255); width:1075px; height:1098px;" screentype="AType" meta_author="지용수" meta_user="S012069(윤강민)" meata_date="2008/11/21 10:27:40" savezorder="0" snaptogrid="0" gridstepx="6" gridstepy="6" gridshape="Line" screendivide="3" gridoldstepx="4" gridoldstepy="4" adjusttheme="1" conversion="131101" class="content_body conversion">
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:6px; width:1056px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="Group_search" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="Group_search" hierarchy="Group_search">
+				<w2:textbox ctype="Desc" style="position:absolute; left:805px; top:0px; width:251px; height:48px; align:middleleft; text-align:middleleft; borderline; font-size:10.5pt; letter-spacing:0; font-weight:700; font-family:나눔고딕;" id="Desc1_16" tabIndex="1" autosize="0" transparent="0" imagealign="MiddleLeft" linespace="2" label="업무수행&amp;nbsp;목적&amp;nbsp;외&amp;nbsp;고객정보&amp;nbsp;조회&amp;nbsp;절대&amp;nbsp;금지" orgid="Desc1_16" hierarchy="Desc1_16" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:12px; width:118px; height:24px; color:rgb(0,0,0);" id="Text25" tabIndex="2" autosize="0" label="검색구분" orgid="Text25" hierarchy="Text25" class="kb_MiddleRight"/>
+				<xf:select1 ctype="Combo" style="position:absolute; left:126px; top:12px; width:34px; height:24px; color:rgb(0,0,0);" id="serchNoDstcd" indicator="검색번호구분코드" tabIndex="3" mandatory="true" class="req" displayMode="value" inittype="Key" initvalue="3" index="0" items="2=계좌번호;3=KB-PIN;" appearance="minimal" ev:onviewchange="scwin.serchNoDstcd_OnItemChanged" orgid="serchNoDstcd" hierarchy="serchNoDstcd" selectedIndex="0" ref="data:dma_KAA06410000.serchNoDstcd">
+					<xf:choices>
+						<xf:item>
+							<xf:label><![CDATA[계좌번호]]></xf:label>
+							<xf:value><![CDATA[2]]></xf:value>
+						</xf:item>
+						<xf:item>
+							<xf:label><![CDATA[KB-PIN]]></xf:label>
+							<xf:value><![CDATA[3]]></xf:value>
+						</xf:item>
+					</xf:choices>
+				</xf:select1>
+				<xf:input ctype="Edit" style="position:absolute; left:162px; top:12px; width:144px; height:24px; display:none;" id="serchNo" indicator="검색번호" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" mandatory="true" class="req" ninemode="0" orgid="serchNo" hierarchy="serchNo" ref="data:dma_KAA06410000.serchNo"/>
+				<xf:input ctype="Edit" style="position:absolute; left:162px; top:12px; width:81px; height:24px;" id="serchCustIdnfr" tabIndex="5" editFormat="99999-99999" maxlength="11" placeholder="KB-PIN" ninemode="0" orgid="serchCustIdnfr" hierarchy="serchCustIdnfr"/>
+				<xf:input ctype="Edit" style="position:absolute; left:246px; top:12px; width:39px; height:24px; text-align:right;" id="serchCustMgtNo" tabIndex="6" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" placeholder="관리번호" ninemode="0" rightalign="1" orgid="serchCustMgtNo" hierarchy="serchCustMgtNo"/>
+				<xf:trigger ctype="Button" style="position:absolute; left:288px; top:12px; width:24px; height:24px;" id="Button5" tooltip="고객정보번호검색" tabIndex="7" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button5_OnClick" orgid="Button5" hierarchy="Button5">
+					<xf:label><![CDATA[]]></xf:label>
+				</xf:trigger>
+				<w2:textbox ctype="Text" style="position:absolute; left:348px; top:12px; width:108px; height:24px; color:rgb(0,0,0); display:none;" id="Text25_29" tabIndex="8" autosize="0" label="카드고객관리번호" orgid="Text25_29" hierarchy="Text25_29" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:462px; top:12px; width:39px; height:24px; display:none;" id="cardCustMgtNo" indicator="카드고객관리번호" tabIndex="9" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" ninemode="0" orgid="cardCustMgtNo" hierarchy="cardCustMgtNo" ref="data:dma_KAA06410000.cardCustMgtNo"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:60px; width:1056px; height:48px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="Group_info" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="Group_info" hierarchy="Group_info">
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:12px; width:118px; height:24px; color:rgb(0,0,0);" id="Text_selfConfirmNo" tabIndex="1" autosize="0" linespace="2" label="본인확인번호" orgid="Text_selfConfirmNo" hierarchy="Text_selfConfirmNo" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:126px; top:12px; width:53px; height:24px;" id="selfConfirmNo" indicator="본인확인번호" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" readOnly="true" ninemode="0" orgid="selfConfirmNo" hierarchy="selfConfirmNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:348px; top:12px; width:48px; height:24px; color:rgb(0,0,0);" id="Text_custnm" tabIndex="3" autosize="0" linespace="2" label="고객명" orgid="Text_custnm" hierarchy="Text_custnm" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:402px; top:12px; width:136px; height:24px;" id="custnm" indicator="고객명" tabIndex="4" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" readOnly="true" ninemode="0" orgid="custnm" hierarchy="custnm" ref="data:dma_KAA06410000.custnm"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:702px; top:12px; width:48px; height:24px; color:rgb(0,0,0);" id="Text_custIdnfr" tabIndex="5" autosize="0" linespace="2" label="KB-PIN" orgid="Text_custIdnfr" hierarchy="Text_custIdnfr" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:756px; top:12px; width:81px; height:24px;" id="custIdnfr" indicator="고객식별자" tabIndex="6" editFormat="99999-99999" maxlength="11" readOnly="true" ninemode="0" orgid="custIdnfr" hierarchy="custIdnfr" ref="data:dma_KAA06410000.custIdnfr"/>
+				<xf:input ctype="Edit" style="position:absolute; left:840px; top:12px; width:39px; height:24px;" id="custMgtNo" indicator="고객관리번호" tabIndex="7" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" readOnly="true" ninemode="0" orgid="custMgtNo" hierarchy="custMgtNo" ref="data:dma_KAA06410000.custMgtNo"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:948px; top:12px; width:93px; height:24px; color:rgb(0,0,128);" id="Text_cutInfo" tabIndex="8" autosize="0" linespace="2" label="[고객정보]" ev:onclick="scwin.Text_cutInfo_OnClick" orgid="Text_cutInfo" hierarchy="Text_cutInfo" class="kb_MiddleRight"/>
+			</xf:group>
+			<xf:group ctype="GroupBox" style="position:absolute; left:1080px; top:54px; width:276px; height:462px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox_search" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_search" hierarchy="GroupBox_search">
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:18px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_scopDstic" tabIndex="1" autosize="0" linespace="2" label="영역구분" orgid="Text_scopDstic" hierarchy="Text_scopDstic" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:18px; width:11px; height:24px;" id="scopDstic" indicator="영역구분" tabIndex="2" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="scopDstic" hierarchy="scopDstic" ref="data:dma_KAA06410000.scopDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:48px; width:128px; height:24px; color:rgb(0,0,0);" id="Text_serchCustIdnfr" tabIndex="3" autosize="0" linespace="2" label="검색고객식별자" orgid="Text_serchCustIdnfr" hierarchy="Text_serchCustIdnfr" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:48px; width:74px; height:24px;" id="serchCustIdnfrT" indicator="검색고객식별자" tabIndex="4" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999999" maxlength="10" ninemode="0" orgid="serchCustIdnfrT" hierarchy="serchCustIdnfrT" ref="data:dma_KAA06410000.serchCustIdnfrT"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:78px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_serchCustMgtNo" tabIndex="5" autosize="0" linespace="2" label="검색고객관리번호" orgid="Text_serchCustMgtNo" hierarchy="Text_serchCustMgtNo" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:78px; width:39px; height:24px;" id="serchCustMgtNoT" indicator="검색고객관리번호" tabIndex="6" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999" maxlength="5" ninemode="0" orgid="serchCustMgtNoT" hierarchy="serchCustMgtNoT" ref="data:dma_KAA06410000.serchCustMgtNoT"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:108px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_serchCuniqno" tabIndex="7" autosize="0" linespace="2" label="검색고객고유번호" orgid="Text_serchCuniqno" hierarchy="Text_serchCuniqno" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:108px; width:113px; height:24px;" id="serchCuniqno" indicator="검색고객고유번호" tabIndex="8" autosize="0" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" ninemode="0" orgid="serchCuniqno" hierarchy="serchCuniqno" ref="data:dma_KAA06410000.serchCuniqno"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:138px; width:93px; height:24px; color:rgb(0,0,0);" id="Text_serchCustnm" tabIndex="9" autosize="0" linespace="2" label="검색고객명" orgid="Text_serchCustnm" hierarchy="Text_serchCustnm" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:138px; width:113px; height:24px;" id="serchCustnm" indicator="검색고객명" tabIndex="10" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" ninemode="0" orgid="serchCustnm" hierarchy="serchCustnm" ref="data:dma_KAA06410000.serchCustnm"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:168px; width:18px; height:24px;" id="serchDtalsCustPtrnClsfiDstcd" indicator="검색세부고객유형분류구분코드" tabIndex="11" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" ninemode="0" orgid="serchDtalsCustPtrnClsfiDstcd" hierarchy="serchDtalsCustPtrnClsfiDstcd" ref="data:dma_KAA06410000.serchDtalsCustPtrnClsfiDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:168px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_serchDtalsCustPtrnClsfiDstcd" tabIndex="12" autosize="0" linespace="2" label="검색세부고객유형" orgid="Text_serchDtalsCustPtrnClsfiDstcd" hierarchy="Text_serchDtalsCustPtrnClsfiDstcd" class="kb_MiddleRight"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:198px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_serchCuniqnoDstcd" tabIndex="13" autosize="0" linespace="2" label="검색고유번호구분" orgid="Text_serchCuniqnoDstcd" hierarchy="Text_serchCuniqnoDstcd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:198px; width:18px; height:24px;" id="serchCuniqnoDstcd" indicator="검색고객고유번호구분코드" tabIndex="14" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99" maxlength="2" ninemode="0" orgid="serchCuniqnoDstcd" hierarchy="serchCuniqnoDstcd" ref="data:dma_KAA06410000.serchCuniqnoDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:228px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_serchCustPtrnClsfiDstcd" tabIndex="15" autosize="0" linespace="2" label="검색고객유형분류" orgid="Text_serchCustPtrnClsfiDstcd" hierarchy="Text_serchCustPtrnClsfiDstcd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:228px; width:11px; height:24px;" id="serchCustPtrnClsfiDstcd" indicator="고객유형분류구분" tabIndex="16" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="serchCustPtrnClsfiDstcd" hierarchy="serchCustPtrnClsfiDstcd" ref="data:dma_KAA06410000.serchCustPtrnClsfiDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:258px; width:102px; height:24px; color:rgb(0,0,0);" id="Text_serchCustnm1" tabIndex="17" autosize="0" linespace="2" label="검색고객명1" orgid="Text_serchCustnm1" hierarchy="Text_serchCustnm1" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:258px; width:113px; height:24px;" id="serchCustnm1" indicator="검색고객명1" tabIndex="18" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" ninemode="0" orgid="serchCustnm1" hierarchy="serchCustnm1" ref="data:dma_KAA06410000.serchCustnm1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:288px; width:102px; height:24px; color:rgb(0,0,0);" id="Text_serchCustnm2" tabIndex="19" autosize="0" linespace="2" label="검색고객명2" orgid="Text_serchCustnm2" hierarchy="Text_serchCustnm2" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:288px; width:113px; height:24px;" id="serchCustnm2" indicator="검색고객명2" tabIndex="20" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="40" imeMode="반자" ninemode="0" orgid="serchCustnm2" hierarchy="serchCustnm2" ref="data:dma_KAA06410000.serchCustnm2"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:318px; width:76px; height:24px; color:rgb(0,0,0); display:none;" id="Text_searchDstic" tabIndex="21" autosize="0" linespace="2" label="검색구분" orgid="Text_searchDstic" hierarchy="Text_searchDstic" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:318px; width:11px; height:24px;" id="searchDstic" indicator="영역구분" tabIndex="22" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" ninemode="0" orgid="searchDstic" hierarchy="searchDstic"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:348px; width:153px; height:24px; color:rgb(0,0,0);" id="Text_serchCuniqno_bakcup" tabIndex="23" autosize="0" linespace="2" label="검색고객고유_백업" orgid="Text_serchCuniqno_bakcup" hierarchy="Text_serchCuniqno_bakcup" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:156px; top:348px; width:113px; height:24px;" id="serchCuniqno_bakcup" indicator="검색고객고유번호_백업" tabIndex="24" autosize="0" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="99999999999999999999" maxlength="20" ninemode="0" orgid="serchCuniqno_bakcup" hierarchy="serchCuniqno_bakcup"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:6px; top:384px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_cuniqno" tabIndex="25" autosize="0" linespace="2" label="고객번호" orgid="Text_cuniqno" hierarchy="Text_cuniqno" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:126px; top:384px; width:142px; height:24px;" id="cuniqno" indicator="고객번호" tabIndex="26" autosize="0" editDisplayChar="*" editFormat="999999-{9999999}" maxlength="14" readOnly="true" multipattern="사업자/주민번호" MPatternMaskingLen="7" allowChar="a-z,A-Z,0-9" ninemode="0" orgid="cuniqno" hierarchy="cuniqno" ref="data:dma_KAA06410000.cuniqno"/>
+			</xf:group>
+			<xf:group class="sub_title_tab">
+				<w2:tabControl ctype="TAB" style="position:absolute; left:12px; top:128px; width:1056px; height:786px; color:rgb(0,0,0);" tab="4" id="TAB1" tabIndex="4" 탭수="2" intemplate="0" ev:onviewchange="scwin.TAB1_OnItemChanged" orgid="TAB1" hierarchy="TAB1" useMoveNextTabFocus="false" confirmTrueAction="exist" useConfirmMessage="false" confirmFalseAction="new">
+					<w2:tabs label="개인KB스타" id="tabs1" style="" disabled="false"/>
+					<w2:tabs label="법인KB스타대표/가족" id="tabs2" style="" disabled="false"/>
+					<w2:content ctype="TABPAGE" style="position:absolute; left:0px; top:0px; width:1056px; height:786px;" tab="0" label="개인KB스타" tabIndex="0" tabno="0">
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:42px; width:1033px; height:300px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox1" hierarchy="TAB1.GroupBox1">
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:12px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_hQChoicGrd" tabIndex="1" autosize="0" linespace="2" label="본부선정등급" orgid="Text_hQChoicGrd" hierarchy="TAB1.Text_hQChoicGrd" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:150px; top:12px; width:112px; height:24px; color:rgb(0,0,0);" id="hQChoicGrd" indicator="본인실질등급구분코드" tabIndex="2" disabled="true" length="10" displayMode="label" index="0" items="1=MVP스타;2=로얄스타;3=골드스타;5=프리미엄스타;6=일반고객;9=일반고객;" appearance="minimal" orgid="hQChoicGrd" hierarchy="TAB1.hQChoicGrd" selectedIndex="0" ref="data:dma_KAA06410000.hQChoicGrd">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[MVP스타]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[로얄스타]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[골드스타]]></xf:label>
+										<xf:value><![CDATA[3]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[프리미엄스타]]></xf:label>
+										<xf:value><![CDATA[5]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[일반고객]]></xf:label>
+										<xf:value><![CDATA[6]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[일반고객]]></xf:label>
+										<xf:value><![CDATA[9]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:textbox ctype="Text" style="position:absolute; left:540px; top:12px; width:108px; height:24px; color:rgb(0,0,0);" id="Text_mgtbrn" tabIndex="3" autosize="0" linespace="2" label="관리부점" orgid="Text_mgtbrn" hierarchy="TAB1.Text_mgtbrn" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:654px; top:12px; width:32px; height:24px;" id="mgtBrncd" indicator="관리부점코드" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="mgtBrncd" hierarchy="TAB1.mgtBrncd" ref="data:dma_KAA06410000.mgtBrncd"/>
+							<xf:input ctype="Edit" style="position:absolute; left:690px; top:12px; width:176px; height:24px;" id="mgtbrnName" indicator="관리부점명" tabIndex="5" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" readOnly="true" ninemode="0" orgid="mgtbrnName" hierarchy="TAB1.mgtbrnName" ref="data:dma_KAA06410000.mgtbrnName"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:42px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_selfDpst3MnthsAvbal" tabIndex="6" autosize="0" linespace="2" label="본인수신3개월평잔" orgid="Text_selfDpst3MnthsAvbal" hierarchy="TAB1.Text_selfDpst3MnthsAvbal" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:150px; top:42px; width:123px; height:24px; text-align:right;" id="dpst3MnthsAvbal" indicator="수신3개월평잔" tabIndex="7" dataType="number" displayFormat="#,###,###,###,###" maxlength="17" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" orgid="dpst3MnthsAvbal" hierarchy="TAB1.dpst3MnthsAvbal" ref="data:dma_KAA06410000.dpst3MnthsAvbal"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:540px; top:42px; width:108px; height:24px; color:rgb(0,0,0);" id="Text_self3zMnthsErnAmt" tabIndex="8" autosize="0" linespace="2" label="본인3개월수익액" orgid="Text_self3zMnthsErnAmt" hierarchy="TAB1.Text_self3zMnthsErnAmt" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:654px; top:42px; width:123px; height:24px; text-align:right;" id="n3MnthszErnAmt" indicator="3개월수익액" tabIndex="9" dataType="number" displayFormat="#,###,###,###,###" maxlength="17" readOnly="true" ninemode="0" insertcomma="1" rightalign="1" orgid="n3MnthszErnAmt" hierarchy="TAB1.n3MnthszErnAmt" ref="data:dma_KAA06410000.n3MnthszErnAmt"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:72px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_regiBrnName" tabIndex="10" autosize="0" linespace="2" label="등록부점명" orgid="Text_regiBrnName" hierarchy="TAB1.Text_regiBrnName" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:150px; top:72px; width:32px; height:24px;" id="regiBrn" indicator="등록부점" tabIndex="11" disabled="true" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" ninemode="0" orgid="regiBrn" hierarchy="TAB1.regiBrn" ref="data:dma_KAA06410000.regiBrn"/>
+							<xf:input ctype="Edit" style="position:absolute; left:186px; top:72px; width:176px; height:24px;" id="regiBrnName" indicator="등록부점명" tabIndex="12" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" readOnly="true" ninemode="0" orgid="regiBrnName" hierarchy="TAB1.regiBrnName" ref="data:dma_KAA06410000.regiBrnName"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:540px; top:72px; width:108px; height:24px; color:rgb(0,0,0);" id="Text_regiEmnm" tabIndex="13" autosize="0" linespace="2" label="등록직원명" orgid="Text_regiEmnm" hierarchy="TAB1.Text_regiEmnm" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:654px; top:72px; width:219px; height:24px;" id="regiEmnm" indicator="등록직원명" tabIndex="14" autosize="0" allowChar="가-힣" validateOnInput="true" maxlength="52" imeMode="반자" readOnly="true" ninemode="0" orgid="regiEmnm" hierarchy="TAB1.regiEmnm" ref="data:dma_KAA06410000.regiEmnm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:876px; top:72px; width:53px; height:24px;" id="regiEmp" indicator="등록직원" tabIndex="15" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" readOnly="true" ninemode="0" orgid="regiEmp" hierarchy="TAB1.regiEmp" ref="data:dma_KAA06410000.regiEmp"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:102px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_regiDte" tabIndex="16" autosize="0" linespace="2" label="등록일자" orgid="Text_regiDte" hierarchy="TAB1.Text_regiDte" class="kb_MiddleRight"/>
+							<w2:inputCalendar ctype="Edit" style="position:absolute; left:150px; top:102px; width:74px; height:24px;" id="regiDte" indicator="등록일자" tabIndex="17" editFormat="yyyy/MM/dd" maxlength="10" readOnly="true" ninemode="0" orgid="regiDte" hierarchy="TAB1.regiDte" ref="data:dma_KAA06410000.regiDte"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:540px; top:102px; width:108px; height:24px; color:rgb(0,0,0);" id="Text_regiRevocDstic1" tabIndex="18" autosize="0" linespace="2" label="등록해제구분" orgid="Text_regiRevocDstic1" hierarchy="TAB1.Text_regiRevocDstic1" class="kb_MiddleRight"/>
+							<xf:select1 ctype="RadioButton" style="position:absolute; left:654px; top:102px; height:24px; color:rgb(0,0,0);" id="regiRevocDstic1" indicator="등록해제구분1" tabIndex="19" index="0" items="등록;1;TRUE;TRUE;|해제;2;TRUE;FALSE;|" appearance="full" ev:onviewchange="scwin.regiRevocDstic1_OnItemChanged" orgid="regiRevocDstic1" hierarchy="TAB1.regiRevocDstic1" renderType="radiogroup" selectedIndex="0" ref="data:dma_KAA06410000.regiRevocDstic1">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[등록]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[해제]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:132px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_choicBase" tabIndex="20" autosize="0" linespace="2" label="선정기준" orgid="Text_choicBase" hierarchy="TAB1.Text_choicBase" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:150px; top:132px; width:215px; height:24px; color:rgb(0,0,0);" id="choicBase" indicator="선정기준" tabIndex="21" length="2" maxdropdownitems="20" dropdownstyle="DropDownList" index="0" items="00=해당무;01=우량가망고객;02=예비우대고객;03=성실납세자;04=사회지도층인사;05=당행전직임원;07=당행현직임원;08=당행전직부점장;09=당행퇴직직원(팀장);10=당행퇴직직원(그외직원);11=당행전직본부장;" appearance="minimal" ev:onviewchange="scwin.choicBase_OnItemChanged" orgid="choicBase" hierarchy="TAB1.choicBase" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KAA06410000.choicBase">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[해당무]]></xf:label>
+										<xf:value><![CDATA[00]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[우량가망고객]]></xf:label>
+										<xf:value><![CDATA[01]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[예비우대고객]]></xf:label>
+										<xf:value><![CDATA[02]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[성실납세자]]></xf:label>
+										<xf:value><![CDATA[03]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[사회지도층인사]]></xf:label>
+										<xf:value><![CDATA[04]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행전직임원]]></xf:label>
+										<xf:value><![CDATA[05]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행현직임원]]></xf:label>
+										<xf:value><![CDATA[07]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행전직부점장]]></xf:label>
+										<xf:value><![CDATA[08]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행퇴직직원(팀장)]]></xf:label>
+										<xf:value><![CDATA[09]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행퇴직직원(그외직원)]]></xf:label>
+										<xf:value><![CDATA[10]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[당행전직본부장]]></xf:label>
+										<xf:value><![CDATA[11]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<xf:trigger ctype="Button" style="position:absolute; left:370px; top:132px; width:119px; height:24px;" id="Button4" tabIndex="22" text="선정기준상세" type="button" class="btn_def1" ev:onclick="scwin.Button4_OnClick" orgid="Button4" hierarchy="TAB1.Button4">
+								<xf:label><![CDATA[선정기준상세]]></xf:label>
+							</xf:trigger>
+							<w2:textbox ctype="Text" style="position:absolute; left:540px; top:132px; width:108px; height:24px; color:rgb(0,0,0);" id="Text_bbrnChoicGrd" tabIndex="23" autosize="0" linespace="2" label="영업점선정등급" orgid="Text_bbrnChoicGrd" hierarchy="TAB1.Text_bbrnChoicGrd" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:654px; top:132px; width:35px; height:24px; color:rgb(0,0,0);" id="bbrnChoicGrd" indicator="영업점선정등급" tabIndex="24" index="0" appearance="minimal" orgid="bbrnChoicGrd" hierarchy="TAB1.bbrnChoicGrd" ref="data:dma_KAA06410000.bbrnChoicGrd"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:162px; width:311px; height:24px; align:middleleft; text-align:middleleft;" id="Desc1" tabIndex="25" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;KB스타클럽&amp;nbsp;고객인&amp;nbsp;경우는&amp;nbsp;관리점에서만&amp;nbsp;선정가능" orgid="Desc1" hierarchy="TAB1.Desc1" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:186px; width:367px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2" tabIndex="26" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;개인고객이외는&amp;nbsp;영업점선정&amp;nbsp;KB스타클럽&amp;nbsp;고객으로&amp;nbsp;등록&amp;nbsp;불가" orgid="Desc2" hierarchy="TAB1.Desc2" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:210px; width:504px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_6" tabIndex="27" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;매월&amp;nbsp;스타클럽&amp;nbsp;등급선정일&amp;nbsp;전&amp;nbsp;2영업일은&amp;nbsp;등급선정작업으로&amp;nbsp;인해&amp;nbsp;거래가&amp;nbsp;제한됩니다." orgid="Desc2_6" hierarchy="TAB1.Desc2_6" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:234px; width:576px; height:24px; align:middleleft; text-align:middleleft;" id="Desc3" tabIndex="28" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;선정기준을&amp;nbsp;확인하고,&amp;nbsp;영업점장&amp;nbsp;결재&amp;nbsp;후&amp;nbsp;등록(선정기준:『KB스타클럽&amp;nbsp;고객제도&amp;nbsp;운영매뉴얼』&amp;nbsp;참조)" orgid="Desc3" hierarchy="TAB1.Desc3" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+							<w2:anchor ctype="LinkText" style="position:absolute; left:24px; top:264px; width:313px; height:24px; display:none;" id="LinkText1" tabIndex="29" linktype="URL" href="http://emanual2.kbstar.com/EManual2/Doc.aspx?doc_id=15896" class="btn_def_link" orgid="LinkText1" hierarchy="TAB1.LinkText1" outerDiv="false">
+								<xf:label><![CDATA[KB스타클럽 영업점 선정/해지 신청서]]></xf:label>
+							</w2:anchor>
+							<xf:trigger ctype="Button" style="position:absolute; left:924px; top:264px; width:96px; height:24px;" id="Button1" tabIndex="30" showimage="0" text="고객등록" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button1_OnClick" orgid="Button1" hierarchy="TAB1.Button1">
+								<xf:label><![CDATA[고객등록]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:354px; width:1032px; height:133px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox_Gaein3" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Gaein3" hierarchy="TAB1.GroupBox_Gaein3">
+							<w2:textbox ctype="Text" style="position:absolute; left:102px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit1" tabIndex="1" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Limit1" hierarchy="TAB1.Text_Tab1_Brn_Limit1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:144px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit2" tabIndex="2" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Limit2" hierarchy="TAB1.Text_Tab1_Brn_Limit2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:198px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit3" tabIndex="3" autosize="0" label="골드" orgid="Text_Tab1_Brn_Limit3" hierarchy="TAB1.Text_Tab1_Brn_Limit3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:234px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit4" tabIndex="4" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Limit4" hierarchy="TAB1.Text_Tab1_Brn_Limit4" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:462px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use1" tabIndex="5" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Use1" hierarchy="TAB1.Text_Tab1_Brn_Use1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:510px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use2" tabIndex="6" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Use2" hierarchy="TAB1.Text_Tab1_Brn_Use2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use3" tabIndex="7" autosize="0" label="골드" orgid="Text_Tab1_Brn_Use3" hierarchy="TAB1.Text_Tab1_Brn_Use3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:600px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use4" tabIndex="8" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Use4" hierarchy="TAB1.Text_Tab1_Brn_Use4" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:810px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain1" tabIndex="9" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Remain1" hierarchy="TAB1.Text_Tab1_Brn_Remain1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:852px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain2" tabIndex="10" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Remain2" hierarchy="TAB1.Text_Tab1_Brn_Remain2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:900px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain3" tabIndex="11" autosize="0" label="골드" orgid="Text_Tab1_Brn_Remain3" hierarchy="TAB1.Text_Tab1_Brn_Remain3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:942px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain4" tabIndex="12" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Remain4" hierarchy="TAB1.Text_Tab1_Brn_Remain4" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:42px; top:49px; width:45px; height:39px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit" tabIndex="13" label="영업점&lt;/br&gt;한&amp;nbsp;&amp;nbsp;도" orgid="Text_Tab1_Brn_Limit" hierarchy="TAB1.Text_Tab1_Brn_Limit" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:390px; top:48px; width:59px; height:42px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use" tabIndex="14" autosize="0" label="선&amp;nbsp;&amp;nbsp;정&lt;/br&gt;고객수" orgid="Text_Tab1_Brn_Use" hierarchy="TAB1.Text_Tab1_Brn_Use" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:720px; top:48px; width:76px; height:42px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain" tabIndex="15" autosize="0" label="등록가능&lt;/br&gt;고&amp;nbsp;객&amp;nbsp;수" orgid="Text_Tab1_Brn_Remain" hierarchy="TAB1.Text_Tab1_Brn_Remain" escape="false" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:102px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnLimt1Noitm" indicator="S부점한도1건수" tabIndex="16" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnLimt1Noitm" hierarchy="TAB1.sBrnLimt1Noitm" ref="data:dma_KAA06410000.sBrnLimt1Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:156px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnLimt2Noitm" indicator="S부점한도2건수" tabIndex="17" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnLimt2Noitm" hierarchy="TAB1.sBrnLimt2Noitm" ref="data:dma_KAA06410000.sBrnLimt2Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:210px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnLimt3Noitm" indicator="S부점한도3건수" tabIndex="18" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnLimt3Noitm" hierarchy="TAB1.sBrnLimt3Noitm" ref="data:dma_KAA06410000.sBrnLimt3Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:264px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnLimt4Noitm" indicator="S부점한도4건수" tabIndex="19" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnLimt4Noitm" hierarchy="TAB1.sBrnLimt4Noitm" ref="data:dma_KAA06410000.sBrnLimt4Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:468px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnUseQanty1" indicator="S부점사용량1" tabIndex="20" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnUseQanty1" hierarchy="TAB1.sBrnUseQanty1" ref="data:dma_KAA06410000.sBrnUseQanty1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:522px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnUseQanty2" indicator="S부점사용량2" tabIndex="21" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnUseQanty2" hierarchy="TAB1.sBrnUseQanty2" ref="data:dma_KAA06410000.sBrnUseQanty2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:570px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnUseQanty3" indicator="S부점사용량3" tabIndex="22" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnUseQanty3" hierarchy="TAB1.sBrnUseQanty3" ref="data:dma_KAA06410000.sBrnUseQanty3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:630px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnUseQanty3_3" indicator="S부점사용량4" tabIndex="23" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnUseQanty3_3" hierarchy="TAB1.sBrnUseQanty3_3" ref="data:dma_KAA06410000.sBrnUseQanty3_3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:810px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnRAbilNoitm1" indicator="S부점등록가능건수1" tabIndex="24" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnRAbilNoitm1" hierarchy="TAB1.sBrnRAbilNoitm1" ref="data:dma_KAA06410000.sBrnRAbilNoitm1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:864px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnRAbilNoitm2" indicator="S부점등록가능건수2" tabIndex="25" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnRAbilNoitm2" hierarchy="TAB1.sBrnRAbilNoitm2" ref="data:dma_KAA06410000.sBrnRAbilNoitm2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:912px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnRAbilNoitm3" indicator="S부점등록가능건수3" tabIndex="26" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnRAbilNoitm3" hierarchy="TAB1.sBrnRAbilNoitm3" ref="data:dma_KAA06410000.sBrnRAbilNoitm3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:972px; top:66px; width:32px; height:24px; text-align:right;" id="sBrnRAbilNoitm4" indicator="S부점등록가능건수4" tabIndex="27" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="sBrnRAbilNoitm4" hierarchy="TAB1.sBrnRAbilNoitm4" ref="data:dma_KAA06410000.sBrnRAbilNoitm4"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:97px; width:634px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_tab2_6_5" tabIndex="28" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;선정한도&amp;nbsp;:&amp;nbsp;영업점별&amp;nbsp;실질등급별&amp;nbsp;고객수의&amp;nbsp;10%&amp;nbsp;이내,&amp;nbsp;단&amp;nbsp;등급별&amp;nbsp;고객수&amp;nbsp;200명&amp;nbsp;미만시&amp;nbsp;20명까지&amp;nbsp;선정&amp;nbsp;가능" orgid="Desc2_tab2_6_5" hierarchy="TAB1.Desc2_tab2_6_5" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox id="title_GroupBox_Gaein3" class="title_h2" label="개인KB스타&amp;nbsp;영업점&amp;nbsp;선정&amp;nbsp;한도" escape="false"/>
+						</xf:group>
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:492px; width:1032px; height:138px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox2" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox2" hierarchy="TAB1.GroupBox2">
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:13px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_dmndBrn" tabIndex="1" autosize="0" linespace="2" label="요청부점" orgid="Text_dmndBrn" hierarchy="TAB1.Text_dmndBrn" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:90px; top:12px; width:32px; height:24px;" id="dmndBrncd" indicator="요청부점코드" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" ninemode="0" ev:onkeyup="scwin.dmndBrncd_OnKeyTyped" orgid="dmndBrncd" hierarchy="TAB1.dmndBrncd" ref="data:dma_KAA06410000.dmndBrncd"/>
+							<xf:trigger ctype="Button" style="position:absolute; left:126px; top:12px; width:24px; height:24px;" id="Button3" tabIndex="3" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button3_OnClick" orgid="Button3" hierarchy="TAB1.Button3">
+								<xf:label><![CDATA[]]></xf:label>
+							</xf:trigger>
+							<xf:input ctype="Edit" style="position:absolute; left:156px; top:12px; width:121px; height:24px;" id="dmndBrnName" indicator="요청점명" tabIndex="4" autosize="0" editFormat="H(20)" maxlength="20" minlength="20" readOnly="true" ninemode="0" orgid="dmndBrnName" hierarchy="TAB1.dmndBrnName"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:541px; top:13px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_regiRevocDstic2" tabIndex="5" autosize="0" linespace="2" label="등록해제구분" orgid="Text_regiRevocDstic2" hierarchy="TAB1.Text_regiRevocDstic2" class="kb_MiddleRight"/>
+							<xf:select1 ctype="RadioButton" style="position:absolute; left:632px; top:12px; height:24px; color:rgb(0,0,0);" id="regiRevocDstic2" indicator="등록해제구분2" tabIndex="6" index="0" items="등록;1;TRUE;TRUE;|해제;2;TRUE;FALSE;|" appearance="full" orgid="regiRevocDstic2" hierarchy="TAB1.regiRevocDstic2" renderType="radiogroup" selectedIndex="0" ref="data:dma_KAA06410000.regiRevocDstic2">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[등록]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[해제]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:43px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_athorDte" tabIndex="7" autosize="0" linespace="2" label="승인일자" orgid="Text_athorDte" hierarchy="TAB1.Text_athorDte" class="kb_MiddleRight"/>
+							<w2:inputCalendar ctype="Edit" style="position:absolute; left:90px; top:42px; width:74px; height:24px;" id="athorDte" indicator="승인일자" tabIndex="8" editFormat="yyyy/MM/dd" maxlength="10" minlength="8" readOnly="true" ninemode="0" orgid="athorDte" hierarchy="TAB1.athorDte" ref="data:dma_KAA06410000.athorDte"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:541px; top:43px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_athorStus" tabIndex="9" autosize="0" linespace="2" label="승인상태" orgid="Text_athorStus" hierarchy="TAB1.Text_athorStus" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:632px; top:42px; width:82px; height:24px; color:rgb(0,0,0);" id="athorStus" indicator="승인상태" tabIndex="10" initvalue="01" index="0" items="1=승인;2=거절;3=취소;" appearance="minimal" orgid="athorStus" hierarchy="TAB1.athorStus" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KAA06410000.athorStus">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[승인]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[거절]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[취소]]></xf:label>
+										<xf:value><![CDATA[3]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:73px; width:60px; height:24px; color:rgb(0,0,0);" id="Text_athorBrn" tabIndex="11" autosize="0" linespace="2" label="승인부점" orgid="Text_athorBrn" hierarchy="TAB1.Text_athorBrn" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:90px; top:72px; width:144px; height:24px;" id="athorBrnName" indicator="승인부점명" tabIndex="12" editFormat="H(20)" maxlength="20" readOnly="true" ninemode="0" orgid="athorBrnName" hierarchy="TAB1.athorBrnName" ref="data:dma_KAA06410000.athorBrnName"/>
+							<xf:input ctype="Edit" style="position:absolute; left:240px; top:72px; width:32px; height:24px; display:none;" id="athorBrncd" indicator="승인부점코드" tabIndex="13" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" ninemode="0" orgid="athorBrncd" hierarchy="TAB1.athorBrncd" ref="data:dma_KAA06410000.athorBrncd"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:541px; top:73px; width:84px; height:24px; color:rgb(0,0,0);" id="Text_athorEmp" tabIndex="14" autosize="0" linespace="2" label="승인직원" orgid="Text_athorEmp" hierarchy="TAB1.Text_athorEmp" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:632px; top:72px; width:179px; height:24px;" id="athorEmnm" indicator="승인직원명" tabIndex="15" editFormat="H(25)" maxlength="25" readOnly="true" ninemode="0" orgid="athorEmnm" hierarchy="TAB1.athorEmnm" ref="data:dma_KAA06410000.athorEmnm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:816px; top:72px; width:53px; height:24px; display:none;" id="athorEmpid" indicator="승인직원번호" tabIndex="16" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" initValue="T001202" ninemode="0" orgid="athorEmpid" hierarchy="TAB1.athorEmpid" ref="data:dma_KAA06410000.athorEmpid"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:30px; top:102px; width:251px; height:24px; align:middleleft; text-align:middleleft;" id="Desc4" tabIndex="17" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;해당화면은&amp;nbsp;개인고객부&amp;nbsp;전용화면입니다." orgid="Desc4" hierarchy="TAB1.Desc4" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+							<xf:trigger ctype="Button" style="position:absolute; left:924px; top:102px; width:96px; height:24px;" id="Button2" tabIndex="18" showimage="0" text="승인등록" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button2_OnClick" orgid="Button2" hierarchy="TAB1.Button2">
+								<xf:label><![CDATA[승인등록]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:642px; width:1032px; height:132px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="4" id="GroupBox_Gaein4" tabIndex="4" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Gaein4" hierarchy="TAB1.GroupBox_Gaein4">
+							<w2:textbox ctype="Text" style="position:absolute; left:108px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit1_26" tabIndex="1" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Limit1_26" hierarchy="TAB1.Text_Tab1_Brn_Limit1_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:162px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit2_26" tabIndex="2" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Limit2_26" hierarchy="TAB1.Text_Tab1_Brn_Limit2_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:228px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit3_26" tabIndex="3" autosize="0" label="골드" orgid="Text_Tab1_Brn_Limit3_26" hierarchy="TAB1.Text_Tab1_Brn_Limit3_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:270px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit4_26" tabIndex="4" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Limit4_26" hierarchy="TAB1.Text_Tab1_Brn_Limit4_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:444px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use1_26" tabIndex="5" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Use1_26" hierarchy="TAB1.Text_Tab1_Brn_Use1_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:498px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use2_26" tabIndex="6" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Use2_26" hierarchy="TAB1.Text_Tab1_Brn_Use2_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use3_26" tabIndex="7" autosize="0" label="골드" orgid="Text_Tab1_Brn_Use3_26" hierarchy="TAB1.Text_Tab1_Brn_Use3_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:606px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use4_26" tabIndex="8" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Use4_26" hierarchy="TAB1.Text_Tab1_Brn_Use4_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:780px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain1_26" tabIndex="9" autosize="0" label="MVP" orgid="Text_Tab1_Brn_Remain1_26" hierarchy="TAB1.Text_Tab1_Brn_Remain1_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:840px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain2_26" tabIndex="10" autosize="0" label="로얄" orgid="Text_Tab1_Brn_Remain2_26" hierarchy="TAB1.Text_Tab1_Brn_Remain2_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:900px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain3_26" tabIndex="11" autosize="0" label="골드" orgid="Text_Tab1_Brn_Remain3_26" hierarchy="TAB1.Text_Tab1_Brn_Remain3_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:948px; top:36px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain4_26" tabIndex="12" autosize="0" label="프리미엄" orgid="Text_Tab1_Brn_Remain4_26" hierarchy="TAB1.Text_Tab1_Brn_Remain4_26" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:48px; width:58px; height:39px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Limit_26" tabIndex="13" autosize="0" label="본부부서&lt;/br&gt;한&amp;nbsp;&amp;nbsp;도" orgid="Text_Tab1_Brn_Limit_26" hierarchy="TAB1.Text_Tab1_Brn_Limit_26" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:366px; top:48px; width:59px; height:42px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Use_26" tabIndex="14" autosize="0" label="선&amp;nbsp;&amp;nbsp;정&lt;/br&gt;고객수" orgid="Text_Tab1_Brn_Use_26" hierarchy="TAB1.Text_Tab1_Brn_Use_26" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:696px; top:48px; width:76px; height:42px; color:rgb(0,0,0);" id="Text_Tab1_Brn_Remain_26" tabIndex="15" autosize="0" label="등록가능&lt;/br&gt;고&amp;nbsp;객&amp;nbsp;수" orgid="Text_Tab1_Brn_Remain_26" hierarchy="TAB1.Text_Tab1_Brn_Remain_26" escape="false" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:102px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnLimt1Noitm" indicator="H부점한도1건수" tabIndex="16" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnLimt1Noitm" hierarchy="TAB1.hBrnLimt1Noitm" ref="data:dma_KAA06410000.hBrnLimt1Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:168px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnLimt2Noitm" indicator="H부점한도2건수" tabIndex="17" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnLimt2Noitm" hierarchy="TAB1.hBrnLimt2Noitm" ref="data:dma_KAA06410000.hBrnLimt2Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:228px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnLimt3Noitm" indicator="H부점한도3건수" tabIndex="18" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnLimt3Noitm" hierarchy="TAB1.hBrnLimt3Noitm" ref="data:dma_KAA06410000.hBrnLimt3Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:294px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnLimt4Noitm" indicator="H부점한도4건수" tabIndex="19" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnLimt4Noitm" hierarchy="TAB1.hBrnLimt4Noitm" ref="data:dma_KAA06410000.hBrnLimt4Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:438px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnUseQanty1" indicator="H부점사용량1" tabIndex="20" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnUseQanty1" hierarchy="TAB1.hBrnUseQanty1" ref="data:dma_KAA06410000.hBrnUseQanty1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:504px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnUseQanty2" indicator="H부점사용량2" tabIndex="21" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnUseQanty2" hierarchy="TAB1.hBrnUseQanty2" ref="data:dma_KAA06410000.hBrnUseQanty2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:564px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnUseQanty3" indicator="H부점사용량3" tabIndex="22" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnUseQanty3" hierarchy="TAB1.hBrnUseQanty3" ref="data:dma_KAA06410000.hBrnUseQanty3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:630px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnUseQanty3_3" indicator="H부점사용량4" tabIndex="23" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnUseQanty3_3" hierarchy="TAB1.hBrnUseQanty3_3" ref="data:dma_KAA06410000.hBrnUseQanty3_3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:780px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnRAbilNoitm1" indicator="H부점등록가능건수1" tabIndex="24" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnRAbilNoitm1" hierarchy="TAB1.hBrnRAbilNoitm1" ref="data:dma_KAA06410000.hBrnRAbilNoitm1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:846px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnRAbilNoitm2" indicator="H부점등록가능건수2" tabIndex="25" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnRAbilNoitm2" hierarchy="TAB1.hBrnRAbilNoitm2" ref="data:dma_KAA06410000.hBrnRAbilNoitm2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:906px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnRAbilNoitm3" indicator="H부점등록가능건수3" tabIndex="26" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnRAbilNoitm3" hierarchy="TAB1.hBrnRAbilNoitm3" ref="data:dma_KAA06410000.hBrnRAbilNoitm3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:972px; top:66px; width:46px; height:24px; text-align:right;" id="hBrnRAbilNoitm4" indicator="H부점등록가능건수4" tabIndex="27" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="######" maxlength="6" readOnly="true" ninemode="0" rightalign="1" orgid="hBrnRAbilNoitm4" hierarchy="TAB1.hBrnRAbilNoitm4" ref="data:dma_KAA06410000.hBrnRAbilNoitm4"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:97px; width:285px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_tab2_6_5_5" tabIndex="28" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;선정한도&amp;nbsp;:&amp;nbsp;전행&amp;nbsp;최고등급&amp;nbsp;고객수의&amp;nbsp;10%&amp;nbsp;이내" orgid="Desc2_tab2_6_5_5" hierarchy="TAB1.Desc2_tab2_6_5_5" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox id="title_GroupBox_Gaein4" class="title_h2" label="본부부서&amp;nbsp;선정&amp;nbsp;한도" escape="false"/>
+						</xf:group>
+					</w2:content>
+					<w2:content ctype="TABPAGE" style="position:absolute; left:0px; top:0px; width:1056px; height:786px;" tab="0" label="법인KB스타대표/가족" tabIndex="0" tabno="1">
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:42px; width:1032px; height:180px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="1" id="GroupBox_Bubin1" tabIndex="1" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Bubin1" hierarchy="TAB1.GroupBox_Bubin1">
+							<xf:group class="grd_wrap">
+								<w2:gridView ctype="IBSheet" style="position:absolute; left:12px; top:42px; width:1010px; height:127px; background-color:rgb(255,255,255); color:rgb(0,0,0); align:left; font-size:10pt; letter-spacing:0; font-weight:400;" id="dataBook" tabIndex="1" tabstop="1" enterstop="1" autoFit="none" container="0" disabled="false" visible="1" paper="0" adjusttheme="1" controlmode="Sheet" sheetwidth="1008" sheetheight="127" comboviewtype="FORMAT" stripedpattern="1" sumvisible="0" editable="0" mergesheet="msNone" headbackcolor="#f7f2e8" databackcolor="#ffffff" dataaltanatebackcolor="#f9f9f9" editablecolor="#ffffff" uneditablecolor="#efebef" selectbackcolor="#d0e2fc" sheetoutlinecolor="#cccccc" sheetbackcolor="#ffffff" outlinecolor="#cccccc" inlinecolor="#cccccc" notnullbackcolor="#cccccc" hiddenbackcolor="#aca899" editablecolordiff="0" datarowheight="24" headrowheight="36" rowheightmin="24" relativeprint="0" repeatprintcount="0" trantype="0" appendmode="0" autoseq="0" showsortuserarrow="1" wordwrap="0" ellipsis="1" contextmenu="1" multiselection="0" selectionmode="smSelectionRow" recvcoltitle="0" scrollbar="Both" gridline="glFlat" encryption="0" printuse="1" avgvisible="0" minvisible="0" maxvisible="0" selectrowposition="FIRST" sumrowsorder="MIN|MAX|SUM|AVG" autocolwidth="0" stripedlinegap="1" controltypeshow="0" sendrow="0" scrolltrack="1" orgid="dataBook" hierarchy="TAB1.dataBook" ev:onclick="scwin.dataBook_OnClick" dataList="data:dlt_dataBook">
+									<w2:caption id="caption1" style="" value="this is a grid caption."/>
+									<w2:header id="header1" style="">
+										<w2:row id="" style="">
+											<w2:column id="column1" inputType="text" value="선정사유" width="86"/>
+											<w2:column id="column2" inputType="text" value="고객번호" width="102"/>
+											<w2:column id="column3" inputType="text" value="본인확인번호" width="103"/>
+											<w2:column id="column4" inputType="text" value="KB-PIN" width="92"/>
+											<w2:column id="column5" inputType="text" value="고객명" width="75"/>
+											<w2:column id="column6" inputType="text" value="구분" width="61"/>
+											<w2:column id="column7" inputType="text" value="등록부점" width="97"/>
+											<w2:column id="column8" inputType="text" value="등록직원" width="73"/>
+											<w2:column id="column9" inputType="text" value="등록일" width="82"/>
+											<w2:column id="column10" inputType="text" value="관리부점" width="82"/>
+											<w2:column id="column11" inputType="text" value="법인대표&lt;br/&gt;선정등급" width="76"/>
+											<w2:column id="column12" inputType="text" value="자격해제&lt;br/&gt;예정일" width="82"/>
+											<w2:column id="column13" inputType="text" value="법인사업자&lt;br/&gt;KB-PIN" width="103"/>
+											<w2:column id="column14" inputType="text" value="법인&lt;br/&gt;사업자번호" width="97"/>
+											<w2:column id="column15" inputType="text" value="법인사업자명" width="120"/>
+											<w2:column id="column16" inputType="text" value="법인대표자&lt;br/&gt;고객번호" width="114"/>
+											<w2:column id="column17" inputType="text" value="법인대표자&lt;br/&gt;본인확인번호" width="103"/>
+											<w2:column id="column18" inputType="text" value="법인대표자&lt;br/&gt;KB-PIN" width="105"/>
+											<w2:column id="column19" inputType="text" value="해제부점" width="96"/>
+											<w2:column id="column20" inputType="text" value="해제직원" width="75"/>
+											<w2:column id="column21" inputType="text" value="해제일" width="84"/>
+											<w2:column id="column22" inputType="text" value="선정사유코드" width="114"/>
+											<w2:column id="column23" inputType="text" value="주고객명" width="120"/>
+											<w2:column id="column24" inputType="text" value="등록부점코드" width="105"/>
+											<w2:column id="column25" inputType="text" value="등록직원명" width="120"/>
+											<w2:column id="column26" inputType="text" value="등록시각" width="75"/>
+											<w2:column id="column27" inputType="text" value="해제직원명" width="120"/>
+											<w2:column id="column28" inputType="text" value="해제부점코드" width="102"/>
+											<w2:column id="column29" inputType="text" value="해제시각" width="79"/>
+											<w2:column id="column30" inputType="text" value="법인대표선정등급구분" width="171"/>
+											<w2:column id="column31" inputType="text" value="주고객최고고객구분" width="153"/>
+											<w2:column id="column32" inputType="text" value="주고객최고고객구분명" width="164"/>
+											<w2:column id="column33" inputType="text" value="주고객관리점코드" width="136"/>
+											<w2:column id="column34" inputType="text" value="주고객관리점명" width="126"/>
+											<w2:column id="column35" inputType="text" value="부고객최고고객구분" width="152"/>
+											<w2:column id="column36" inputType="text" value="부고객관리부점코드" width="146"/>
+											<w2:column id="column37" inputType="text" value="등록여부" width="78"/>
+										</w2:row>
+									</w2:header>
+									<w2:gBody id="gBody1" style="">
+										<w2:row id="" style="">
+											<w2:column id="coprKsrDsticNm" inputType="text" width="86" hidden="false"/>
+											<w2:column id="subCuniqno" inputType="text" width="102" hidden="true"/>
+											<w2:column id="subSelfConfirmNo" inputType="text" width="103" hidden="false"/>
+											<w2:column id="subCustIdnfr" inputType="text" width="92" hidden="false"/>
+											<w2:column id="subCustNm" inputType="text" width="75" hidden="false"/>
+											<w2:column id="regiYnNm" inputType="text" width="61" hidden="false"/>
+											<w2:column id="regiBrnNm" inputType="text" width="97" hidden="false"/>
+											<w2:column id="regiEmpid" inputType="text" width="73" hidden="false"/>
+											<w2:column id="regiYmd" inputType="text" width="82" hidden="false"/>
+											<w2:column id="subCMgtBrnNm" inputType="text" width="82" hidden="false"/>
+											<w2:column id="coprKscGrdNm" inputType="text" width="76" hidden="false"/>
+											<w2:column id="qulfiRSchedYmd" inputType="text" width="82" hidden="false"/>
+											<w2:column id="coprBzmanIdnfr" inputType="text" width="103" hidden="false"/>
+											<w2:column id="coprBzmanUniqno" inputType="text" width="97" hidden="false"/>
+											<w2:column id="coprBzmanNm" inputType="text" width="120" hidden="false"/>
+											<w2:column id="mainCuniqno" inputType="text" width="114" hidden="true"/>
+											<w2:column id="mainSelfConfirmNo" inputType="text" width="103" hidden="false"/>
+											<w2:column id="mainCustIdnfr" inputType="text" width="105" hidden="false"/>
+											<w2:column id="revocBrnNm" inputType="text" width="96" hidden="false"/>
+											<w2:column id="revocEmpid" inputType="text" width="75" hidden="false"/>
+											<w2:column id="revocYmd" inputType="text" width="84" hidden="false"/>
+											<w2:column id="coprKsrDstic" inputType="text" width="114" hidden="true"/>
+											<w2:column id="mainCustNm" inputType="text" width="120" hidden="true"/>
+											<w2:column id="regiBrncd" inputType="text" width="105" hidden="true"/>
+											<w2:column id="regiEmpNm" inputType="text" width="120" hidden="true"/>
+											<w2:column id="regiHms" inputType="text" width="75" hidden="true"/>
+											<w2:column id="revocEmpNm" inputType="text" width="120" hidden="true"/>
+											<w2:column id="revocBrncd" inputType="text" width="102" hidden="true"/>
+											<w2:column id="revocHms" inputType="text" width="79" hidden="true"/>
+											<w2:column id="coprKscGrdDstcd" inputType="text" width="171" hidden="true"/>
+											<w2:column id="mainHgstCDstcd" inputType="text" width="153" hidden="true"/>
+											<w2:column id="mainHgstCDstNm" inputType="text" width="164" hidden="true"/>
+											<w2:column id="mainCMgtBrncd" inputType="text" width="136" hidden="true"/>
+											<w2:column id="mainCMgtBrnNm" inputType="text" width="126" hidden="true"/>
+											<w2:column id="subHgstCDstcd" inputType="text" width="152" hidden="true"/>
+											<w2:column id="subCMgtBrncd" inputType="text" width="146" hidden="true"/>
+											<w2:column id="regiYn" inputType="text" width="78" hidden="true"/>
+										</w2:row>
+									</w2:gBody>
+								</w2:gridView>
+							</xf:group>
+							<w2:textbox id="title_GroupBox_Bubin1" class="title_h2" label="법인KB스타&amp;nbsp;대표&amp;nbsp;개인등급&amp;nbsp;선정&amp;nbsp;정보" escape="false"/>
+						</xf:group>
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:234px; width:1032px; height:333px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="2" id="GroupBox_Bubin2" tabIndex="2" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Bubin2" hierarchy="TAB1.GroupBox_Bubin2">
+							<w2:textbox ctype="Text" style="position:absolute; left:27px; top:42px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_cuniqno_tab2" tabIndex="1" autosize="0" linespace="2" label="본인확인번호" orgid="Text_cuniqno_tab2" hierarchy="TAB1.Text_cuniqno_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:150px; top:42px; width:53px; height:24px;" id="selfConfirmNo_tab2" indicator="등록대상 본인확인번호" tabIndex="2" allowChar="a-z,A-Z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" readOnly="true" ninemode="0" orgid="selfConfirmNo_tab2" hierarchy="TAB1.selfConfirmNo_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:288px; top:42px; width:48px; height:24px; color:rgb(0,0,0);" id="Text_custIdnfr_tab2" tabIndex="3" autosize="0" linespace="2" label="KB-PIN" orgid="Text_custIdnfr_tab2" hierarchy="TAB1.Text_custIdnfr_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:342px; top:42px; width:81px; height:24px;" id="custIdnfr_tab2" indicator="KB-PIN" tabIndex="4" editFormat="99999-99999" maxlength="11" readOnly="true" ninemode="0" orgid="custIdnfr_tab2" hierarchy="TAB1.custIdnfr_tab2" ref="data:dma_KAA06410000.custIdnfr_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:468px; top:42px; width:48px; height:24px; color:rgb(0,0,0);" id="Text_custnm_tab2" tabIndex="5" autosize="0" linespace="2" label="고객명" orgid="Text_custnm_tab2" hierarchy="TAB1.Text_custnm_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:522px; top:42px; width:136px; height:24px;" id="custnm_tab2" indicator="고객명" tabIndex="6" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" ninemode="0" orgid="custnm_tab2" hierarchy="TAB1.custnm_tab2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:660px; top:42px; width:102px; height:24px; display:none;" id="cuniqno_tab2" indicator="고객번호" tabIndex="7" editDisplayChar="*" editFormat="999999-{9999999}" maxlength="14" readOnly="true" multipattern="사업자/주민번호" MPatternMaskingLen="7" allowChar="a-z,A-Z,0-9" ninemode="0" orgid="cuniqno_tab2" hierarchy="TAB1.cuniqno_tab2"/>
+							<xf:trigger ctype="Button" style="position:absolute; left:768px; top:42px; width:252px; height:24px;" id="Button_tab2_GetFamily" tabIndex="8" showimage="0" text="법인스타 가족정보 불러오기" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button_tab2_GetFamily_OnClick" orgid="Button_tab2_GetFamily" hierarchy="TAB1.Button_tab2_GetFamily">
+								<xf:label><![CDATA[법인스타 가족정보 불러오기]]></xf:label>
+							</xf:trigger>
+							<w2:textbox ctype="Text" style="position:absolute; left:27px; top:73px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_choicBase_tab2" tabIndex="9" autosize="0" linespace="2" label="선정기준" orgid="Text_choicBase_tab2" hierarchy="TAB1.Text_choicBase_tab2" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:150px; top:72px; width:131px; height:24px; color:rgb(0,0,0);" id="coprKsrDstic_tab2" indicator="법인KB스타관계구분" tabIndex="10" length="2" dropdownstyle="DropDownList" index="0" items="00=해당무;01=법인대표자;02=법인배우자;03=법인자녀;" appearance="minimal" ev:onviewchange="scwin.coprKsrDstic_tab2_OnItemChanged" orgid="coprKsrDstic_tab2" hierarchy="TAB1.coprKsrDstic_tab2" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KAA06410000.coprKsrDstic_tab2">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[해당무]]></xf:label>
+										<xf:value><![CDATA[00]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[법인대표자]]></xf:label>
+										<xf:value><![CDATA[01]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[법인배우자]]></xf:label>
+										<xf:value><![CDATA[02]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[법인자녀]]></xf:label>
+										<xf:value><![CDATA[03]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<xf:input ctype="Edit" style="position:absolute; left:288px; top:72px; width:102px; height:24px; display:none;" id="mainCuniqno_tab2" indicator="법인대표자주민번호" tabIndex="11" editFormat="999999-9999999" maxlength="14" readOnly="true" ninemode="0" ev:onchange="scwin.mainCuniqno_tab2_OnValidate" orgid="mainCuniqno_tab2" hierarchy="TAB1.mainCuniqno_tab2" ev:onkeyup="scwin.mainCuniqno_tab2_OnKeyTyped"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:72px; width:96px; height:24px; color:rgb(0,0,0);" id="Text_bbrnChoicGrd_tab2" tabIndex="12" autosize="0" linespace="2" label="영업점선정등급" orgid="Text_bbrnChoicGrd_tab2" hierarchy="TAB1.Text_bbrnChoicGrd_tab2" class="kb_MiddleRight"/>
+							<xf:select1 ctype="Combo" style="position:absolute; left:660px; top:72px; width:110px; height:24px; color:rgb(0,0,0);" id="bbrnChoicGrd_tab2" indicator="법인KB스타선정등급구분코드" tabIndex="13" index="0" items="0=해당무;1=MVP스타;2=로얄스타;3=골드스타;" appearance="minimal" orgid="bbrnChoicGrd_tab2" hierarchy="TAB1.bbrnChoicGrd_tab2" selectedIndex="0" displayMode="value delim label" delimiter="&#45;" ref="data:dma_KAA06410000.bbrnChoicGrd_tab2">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[해당무]]></xf:label>
+										<xf:value><![CDATA[0]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[MVP스타]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[로얄스타]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[골드스타]]></xf:label>
+										<xf:value><![CDATA[3]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<xf:input ctype="Edit" style="position:absolute; left:780px; top:72px; width:81px; height:24px; display:none;" id="coprBzmanIdnfr_tab2" indicator="법인사업자식별자" tabIndex="14" editFormat="99999-99999" maxlength="11" readOnly="true" ninemode="0" orgid="coprBzmanIdnfr_tab2" hierarchy="TAB1.coprBzmanIdnfr_tab2" ref="data:dma_KAA06410000.coprBzmanIdnfr_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:27px; top:102px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_mainCuniqno_tab2" tabIndex="15" autosize="0" label="법인대표자&amp;nbsp;KB-PIN" orgid="Text_mainCuniqno_tab2" hierarchy="TAB1.Text_mainCuniqno_tab2" escape="false" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:150px; top:102px; width:81px; height:24px;" id="mainCustIdnfr_tab2" indicator="법인대표자 KB-PIN" tabIndex="16" editFormat="99999-99999" maxlength="11" ninemode="0" ev:onchange="scwin.mainCustIdnfr_tab2_OnValidate" orgid="mainCustIdnfr_tab2" hierarchy="TAB1.mainCustIdnfr_tab2" ref="data:dma_KAA06410000.mainCustIdnfr_tab2"/>
+							<xf:trigger ctype="Button" style="position:absolute; left:234px; top:102px; width:24px; height:24px;" id="Button_mainCuniqno_tab2" tabIndex="17" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button_mainCuniqno_tab2_OnClick" orgid="Button_mainCuniqno_tab2" hierarchy="TAB1.Button_mainCuniqno_tab2">
+								<xf:label><![CDATA[]]></xf:label>
+							</xf:trigger>
+							<xf:input ctype="Edit" style="position:absolute; left:264px; top:102px; width:152px; height:24px;" id="mainCustNm_tab2" indicator="주고객고객명" tabIndex="18" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" ninemode="0" orgid="mainCustNm_tab2" hierarchy="TAB1.mainCustNm_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:102px; width:96px; height:24px; color:rgb(0,0,0);" id="Text_coprBzmanUniqno_tab2" tabIndex="19" autosize="0" label="법인사업자번호" orgid="Text_coprBzmanUniqno_tab2" hierarchy="TAB1.Text_coprBzmanUniqno_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:660px; top:102px; width:88px; height:24px;" id="coprBzmanUniqno_tab2" indicator="법인사업자번호" tabIndex="20" editFormat="999-99-99999" maxlength="12" ninemode="0" ev:onchange="scwin.coprBzmanUniqno_tab2_OnValidate" orgid="coprBzmanUniqno_tab2" hierarchy="TAB1.coprBzmanUniqno_tab2" ev:onkeyup="scwin.coprBzmanUniqno_tab2_OnKeyTyped"/>
+							<xf:trigger ctype="Button" style="position:absolute; left:750px; top:102px; width:24px; height:24px;" id="Button_coprBzmanUniqno_tab2" tabIndex="21" imagealign="MiddleCenter" imagefit="1" gradientstyle="없음" gradientendcolor="12117744" enableimage="icon_search.gif" disableimage="icon_searchD.gif" type="button" class="btn_ico_search" ev:onclick="scwin.Button_coprBzmanUniqno_tab2_OnClick" orgid="Button_coprBzmanUniqno_tab2" hierarchy="TAB1.Button_coprBzmanUniqno_tab2">
+								<xf:label><![CDATA[]]></xf:label>
+							</xf:trigger>
+							<xf:input ctype="Edit" style="position:absolute; left:780px; top:102px; width:136px; height:24px;" id="coprBzmanNm_tab2" indicator="주고객고객명" tabIndex="22" autosize="0" disabled="true" allowChar="가-힣" validateOnInput="true" maxlength="42" imeMode="반자" ninemode="0" orgid="coprBzmanNm_tab2" hierarchy="TAB1.coprBzmanNm_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:27px; top:133px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_regiBrnName_tab2" tabIndex="23" autosize="0" linespace="2" label="등록부점명" orgid="Text_regiBrnName_tab2" hierarchy="TAB1.Text_regiBrnName_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:150px; top:132px; width:32px; height:24px;" id="regiBrncd_tab2" indicator="등록부점코드" tabIndex="24" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="regiBrncd_tab2" hierarchy="TAB1.regiBrncd_tab2" ref="data:dma_KAA06410000.regiBrncd_tab2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:186px; top:132px; width:144px; height:24px;" id="regiBrnNm_tab2" indicator="등록부점명" tabIndex="25" editFormat="H(20)" maxlength="20" readOnly="true" ninemode="0" orgid="regiBrnNm_tab2" hierarchy="TAB1.regiBrnNm_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:132px; width:96px; height:24px; color:rgb(0,0,0);" id="Text_regiEmnm_tab2" tabIndex="26" autosize="0" linespace="2" label="등록직원명" orgid="Text_regiEmnm_tab2" hierarchy="TAB1.Text_regiEmnm_tab2" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:660px; top:132px; width:179px; height:24px;" id="regiEmpNm_tab2" indicator="등록직원명" tabIndex="27" editFormat="H(25)" maxlength="25" readOnly="true" ninemode="0" orgid="regiEmpNm_tab2" hierarchy="TAB1.regiEmpNm_tab2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:846px; top:132px; width:53px; height:24px; display:none;" id="regiEmpid_tab2" indicator="등록직원번호" tabIndex="28" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999999" maxlength="7" readOnly="true" ninemode="0" orgid="regiEmpid_tab2" hierarchy="TAB1.regiEmpid_tab2" ref="data:dma_KAA06410000.regiEmpid_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:27px; top:162px; width:120px; height:24px; color:rgb(0,0,0);" id="Text_regiDte_tab2" tabIndex="29" autosize="0" linespace="2" label="등록일자" orgid="Text_regiDte_tab2" hierarchy="TAB1.Text_regiDte_tab2" class="kb_MiddleRight"/>
+							<w2:inputCalendar ctype="Edit" style="position:absolute; left:150px; top:162px; width:74px; height:24px;" id="regiYmd_tab2" indicator="등록년월일" tabIndex="30" editFormat="yyyy/MM/dd" maxlength="10" readOnly="true" ninemode="0" orgid="regiYmd_tab2" hierarchy="TAB1.regiYmd_tab2" ref="data:dma_KAA06410000.regiYmd_tab2"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:558px; top:162px; width:96px; height:24px; color:rgb(0,0,0);" id="Text_regiRevocDstic1_tab2" tabIndex="31" autosize="0" linespace="2" label="등록해제구분" orgid="Text_regiRevocDstic1_tab2" hierarchy="TAB1.Text_regiRevocDstic1_tab2" class="kb_MiddleRight"/>
+							<xf:select1 ctype="RadioButton" style="position:absolute; left:660px; top:162px; height:24px; color:rgb(0,0,0);" id="regiYn_tab2" indicator="등록여부" tabIndex="32" index="0" items="등록;1;TRUE;TRUE;|해제;2;TRUE;FALSE;|" appearance="full" ev:onviewchange="scwin.regiYn_tab2_OnItemChanged" orgid="regiYn_tab2" hierarchy="TAB1.regiYn_tab2" renderType="radiogroup" selectedIndex="0" ref="data:dma_KAA06410000.regiYn_tab2">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[등록]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[해제]]></xf:label>
+										<xf:value><![CDATA[2]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:192px; width:576px; height:24px; align:middleleft; text-align:middleleft;" id="Desc3_tab2" tabIndex="33" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;선정기준을&amp;nbsp;확인하고,&amp;nbsp;영업점장&amp;nbsp;결재&amp;nbsp;후&amp;nbsp;등록(선정기준:『KB스타클럽&amp;nbsp;고객제도&amp;nbsp;운영매뉴얼』&amp;nbsp;참조)" orgid="Desc3_tab2" hierarchy="TAB1.Desc3_tab2" escape="false" class="kb_txt_red kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:216px; width:664px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_tab2" tabIndex="34" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;법인KB스타&amp;nbsp;대표/가족&amp;nbsp;개인등급&amp;nbsp;선정은&amp;nbsp;고객관리점&amp;nbsp;여부와&amp;nbsp;무관하며,&amp;nbsp;한도는&amp;nbsp;선정&amp;nbsp;등록점&amp;nbsp;기준으로&amp;nbsp;차감됩니다." orgid="Desc2_tab2" hierarchy="TAB1.Desc2_tab2" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:240px; width:186px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_6_tab2" tabIndex="35" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;개인고객만&amp;nbsp;등록&amp;nbsp;가능합니다." orgid="Desc2_6_tab2" hierarchy="TAB1.Desc2_6_tab2" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:264px; width:504px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_6_tab2_6" tabIndex="36" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;매월&amp;nbsp;스타클럽&amp;nbsp;등급선정일&amp;nbsp;전&amp;nbsp;2영업일은&amp;nbsp;등급선정작업으로&amp;nbsp;인해&amp;nbsp;거래가&amp;nbsp;제한됩니다." orgid="Desc2_6_tab2_6" hierarchy="TAB1.Desc2_6_tab2_6" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:anchor ctype="LinkText" style="position:absolute; left:12px; top:294px; width:427px; height:24px;" id="LinkText2" tabIndex="37" linktype="URL" href="http://emanual2.kbstar.com/EManual2/Doc.aspx?doc_id=24774" class="btn_def_link" orgid="LinkText2" hierarchy="TAB1.LinkText2" outerDiv="false">
+								<xf:label><![CDATA[법인KB스타클럽 대표/가족 영업점 선정/해지 신청서]]></xf:label>
+							</w2:anchor>
+							<xf:trigger ctype="Button" style="position:absolute; left:822px; top:294px; width:96px; height:24px;" id="Button_Init_tab2" tabIndex="38" showimage="0" text="초기화" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button_Init_tab2_OnClick" orgid="Button_Init_tab2" hierarchy="TAB1.Button_Init_tab2">
+								<xf:label><![CDATA[초기화]]></xf:label>
+							</xf:trigger>
+							<xf:trigger ctype="Button" style="position:absolute; left:924px; top:294px; width:96px; height:24px;" id="Button_Regi_tab2" tabIndex="39" showimage="0" text="고객등록" enableimage="Screen_btnBullet.gif" type="button" class="btn_def1" ev:onclick="scwin.Button_Regi_tab2_OnClick" orgid="Button_Regi_tab2" hierarchy="TAB1.Button_Regi_tab2">
+								<xf:label><![CDATA[고객등록]]></xf:label>
+							</xf:trigger>
+							<w2:textbox id="title_GroupBox_Bubin2" class="title_h2" label="법인KB스타&amp;nbsp;대표&amp;nbsp;개인등급&amp;nbsp;선정&amp;nbsp;등록" escape="false"/>
+						</xf:group>
+						<xf:group ctype="GroupBox" style="position:absolute; left:12px; top:576px; width:1038px; height:132px;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="3" id="GroupBox_Bubin3" tabIndex="3" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Bubin3" hierarchy="TAB1.GroupBox_Bubin3">
+							<w2:textbox ctype="Text" style="position:absolute; left:102px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Limit1" tabIndex="1" autosize="0" label="MVP" orgid="Text_Tab2_Brn_Limit1" hierarchy="TAB1.Text_Tab2_Brn_Limit1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:144px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Limit2" tabIndex="2" autosize="0" label="로얄" orgid="Text_Tab2_Brn_Limit2" hierarchy="TAB1.Text_Tab2_Brn_Limit2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:198px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Limit3" tabIndex="3" autosize="0" label="골드" orgid="Text_Tab2_Brn_Limit3" hierarchy="TAB1.Text_Tab2_Brn_Limit3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:456px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Use1" tabIndex="4" autosize="0" label="MVP" orgid="Text_Tab2_Brn_Use1" hierarchy="TAB1.Text_Tab2_Brn_Use1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:504px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Use2" tabIndex="5" autosize="0" label="로얄" orgid="Text_Tab2_Brn_Use2" hierarchy="TAB1.Text_Tab2_Brn_Use2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:552px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Use3" tabIndex="6" autosize="0" label="골드" orgid="Text_Tab2_Brn_Use3" hierarchy="TAB1.Text_Tab2_Brn_Use3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:798px; top:36px; width:34px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Remain1" tabIndex="7" autosize="0" label="MVP" orgid="Text_Tab2_Brn_Remain1" hierarchy="TAB1.Text_Tab2_Brn_Remain1" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:846px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Remain2" tabIndex="8" autosize="0" label="로얄" orgid="Text_Tab2_Brn_Remain2" hierarchy="TAB1.Text_Tab2_Brn_Remain2" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:894px; top:36px; width:42px; height:24px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Remain3" tabIndex="9" autosize="0" label="골드" orgid="Text_Tab2_Brn_Remain3" hierarchy="TAB1.Text_Tab2_Brn_Remain3" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:24px; top:48px; width:59px; height:42px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Limit" tabIndex="10" autosize="0" label="영업점&lt;/br&gt;한&amp;nbsp;&amp;nbsp;도" orgid="Text_Tab2_Brn_Limit" hierarchy="TAB1.Text_Tab2_Brn_Limit" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:384px; top:48px; width:59px; height:42px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Use" tabIndex="11" autosize="0" label="선&amp;nbsp;&amp;nbsp;정&lt;/br&gt;고객수" orgid="Text_Tab2_Brn_Use" hierarchy="TAB1.Text_Tab2_Brn_Use" escape="false" class="kb_MiddleRight"/>
+							<w2:textbox ctype="Text" style="position:absolute; left:714px; top:48px; width:76px; height:42px; color:rgb(0,0,0);" id="Text_Tab2_Brn_Remain" tabIndex="12" autosize="0" label="등록가능&lt;/br&gt;고&amp;nbsp;객&amp;nbsp;수" orgid="Text_Tab2_Brn_Remain" hierarchy="TAB1.Text_Tab2_Brn_Remain" escape="false" class="kb_MiddleRight"/>
+							<xf:input ctype="Edit" style="position:absolute; left:102px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnLimt1Noitm" indicator="K부점한도1건수" tabIndex="13" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnLimt1Noitm" hierarchy="TAB1.kBrnLimt1Noitm" ref="data:dma_KAA06410000.kBrnLimt1Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:156px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnLimt2Noitm" indicator="K부점한도2건수" tabIndex="14" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnLimt2Noitm" hierarchy="TAB1.kBrnLimt2Noitm" ref="data:dma_KAA06410000.kBrnLimt2Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:210px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnLimt3Noitm" indicator="K부점한도3건수" tabIndex="15" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnLimt3Noitm" hierarchy="TAB1.kBrnLimt3Noitm" ref="data:dma_KAA06410000.kBrnLimt3Noitm"/>
+							<xf:input ctype="Edit" style="position:absolute; left:462px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnUseQanty1" indicator="K부점사용량1" tabIndex="16" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnUseQanty1" hierarchy="TAB1.kBrnUseQanty1" ref="data:dma_KAA06410000.kBrnUseQanty1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:516px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnUseQanty2" indicator="K부점사용량2" tabIndex="17" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnUseQanty2" hierarchy="TAB1.kBrnUseQanty2" ref="data:dma_KAA06410000.kBrnUseQanty2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:564px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnUseQanty3" indicator="K부점사용량3" tabIndex="18" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnUseQanty3" hierarchy="TAB1.kBrnUseQanty3" ref="data:dma_KAA06410000.kBrnUseQanty3"/>
+							<xf:input ctype="Edit" style="position:absolute; left:804px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnRAbilNoitm1" indicator="K부점등록가능건수1" tabIndex="19" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnRAbilNoitm1" hierarchy="TAB1.kBrnRAbilNoitm1" ref="data:dma_KAA06410000.kBrnRAbilNoitm1"/>
+							<xf:input ctype="Edit" style="position:absolute; left:858px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnRAbilNoitm2" indicator="K부점등록가능건수2" tabIndex="20" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnRAbilNoitm2" hierarchy="TAB1.kBrnRAbilNoitm2" ref="data:dma_KAA06410000.kBrnRAbilNoitm2"/>
+							<xf:input ctype="Edit" style="position:absolute; left:906px; top:66px; width:32px; height:24px; text-align:right;" id="kBrnRAbilNoitm3" indicator="K부점등록가능건수3" tabIndex="21" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="####" maxlength="4" readOnly="true" ninemode="0" rightalign="1" orgid="kBrnRAbilNoitm3" hierarchy="TAB1.kBrnRAbilNoitm3" ref="data:dma_KAA06410000.kBrnRAbilNoitm3"/>
+							<w2:textbox ctype="Desc" style="position:absolute; left:12px; top:96px; width:620px; height:24px; align:middleleft; text-align:middleleft;" id="Desc2_tab2_6" tabIndex="22" imagealign="MiddleLeft" linespace="2" label="*&amp;nbsp;선정한도&amp;nbsp;:&amp;nbsp;영업점별&amp;nbsp;법인&amp;nbsp;KB스타클럽&amp;nbsp;등급별&amp;nbsp;고객수&amp;nbsp;X&amp;nbsp;2&amp;nbsp;(※&amp;nbsp;영업점선정&amp;nbsp;및&amp;nbsp;영업점&amp;nbsp;특별선정&amp;nbsp;등급&amp;nbsp;포함)" orgid="Desc2_tab2_6" hierarchy="TAB1.Desc2_tab2_6" escape="false" class="kb_MiddleLeft kb_txt_purple"/>
+							<w2:textbox id="title_GroupBox_Bubin3" class="title_h2" label="법인KB스타&amp;nbsp;대표&amp;nbsp;개인등급&amp;nbsp;선정&amp;nbsp;한도" escape="false"/>
+						</xf:group>
+					</w2:content>
+				</w2:tabControl>
+			</xf:group>
+			<xf:select ctype="CheckBox" style="position:absolute; left:1086px; top:528px; width:139px; height:24px; color:rgb(0,0,0); display:none;" id="CheckBox_noFamily" tooltip="가족관계가 없는 경우, 법인대표자 본인으로만 등록 가능합니다." tabIndex="5" disabled="true" OnValue="Y" falseValue="N" autodup="0" index="0" ev:onviewchange="scwin.CheckBox_noFamily_OnItemChanged" orgid="CheckBox_noFamily" hierarchy="CheckBox_noFamily" appearance="full" renderType="checkboxgroup" ref="data:dtm_component.CheckBox_noFamily">
+				<xf:choices>
+					<xf:item>
+						<xf:label><![CDATA[가족관계 없음]]></xf:label>
+						<xf:value><![CDATA[Y]]></xf:value>
+					</xf:item>
+				</xf:choices>
+			</xf:select>
+			<w2:pageFrame ctype="Panel" style="position:absolute; left:12px; top:924px; width:1056px; height:162px;" id="PanelLinkForm" tabIndex="6" joinscreenno="KMB04704A01" panelautosize="1" orgid="PanelLinkForm" hierarchy="PanelLinkForm"/>
+			<xf:group ctype="GroupBox" style="position:absolute; left:18px; top:1218px; width:990px; height:96px; display:none;background-color:rgb(238,238,238);border:1px solid rgb(189,189,189);box-sizing:border-box;" tab="7" id="GroupBox_Hidden" tabIndex="7" image="T_B_bullet.gif" intemplate="0" 확장모드="0" orgid="GroupBox_Hidden" hierarchy="GroupBox_Hidden">
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:36px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_choicInquryDstcd" tabIndex="1" autosize="0" label="선정조회구분코드" orgid="Text_choicInquryDstcd" hierarchy="Text_choicInquryDstcd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:162px; top:36px; width:11px; height:24px; display:none;" id="choicInquryDstcd" indicator="선정조회구분코드" tabIndex="2" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="choicInquryDstcd" hierarchy="choicInquryDstcd" ref="data:dma_KAA06410000.choicInquryDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:264px; top:36px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_custPtrnClsfiDstcd" tabIndex="3" autosize="0" linespace="2" label="고객유형분류구분" orgid="Text_custPtrnClsfiDstcd" hierarchy="Text_custPtrnClsfiDstcd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:414px; top:36px; width:11px; height:24px; display:none;" id="custPtrnClsfiDstcd" indicator="고객유형분류구분코드" tabIndex="4" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="custPtrnClsfiDstcd" hierarchy="custPtrnClsfiDstcd" ref="data:dma_KAA06410000.custPtrnClsfiDstcd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:486px; top:36px; width:196px; height:24px; color:rgb(0,0,0);" id="Text_ppsnBsnoJntRpsnYn" tabIndex="5" autosize="0" label="개인사업자공동대표여부" orgid="Text_ppsnBsnoJntRpsnYn" hierarchy="Text_ppsnBsnoJntRpsnYn" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:684px; top:36px; width:11px; height:24px; display:none;" id="ppsnBsnoJntRpsnYn" indicator="개인사업자공동대표여부" tabIndex="6" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="ppsnBsnoJntRpsnYn" hierarchy="ppsnBsnoJntRpsnYn" ref="data:dma_KAA06410000.ppsnBsnoJntRpsnYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:762px; top:36px; width:179px; height:24px; color:rgb(0,0,0);" id="Text_selfAtualGrdDstcd_1" tabIndex="7" autosize="0" linespace="2" label="본인실질등급구분코드" orgid="Text_selfAtualGrdDstcd_1" hierarchy="Text_selfAtualGrdDstcd_1" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:942px; top:36px; width:11px; height:24px; display:none;" id="selfAtualGrdDstcd_1" indicator="본인실질등급구분코드" tabIndex="8" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="selfAtualGrdDstcd_1" hierarchy="selfAtualGrdDstcd_1"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:12px; top:66px; width:145px; height:24px; color:rgb(0,0,0);" id="Text_jobPrhbYn" tabIndex="9" autosize="0" linespace="2" label="등록작업불가여부" orgid="Text_jobPrhbYn" hierarchy="Text_jobPrhbYn" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:162px; top:66px; width:11px; height:24px; display:none;" id="jobPrhbYn" indicator="작업불가여부" tabIndex="10" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9" maxlength="1" readOnly="true" ninemode="0" orgid="jobPrhbYn" hierarchy="jobPrhbYn" ref="data:dma_KAA06410000.jobPrhbYn"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:264px; top:66px; width:85px; height:24px; color:rgb(0,0,0);" id="Text_sBrncd" tabIndex="11" autosize="0" label="S부점코드" orgid="Text_sBrncd" hierarchy="Text_sBrncd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:354px; top:66px; width:32px; height:24px; display:none;" id="sBrncd" indicator="S부점코드" tabIndex="12" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="sBrncd" hierarchy="sBrncd" ref="data:dma_KAA06410000.sBrncd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:402px; top:66px; width:85px; height:24px; color:rgb(0,0,0);" id="Text_kBrncd" tabIndex="13" autosize="0" label="K부점코드" orgid="Text_kBrncd" hierarchy="Text_kBrncd" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:492px; top:66px; width:32px; height:24px; display:none;" id="kBrncd" indicator="K부점코드" tabIndex="14" allowChar="A-Z,a-z,0-9" validateOnInput="true" editFormat="9999" maxlength="4" readOnly="true" ninemode="0" orgid="kBrncd" hierarchy="kBrncd" ref="data:dma_KAA06410000.kBrncd"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:672px; top:66px; width:76px; height:24px; color:rgb(0,0,0);" id="Text_totalLineCnt" tabIndex="15" autosize="0" linespace="2" label="총라인수" orgid="Text_totalLineCnt" hierarchy="Text_totalLineCnt" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:768px; top:66px; width:39px; height:24px; display:none; text-align:right;" id="totalLineCnt" indicator="총라인수" tabIndex="16" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" readOnly="true" ninemode="0" rightalign="1" orgid="totalLineCnt" hierarchy="totalLineCnt" ref="data:dma_KAA06410000.totalLineCnt"/>
+				<w2:textbox ctype="Text" style="position:absolute; left:818px; top:66px; width:93px; height:24px; color:rgb(0,0,0);" id="Text_outptLineCnt" tabIndex="17" autosize="0" linespace="2" label="출력라인수" orgid="Text_outptLineCnt" hierarchy="Text_outptLineCnt" class="kb_MiddleRight"/>
+				<xf:input ctype="Edit" style="position:absolute; left:906px; top:66px; width:39px; height:24px; display:none; text-align:right;" id="outptLineCnt" indicator="출력라인수" tabIndex="18" dataType="number" allowChar="0-9" validateOnInput="true" displayFormat="#####" maxlength="5" readOnly="true" ninemode="0" rightalign="1" orgid="outptLineCnt" hierarchy="outptLineCnt" ref="data:dma_KAA06410000.outptLineCnt"/>
+				<w2:textbox id="title_GroupBox_Hidden" class="title_h2" label="Hidden&amp;nbsp;컨트롤" escape="false"/>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>
