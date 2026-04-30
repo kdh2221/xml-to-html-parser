@@ -1,5 +1,30 @@
 # WebSquare Publishing Editor — XML to XML
 
+## 프로젝트 개요
+
+본 프로젝트는 **인젠트(INZENT) 단말 iWorks를 기반으로 만들어진 WebSquare Publishing Editor 상대좌표 변환툴**이다.
+iWorks/WebTop 환경에서 운용되던 절대좌표 기반의 단말 화면(.scn → WebSquare XML)을, 웹표준 흐름(반응형) 레이아웃에 맞는 상대좌표 WebSquare XML로 일괄 변환하는 것을 목적으로 한다.
+
+샘플 파일(`samples/`, `comparison/`)에는 다음과 같은 메타정보가 포함되어 있어 변환 파이프라인의 입력 출처를 추정할 수 있다.
+
+| 메타 단서 | 의미 |
+|-----------|------|
+| `meta_convertType="Craft"`, `meta_craftVer="20251209"` | 인스웨이브 Craft 도구로 1차 변환된 산출물 |
+| `meta_asisFileNm="...scn"` | 원본은 WebTop/iWorks의 .scn 단말 화면 |
+| `xmlns:w2="http://www.inswave.com/websquare"` | 인스웨이브 WebSquare 기반 |
+| 화면 ID `KAA/KBC/KEA/KEC/KFA/KFC/KFG/KFL/KGA/KHC/KJI/KJM…` + 화면명(영업점특별선정고객정보, 구속성예금 관련 사전조회, B2B상품자기업이관신청번호조회 등) + 사번 작성자 | **KB국민은행 단말 차세대 화면** |
+| `samples/[KB국민은행] 전환 매핑 요소.xlsx` | KB국민은행 전용 class 매핑 규칙 동봉 |
+
+따라서 동봉된 샘플의 변환 파이프라인은 다음과 같다.
+
+```
+KB국민은행 .scn (WebTop/iWorks)
+  → Inswave Craft : 절대좌표 WebSquare XML  (샘플 입력)
+  → 본 툴(XML to XML)        : 상대좌표 WebSquare XML  (샘플 출력 *_pub.xml / *_rel_v1.xml)
+```
+
+도구 자체는 KB국민은행 전용이 아니며, 동일한 패턴의 절대좌표 WebSquare XML이라면 다른 사이트에서도 사용할 수 있다. 다만 class 매핑(`btn_def1` → `btn_cm` 등)은 KB 매핑 엑셀을 기준으로 하드코딩되어 있어, 사이트가 다르면 매핑만 별도 조정하면 된다.
+
 ## 목적
 
 기존 XML 좌표변환은 skill MD에 정의된 규칙을 코드에 하드코딩하는 방식이라, 규칙 변경 시 JS를 직접 수정해야 하는 한계가 있었다.
