@@ -144,6 +144,7 @@ body {
 .output-pane { display: none; width: 100%; height: 100%; overflow: auto; }
 .output-pane.active { display: block; }
 #scriptValidatePane.active { display: flex; flex-direction: column; overflow: hidden; }
+#htmlPreviewPane.active { display: flex; flex-direction: column; overflow: hidden; }
 
 /* 원본/변환 코드 비교 */
 .code-area {
@@ -794,6 +795,70 @@ body {
 .modal-box .setting-value.active-path { color: var(--primary); font-weight: 500; }
 .modal-footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
 
+/* 사용자 가이드 모달 (넓고 스크롤 가능) */
+.modal-box.modal-guide {
+  width: min(900px, 92vw); max-height: 86vh; display: flex; flex-direction: column; padding: 0;
+}
+.modal-guide .guide-header {
+  padding: 18px 24px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.modal-guide .guide-header h2 { margin: 0; font-size: 18px; }
+.modal-guide .guide-close {
+  background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-muted); line-height: 1;
+}
+.modal-guide .guide-close:hover { color: var(--text); }
+.modal-guide .guide-tabs {
+  display: flex; gap: 4px; padding: 0 24px; border-bottom: 1px solid var(--border); flex-wrap: wrap;
+}
+.modal-guide .guide-tab {
+  padding: 10px 14px; font-size: 13px; background: none; border: none; cursor: pointer;
+  border-bottom: 2px solid transparent; color: var(--text-muted); font-weight: 500;
+}
+.modal-guide .guide-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+.modal-guide .guide-body {
+  flex: 1; overflow-y: auto; padding: 20px 24px; font-size: 13.5px; line-height: 1.65; color: var(--text);
+}
+.modal-guide .guide-section { display: none; }
+.modal-guide .guide-section.active { display: block; }
+.modal-guide .guide-section h3 {
+  font-size: 15px; margin: 0 0 10px; padding-bottom: 6px;
+  border-bottom: 1px solid var(--border); color: var(--text);
+}
+.modal-guide .guide-section h4 {
+  font-size: 13.5px; margin: 18px 0 6px; color: var(--primary);
+}
+.modal-guide .guide-section p { margin: 0 0 10px; }
+.modal-guide .guide-section ol,
+.modal-guide .guide-section ul { margin: 0 0 12px; padding-left: 22px; }
+.modal-guide .guide-section li { margin-bottom: 4px; }
+.modal-guide .guide-section code {
+  background: #f1f5f9; padding: 1px 6px; border-radius: 4px;
+  font-family: Consolas, monospace; font-size: 12.5px; color: #c2410c;
+}
+.modal-guide .guide-section pre {
+  background: #f8fafc; border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 12px; overflow-x: auto; font-family: Consolas, monospace;
+  font-size: 12.5px; margin: 0 0 12px;
+}
+.modal-guide .guide-section table {
+  width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 12.5px;
+}
+.modal-guide .guide-section th,
+.modal-guide .guide-section td {
+  border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top;
+}
+.modal-guide .guide-section th { background: #f8fafc; font-weight: 600; }
+.modal-guide .guide-callout {
+  background: #fef3c7; border-left: 3px solid #f59e0b; padding: 8px 12px;
+  border-radius: 4px; margin: 0 0 12px; font-size: 12.5px; color: #78350f;
+}
+.modal-guide .guide-callout.tip { background: #dbeafe; border-left-color: #3b82f6; color: #1e3a8a; }
+.modal-guide .guide-callout strong { font-weight: 700; }
+.modal-guide .guide-footer {
+  padding: 12px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end;
+}
+
 /* ─── 배치 비교 ─── */
 .batch-panel {
   display: flex; flex-direction: column; flex: 1; min-height: 0;
@@ -878,6 +943,7 @@ body {
   </div>
   <div style="display:flex;gap:8px;">
     <button class="btn btn-outline btn-sm" onclick="openCompare()">&#9654; 화면 비교하기</button>
+    <button class="btn btn-outline btn-sm" onclick="openGuide()">&#128218; 사용자가이드</button>
     <button class="btn btn-outline btn-sm" onclick="openSettings()">&#9881; 설정</button>
     <button class="btn btn-outline btn-sm" onclick="clearAll()">초기화</button>
   </div>
@@ -922,9 +988,10 @@ body {
     <!-- 폴더 일괄 변환 (XtX) -->
     <div id="xtxFolderConvert" style="margin:8px 0 12px;padding:10px 12px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
       <button class="btn btn-primary btn-sm" onclick="xtxConvertFolder()">폴더 선택 &amp; 일괄 변환</button>
+      <label style="font-size:12px;display:flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="xtxFolderEmitHtml"> HTML도 생성 (.html)</label>
       <span style="font-size:11px;color:#475569;line-height:1.4;">
-        선택한 폴더(<b>하위 재귀</b>) 내 <code>*.xml</code> 중 쌍(<code>_rel_v*.xml</code>)이 없는 원본만 변환 →
-        <code>원본옆/foo_rel_v1.xml</code>로 저장 (위 일반/반응형 옵션 적용)
+        원본 폴더(<b>하위 재귀</b>) → 저장 폴더 순으로 선택. <code>*.xml</code> 중 쌍(<code>_rel_v*.xml</code>)이 없는 원본만 변환 →
+        <code>저장폴더/&lt;원본루트&gt;/…/foo_rel_v1.xml</code> (하위 구조 동일 복제, 위 일반/반응형 옵션 적용)
       </span>
     </div>
 
@@ -991,6 +1058,7 @@ body {
     <div class="output-tabs">
       <button class="output-tab active" data-tab="absWireframe" onclick="switchXtxOutputTab('absWireframe')">절대좌표 와이어프레임</button>
       <button class="output-tab" data-tab="relWireframe" onclick="switchXtxOutputTab('relWireframe')">상대좌표 와이어프레임</button>
+      <button class="output-tab" data-tab="htmlPreview" onclick="switchXtxOutputTab('htmlPreview')">HTML 미리보기</button>
       <button class="output-tab" data-tab="scriptValidate" onclick="switchXtxOutputTab('scriptValidate')">검증</button>
     </div>
 
@@ -1020,6 +1088,20 @@ body {
         </div>
       </div>
 
+      <!-- HTML 미리보기 -->
+      <div class="output-pane" id="htmlPreviewPane">
+        <div class="html-preview-toolbar" style="display:flex;gap:8px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--border);background:var(--bg);font-size:12px;">
+          <label style="display:flex;align-items:center;gap:4px;"><input type="checkbox" id="htmlPrevPreserveAttrs" checked onchange="rerenderXtxHtmlPreview()"> WS 속성 보존(data-ws-*)</label>
+          <label style="display:flex;align-items:center;gap:4px;"><input type="checkbox" id="htmlPrevInlineCss" onchange="rerenderXtxHtmlPreview()"> CSS 인라인</label>
+          <span style="margin-left:auto;color:var(--text-muted);">↓ kb-publish.css 적용 미리보기</span>
+        </div>
+        <iframe id="htmlPreviewFrame" style="flex:1;border:0;width:100%;background:#fff;display:none;" sandbox="allow-same-origin"></iframe>
+        <div id="htmlPreviewEmpty" class="empty-state">
+          <div class="empty-state-icon">&#128196;</div>
+          <div>XML 파일을 업로드하면 HTML 미리보기가 표시됩니다</div>
+        </div>
+      </div>
+
       <!-- 검증 -->
       <div class="output-pane" id="scriptValidatePane">
         <div class="verify-wrap">
@@ -1045,6 +1127,8 @@ body {
     <div class="action-bar">
       <span id="xtxStatusMsg" class="status-msg"></span>
       <button class="btn btn-outline btn-sm" onclick="copyXtxConverted()">변환 XML 복사</button>
+      <button class="btn btn-outline btn-sm" onclick="copyXtxHtml()">HTML 복사</button>
+      <button class="btn btn-outline btn-sm" onclick="downloadXtxHtml()">HTML 저장</button>
       <button class="btn btn-success btn-sm" onclick="downloadXtxConverted()">변환 XML 저장하기</button>
     </div>
   </div>
@@ -1170,6 +1254,7 @@ body {
 <script src="js/script-validator.js"></script>
 <script src="js/xml-generator.js"></script>
 <script src="js/html-converter.js"></script>
+<script src="js/xml-to-html.js"></script>
 
 <script>
 // ─── 상태 ───
@@ -1185,9 +1270,17 @@ let selectedCompIndex = -1;
 // 다중 파일 관리
 let fileResults = []; // [{ name, originalXml, convertedXml, analysis, meta, components, wireframeMd }]
 let activeFileIndex = -1;
-let saveDirHandle = null; // 저장 폴더 핸들 (설정에서 지정)
+let saveDirHandle = null; // 저장 폴더 핸들 (설정에서 지정) — XML 저장 + HTML 저장의 옵셔널 오버라이드
+let htmlPreviewDirHandle = null; // HTML 저장 기본 폴더 핸들 (preview/) — 첫 사용 시 사용자 선택
+
+// localStorage 값이 손상되어도 부팅이 막히지 않도록 안전 파싱 헬퍼.
+function safeParseJSON(raw, fallback) {
+  if (raw == null || raw === '') return fallback;
+  try { return JSON.parse(raw); } catch { return fallback; }
+}
+
 // 파일명별 다운로드 버전 카운터
-let downloadVersionMap = JSON.parse(localStorage.getItem('wsq_dl_version_map') || '{}');
+let downloadVersionMap = safeParseJSON(localStorage.getItem('wsq_dl_version_map'), {});
 function getNextVersion(map, key, storageKey) {
   const ver = (map[key] || 0) + 1;
   map[key] = ver;
@@ -1197,11 +1290,29 @@ function getNextVersion(map, key, storageKey) {
 
 // ─── 저장 프로그레스 / 토스트 ───
 let saveToastTimer = null;
-function showSaveProgress(total) {
+
+// 폴더 일괄 변환 등 장시간 작업의 취소 플래그.
+// 루프 사이에 bulkCancelRequested를 확인하여 안전한 시점에 break 한다.
+let bulkCancelRequested = false;
+function cancelBulkOperation() {
+  bulkCancelRequested = true;
+  const btn = document.getElementById('saveProgressCancelBtn');
+  if (btn) { btn.disabled = true; btn.textContent = '취소 중…'; }
+}
+function isBulkCancelled() { return bulkCancelRequested; }
+
+function showSaveProgress(total, opts) {
+  bulkCancelRequested = false;
   const el = document.getElementById('saveProgress');
   document.getElementById('saveProgressTitle').textContent = '저장 중...';
   document.getElementById('saveProgressFill').style.width = '0%';
   document.getElementById('saveProgressDetail').textContent = `0 / ${total}`;
+  const cancelBtn = document.getElementById('saveProgressCancelBtn');
+  if (cancelBtn) {
+    cancelBtn.style.display = opts && opts.cancellable ? '' : 'none';
+    cancelBtn.disabled = false;
+    cancelBtn.textContent = '취소';
+  }
   el.classList.add('active');
   document.getElementById('saveToast').classList.remove('active');
 }
@@ -1271,9 +1382,19 @@ function setupDropzone(zoneId, fileInputId, handler) {
 }
 
 // ─── XML 파일 처리 (다중 파일) ───
+// DOMParser/와이어프레임이 메인 스레드를 블로킹하므로 과대용량 XML은 거부한다.
+const MAX_XML_BYTES = 20 * 1024 * 1024; // 20 MB
+
 async function handleXmlFiles(files) {
   const xmlFiles = files.filter(f => f.name.match(/\.xml$/i));
   if (!xmlFiles.length) { alert('XML 파일(.xml)만 지원합니다.'); return; }
+
+  const tooLarge = xmlFiles.filter(f => f.size > MAX_XML_BYTES);
+  if (tooLarge.length) {
+    alert(`다음 파일은 ${MAX_XML_BYTES / 1024 / 1024}MB 제한을 초과하여 처리할 수 없습니다:\n` +
+          tooLarge.map(f => `  • ${f.name} (${(f.size / 1024 / 1024).toFixed(1)}MB)`).join('\n'));
+    return;
+  }
 
   showLoading(`${xmlFiles.length}개 파일 분석 중...`);
 
@@ -1327,13 +1448,16 @@ function renderFileList() {
   if (!fileResults.length) { section.style.display = 'none'; return; }
   section.style.display = '';
 
-  list.innerHTML = fileResults.map((r, i) => `
+  list.innerHTML = fileResults.map((r, i) => {
+    const safeName = escHtml(r.name || '');
+    return `
     <div class="file-item ${i === activeFileIndex ? 'active' : ''}" onclick="selectFile(${i})">
       <span class="file-idx">${i + 1}</span>
-      <span class="file-name" title="${r.name}">${r.name}</span>
+      <span class="file-name" title="${safeName}">${safeName}</span>
       <span class="file-del" onclick="event.stopPropagation();removeFile(${i})" title="삭제">&#10005;</span>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function removeFile(index) {
@@ -1395,7 +1519,11 @@ async function handleXmlToXmlFile(files) {
       const converted = SampleConverter.convert(xmlStr, { responsive: isResponsive });
       const relWireframeHtml = RelWireframeGen.generateFromConverted(converted.convertedXml, file.name);
       const data = AbsWireframeGen.generateData(xmlStr, file.name);
-      xtxFileResults.push({ name: file.name, xmlStr, wireframeHtml, relWireframeHtml, convertedXml: converted.convertedXml, meta: converted.meta, data });
+      let htmlOutput = '';
+      try {
+        htmlOutput = XmlToHtml.convert(converted.convertedXml, { fileName: file.name });
+      } catch (e) { console.warn('[xtx] HTML 변환 실패:', file.name, e); }
+      xtxFileResults.push({ name: file.name, xmlStr, wireframeHtml, relWireframeHtml, convertedXml: converted.convertedXml, htmlOutput, meta: converted.meta, data });
     } catch (e) {
       const xtxStatus = document.getElementById('xtxStatusMsg');
       xtxStatus.textContent = `${file.name} 분석 실패: ${e.message}`;
@@ -1418,10 +1546,18 @@ async function handleXmlToXmlFile(files) {
 async function xtxConvertFolder() {
   let rootHandle;
   try {
-    rootHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    rootHandle = await window.showDirectoryPicker({ id: 'xtxFolderSrc', mode: 'read' });
   } catch (e) {
     if (e.name === 'AbortError') return;
-    alert('폴더 선택 실패: ' + e.message); return;
+    alert('원본 폴더 선택 실패: ' + e.message); return;
+  }
+
+  let saveRootHandle;
+  try {
+    saveRootHandle = await window.showDirectoryPicker({ id: 'xtxFolderDst', mode: 'readwrite' });
+  } catch (e) {
+    if (e.name === 'AbortError') return;
+    alert('저장 폴더 선택 실패: ' + e.message); return;
   }
 
   // 재귀 스캔 (배치 비교 모듈의 헬퍼 재사용)
@@ -1429,6 +1565,8 @@ async function xtxConvertFolder() {
   try {
     byDir = await batchWalkDirRecursive(rootHandle);
   } catch (e) { alert('폴더 읽기 실패: ' + e.message); return; }
+
+  const emitHtml = !!document.getElementById('xtxFolderEmitHtml')?.checked;
 
   // 미변환 원본만 수집 (같은 폴더 안에 _rel_v*.xml 쌍이 없는 경우)
   const targets = [];
@@ -1454,19 +1592,45 @@ async function xtxConvertFolder() {
     return;
   }
   if (!confirm(
-    `폴더: ${rootHandle.name}\n` +
+    `원본 폴더: ${rootHandle.name}\n` +
+    `저장 폴더: ${saveRootHandle.name} / ${rootHandle.name} / ...\n` +
     `변환 대상: ${targets.length}개 (원본 ${totalXml} 중 쌍 ${alreadyPaired}개 제외)\n` +
     `폴더 ${dirPaths.length}개 범위.\n\n` +
-    `원본 옆에 <name>_rel_v1.xml 로 저장합니다. 계속하시겠습니까?`
+    `저장 폴더 안에 "${rootHandle.name}" 하위 구조를 그대로 만들어 <name>_rel_v1.xml 로 저장합니다.\n계속하시겠습니까?`
   )) return;
+
+  // 저장 루트 미러: <saveRoot>/<원본루트폴더명>/
+  let outRootDir;
+  try {
+    outRootDir = await saveRootHandle.getDirectoryHandle(rootHandle.name, { create: true });
+  } catch (e) {
+    alert('저장 폴더 생성 실패: ' + e.message); return;
+  }
+
+  // 하위 폴더 캐시: relPath ('' | 'sub' | 'sub/inner') → dirHandle
+  const dirCache = new Map([['', outRootDir]]);
+  async function ensureOutDir(relPath) {
+    if (dirCache.has(relPath)) return dirCache.get(relPath);
+    const segs = relPath.split('/').filter(Boolean);
+    let cur = outRootDir;
+    let acc = '';
+    for (const seg of segs) {
+      acc = acc ? `${acc}/${seg}` : seg;
+      if (dirCache.has(acc)) { cur = dirCache.get(acc); continue; }
+      cur = await cur.getDirectoryHandle(seg, { create: true });
+      dirCache.set(acc, cur);
+    }
+    return cur;
+  }
 
   const isResponsive = document.querySelector('input[name="xtxConvertMode"]:checked')?.value === 'responsive';
 
-  // 진행률은 기존 저장 오버레이 재사용
-  showSaveProgress(targets.length);
-  let ok = 0, fail = 0;
+  // 진행률은 기존 저장 오버레이 재사용. 취소 버튼 활성화.
+  showSaveProgress(targets.length, { cancellable: true });
+  let ok = 0, fail = 0, cancelled = false;
   const failures = [];
   for (let i = 0; i < targets.length; i++) {
+    if (isBulkCancelled()) { cancelled = true; break; }
     const t = targets[i];
     updateSaveProgress(i, targets.length, t.origPath);
     try {
@@ -1475,10 +1639,24 @@ async function xtxConvertFolder() {
       const res = SampleConverter.convert(xmlStr, { responsive: isResponsive });
       if (!res || !res.convertedXml) throw new Error('변환 결과 없음');
       const convName = t.orig.replace(/\.xml$/i, '_rel_v1.xml');
-      const outFh = await t.dirHandle.getFileHandle(convName, { create: true });
+      const outDir = await ensureOutDir(t.dirPath);
+      const outFh = await outDir.getFileHandle(convName, { create: true });
       const w = await outFh.createWritable();
       await w.write(res.convertedXml);
       await w.close();
+      // "HTML 도 생성" 옵션 — 같은 폴더에 .html 동봉
+      if (emitHtml) {
+        try {
+          const htmlOut = XmlToHtml.convert(res.convertedXml, { fileName: t.orig });
+          const htmlName = t.orig.replace(/\.xml$/i, '_rel_v1.html');
+          const hFh = await outDir.getFileHandle(htmlName, { create: true });
+          const hw = await hFh.createWritable();
+          await hw.write(htmlOut);
+          await hw.close();
+        } catch (he) {
+          console.warn('[xtx-folder] HTML 변환 실패:', t.origPath, he);
+        }
+      }
       ok++;
     } catch (e) {
       fail++;
@@ -1486,11 +1664,13 @@ async function xtxConvertFolder() {
       console.error('[xtx-folder] 실패:', t.origPath, e);
     }
   }
-  updateSaveProgress(targets.length, targets.length, '완료');
+  updateSaveProgress(ok + fail, targets.length, cancelled ? '취소됨' : '완료');
   hideSaveProgress();
 
-  const msg = `폴더 변환 완료 — 성공 ${ok}개${fail ? ' · 실패 ' + fail + '개' : ''}`;
-  showSaveToast(msg, fail ? '실패 상세는 콘솔(F12) 참조' : `${rootHandle.name} 내 하위 폴더 포함 저장 완료`);
+  const head = cancelled
+    ? `사용자가 취소함 — 처리 완료 ${ok + fail}/${targets.length}개 (성공 ${ok} · 실패 ${fail})`
+    : `폴더 변환 완료 — 성공 ${ok}개${fail ? ' · 실패 ' + fail + '개' : ''}`;
+  showSaveToast(head, fail ? '실패 상세는 콘솔(F12) 참조' : `${saveRootHandle.name} / ${rootHandle.name} 하위에 저장 완료`);
   if (fail) console.warn('[xtx-folder] 실패 목록:', failures);
 }
 
@@ -1503,13 +1683,16 @@ function renderXtxFileList() {
   if (!xtxFileResults.length) { section.style.display = 'none'; return; }
   section.style.display = '';
 
-  list.innerHTML = xtxFileResults.map((r, i) => `
+  list.innerHTML = xtxFileResults.map((r, i) => {
+    const safeName = escHtml(r.name || '');
+    return `
     <div class="file-item ${i === xtxActiveFileIndex ? 'active' : ''}" onclick="selectXtxFile(${i})">
       <span class="file-idx">${i + 1}</span>
-      <span class="file-name" title="${r.name}">${r.name}</span>
+      <span class="file-name" title="${safeName}">${safeName}</span>
       <span class="file-del" onclick="event.stopPropagation();removeXtxFile(${i})" title="삭제">&#10005;</span>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 // ─── XML to XML 파일 선택 ───
@@ -1520,6 +1703,7 @@ function selectXtxFile(index) {
 
   document.getElementById('absWireframeContent').innerHTML = r.wireframeHtml;
   document.getElementById('relWireframeContent').innerHTML = r.relWireframeHtml;
+  renderXtxHtmlPreview(r);
   renderAbsCompVerify(r.data);
   runScriptValidation();
 
@@ -1547,6 +1731,7 @@ function clearXtxFiles() {
   renderXtxFileList();
   document.getElementById('absWireframeContent').innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128202;</div><div>XML 파일을 업로드하면 절대좌표 와이어프레임이 표시됩니다</div></div>';
   document.getElementById('relWireframeContent').innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128203;</div><div>XML 파일을 업로드하면 상대좌표 템플릿 와이어프레임이 표시됩니다</div></div>';
+  renderXtxHtmlPreview(null);
   document.getElementById('verifySummaryContent').innerHTML = '';
   document.getElementById('compListContent').innerHTML = '';
   document.getElementById('scriptValidateContent').innerHTML = '';
@@ -1556,7 +1741,7 @@ function clearXtxFiles() {
 }
 
 // ─── XML to XML 변환 XML 저장/복사 ───
-let xtxDownloadVersionMap = JSON.parse(localStorage.getItem('wsq_xtx_dl_version_map') || '{}');
+let xtxDownloadVersionMap = safeParseJSON(localStorage.getItem('wsq_xtx_dl_version_map'), {});
 
 async function downloadXtxConverted() {
   if (!xtxFileResults.length) {
@@ -1596,6 +1781,148 @@ function copyXtxConverted() {
   navigator.clipboard.writeText(r.convertedXml).then(() => {
     setXtxStatus(`${r.name} 변환 XML 복사 완료`, 'success');
   });
+}
+
+// ─── HTML 미리보기 / 복사 / 저장 ───
+const XTX_CSS_HREFS = ['css/base.css', 'css/product.css', 'css/bridge.css'];
+let _xtxCssContents = null; // { 'css/base.css': '...', ... }
+let _xtxCssLoading = null;
+
+async function loadXtxCssContents() {
+  if (_xtxCssContents) return _xtxCssContents;
+  if (_xtxCssLoading) return _xtxCssLoading;
+  _xtxCssLoading = (async () => {
+    const out = {};
+    for (const href of XTX_CSS_HREFS) {
+      try {
+        const res = await fetch(href);
+        if (res.ok) out[href] = await res.text();
+      } catch (e) { console.warn('[xtx] CSS fetch 실패:', href, e); }
+    }
+    _xtxCssContents = out;
+    return out;
+  })();
+  return _xtxCssLoading;
+}
+
+function buildXtxHtmlOptions() {
+  const preserveAttrs = !!document.getElementById('htmlPrevPreserveAttrs')?.checked;
+  const inlineCss = !!document.getElementById('htmlPrevInlineCss')?.checked;
+  return { preserveAttrs, inlineCss, cssHrefs: XTX_CSS_HREFS };
+}
+
+async function renderXtxHtmlPreview(r) {
+  const frame = document.getElementById('htmlPreviewFrame');
+  const empty = document.getElementById('htmlPreviewEmpty');
+  if (!r || !r.convertedXml) {
+    if (frame) { frame.srcdoc = ''; frame.style.display = 'none'; }
+    if (empty) empty.style.display = '';
+    return;
+  }
+  // iframe srcdoc 는 about:srcdoc 을 base 로 쓰므로 상대 경로 <link> 가 풀리지 않는다.
+  // → 부모 문서의 디렉토리를 <base href> 로 주입해 css/, images/ 가 정상 로드되도록 한다.
+  const baseHref = location.href.replace(/[^/]+(?:\?.*)?$/, '');
+  const opts = buildXtxHtmlOptions();
+
+  // 저장용 HTML — "CSS 인라인" 체크 시 fetch 한 본문을 임베드
+  let cssContents = null;
+  if (opts.inlineCss) {
+    try { cssContents = await loadXtxCssContents(); }
+    catch (e) { console.warn('[xtx] CSS 인라인용 fetch 실패 — link 로 폴백', e); }
+  }
+
+  let previewHtml, downloadHtml;
+  try {
+    previewHtml = XmlToHtml.convert(r.convertedXml, Object.assign({}, opts, {
+      fileName: r.name,
+      baseHref,
+      inlineCss: false,
+    }));
+    downloadHtml = XmlToHtml.convert(r.convertedXml, Object.assign({}, opts, {
+      fileName: r.name,
+      cssContents,
+    }));
+    r.htmlOutput = downloadHtml;
+  } catch (e) {
+    if (empty) { empty.style.display = ''; empty.textContent = 'HTML 변환 실패: ' + e.message; }
+    if (frame) frame.style.display = 'none';
+    return;
+  }
+  if (empty) empty.style.display = 'none';
+  frame.style.display = '';
+  frame.srcdoc = previewHtml;
+}
+
+function rerenderXtxHtmlPreview() {
+  if (xtxActiveFileIndex >= 0 && xtxFileResults[xtxActiveFileIndex]) {
+    renderXtxHtmlPreview(xtxFileResults[xtxActiveFileIndex]);
+  }
+}
+
+function copyXtxHtml() {
+  if (xtxActiveFileIndex < 0 || !xtxFileResults[xtxActiveFileIndex]) {
+    setXtxStatus('복사할 파일이 없습니다.', 'error');
+    return;
+  }
+  const r = xtxFileResults[xtxActiveFileIndex];
+  if (!r.htmlOutput) { setXtxStatus('HTML 변환 결과가 없습니다.', 'error'); return; }
+  navigator.clipboard.writeText(r.htmlOutput).then(() => {
+    setXtxStatus(`${r.name} HTML 복사 완료`, 'success');
+  });
+}
+
+async function downloadXtxHtml() {
+  if (!xtxFileResults.length) { setXtxStatus('변환할 파일이 없습니다.', 'error'); return; }
+  const targets = xtxFileResults.filter(r => r.htmlOutput);
+  const total = targets.length;
+  if (!total) { setXtxStatus('HTML 변환된 파일이 없습니다.', 'error'); return; }
+
+  // 우선순위:
+  //   1) 설정에서 지정한 saveDirHandle (옵셔널 오버라이드)
+  //   2) preview/ 기본 폴더 (htmlPreviewDirHandle) — 없으면 즉시 사용자에게 선택 안내
+  let targetDir = saveDirHandle;
+  let isPreviewTarget = false;
+  if (!targetDir) {
+    targetDir = await getOrPromptHtmlPreviewDir();
+    if (!targetDir) {
+      setXtxStatus('저장이 취소되었습니다.', 'error');
+      return;
+    }
+    isPreviewTarget = true;
+  }
+
+  // 저장 위치가 프로젝트 루트의 preview/ 서브폴더면 CSS 경로를 ../css/ 로 변환.
+  // saveDirHandle 오버라이드 시에는 사용자가 임의 위치를 고른 것이라 기본 css/ 경로 유지.
+  const opts = buildXtxHtmlOptions();
+  const cssHrefs = isPreviewTarget
+    ? XTX_CSS_HREFS.map(h => '../' + h)
+    : XTX_CSS_HREFS;
+  let cssContents = null;
+  if (opts.inlineCss) {
+    try { cssContents = await loadXtxCssContents(); }
+    catch (e) { console.warn('[xtx] CSS 인라인 fetch 실패 — link 폴백', e); }
+  }
+
+  showSaveProgress(total);
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  let count = 0;
+  for (const r of targets) {
+    const fileKey = r.meta.screenId || r.name.replace(/\.xml$/i, '');
+    const ver = getNextVersion(xtxDownloadVersionMap, fileKey, 'wsq_xtx_dl_version_map');
+    const fileName = fileKey + '_rel_v' + ver + '.html';
+    // 저장 시점에 대상 폴더에 맞춰 CSS 경로 재생성
+    const html = XmlToHtml.convert(r.convertedXml, Object.assign({}, opts, {
+      fileName: r.name,
+      cssHrefs,
+      cssContents,
+    }));
+    await downloadFile(html, fileName, targetDir);
+    count++;
+    updateSaveProgress(count, total, fileName);
+  }
+  const dirName = targetDir.name + ' 폴더';
+  showSaveToast(`${count}개 HTML 파일 저장 완료`, dirName);
+  setXtxStatus(`${count}개 HTML 파일 저장 완료`, 'success');
 }
 
 function setXtxStatus(msg, type) {
@@ -2350,16 +2677,20 @@ async function downloadConverted() {
   setStatus(`${count}개 파일 저장 완료`, 'success');
 }
 
-async function downloadFile(content, fileName) {
-  if (saveDirHandle) {
+/**
+ * 파일 저장. dirHandle 이 명시되면 그 폴더에, 없으면 전역 saveDirHandle 사용,
+ * 둘 다 없거나 실패하면 브라우저 기본 다운로드로 폴백.
+ */
+async function downloadFile(content, fileName, dirHandle) {
+  const target = dirHandle || saveDirHandle;
+  if (target) {
     try {
-      // 권한 확인/재요청
-      const perm = await saveDirHandle.queryPermission({ mode: 'readwrite' });
+      const perm = await target.queryPermission({ mode: 'readwrite' });
       if (perm !== 'granted') {
-        const req = await saveDirHandle.requestPermission({ mode: 'readwrite' });
+        const req = await target.requestPermission({ mode: 'readwrite' });
         if (req !== 'granted') throw new Error('권한 거부');
       }
-      const fileHandle = await saveDirHandle.getFileHandle(fileName, { create: true });
+      const fileHandle = await target.getFileHandle(fileName, { create: true });
       const writable = await fileHandle.createWritable();
       await writable.write(content);
       await writable.close();
@@ -2438,6 +2769,10 @@ document.querySelectorAll('input[name="xtxConvertMode"]').forEach(radio => {
     <div class="save-progress-title" id="saveProgressTitle">저장 중...</div>
     <div class="save-progress-bar"><div class="save-progress-fill" id="saveProgressFill"></div></div>
     <div class="save-progress-detail" id="saveProgressDetail"></div>
+    <div style="margin-top:12px;text-align:right;">
+      <button class="btn btn-outline btn-sm" id="saveProgressCancelBtn"
+              style="display:none;" onclick="cancelBulkOperation()">취소</button>
+    </div>
   </div>
 </div>
 
@@ -2462,6 +2797,336 @@ document.querySelectorAll('input[name="xtxConvertMode"]').forEach(radio => {
     </div>
     <div class="modal-footer">
       <button class="btn btn-primary btn-sm" onclick="closeSettings()">닫기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 사용자 가이드 모달 -->
+<div class="modal-overlay" id="guideModal" onclick="if(event.target===this)closeGuide()">
+  <div class="modal-box modal-guide">
+    <div class="guide-header">
+      <h2>&#128218; 사용자 가이드</h2>
+      <button class="guide-close" onclick="closeGuide()" title="닫기">&times;</button>
+    </div>
+    <div class="guide-tabs">
+      <button class="guide-tab active" data-guide="overview" onclick="switchGuide('overview')">시작하기</button>
+      <button class="guide-tab" data-guide="xmltoxml" onclick="switchGuide('xmltoxml')">XML to XML</button>
+      <button class="guide-tab" data-guide="legacy" onclick="switchGuide('legacy')">XML 좌표변환</button>
+      <button class="guide-tab" data-guide="batch" onclick="switchGuide('batch')">배치 비교</button>
+      <button class="guide-tab" data-guide="faq" onclick="switchGuide('faq')">자주 묻는 질문</button>
+    </div>
+    <div class="guide-body">
+
+      <!-- 시작하기 -->
+      <div class="guide-section active" data-guide="overview">
+        <h3>WebSquare Publishing Editor란?</h3>
+        <p>
+          절대좌표 기반 WebSquare XML을 <strong>상대좌표(반응형 가능) XML로 자동 변환</strong>하는 브라우저 도구입니다.
+          코드 지식 없이 파일을 드래그&amp;드롭하면 변환·검증·미리보기까지 한 번에 처리됩니다.
+        </p>
+
+        <h4>3개 탭 한눈에 보기</h4>
+        <table>
+          <thead><tr><th>탭</th><th>언제 사용</th><th>핵심 출력</th></tr></thead>
+          <tbody>
+            <tr><td><strong>XML to XML</strong> (기본)</td><td>일반 변환 작업 대부분</td><td>상대좌표 XML <code>*_rel_v1.xml</code> + HTML 미리보기/저장 <code>*_rel_v1.html</code></td></tr>
+            <tr><td>XML 좌표변환</td><td>레거시 규칙 기반 변환과 비교 시</td><td>규칙 기반 변환 XML + Wireframe MD</td></tr>
+            <tr><td>배치 비교</td><td>변환 전/후를 실 서버에서 일괄 검증</td><td>스크린샷 + 보존율 리포트</td></tr>
+          </tbody>
+        </table>
+
+        <h4>처음 켰을 때 추천 순서</h4>
+        <ol>
+          <li>상단 <strong>설정</strong>(⚙)에서 <em>저장 위치</em> 폴더를 지정하세요. (지정 안 하면 XML은 다운로드 폴더, HTML은 <code>preview/</code> 기본 사용)</li>
+          <li><strong>XML to XML</strong> 탭에서 절대좌표 XML 파일을 드롭하여 변환을 체험합니다.</li>
+          <li>결과의 <strong>와이어프레임</strong>과 <strong>검증</strong> 탭에서 누락이 없는지 확인합니다.</li>
+          <li><strong>HTML 미리보기</strong> 탭에서 실제 렌더 모습을 시각적으로 확인하고, 필요하면 <strong>HTML 저장</strong>으로 정적 HTML 파일로 추출합니다.</li>
+          <li>여러 파일을 한 번에 처리하려면 <strong>폴더 선택 &amp; 일괄 변환</strong> 사용 (옵션으로 HTML 동봉 생성 가능).</li>
+          <li>실 서버에서 결과를 확인하려면 <strong>배치 비교</strong> 탭으로 이동 (별도 캡처 서비스 필요 — 아래 안내 참고).</li>
+        </ol>
+
+        <h4>상단 공용 버튼</h4>
+        <ul>
+          <li><strong>▶ 화면 비교하기</strong>: compare.html 별도 창. 두 XML을 좌우로 띄워 단순 비교.</li>
+          <li><strong>📚 사용자가이드</strong>: 지금 보고 있는 이 창.</li>
+          <li><strong>⚙ 설정</strong>: 변환 결과 저장 위치 지정.</li>
+          <li><strong>초기화</strong>: 현재 로드된 파일·변환 결과 비움 (저장된 파일은 그대로).</li>
+        </ul>
+      </div>
+
+      <!-- XML to XML -->
+      <div class="guide-section" data-guide="xmltoxml">
+        <h3>XML to XML 탭 — 핵심 변환 기능</h3>
+        <p>실제 변환 샘플 쌍에서 추출한 패턴으로 변환합니다. <strong>대부분의 작업은 이 탭에서 진행</strong>합니다.</p>
+
+        <h4>1) 단일/다중 파일 변환</h4>
+        <ol>
+          <li>좌측 드롭존에 절대좌표 XML 파일을 드래그&amp;드롭 (여러 개 동시 가능)</li>
+          <li>상단 옵션에서 <strong>일반 변환</strong> 또는 <strong>반응형 변환</strong> 선택</li>
+          <li>자동으로 변환되며 우측 탭에서 결과 확인</li>
+          <li><strong>복사</strong> 또는 <strong>다운로드</strong>로 결과 저장</li>
+        </ol>
+
+        <div class="guide-callout tip">
+          <strong>일반 vs 반응형:</strong> 반응형을 선택하면 변환된 테이블에
+          <code>adaptive="layout" adaptiveThreshold="768"</code> 속성이 추가되어 768px 미만에서 자동으로 모바일 레이아웃이 됩니다.
+          그 외 구조·내용은 완전히 동일합니다.
+        </div>
+
+        <h4>2) 폴더 일괄 변환</h4>
+        <ol>
+          <li>탭 상단 <strong>폴더 선택 &amp; 일괄 변환</strong> 버튼 클릭</li>
+          <li>변환할 폴더 선택 (하위 폴더까지 재귀 스캔)</li>
+          <li>같은 폴더에 <code>_rel_v*.xml</code> 쌍이 없는 원본 XML만 자동 변환</li>
+          <li>결과는 원본 옆에 <code>&lt;name&gt;_rel_v1.xml</code>로 저장됨</li>
+          <li><strong>HTML도 생성 (.html)</strong> 체크박스를 켜면 XML 옆에 <code>&lt;name&gt;_rel_v1.html</code>도 동봉 출력</li>
+          <li>진행률은 오버레이로 표시. 실패한 파일은 <strong>F12 콘솔</strong>에서 확인</li>
+        </ol>
+        <div class="guide-callout">
+          <strong>주의:</strong> File System Access API를 사용하므로 <strong>Chrome / Edge 등 Chromium 계열</strong> 브라우저에서만 동작합니다.
+          Firefox/Safari에서는 일괄 변환 버튼이 동작하지 않습니다.
+        </div>
+        <div class="guide-callout tip">
+          <strong>HTML 동봉 생성 시:</strong> HTML 파일의 CSS 링크는 <code>css/base.css</code> 같은 상대경로로 박힙니다.
+          저장 폴더 옆에 프로젝트의 <code>css/</code> 와 <code>images/</code> 폴더가 같이 있어야 정상 렌더됩니다.
+          (디자인 깨짐 시 FAQ 참고)
+        </div>
+
+        <h4>3) 우측 결과 패널 활용</h4>
+        <table>
+          <thead><tr><th>탭</th><th>내용</th></tr></thead>
+          <tbody>
+            <tr><td>변환 XML</td><td>최종 결과 텍스트. 복사·다운로드 가능</td></tr>
+            <tr><td>절대좌표 와이어프레임</td><td>원본 좌표 기반 시각화 (GroupBox 타이틀 표시)</td></tr>
+            <tr><td>상대좌표 와이어프레임</td><td>변환 결과 구조 시각화. 라벨/ID 토글, 셀ID 토글 지원</td></tr>
+            <tr><td><strong>HTML 미리보기</strong></td><td>WebSquare base.css/product.css 적용된 실제 렌더 미리보기 (iframe). 상단 토글: WS 속성 보존(data-ws-*) / CSS 인라인</td></tr>
+            <tr><td>검증</td><td>컴포넌트 통계, 겹침/좌표 이상, 스크립트 핸들러, ID 누락 등 자동 점검</td></tr>
+          </tbody>
+        </table>
+        <div class="guide-callout tip">
+          <strong>ID 불일치 빨간색 표시:</strong> 상대좌표 와이어프레임에서 빨간 ID는 원본에 있던 ID가 변환 후 누락된 것입니다.
+          숨김 컴포넌트는 자동 복구되지만, 화면 표시 컴포넌트가 빠진 경우는 검증 탭의 경고를 따라 수동 확인하세요.
+        </div>
+
+        <h4>4) 검증 결과 보는 법</h4>
+        <ul>
+          <li><strong>PASS</strong> — 문제 없음</li>
+          <li><strong>FAIL</strong> — 항목별로 구체적 오류 설명과 영향이 함께 표시됨</li>
+          <li>이벤트 핸들러(<code>scwin.{id}_OnClick</code>), <code>{id}.Value</code> 참조, <code>ref</code>/<code>dataList</code> 바인딩, <code>disabled</code>/<code>maxlength</code> 등 속성 보존을 모두 검사</li>
+        </ul>
+
+        <h4>5) HTML 변환·미리보기·저장 (신규)</h4>
+        <p>
+          변환된 상대좌표 XML을 <strong>정적 HTML 파일</strong>로 추출합니다. WebSquare 런타임 없이 브라우저에서 바로 열어 디자인/구조를 확인할 수 있습니다.
+          내부적으로 <code>js/xml-to-html.js</code> 모듈이 <code>xf:input/xf:select1/w2:textbox</code> 등을 표준 HTML 태그(<code>input/select/span</code>)로 치환합니다.
+        </p>
+
+        <h4>미리보기 옵션 (HTML 미리보기 탭 상단)</h4>
+        <ul>
+          <li><strong>WS 속성 보존 (data-ws-*)</strong>: 켜면 <code>ctype/hierarchy/orgid/ref</code> 등 WebSquare 전용 속성을 <code>data-ws-*</code>로 변환해 보존. 디버깅/추적 시 유용. 끄면 표준 HTML 속성만 출력</li>
+          <li><strong>CSS 인라인</strong>: 켜면 base.css/product.css/bridge.css 내용을 <code>&lt;style&gt;</code>로 임베드해서 자기완결적 HTML 생성 (단독 실행 가능, 파일 크기 큼). 끄면 <code>&lt;link rel=stylesheet&gt;</code> 외부 참조</li>
+        </ul>
+
+        <h4>저장 위치 — 기본은 preview/ 폴더</h4>
+        <ul>
+          <li>액션 바의 <strong>HTML 저장</strong> 버튼을 누르면 첫 사용 시 폴더 선택 dialog가 뜹니다. 프로젝트 루트의 <code>preview/</code> 폴더를 선택하세요.</li>
+          <li>한 번 선택하면 IndexedDB에 기억되어 다음부터는 자동 사용됩니다 (재선택 불필요).</li>
+          <li>다른 위치로 저장하려면 <strong>설정</strong>(⚙)에서 <em>저장 폴더</em>를 지정하세요 — 거기가 우선됩니다 (XML/HTML 모두).</li>
+          <li>저장 시 CSS 경로는 자동 조정: <code>preview/</code>에 저장 → <code>../css/...</code>, 사용자 지정 폴더 → <code>css/...</code> 유지</li>
+        </ul>
+
+        <h4>적용되는 CSS 스택</h4>
+        <table>
+          <thead><tr><th>파일</th><th>역할</th></tr></thead>
+          <tbody>
+            <tr><td><code>css/base.css</code></td><td>WebSquare 핵심 스타일 (<code>.w2input/.w2tb/.btn_cm</code> 등)</td></tr>
+            <tr><td><code>css/product.css</code></td><td>제품 레벨 스킨/색상 (KB 매핑된 클래스 포함)</td></tr>
+            <tr><td><code>css/bridge.css</code></td><td>변환기 호환 레이어 — 표준 HTML 태그 ↔ WebSquare 클래스 갭 메움. vendor CSS는 손대지 않음</td></tr>
+          </tbody>
+        </table>
+
+        <div class="guide-callout tip">
+          <strong>"HTML 복사"</strong> 버튼은 현재 활성 파일의 HTML 텍스트를 클립보드에 복사합니다. 외부 도구로 빠르게 옮길 때 활용하세요.
+        </div>
+      </div>
+
+      <!-- XML 좌표변환 (레거시) -->
+      <div class="guide-section" data-guide="legacy">
+        <h3>XML 좌표변환 탭 (레거시)</h3>
+        <p>
+          <code>skill/convert-xml.md</code>의 규칙을 JS에 하드코딩한 <strong>구식 변환기</strong>입니다.
+          기본 작업은 <strong>XML to XML</strong> 탭을 사용하고, 이 탭은 결과 비교·검증 용도로만 사용하세요.
+        </p>
+
+        <h4>XML to XML과의 차이</h4>
+        <table>
+          <thead><tr><th>항목</th><th>XML 좌표변환 (레거시)</th><th>XML to XML (권장)</th></tr></thead>
+          <tbody>
+            <tr><td>변환 근거</td><td>MD 규칙 하드코딩</td><td>실 샘플 쌍에서 추출한 패턴</td></tr>
+            <tr><td>hierarchy/orgid</td><td>제거</td><td>보존</td></tr>
+            <tr><td>속성 순서</td><td>원본 순서</td><td>알파벳순 (ctype 최우선)</td></tr>
+            <tr><td>숨김 필드</td><td>주석 처리</td><td><code>.hidden_field</code> (display:none)</td></tr>
+            <tr><td>태그 형식</td><td>self-closing</td><td>open/close 태그</td></tr>
+          </tbody>
+        </table>
+
+        <h4>사용 방법</h4>
+        <ol>
+          <li>좌측 드롭존에 XML 파일 업로드</li>
+          <li>자동으로 규칙 기반 변환 수행</li>
+          <li>변환 XML / Wireframe MD 탭에서 결과 확인</li>
+          <li>HTML → XML 역변환도 같은 탭에서 가능 (HTML 파일을 드롭하면 자동 인식)</li>
+        </ol>
+      </div>
+
+      <!-- 배치 비교 -->
+      <div class="guide-section" data-guide="batch">
+        <h3>배치 비교 탭 — 실서버 렌더 검증</h3>
+        <p>
+          변환 전/후 XML을 <strong>실제 WebSquare 서버에서 렌더</strong>하여 스크린샷·컴포넌트 카운트로 보존율을 자동 산출합니다.
+          많은 화면을 한꺼번에 검증할 때 사용합니다.
+        </p>
+
+        <h4>사전 준비 (최초 1회)</h4>
+        <ol>
+          <li>탐색기에서 프로젝트 폴더의 <code>tools</code> 폴더로 이동</li>
+          <li>커맨드 창을 열어 <code>npm install</code> 실행 (Puppeteer + Chrome ~170MB 다운로드)</li>
+          <li>설치 완료 후 <strong>프로젝트 루트의 <code>start-editor.bat</code> 더블클릭</strong></li>
+          <li>캡처 서비스 창(<code>:5678</code>)과 에디터가 함께 뜨면 준비 완료</li>
+        </ol>
+        <div class="guide-callout">
+          <strong>중요:</strong> 배치 비교는 캡처 서비스가 실행 중이어야만 동작합니다.
+          이후 사용 시에도 매번 <code>start-editor.bat</code>으로 켜주세요.
+        </div>
+
+        <h4>설정 항목</h4>
+        <table>
+          <thead><tr><th>항목</th><th>설명</th></tr></thead>
+          <tbody>
+            <tr><td>WebSquare 서버</td><td><code>172.16.0.10:8080</code> 형식. http/https 자동 인식</td></tr>
+            <tr><td>서버 루트 폴더</td><td>URL 경로의 시작점 (서버에서 화면 XML이 위치한 공통 상위)</td></tr>
+            <tr><td>비교 대상 폴더</td><td>서버 루트 하위 경로. <code>w2xPath</code>가 자동 계산됨</td></tr>
+            <tr><td>리포트 폴더</td><td>스크린샷·HTML이 저장될 로컬 폴더</td></tr>
+            <tr><td>엔트리 파일명</td><td>리포트 첫 페이지 파일명 (보통 <code>index.html</code>)</td></tr>
+            <tr><td>캡처 대기(ms)</td><td>렌더 안정화 대기 시간. 화면이 무거우면 3000~5000 권장</td></tr>
+            <tr><td>뷰포트(W×H)</td><td>캡처 해상도</td></tr>
+          </tbody>
+        </table>
+
+        <h4>실행 순서</h4>
+        <ol>
+          <li>설정 완료 후 <strong>파일 쌍 스캔</strong> — <code>foo.xml</code> ↔ <code>foo_rel_v*.xml</code> 자동 매칭</li>
+          <li>미변환 파일이 있으면 <strong>미변환 자동 변환</strong> 버튼으로 일반/반응형 옵션 지정 후 일괄 변환 가능</li>
+          <li>비교할 쌍을 체크박스로 선택</li>
+          <li><strong>실행</strong> 클릭 — 원본·변환 병렬 캡처. 진행률 표시, 중간 중단 지원</li>
+          <li>완료 후 리포트 폴더의 <strong>엔트리 HTML을 탐색기에서 직접 더블클릭</strong></li>
+        </ol>
+
+        <div class="guide-callout">
+          <strong>"엔트리 열기" 버튼은 요약 확인용:</strong> 에디터의 엔트리 열기 버튼은 blob URL을 사용해서
+          chunk 페이지 상대링크가 깨집니다. 전체 리포트를 보려면 반드시 <strong>탐색기에서 엔트리 HTML 더블클릭</strong>하세요.
+        </div>
+
+        <h4>보존율 산출 방식</h4>
+        <ul>
+          <li>모든 frame에서 카테고리별(폼/버튼/링크/이미지/테이블/그리드/탭/패널) <strong>가시 컴포넌트 수</strong>와 보이는 <strong>텍스트 토큰</strong>을 추출</li>
+          <li>카테고리별 보존율 = <code>min(원본, 변환) / max(원본, 변환)</code></li>
+          <li>텍스트 = Jaccard 유사도</li>
+          <li>종합 보존율 = 양쪽 중 하나라도 비영인 카테고리들의 <strong>동일 가중 평균</strong></li>
+        </ul>
+
+        <h4>리포트 구조</h4>
+        <pre>{리포트폴더}/
+  {엔트리파일}            ← run 목록·요약·chunk 링크
+  manifest.json           ← 전체 메타데이터
+  runs/{runId}/
+    chunk_NNN.html        ← 화면 100개 단위 비교 페이지
+    images/
+      NNNN_orig.jpg       ← 원본 스크린샷
+      NNNN_conv.jpg       ← 변환 스크린샷</pre>
+        <p>각 화면 단위의 체크박스·메모는 <strong>localStorage에 자동 저장</strong>되어 페이지를 새로 열어도 유지됩니다.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="guide-section" data-guide="faq">
+        <h3>자주 묻는 질문</h3>
+
+        <h4>Q. 변환 결과 파일이 저장 폴더에 안 보여요</h4>
+        <p>상단 <strong>⚙ 설정</strong>에서 저장 위치를 지정하지 않으면 XML은 브라우저 기본 다운로드 폴더로, HTML은 <code>preview/</code> 폴더로 갑니다.
+        명시적 저장 위치를 원하시면 설정에서 폴더를 선택하세요. 권한은 브라우저가 한 번만 묻고 이후 자동 기억됩니다.</p>
+
+        <h4>Q. HTML 저장은 어디로 떨어지나요?</h4>
+        <ul>
+          <li><strong>설정에서 저장 폴더 지정함</strong> → 거기 (XML/HTML 동일 위치)</li>
+          <li><strong>지정 안 함</strong> → <code>preview/</code> 폴더 (프로젝트 루트). 첫 사용 시 한 번 폴더 선택 dialog가 뜨고, 이후 자동 기억</li>
+          <li>둘 다 안 되거나 권한 거부 → 브라우저 기본 다운로드 폴더로 폴백</li>
+        </ul>
+
+        <h4>Q. <code>preview/</code> 폴더는 뭔가요?</h4>
+        <p>HTML 변환 결과의 기본 저장 위치입니다. 프로젝트 루트의 <code>css/</code> · <code>images/</code> 와 같은 레벨에 있어,
+        저장된 HTML이 <code>../css/base.css</code> 형식으로 상대경로 참조해 정상 렌더됩니다.
+        폴더가 없으면 직접 만들거나 첫 HTML 저장 시 폴더 선택 dialog에서 새로 생성하세요.</p>
+
+        <h4>Q. 저장한 HTML 파일을 열었는데 디자인이 깨져요</h4>
+        <ul>
+          <li><strong>CSS 경로 확인</strong>: HTML 파일이 있는 위치를 기준으로 <code>css/base.css</code> 또는 <code>../css/base.css</code> 가 실제로 존재해야 합니다.</li>
+          <li><strong>preview/ 에 저장한 경우</strong>: 자동으로 <code>../css/</code> 경로가 박힙니다. 프로젝트 루트의 <code>css/</code> · <code>images/</code> 폴더가 그대로 있어야 합니다.</li>
+          <li><strong>임의 폴더에 저장한 경우</strong>: HTML 옆에 <code>css/</code> 와 <code>images/</code> 폴더를 같이 복사해두거나, 미리보기 옵션의 <strong>CSS 인라인</strong>을 켜서 저장하면 단독 실행 가능</li>
+          <li><strong>file:// 보안 차단</strong>: 일부 브라우저는 file://에서 SVG 아이콘 로드를 막을 수 있음. 그래도 레이아웃은 보임</li>
+        </ul>
+
+        <h4>Q. HTML 미리보기에서 입력 박스/버튼이 어긋나 보입니다</h4>
+        <p>bridge.css가 inline-flow의 <code>vertical-align: middle</code>로 정렬을 통일합니다. 그래도 어긋나면
+        <strong>F12 → 개발자도구 → Elements</strong>로 해당 요소의 computed style을 확인하고,
+        bridge.css에서 보강이 필요하면 알려주세요.</p>
+
+        <h4>Q. 변환된 HTML에 <code>data-ws-*</code> 속성이 잔뜩 붙어 있어요</h4>
+        <p>WebSquare 전용 속성(<code>ctype/hierarchy/orgid/ref</code> 등)을 추적·디버깅을 위해 <code>data-ws-*</code>로 보존한 것입니다.
+        HTML 미리보기 탭 상단의 <strong>WS 속성 보존</strong> 토글을 끄면 표준 HTML 속성만 남깁니다 (출력이 더 깔끔해짐).</p>
+
+        <h4>Q. 폴더 일괄 변환 버튼이 동작하지 않아요</h4>
+        <p>File System Access API는 <strong>Chrome / Edge / 기타 Chromium 계열 브라우저</strong>에서만 동작합니다.
+        Firefox·Safari에서는 단일 파일 변환만 사용하세요.</p>
+
+        <h4>Q. 배치 비교 탭에서 캡처가 진행되지 않습니다</h4>
+        <ul>
+          <li>캡처 서비스가 켜져 있는지 확인 (<code>start-editor.bat</code>으로 기동)</li>
+          <li><code>http://localhost:5678/health</code>에 접속해서 응답이 오는지 확인</li>
+          <li>WebSquare 서버 주소가 현재 네트워크에서 실제로 접근 가능한지 확인</li>
+          <li>화면이 무거우면 <strong>캡처 대기(ms)</strong>를 3000~5000으로 늘려보세요</li>
+        </ul>
+
+        <h4>Q. 변환된 XML에 <code>adaptive="layout"</code>이 자꾸 붙어요 / 안 붙어요</h4>
+        <p>변환 옵션의 <strong>일반 / 반응형</strong> 선택에 따라 결정됩니다.
+        반응형 선택 시 <code>w2tb tbl</code> 테이블 그룹에 <code>adaptive="layout" adaptiveThreshold="768"</code>이 추가됩니다.
+        원하지 않으면 일반 변환으로 재변환하세요.</p>
+
+        <h4>Q. 변환 후에 ID가 빨갛게 표시됩니다</h4>
+        <p>원본에 있던 ID 일부가 변환 결과에서 누락됐다는 뜻입니다.
+        숨김 컴포넌트(<code>display:none</code>)는 자동 복구되지만, 화면에 보이는 컴포넌트가 누락된 경우는
+        <strong>검증 탭의 경고 메시지를 확인하고 수동으로 확인</strong>하세요.</p>
+
+        <h4>Q. 검색영역(schbox)으로 잘못 묶이거나 안 묶입니다</h4>
+        <p>검색영역 판별은 다음 조건을 모두 만족해야 합니다.</p>
+        <ul>
+          <li>화면의 첫 번째 GroupBox</li>
+          <li>폼 요소 포함 / 그리드 없음</li>
+          <li>버튼 텍스트가 <strong>정확히</strong> "조회" / "검색" / "초기화" (또는 화면 우측 60% 이상 위치)</li>
+        </ul>
+        <p>"상품조회"처럼 다른 글자가 포함된 버튼은 검색버튼으로 인식되지 않습니다. 원본 화면을 위 조건에 맞게 정리해야 합니다.</p>
+
+        <h4>Q. 변환 결과의 컴포넌트 순서가 원본과 달라 보입니다</h4>
+        <p>섹션은 절대좌표 top 기준으로 정렬됩니다. 같은 Y 좌표에 있는 GroupBox들이 left 50px 이상 떨어져 있으면 자동으로
+        <code>.lybox &gt; .col_N</code> 좌우 분할이 적용됩니다. 의도와 다르다면 원본의 좌표를 확인하세요.</p>
+
+        <h4>Q. 에디터가 갑자기 느려졌어요</h4>
+        <p>큰 폴더를 일괄 변환 중이거나, 한 번에 너무 많은 파일을 로드한 경우입니다.
+        상단의 <strong>초기화</strong> 버튼으로 메모리에 로드된 파일을 비우면 회복됩니다.</p>
+      </div>
+
+    </div>
+    <div class="guide-footer">
+      <button class="btn btn-primary btn-sm" onclick="closeGuide()">닫기</button>
     </div>
   </div>
 </div>
@@ -2506,6 +3171,83 @@ async function removeHandleFromIDB() {
   db.close();
 }
 
+// HTML 저장 전용 폴더 핸들 (preview/) — saveDirHandle 와 별도 키
+const IDB_KEY_HTML_PREVIEW = 'htmlPreviewDirHandle';
+
+async function saveHtmlPreviewHandleToIDB(handle) {
+  const db = await openIDB();
+  const tx = db.transaction(IDB_STORE, 'readwrite');
+  tx.objectStore(IDB_STORE).put(handle, IDB_KEY_HTML_PREVIEW);
+  db.close();
+}
+
+async function loadHtmlPreviewHandleFromIDB() {
+  try {
+    const db = await openIDB();
+    return new Promise((resolve) => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get(IDB_KEY_HTML_PREVIEW);
+      req.onsuccess = () => { db.close(); resolve(req.result || null); };
+      req.onerror = () => { db.close(); resolve(null); };
+    });
+  } catch { return null; }
+}
+
+async function removeHtmlPreviewHandleFromIDB() {
+  try {
+    const db = await openIDB();
+    const tx = db.transaction(IDB_STORE, 'readwrite');
+    tx.objectStore(IDB_STORE).delete(IDB_KEY_HTML_PREVIEW);
+    db.close();
+  } catch {}
+}
+
+/** 권한 확인 + 필요 시 재요청. true 면 사용 가능. */
+async function ensureDirPermission(handle) {
+  try {
+    const perm = await handle.queryPermission({ mode: 'readwrite' });
+    if (perm === 'granted') return true;
+    const req = await handle.requestPermission({ mode: 'readwrite' });
+    return req === 'granted';
+  } catch { return false; }
+}
+
+/**
+ * HTML 저장용 기본 폴더(preview/) 핸들을 확보.
+ *   1) 메모리 캐시 → 권한 OK 면 그대로 반환
+ *   2) IDB 에서 복원 → 권한 OK 면 메모리 캐시 후 반환
+ *   3) 사용자에게 안내 dialog → showDirectoryPicker 로 preview/ 선택 유도
+ *
+ *   반드시 사용자 제스처(버튼 클릭) 컨텍스트에서 호출되어야 한다.
+ */
+async function getOrPromptHtmlPreviewDir() {
+  if (htmlPreviewDirHandle && await ensureDirPermission(htmlPreviewDirHandle)) {
+    return htmlPreviewDirHandle;
+  }
+  const stored = await loadHtmlPreviewHandleFromIDB();
+  if (stored && await ensureDirPermission(stored)) {
+    htmlPreviewDirHandle = stored;
+    return stored;
+  }
+  // 사용자에게 안내 — 첫 사용 또는 권한 만료
+  const ok = confirm(
+    'HTML 저장 기본 폴더(preview/)가 아직 지정되지 않았습니다.\n\n' +
+    '프로젝트 루트의 preview 폴더를 선택해 주세요.\n' +
+    '한 번 선택하면 다음 저장부터는 자동으로 사용됩니다.\n\n' +
+    '(특정 다른 위치로 저장하려면 설정에서 "저장 폴더" 를 지정하면 그곳이 우선됩니다.)'
+  );
+  if (!ok) return null;
+  try {
+    const dir = await window.showDirectoryPicker({ id: 'htmlPreviewDir', mode: 'readwrite' });
+    htmlPreviewDirHandle = dir;
+    await saveHtmlPreviewHandleToIDB(dir);
+    return dir;
+  } catch (e) {
+    if (e.name !== 'AbortError') console.warn('preview 폴더 선택 실패:', e);
+    return null;
+  }
+}
+
 // ─── 설정: 저장 위치 ───
 async function openSettings() {
   document.getElementById('settingsModal').classList.add('active');
@@ -2537,6 +3279,25 @@ async function openSettings() {
 
 function closeSettings() {
   document.getElementById('settingsModal').classList.remove('active');
+}
+
+function openGuide() {
+  document.getElementById('guideModal').classList.add('active');
+}
+
+function closeGuide() {
+  document.getElementById('guideModal').classList.remove('active');
+}
+
+function switchGuide(name) {
+  document.querySelectorAll('#guideModal .guide-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.guide === name);
+  });
+  document.querySelectorAll('#guideModal .guide-section').forEach(s => {
+    s.classList.toggle('active', s.dataset.guide === name);
+  });
+  const body = document.querySelector('#guideModal .guide-body');
+  if (body) body.scrollTop = 0;
 }
 
 async function pickSaveDir() {
@@ -2707,12 +3468,20 @@ async function batchPickReportDir() {
   } catch (e) { if (e.name !== 'AbortError') alert('폴더 선택 실패: ' + e.message); }
 }
 
+// AbortSignal.timeout는 일부 구형 환경에서 미지원이라 직접 구현
+function withTimeout(ms) {
+  const ac = new AbortController();
+  const t = setTimeout(() => ac.abort(), ms);
+  return { signal: ac.signal, cancel: () => clearTimeout(t) };
+}
+
 // ─── 서비스 상태 ───
 async function batchCheckService() {
   const el = document.getElementById('batchServiceStatus');
   el.className = 'batch-status-pill neutral'; el.textContent = '확인 중…';
+  const to = withTimeout(5000);
   try {
-    const r = await fetch(BATCH_SERVICE_URL + '/health', { method: 'GET' });
+    const r = await fetch(BATCH_SERVICE_URL + '/health', { method: 'GET', signal: to.signal });
     const j = await r.json();
     if (j && j.ok) {
       el.className = 'batch-status-pill ok';
@@ -2721,6 +3490,8 @@ async function batchCheckService() {
   } catch {
     el.className = 'batch-status-pill err';
     el.textContent = '미연결 — start-editor.bat 실행 필요';
+  } finally {
+    to.cancel();
   }
   batchUpdateRunBtn();
 }
@@ -3074,6 +3845,9 @@ function batchGetEntryName() {
 
 // ─── 단일 URL 캡처 (/capture 호출) ───
 async function batchCaptureOne(url, waitMs, viewport) {
+  // 캡처 자체 대기 + 네트워크 마진 더한 타임아웃. 행걸린 서버에서 배치 전체가 멈추는 것 방지.
+  const captureWait = typeof waitMs === 'number' ? waitMs : 3000;
+  const to = withTimeout(captureWait + 60000);
   try {
     const r = await fetch(BATCH_SERVICE_URL + '/capture', {
       method: 'POST',
@@ -3083,6 +3857,7 @@ async function batchCaptureOne(url, waitMs, viewport) {
         format: BATCH_IMG_FORMAT,
         quality: BATCH_IMG_QUALITY,
       }),
+      signal: to.signal,
     });
     const j = await r.json();
     if (!j || !j.ok) return { ok: false, error: (j && j.error) || 'unknown' };
@@ -3095,7 +3870,9 @@ async function batchCaptureOne(url, waitMs, viewport) {
       height: j.height,
     };
   } catch (e) {
-    return { ok: false, error: e.message };
+    return { ok: false, error: e.name === 'AbortError' ? '캡처 타임아웃' : e.message };
+  } finally {
+    to.cancel();
   }
 }
 
@@ -3103,8 +3880,10 @@ async function batchCaptureOne(url, waitMs, viewport) {
 async function batchWriteImageFile(dir, name, b64) {
   const fh = await dir.getFileHandle(name, { create: true });
   const w = await fh.createWritable();
-  // base64 → Uint8Array 바이너리 쓰기
-  const bin = atob(b64);
+  // base64 → Uint8Array 바이너리 쓰기 — 잘못된 base64 입력으로 배치가 중단되지 않도록 가드
+  let bin;
+  try { bin = atob(b64); }
+  catch { throw new Error('이미지 base64 디코딩 실패'); }
   const arr = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
   await w.write(arr);
@@ -3424,6 +4203,8 @@ async function batchOpenReport() {
     window.open(url, '_blank');
     // blob URL 에서는 chunk 상대링크가 깨집니다.
     // chunk 페이지로 이동하려면 탐색기에서 직접 엔트리 파일을 열어주세요.
+    // 새 창에 로드된 후에는 더 이상 필요 없으므로 일정 시간 뒤 해제하여 메모리 누수 방지.
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
   } catch (e) {
     alert('리포트 파일이 아직 없습니다: ' + name);
   }
