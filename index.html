@@ -989,6 +989,7 @@ body {
     <div id="xtxFolderConvert" style="margin:8px 0 12px;padding:10px 12px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
       <button class="btn btn-primary btn-sm" onclick="xtxConvertFolder()">폴더 선택 &amp; 일괄 변환</button>
       <label style="font-size:12px;display:flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="xtxFolderEmitHtml"> HTML도 생성 (.html)</label>
+      <label style="font-size:12px;display:flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="xtxFolderEmitAssets" checked> css/ images/ 함께 복사</label>
       <span style="font-size:11px;color:#475569;line-height:1.4;">
         원본 폴더(<b>하위 재귀</b>) → 저장 폴더 순으로 선택. <code>*.xml</code> 중 쌍(<code>_rel_v*.xml</code>)이 없는 원본만 변환 →
         <code>저장폴더/&lt;원본루트&gt;/…/foo_rel_v1.xml</code> (하위 구조 동일 복제, 위 일반/반응형 옵션 적용)
@@ -1255,6 +1256,7 @@ body {
 <script src="js/xml-generator.js"></script>
 <script src="js/html-converter.js"></script>
 <script src="js/xml-to-html.js"></script>
+<script src="js/asset-copy-planner.js"></script>
 
 <script>
 // ─── 상태 ───
@@ -1542,6 +1544,24 @@ async function handleXmlToXmlFile(files) {
   xtxStatus.className = 'status-msg success';
 }
 
+// ─── XtX 폴더 자산 서브폴더 스캔 헬퍼 ───
+async function scanAssetSubdirs(rootHandle) {
+  const out = {};
+  for (const sub of ['css', 'images']) {
+    try {
+      const dir = await rootHandle.getDirectoryHandle(sub);
+      const files = [];
+      for await (const [name, h] of dir.entries()) {
+        if (h.kind === 'file') files.push(name);
+      }
+      out[sub] = files;
+    } catch (e) {
+      // 폴더 없음 → skip
+    }
+  }
+  return out;
+}
+
 // ─── XtX 폴더 일괄 변환 (하위 재귀 스캔 → 미변환 자동 변환) ───
 async function xtxConvertFolder() {
   let rootHandle;
@@ -1605,6 +1625,32 @@ async function xtxConvertFolder() {
     outRootDir = await saveRootHandle.getDirectoryHandle(rootHandle.name, { create: true });
   } catch (e) {
     alert('저장 폴더 생성 실패: ' + e.message); return;
+  }
+
+  // 자산 자동복사 (css/, images/)
+  const copyAssets = !!document.getElementById('xtxFolderEmitAssets')?.checked;
+  if (copyAssets) {
+    try {
+      const listing = await scanAssetSubdirs(rootHandle);
+      const plan = planAssetCopy(listing);
+      let copied = 0;
+      for (const { from, to } of plan) {
+        if (isBulkCancelled()) break;
+        const [dir, fname] = to.split('/');
+        const outDir = await outRootDir.getDirectoryHandle(dir, { create: true });
+        const srcDir = await rootHandle.getDirectoryHandle(dir);
+        const srcFh = await srcDir.getFileHandle(fname);
+        const srcFile = await srcFh.getFile();
+        const outFh = await outDir.getFileHandle(fname, { create: true });
+        const w = await outFh.createWritable();
+        await w.write(await srcFile.arrayBuffer());
+        await w.close();
+        copied++;
+      }
+      console.log(`[asset-copy] ${copied}/${plan.length} 복사 완료`);
+    } catch (e) {
+      console.warn('[asset-copy] 실패 (무시하고 진행):', e.message);
+    }
   }
 
   // 하위 폴더 캐시: relPath ('' | 'sub' | 'sub/inner') → dirHandle
