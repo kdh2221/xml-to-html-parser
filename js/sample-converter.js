@@ -122,10 +122,18 @@ const SampleConverter = (() => {
     }[tag] || tag;
   }
 
+  // 원본 XML의 label에는 인스웨이브 Craft 산출물 특성상 리터럴 "&nbsp;" 문자열이
+  // 섞여 들어오는 경우가 있다(원본 &amp;nbsp; → DOMParser 디코딩 결과).
+  // 그대로 두면 XMLSerializer가 다시 &amp;nbsp;로 직렬화해 WebSquare/와이어프레임에
+  // 그대로 "&nbsp;"가 노출되므로 일반 공백으로 치환한다.
+  function sanitizeLabelText(s) {
+    return String(s || '').replace(/&nbsp;/g, ' ').replace(/ /g, ' ');
+  }
+
   function getLabel(el) {
     for (const attr of ['label', 'indicator', 'value', 'text']) {
       const v = el.getAttribute(attr);
-      if (v) return v;
+      if (v) return sanitizeLabelText(v);
     }
     return '';
   }
@@ -143,6 +151,14 @@ const SampleConverter = (() => {
     const style = parseStyle(styleStr);
     const ctype = getCtype(el);
     const id = el.getAttribute('id') || el.getAttribute('orgid') || '';
+    // label 계열 속성을 일괄 정화하여 이후 cloneNode/직렬화 경로에서도 일관되게 깨끗한 값이 나가도록 한다.
+    for (const a of ['label', 'indicator', 'value', 'text']) {
+      const raw = el.getAttribute(a);
+      if (raw) {
+        const cleaned = sanitizeLabelText(raw);
+        if (cleaned !== raw) el.setAttribute(a, cleaned);
+      }
+    }
     const label = getLabel(el);
     const hidden = isHidden(style) || parentHidden;
 
@@ -210,7 +226,21 @@ const SampleConverter = (() => {
       const absTop = parentTop + px(style.top);
 
       if (ctype === 'GroupBox') {
-        comps.push(...walkChildren(el, elHidden, absLeft, absTop));
+        const childComps = walkChildren(el, elHidden, absLeft, absTop);
+        // 셀 래퍼(kb_td_*/kb_th_*) class 를 자손 컴포넌트에 분류용 메타로 전파
+        // — buildCompXml은 comp.el(원본 DOM)을 복제하므로 출력 XML에는 영향 없음
+        const groupClass = el.getAttribute('class') || '';
+        const cellMatch = groupClass.match(/\bkb_(?:th|td)_(?:head|body)(?:_right)?\b/);
+        if (cellMatch) {
+          const cellClass = cellMatch[0];
+          childComps.forEach(c => {
+            const existing = (c.attributes && c.attributes.class) || '';
+            if (!/\bkb_(?:th|td)_(?:head|body)(?:_right)?\b/.test(existing)) {
+              c.attributes.class = (existing ? existing + ' ' : '') + cellClass;
+            }
+          });
+        }
+        comps.push(...childComps);
         continue;
       }
 
@@ -741,9 +771,10 @@ const SampleConverter = (() => {
         while (ci < sorted.length) {
           const comp = sorted[ci];
           const { startIdx, span } = calcColspan(comp);
-          const isThComp = (comp.attributes?.class || '').includes('kb_th_head') ||
-                           (comp.attributes?.class || '').includes('kb_th_body') ||
-                           ((comp.ctype === 'Text' || comp.ctype === 'Desc') && !INPUT_TYPES.has(comp.ctype));
+          const cls = comp.attributes?.class || '';
+          const isThComp = cls.includes('kb_th_head') || cls.includes('kb_th_body') ||
+                           (!/\bkb_td_(?:head|body)(?:_right)?\b/.test(cls) &&
+                            (comp.ctype === 'Text' || comp.ctype === 'Desc') && !INPUT_TYPES.has(comp.ctype));
           const cellComps = [comp];
           ci++;
           // 같은 컬럼 범위에 있는 연속 컴포넌트 모으기
@@ -2199,11 +2230,15 @@ const SampleConverter = (() => {
     });
 
     // 원본의 모든 컴포넌트 중 변환에 누락된 것 찾기
+    // 같은 id가 여러 경로로 들어오는 경우(예: overlay/horizontal split)에 두 번 복구되지 않도록 id 기준 dedupe.
     const missingComps = [];
     const missingVisible = [];
+    const seenMissingIds = new Set();
     allComps.forEach(c => {
       if (!c.id || /^GroupBox/i.test(c.id)) return;
       if (includedIds.has(c.id)) return;
+      if (seenMissingIds.has(c.id)) return;
+      seenMissingIds.add(c.id);
       if (c.hidden) {
         // 원래 숨김 → 안전하게 btnbox .lt에 추가
         missingComps.push(c);

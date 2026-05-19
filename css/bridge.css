@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+/*
+ * bridge.css — XmlToHtml 변환 결과용 호환 레이어
+ *
+ * 문제:
+ *   base.css / product.css 는 WebSquare 런타임이 동적으로 부여하는 클래스
+ *   (.w2input / .w2selectbox / .w2textarea / .w2textbox / .w2tb_adaptive_layout 등) 를
+ *   노리지만, XmlToHtml 정적 변환 결과는 표준 HTML 태그(input/select/textarea/span)만
+ *   출력하므로 폼/표 스타일이 빠지고 표 테두리가 안 보인다.
+ *
+ * 해결:
+ *   base.css + product.css 뒤에 본 파일을 로드해 .sub_contents 안의 표준 HTML 태그에
+ *   대응되는 WebSquare 규칙을 보강한다. vendor CSS 는 손대지 않는다.
+ *
+ * 로딩 순서:  base.css → product.css → bridge.css  (← override 권한 가짐)
+ */
+
+/* ────────────────────────────────────────────────────────────────
+ * 1) 폼 컨트롤 — input
+ *    base.css .w2input 규칙(L175~) 을 표준 input 태그에도 적용
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents input[type="text"],
+.sub_contents input[type="password"],
+.sub_contents input[type="number"],
+.sub_contents input[type="tel"],
+.sub_contents input[type="email"],
+.sub_contents input[type="search"],
+.sub_contents input[type="date"],
+.sub_contents input[type="datetime-local"],
+.sub_contents input[type="time"],
+.sub_contents input[type="month"],
+.sub_contents input[type="week"],
+.sub_contents input[type="url"] {
+  height: var(--ws-form-height);
+  padding: 0 8px;
+  border: 1px solid var(--ws-form-bd);
+  border-radius: var(--ws-form-radius);
+  font-family: var(--ws-font-family);
+  font-size: var(--ws-form-font-size);
+  background: var(--ws-form-bg);
+  color: var(--ws-form-color);
+  box-sizing: border-box;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.sub_contents input[type="text"]:hover,
+.sub_contents input[type="password"]:hover,
+.sub_contents input[type="number"]:hover,
+.sub_contents input[type="tel"]:hover,
+.sub_contents input[type="email"]:hover,
+.sub_contents input[type="search"]:hover,
+.sub_contents input[type="date"]:hover {
+  outline: none;
+  border-color: var(--ws-form-hover-bd);
+}
+.sub_contents input[type="text"]:focus,
+.sub_contents input[type="password"]:focus,
+.sub_contents input[type="number"]:focus,
+.sub_contents input[type="tel"]:focus,
+.sub_contents input[type="email"]:focus,
+.sub_contents input[type="search"]:focus,
+.sub_contents input[type="date"]:focus {
+  outline: none;
+  border-color: var(--ws-form-focus-bd);
+  box-shadow: inset 0 0 0 1px var(--ws-form-focus-bd);
+}
+.sub_contents input::placeholder { color: var(--ws-placeholder-color); }
+
+/* disabled / readonly  ↔ .w2input_disabled / .w2input_readonly */
+.sub_contents input[disabled] {
+  border-color: var(--ws-form-disabled-bd);
+  background-color: var(--ws-form-disabled-bg);
+  color: var(--ws-form-disabled-color);
+  cursor: default;
+}
+.sub_contents input[readonly] {
+  border-color: var(--ws-form-disabled-bd);
+  background-color: var(--ws-form-disabled-bg);
+  color: var(--ws-form-color);
+  cursor: default;
+}
+
+/* number type spinner 제거 — .w2input[type=number] 와 동일 */
+.sub_contents input[type="number"]::-webkit-outer-spin-button,
+.sub_contents input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 2) 폼 컨트롤 — select
+ *    base.css .w2selectbox_select 규칙(L300~) 을 표준 select 태그에도 적용
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents select {
+  height: var(--ws-form-height);
+  padding: 0 24px 0 8px;
+  border: 1px solid var(--ws-form-bd);
+  border-radius: var(--ws-form-radius);
+  background: var(--ws-form-bg) url(../images/base/ico_select.svg) no-repeat right 6px center;
+  color: var(--ws-form-color);
+  font-family: var(--ws-font-family);
+  font-size: var(--ws-form-font-size);
+  vertical-align: middle;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.sub_contents select::-ms-expand { display: none; }
+.sub_contents select:hover {
+  outline: none;
+  border-color: var(--ws-form-hover-bd);
+}
+.sub_contents select:focus {
+  outline: none;
+  border-color: var(--ws-form-focus-bd);
+  box-shadow: inset 0 0 0 1px var(--ws-form-focus-bd);
+}
+.sub_contents select[disabled] {
+  border-color: var(--ws-form-disabled-bd);
+  background-color: var(--ws-form-disabled-bg);
+  background-image: url(../images/base/ico_select_dis.svg);
+  color: var(--ws-form-disabled-color);
+  opacity: 1;
+  cursor: default;
+}
+.sub_contents select > option { background: var(--ws-gray-0); }
+
+/* ────────────────────────────────────────────────────────────────
+ * 3) 폼 컨트롤 — textarea
+ *    base.css .w2textarea 규칙(L189~) 을 표준 textarea 태그에도 적용
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents textarea {
+  padding: 4px 8px;
+  border: 1px solid var(--ws-form-bd);
+  border-radius: var(--ws-form-radius);
+  background: var(--ws-form-bg);
+  color: var(--ws-form-color);
+  font-family: var(--ws-font-family);
+  font-size: var(--ws-form-font-size);
+  box-sizing: border-box;
+  resize: vertical;
+}
+.sub_contents textarea:hover { outline: none; border-color: var(--ws-form-hover-bd); }
+.sub_contents textarea:focus {
+  outline: none;
+  border-color: var(--ws-form-focus-bd);
+  box-shadow: inset 0 0 0 1px var(--ws-form-focus-bd);
+}
+.sub_contents textarea[disabled],
+.sub_contents textarea[readonly] {
+  border-color: var(--ws-form-disabled-bd);
+  background-color: var(--ws-form-disabled-bg);
+  color: var(--ws-form-disabled-color);
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 4) 체크박스 / 라디오 — inline-flow 정렬만 보강
+ *    WebSquare 의 .w2checkbox/.w2radio 는 커스텀 이미지 기반이므로 native
+ *    체크박스로 완벽 재현 불가. 정렬과 brand color 만 살짝 보강.
+ *    크기/마진은 브라우저 기본값 유지.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents input[type="checkbox"],
+.sub_contents input[type="radio"] {
+  vertical-align: middle;
+  accent-color: var(--ws-primary-500);
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 5) 표 — .w2tb_th / .w2tb_td 테두리 누락 보강
+ *    base.css 는 .w2tb_adaptive_layout 모드에서만 grid 보더를 그리고,
+ *    일반 <table> 모드는 border-color 만 설정해 border-style/width 미지정 →
+ *    셀 테두리가 안 보인다. XmlToHtml 출력은 일반 <table> 이므로 누락된
+ *    border-style + width 만 보충한다.
+ *
+ *    base.css 가 이미 정의한 height/padding/background/color/font-weight/
+ *    text-align 등은 절대 덮지 않는다 (vendor 의도 보존).
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .w2tb,
+.sub_contents table.w2tb {
+  border-collapse: collapse;
+}
+.sub_contents .w2tb .w2tb_th,
+.sub_contents .w2tb .w2tb_td {
+  border: 1px solid var(--ws-table-bd);
+}
+
+/* 같은 td 안의 컴포넌트들 사이 간격 */
+.sub_contents .w2tb_td > * + * { margin-left: 4px; }
+
+/* schbox 내부 표는 보더 없음 (base.css L1573~ 와 동일 의도) */
+.sub_contents .schbox .w2tb,
+.sub_contents .schbox .w2tb .w2tb_th,
+.sub_contents .schbox .w2tb .w2tb_td {
+  border: 0;
+  background: transparent;
+}
+.sub_contents .schbox .w2tb { border-top: 0; }
+
+/* ────────────────────────────────────────────────────────────────
+ * 6) 텍스트 라벨
+ *    w2:textbox → <span class="txt"> 변환됨.
+ *    base.css L868 의 `.w2tb .w2tb_th .w2textbox, .w2tb .w2tb_th .w2span`
+ *    규칙(display:inline-block; position:relative; vertical-align:middle)
+ *    을 우리 .txt 에도 동일 적용 (그 외 색/폰트는 상속에 맡김).
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .txt {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* tit_main / tit_sub — KB 매핑된 타이틀 클래스 (base.css 미정의)
+ * <h3 class="tit_main"> 형태로 들어가므로 .titbox h3 의 base 스타일이
+ * 우선 적용되고, 여기서는 weight 만 보강 (KB 가이드: tit_main=주, tit_sub=보조) */
+.sub_contents .tit_sub { font-weight: 600; }
+
+/* req 표시 — required 별표 */
+.sub_contents .w2tb_th .req::after,
+.sub_contents .req::after {
+  content: '*';
+  margin-left: 4px;
+  color: var(--ws-req-dot);
+  font-weight: 700;
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 7) 버튼 / 링크 — inline-flow 정렬 보강
+ *
+ *   base.css .btn_cm 는 display:inline-block 이지만 vertical-align 미지정 →
+ *   브라우저 기본값(baseline) 으로 인해 옆 input/select(middle) 와 어긋남.
+ *   .sub_contents 안에서만 middle 로 통일 (margin/font/cursor 등 다른 속성은
+ *   base.css/product.css 의 정의에 위임 — 침범 금지).
+ *
+ *   product.css L376 의 .btn_cm.icon (font-size:0, padding:0 등) 이 이미
+ *   아이콘 버튼 본체를 처리하므로 여기서는 검색 아이콘 배경만 보강한다.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .btn_cm,
+.sub_contents a.btn_cm {
+  vertical-align: middle;
+}
+.sub_contents a.btn_cm {
+  /* <a> 는 inline 기본값 → .btn_cm 의 height/line-height 가 동작하도록 inline-block */
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* 검색 아이콘 버튼 (KB 매핑: btn_ico_search → btn_cm search icon) */
+.sub_contents .btn_cm.search.icon {
+  background: var(--ws-btn-bg) url(../images/base/ico_search.svg) center no-repeat;
+  background-size: 16px 16px;
+}
+.sub_contents .btn_cm.search.icon:hover {
+  background-color: var(--ws-gray-100);
+}
+
+/* input/select/button 이 한 줄에 섞일 때 베이스라인 갭 제거 */
+.sub_contents .w2tb_td > input,
+.sub_contents .w2tb_td > select,
+.sub_contents .w2tb_td > textarea,
+.sub_contents .w2tb_td > button,
+.sub_contents .w2tb_td > a,
+.sub_contents .w2tb_td > .txt,
+.sub_contents .w2tb_td > .output {
+  vertical-align: middle;
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 8) 그리드 placeholder — w2:gridView → <table class="gvw">
+ *    실제 WebSquare 의 w2grid 클래스 트리(.gridHeaderTDDefault 등) 와 달라
+ *    base.css 매칭이 안 되므로 변환기 전용 .gvw 클래스에 최소 스타일 부여.
+ *    th 의 weight/color/align 등은 브라우저 기본값(bold/center/inherit) 그대로 둠.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .gvwbox table.gvw {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sub_contents .gvwbox table.gvw th,
+.sub_contents .gvwbox table.gvw td {
+  border: 1px solid var(--ws-table-bd);
+  padding: 6px 8px;
+}
+.sub_contents .gvwbox table.gvw th {
+  background: var(--ws-table-th-bg);
+}
+.sub_contents .gvwbox .grid-placeholder td {
+  padding: 40px 16px;
+  background: var(--ws-gray-50);
+  color: var(--ws-gray-500);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 9) 탭 컨트롤 — w2:tabControl → .tbc / .tbc_tabs / .tbc_tab / .tbc_panel
+ *    base.css 에 우리 변환기 전용 클래스는 없으므로 자체 정의.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .tbc { background: var(--ws-gray-0); }
+.sub_contents .tbc_tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ws-gray-300);
+  background: var(--ws-gray-50);
+}
+.sub_contents .tbc_tab {
+  height: 40px;
+  padding: 0 20px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--ws-gray-600);
+  font-family: var(--ws-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.sub_contents .tbc_tab:hover { color: var(--ws-gray-800); }
+.sub_contents .tbc_tab.active {
+  color: var(--ws-primary-600);
+  border-bottom-color: var(--ws-primary-500);
+  background: var(--ws-gray-0);
+  font-weight: 700;
+}
+.sub_contents .tbc_tab[disabled] { color: var(--ws-gray-400); cursor: not-allowed; }
+.sub_contents .tbc_panel { padding: 16px; }
+.sub_contents .tbc_panel[hidden] { display: none !important; }
+
+/* ────────────────────────────────────────────────────────────────
+ * 10) msgbox 의 내부 .list_msg.dash 만 보강
+ *    .msgbox 본체는 base.css L1606~ 에 이미 정의(padding, bg, radius).
+ *    .list_msg.dash 는 KB 패턴이고 base.css 미정의 → 최소 리스트 스타일.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .msgbox .list_msg.dash {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sub_contents .msgbox .list_msg.dash > li::before {
+  content: '· ';
+  color: var(--ws-gray-500);
+}
+
+/* ────────────────────────────────────────────────────────────────
+ * 11) grpbox_wrap / hidden_field
+ *    .lybox / .col_N 은 base.css L1234~ 에 이미 정의(flex:2/3/4 비례) →
+ *    bridge 에서 손대지 않는다.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .grpbox_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* hidden_field — 변환기가 hidden 속성도 추가하므로 안전망 */
+.hidden_field { display: none !important; }
+
+/* ────────────────────────────────────────────────────────────────
+ * 12) KB 전용 보조 클래스 — base/product.css 에 없는 것만
+ *    .txt_red 는 product.css L282 에 이미 정의 → 제거.
+ * ──────────────────────────────────────────────────────────────── */
+.sub_contents .kb_txt_red    { color: var(--ws-red-500); }
+.sub_contents .kb_txt_purple { color: var(--ws-violet-500, #5436DA); }
+.sub_contents .kb_MiddleLeft { text-align: left; }
+
+/* output 컴포넌트 (xf:output → span.output) — base.css 미정의 */
+.sub_contents .output {
+  display: inline-block;
+  vertical-align: middle;
+}
