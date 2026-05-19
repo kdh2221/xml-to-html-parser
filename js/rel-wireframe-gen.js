@@ -447,7 +447,7 @@ const RelWireframeGen = (() => {
     html += `</div>`;
 
     html += `<div class="rel-wf-container">`;
-    html += `<div class="rel-wf-root-label">.${mainClass.replace(/\s+/g, '.')}</div>`;
+    html += `<div class="rel-wf-root-label">.${esc(mainClass).replace(/\s+/g, '.')}</div>`;
 
     // 자식 섹션 순회 — 디스패처를 통해 미지 class/직계 컴포넌트까지 모두 렌더
     for (const child of mainGroup.children) {
@@ -585,7 +585,7 @@ const RelWireframeGen = (() => {
         html += '<colgroup>';
         for (const col of colgroup.children) {
           const style = col.getAttribute('style') || '';
-          html += `<col style="${style}">`;
+          html += `<col style="${esc(style)}">`;
         }
         html += '</colgroup>';
       }
@@ -721,7 +721,7 @@ const RelWireframeGen = (() => {
         if (colgroup) {
           html += '<colgroup>';
           for (const col of colgroup.children) {
-            html += `<col style="${col.getAttribute('style') || ''}">`;
+            html += `<col style="${esc(col.getAttribute('style') || '')}">`;
           }
           html += '</colgroup>';
         }

@@ -292,10 +292,10 @@ const AbsWireframeGen = (() => {
     // 컴포넌트 렌더
     allComps.forEach((comp, idx) => {
       const color = getColor(comp);
-      const l = Math.round(comp.left * scale);
-      const t = Math.round(comp.top * scale);
-      const w = Math.max(Math.round(comp.width * scale), 20);
-      const h = Math.max(Math.round(comp.height * scale), 16);
+      const l = Math.round((comp.left || 0) * scale);
+      const t = Math.round((comp.top || 0) * scale);
+      const w = Math.max(Math.round((comp.width || 0) * scale), 20);
+      const h = Math.max(Math.round((comp.height || 0) * scale), 16);
       const label = shortLabel(comp);
       const badge = typeBadge(comp.ctype);
       const hiddenClass = comp.hidden ? ' abs-wf-comp-hidden' : '';

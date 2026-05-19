@@ -9,9 +9,28 @@
 const ScriptValidator = (() => {
 
   /**
+   * 0. 스크립트에서 주석/문자열 리터럴을 제거하여 정규식 false positive를 줄인다.
+   *    - "..." / '...' / `...` / // ... / /* ... 모두 공백으로 치환 (길이는 보존하지 않음)
+   *    - 문서 주석 안의 'foo.Value' 같은 표기가 미존재 ID로 잘못 잡히는 문제 방지
+   */
+  function stripScriptNoise(s) {
+    if (!s) return '';
+    return String(s)
+      // 블록 주석 /* ... */
+      .replace(/\/\*[\s\S]*?\*\//g, ' ')
+      // 라인 주석 // ... (단 URL의 // 는 라인 시작/공백 뒤만 매칭)
+      .replace(/(^|[\s;{}()=,])\/\/[^\n\r]*/g, '$1 ')
+      // 문자열 리터럴 — escape sequence 고려
+      .replace(/"(?:\\.|[^"\\])*"/g, '""')
+      .replace(/'(?:\\.|[^'\\])*'/g, "''")
+      .replace(/`(?:\\.|[^`\\])*`/g, '``');
+  }
+
+  /**
    * 1. 스크립트에서 참조하는 ID 추출
    */
   function extractScriptIds(scriptText) {
+    const cleaned = stripScriptNoise(scriptText);
     const ids = new Set();
     const patterns = [
       // 이벤트 핸들러: scwin.{id}_OnClick, scwin.{id}_OnChange 등
@@ -24,7 +43,7 @@ const ScriptValidator = (() => {
 
     patterns.forEach(re => {
       let m;
-      while ((m = re.exec(scriptText)) !== null) {
+      while ((m = re.exec(cleaned)) !== null) {
         const id = m[1];
         // scwin, tran, console, window, document 등 예약어 제외
         if (!['scwin', 'tran', 'console', 'window', 'document', 'Math', 'JSON',
@@ -43,10 +62,11 @@ const ScriptValidator = (() => {
    * 2. 이벤트 핸들러 목록 추출
    */
   function extractEventHandlers(scriptText) {
+    const cleaned = stripScriptNoise(scriptText);
     const handlers = [];
     const re = /scwin\.(\w+?)_(On\w+)\s*=\s*function/g;
     let m;
-    while ((m = re.exec(scriptText)) !== null) {
+    while ((m = re.exec(cleaned)) !== null) {
       handlers.push({ id: m[1], event: m[2], fullName: `scwin.${m[1]}_${m[2]}` });
     }
     return handlers;
@@ -56,8 +76,10 @@ const ScriptValidator = (() => {
    * 3. XML에서 컴포넌트 ID 셋 추출
    */
   function extractXmlIds(xmlStr) {
+    // CDATA 안의 텍스트(스크립트)에 우연히 id="..." 패턴이 들어 있어도 컴포넌트 ID로 잘못 잡히지 않도록 선제거.
+    const sanitized = String(xmlStr || '').replace(/<!\[CDATA\[[\s\S]*?\]\]>/g, '');
     const ids = new Set();
-    (xmlStr.match(/\sid="([^"]*)"/g) || []).forEach(m => {
+    (sanitized.match(/\sid="([^"]*)"/g) || []).forEach(m => {
       const id = m.replace(/\sid="/, '').replace('"', '');
       if (id) ids.add(id);
     });
@@ -69,9 +91,10 @@ const ScriptValidator = (() => {
    *      dataMap/dataList의 key/column ID는 제외하고 body 내 컴포넌트만 검사
    */
   function findDuplicateIds(xmlStr) {
-    // body 영역 추출
-    const bodyMatch = xmlStr.match(/<body[\s>]([\s\S]*)<\/body>/i);
-    const bodyStr = bodyMatch ? bodyMatch[0] : xmlStr;
+    // body 영역 추출 — CDATA 안의 텍스트가 body 정규식과 ID 패턴에 끼어들지 않도록 먼저 제거
+    const sanitized = String(xmlStr || '').replace(/<!\[CDATA\[[\s\S]*?\]\]>/g, '');
+    const bodyMatch = sanitized.match(/<body[\s>]([\s\S]*)<\/body>/i);
+    const bodyStr = bodyMatch ? bodyMatch[0] : sanitized;
 
     const idCounts = {};
     // orgid="...", CtrlId="..." 등 오탐 방지: 공백 뒤의 id="..." 만 매칭

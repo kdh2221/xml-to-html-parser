@@ -39,6 +39,11 @@ const XmlGenerator = (() => {
       .replace(/"/g, '&quot;');
   }
 
+  // CDATA 안에서는 XML 엔티티 escape가 의미가 없는 대신 "]]>"가 섹션을 조기 종료시키므로 분할한다.
+  function escapeCdata(str) {
+    return String(str || '').replace(/\]\]>/g, ']]]]><![CDATA[>');
+  }
+
   function buildStyle(comp) {
     const parts = [`position:absolute`];
     if (comp.left != null) parts.push(`left:${comp.left}px`);
@@ -63,7 +68,7 @@ const XmlGenerator = (() => {
     if (comp.ctype === 'Button' || comp.ctype === 'Trigger') {
       return [
         `${pad}<${prefix}:${tag} ctype="${ctype}" style="${style}" id="${id}" tabIndex="1" type="button">`,
-        `${pad}\t<xf:label><![CDATA[${comp.label || ''}]]></xf:label>`,
+        `${pad}\t<xf:label><![CDATA[${escapeCdata(comp.label || '')}]]></xf:label>`,
         `${pad}</${prefix}:${tag}>`,
       ].join('\n');
     }
