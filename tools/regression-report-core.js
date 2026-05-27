@@ -6,8 +6,8 @@
  * renderReportHtml: 모델 → HTML 대시보드 문자열.
  */
 function diffLines(prevText, currText) {
-  const prev = (prevText || '').split('\n');
-  const curr = (currText || '').split('\n');
+  const prev = (prevText || '').split(/\r?\n/);
+  const curr = (currText || '').split(/\r?\n/);
   const prevSet = new Set(prev);
   const currSet = new Set(curr);
   let added = 0, removed = 0;

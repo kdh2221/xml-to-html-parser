@@ -16,6 +16,8 @@ const d2 = diffLines('a\nb', 'a\nb\nc');
 check(d2.added === 1 && d2.removed === 0, 'diffLines 1줄 추가 → +1/-0');
 const d3 = diffLines('a\nb\nc', 'a\nc');
 check(d3.added === 0 && d3.removed === 1, 'diffLines 1줄 삭제 → +0/-1');
+const dCrlf = diffLines('a\r\nb\r\nc', 'a\nb\nc');
+check(dCrlf.added === 0 && dCrlf.removed === 0, 'diffLines CRLF/LF 혼용 → 0/0');
 
 const m1 = buildReportModel({ 'x.html': 'a\nb' }, { 'x.html': 'a\nb' });
 check(m1.summary.total === 1 && m1.summary.unchanged === 1 && m1.summary.changed === 0, 'model: 변동 없음');
