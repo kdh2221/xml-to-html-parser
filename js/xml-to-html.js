@@ -93,7 +93,8 @@ const XmlToHtml = (() => {
       dataPlaceholder: true,
       // 출력 HTML 에 삽입할 <link rel=stylesheet> 경로들.
       // base → product (WebSquare vendor) → bridge (XmlToHtml 호환 레이어) 순.
-      cssHrefs: ['css/base.css', 'css/product.css', 'css/bridge.css'],
+      // 저장 HTML 은 css/ 의 한 단계 하위 폴더(preview/ 등)에 떨어지므로 ../css/ 로 통일.
+      cssHrefs: ['../css/base.css', '../css/product.css', '../css/bridge.css'],
       // baseHref: '...' 지정 시 <base href="..."> 삽입. iframe srcdoc 미리보기에서 사용.
       baseHref: '',
       // inlineCss=true 시 사용. { 'css/base.css': '...본문...' } 매핑.

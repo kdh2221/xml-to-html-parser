@@ -1830,7 +1830,9 @@ function copyXtxConverted() {
 }
 
 // ─── HTML 미리보기 / 복사 / 저장 ───
-const XTX_CSS_HREFS = ['css/base.css', 'css/product.css', 'css/bridge.css'];
+// 저장 HTML 의 <link> 경로 — css/ 의 한 단계 하위 폴더에 저장되므로 ../css/ 로 통일.
+// 라이브 미리보기 iframe 만 루트 baseHref 기준이라 별도로 ../ 를 떼고 사용한다.
+const XTX_CSS_HREFS = ['../css/base.css', '../css/product.css', '../css/bridge.css'];
 let _xtxCssContents = null; // { 'css/base.css': '...', ... }
 let _xtxCssLoading = null;
 
@@ -1841,7 +1843,9 @@ async function loadXtxCssContents() {
     const out = {};
     for (const href of XTX_CSS_HREFS) {
       try {
-        const res = await fetch(href);
+        // 키는 href(../css/..) 그대로 유지하되, 실제 fetch 는 루트 기준 css/ 에서.
+        const url = href.replace(/^(\.\.\/)+/, '');
+        const res = await fetch(url);
         if (res.ok) out[href] = await res.text();
       } catch (e) { console.warn('[xtx] CSS fetch 실패:', href, e); }
     }
@@ -1883,6 +1887,8 @@ async function renderXtxHtmlPreview(r) {
       fileName: r.name,
       baseHref,
       inlineCss: false,
+      // 미리보기는 부모 문서 디렉토리를 baseHref 로 쓰므로 ../ 를 떼고 css/ 기준으로 로드.
+      cssHrefs: XTX_CSS_HREFS.map(h => h.replace(/^(\.\.\/)+/, '')),
     }));
     downloadHtml = XmlToHtml.convert(r.convertedXml, Object.assign({}, opts, {
       fileName: r.name,
@@ -1927,22 +1933,17 @@ async function downloadXtxHtml() {
   //   1) 설정에서 지정한 saveDirHandle (옵셔널 오버라이드)
   //   2) preview/ 기본 폴더 (htmlPreviewDirHandle) — 없으면 즉시 사용자에게 선택 안내
   let targetDir = saveDirHandle;
-  let isPreviewTarget = false;
   if (!targetDir) {
     targetDir = await getOrPromptHtmlPreviewDir();
     if (!targetDir) {
       setXtxStatus('저장이 취소되었습니다.', 'error');
       return;
     }
-    isPreviewTarget = true;
   }
 
-  // 저장 위치가 프로젝트 루트의 preview/ 서브폴더면 CSS 경로를 ../css/ 로 변환.
-  // saveDirHandle 오버라이드 시에는 사용자가 임의 위치를 고른 것이라 기본 css/ 경로 유지.
+  // CSS 경로는 저장 위치와 무관하게 항상 ../css/ 로 통일 (저장 HTML 은 css/ 의 한 단계 하위 폴더에 위치).
   const opts = buildXtxHtmlOptions();
-  const cssHrefs = isPreviewTarget
-    ? XTX_CSS_HREFS.map(h => '../' + h)
-    : XTX_CSS_HREFS;
+  const cssHrefs = XTX_CSS_HREFS;
   let cssContents = null;
   if (opts.inlineCss) {
     try { cssContents = await loadXtxCssContents(); }
