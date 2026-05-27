@@ -10,5 +10,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "puppeteer": "^22.6.0"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
   }
 }

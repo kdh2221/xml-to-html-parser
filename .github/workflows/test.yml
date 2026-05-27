@@ -1,0 +1,44 @@
+name: regression
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: 'true'   # CI는 Chrome 불필요 (capture-server 미실행)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps (jsdom 포함, Chrome skip)
+        working-directory: tools
+        run: npm install
+
+      - name: 순수 회귀 (jsdom 불필요)
+        working-directory: tools
+        run: |
+          node test-asset-copy-planner.js
+          node test-regression-report.js
+
+      - name: 변환 회귀 (jsdom)
+        working-directory: tools
+        run: node test-xml-to-html.js
+
+      - name: 회귀 리포트 생성
+        working-directory: tools
+        run: node regression-report.js
+
+      - name: 리포트 아티팩트 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-report
+          path: tools/_out/regression-report.html
