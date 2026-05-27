@@ -34,7 +34,14 @@ for (const fname of fs.readdirSync(SAMPLES_DIR).filter(f => /_pub\.xml$/i.test(f
   const xml = fs.readFileSync(path.join(SAMPLES_DIR, fname), 'utf8');
   const outName = fname.replace(/_pub\.xml$/i, '_pub.html');
   try {
-    currMap[outName] = XmlToHtml.convert(xml, { fileName: fname });
+    currMap[outName] = XmlToHtml.convert(xml, {
+      fileName: fname,
+      inlineCss: false,
+      preserveAttrs: true,
+      preserveScript: false,
+      dataPlaceholder: true,
+      cssHrefs: ['../../css/base.css', '../../css/product.css', '../../css/bridge.css'],
+    });
   } catch (e) {
     currMap[outName] = `<!-- 변환 실패: ${e.message} -->`;
   }
